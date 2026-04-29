@@ -1,0 +1,90 @@
+{
+  "id": "content_forge",
+  "name": "Content Forge",
+  "version": "0.1",
+  "owner": "MEDIOEVO",
+  "purpose": "Render local media packages from approved assets, captions and briefs.",
+  "inputs": [
+    {
+      "name": "brief",
+      "type": "markdown_or_text",
+      "description": "Creative request, platform target and required media."
+    },
+    {
+      "name": "assets",
+      "type": "files",
+      "description": "Approved local images, video, audio and captions."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "final_media",
+      "type": "mp4_png_srt_vtt_json",
+      "description": "Rendered video, carousel images, captions, manifest and QA report."
+    },
+    {
+      "name": "publish_queue",
+      "type": "jsonl",
+      "description": "Publication package queued for human approval."
+    }
+  ],
+  "states": [
+    "observando",
+    "planificando",
+    "renderizando",
+    "qa",
+    "requiere_aprobacion",
+    "listo",
+    "fallido"
+  ],
+  "risk": {
+    "level": "medium",
+    "irreversible": false,
+    "external_effects": false,
+    "notes": "Rendering is local. Publishing remains queued until approval."
+  },
+  "cost": {
+    "mode": "local",
+    "paid_api": false,
+    "budget_hint": "Use local FFmpeg and local assets first."
+  },
+  "gates": [
+    "evidence",
+    "psi",
+    "cost",
+    "publish",
+    "human_approval"
+  ],
+  "evidence_required": [
+    "job_manifest",
+    "asset_catalog",
+    "ffprobe_report",
+    "qa_report"
+  ],
+  "witness": {
+    "log": "runtime/content_forge/jobs/<job_id>/witness.jsonl",
+    "include_payload_summary": true
+  },
+  "recovery": {
+    "on_hold": "wait for missing assets or brief clarification",
+    "on_degrade": "render lower resolution preview",
+    "on_failure": "keep job folder, manifest, logs and failed command for repair"
+  },
+  "interfaces": {
+    "cli": [
+      "content_forge render",
+      "content_forge carousel",
+      "content_forge status"
+    ],
+    "http": [
+      "POST /api/content-forge/render",
+      "POST /api/content-forge/carousel",
+      "GET /api/content-forge/jobs/<job_id>"
+    ],
+    "files": [
+      "runtime/content_forge/jobs/<job_id>/manifest.json",
+      "runtime/content_forge/publish_queue.jsonl"
+    ]
+  }
+}
+

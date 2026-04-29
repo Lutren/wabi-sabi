@@ -1,0 +1,91 @@
+{
+  "id": "openclaw_cli",
+  "name": "OpenClaw CLI",
+  "version": "2026.4.23",
+  "owner": "MEDIOEVO",
+  "purpose": "Expose OpenClaw as a supervised external-agent CLI, not as an autonomous gateway by default.",
+  "inputs": [
+    {
+      "name": "operator_command",
+      "type": "approved_text",
+      "description": "Human-approved command such as version, status, doctor or a gated gateway operation."
+    },
+    {
+      "name": "manifest",
+      "type": "json",
+      "description": "Required browser/channel/tool manifest before any gateway, channel or agent action."
+    }
+  ],
+  "outputs": [
+    {
+      "name": "diagnostic_result",
+      "type": "text_json",
+      "description": "Version, status, doctor output or gated execution result."
+    },
+    {
+      "name": "witness",
+      "type": "jsonl",
+      "description": "Brain OS witness event for every OpenClaw decision."
+    }
+  ],
+  "states": [
+    "observando",
+    "planificando",
+    "ejecutando",
+    "esperando",
+    "requiere_aprobacion",
+    "listo",
+    "fallido"
+  ],
+  "risk": {
+    "level": "high",
+    "irreversible": true,
+    "external_effects": true,
+    "notes": "OpenClaw can run an always-on gateway and agent actions. CLI health checks are allowed; gateway, channels, plugins and external model calls require approval."
+  },
+  "cost": {
+    "mode": "mixed",
+    "paid_api": true,
+    "budget_hint": "Prefer local Ollama or explicit approved provider. GPT/Claude/DeepSeek calls require cost gate."
+  },
+  "gates": [
+    "evidence",
+    "psi",
+    "cost",
+    "irreversible",
+    "browser_manifest",
+    "blocked_actions",
+    "human_approval"
+  ],
+  "evidence_required": [
+    "openclaw_version",
+    "loopback_binding",
+    "gateway_auth",
+    "tool_manifest",
+    "witness_event"
+  ],
+  "witness": {
+    "log": "runtime/brain_os/kernel.sqlite3",
+    "include_payload_summary": true
+  },
+  "recovery": {
+    "on_hold": "collect missing manifest, auth and loopback evidence",
+    "on_degrade": "use read-only CLI checks or local Ollama-only mode",
+    "on_failure": "stop gateway if running, preserve logs, keep port 18789 closed until review"
+  },
+  "interfaces": {
+    "cli": [
+      "openclaw --version",
+      "openclaw doctor",
+      "openclaw status",
+      "openclaw gateway status"
+    ],
+    "http": [
+      "127.0.0.1:18789 only after approved gateway start"
+    ],
+    "files": [
+      "%APPDATA%/npm/node_modules/openclaw",
+      "%USERPROFILE%/.openclaw"
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+j_c: 0.65
+epsilon_degrade: 0.7
+require_approval:
+  - publish
+  - spend_credits
+  - paid_api
+  - clone_voice
+  - canon_write
+  - irreversible
+blocked:
+  - bypass_captcha
+  - create_account
+  - change_password
+  - scrape_private_data
+  - purchase_without_approval
+browser_requires_manifest: true
+witness_log: /var/log/claudio/guardian_events.jsonl
+

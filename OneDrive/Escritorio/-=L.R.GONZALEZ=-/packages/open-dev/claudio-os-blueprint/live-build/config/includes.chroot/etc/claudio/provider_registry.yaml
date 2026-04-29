@@ -1,0 +1,32 @@
+providers:
+  local_ollama:
+    type: local
+    priority: 10
+    approval_required: false
+  deepseek_v4:
+    type: external_api
+    priority: 40
+    approval_required: true
+    default_model: deepseek-v4-flash
+    models:
+      - deepseek-v4-flash
+      - deepseek-v4-pro
+  suno:
+    type: free_assisted
+    priority: 50
+    approval_required: true
+  chatgpt_images:
+    type: free_manual
+    priority: 60
+    approval_required: true
+  openclaw_cli:
+    type: external_agent_runtime
+    priority: 80
+    approval_required: true
+    enabled: false
+    notes: "CLI-only by default. Gateway, channels, plugins and agent runs require manifest, loopback binding and human approval."
+  api_paid:
+    type: paid_api
+    priority: 90
+    approval_required: true
+    enabled: false

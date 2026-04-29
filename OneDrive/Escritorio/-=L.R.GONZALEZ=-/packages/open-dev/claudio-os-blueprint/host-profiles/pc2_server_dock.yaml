@@ -1,0 +1,10 @@
+profile: pc2_server_dock
+role: server-dock
+defaults:
+  gui: xfce-light
+  render_workers: 1
+  browser_automation: assisted_only
+  paid_api: approval_required
+  publish: approval_required
+  kubernetes: disabled
+

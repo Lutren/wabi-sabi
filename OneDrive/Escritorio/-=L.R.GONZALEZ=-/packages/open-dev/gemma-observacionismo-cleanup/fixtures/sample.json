@@ -1,0 +1,8 @@
+{
+  "id": "synthetic-sample-001",
+  "response": "Resumen limpio con una accion verificable y un limite declarado.",
+  "metadata": {
+    "source": "synthetic_fixture",
+    "contains_private_prompt": false
+  }
+}

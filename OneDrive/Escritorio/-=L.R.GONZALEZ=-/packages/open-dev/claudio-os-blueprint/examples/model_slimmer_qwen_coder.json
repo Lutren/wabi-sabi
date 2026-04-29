@@ -1,0 +1,43 @@
+{
+  "schema": "model_slimmer.evidence/v0.1",
+  "model": "qwen2.5-coder:3b",
+  "task": "claudio_local_code_routing",
+  "baseline": {
+    "accuracy": 0.88,
+    "latency_ms": 1200,
+    "memory_mb": 3200,
+    "safety_score": 0.97,
+    "energy_wh": 0.05
+  },
+  "variants": [
+    {
+      "id": "quantize_q8",
+      "method": "quantization",
+      "target": "q8",
+      "risk": "low"
+    },
+    {
+      "id": "quantize_q4",
+      "method": "quantization",
+      "target": "q4",
+      "risk": "medium"
+    },
+    {
+      "id": "prune_90",
+      "method": "pruning",
+      "sparsity": 0.9,
+      "risk": "critical"
+    }
+  ],
+  "acceptance": {
+    "accuracy_drop_max": 0.02,
+    "safety_drop_max": 0.01,
+    "latency_must_not_increase": true,
+    "memory_must_not_increase": true,
+    "energy_must_not_increase": true,
+    "regression_suite_required": true,
+    "human_approval_for_replacement": true
+  },
+  "decision": "measure_before_adoption"
+}
+

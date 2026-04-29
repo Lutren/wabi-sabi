@@ -1,0 +1,21 @@
+[project]
+name = "gemma-observacionismo-cleanup"
+version = "0.1.0"
+description = "Public-safe cleanup and observation toolkit for model responses."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "L.R. Gonzalez" }
+]
+dependencies = []
+
+[project.scripts]
+gemma-observe = "gemma_observacionismo_cleanup.cli:observe_main"
+gemma-noise-report = "gemma_observacionismo_cleanup.cli:noise_report_main"
+gemma-fingerprint = "gemma_observacionismo_cleanup.cli:fingerprint_main"
+
+[tool.gemma-observacionismo-cleanup]
+status = "mvp"
+data_policy = "synthetic_fixtures_only"
+claims = "engineering_method_not_scientific_claim"

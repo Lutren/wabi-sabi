@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+import json
+import sys
+import urllib.request
+
+BASE = "http://127.0.0.1:4787"
+
+
+def get(path):
+    with urllib.request.urlopen(BASE + path, timeout=5) as response:
+        print(response.read().decode("utf-8"))
+
+
+def post(path, payload):
+    body = json.dumps(payload).encode("utf-8")
+    req = urllib.request.Request(BASE + path, data=body, headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=5) as response:
+        print(response.read().decode("utf-8"))
+
+
+def main(argv):
+    if len(argv) < 2:
+        print("usage: claudioctl health|events|decide|dashboard [json]")
+        return 2
+    cmd = argv[1]
+    if cmd == "health":
+        get("/health")
+    elif cmd == "events":
+        get("/events")
+    elif cmd == "decide":
+        payload = {"action": "local_render", "evidence": True, "R": 0.2}
+        if len(argv) > 2:
+            payload = json.loads(argv[2])
+        post("/decide", payload)
+    elif cmd == "dashboard":
+        print("http://127.0.0.1:4444")
+    else:
+        print(f"unknown command: {cmd}")
+        return 2
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main(sys.argv))
+

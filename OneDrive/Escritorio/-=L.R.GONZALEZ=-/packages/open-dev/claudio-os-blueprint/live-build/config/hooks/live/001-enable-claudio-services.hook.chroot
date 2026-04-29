@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+chmod +x /usr/local/bin/claudioctl
+chmod +x /opt/claudio/guardian/guardian.py
+chmod +x /opt/claudio/dashboard/dashboard.py
+mkdir -p /var/log/claudio
+systemctl enable claudio-guardian.service
+systemctl enable claudio-dashboard.service
+

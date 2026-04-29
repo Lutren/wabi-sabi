@@ -1,0 +1,15 @@
+[project]
+name = "obsai-core"
+version = "0.1.0"
+description = "Dependency-free Observacionismo/PSI-IA operational core."
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+obsai-core = "obsai_core.cli:main"
+
+[tool.obsai-core]
+status = "mvp"
+calibration = "DEMO_ONLY"
+source_intake = "../../../SOURCE_INTAKE_REGISTER.md"

@@ -1,0 +1,17 @@
+j_c: 0.65
+epsilon_degrade: 0.7
+browser_requires_manifest: true
+require_approval:
+  - publish
+  - spend_credits
+  - paid_api
+  - clone_voice
+  - canon_write
+  - irreversible
+blocked:
+  - bypass_captcha
+  - create_account
+  - change_password
+  - scrape_private_data
+  - purchase_without_approval
+

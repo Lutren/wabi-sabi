@@ -1,0 +1,8 @@
+{
+  "action": "publish",
+  "tags": ["publish"],
+  "evidence": true,
+  "R": 0.22,
+  "epsilon": 0.1
+}
+

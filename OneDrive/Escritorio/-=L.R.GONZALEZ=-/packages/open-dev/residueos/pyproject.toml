@@ -1,0 +1,15 @@
+[project]
+name = "residueos"
+version = "0.1.0"
+description = "Local AI action gate with SQLite audit state."
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+dependencies = []
+
+[project.scripts]
+residueos = "residueos.cli:main"
+
+[tool.residueos]
+status = "mvp"
+calibration = "DEMO_ONLY"
+source_intake = "../../../SOURCE_INTAKE_REGISTER.md"

@@ -31,27 +31,15 @@ COMMANDS = [
         "private": False,
     },
     {
-        "name": "argus-install-dev-deps",
-        "cwd": "apps/commercial/argus-desktop",
-        "command": ["npm", "install", "--include=dev", "--no-audit", "--no-fund"],
+        "name": "argus-clean-generated-before-build",
+        "cwd": ".",
+        "command": ["python", "tools/release/clean_generated_artifacts.py", "--execute", "--json"],
         "private": False,
     },
     {
-        "name": "argus-typecheck",
-        "cwd": "apps/commercial/argus-desktop",
-        "command": ["npm", "run", "typecheck"],
-        "private": False,
-    },
-    {
-        "name": "argus-build",
-        "cwd": "apps/commercial/argus-desktop",
-        "command": ["npm", "run", "build"],
-        "private": False,
-    },
-    {
-        "name": "argus-audit-high",
-        "cwd": "apps/commercial/argus-desktop",
-        "command": ["npm", "audit", "--omit=dev", "--audit-level=high"],
+        "name": "argus-release-check",
+        "cwd": ".",
+        "command": ["python", "tools/release/argus_release_check.py", "--json"],
         "private": False,
     },
     {

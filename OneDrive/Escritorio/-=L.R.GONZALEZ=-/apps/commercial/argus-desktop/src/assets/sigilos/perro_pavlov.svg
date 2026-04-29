@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Cuerpo del perro - Pavlov, compañero fiel -->
+  <ellipse cx="40" cy="52" rx="20" ry="13" stroke="#D4A054" stroke-width="1.5" fill="none"/>
+  <!-- Cabeza -->
+  <circle cx="40" cy="30" r="13" stroke="#D4A054" stroke-width="1.5" fill="none"/>
+  <!-- Orejas caidas (tipo labrador - no puntiagudas como gato) -->
+  <path d="M28 24 Q22 28 23 38 Q27 36 30 28" stroke="#D4A054" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+  <path d="M52 24 Q58 28 57 38 Q53 36 50 28" stroke="#D4A054" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+  <!-- Ojos - ambos abiertos (leal, atento) -->
+  <circle cx="35" cy="29" r="2.5" fill="#D4A054" opacity="0.9"/>
+  <circle cx="45" cy="29" r="2.5" fill="#D4A054" opacity="0.9"/>
+  <!-- Nariz -->
+  <ellipse cx="40" cy="35" rx="3.5" ry="2.5" fill="#D4A054" opacity="0.6"/>
+  <!-- Boca feliz -->
+  <path d="M36 38 Q40 42 44 38" stroke="#D4A054" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <!-- Campana (referencia Pavlov) -->
+  <path d="M56 12 Q56 8 60 7 Q64 8 64 12 L64 20 Q60 22 56 20 Z" stroke="#D4A054" stroke-width="1.2" fill="none"/>
+  <circle cx="60" cy="22" r="1.5" fill="#D4A054" opacity="0.7"/>
+  <line x1="60" y1="7" x2="60" y2="4" stroke="#D4A054" stroke-width="1" opacity="0.6"/>
+  <!-- Cola arriba -->
+  <path d="M58 48 Q68 40 70 30" stroke="#D4A054" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+</svg>

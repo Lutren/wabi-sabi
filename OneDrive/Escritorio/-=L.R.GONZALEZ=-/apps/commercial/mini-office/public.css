@@ -1,0 +1,459 @@
+/* ═══════════════════════════════════════════════════════════════
+   Mini Office — Conway 24/7
+   Basado en CLAUDIO Design System v1.0
+   Universo Visual: Steampunk + Cyberpunk + Archeopunk + Biopunk
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── ROOT: PALETA MAESTRA (CLAUDIO Design System) ─── */
+:root {
+  /* === CORE: Metales y Materiales === */
+  --cobre: #B87333;
+  --cobre-bruñido: #DA8A47;
+  --bronce: #CD7F32;
+  --bronce-patina: #4A7C59;
+  --hierro: #434343;
+  --hierro-oxidado: #8B4513;
+  --acero-ennegrecido: #2C2C2C;
+  --obsidiana: #0B0B0F;
+  --hueso: #D4C9A8;
+  --ceramica: #C4A882;
+
+  /* === SECUNDARIOS: Luz y Energía === */
+  --ambar: #D98F2B;
+  --ambar-tenue: #D98F2B66;
+  --turquesa: #2ECCC7;
+  --turquesa-tenue: #2ECCC766;
+  --neon-azul: #00D4FF;
+  --neon-azul-tenue: #00D4FF44;
+  --verde-musgo: #4A7C59;
+  --verde-bio: #39FF14;
+  --verde-bio-tenue: #39FF1433;
+  --rojo-carmesi: #8B0000;
+  --rojo-sangre: #C41E3A;
+  --purpura-astral: #6B3FA0;
+
+  /* === FONDOS === */
+  --fondo-base: #0A0A0F;
+  --fondo-panel: #111116;
+  --fondo-card: #1A1A22;
+  --fondo-elevado: #222230;
+  --fondo-hover: #2A2A38;
+
+  /* === TEXTO === */
+  --texto-primario: #D4C9A8;
+  --texto-secundario: #8A8674;
+  --texto-muted: #5A5848;
+  --texto-brillante: #F0E8D0;
+  --texto-error: #C41E3A;
+  --texto-exito: #4A7C59;
+
+  /* === BORDES === */
+  --borde-sutil: #2A2A32;
+  --borde-metal: #3D3520;
+  --borde-activo: #B87333;
+  --borde-glow: #D98F2B44;
+
+  /* === SOMBRAS === */
+  --sombra-panel: 0 4px 24px rgba(0,0,0,0.6);
+  --sombra-elevada: 0 8px 32px rgba(0,0,0,0.8);
+  --sombra-interna: inset 0 2px 8px rgba(0,0,0,0.4);
+  --sombra-glow-ambar: 0 0 20px rgba(217,143,43,0.3);
+  --sombra-glow-azul: 0 0 20px rgba(0,212,255,0.3);
+  --sombra-glow-verde: 0 0 20px rgba(57,255,20,0.2);
+
+  /* === TIPOGRAFÍA === */
+  --font-display: 'Archivo Black', 'Impact', sans-serif;
+  --font-serif: 'IBM Plex Serif', 'Georgia', serif;
+  --font-body: 'IBM Plex Sans', 'Helvetica Neue', sans-serif;
+  --font-mono: 'IBM Plex Mono', 'Consolas', monospace;
+
+  /* === TAMAÑOS === */
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+
+  /* === ESPACIADO === */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+
+  /* === RADIOS === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* === TRANSICIONES === */
+  --ease-default: cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --duration-glow: 2000ms;
+}
+
+/* ─── RESET Y BASE ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--fondo-base);
+  color: var(--texto-primario);
+  line-height: 1.6;
+  min-height: 100vh;
+  image-rendering: pixelated;
+}
+
+/* ─── TEXTURAS (CLAUDIO Design System) ─── */
+
+/* Patrón de engranaje sutil (steampunk) */
+.texture-gear {
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(184,115,51,0.05) 0%, transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(205,127,50,0.03) 0%, transparent 50%);
+}
+
+/* Patrón de circuito (cyberpunk) */
+.texture-circuit {
+  background-image:
+    linear-gradient(90deg, transparent 49.5%, rgba(0,212,255,0.03) 49.5%, rgba(0,212,255,0.03) 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(0,212,255,0.03) 49.5%, rgba(0,212,255,0.03) 50.5%, transparent 50.5%);
+  background-size: 40px 40px;
+}
+
+/* Patrón de piedra (archeopunk) */
+.texture-stone {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4C9A8' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Patrón orgánico (biopunk) */
+.texture-organic {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(57,255,20,0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(74,124,89,0.03) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(57,255,20,0.015) 0%, transparent 60%);
+}
+
+/* ─── ANIMACIONES BASE (CLAUDIO Design System) ─── */
+
+/* Pulso de vapor */
+@keyframes steam-pulse {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 0.8; transform: translateY(-4px); }
+}
+
+/* Glow de energía */
+@keyframes energy-glow {
+  0%, 100% { box-shadow: 0 0 8px var(--city-primary); }
+  50% { box-shadow: 0 0 20px var(--city-primary), 0 0 40px var(--city-primary); }
+}
+
+/* Parpadeo de neón */
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+  96% { opacity: 0.6; }
+  97% { opacity: 1; }
+}
+
+/* Rotación de engranaje */
+@keyframes gear-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Latido (heartbeat) */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14% { transform: scale(1.05); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.03); }
+  56% { transform: scale(1); }
+}
+
+/* Glitch sutil */
+@keyframes glitch-subtle {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, 0); }
+  80% { transform: translate(1px, 1px); }
+}
+
+/* Respiración orgánica */
+@keyframes bio-breathe {
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 1; }
+}
+
+/* Pulse simple */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.clase-animacion-steam { animation: steam-pulse var(--duration-glow) var(--ease-default) infinite; }
+.clase-animacion-glow { animation: energy-glow var(--duration-glow) var(--ease-default) infinite; }
+.clase-animacion-neon { animation: neon-flicker 4s step-end infinite; }
+.clase-animacion-gear { animation: gear-rotate 20s linear infinite; }
+.clase-animacion-heartbeat { animation: heartbeat 2s var(--ease-default) infinite; }
+.clase-animacion-glitch { animation: glitch-subtle 0.3s step-end infinite; }
+.clase-animacion-breathe { animation: bio-breathe 3s var(--ease-default) infinite; }
+
+/* ─── SCANLINES (Efecto CRT) ─── */
+.scanlines {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.1) 51%
+  );
+  background-size: 100% 4px;
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+/* ─── CONTAINER PRINCIPAL ─── */
+.container {
+  max-width: 900px;
+  padding: 40px 20px;
+  text-align: center;
+  border: 4px solid var(--cobre);
+  background: linear-gradient(180deg, var(--fondo-panel), var(--fondo-base));
+  box-shadow:
+    0 0 20px rgba(184, 115, 51, 0.3),
+    inset 0 0 40px rgba(0, 0, 0, 0.5);
+  position: relative;
+}
+
+/* Remaches steampunk */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: -8px;
+  right: -8px;
+  bottom: -8px;
+  border: 2px solid var(--acero-ennegrecido);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* ─── TIPOGRAFÍA ─── */
+h1, h2, h3 {
+  font-family: var(--font-display);
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--cobre);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  text-shadow: 0 0 20px rgba(184, 115, 51, 0.5);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--turquesa);
+  margin: 20px 0;
+}
+
+h3 {
+  color: var(--cobre);
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-size: 1.1rem;
+  color: var(--turquesa);
+  margin-bottom: 30px;
+  font-family: var(--font-mono);
+}
+
+/* ─── METRICS GRID ─── */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 30px 0;
+}
+
+.metric {
+  background: rgba(46, 204, 199, 0.1);
+  border: 2px solid var(--turquesa);
+  padding: 15px;
+  text-align: center;
+}
+
+.metric-value {
+  font-size: 2rem;
+  color: var(--turquesa);
+  font-weight: bold;
+  font-family: var(--font-display);
+}
+
+.metric-label {
+  font-size: 0.7rem;
+  color: var(--texto-secundario);
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+}
+
+/* ─── FEATURES GRID ─── */
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.feature {
+  background: rgba(184, 115, 51, 0.1);
+  border: 2px solid var(--cobre);
+  padding: 20px;
+  transition: all var(--duration-base) var(--ease-default);
+}
+
+.feature:hover {
+  background: rgba(184, 115, 51, 0.2);
+  box-shadow: 0 0 15px rgba(184, 115, 51, 0.4);
+  transform: translateY(-2px);
+}
+
+.feature p {
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--texto-secundario);
+}
+
+/* ─── AGENTES ─── */
+.agents {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+}
+
+.agent {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(180deg, var(--cobre), var(--bronce));
+  border: 3px solid var(--hueso);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  image-rendering: pixelated;
+}
+
+.agent:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px var(--ambar);
+}
+
+/* ─── STATUS INDICATOR ─── */
+.status-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: var(--texto-secundario);
+  font-family: var(--font-mono);
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--verde-bio);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  box-shadow: 0 0 10px var(--verde-bio);
+}
+
+/* ─── CTA BUTTON ─── */
+.cta-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 15px 40px;
+  background: linear-gradient(180deg, var(--cobre), var(--bronce));
+  color: var(--obsidiana);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 4px solid var(--cobre);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all var(--duration-base) var(--ease-default);
+  font-family: var(--font-display);
+}
+
+.cta-button:hover {
+  background: linear-gradient(180deg, var(--ambar), var(--cobre));
+  box-shadow: 0 0 20px var(--ambar);
+  transform: translateY(-2px);
+}
+
+/* ─── GLITCH EFFECT (Cyberpunk) ─── */
+[data-city="entreternia"] .glitch {
+  animation: glitch-subtle 2s infinite;
+}
+
+/* ─── TEXTURAS DE FONDO ─── */
+.fondo-steampunk {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(184,115,51,0.05) 0%, transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(205,127,50,0.03) 0%, transparent 50%);
+}
+
+.fondo-cyberpunk {
+  background:
+    linear-gradient(90deg, transparent 49.5%, rgba(0,212,255,0.03) 49.5%, rgba(0,212,255,0.03) 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(0,212,255,0.03) 49.5%, rgba(0,212,255,0.03) 50.5%, transparent 50.5%);
+  background-size: 40px 40px;
+}
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  .metrics { grid-template-columns: repeat(2, 1fr); }
+  .container { padding: 20px 10px; }
+}
+
+/* ─── UTILIDADES DE TEXTO ─── */
+.text-display { font-family: var(--font-display); }
+.text-serif { font-family: var(--font-serif); }
+.text-mono { font-family: var(--font-mono); }
+.text-glow-ambar { text-shadow: 0 0 10px var(--ambar-tenue); }
+.text-glow-azul { text-shadow: 0 0 10px var(--neon-azul-tenue); }
+.text-glow-verde { text-shadow: 0 0 10px var(--verde-bio-tenue); }

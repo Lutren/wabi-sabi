@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente de Negocio MEDIOEVO</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="global-toolbar" aria-label="Barra de herramientas">
+    <div class="toolbar-brand">
+      <img class="toolbar-chip" src="./assets/geodia_control_chip_v1.png" alt="Sello GEODIA">
+      <div>
+        <strong>Guia rapida</strong>
+        <span>Guarda negocio, carga mensaje, revisa respuesta y abre tu app.</span>
+      </div>
+    </div>
+    <nav class="toolbar-actions" aria-label="Opciones generales">
+      <button id="tutorial-open-button" type="button">Tutorial</button>
+      <button type="button" data-jump="#paso-1">Negocio</button>
+      <button type="button" data-jump="#paso-2">Mensaje</button>
+      <button type="button" data-jump="#paso-3">Enviar</button>
+      <button type="button" data-jump="#datos-privacidad">Datos</button>
+      <button id="toolbar-demo-button" type="button">Probar</button>
+      <button id="compact-mode-button" type="button" aria-pressed="false">Compacto</button>
+    </nav>
+  </header>
+
+  <section id="tutorial-panel" class="tutorial-panel" aria-labelledby="tutorial-title" hidden>
+    <div class="tutorial-sheet" role="dialog" aria-modal="false">
+      <div class="tutorial-head">
+        <div>
+          <p class="eyebrow">Tutorial</p>
+          <h2 id="tutorial-title">Como usarlo sin complicarse</h2>
+        </div>
+        <button id="tutorial-close-button" class="ghost-action" type="button" aria-label="Cerrar tutorial">Cerrar</button>
+      </div>
+      <div class="tutorial-grid">
+        <article class="tutorial-step">
+          <span>1</span>
+          <div>
+            <strong>Guarda tu negocio</strong>
+            <p>Escribe nombre, correo, precios, horarios y notas. Esto se queda en esta computadora.</p>
+          </div>
+        </article>
+        <article class="tutorial-step">
+          <span>2</span>
+          <div>
+            <strong>Carga el mensaje</strong>
+            <p>Pega, dicta o copia un mensaje de cliente. La app puede avisarte si detecta texto nuevo.</p>
+          </div>
+        </article>
+        <article class="tutorial-step">
+          <span>3</span>
+          <div>
+            <strong>Revisa la respuesta</strong>
+            <p>La respuesta usa tus precios, horarios y notas. Puedes copiarla o escucharla con voz.</p>
+          </div>
+        </article>
+        <article class="tutorial-step">
+          <span>4</span>
+          <div>
+            <strong>Abre correo o WhatsApp</strong>
+            <p>Primero apruebas. Despues se abre tu app real con el texto listo para enviar.</p>
+          </div>
+        </article>
+      </div>
+      <div class="tutorial-actions">
+        <button id="tutorial-start-button" class="primary-action" type="button">Empezar en datos</button>
+        <button id="tutorial-demo-button" type="button">Cargar ejemplo</button>
+      </div>
+    </div>
+  </section>
+
+  <main class="app-shell">
+    <aside class="hero-panel" aria-label="Estado del asistente">
+      <div class="brand-row">
+        <img class="brand-chip" src="./assets/geodia_control_chip_v1.png" alt="Sello GEODIA">
+        <div>
+          <p class="eyebrow">Version final local</p>
+          <h1>Asistente de Negocio</h1>
+        </div>
+      </div>
+
+      <p class="lead">Recibe mensajes, prepara respuestas y abre correo o WhatsApp con todo listo para revisar y enviar.</p>
+
+      <div class="hero-image" role="img" aria-label="Centro GEODIA MEDIOEVO">
+        <div class="signal-card">
+          <span class="signal-dot" aria-hidden="true"></span>
+          <div>
+            <strong id="assistant-state">Setup pendiente</strong>
+            <span id="saved-business-name">Guarda tu negocio para empezar.</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="flow-map" aria-label="Pasos principales">
+        <a id="flow-step-1" class="flow-step is-current" href="#paso-1">
+          <span>1</span>
+          <strong>Negocio</strong>
+        </a>
+        <a id="flow-step-2" class="flow-step" href="#paso-2">
+          <span>2</span>
+          <strong>Mensaje</strong>
+        </a>
+        <a id="flow-step-3" class="flow-step" href="#paso-3">
+          <span>3</span>
+          <strong>Enviar</strong>
+        </a>
+      </nav>
+
+      <div class="promise-list" aria-label="Garantias de uso">
+        <span>Datos locales</span>
+        <span>Voz y avisos</span>
+        <span>Aprobacion humana</span>
+        <span>Respaldo y borrado</span>
+      </div>
+    </aside>
+
+    <section class="workspace" aria-label="Flujo de respuesta">
+      <header class="top-panel">
+        <div>
+          <p class="eyebrow">Modo facil</p>
+          <h2>Atencion en tres pasos</h2>
+        </div>
+        <div class="status-strip" aria-label="Estado rapido">
+          <span id="message-state">Sin mensaje</span>
+          <span id="draft-state">Sin respuesta</span>
+        </div>
+      </header>
+
+      <section class="step-panel" id="paso-1">
+        <div class="step-header">
+          <span class="step-number">1</span>
+          <div>
+            <p class="eyebrow">Configurar una vez</p>
+            <h2>Datos del negocio</h2>
+          </div>
+        </div>
+
+        <form id="profile-form" class="setup-grid">
+          <label class="field-wide">
+            Tu negocio
+            <input id="business-name" name="businessName" type="text" autocomplete="organization" placeholder="Ej. Taller Gonzalez" required>
+            <span class="hint">Nombre que aparecera al final de la respuesta.</span>
+          </label>
+          <label>
+            Tu correo
+            <input id="contact-email" name="contactEmail" type="email" autocomplete="email" placeholder="tu@negocio.com" required>
+          </label>
+          <label>
+            Tono
+            <select id="tone" name="tone">
+              <option value="claro">Claro y amable</option>
+              <option value="breve">Corto y directo</option>
+              <option value="premium">Formal premium</option>
+              <option value="cercano">Cercano</option>
+            </select>
+          </label>
+          <label>
+            Correo del cliente
+            <input id="customer-email" name="customerEmail" type="email" autocomplete="email" placeholder="cliente@email.com">
+          </label>
+          <label>
+            WhatsApp del cliente
+            <input id="customer-whatsapp" name="customerWhatsapp" type="tel" inputmode="tel" placeholder="+52 55 1234 5678">
+          </label>
+          <label>
+            Servicios y precios
+            <textarea id="price-list" name="priceList" rows="4" placeholder="Consulta $500. Instalacion desde $1,200. Diagnostico gratis."></textarea>
+          </label>
+          <label>
+            Horarios y citas
+            <textarea id="business-hours" name="businessHours" rows="4" placeholder="Lunes a sabado de 9 a 6. Citas por WhatsApp."></textarea>
+          </label>
+          <label class="field-wide">
+            Pagos, direccion o notas
+            <textarea id="business-notes" name="businessNotes" rows="4" placeholder="Aceptamos efectivo, transferencia y tarjeta. Estamos en..."></textarea>
+          </label>
+          <fieldset class="field-wide consent-box">
+            <legend>Confirmacion</legend>
+            <label class="check-row"><input id="privacy-ok" type="checkbox" required> Tengo permiso para responder a esta persona.</label>
+            <label class="check-row"><input id="approval-ok" type="checkbox" required> Voy a revisar antes de enviar.</label>
+          </fieldset>
+          <button class="primary-action field-wide" type="submit">Guardar negocio</button>
+        </form>
+      </section>
+
+      <section class="step-panel" id="paso-2">
+        <div class="step-header">
+          <span class="step-number">2</span>
+          <div>
+            <p class="eyebrow">Mensaje del cliente</p>
+            <h2>Escuchar y preparar</h2>
+          </div>
+        </div>
+
+        <div class="quick-actions" aria-label="Acciones rapidas">
+          <button id="watch-clipboard-button" class="action-tile" type="button">
+            <strong>Activar avisos</strong>
+            <span>Detecta mensajes copiados.</span>
+          </button>
+          <button id="voice-dictate-button" class="action-tile" type="button">
+            <strong>Dictar mensaje</strong>
+            <span>Usa el microfono del equipo.</span>
+          </button>
+          <button id="demo-message-button" class="action-tile" type="button">
+            <strong>Probar</strong>
+            <span>Carga un ejemplo.</span>
+          </button>
+        </div>
+
+        <label>
+          Que dijo el cliente
+          <textarea id="incoming-message" rows="7" placeholder="Hola, quiero saber precio, disponibilidad o una cita."></textarea>
+        </label>
+
+        <div class="inbox-tools" aria-label="Preferencias de respuesta">
+          <label class="check-row"><input id="auto-draft-ok" type="checkbox" checked> Crear respuesta automaticamente</label>
+          <label class="check-row"><input id="voice-alert-ok" type="checkbox" checked> Avisar con voz</label>
+        </div>
+        <p id="monitor-status" class="monitor-status">Activa avisos, dicta o pega el mensaje del cliente.</p>
+
+        <div class="action-row">
+          <button id="draft-button" class="primary-action" type="button">Crear respuesta</button>
+          <button id="copy-button" type="button">Copiar texto</button>
+          <button id="voice-read-button" type="button">Leer respuesta</button>
+        </div>
+
+        <label>
+          Respuesta lista para revisar
+          <textarea id="draft-output" rows="8" readonly placeholder="Aqui aparecera la respuesta."></textarea>
+        </label>
+      </section>
+
+      <section class="step-panel" id="paso-3">
+        <div class="step-header">
+          <span class="step-number">3</span>
+          <div>
+            <p class="eyebrow">Envio real</p>
+            <h2>Aprobar y abrir tu app</h2>
+          </div>
+        </div>
+
+        <div class="approval-box">
+          <label class="check-row"><input id="reviewed-ok" type="checkbox"> Ya revise el texto y esta listo.</label>
+          <button id="approve-button" type="button">Aprobar respuesta</button>
+        </div>
+
+        <div class="send-grid" aria-label="Acciones de envio">
+          <a id="email-send-link" class="send-action disabled" href="#" target="_blank" rel="noopener" aria-disabled="true">
+            <strong>Abrir correo</strong>
+            <span>Tu app de correo abre el mensaje.</span>
+          </a>
+          <a id="whatsapp-send-link" class="send-action disabled" href="#" target="_blank" rel="noopener" aria-disabled="true">
+            <strong>Abrir WhatsApp</strong>
+            <span>WhatsApp abre el mensaje.</span>
+          </a>
+        </div>
+
+        <p id="send-status" class="send-status">Primero guarda datos, crea una respuesta y apruebala.</p>
+
+        <details class="history-panel">
+          <summary>Historial local</summary>
+          <ol id="approval-log" class="approval-log" aria-live="polite"></ol>
+        </details>
+
+        <details id="datos-privacidad" class="history-panel data-panel">
+          <summary>Datos y privacidad</summary>
+          <p class="privacy-copy">Tus datos se guardan en este equipo. Puedes descargar un respaldo o borrar todo antes de entregar la computadora a otra persona.</p>
+          <div class="data-actions">
+            <button id="export-data-button" type="button">Descargar respaldo</button>
+            <button id="clear-data-button" class="danger-action" type="button">Borrar datos locales</button>
+          </div>
+          <p id="data-status" class="send-status">Sin cambios pendientes.</p>
+        </details>
+      </section>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>

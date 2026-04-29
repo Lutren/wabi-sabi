@@ -1,0 +1,80 @@
+{
+  "name": "flujocrm",
+  "version": "1.0.0",
+  "description": "Tu negocio, organizado. Sin complicaciones. Desktop CRM - one-time purchase, no cloud, no subscription.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check main.js && node --check preload.js && node scripts/smoke-preload.cjs",
+    "build-win": "electron-builder --win",
+    "build-mac": "electron-builder --mac",
+    "build-all": "electron-builder --win --mac",
+    "pack": "electron-builder --dir"
+  },
+  "author": {
+    "name": "L.R. Gonzalez",
+    "email": "contact@flujocrm.com"
+  },
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "chart.js": "^4.4.0"
+  },
+  "devDependencies": {
+    "electron": "^33.0.0",
+    "electron-builder": "^25.0.0"
+  },
+  "build": {
+    "appId": "com.flujocrm.app",
+    "productName": "FlujoCRM",
+    "copyright": "Copyright 2026 L.R. Gonzalez. All rights reserved.",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "index.html",
+      "assets/**/*",
+      "node_modules/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        }
+      ],
+      "icon": "assets/icon.ico",
+      "artifactName": "FlujoCRM-Setup-${version}.${ext}"
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "FlujoCRM",
+      "installerLanguages": ["en_US", "es_419"],
+      "language": "0409"
+    },
+    "mac": {
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.business",
+      "artifactName": "FlujoCRM-${version}.${ext}"
+    },
+    "dmg": {
+      "title": "FlujoCRM ${version}",
+      "contents": [
+        { "x": 130, "y": 220 },
+        { "x": 410, "y": 220, "type": "link", "path": "/Applications" }
+      ]
+    }
+  }
+}

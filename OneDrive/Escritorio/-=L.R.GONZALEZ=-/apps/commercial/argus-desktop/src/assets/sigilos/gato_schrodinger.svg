@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Cuerpo del gato - Schrodinger, observador -->
+  <ellipse cx="40" cy="50" rx="18" ry="14" stroke="#D4A054" stroke-width="1.5" fill="none"/>
+  <!-- Cabeza -->
+  <circle cx="40" cy="30" r="11" stroke="#D4A054" stroke-width="1.5" fill="none"/>
+  <!-- Orejas -->
+  <path d="M31 22 L28 14 L36 20" stroke="#D4A054" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+  <path d="M49 22 L52 14 L44 20" stroke="#D4A054" stroke-width="1.2" stroke-linejoin="round" fill="none"/>
+  <!-- Ojos - uno abierto (observando), uno cerrado (en superposicion) -->
+  <circle cx="36" cy="29" r="2.5" fill="#D4A054" opacity="0.9"/>
+  <path d="M42.5 29 Q44.5 27 46.5 29" stroke="#D4A054" stroke-width="1.2" fill="none"/>
+  <!-- Nariz pequeña -->
+  <path d="M39 33 L40 34 L41 33" stroke="#D4A054" stroke-width="1" stroke-linejoin="round"/>
+  <!-- Cola curvada -->
+  <path d="M58 50 Q70 42 68 30 Q66 22 60 25" stroke="#D4A054" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <!-- Simbolo PSI en el pecho (observacionismo) -->
+  <text x="40" y="54" text-anchor="middle" font-size="10" fill="#D4A054" opacity="0.6" font-family="serif">Ψ</text>
+</svg>

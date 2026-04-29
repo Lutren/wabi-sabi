@@ -1,0 +1,330 @@
+/* ═══════════════════════════════════════════════════════════════
+   CLAUDIO — DESIGN SYSTEM v1.0
+   Universo Visual Híbrido: Steampunk + Cyberpunk + Archeopunk + Biopunk
+   Por: Luis René González López / MEDIOEVO
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── ROOT: PALETA MAESTRA ─── */
+:root {
+  /* === CORE: Metales y Materiales === */
+  --cobre:            #B87333;
+  --cobre-bruñido:    #DA8A47;
+  --bronce:           #CD7F32;
+  --bronce-patina:    #4A7C59;
+  --hierro:           #434343;
+  --hierro-oxidado:   #8B4513;
+  --acero-ennegrecido:#2C2C2C;
+  --obsidiana:        #0B0B0F;
+  --hueso:            #D4C9A8;
+  --ceramica:         #C4A882;
+
+  /* === SECUNDARIOS: Luz y Energía === */
+  --ambar:            #D98F2B;
+  --ambar-tenue:      #D98F2B66;
+  --turquesa:         #2ECCC7;
+  --turquesa-tenue:   #2ECCC766;
+  --neon-azul:        #00D4FF;
+  --neon-azul-tenue:  #00D4FF44;
+  --verde-musgo:      #4A7C59;
+  --verde-bio:        #39FF14;
+  --verde-bio-tenue:  #39FF1433;
+  --rojo-carmesi:     #8B0000;
+  --rojo-sangre:      #C41E3A;
+  --purpura-astral:   #6B3FA0;
+
+  /* === FONDOS === */
+  --fondo-base:       #0A0A0F;
+  --fondo-panel:      #111116;
+  --fondo-card:       #1A1A22;
+  --fondo-elevado:    #222230;
+  --fondo-hover:      #2A2A38;
+
+  /* === TEXTO === */
+  --texto-primario:   #D4C9A8;
+  --texto-secundario: #8A8674;
+  --texto-muted:      #5A5848;
+  --texto-brillante:  #F0E8D0;
+  --texto-error:      #C41E3A;
+  --texto-exito:      #4A7C59;
+
+  /* === BORDES === */
+  --borde-sutil:      #2A2A32;
+  --borde-metal:      #3D3520;
+  --borde-activo:     #B87333;
+  --borde-glow:       #D98F2B44;
+
+  /* === SOMBRAS === */
+  --sombra-panel:     0 4px 24px rgba(0,0,0,0.6);
+  --sombra-elevada:   0 8px 32px rgba(0,0,0,0.8);
+  --sombra-interna:   inset 0 2px 8px rgba(0,0,0,0.4);
+  --sombra-glow-ambar: 0 0 20px rgba(217,143,43,0.3);
+  --sombra-glow-azul:  0 0 20px rgba(0,212,255,0.3);
+  --sombra-glow-verde: 0 0 20px rgba(57,255,20,0.2);
+
+  /* === TIPOGRAFÍA === */
+  --font-display:     'Archivo Black', 'Impact', sans-serif;
+  --font-serif:       'IBM Plex Serif', 'Georgia', serif;
+  --font-body:        'IBM Plex Sans', 'Helvetica Neue', sans-serif;
+  --font-mono:        'IBM Plex Mono', 'Consolas', monospace;
+
+  /* === TAMAÑOS TIPOGRÁFICOS === */
+  --text-xs:    0.75rem;   /* 12px */
+  --text-sm:    0.875rem;  /* 14px */
+  --text-base:  1rem;      /* 16px */
+  --text-lg:    1.125rem;  /* 18px */
+  --text-xl:    1.25rem;   /* 20px */
+  --text-2xl:   1.5rem;    /* 24px */
+  --text-3xl:   1.875rem;  /* 30px */
+  --text-4xl:   2.25rem;   /* 36px */
+  --text-5xl:   3rem;      /* 48px */
+
+  /* === ESPACIADO === */
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   1.5rem;
+  --space-xl:   2rem;
+  --space-2xl:  3rem;
+  --space-3xl:  4rem;
+
+  /* === BORDES REDONDEADOS === */
+  --radius-sm:  4px;
+  --radius-md:  8px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+  --radius-full: 9999px;
+
+  /* === TRANSICIONES === */
+  --ease-default:   cubic-bezier(0.4, 0, 0.2, 1);
+  --duration-fast:  150ms;
+  --duration-base:  300ms;
+  --duration-slow:  500ms;
+  --duration-glow:  2000ms;
+
+  /* === Z-INDEX === */
+  --z-base:     1;
+  --z-panel:    10;
+  --z-modal:    100;
+  --z-hud:      200;
+  --z-tooltip:  300;
+  --z-overlay:  400;
+}
+
+
+/* ─── CIUDADES: TEMAS POR REGIÓN ─── */
+
+/* Ciudad Control — Steampunk */
+[data-city="control"],
+.theme-control {
+  --city-primary:     var(--cobre);
+  --city-secondary:   var(--bronce);
+  --city-accent:      var(--ambar);
+  --city-glow:        var(--sombra-glow-ambar);
+  --city-text:        var(--hueso);
+  --city-border:      var(--borde-metal);
+  --city-bg:          #0D0A07;
+  --city-panel:       #151008;
+  --city-surface:     #1E1610;
+}
+
+/* Entreternia — Cyberpunk */
+[data-city="entreternia"],
+.theme-entreternia {
+  --city-primary:     var(--neon-azul);
+  --city-secondary:   var(--turquesa);
+  --city-accent:      var(--ambar);
+  --city-glow:        var(--sombra-glow-azul);
+  --city-text:        #E0F7FF;
+  --city-border:      #1A3A4A;
+  --city-bg:          #050A10;
+  --city-panel:       #0A1520;
+  --city-surface:     #0F1F2E;
+}
+
+/* Sanguisburg — Gótico Vampírico */
+[data-city="sanguisburg"],
+.theme-sanguisburg {
+  --city-primary:     var(--rojo-carmesi);
+  --city-secondary:   var(--rojo-sangre);
+  --city-accent:      var(--cobre);
+  --city-glow:        0 0 20px rgba(139,0,0,0.4);
+  --city-text:        #E8D5D5;
+  --city-border:      #3A1A1A;
+  --city-bg:          #0A0507;
+  --city-panel:       #150A0C;
+  --city-surface:     #1E1015;
+}
+
+
+/* ─── RESET Y BASE ─── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--fondo-base);
+  color: var(--texto-primario);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+h1, h2, h3 { font-family: var(--font-display); }
+h4, h5, h6 { font-family: var(--font-serif); }
+code, pre, .mono { font-family: var(--font-mono); }
+
+
+/* ─── TEXTURAS Y MATERIALES (CSS) ─── */
+
+/* Patrón de engranaje sutil (steampunk) */
+.texture-gear {
+  background-image:
+    radial-gradient(circle at 30% 30%, rgba(184,115,51,0.05) 0%, transparent 60%),
+    radial-gradient(circle at 70% 70%, rgba(205,127,50,0.03) 0%, transparent 50%);
+}
+
+/* Patrón de circuito (cyberpunk) */
+.texture-circuit {
+  background-image:
+    linear-gradient(90deg, transparent 49.5%, rgba(0,212,255,0.03) 49.5%, rgba(0,212,255,0.03) 50.5%, transparent 50.5%),
+    linear-gradient(0deg, transparent 49.5%, rgba(0,212,255,0.03) 49.5%, rgba(0,212,255,0.03) 50.5%, transparent 50.5%);
+  background-size: 40px 40px;
+}
+
+/* Patrón de piedra (archeopunk) */
+.texture-stone {
+  background-image:
+    url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23D4C9A8' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Patrón orgánico (biopunk) */
+.texture-organic {
+  background-image:
+    radial-gradient(ellipse at 20% 50%, rgba(57,255,20,0.02) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, rgba(74,124,89,0.03) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(57,255,20,0.015) 0%, transparent 60%);
+}
+
+/* Efecto de condensación */
+.texture-condensation {
+  background-image:
+    radial-gradient(circle at 15% 85%, rgba(255,255,255,0.02) 0%, transparent 3%),
+    radial-gradient(circle at 35% 75%, rgba(255,255,255,0.015) 0%, transparent 2%),
+    radial-gradient(circle at 65% 90%, rgba(255,255,255,0.02) 0%, transparent 4%),
+    radial-gradient(circle at 85% 80%, rgba(255,255,255,0.01) 0%, transparent 3%);
+}
+
+/* Efecto de pátina */
+.texture-patina {
+  background-image:
+    linear-gradient(135deg, rgba(74,124,89,0.08) 0%, transparent 50%),
+    linear-gradient(225deg, rgba(184,115,51,0.05) 0%, transparent 40%);
+}
+
+/* Efecto de óxido */
+.texture-rust {
+  background-image:
+    radial-gradient(circle at 40% 60%, rgba(139,69,19,0.06) 0%, transparent 40%),
+    radial-gradient(circle at 70% 30%, rgba(139,69,19,0.04) 0%, transparent 30%);
+}
+
+
+/* ─── ANIMACIONES BASE ─── */
+
+/* Pulso de vapor */
+@keyframes steam-pulse {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50%      { opacity: 0.8; transform: translateY(-4px); }
+}
+
+/* Glow de energía */
+@keyframes energy-glow {
+  0%, 100% { box-shadow: 0 0 8px var(--city-primary); }
+  50%      { box-shadow: 0 0 20px var(--city-primary), 0 0 40px var(--city-primary); }
+}
+
+/* Parpadeo de neón */
+@keyframes neon-flicker {
+  0%, 100% { opacity: 1; }
+  92%      { opacity: 1; }
+  93%      { opacity: 0.8; }
+  94%      { opacity: 1; }
+  96%      { opacity: 0.6; }
+  97%      { opacity: 1; }
+}
+
+/* Rotación de engranaje */
+@keyframes gear-rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Latido (heartbeat para Sanguisburg) */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  14%      { transform: scale(1.05); }
+  28%      { transform: scale(1); }
+  42%      { transform: scale(1.03); }
+  56%      { transform: scale(1); }
+}
+
+/* Glitch sutil */
+@keyframes glitch-subtle {
+  0%, 100% { transform: translate(0); }
+  20%      { transform: translate(-1px, 1px); }
+  40%      { transform: translate(1px, -1px); }
+  60%      { transform: translate(-1px, 0); }
+  80%      { transform: translate(1px, 1px); }
+}
+
+/* Respiración orgánica */
+@keyframes bio-breathe {
+  0%, 100% { opacity: 0.6; }
+  50%      { opacity: 1; }
+}
+
+.animate-steam    { animation: steam-pulse var(--duration-glow) var(--ease-default) infinite; }
+.animate-glow     { animation: energy-glow var(--duration-glow) var(--ease-default) infinite; }
+.animate-neon     { animation: neon-flicker 4s step-end infinite; }
+.animate-gear     { animation: gear-rotate 20s linear infinite; }
+.animate-heartbeat{ animation: heartbeat 2s var(--ease-default) infinite; }
+.animate-glitch   { animation: glitch-subtle 0.3s step-end infinite; }
+.animate-breathe  { animation: bio-breathe 3s var(--ease-default) infinite; }
+
+
+/* ─── UTILIDADES ─── */
+
+.text-display { font-family: var(--font-display); }
+.text-serif   { font-family: var(--font-serif); }
+.text-mono    { font-family: var(--font-mono); }
+
+.glow-ambar   { text-shadow: 0 0 10px var(--ambar-tenue); }
+.glow-azul    { text-shadow: 0 0 10px var(--neon-azul-tenue); }
+.glow-verde   { text-shadow: 0 0 10px var(--verde-bio-tenue); }
+.glow-rojo    { text-shadow: 0 0 10px rgba(196,30,58,0.4); }
+
+.border-remache {
+  border: 1px solid var(--borde-metal);
+  border-image: repeating-linear-gradient(
+    90deg,
+    var(--cobre) 0px, var(--cobre) 4px,
+    transparent 4px, transparent 20px
+  ) 1;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--fondo-base); }
+::-webkit-scrollbar-thumb {
+  background: var(--hierro);
+  border-radius: var(--radius-sm);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--cobre); }

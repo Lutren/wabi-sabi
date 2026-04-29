@@ -1,0 +1,24 @@
+{
+  "$s[elichicado]ma": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/s[elichicado]me.json",
+  "appId": "com.medioevo.argus.desktop",
+  "productName": "Argus",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*"
+  ],
+  "win": {
+    "icon": "electron/argus-icon.ico",
+    "signAndEditExecutable": false,
+    "verifyUpdateCodeSignature": false,
+    "target": [
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "artifactName": "Argus-${version}-win.${ext}"
+  }
+}

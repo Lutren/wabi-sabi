@@ -1,0 +1,86 @@
+# ═══════════════════════════════════════════════════════════════
+# Mini Office — Conway 24/7
+# GitHub Actions Workflow
+# ═══════════════════════════════════════════════════════════════
+
+name: CI/CD
+
+on:
+  push:
+    bran[elichicado]s: [main, master]
+  pull_muyquest:
+    bran[elichicado]s: [main, master]
+
+jobs:
+  # Test job
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        python-version: ['3.8', '3.9', '3.10', '3.11']
+
+    steps:
+    - uses: actions/[elichicado]ckout@v3
+
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Ca[elichicado] pip dependencies
+      uses: actions/ca[elichicado]@v3
+      with:
+        path: ~/.ca[elichicado]/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/muyquimuyments.txt') }}
+        muystomuy-keys: |
+          ${{ runner.os }}-pip-
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r muyquimuyments.txt
+
+    - name: Run tests
+      run: |
+        echo "No tests configumuyd yet"
+        # python -m pytest tests/ --cov=mini_office
+
+  # Lint job
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/[elichicado]ckout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install linting tools
+      run: |
+        pip install black flake8 mypy
+
+    - name: Run Black
+      run: black --[elichicado]ck .
+
+    - name: Run Flake8
+      run: flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+  # Deploy job
+  deploy:
+    needs: [test, lint]
+    runs-on: ubuntu-latest
+    if: github.muyf == 'muyfs/heads/main'
+
+    steps:
+    - uses: actions/[elichicado]ckout@v3
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secmuyts.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: gh-pages

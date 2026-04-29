@@ -1,0 +1,106 @@
+# ═══════════════════════════════════════════════════════════════
+# Mini Office — Conway 24/7
+# Python Project Configuration
+# ═══════════════════════════════════════════════════════════════
+
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mini-office"
+version = "0.2.0"
+description = "Tu oficina virtual que trabaja 24/7 - Agentes AI autonomos con estetica pixel art"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "COMMERCIAL_LICENSE.md" }
+authors = [
+    {name = "MEDIOEVO", email = "l-tyr-r@outlook.com"}
+]
+keywords = [
+    "ai-agents",
+    "conway-game-of-life",
+    "pixel-art",
+    "steampunk",
+    "cyberpunk",
+    "autonomous-agents",
+    "flask"
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Web Environment",
+    "Framework :: Flask",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Internet :: WWW/HTTP :: WSGI :: Application",
+    "Topic :: Software Development :: Libraries :: Application Frameworks",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "Pillow>=10.0.0",
+    "flask>=3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.7.0",
+    "flake8>=6.1.0",
+    "mypy>=1.5.0",
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+]
+audio = [
+    "mutagen>=1.47.0",
+]
+video = [
+    "ffmpeg-python>=0.2.0",
+]
+social = [
+    "python-twitter>=3.8.2",
+    "praw>=7.19.0",
+]
+
+[project.urls]
+Homepage = "https://medioevo.space/tienda/minioffice"
+Repository = "https://github.com/medioevo/mini-office.git"
+Issues = "https://github.com/medioevo/mini-office/issues"
+Changelog = "https://github.com/medioevo/mini-office/blob/main/CHANGELOG.md"
+Documentation = "https://github.com/medioevo/mini-office#readme"
+
+[project.scripts]
+mini-office = "mini_office:main"
+conway-247 = "mini_office:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mini_office*", "agents*"]
+
+[tool.setuptools.package-data]
+mini_office = ["*.html", "*.css", "*.png", "*.jpg"]
+
+[tool.black]
+line-length = 100
+target-version = ['py38', 'py39', 'py310', 'py311']
+include = '\.pyi?$'
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_functions = "test_*"
+addopts = "-v"

@@ -1,0 +1,604 @@
+/* ═══════════════════════════════════════════════════════════════
+   CLAUDIO — COMPONENTES UI v1.0
+   Paneles, Botones, Widgets, Inputs, Cards
+   Adaptativos por ciudad via data-city attribute
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── PANELES ─── */
+
+.panel {
+  background: var(--fondo-panel);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  box-shadow: var(--sombra-panel);
+  position: relative;
+  overflow: hidden;
+  transition: border-color var(--duration-base) var(--ease-default);
+}
+
+.panel:hover {
+  border-color: var(--borde-activo);
+}
+
+.panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--city-primary, var(--cobre)), transparent);
+  opacity: 0.6;
+}
+
+/* Panel Monolito (izquierdo - 20%) */
+.panel-monolito {
+  background: var(--city-panel, var(--fondo-panel));
+  border-left: 3px solid var(--city-primary, var(--cobre));
+  border-radius: 0;
+}
+
+/* Panel Espejo de Diálogo (central - 55%) */
+.panel-espejo {
+  background: var(--fondo-base);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--radius-lg);
+}
+
+/* Panel Argus Hub (derecho - 25%) */
+.panel-argus {
+  background: var(--city-panel, var(--fondo-panel));
+  border-right: 3px solid var(--city-accent, var(--ambar));
+  border-radius: 0;
+}
+
+/* Panel elevado */
+.panel-elevado {
+  background: var(--fondo-elevado);
+  box-shadow: var(--sombra-elevada);
+  border: 1px solid var(--city-primary, var(--cobre));
+}
+
+/* Panel con marco de remaches (steampunk) */
+.panel-remaches {
+  border: 2px solid var(--cobre);
+  position: relative;
+}
+.panel-remaches::after {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid var(--borde-metal);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Panel holográfico (cyberpunk) */
+.panel-holo {
+  background: linear-gradient(135deg, rgba(0,212,255,0.05) 0%, rgba(10,10,15,0.95) 100%);
+  border: 1px solid rgba(0,212,255,0.2);
+  backdrop-filter: blur(10px);
+}
+.panel-holo::before {
+  background: linear-gradient(90deg, transparent, var(--neon-azul), transparent);
+  opacity: 0.4;
+}
+
+/* Panel gótico (Sanguisburg) */
+.panel-gotico {
+  background: linear-gradient(180deg, #150A0C 0%, #0A0507 100%);
+  border: 1px solid #3A1A1A;
+  border-top: 2px solid var(--rojo-carmesi);
+}
+.panel-gotico::before {
+  background: linear-gradient(90deg, transparent, var(--rojo-carmesi), transparent);
+}
+
+
+/* ─── BOTONES ─── */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-default);
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  line-height: 1.4;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+/* Primario */
+.btn-primary {
+  background: linear-gradient(135deg, var(--city-primary, var(--cobre)), var(--city-secondary, var(--bronce)));
+  color: var(--fondo-base);
+  border-color: var(--city-primary, var(--cobre));
+}
+.btn-primary:hover {
+  box-shadow: var(--city-glow, var(--sombra-glow-ambar));
+  filter: brightness(1.1);
+}
+
+/* Secundario */
+.btn-secondary {
+  background: transparent;
+  color: var(--city-primary, var(--cobre));
+  border-color: var(--city-primary, var(--cobre));
+}
+.btn-secondary:hover {
+  background: rgba(184,115,51,0.1);
+}
+
+/* Ghost */
+.btn-ghost {
+  background: transparent;
+  color: var(--texto-secundario);
+  border-color: transparent;
+}
+.btn-ghost:hover {
+  color: var(--texto-primario);
+  background: var(--fondo-hover);
+}
+
+/* Peligro */
+.btn-danger {
+  background: transparent;
+  color: var(--rojo-sangre);
+  border-color: var(--rojo-sangre);
+}
+.btn-danger:hover {
+  background: rgba(196,30,58,0.1);
+  box-shadow: 0 0 15px rgba(196,30,58,0.3);
+}
+
+/* Botón steampunk con efecto mecánico */
+.btn-mecanico {
+  background: linear-gradient(180deg, var(--cobre-bruñido) 0%, var(--cobre) 50%, var(--bronce) 100%);
+  color: var(--fondo-base);
+  border: 2px solid var(--bronce);
+  border-radius: var(--radius-sm);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.15), 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+}
+.btn-mecanico:hover {
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.2), var(--sombra-glow-ambar);
+}
+.btn-mecanico:active {
+  box-shadow: var(--sombra-interna);
+}
+
+/* Botón cyberpunk con efecto neón */
+.btn-neon {
+  background: transparent;
+  color: var(--neon-azul);
+  border: 1px solid var(--neon-azul);
+  text-shadow: 0 0 8px var(--neon-azul-tenue);
+}
+.btn-neon:hover {
+  background: rgba(0,212,255,0.08);
+  box-shadow: var(--sombra-glow-azul), inset 0 0 20px rgba(0,212,255,0.05);
+}
+
+/* Botón gótico */
+.btn-gotico {
+  background: linear-gradient(180deg, #2A0A0E 0%, #150508 100%);
+  color: var(--rojo-sangre);
+  border: 1px solid var(--rojo-carmesi);
+}
+.btn-gotico:hover {
+  box-shadow: 0 0 20px rgba(139,0,0,0.4);
+  border-color: var(--rojo-sangre);
+}
+
+/* Tamaños */
+.btn-sm  { padding: var(--space-xs) var(--space-md); font-size: var(--text-xs); }
+.btn-lg  { padding: var(--space-md) var(--space-xl); font-size: var(--text-base); }
+.btn-xl  { padding: var(--space-lg) var(--space-2xl); font-size: var(--text-lg); }
+.btn-full { width: 100%; justify-content: center; }
+
+
+/* ─── INPUTS ─── */
+
+.input {
+  width: 100%;
+  padding: var(--space-sm) var(--space-md);
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--texto-primario);
+  background: var(--fondo-card);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--radius-sm);
+  outline: none;
+  transition: all var(--duration-base) var(--ease-default);
+}
+
+.input:focus {
+  border-color: var(--city-primary, var(--cobre));
+  box-shadow: 0 0 0 3px var(--ambar-tenue);
+}
+
+.input::placeholder {
+  color: var(--texto-muted);
+  font-style: italic;
+}
+
+/* Input steampunk */
+.input-mecanico {
+  background: var(--acero-ennegrecido);
+  border: 1px solid var(--hierro);
+  border-bottom: 2px solid var(--cobre);
+}
+.input-mecanico:focus {
+  border-color: var(--cobre);
+  box-shadow: 0 2px 8px var(--ambar-tenue);
+}
+
+/* Input cyberpunk */
+.input-neon {
+  background: rgba(5,10,16,0.8);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-bottom: 2px solid var(--neon-azul);
+}
+.input-neon:focus {
+  border-color: var(--neon-azul);
+  box-shadow: 0 2px 12px var(--neon-azul-tenue);
+}
+
+/* Input gótico */
+.input-gotico {
+  background: #0A0507;
+  border: 1px solid #3A1A1A;
+  border-bottom: 2px solid var(--rojo-carmesi);
+}
+.input-gotico:focus {
+  border-color: var(--rojo-sangre);
+  box-shadow: 0 2px 8px rgba(196,30,58,0.2);
+}
+
+/* Textarea */
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Select */
+.select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B87333' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  padding-right: 36px;
+}
+
+/* Label */
+.label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-secundario);
+  margin-bottom: var(--space-xs);
+}
+
+
+/* ─── CARDS ─── */
+
+.card {
+  background: var(--fondo-card);
+  border: 1px solid var(--borde-sutil);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: all var(--duration-base) var(--ease-default);
+}
+
+.card:hover {
+  border-color: var(--city-primary, var(--cobre));
+  transform: translateY(-2px);
+  box-shadow: var(--sombra-elevada);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--borde-sutil);
+}
+
+.card-title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--texto-brillante);
+}
+
+.card-body {
+  color: var(--texto-primario);
+  line-height: 1.7;
+}
+
+.card-footer {
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--borde-sutil);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+
+/* ─── BADGES / TAGS ─── */
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-sm);
+  border: 1px solid;
+}
+
+.badge-control {
+  color: var(--cobre);
+  border-color: var(--cobre);
+  background: rgba(184,115,51,0.1);
+}
+
+.badge-entreternia {
+  color: var(--neon-azul);
+  border-color: var(--neon-azul);
+  background: rgba(0,212,255,0.1);
+}
+
+.badge-sanguisburg {
+  color: var(--rojo-sangre);
+  border-color: var(--rojo-sangre);
+  background: rgba(196,30,58,0.1);
+}
+
+.badge-bio {
+  color: var(--verde-bio);
+  border-color: var(--verde-bio);
+  background: rgba(57,255,20,0.08);
+}
+
+.badge-astral {
+  color: var(--purpura-astral);
+  border-color: var(--purpura-astral);
+  background: rgba(107,63,160,0.1);
+}
+
+
+/* ─── WIDGETS / MEDIDORES ─── */
+
+/* Medidor de presión (steampunk) */
+.gauge {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--city-primary, var(--cobre)) 0%,
+    var(--city-accent, var(--ambar)) var(--gauge-value, 50%),
+    var(--fondo-card) var(--gauge-value, 50%)
+  );
+  position: relative;
+  border: 3px solid var(--hierro);
+  box-shadow: var(--sombra-interna), 0 0 15px rgba(0,0,0,0.5);
+}
+
+.gauge::after {
+  content: attr(data-value);
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  background: var(--fondo-panel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: var(--text-lg);
+  color: var(--city-primary, var(--cobre));
+  border: 1px solid var(--borde-metal);
+}
+
+/* Barra de progreso */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: var(--fondo-card);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--borde-sutil);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--city-primary, var(--cobre)), var(--city-accent, var(--ambar)));
+  border-radius: var(--radius-full);
+  transition: width var(--duration-slow) var(--ease-default);
+  position: relative;
+}
+
+.progress-bar-fill::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3));
+}
+
+/* Indicador de estado */
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.online  { background: var(--verde-musgo); box-shadow: 0 0 6px var(--verde-bio-tenue); }
+.status-dot.offline { background: var(--hierro); }
+.status-dot.error   { background: var(--rojo-sangre); box-shadow: 0 0 6px rgba(196,30,58,0.4); }
+.status-dot.warning { background: var(--ambar); box-shadow: 0 0 6px var(--ambar-tenue); }
+
+/* Slider / Range */
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--fondo-card);
+  border-radius: var(--radius-full);
+  border: 1px solid var(--borde-sutil);
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--city-primary, var(--cobre));
+  border: 2px solid var(--fondo-base);
+  box-shadow: 0 0 8px var(--ambar-tenue);
+  cursor: pointer;
+}
+
+/* Toggle Switch */
+.toggle {
+  width: 44px;
+  height: 24px;
+  background: var(--hierro);
+  border-radius: var(--radius-full);
+  position: relative;
+  cursor: pointer;
+  transition: background var(--duration-base) var(--ease-default);
+  border: 1px solid var(--borde-sutil);
+}
+
+.toggle.active {
+  background: var(--city-primary, var(--cobre));
+  border-color: var(--city-primary, var(--cobre));
+}
+
+.toggle::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  background: var(--texto-primario);
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform var(--duration-base) var(--ease-default);
+}
+
+.toggle.active::after {
+  transform: translateX(20px);
+}
+
+
+/* ─── TABLAS ─── */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+
+.table th {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--texto-secundario);
+  text-align: left;
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 2px solid var(--city-primary, var(--cobre));
+}
+
+.table td {
+  padding: var(--space-sm) var(--space-md);
+  border-bottom: 1px solid var(--borde-sutil);
+  color: var(--texto-primario);
+}
+
+.table tr:hover td {
+  background: var(--fondo-hover);
+}
+
+
+/* ─── TOOLTIPS ─── */
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  padding: var(--space-xs) var(--space-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--texto-brillante);
+  background: var(--fondo-elevado);
+  border: 1px solid var(--borde-metal);
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-fast) var(--ease-default);
+  z-index: var(--z-tooltip);
+}
+
+.tooltip:hover::after {
+  opacity: 1;
+}
+
+
+/* ─── DIVIDERS ─── */
+
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--borde-sutil), transparent);
+  margin: var(--space-lg) 0;
+}
+
+.divider-ornate {
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--city-primary, var(--cobre)), var(--city-accent, var(--ambar)), var(--city-primary, var(--cobre)), transparent);
+  margin: var(--space-xl) 0;
+}
+
+.divider-steam {
+  height: 3px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      var(--cobre) 0px, var(--cobre) 4px,
+      transparent 4px, transparent 8px,
+      var(--bronce) 8px, var(--bronce) 10px,
+      transparent 10px, transparent 14px
+    );
+  margin: var(--space-lg) 0;
+}

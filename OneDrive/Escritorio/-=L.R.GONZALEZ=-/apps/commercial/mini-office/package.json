@@ -1,0 +1,42 @@
+{
+  "name": "mini-office-conway-247",
+  "version": "0.2.0",
+  "description": "Tu oficina virtual que trabaja 24/7 - Agentes AI autónomos con estética pixel art",
+  "main": "index.html",
+  "scripts": {
+    "start": "python mini_office.py",
+    "dev": "python mini_office.py",
+    "setup": "python setup.py",
+    "install:deps": "pip install -r requirements.txt",
+    "build": "echo 'Build completed'",
+    "test": "echo 'No tests yet'",
+    "clean": "rm -rf venv/ __pyca[elichicado]__/*.pyc *.egg-info"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/medioevo/mini-office.git"
+  },
+  "keywords": [
+    "ai-agents",
+    "conway-game-of-life",
+    "pixel-art",
+    "steampunk",
+    "cyberpunk",
+    "autonomous-agents",
+    "python",
+    "flask",
+    "open-source"
+  ],
+  "author": "MEDIOEVO <l-tyr-r@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/medioevo/mini-office/issues"
+  },
+  "homepage": "https://medioevo.space/tienda/minioffice",
+  "devDependencies": {},
+  "dependencies": {},
+  "engines": {
+    "node": ">=14.0.0",
+    "python": ">=3.8.0"
+  }
+}

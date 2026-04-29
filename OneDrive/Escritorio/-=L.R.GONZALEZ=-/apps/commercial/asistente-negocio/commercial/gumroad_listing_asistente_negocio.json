@@ -1,0 +1,18 @@
+{
+  "name": "Asistente de Negocio MEDIOEVO v1.0.0 para Windows",
+  "short_url": "asistente-negocio-medioevo",
+  "gumroad_product_id": "Ap82WA_AAxdC9W2I6PYSLw==",
+  "gumroad_draft_url": "https://lrgonzalez.gumroad.com/l/asistente-negocio-medioevo",
+  "price": 4900,
+  "currency": "usd",
+  "content_type": "software",
+  "published": false,
+  "shown_on_profile": false,
+  "product_file": "C:/Users/L-Tyr/OneDrive/Escritorio/PRODUCTO_FINAL_MEDIOEVO/Asistente_Negocio_MEDIOEVO_v1.0.0_FINAL_SHARE.zip",
+  "sha256": "881432298382D7E127EEC9D1CEC32B2883C5F7658A00B9CCD0955465A9FF75EA",
+  "preview_image_url": "https://medioevo.space/medioevo-assets/img/surfaces/hormiguero_geodia_hero.png",
+  "description": "Asistente de escritorio para pequenos negocios que reciben preguntas repetidas por WhatsApp y correo. MEDIOEVO prepara respuestas con los datos de tu negocio, avisa con voz y abre WhatsApp o correo con el texto listo. Tu revisas y tu apruebas antes de enviar. Incluye app Windows v1.0.0, ZIP portable, demo HTML local, flujo de tres pasos, borradores para correo y WhatsApp, voz cuando el equipo lo soporta, respaldo local, borrado de datos, licencia y politica public_safe. No envia mensajes solo. No usa WhatsApp Web en la version publica. No incluye agentes privados, tokens, cookies ni automatizacion de escritorio. Windows puede mostrar SmartScreen porque el instalador aun no esta firmado. macOS esta en preparacion.",
+  "support_policy": "Soporte por correo en 2 a 3 dias habiles durante el acceso fundador.",
+  "refund_policy": "Reembolso de 7 dias si no puede instalarse y soporte no lo resuelve. No aplica por redistribucion, abuso, uso fuera de alcance o incompatibilidades no declaradas antes de compra.",
+  "license": "1 negocio/equipo por compra inicial"
+}

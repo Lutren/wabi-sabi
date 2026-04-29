@@ -1,0 +1,93 @@
+{
+  "id": "asistente_negocio_medioevo",
+  "name": "Asistente de Negocio MEDIOEVO",
+  "version": "1.0.0-public-safe",
+  "profile": "public_safe",
+  "commerce_mode": "lead_first",
+  "release_state": "final_local_package",
+  "autonomy": "human_approved_external_send",
+  "platforms": {
+    "windows": {
+      "targets": [
+        "nsis_exe",
+        "portable_zip"
+      ],
+      "signing": "pending_certificate"
+    },
+    "macos": {
+      "targets": [
+        "dmg",
+        "app_zip"
+      ],
+      "notarization": "pending_apple_developer_account"
+    }
+  },
+  "first_run_requires": [
+    "business_name",
+    "contact_email",
+    "allowed_channels",
+    "privacy_acknowledgement",
+    "human_approval_acknowledgement"
+  ],
+  "modules": [
+    "crm_light",
+    "email_draft_assistant",
+    "mailto_external_email_send",
+    "whatsapp_wa_me_external_send",
+    "approval_queue",
+    "consent_log",
+    "voice_dictation",
+    "voice_readback",
+    "clipboard_message_watch",
+    "business_faq_responder",
+    "medioevo_guided_ui",
+    "local_data_export",
+    "local_data_reset"
+  ],
+  "public_integrations": [
+    {
+      "id": "gmail_oauth",
+      "state": "planned",
+      "rule": "use OAuth and minimal Gmail scopes only"
+    },
+    {
+      "id": "microsoft_graph_mail",
+      "state": "planned",
+      "rule": "use delegated OAuth and explicit send approval"
+    },
+    {
+      "id": "resend_transactional",
+      "state": "planned",
+      "rule": "use verified sender, opt-in list and audit log"
+    },
+    {
+      "id": "whatsapp_business_cloud_api",
+      "state": "planned",
+      "rule": "requires Meta Business, dedicated number, privacy policy and opt-in"
+    },
+    {
+      "id": "mailto_external_client",
+      "state": "release_ready",
+      "rule": "opens the user's installed email app with the approved draft"
+    },
+    {
+      "id": "whatsapp_wa_me",
+      "state": "release_ready",
+      "rule": "opens WhatsApp via wa.me with the approved draft"
+    }
+  ],
+  "blocked_from_public": [
+    "whatsapp_web_playwright",
+    "browser_cookies",
+    "desktop_automation",
+    "shell_agents",
+    "local_secret_files",
+    "autonomous_send_without_review"
+  ],
+  "api_contract": {
+    "status": "business_assistant.status",
+    "draft": "business_assistant.draft_reply",
+    "approve": "business_assistant.approve_send",
+    "send": "external_client_after_human_approval"
+  }
+}

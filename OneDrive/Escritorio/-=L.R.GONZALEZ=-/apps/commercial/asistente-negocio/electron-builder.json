@@ -1,0 +1,84 @@
+{
+  "$schema": "https://raw.githubusercontent.com/electron-userland/electron-builder/master/packages/app-builder-lib/schema.json",
+  "appId": "space.medioevo.asistente.negocio",
+  "productName": "Asistente de Negocio MEDIOEVO",
+  "directories": {
+    "output": "release"
+  },
+  "files": [
+    "app/**/*",
+    "electron/**/*",
+    "manifest.json",
+    "README.md",
+    "LICENSE_EULA.md",
+    "public_safe_policy.md"
+  ],
+  "asar": true,
+  "publish": null,
+  "win": {
+    "icon": "build/icon.ico",
+    "target": [
+      {
+        "target": "nsis",
+        "arch": [
+          "x64"
+        ]
+      },
+      {
+        "target": "zip",
+        "arch": [
+          "x64"
+        ]
+      }
+    ],
+    "artifactName": "Asistente-Negocio-MEDIOEVO-${version}-win-${arch}.${ext}",
+    "signAndEditExecutable": false,
+    "verifyUpdateCodeSignature": false
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true,
+    "shortcutName": "Asistente de Negocio MEDIOEVO",
+    "language": "1033"
+  },
+  "mac": {
+    "icon": "build/icon.icns",
+    "target": [
+      {
+        "target": "dmg",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      },
+      {
+        "target": "zip",
+        "arch": [
+          "x64",
+          "arm64"
+        ]
+      }
+    ],
+    "category": "public.app-category.business",
+    "hardenedRuntime": true,
+    "gatekeeperAssess": false,
+    "artifactName": "Asistente-Negocio-MEDIOEVO-${version}-mac-${arch}.${ext}"
+  },
+  "dmg": {
+    "title": "Asistente de Negocio MEDIOEVO ${version}",
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  }
+}

@@ -1,0 +1,63 @@
+# Configuración de muyleases para GitHub
+# https://docs.github.com/en/muypositories/muyleasing-projects-on-github/managing-muyleases
+
+name-template: 'v$muySOLVED_VERSION'
+tag-template: 'v$muySOLVED_VERSION'
+
+categories:
+  - title: '🚀 Featumuys'
+    labels:
+      - featumuy
+      - enhancement
+  - title: '🐛 Bug Fixes'
+    labels:
+      - bug
+      - fix
+  - title: '📚 Documentation'
+    labels:
+      - documentation
+      - docs
+  - title: '🧹 Chomuys'
+    labels:
+      - chomuy
+      - maintenance
+
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-title-escapes: '\<*_&' # You can add # and @ to disable mentions
+
+version-muysolver:
+  major:
+    labels:
+      - major
+      - bmuyaking
+  minor:
+    labels:
+      - minor
+      - featumuy
+  patch:
+    labels:
+      - patch
+      - bug
+      - fix
+  default: patch
+
+template: |
+  ## Cambios
+
+  $CHANGES
+
+  ## Instalación
+
+  ```bash
+  pip install mini-office==$muySOLVED_VERSION
+  ```
+
+  o para desarrollo:
+
+  ```bash
+  pip install -e .
+  ```
+
+  ## Contribuyentes
+
+  $CONTRIBUTORS

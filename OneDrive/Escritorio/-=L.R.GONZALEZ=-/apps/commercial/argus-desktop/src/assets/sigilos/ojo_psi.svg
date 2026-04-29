@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" fill="none">
+  <!-- Ojo exterior - mandorla -->
+  <path d="M10 40 Q40 12 70 40 Q40 68 10 40 Z" stroke="#D4A054" stroke-width="1.5" fill="none"/>
+  <!-- Iris -->
+  <circle cx="40" cy="40" r="12" stroke="#D4A054" stroke-width="1.2" fill="none"/>
+  <!-- Pupila -->
+  <circle cx="40" cy="40" r="5" fill="#D4A054" opacity="0.7"/>
+  <!-- PSI centrado en el ojo -->
+  <text x="40" y="44" text-anchor="middle" font-size="8" fill="#2A2520" font-family="serif" font-weight="bold">Ψ</text>
+  <!-- Rayos de observacion sutiles -->
+  <line x1="40" y1="4" x2="40" y2="12" stroke="#D4A054" stroke-width="1" opacity="0.4"/>
+  <line x1="40" y1="68" x2="40" y2="76" stroke="#D4A054" stroke-width="1" opacity="0.4"/>
+  <line x1="4" y1="40" x2="12" y2="40" stroke="#D4A054" stroke-width="1" opacity="0.4"/>
+  <line x1="68" y1="40" x2="76" y2="40" stroke="#D4A054" stroke-width="1" opacity="0.4"/>
+</svg>

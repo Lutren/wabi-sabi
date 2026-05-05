@@ -6,13 +6,14 @@
 | SHA256 | `DF5105E2E46D09C31AA22F6CBB3931EE1C5FF0963A666F247ECADF9FFFA346B2` |
 | Bytes | `31030` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `CODE_PROTOTYPE_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `READ_REVIEW_TEST_BEFORE_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab.py` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\DF5105E2E46D09C3_sensorium_inversion_lab.py` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

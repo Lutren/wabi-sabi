@@ -204,3 +204,80 @@ def test_write_next_actions_uses_curador_and_pending_snapshot(tmp_path: Path) ->
     assert parsed["status"]["current_downloads_files"] == 1
     assert parsed["pending"]["active_by_blocker"]["local_candidate"] == 4
     assert parsed["next_actions"][0]["priority"] == "P0"
+
+
+def test_absorb_archives_unique_sources_and_writes_atlas(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    nested = downloads / "New folder"
+    nested.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+
+    (downloads / "TUIP_SIGMA_R2_1_PRAGMATIC_CANON.md").write_text("# Sigma\nActionGate\nWitnessLog\n", encoding="utf-8")
+    (nested / "claudio_local_code_agent.py").write_text("class RepoObserver:\n    pass\n", encoding="utf-8")
+    (downloads / "desktop.ini").write_text("[.ShellClassInfo]\n", encoding="utf-8")
+
+    result = curador.run_absorb(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        write_atlas=True,
+        archive_absorbed=True,
+        apply_safe_deletes=True,
+    )
+
+    assert result["downloads_files_seen"] == 3
+    assert result["extractions"] == 2
+    assert result["archived_sources"] == 2
+    assert result["deleted_bytes"] > 0
+    assert result["status_counts"]["ARCHIVO_FRIO"] == 2
+    assert result["status_counts"]["BASURA_REGENERABLE_BORRADA"] == 1
+    assert "REGISTRADO" not in result["status_counts"]
+    assert not (downloads / "TUIP_SIGMA_R2_1_PRAGMATIC_CANON.md").exists()
+    assert not (nested / "claudio_local_code_agent.py").exists()
+    assert not (downloads / "desktop.ini").exists()
+    assert not nested.exists()
+    assert (workspace / "docs" / "intake" / "ATLAS_MAIN.md").exists()
+    assert (workspace / "docs" / "canon" / "atlas" / "psi-observacionismo.md").exists()
+    assert (workspace / "docs" / "canon" / "atlas" / "claudio-wabisabi.md").exists()
+
+    with sqlite3.connect(result["db_path"]) as db:
+        assert db.execute("PRAGMA integrity_check").fetchone()[0] == "ok"
+        assert db.execute("SELECT COUNT(*) FROM canon_nodes").fetchone()[0] >= 8
+        assert db.execute("SELECT COUNT(*) FROM extractions").fetchone()[0] == 2
+        assert db.execute("SELECT COUNT(*) FROM retirements").fetchone()[0] == 2
+        assert db.execute("SELECT COUNT(*) FROM atlas_synapses").fetchone()[0] == 2
+
+
+def test_absorb_keeps_secret_like_sources_blocked_in_inbox(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    downloads.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+
+    blocked = downloads / "token_notes.txt"
+    blocked.write_text("do not move this source automatically", encoding="utf-8")
+
+    result = curador.run_absorb(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        write_atlas=True,
+        archive_absorbed=True,
+        apply_safe_deletes=True,
+    )
+
+    assert blocked.exists()
+    assert result["blocked_records"] == 1
+    assert result["status_counts"] == {"BLOQUEADO": 1}
+    with sqlite3.connect(result["db_path"]) as db:
+        status = db.execute("SELECT status FROM files WHERE path = ?", (str(blocked),)).fetchone()[0]
+        assert status == "BLOQUEADO"
+        node = db.execute("SELECT canon_node_id FROM extractions").fetchone()[0]
+        assert node == "privado-bloqueado"

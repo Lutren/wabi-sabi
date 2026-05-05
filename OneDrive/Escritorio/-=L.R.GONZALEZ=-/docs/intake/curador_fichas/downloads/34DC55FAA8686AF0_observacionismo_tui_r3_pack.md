@@ -6,13 +6,14 @@
 | SHA256 | `34DC55FAA8686AF0276CBC26EA345327FF5A1F7AA4E4AFEA8D24BDEC5FC379CC` |
 | Bytes | `473647` |
 | Tipo | `zip_like_members_39` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\OBSERVACIONISMO_TUI_R3_PACK.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\34DC55FAA8686AF0_observacionismo_tui_r3_pack.zip` |
+| Atlas | `Productos` |
 
 ## Resumen
 

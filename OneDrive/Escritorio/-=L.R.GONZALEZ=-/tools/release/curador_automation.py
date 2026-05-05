@@ -35,6 +35,78 @@ SECRET_MARKERS = {
 }
 PRIVATE_MARKERS = {"metaevo-tcg", "tcg", "game_bridge", "medioevo_rpg"}
 CLAIM_MARKERS = {"fisica", "physics", "antigravity", "antigravedad", "diagnostico", "medical"}
+CLAIM_MARKERS |= {"física", "diagnóstico", "medico", "médico", "prediccion", "predicción"}
+REGENERABLE_TRASH_NAMES = {"desktop.ini", "thumbs.db", ".ds_store"}
+REGENERABLE_TRASH_SUFFIXES = {".tmp", ".temp", ".crdownload", ".part"}
+ATLAS_MAIN_REL = Path("docs") / "intake" / "ATLAS_MAIN.md"
+ATLAS_CANON_REL = Path("docs") / "canon" / "atlas"
+ARCHIVE_ROOT_REL = Path("runtime") / "curador_seto" / "source_archive" / "downloads"
+
+CANON_NODES: dict[str, dict[str, str]] = {
+    "main": {
+        "parent_id": "",
+        "level": "camino",
+        "name": "Camino Main",
+        "lane": "main",
+        "path": "docs/intake/ATLAS_MAIN.md",
+    },
+    "psi-observacionismo": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "PSI / Observacionismo",
+        "lane": "research-boundary",
+        "path": "docs/canon/atlas/psi-observacionismo.md",
+    },
+    "claudio-wabisabi": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "Claudio / Wabi-Sabi",
+        "lane": "local-agent",
+        "path": "docs/canon/atlas/claudio-wabisabi.md",
+    },
+    "seguridad": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "Seguridad",
+        "lane": "security",
+        "path": "docs/canon/atlas/seguridad.md",
+    },
+    "publicacion": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "Publicacion",
+        "lane": "publishing",
+        "path": "docs/canon/atlas/publicacion.md",
+    },
+    "productos": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "Productos",
+        "lane": "product",
+        "path": "docs/canon/atlas/productos.md",
+    },
+    "assets": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "Assets",
+        "lane": "assets-review",
+        "path": "docs/canon/atlas/assets.md",
+    },
+    "curaduria": {
+        "parent_id": "main",
+        "level": "continente",
+        "name": "Curaduria SETO",
+        "lane": "cleanup",
+        "path": "docs/canon/atlas/curaduria.md",
+    },
+    "privado-bloqueado": {
+        "parent_id": "main",
+        "level": "frontera",
+        "name": "Privado / Bloqueado",
+        "lane": "blocked",
+        "path": "docs/canon/atlas/privado-bloqueado.md",
+    },
+}
 
 
 @dataclass
@@ -59,6 +131,31 @@ class FileRecord:
     ficha_path: str
     canonical_path: str | None = None
     deleted: bool = False
+
+
+@dataclass
+class ExtractionRecord:
+    source_path: str
+    sha256: str
+    canon_node_id: str
+    extraction_type: str
+    psi_state: str
+    claim_level: str
+    content: str
+    evidence_json: str
+    falsifiers: str
+
+
+@dataclass
+class RetirementRecord:
+    source_path: str
+    sha256: str
+    status: str
+    action_gate: str
+    original_path: str
+    archive_path: str
+    reason: str
+    evidence_json: str
 
 
 def utc_now() -> str:
@@ -240,6 +337,26 @@ def classify(path: Path) -> tuple[str, str, str, str, str, list[str]]:
     )
 
 
+def psi_state_for(gate: str, classification: str, lane: str, risk_flags: list[str]) -> str:
+    if gate == "BLOCK" or "strong_claim_review" in risk_flags:
+        return "BLOQUEADO"
+    if classification == "UNKNOWN_REVIEW_REQUIRED":
+        return "INCÓGNITA"
+    if lane in {"research-boundary", "duat-lab", "sensorium", "local-agent"}:
+        return "INFERENCIA"
+    return "CERTEZA"
+
+
+def claim_level_for(record: FileRecord) -> str:
+    if record.action_gate == "BLOCK" or "strong_claim_review" in record.risk_flags:
+        return "BLOCK"
+    if record.lane in {"research-boundary", "duat-lab", "sensorium"}:
+        return "LOW_CLAIM_RESEARCH"
+    if record.lane == "local-agent":
+        return "OPERATIONAL_PATTERN"
+    return "EVIDENCE_ONLY"
+
+
 def target_for_lane(lane: str) -> str:
     return {
         "research-boundary": "docs/intake and research/ after claim review",
@@ -249,6 +366,104 @@ def target_for_lane(lane: str) -> str:
         "assets-review": "docs/intake/curador_fichas/downloads/assets batch",
         "cleanup": "Curador review queue",
     }.get(lane, "Curador review queue")
+
+
+def infer_canon_node(record: FileRecord) -> str:
+    text = f"{record.path} {record.rel_path} {record.lane} {record.classification}".lower()
+    if record.action_gate == "BLOCK" or {"secret_like", "private_ip"} & set(record.risk_flags):
+        return "privado-bloqueado"
+    if record.lane == "assets-review":
+        return "assets"
+    if record.lane == "local-agent" or any(term in text for term in ["claudio", "wabi", "agent", "agente", "nollm"]):
+        return "claudio-wabisabi"
+    if any(term in text for term in ["security", "seguridad", "firewall", "vpn", "warp", "defender"]):
+        return "seguridad"
+    if any(term in text for term in ["github", "gumroad", "linkedin", "sponsor", "publicacion", "publicación", "website"]):
+        return "publicacion"
+    if any(term in text for term in ["producto", "product", "commercial", "comercial", "pack", "bundle"]):
+        return "productos"
+    if record.lane in {"research-boundary", "duat-lab", "sensorium"} or any(
+        term in text for term in ["psi", "observ", "tuip", "osit", "sigma", "duat", "sensorium"]
+    ):
+        return "psi-observacionismo"
+    return "curaduria"
+
+
+def extraction_type_for(record: FileRecord) -> str:
+    if record.suffix in IMAGE_SUFFIXES:
+        return "asset_batch_reference"
+    if record.suffix in ZIP_SUFFIXES:
+        return "package_manifest_reference"
+    if record.suffix in PDF_SUFFIXES:
+        return "document_reference"
+    if record.suffix in {".py", ".js", ".ts"}:
+        return "code_pattern_review"
+    if record.suffix in {".csv", ".json"}:
+        return "evidence_data_reference"
+    return "textual_insight_review"
+
+
+def sample_text(path: Path, max_chars: int = 1800) -> str:
+    suffix = path.suffix.lower()
+    try:
+        if suffix in TEXT_SUFFIXES:
+            return path.read_text(encoding="utf-8", errors="ignore")[:max_chars].strip()
+        if suffix == ".docx":
+            with zipfile.ZipFile(path) as archive:
+                raw = archive.read("word/document.xml").decode("utf-8", errors="ignore")
+            text = re.sub(r"<[^>]+>", " ", raw)
+            return re.sub(r"\s+", " ", text).strip()[:max_chars]
+        if suffix == ".zip":
+            with zipfile.ZipFile(path) as archive:
+                names = [item.filename for item in archive.infolist() if not item.is_dir()][:40]
+            return "ZIP members: " + ", ".join(names)
+        if suffix == ".pdf":
+            raw = path.read_bytes()[:250_000].decode("latin-1", errors="ignore")
+            text = re.sub(r"[^A-Za-z0-9ÁÉÍÓÚáéíóúÑñ.,;:()/_ -]+", " ", raw)
+            return re.sub(r"\s+", " ", text).strip()[:max_chars]
+    except (OSError, KeyError, zipfile.BadZipFile):
+        return ""
+    return ""
+
+
+def build_extraction(record: FileRecord) -> ExtractionRecord:
+    path = Path(record.path)
+    canon_node_id = infer_canon_node(record)
+    sample = sample_text(path) if path.exists() and path.is_file() else ""
+    if sample:
+        content = sample
+    else:
+        content = f"{record.summary} Source classified as {record.classification} for {CANON_NODES[canon_node_id]['name']}."
+    evidence = {
+        "source_hash": record.sha256,
+        "source_size_bytes": record.size_bytes,
+        "ficha_path": record.ficha_path,
+        "classification": record.classification,
+        "risk_flags": record.risk_flags,
+    }
+    return ExtractionRecord(
+        source_path=record.path,
+        sha256=record.sha256,
+        canon_node_id=canon_node_id,
+        extraction_type=extraction_type_for(record),
+        psi_state=record.psi_state,
+        claim_level=claim_level_for(record),
+        content=content,
+        evidence_json=json.dumps(evidence, ensure_ascii=False),
+        falsifiers=record.falsifiers,
+    )
+
+
+def is_regenerable_trash(record: FileRecord) -> bool:
+    path = Path(record.path)
+    name = path.name.lower()
+    if record.action_gate == "BLOCK":
+        return False
+    if name in REGENERABLE_TRASH_NAMES:
+        return True
+    if path.suffix.lower() in REGENERABLE_TRASH_SUFFIXES:
+        return True
+    return record.size_bytes == 0 and is_low_semantic_name(path)
 
 
 def scan_downloads(downloads_dir: Path, recursive: bool) -> list[Path]:
@@ -300,7 +515,7 @@ def make_file_records(downloads_dir: Path, files: Iterable[Path], fichas_dir: Pa
                 suffix=suffix,
                 kind=kind,
                 line_count=line_count(resolved) if suffix in TEXT_SUFFIXES else None,
-                psi_state="BLOQUEADO" if gate == "BLOCK" else "CERTEZA",
+                psi_state=psi_state_for(gate, classification, lane, risk_flags),
                 status="REGISTRADO",
                 classification=classification,
                 lane=lane,
@@ -365,7 +580,140 @@ def duplicate_groups(records: list[FileRecord], downloads_dir: Path) -> list[dic
     return sorted(groups, key=lambda item: str(item["sha256"]))
 
 
-def write_sqlite(db_path: Path, records: list[FileRecord], groups: list[dict[str, object]], event: dict[str, object]) -> None:
+def apply_absorption(records: list[FileRecord]) -> list[ExtractionRecord]:
+    extractions: list[ExtractionRecord] = []
+    for record in records:
+        if record.deleted:
+            continue
+        if record.action_gate == "BLOCK":
+            record.status = "BLOQUEADO"
+            record.decision = "KEEP_BLOCKED_BOUNDARY_NO_PUBLICATION"
+            extractions.append(build_extraction(record))
+            continue
+        if record.status == "DUPLICADO_EXACTO":
+            record.status = "REVIEW"
+            record.decision = "DUPLICATE_RETIRED_ONLY_AFTER_SAFE_DELETE_GATE"
+            extractions.append(build_extraction(record))
+            continue
+        record.status = "CANONIZADO"
+        record.decision = "ABSORBIDO_CANONIZADO_PENDING_ARCHIVE"
+        extractions.append(build_extraction(record))
+    return extractions
+
+
+def archive_destination(workspace_root: Path, record: FileRecord) -> Path:
+    original = Path(record.path)
+    slug = slugify(original.stem, limit=56)
+    suffix = original.suffix
+    rel_parent = Path(record.rel_path).parent
+    date_dir = workspace_root / ARCHIVE_ROOT_REL / TODAY / rel_parent
+    return date_dir / f"{record.sha256[:16]}_{slug}{suffix}"
+
+
+def archive_absorbed_records(
+    workspace_root: Path,
+    downloads_dir: Path,
+    records: list[FileRecord],
+    apply_archive: bool,
+) -> list[RetirementRecord]:
+    retirements: list[RetirementRecord] = []
+    for record in records:
+        if record.deleted or record.action_gate == "BLOCK":
+            continue
+        if record.status not in {"CANONIZADO", "ARCHIVO_FRIO"}:
+            continue
+        source = ensure_under(Path(record.path), downloads_dir)
+        destination = archive_destination(workspace_root, record)
+        evidence = {
+            "source_hash": record.sha256,
+            "ficha_path": record.ficha_path,
+            "canon_node_id": infer_canon_node(record),
+            "archive_mode": "cold_local_source_archive",
+        }
+        if apply_archive and source.exists() and source.is_file():
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            if destination.exists():
+                if sha256_file(destination) != record.sha256:
+                    destination = destination.with_name(f"{destination.stem}_{TODAY}{destination.suffix}")
+            source.replace(destination)
+            if sha256_file(destination) != record.sha256:
+                raise RuntimeError(f"archive hash mismatch for {destination}")
+            record.status = "ARCHIVO_FRIO"
+            record.decision = "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO"
+            record.canonical_path = str(destination)
+        elif apply_archive and not source.exists():
+            record.status = "ARCHIVO_FRIO"
+            record.decision = "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO_ALREADY_MOVED"
+            record.canonical_path = str(destination)
+        else:
+            record.canonical_path = str(destination)
+        retirements.append(
+            RetirementRecord(
+                source_path=record.path,
+                sha256=record.sha256,
+                status=record.status,
+                action_gate="APPROVE_LOCAL" if record.status == "ARCHIVO_FRIO" else "REVIEW",
+                original_path=record.path,
+                archive_path=str(destination),
+                reason=record.decision,
+                evidence_json=json.dumps(evidence, ensure_ascii=False),
+            )
+        )
+    return retirements
+
+
+def delete_regenerable_trash(downloads_dir: Path, records: list[FileRecord], apply_delete: bool) -> list[dict[str, object]]:
+    deleted: list[dict[str, object]] = []
+    for record in records:
+        if record.deleted or not is_regenerable_trash(record):
+            continue
+        candidate = ensure_under(Path(record.path), downloads_dir)
+        if not candidate.exists() or not candidate.is_file():
+            continue
+        digest = sha256_file(candidate)
+        if digest != record.sha256 or not record.ficha_path:
+            continue
+        entry = {
+            "path": str(candidate),
+            "sha256": digest,
+            "bytes": candidate.stat().st_size,
+            "canonical_path": "regenerable_os_cache",
+            "reason": "regenerable local trash with ficha and hash",
+            "deleted": False,
+        }
+        if apply_delete:
+            candidate.unlink()
+            record.deleted = True
+            record.status = "BASURA_REGENERABLE_BORRADA"
+            record.decision = "DELETE_REGENERABLE_AFTER_HASH_EXECUTED"
+            entry["deleted"] = True
+        deleted.append(entry)
+    return deleted
+
+
+def remove_empty_download_dirs(downloads_dir: Path) -> list[str]:
+    removed: list[str] = []
+    if not downloads_dir.exists():
+        return removed
+    dirs = sorted([path for path in downloads_dir.rglob("*") if path.is_dir()], key=lambda item: len(item.parts), reverse=True)
+    for directory in dirs:
+        try:
+            ensure_under(directory, downloads_dir)
+            directory.rmdir()
+            removed.append(str(directory))
+        except OSError:
+            continue
+    return removed
+
+
+def write_sqlite(
+    db_path: Path,
+    records: list[FileRecord],
+    groups: list[dict[str, object]],
+    event: dict[str, object],
+    extractions: list[ExtractionRecord] | None = None,
+    retirements: list[RetirementRecord] | None = None,
+) -> None:
     db_path.parent.mkdir(parents=True, exist_ok=True)
     with sqlite3.connect(db_path) as db:
         db.executescript(
@@ -447,12 +795,75 @@ def write_sqlite(db_path: Path, records: list[FileRecord], groups: list[dict[str
               actor TEXT,
               summary_json TEXT
             );
+            CREATE TABLE IF NOT EXISTS canon_nodes (
+              node_id TEXT PRIMARY KEY,
+              parent_id TEXT,
+              level TEXT,
+              name TEXT,
+              lane TEXT,
+              status TEXT,
+              path TEXT,
+              updated_utc TEXT
+            );
+            CREATE TABLE IF NOT EXISTS extractions (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              source_path TEXT,
+              sha256 TEXT,
+              canon_node_id TEXT,
+              extraction_type TEXT,
+              psi_state TEXT,
+              claim_level TEXT,
+              content TEXT,
+              evidence_json TEXT,
+              falsifiers TEXT,
+              updated_utc TEXT
+            );
+            CREATE TABLE IF NOT EXISTS retirements (
+              source_path TEXT PRIMARY KEY,
+              sha256 TEXT,
+              status TEXT,
+              action_gate TEXT,
+              original_path TEXT,
+              archive_path TEXT,
+              reason TEXT,
+              evidence_json TEXT,
+              updated_utc TEXT
+            );
+            CREATE TABLE IF NOT EXISTS atlas_synapses (
+              id INTEGER PRIMARY KEY AUTOINCREMENT,
+              source_path TEXT,
+              sha256 TEXT,
+              canon_node_id TEXT,
+              target_path TEXT,
+              relation TEXT,
+              psi_state TEXT,
+              evidence TEXT,
+              updated_utc TEXT
+            );
             """
         )
         db.execute("DELETE FROM duplicate_groups")
         db.execute("DELETE FROM duplicates")
         db.execute("DELETE FROM fichas")
         db.execute("DELETE FROM synapses")
+        db.execute("DELETE FROM canon_nodes")
+        db.execute("DELETE FROM extractions")
+        db.execute("DELETE FROM retirements")
+        db.execute("DELETE FROM atlas_synapses")
+        for node_id, node in CANON_NODES.items():
+            db.execute(
+                "INSERT OR REPLACE INTO canon_nodes VALUES (?,?,?,?,?,?,?,?)",
+                (
+                    node_id,
+                    node["parent_id"],
+                    node["level"],
+                    node["name"],
+                    node["lane"],
+                    "ACTIVE",
+                    node["path"],
+                    utc_now(),
+                ),
+            )
         for record in records:
             db.execute(
                 """
@@ -517,6 +928,10 @@ def write_sqlite(db_path: Path, records: list[FileRecord], groups: list[dict[str
               ?
             FROM files
             WHERE canonical_path IS NOT NULL
+              AND (
+                status IN ('CANONICO', 'DUPLICADO_EXACTO', 'BORRADO_DUPLICADO')
+                OR decision LIKE '%DUPLICATE%'
+              )
             """,
             (utc_now(),),
         )
@@ -533,6 +948,56 @@ def write_sqlite(db_path: Path, records: list[FileRecord], groups: list[dict[str
             db.execute(
                 "INSERT INTO decisions(timestamp_utc,source_path,decision,action_gate,reason,canonical_path,evidence) VALUES (?,?,?,?,?,?,?)",
                 (utc_now(), record.path, record.decision, record.action_gate, record.summary, record.canonical_path, record.sha256),
+            )
+        for extraction in extractions or []:
+            db.execute(
+                """
+                INSERT INTO extractions(source_path,sha256,canon_node_id,extraction_type,psi_state,claim_level,content,evidence_json,falsifiers,updated_utc)
+                VALUES (?,?,?,?,?,?,?,?,?,?)
+                """,
+                (
+                    extraction.source_path,
+                    extraction.sha256,
+                    extraction.canon_node_id,
+                    extraction.extraction_type,
+                    extraction.psi_state,
+                    extraction.claim_level,
+                    extraction.content,
+                    extraction.evidence_json,
+                    extraction.falsifiers,
+                    utc_now(),
+                ),
+            )
+            db.execute(
+                """
+                INSERT INTO atlas_synapses(source_path,sha256,canon_node_id,target_path,relation,psi_state,evidence,updated_utc)
+                VALUES (?,?,?,?,?,?,?,?)
+                """,
+                (
+                    extraction.source_path,
+                    extraction.sha256,
+                    extraction.canon_node_id,
+                    CANON_NODES[extraction.canon_node_id]["path"],
+                    "absorbed_to_atlas",
+                    extraction.psi_state,
+                    extraction.evidence_json,
+                    utc_now(),
+                ),
+            )
+        for retirement in retirements or []:
+            db.execute(
+                "INSERT OR REPLACE INTO retirements VALUES (?,?,?,?,?,?,?,?,?)",
+                (
+                    retirement.source_path,
+                    retirement.sha256,
+                    retirement.status,
+                    retirement.action_gate,
+                    retirement.original_path,
+                    retirement.archive_path,
+                    retirement.reason,
+                    retirement.evidence_json,
+                    utc_now(),
+                ),
             )
         db.execute(
             "INSERT OR REPLACE INTO witness_events VALUES (?,?,?,?,?,?)",
@@ -565,6 +1030,7 @@ def render_ficha(record: FileRecord) -> str:
             f"| Decision | `{record.decision}` |",
             f"| ActionGate | `{record.action_gate}` |",
             f"| Canonico | `{record.canonical_path or record.path}` |",
+            f"| Atlas | `{CANON_NODES[infer_canon_node(record)]['name']}` |",
             "",
             "## Resumen",
             "",
@@ -643,7 +1109,8 @@ def render_master_index(records: list[FileRecord], groups: list[dict[str, object
         "|---|---:|",
         f"| archivos registrados | {len(records)} |",
         f"| grupos duplicados exactos detectados | {len(groups)} |",
-        f"| duplicados exactos borrados en este pase | {len(deleted)} |",
+        f"| borrados seguros en este pase | {sum(1 for item in deleted if item.get('deleted'))} |",
+        f"| atlas main | `{ATLAS_MAIN_REL.as_posix()}` |",
         f"| sqlite | `{db_path}` |",
         "",
         "## Status",
@@ -665,6 +1132,109 @@ def render_master_index(records: list[FileRecord], groups: list[dict[str, object
         lines.append(f"| `{record.status}` | `{record.lane}` | `{record.decision}` | `{record.ficha_path}` | `{record.path}` |")
     lines.append("")
     return "\n".join(lines)
+
+
+def render_atlas_main(
+    records: list[FileRecord],
+    extractions: list[ExtractionRecord],
+    retirements: list[RetirementRecord],
+    deleted: list[dict[str, object]],
+) -> str:
+    by_node: dict[str, list[FileRecord]] = {node_id: [] for node_id in CANON_NODES}
+    for record in records:
+        by_node.setdefault(infer_canon_node(record), []).append(record)
+    status_counts: dict[str, int] = {}
+    for record in records:
+        status_counts[record.status] = status_counts.get(record.status, 0) + 1
+    lines = [
+        "# Atlas Main - Curador SETO",
+        "",
+        f"Generated UTC: `{utc_now()}`",
+        "",
+        "Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es INBOX; el canon vive por continentes, ciudades, fichas y sinapsis.",
+        "",
+        "| campo | valor |",
+        "|---|---:|",
+        f"| fuentes procesadas | {len(records)} |",
+        f"| extracciones | {len(extractions)} |",
+        f"| retiros a Archivo Frio | {len([item for item in retirements if item.status == 'ARCHIVO_FRIO'])} |",
+        f"| borrados seguros | {len([item for item in deleted if item.get('deleted')])} |",
+        "",
+        "## Estados",
+        "",
+        "| status | count |",
+        "|---|---:|",
+    ]
+    for status in sorted(status_counts):
+        lines.append(f"| `{status}` | {status_counts[status]} |")
+    lines.extend(["", "## Camino", ""])
+    for node_id, node in CANON_NODES.items():
+        if node_id == "main":
+            continue
+        node_records = by_node.get(node_id, [])
+        lines.extend(
+            [
+                f"### {node['name']}",
+                "",
+                f"- Nivel: `{node['level']}`.",
+                f"- Ruta canon: `{node['path']}`.",
+                f"- Fuentes conectadas: `{len(node_records)}`.",
+                "",
+            ]
+        )
+    lines.extend(["", "## Fuentes", "", "| atlas | status | decision | ficha | fuente | canon/archive |", "|---|---|---|---|---|---|"])
+    for record in sorted(records, key=lambda item: (infer_canon_node(item), item.rel_path.lower())):
+        node = CANON_NODES[infer_canon_node(record)]["name"]
+        lines.append(
+            f"| `{node}` | `{record.status}` | `{record.decision}` | `{record.ficha_path}` | `{record.path}` | `{record.canonical_path or ''}` |"
+        )
+    lines.append("")
+    return "\n".join(lines)
+
+
+def render_canon_node_doc(node_id: str, records: list[FileRecord], extractions: list[ExtractionRecord]) -> str:
+    node = CANON_NODES[node_id]
+    node_extractions = [item for item in extractions if item.canon_node_id == node_id]
+    lines = [
+        f"# {node['name']}",
+        "",
+        f"Generated UTC: `{utc_now()}`",
+        "",
+        f"Nivel: `{node['level']}`. Este documento es una vista canonica del Atlas; no reemplaza la fuente ni su ficha/hash.",
+        "",
+        "| status | fuente | ficha | claim | insight |",
+        "|---|---|---|---|---|",
+    ]
+    by_source = {record.path: record for record in records}
+    for extraction in node_extractions:
+        record = by_source.get(extraction.source_path)
+        source = extraction.source_path
+        ficha = record.ficha_path if record else ""
+        status = record.status if record else extraction.psi_state
+        content = extraction.content.replace("\n", " ")
+        if len(content) > 220:
+            content = content[:217] + "..."
+        lines.append(f"| `{status}` | `{source}` | `{ficha}` | `{extraction.claim_level}` | {content} |")
+    lines.append("")
+    return "\n".join(lines)
+
+
+def write_atlas_docs(
+    workspace_root: Path,
+    records: list[FileRecord],
+    extractions: list[ExtractionRecord],
+    retirements: list[RetirementRecord],
+    deleted: list[dict[str, object]],
+) -> None:
+    atlas_path = workspace_root / ATLAS_MAIN_REL
+    atlas_path.parent.mkdir(parents=True, exist_ok=True)
+    atlas_path.write_text(render_atlas_main(records, extractions, retirements, deleted), encoding="utf-8")
+    for node_id, node in CANON_NODES.items():
+        if node_id == "main":
+            continue
+        path = workspace_root / node["path"]
+        path.parent.mkdir(parents=True, exist_ok=True)
+        path.write_text(render_canon_node_doc(node_id, records, extractions), encoding="utf-8")
 
 
 def previous_witness_hash(log_path: Path) -> str | None:
@@ -762,13 +1332,55 @@ def write_deleted_log(workspace_root: Path, deleted: list[dict[str, object]], re
     log_path.write_text(existing.rstrip() + "\n" + "\n".join(section), encoding="utf-8")
 
 
-def write_runtime_export(runtime_dir: Path, records: list[FileRecord], groups: list[dict[str, object]], deleted: list[dict[str, object]]) -> None:
+def write_retirement_log(
+    workspace_root: Path,
+    deleted: list[dict[str, object]],
+    retirements: list[RetirementRecord],
+    result_path: Path,
+) -> None:
+    if not deleted and not retirements:
+        return
+    archived = [item for item in retirements if item.status == "ARCHIVO_FRIO"]
+    deleted_items = [item for item in deleted if item.get("deleted")]
+    log_path = workspace_root / "DELETED_OR_ARCHIVED.md"
+    section = [
+        "",
+        f"## Curador SETO Downloads Atlas Absorption {TODAY}",
+        "",
+        "Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.",
+        "",
+        "| date | archived | deleted | evidence |",
+        "|---|---:|---:|---|",
+        f"| {TODAY} | {len(archived)} | {len(deleted_items)} | `{result_path.relative_to(workspace_root)}` |",
+        "",
+        "| status | original path | sha256 | archive/canonical path | reason |",
+        "|---|---|---|---|---|",
+    ]
+    for item in archived:
+        section.append(f"| `{item.status}` | `{item.original_path}` | `{item.sha256}` | `{item.archive_path}` | `{item.reason}` |")
+    for item in deleted_items:
+        section.append(f"| `BORRADO` | `{item['path']}` | `{item['sha256']}` | `{item['canonical_path']}` | `{item['reason']}` |")
+    section.append("")
+    existing = log_path.read_text(encoding="utf-8") if log_path.exists() else "# DELETED_OR_ARCHIVED\n"
+    log_path.write_text(existing.rstrip() + "\n" + "\n".join(section), encoding="utf-8")
+
+
+def write_runtime_export(
+    runtime_dir: Path,
+    records: list[FileRecord],
+    groups: list[dict[str, object]],
+    deleted: list[dict[str, object]],
+    extractions: list[ExtractionRecord] | None = None,
+    retirements: list[RetirementRecord] | None = None,
+) -> None:
     runtime_dir.mkdir(parents=True, exist_ok=True)
     export = {
         "generated_at_utc": utc_now(),
         "downloads_records": [asdict(record) for record in records],
         "duplicate_groups": groups,
         "deleted": deleted,
+        "extractions": [asdict(item) for item in (extractions or [])],
+        "retirements": [asdict(item) for item in (retirements or [])],
     }
     (runtime_dir / "source_intake_export.json").write_text(json.dumps(export, indent=2, ensure_ascii=False), encoding="utf-8")
 
@@ -836,7 +1448,19 @@ def no_change_result(
 
 
 def sqlite_table_counts(db_path: Path) -> dict[str, int]:
-    tables = ["files", "fichas", "duplicates", "duplicate_groups", "synapses", "decisions", "witness_events"]
+    tables = [
+        "files",
+        "fichas",
+        "duplicates",
+        "duplicate_groups",
+        "synapses",
+        "decisions",
+        "witness_events",
+        "canon_nodes",
+        "extractions",
+        "retirements",
+        "atlas_synapses",
+    ]
     if not db_path.exists():
         return {table: 0 for table in tables}
     counts: dict[str, int] = {}
@@ -1166,6 +1790,122 @@ def run_curador(
     return result
 
 
+def empty_inbox_absorb_result(workspace_root: Path, downloads_dir: Path, db_path: Path, witness_path: Path) -> dict[str, object]:
+    return {
+        "generated_at_utc": utc_now(),
+        "workspace_root": str(workspace_root),
+        "downloads_dir": str(downloads_dir),
+        "db_path": str(db_path),
+        "master_index": str(workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"),
+        "atlas_main": str(workspace_root / ATLAS_MAIN_REL),
+        "witness_log": str(witness_path),
+        "witness_event_hash": previous_witness_hash(witness_path),
+        "downloads_files_seen": 0,
+        "duplicate_groups_detected": 0,
+        "deleted_exact_duplicates": 0,
+        "deleted_bytes": 0,
+        "archived_sources": 0,
+        "extractions": 0,
+        "new_folder_files_registered": 0,
+        "blocked_records": 0,
+        "removed_empty_dirs": [],
+        "status_counts": {},
+        "duplicate_groups": [],
+        "deleted": [],
+        "retirements": [],
+        "noop": True,
+        "reason": "Downloads inbox is empty; preserving previous Curador SQLite/Atlas state.",
+    }
+
+
+def run_absorb(
+    *,
+    workspace_root: Path,
+    downloads_dir: Path,
+    recursive: bool,
+    write_index: bool,
+    write_fichas_flag: bool,
+    write_atlas: bool,
+    archive_absorbed: bool,
+    apply_safe_deletes: bool,
+) -> dict[str, object]:
+    workspace_root = workspace_root.resolve()
+    downloads_dir = downloads_dir.resolve()
+    runtime_dir = workspace_root / "runtime" / "curador_seto"
+    db_path = runtime_dir / "curador_index.sqlite"
+    result_path = workspace_root / "qa_artifacts" / "release_validation" / f"curador-automation-downloads-absorb-result-{TODAY}.json"
+    witness_path = workspace_root / "qa_artifacts" / "witness_log" / "curador_seto_witnesslog.jsonl"
+    files = scan_downloads(downloads_dir, recursive=recursive)
+    records = make_file_records(downloads_dir, files, workspace_root / "docs" / "intake" / "curador_fichas" / "downloads")
+    if not records and curador_outputs_exist(workspace_root, db_path, write_index, write_fichas_flag):
+        return empty_inbox_absorb_result(workspace_root, downloads_dir, db_path, witness_path)
+
+    groups = duplicate_groups(records, downloads_dir)
+    deleted = delete_exact_duplicates(downloads_dir, groups, records, apply_delete=apply_safe_deletes)
+    deleted.extend(delete_regenerable_trash(downloads_dir, records, apply_delete=apply_safe_deletes))
+    extractions = apply_absorption(records)
+    retirements = archive_absorbed_records(workspace_root, downloads_dir, records, apply_archive=archive_absorbed)
+    removed_empty_dirs = remove_empty_download_dirs(downloads_dir) if archive_absorbed else []
+
+    if write_fichas_flag:
+        write_fichas(workspace_root, records)
+    previous = previous_witness_hash(witness_path)
+    event: dict[str, object] = {
+        "timestamp_utc": utc_now(),
+        "event_type": "curador_downloads_absorb_run",
+        "actor": "tools/release/curador_automation.py",
+        "previous_hash": previous,
+        "action_gate": "APPROVE_LOCAL" if archive_absorbed or apply_safe_deletes else "REVIEW",
+        "summary": {
+            "downloads_files_seen": len(records),
+            "duplicate_groups_detected": len(groups),
+            "deleted_safe_items": sum(1 for item in deleted if item["deleted"]),
+            "archive_absorbed": archive_absorbed,
+            "archived_sources": sum(1 for item in retirements if item.status == "ARCHIVO_FRIO"),
+            "extractions": len(extractions),
+            "removed_empty_dirs": len(removed_empty_dirs),
+        },
+    }
+    event["event_hash"] = event_hash(event)
+    write_sqlite(db_path, records, groups, event, extractions=extractions, retirements=retirements)
+    if write_index:
+        index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
+        index_path.write_text(render_master_index(records, groups, deleted, db_path), encoding="utf-8")
+    if write_atlas:
+        write_atlas_docs(workspace_root, records, extractions, retirements, deleted)
+    write_runtime_export(runtime_dir, records, groups, deleted, extractions=extractions, retirements=retirements)
+    result = {
+        "generated_at_utc": utc_now(),
+        "workspace_root": str(workspace_root),
+        "downloads_dir": str(downloads_dir),
+        "db_path": str(db_path),
+        "master_index": str(workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"),
+        "atlas_main": str(workspace_root / ATLAS_MAIN_REL),
+        "witness_log": str(witness_path),
+        "witness_event_hash": event["event_hash"],
+        "downloads_files_seen": len(records),
+        "duplicate_groups_detected": len(groups),
+        "deleted_exact_duplicates": sum(1 for item in deleted if item["deleted"] and item["canonical_path"] != "regenerable_os_cache"),
+        "deleted_bytes": sum(int(item["bytes"]) for item in deleted if item["deleted"]),
+        "archived_sources": sum(1 for item in retirements if item.status == "ARCHIVO_FRIO"),
+        "extractions": len(extractions),
+        "new_folder_files_registered": sum(1 for record in records if record.rel_path.lower().startswith("new folder/")),
+        "blocked_records": sum(1 for record in records if record.action_gate == "BLOCK"),
+        "removed_empty_dirs": removed_empty_dirs,
+        "status_counts": {},
+        "duplicate_groups": groups,
+        "deleted": deleted,
+        "retirements": [asdict(item) for item in retirements],
+    }
+    for record in records:
+        result["status_counts"][record.status] = result["status_counts"].get(record.status, 0) + 1
+    result_path.parent.mkdir(parents=True, exist_ok=True)
+    result_path.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_retirement_log(workspace_root, deleted, retirements, result_path)
+    append_witness(witness_path, event)
+    return result
+
+
 def install_task(workspace_root: Path) -> dict[str, object]:
     task_name = "CuradorSETO-Downloads-Intake"
     python_exe = sys.executable
@@ -1175,7 +1915,7 @@ def install_task(workspace_root: Path) -> dict[str, object]:
             [
                 "@echo off",
                 f'cd /d "{workspace_root}"',
-                f'"{python_exe}" tools\\release\\curador_automation.py run --root downloads --recursive --write-index --write-fichas --apply-exact-download-duplicates',
+                f'"{python_exe}" tools\\release\\curador_automation.py absorb --root downloads --recursive --write-index --write-fichas --write-atlas --archive-absorbed --apply-safe-deletes',
                 "",
             ]
         ),
@@ -1218,12 +1958,23 @@ def main() -> int:
     run.add_argument("--write-index", action="store_true")
     run.add_argument("--write-fichas", action="store_true")
     run.add_argument("--apply-exact-download-duplicates", action="store_true")
+    absorb = sub.add_parser("absorb")
+    absorb.add_argument("--root", choices=["downloads"], default="downloads")
+    absorb.add_argument("--workspace-root", default=str(ROOT))
+    absorb.add_argument("--downloads-dir", default=str(DEFAULT_DOWNLOADS))
+    absorb.add_argument("--recursive", action="store_true")
+    absorb.add_argument("--write-index", action="store_true")
+    absorb.add_argument("--write-fichas", action="store_true")
+    absorb.add_argument("--write-atlas", action="store_true")
+    absorb.add_argument("--archive-absorbed", action="store_true")
+    absorb.add_argument("--apply-safe-deletes", action="store_true")
     install = sub.add_parser("install-task")
     install.add_argument("--workspace-root", default=str(ROOT))
     status = sub.add_parser("status")
     status.add_argument("--workspace-root", default=str(ROOT))
     status.add_argument("--downloads-dir", default=str(DEFAULT_DOWNLOADS))
     status.add_argument("--write-next-actions", action="store_true")
+    status.add_argument("--json", action="store_true", help="Accepted for explicit JSON status output; JSON is the default.")
     args = parser.parse_args()
 
     if args.command == "install-task":
@@ -1240,6 +1991,30 @@ def main() -> int:
                 "pending": load_pending_snapshot(Path(args.workspace_root).resolve()),
             }
         print(json.dumps(data, indent=2, ensure_ascii=False))
+        return 0
+
+    if args.command == "absorb":
+        data = run_absorb(
+            workspace_root=Path(args.workspace_root).resolve(),
+            downloads_dir=Path(args.downloads_dir).resolve(),
+            recursive=args.recursive,
+            write_index=args.write_index,
+            write_fichas_flag=args.write_fichas,
+            write_atlas=args.write_atlas,
+            archive_absorbed=args.archive_absorbed,
+            apply_safe_deletes=args.apply_safe_deletes,
+        )
+        print(json.dumps({key: data[key] for key in [
+            "downloads_files_seen",
+            "duplicate_groups_detected",
+            "deleted_exact_duplicates",
+            "deleted_bytes",
+            "archived_sources",
+            "extractions",
+            "new_folder_files_registered",
+            "blocked_records",
+            "witness_event_hash",
+        ]}, indent=2, ensure_ascii=False))
         return 0
 
     data = run_curador(

@@ -6,13 +6,14 @@
 | SHA256 | `3D2424057A226AD092CA80404AAF2D34F293D5951AB4CEBBD7C67D035F974EB8` |
 | Bytes | `67538` |
 | Tipo | `zip_like_members_18` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.docx` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\3D2424057A226AD0_osit-teora-completa-de-informacin-con-estado-y-tesis-del.docx` |
+| Atlas | `Claudio / Wabi-Sabi` |
 
 ## Resumen
 

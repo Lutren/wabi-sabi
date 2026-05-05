@@ -7,12 +7,13 @@
 | Bytes | `95129` |
 | Tipo | `file` |
 | Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `TEXT_SOURCE_REVIEW` |
 | Lane | `cleanup` |
-| Decision | `HOLD_WITH_TECHNICAL_CARD_BEFORE_USE` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\claudio_ui.html` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\42467666BEF59C29_claudio_ui.html` |
+| Atlas | `Claudio / Wabi-Sabi` |
 
 ## Resumen
 

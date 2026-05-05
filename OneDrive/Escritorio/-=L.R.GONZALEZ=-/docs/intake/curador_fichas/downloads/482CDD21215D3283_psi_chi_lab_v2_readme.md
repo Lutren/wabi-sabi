@@ -6,13 +6,14 @@
 | SHA256 | `482CDD21215D328326E8DED6898C244C4FAD2D7933EA0760A3C2E00139A7596C` |
 | Bytes | `1334` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2_README.md` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\482CDD21215D3283_psi_chi_lab_v2_readme.md` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

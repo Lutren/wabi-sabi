@@ -6,13 +6,14 @@
 | SHA256 | `38A280B5C4B77D8DECD2D60C758CCB0A3F4AE2F407F0623CD5237D4B19808076` |
 | Bytes | `138264` |
 | Tipo | `zip_like_members_14` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\sensorium_psi_bridge_pack.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\38A280B5C4B77D8D_sensorium_psi_bridge_pack.zip` |
+| Atlas | `Productos` |
 
 ## Resumen
 

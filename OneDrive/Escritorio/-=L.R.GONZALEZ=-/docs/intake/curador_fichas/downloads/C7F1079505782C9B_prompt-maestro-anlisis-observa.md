@@ -6,13 +6,14 @@
 | SHA256 | `C7F1079505782C9B1F83C6BADCA86EA7EB2B38729C489E694DFC9DB63A71E6DE` |
 | Bytes | `10928` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\New folder\# PROMPT MAESTRO — ANÁLISIS OBSERVA.txt` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\New folder\C7F1079505782C9B_prompt-maestro-anlisis-observa.txt` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

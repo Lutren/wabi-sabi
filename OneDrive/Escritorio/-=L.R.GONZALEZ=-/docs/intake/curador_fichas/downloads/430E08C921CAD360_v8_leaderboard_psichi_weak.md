@@ -6,13 +6,14 @@
 | SHA256 | `430E08C921CAD360C8069F6AB823C265D41DE04992D3F846D12C964F4E695AF0` |
 | Bytes | `375` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\v8_leaderboard_psichi_weak.csv` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\430E08C921CAD360_v8_leaderboard_psichi_weak.csv` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

@@ -6,13 +6,14 @@
 | SHA256 | `D76CA51A9882724ED7A9529902FEB728C7D0249AC16C59B623F6AAD81CA45D91` |
 | Bytes | `10302` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\New folder\01_OBSERVACIONISMO_CORE.md` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\New folder\D76CA51A9882724E_01_observacionismo_core.md` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

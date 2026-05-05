@@ -6,13 +6,14 @@
 | SHA256 | `F6C6EF1B838D31F4E01C1DFB2A805849DF479D29B6E5200F01A15A74544A3F3D` |
 | Bytes | `25753` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `CODE_PROTOTYPE_REVIEW` |
 | Lane | `local-agent` |
-| Decision | `READ_REVIEW_TEST_BEFORE_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\# CLAUDIO — LOCAL CODE AGENT.txt` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\F6C6EF1B838D31F4_claudio-local-code-agent.txt` |
+| Atlas | `Claudio / Wabi-Sabi` |
 
 ## Resumen
 

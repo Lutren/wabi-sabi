@@ -6,13 +6,14 @@
 | SHA256 | `7356A5059329F3ECB0493BAEDB0CAFF4087004F7AE87A9E9181B998E212B03CE` |
 | Bytes | `71486` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `DUAT_LAB_SOURCE` |
 | Lane | `duat-lab` |
-| Decision | `TECHNICAL_CARD_AND_RESEARCH_BACKLOG` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\duat_observacionismo.py` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\7356A5059329F3EC_duat_observacionismo.py` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

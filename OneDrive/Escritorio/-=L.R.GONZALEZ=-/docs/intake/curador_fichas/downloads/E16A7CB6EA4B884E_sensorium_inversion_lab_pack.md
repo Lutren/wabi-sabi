@@ -6,13 +6,14 @@
 | SHA256 | `E16A7CB6EA4B884E9CBB55DADE9ACF5C2D8B93AF660F62FF12975572A00E8143` |
 | Bytes | `87334` |
 | Tipo | `zip_like_members_18` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab_pack.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E16A7CB6EA4B884E_sensorium_inversion_lab_pack.zip` |
+| Atlas | `Productos` |
 
 ## Resumen
 

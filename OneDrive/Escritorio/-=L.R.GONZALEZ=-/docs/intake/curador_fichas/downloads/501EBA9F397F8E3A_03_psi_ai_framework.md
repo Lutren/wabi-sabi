@@ -6,13 +6,14 @@
 | SHA256 | `501EBA9F397F8E3AC19E0A1B9D77124CF4CF96783B7C921BB68C815D80BF9C04` |
 | Bytes | `10549` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\New folder\03_PSI_AI_FRAMEWORK.md` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\New folder\501EBA9F397F8E3A_03_psi_ai_framework.md` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

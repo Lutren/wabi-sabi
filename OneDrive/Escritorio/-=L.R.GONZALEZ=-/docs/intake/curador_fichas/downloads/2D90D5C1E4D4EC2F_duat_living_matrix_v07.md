@@ -6,13 +6,14 @@
 | SHA256 | `2D90D5C1E4D4EC2FBFF769E582FC234BB529DAD77F305BBCDD0B0DB04B261A4D` |
 | Bytes | `83977` |
 | Tipo | `zip_like_members_54` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `duat-lab` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\duat_living_matrix_v07.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\2D90D5C1E4D4EC2F_duat_living_matrix_v07.zip` |
+| Atlas | `Productos` |
 
 ## Resumen
 

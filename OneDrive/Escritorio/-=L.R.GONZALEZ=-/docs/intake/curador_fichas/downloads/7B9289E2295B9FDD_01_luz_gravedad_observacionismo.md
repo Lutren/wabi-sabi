@@ -6,13 +6,14 @@
 | SHA256 | `7B9289E2295B9FDDB10CE95D32C84617326107C485DFC95EA07132DC45832629` |
 | Bytes | `987` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\New folder\01_LUZ_GRAVEDAD_OBSERVACIONISMO.md` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\New folder\7B9289E2295B9FDD_01_luz_gravedad_observacionismo.md` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

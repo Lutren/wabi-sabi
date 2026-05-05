@@ -7,12 +7,13 @@
 | Bytes | `9478` |
 | Tipo | `file` |
 | Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `TEXT_SOURCE_REVIEW` |
 | Lane | `cleanup` |
-| Decision | `HOLD_WITH_TECHNICAL_CARD_BEFORE_USE` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\New folder\Opinión general.txt` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\New folder\2F00AD884A79ED7B_opinin-general.txt` |
+| Atlas | `Curaduria SETO` |
 
 ## Resumen
 

@@ -1,0 +1,43 @@
+# Assets
+
+Generated UTC: `2026-05-05T21:04:42.601504+00:00`
+
+Nivel: `continente`. Este documento es una vista canonica del Atlas; no reemplaza la fuente ni su ficha/hash.
+
+| status | fuente | ficha | claim | insight |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\1.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\10.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\11.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\12.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\13.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\14.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\15.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\16.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\17.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\18.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\19.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\2.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\20.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\21.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\22.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\23.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\24.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\25.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\26.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\27.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\28.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\29.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\3.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\30.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\31.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\32.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\33.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\34.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\35.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\4.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\5.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\6.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\7.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\8.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\9.png` | `docs/intake/curador_fichas/downloads/DOWNLOADS_IMAGE_ASSETS_BATCH.md` | `EVIDENCE_ONLY` | Image asset; registered by hash and batch ficha. Source classified as ASSET_IMAGE for Assets. |

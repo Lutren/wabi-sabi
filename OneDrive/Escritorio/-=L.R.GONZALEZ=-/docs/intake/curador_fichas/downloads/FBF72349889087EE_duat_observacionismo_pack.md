@@ -6,13 +6,14 @@
 | SHA256 | `FBF72349889087EECCE822B5E13005070746D21C00E58985C6B8585066F5E9DD` |
 | Bytes | `72040` |
 | Tipo | `zip_like_members_32` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `duat-lab` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\duat_observacionismo_pack.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\FBF72349889087EE_duat_observacionismo_pack.zip` |
+| Atlas | `Productos` |
 
 ## Resumen
 

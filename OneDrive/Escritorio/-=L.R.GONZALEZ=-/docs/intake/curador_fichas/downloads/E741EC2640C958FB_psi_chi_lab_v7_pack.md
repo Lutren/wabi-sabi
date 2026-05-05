@@ -6,13 +6,14 @@
 | SHA256 | `E741EC2640C958FB0A8C63D376B76AC3E0B6A4F78804F685A11D4A08B78AAE4B` |
 | Bytes | `13060` |
 | Tipo | `zip_like_members_7` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v7_pack.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E741EC2640C958FB_psi_chi_lab_v7_pack.zip` |
+| Atlas | `Productos` |
 
 ## Resumen
 

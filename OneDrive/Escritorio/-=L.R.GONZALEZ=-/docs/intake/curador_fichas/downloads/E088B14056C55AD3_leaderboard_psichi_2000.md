@@ -6,13 +6,14 @@
 | SHA256 | `E088B14056C55AD3251FB1AD625A8FC50FA4C5E43128857F4238A92E8B94DA98` |
 | Bytes | `1937` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\leaderboard_psichi_2000.json` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E088B14056C55AD3_leaderboard_psichi_2000.json` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

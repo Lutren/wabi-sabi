@@ -6,13 +6,14 @@
 | SHA256 | `F9E3CB69906D45FD7D5B4CE4EF8CE7FCDC075662032EFAFAE6970BC838C750B2` |
 | Bytes | `715208` |
 | Tipo | `pdf_page_hint_unknown` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\Deconstrucción Observacionista de Modelos de IA y Matemáticas Unificadas TUIP-Σ OSIT.pdf` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\F9E3CB69906D45FD_deconstruccin-observacionista-de-modelos-de-ia-y-matemti.pdf` |
+| Atlas | `Productos` |
 
 ## Resumen
 

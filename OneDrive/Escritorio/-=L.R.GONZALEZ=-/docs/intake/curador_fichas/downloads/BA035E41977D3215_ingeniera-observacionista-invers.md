@@ -6,13 +6,14 @@
 | SHA256 | `BA035E41977D32159D5CC3251343F1BC2FDE795DDE469661B171B7FB838096E9` |
 | Bytes | `80516` |
 | Tipo | `file` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
 | Lane | `research-boundary` |
-| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\New folder\# INGENIERÍA OBSERVACIONISTA INVERS.txt` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\New folder\BA035E41977D3215_ingeniera-observacionista-invers.txt` |
+| Atlas | `PSI / Observacionismo` |
 
 ## Resumen
 

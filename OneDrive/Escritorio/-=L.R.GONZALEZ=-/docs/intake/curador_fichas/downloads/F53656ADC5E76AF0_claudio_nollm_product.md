@@ -6,13 +6,14 @@
 | SHA256 | `F53656ADC5E76AF020B19EBAB8981ECC3A4A9A617C0038513E5F70FB797D91F0` |
 | Bytes | `82183` |
 | Tipo | `zip_like_members_17` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `local-agent` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\claudio_nollm_product.zip` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\F53656ADC5E76AF0_claudio_nollm_product.zip` |
+| Atlas | `Claudio / Wabi-Sabi` |
 
 ## Resumen
 

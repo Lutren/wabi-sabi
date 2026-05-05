@@ -6,13 +6,14 @@
 | SHA256 | `092699E982FB4C6125D7A6DC9465FAF779C1AC15107D8A442FD9382A626DD5A4` |
 | Bytes | `598327` |
 | Tipo | `pdf_page_hint_unknown` |
-| Estado PSI | `CERTEZA` |
-| Status | `REGISTRADO` |
+| Estado PSI | `INFERENCIA` |
+| Status | `ARCHIVO_FRIO` |
 | Clasificacion | `PACKAGE_OR_DOCUMENT_REVIEW` |
 | Lane | `research-boundary` |
-| Decision | `FICHA_TECHNICAL_CARD_NO_RAW_IMPORT` |
+| Decision | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
 | ActionGate | `REVIEW` |
-| Canonico | `C:\Users\L-Tyr\Downloads\Deconstrucción Observacionista de la Inteligencia — TUIP-Σ OSIT.pdf` |
+| Canonico | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\092699E982FB4C61_deconstruccin-observacionista-de-la-inteligencia-tuip--o.pdf` |
+| Atlas | `Productos` |
 
 ## Resumen
 

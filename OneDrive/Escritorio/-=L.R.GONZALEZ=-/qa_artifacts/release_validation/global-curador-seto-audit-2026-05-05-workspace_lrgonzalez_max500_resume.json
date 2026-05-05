@@ -1,6 +1,8 @@
 {
   "generated_at_utc": "2026-05-05T19:25:48.409713+00:00",
   "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+  "superseded_by": "qa_artifacts/release_validation/global-curador-seto-audit-2026-05-05-workspace_lrgonzalez_max500_resume6868b327e8.json",
+  "superseded_reason": "resume matching now follows traversal order; this older artifact used the pre-fix lexicographic marker behavior.",
   "scan_mode": "incremental",
   "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "hash_max_mb": 5,

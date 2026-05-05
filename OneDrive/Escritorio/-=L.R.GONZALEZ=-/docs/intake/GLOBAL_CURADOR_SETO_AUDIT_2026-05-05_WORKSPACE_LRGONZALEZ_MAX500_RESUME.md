@@ -1,6 +1,8 @@
 # Global Curador SETO Dry Audit 2026-05-05
 
 Status: `DRY_RUN_NO_DELETE_NO_MOVE`
+Superseded by: `GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500_RESUME6868B327E8.md`
+Reason: resume matching now follows traversal order; this older artifact used the pre-fix lexicographic marker behavior.
 Scan mode: `incremental`
 
 This report implements a dry Curador pass over the selected roots. It records evidence for later cleanup gates; it does not approve deletion by itself.

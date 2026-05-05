@@ -338,12 +338,14 @@ def scan_roots(
     seen_dirs: set[str] = set()
     selected_roots = selected_root_defs(root_labels, root_defs)
     start_after_abs = normalize_resume_marker(start_after)
+    resume_found = not bool(start_after_abs)
     processed_files = 0
     limit_reached = False
     resume = {
         "truncated": False,
         "max_files": max_files or 0,
         "start_after": start_after or "",
+        "start_after_found": resume_found,
         "last_path": "",
         "next_start_after": "",
         "processed_files": 0,
@@ -423,7 +425,10 @@ def scan_roots(
                 if resolved in seen_files:
                     continue
                 seen_files.add(resolved)
-                if start_after_abs and norm_abs(resolved) <= start_after_abs:
+                if not resume_found:
+                    if norm_abs(resolved) == start_after_abs:
+                        resume_found = True
+                        resume["start_after_found"] = True
                     continue
 
                 try:
@@ -765,6 +770,7 @@ def write_report(path: Path, data: dict[str, object], csv_path: Path, json_path:
                 f"| `truncated` | `{resume.get('truncated')}` |",
                 f"| `processed_files` | `{resume.get('processed_files')}` |",
                 f"| `max_files` | `{resume.get('max_files')}` |",
+                f"| `start_after_found` | `{resume.get('start_after_found')}` |",
                 f"| `next_start_after` | `{resume.get('next_start_after') or ''}` |",
             ]
         )

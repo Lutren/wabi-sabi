@@ -44,6 +44,28 @@ def test_incremental_scan_limits_and_resumes_from_marker(tmp_path: Path) -> None
     assert second["resume"]["processed_files"] == 1
 
 
+def test_resume_uses_traversal_marker_not_lexicographic_path(tmp_path: Path) -> None:
+    root = tmp_path / "root"
+    nested = root / "a_dir"
+    nested.mkdir(parents=True)
+    (root / "z_root.txt").write_text("already seen before nested marker", encoding="utf-8")
+    marker = nested / "m_marker.txt"
+    marker.write_text("marker", encoding="utf-8")
+    (nested / "n_after.txt").write_text("after marker", encoding="utf-8")
+
+    result = audit.scan_roots(
+        hash_max_bytes=1024 * 1024,
+        registry_blob="",
+        root_labels={"fixture"},
+        max_files=10,
+        start_after=str(marker),
+        root_defs=[{"label": "fixture", "path": root, "exclude": []}],
+    )
+
+    assert result["resume"]["start_after_found"] is True
+    assert [Path(str(row["path"])).name for row in result["rows"]] == ["n_after.txt"]
+
+
 def test_unknown_root_label_fails_closed(tmp_path: Path) -> None:
     root_defs = [{"label": "fixture", "path": tmp_path, "exclude": []}]
 

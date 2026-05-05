@@ -1,0 +1,1155 @@
+{
+  "generated_at_utc": "2026-05-05T19:30:04.294205+00:00",
+  "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+  "scan_mode": "incremental",
+  "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "hash_max_mb": 5,
+  "selected_roots": [
+    "workspace_lrgonzalez"
+  ],
+  "resume": {
+    "truncated": true,
+    "max_files": 500,
+    "start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\agents\\crypto\\crypto-market-agent-sonnet.md",
+    "start_after_found": true,
+    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\sparc\\refinement-optimization-mode.md",
+    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\sparc\\refinement-optimization-mode.md",
+    "processed_files": 500,
+    "root_labels": [
+      "workspace_lrgonzalez"
+    ]
+  },
+  "root_stats": {
+    "workspace_lrgonzalez": {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+      "exists": true,
+      "files": 500,
+      "dirs": 274,
+      "bytes": 8743387,
+      "hashed": 47,
+      "hash_skipped": 2,
+      "generated_dirs_skipped": 7,
+      "errors": 0
+    }
+  },
+  "focus_stats": {
+    "psi": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    },
+    "downloads": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    },
+    "desktop": {
+      "files": 500,
+      "bytes": 8743387,
+      "hashed": 47
+    },
+    "workspace": {
+      "files": 500,
+      "bytes": 8743387,
+      "hashed": 47
+    },
+    "e_drive": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    }
+  },
+  "summary": {
+    "counts": {
+      "files": 500,
+      "generated_dirs_recorded": 7,
+      "project_roots_detected": 3,
+      "errors": 0,
+      "hashed_files": 47,
+      "zip_or_archive_files": 0,
+      "exact_duplicate_groups": 5,
+      "version_review_groups": 28
+    },
+    "extension_counts_top": [
+      [
+        ".md",
+        419
+      ],
+      [
+        ".py",
+        35
+      ],
+      [
+        ".ts",
+        13
+      ],
+      [
+        ".sh",
+        10
+      ],
+      [
+        ".json",
+        9
+      ],
+      [
+        ".png",
+        4
+      ],
+      [
+        "[none]",
+        4
+      ],
+      [
+        ".gif",
+        2
+      ],
+      [
+        ".xml",
+        1
+      ],
+      [
+        ".lock",
+        1
+      ],
+      [
+        ".toml",
+        1
+      ],
+      [
+        ".mjs",
+        1
+      ]
+    ],
+    "decision_counts": [
+      [
+        "KEEP_OR_REVIEW",
+        498
+      ],
+      [
+        "KEEP_BLOCKED_BOUNDARY",
+        2
+      ]
+    ],
+    "gate_counts": [
+      [
+        "REVIEW",
+        498
+      ],
+      [
+        "BLOCK",
+        2
+      ]
+    ],
+    "flag_counts": [
+      [
+        "secret_like_name",
+        2
+      ]
+    ],
+    "exact_duplicates": [
+      {
+        "sha256": "20a999838e78dd1f64a69c388014ec0849ece08490d843a7b06dcdda55d22955",
+        "size_bytes": 25904,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 25904,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\goal\\agent.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\reasoning\\agent.md"
+        ]
+      },
+      {
+        "sha256": "33a1ddb3826f37d833eb5a550f0c716b5cfcd11c58ba60279646137a948bfde5",
+        "size_bytes": 11416,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 11416,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\testing\\production-validator.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\testing\\validation\\production-validator.md"
+        ]
+      },
+      {
+        "sha256": "a8a4dcb58180843d31b7d9cc03923ffc3d613cf4a0d6489cc411336bd5ea15a2",
+        "size_bytes": 6647,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 6647,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\testing\\tdd-london-swarm.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\testing\\unit\\tdd-london-swarm.md"
+        ]
+      },
+      {
+        "sha256": "cd3be11d4300a720a67994c318bebc270eb006ffd04028cfa757e27f990eda7e",
+        "size_bytes": 1529,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 1529,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\analysis\\analyze-code-quality.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\analysis\\code-review\\analyze-code-quality.md"
+        ]
+      },
+      {
+        "sha256": "4777e0bec763de34da3553d5b37857909e124aa9434ed8d17a3ed45c13b643bc",
+        "size_bytes": 181,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 181,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\project-coordinator.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\v3\\project-coordinator.md"
+        ]
+      }
+    ],
+    "version_collisions": [
+      {
+        "key": "skill.md",
+        "count": 133,
+        "unique_hashes": 6,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\humanizer\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-adaptive-coordinator\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-agent\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-agentic-payments\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-analyze-code-quality\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-app-store\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-arch-system-design\\SKILL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-architecture\\SKILL.md"
+        ]
+      },
+      {
+        "key": "package.json",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\apps\\task-manager\\package.json",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\package.json"
+        ]
+      },
+      {
+        "key": "tsconfig.json",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\apps\\task-manager\\tsconfig.json",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\tsconfig.json"
+        ]
+      },
+      {
+        "key": "license",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\humanizer\\LICENSE",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\LICENSE"
+        ]
+      },
+      {
+        "key": "settings.json",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\settings copy.json",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\settings.json"
+        ]
+      },
+      {
+        "key": "python specialist.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\python-specialist.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\v3\\python-specialist.md"
+        ]
+      },
+      {
+        "key": "coder.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\core\\coder.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\sparc\\coder.md"
+        ]
+      },
+      {
+        "key": "dev backend api.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\development\\dev-backend-api.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\development\\backend\\dev-backend-api.md"
+        ]
+      },
+      {
+        "key": "app store.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\app-store.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\app-store.md"
+        ]
+      },
+      {
+        "key": "challenges.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\challenges.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\challenges.md"
+        ]
+      },
+      {
+        "key": "neural network.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\neural-network.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\neural-network.md"
+        ]
+      },
+      {
+        "key": "payments.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\payments.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\payments.md"
+        ]
+      },
+      {
+        "key": "sandbox.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\sandbox.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\sandbox.md"
+        ]
+      },
+      {
+        "key": "swarm.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\swarm.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\swarm.md"
+        ]
+      },
+      {
+        "key": "user tools.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\user-tools.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\user-tools.md"
+        ]
+      },
+      {
+        "key": "workflow.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\flow-nexus\\workflow.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\flow-nexus\\workflow.md"
+        ]
+      },
+      {
+        "key": "github modes.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\github-modes.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\github-modes.md"
+        ]
+      },
+      {
+        "key": "issue tracker.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\issue-tracker.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\issue-tracker.md"
+        ]
+      },
+      {
+        "key": "multi repo swarm.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\multi-repo-swarm.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\multi-repo-swarm.md"
+        ]
+      },
+      {
+        "key": "pr manager.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\pr-manager.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\pr-manager.md"
+        ]
+      },
+      {
+        "key": "project board sync.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\project-board-sync.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\project-board-sync.md"
+        ]
+      },
+      {
+        "key": "release manager.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\release-manager.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\release-manager.md"
+        ]
+      },
+      {
+        "key": "release swarm.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\release-swarm.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\release-swarm.md"
+        ]
+      },
+      {
+        "key": "swarm issue.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\swarm-issue.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\swarm-issue.md"
+        ]
+      },
+      {
+        "key": "swarm pr.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\swarm-pr.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\swarm-pr.md"
+        ]
+      },
+      {
+        "key": "sync coordinator.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\sync-coordinator.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\sync-coordinator.md"
+        ]
+      },
+      {
+        "key": "workflow automation.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\github\\workflow-automation.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\github\\workflow-automation.md"
+        ]
+      },
+      {
+        "key": "goal planner.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\goal\\goal-planner.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\reasoning\\goal-planner.md"
+        ]
+      }
+    ],
+    "large_files": [
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\cctask.png",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\cctask.png",
+        "name": "cctask.png",
+        "extension": ".png",
+        "size_bytes": 1026675,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\subagents.png",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\subagents.png",
+        "name": "subagents.png",
+        "extension": ".png",
+        "size_bytes": 1003067,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\genui.png",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\genui.png",
+        "name": "genui.png",
+        "extension": ".png",
+        "size_bytes": 983697,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\hooked.png",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\hooked.png",
+        "name": "hooked.png",
+        "extension": ".png",
+        "size_bytes": 852801,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\package-lock.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\package-lock.json",
+        "name": "package-lock.json",
+        "extension": ".json",
+        "size_bytes": 538710,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\SubAgentChain.gif",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\SubAgentChain.gif",
+        "name": "SubAgentChain.gif",
+        "extension": ".gif",
+        "size_bytes": 321026,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\README.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\README.md",
+        "name": "README.md",
+        "extension": ".md",
+        "size_bytes": 298072,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\SubAgentFlow.gif",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\images\\SubAgentFlow.gif",
+        "name": "SubAgentFlow.gif",
+        "extension": ".gif",
+        "size_bytes": 278716,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\ai_docs\\legacy\\cc_hooks_v0_repomix.xml",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\ai_docs\\legacy\\cc_hooks_v0_repomix.xml",
+        "name": "cc_hooks_v0_repomix.xml",
+        "extension": ".xml",
+        "size_bytes": 75219,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\ai_docs\\claude_code_hooks_docs.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\ai_docs\\claude_code_hooks_docs.md",
+        "name": "claude_code_hooks_docs.md",
+        "extension": ".md",
+        "size_bytes": 58133,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\ai_docs\\claude_code_subagents_docs.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\ai_docs\\claude_code_subagents_docs.md",
+        "name": "claude_code_subagents_docs.md",
+        "extension": ".md",
+        "size_bytes": 40505,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\CLAUDE.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\CLAUDE.md",
+        "name": "CLAUDE.md",
+        "extension": ".md",
+        "size_bytes": 39965,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\hooks-automation\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\hooks-automation\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 33354,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-release-management\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-release-management\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 31638,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-project-management\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-project-management\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 30075,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-quorum-manager\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-quorum-manager\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 29291,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-performance-benchmarker\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-performance-benchmarker\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 28521,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\consensus\\quorum-manager.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\consensus\\quorum-manager.md",
+        "name": "quorum-manager.md",
+        "extension": ".md",
+        "size_bytes": 28219,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-code-review\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-code-review\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 27909,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\consensus\\performance-benchmarker.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\consensus\\performance-benchmarker.md",
+        "name": "performance-benchmarker.md",
+        "extension": ".md",
+        "size_bytes": 27505,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\flow-nexus-platform\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\flow-nexus-platform\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 27245,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\v3-cli-modernization\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\v3-cli-modernization\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 26912,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-crdt-synchronizer\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-crdt-synchronizer\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 26503,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-agent\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-agent\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 26319,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\pair-programming\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\pair-programming\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 26014,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\goal\\agent.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\goal\\agent.md",
+        "name": "agent.md",
+        "extension": ".md",
+        "size_bytes": 25904,
+        "sha256": "20a999838e78dd1f64a69c388014ec0849ece08490d843a7b06dcdda55d22955",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\reasoning\\agent.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\reasoning\\agent.md",
+        "name": "agent.md",
+        "extension": ".md",
+        "size_bytes": 25904,
+        "sha256": "20a999838e78dd1f64a69c388014ec0849ece08490d843a7b06dcdda55d22955",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-topology-optimizer\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\agent-topology-optimizer\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 25715,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\consensus\\crdt-synchronizer.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\agents\\consensus\\crdt-synchronizer.md",
+        "name": "crdt-synchronizer.md",
+        "extension": ".md",
+        "size_bytes": 25457,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-workflow-automation\\SKILL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.agents\\skills\\github-workflow-automation\\SKILL.md",
+        "name": "SKILL.md",
+        "extension": ".md",
+        "size_bytes": 25430,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      }
+    ],
+    "zip_files": [],
+    "unregistered_review_sample": [
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\analysis\\token-efficiency.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\analysis\\token-efficiency.md",
+        "name": "token-efficiency.md",
+        "extension": ".md",
+        "size_bytes": 1112,
+        "sha256": "",
+        "hash_status": "skipped_secret_or_private",
+        "flags": "secret_like_name",
+        "registered": "no",
+        "psi_state": "BLOQUEADO",
+        "action_gate": "BLOCK",
+        "decision": "KEEP_BLOCKED_BOUNDARY"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\analysis\\token-usage.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.claude\\commands\\analysis\\token-usage.md",
+        "name": "token-usage.md",
+        "extension": ".md",
+        "size_bytes": 591,
+        "sha256": "",
+        "hash_status": "skipped_secret_or_private",
+        "flags": "secret_like_name",
+        "registered": "no",
+        "psi_state": "BLOQUEADO",
+        "action_gate": "BLOCK",
+        "decision": "KEEP_BLOCKED_BOUNDARY"
+      }
+    ],
+    "delete_candidates_sample": [
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\.pytest_cache",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\releases",
+        "root": "workspace_lrgonzalez",
+        "classification": "RELEASE_EVIDENCE_REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.git",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "KEEP_BLOCKED_GIT_HISTORY",
+        "action_gate": "BLOCK"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.git",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "KEEP_BLOCKED_GIT_HISTORY",
+        "action_gate": "BLOCK"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\humanizer\\.git",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "KEEP_BLOCKED_GIT_HISTORY",
+        "action_gate": "BLOCK"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.git",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "KEEP_BLOCKED_GIT_HISTORY",
+        "action_gate": "BLOCK"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\bin",
+        "root": "workspace_lrgonzalez",
+        "classification": "BINARY_TOOL_DIR_REVIEW",
+        "decision": "REVIEW_BINARY_OR_TOOL_DIR",
+        "action_gate": "REVIEW"
+      }
+    ]
+  },
+  "project_roots": [
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\hooks",
+      "root": "workspace_lrgonzalez",
+      "markers": [
+        "setup.py"
+      ],
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "registered": false
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\apps\\task-manager",
+      "root": "workspace_lrgonzalez",
+      "markers": [
+        "package.json"
+      ],
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "registered": false
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo",
+      "root": "workspace_lrgonzalez",
+      "markers": [
+        "package.json"
+      ],
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "registered": true
+    }
+  ],
+  "generated_dirs_sample": [
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\.pytest_cache",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+      "action_gate": "REVIEW"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\releases",
+      "root": "workspace_lrgonzalez",
+      "classification": "RELEASE_EVIDENCE_REVIEW",
+      "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW",
+      "action_gate": "REVIEW"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.git",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "KEEP_BLOCKED_GIT_HISTORY",
+      "action_gate": "BLOCK"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.git",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "KEEP_BLOCKED_GIT_HISTORY",
+      "action_gate": "BLOCK"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\humanizer\\.git",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "KEEP_BLOCKED_GIT_HISTORY",
+      "action_gate": "BLOCK"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\.git",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "KEEP_BLOCKED_GIT_HISTORY",
+      "action_gate": "BLOCK"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\bin",
+      "root": "workspace_lrgonzalez",
+      "classification": "BINARY_TOOL_DIR_REVIEW",
+      "decision": "REVIEW_BINARY_OR_TOOL_DIR",
+      "action_gate": "REVIEW"
+    }
+  ],
+  "errors_sample": [],
+  "manifest_csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500_resume6868b327e8.csv",
+  "report_md": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500_RESUME6868B327E8.md",
+  "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
+  "rules": [
+    "No files were deleted, moved, extracted or published.",
+    "Exact duplicates remain REVIEW until a canonical copy is chosen.",
+    "Private game, TCG, secret-like and strong-claim material remains BLOCK.",
+    "Generated caches/builds are candidates only after ActionGate and path containment checks."
+  ],
+  "witness_event_hash": "5ba1bc888edd2fb83d0d303a6a84e4bcc0a2420501e4ab9b8c5d3f80a51fe75e"
+}

@@ -1,0 +1,1452 @@
+{
+  "generated_at_utc": "2026-05-05T19:24:38.805071+00:00",
+  "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+  "scan_mode": "incremental",
+  "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "hash_max_mb": 5,
+  "selected_roots": [
+    "workspace_lrgonzalez"
+  ],
+  "resume": {
+    "truncated": true,
+    "max_files": 500,
+    "start_after": "",
+    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\agents\\crypto\\crypto-market-agent-sonnet.md",
+    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\agents\\crypto\\crypto-market-agent-sonnet.md",
+    "processed_files": 500,
+    "root_labels": [
+      "workspace_lrgonzalez"
+    ]
+  },
+  "root_stats": {
+    "workspace_lrgonzalez": {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+      "exists": true,
+      "files": 500,
+      "dirs": 60,
+      "bytes": 87057115,
+      "hashed": 147,
+      "hash_skipped": 11,
+      "generated_dirs_skipped": 4,
+      "errors": 0
+    }
+  },
+  "focus_stats": {
+    "psi": {
+      "files": 130,
+      "bytes": 6683965,
+      "hashed": 130
+    },
+    "downloads": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    },
+    "desktop": {
+      "files": 500,
+      "bytes": 87057115,
+      "hashed": 147
+    },
+    "workspace": {
+      "files": 500,
+      "bytes": 87057115,
+      "hashed": 147
+    },
+    "e_drive": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    }
+  },
+  "summary": {
+    "counts": {
+      "files": 500,
+      "generated_dirs_recorded": 4,
+      "project_roots_detected": 0,
+      "errors": 0,
+      "hashed_files": 147,
+      "zip_or_archive_files": 11,
+      "exact_duplicate_groups": 7,
+      "version_review_groups": 11
+    },
+    "extension_counts_top": [
+      [
+        ".md",
+        191
+      ],
+      [
+        ".py",
+        129
+      ],
+      [
+        ".txt",
+        39
+      ],
+      [
+        ".json",
+        37
+      ],
+      [
+        ".jpeg",
+        13
+      ],
+      [
+        ".zip",
+        11
+      ],
+      [
+        ".pyw",
+        9
+      ],
+      [
+        ".docx",
+        9
+      ],
+      [
+        "[none]",
+        8
+      ],
+      [
+        ".bat",
+        7
+      ],
+      [
+        ".pdf",
+        7
+      ],
+      [
+        ".csv",
+        5
+      ],
+      [
+        ".bin",
+        4
+      ],
+      [
+        ".lnk",
+        3
+      ],
+      [
+        ".jpg",
+        3
+      ],
+      [
+        ".html",
+        3
+      ],
+      [
+        ".db",
+        2
+      ],
+      [
+        ".ini",
+        2
+      ],
+      [
+        ".png",
+        2
+      ],
+      [
+        ".pickle",
+        2
+      ],
+      [
+        ".mp4",
+        2
+      ],
+      [
+        ".sh",
+        2
+      ],
+      [
+        ".log",
+        2
+      ],
+      [
+        ".sample",
+        2
+      ],
+      [
+        ".toml",
+        2
+      ]
+    ],
+    "decision_counts": [
+      [
+        "KEEP_OR_REVIEW",
+        477
+      ],
+      [
+        "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW",
+        11
+      ],
+      [
+        "KEEP_BLOCKED_BOUNDARY",
+        6
+      ],
+      [
+        "CANDIDATE_DELETE_EMPTY_REVIEW",
+        4
+      ],
+      [
+        "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+        2
+      ]
+    ],
+    "gate_counts": [
+      [
+        "REVIEW",
+        494
+      ],
+      [
+        "BLOCK",
+        6
+      ]
+    ],
+    "flag_counts": [
+      [
+        "package_or_archive",
+        11
+      ],
+      [
+        "secret_like_name",
+        6
+      ],
+      [
+        "empty_file",
+        4
+      ],
+      [
+        "generated_or_log_candidate",
+        2
+      ]
+    ],
+    "exact_duplicates": [
+      {
+        "sha256": "3dd1271b04e21e30345d3a637554157fee04c554aa904833e600be70502dc669",
+        "size_bytes": 21651,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 21651,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\PROMPT_MAESTRO_HANDOFF_2026-04-25.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\extra_psi_pre_final_v1_1\\PROMPT_MAESTRO_HANDOFF_2026-04-25.md"
+        ]
+      },
+      {
+        "sha256": "08a5093e039f03815957f54e8d6856c6efdedbe0aa51aaa1ec3886dbe7bb0352",
+        "size_bytes": 20480,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 20480,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\claudio_daemon.db",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio_daemon.db"
+        ]
+      },
+      {
+        "sha256": "7f18344ab924a5be168046c6dd3b5185cac659c30e236c3f8c40f09bbf3bf3f1",
+        "size_bytes": 7742,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 7742,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\09_MAGIA_PRACTICA.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\libro\\09_MAGIA_PRACTICA.md"
+        ]
+      },
+      {
+        "sha256": "6d452217e61a4175f1525a27f98e250c678f333c85d7cb1cd876a113035f1463",
+        "size_bytes": 7629,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 7629,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\04_BRAIN_OS.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\04_BRAIN_OS.md"
+        ]
+      },
+      {
+        "sha256": "bf84c85c11a680a7eb7f06fba2eef548d7030f07e76ff45f162db40dd23ed68c",
+        "size_bytes": 7151,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 7151,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\02_SEGUNDA_PERDIDA.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\02_SEGUNDA_PERDIDA.md"
+        ]
+      },
+      {
+        "sha256": "5a30c1fa3152eb2d623d0275673f3bbdaba17116f53596b81f815f796ca5e9cb",
+        "size_bytes": 6590,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 6590,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\08_POSICIONAMIENTO_EL_OBSERVADOR.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\08_POSICIONAMIENTO_EL_OBSERVADOR.md"
+        ]
+      },
+      {
+        "sha256": "17a337c761955d2eac5f1161af683800b220e5c4ab253e0e9bb67ec3382f83e3",
+        "size_bytes": 5708,
+        "count": 2,
+        "total_duplicate_bytes_if_one_kept": 5708,
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EXACT_DUPLICATE_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\07_PROMPT_MAESTRO_HANDOFF.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\libro\\07_PROMPT_MAESTRO_HANDOFF.md"
+        ]
+      }
+    ],
+    "version_collisions": [
+      {
+        "key": ".gitignore",
+        "count": 3,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\.gitignore",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.gitignore",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.gitignore"
+        ]
+      },
+      {
+        "key": "desktop.ini",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\desktop.ini",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\desktop.ini"
+        ]
+      },
+      {
+        "key": "readme.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\README.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\README.md"
+        ]
+      },
+      {
+        "key": "claude.md",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\CLAUDE.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\CLAUDE.md"
+        ]
+      },
+      {
+        "key": "imagen de perfil.jpeg",
+        "count": 2,
+        "unique_hashes": 0,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\imagen_de_perfil.jpeg",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Luis Rene Tren Tyr\\imagen_de_perfil.jpeg"
+        ]
+      },
+      {
+        "key": "01 observacionismo core.md",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\01_OBSERVACIONISMO_CORE.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\01_OBSERVACIONISMO_CORE.md"
+        ]
+      },
+      {
+        "key": "03 psi ai framework.md",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\03_PSI_AI_FRAMEWORK.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\03_PSI_AI_FRAMEWORK.md"
+        ]
+      },
+      {
+        "key": "06 observacionismo agent spec.md",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\06_OBSERVACIONISMO_AGENT_SPEC.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\raiz_2026-04-26\\06_OBSERVACIONISMO_AGENT_SPEC.md"
+        ]
+      },
+      {
+        "key": "10 eml symbolic kernel.md",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\10_EML_SYMBOLIC_KERNEL.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\EML_EXTENSION_PACK_v0_1\\10_EML_SYMBOLIC_KERNEL.md"
+        ]
+      },
+      {
+        "key": "next session brief.md",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\NEXT_SESSION_BRIEF.md",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\NEXT_SESSION_BRIEF.md"
+        ]
+      },
+      {
+        "key": "psi canon compiler.py",
+        "count": 2,
+        "unique_hashes": 2,
+        "action_gate": "REVIEW",
+        "decision": "MERGE_OR_VERSION_REVIEW",
+        "examples": [
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\psi_canon_compiler (2).py",
+          "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\psi_canon_compiler.py"
+        ]
+      }
+    ],
+    "large_files": [
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.chroma_db\\chroma.sqlite3",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.chroma_db\\chroma.sqlite3",
+        "name": "chroma.sqlite3",
+        "extension": ".sqlite3",
+        "size_bytes": 15839232,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\grok-video-4d563a03-3e1b-40ec-bd3c-a80214c7ee0b.MP4",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\grok-video-4d563a03-3e1b-40ec-bd3c-a80214c7ee0b.MP4",
+        "name": "grok-video-4d563a03-3e1b-40ec-bd3c-a80214c7ee0b.MP4",
+        "extension": ".mp4",
+        "size_bytes": 11055895,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "name": "OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "extension": ".zip",
+        "size_bytes": 9330139,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\assets\\piri\\piri_reis_world_map_01.jpg",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\assets\\piri\\piri_reis_world_map_01.jpg",
+        "name": "piri_reis_world_map_01.jpg",
+        "extension": ".jpg",
+        "size_bytes": 7422309,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "name": "VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "extension": ".zip",
+        "size_bytes": 5617241,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.chroma_db\\2143d7eb-4303-47af-9cdf-d02277ab8564\\data_level0.bin",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.chroma_db\\2143d7eb-4303-47af-9cdf-d02277ab8564\\data_level0.bin",
+        "name": "data_level0.bin",
+        "extension": ".bin",
+        "size_bytes": 3915428,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\face_landmarker.task",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\face_landmarker.task",
+        "name": "face_landmarker.task",
+        "extension": ".task",
+        "size_bytes": 3758596,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "name": "VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "extension": ".zip",
+        "size_bytes": 2951413,
+        "sha256": "17e65c58f67f3b7f278f3b610193a3c181739843ab7924763348829ff38202a2",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\Claudiocobain.png",
+        "rel_to_workspace": "-=MEDIOEVO=-\\Claudiocobain.png",
+        "name": "Claudiocobain.png",
+        "extension": ".png",
+        "size_bytes": 2881960,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\website_deploy.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\website_deploy.zip",
+        "name": "website_deploy.zip",
+        "extension": ".zip",
+        "size_bytes": 2481476,
+        "sha256": "c23760d423e92eda333f446ececb16b9e9c14aafb89b17d8aa65d7fb6d299039",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Raul Herrera\\Raul HM.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Raul Herrera\\Raul HM.pdf",
+        "name": "Raul HM.pdf",
+        "extension": ".pdf",
+        "size_bytes": 2401722,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\10e44f41-1247-4e17-9b19-d122cb12a72c-video.MP4",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\10e44f41-1247-4e17-9b19-d122cb12a72c-video.MP4",
+        "name": "10e44f41-1247-4e17-9b19-d122cb12a72c-video.MP4",
+        "extension": ".mp4",
+        "size_bytes": 1394682,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Luis Rene Tren Tyr\\CV LUIS RENÉ GONZÁLEZ LÓPEZ.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Luis Rene Tren Tyr\\CV LUIS RENÉ GONZÁLEZ LÓPEZ.pdf",
+        "name": "CV LUIS RENÉ GONZÁLEZ LÓPEZ.pdf",
+        "extension": ".pdf",
+        "size_bytes": 1309817,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\Logo.png",
+        "rel_to_workspace": "-=MEDIOEVO=-\\Logo.png",
+        "name": "Logo.png",
+        "extension": ".png",
+        "size_bytes": 978954,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.pdf",
+        "name": "OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.pdf",
+        "extension": ".pdf",
+        "size_bytes": 833811,
+        "sha256": "a59d9a9c40c215e7a4c6619f53a4e605a4c9cbb5dabd050e8863dfd8440adbfd",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\Deconstrucción Observacionista de Modelos de IA y Matemáticas Unificadas TUIP-Σ OSIT.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\Deconstrucción Observacionista de Modelos de IA y Matemáticas Unificadas TUIP-Σ OSIT.pdf",
+        "name": "Deconstrucción Observacionista de Modelos de IA y Matemáticas Unificadas TUIP-Σ OSIT.pdf",
+        "extension": ".pdf",
+        "size_bytes": 715208,
+        "sha256": "f9e3cb69906d45fd7d5b4ce4ef8ce7fcdc075662032efafae6970bc838c750b2",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Evelyn Estrada\\IMG_8436.jpeg",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Evelyn Estrada\\IMG_8436.jpeg",
+        "name": "IMG_8436.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 706794,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\Deconstrucción Observacionista de la Inteligencia — TUIP-Σ OSIT.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\Deconstrucción Observacionista de la Inteligencia — TUIP-Σ OSIT.pdf",
+        "name": "Deconstrucción Observacionista de la Inteligencia — TUIP-Σ OSIT.pdf",
+        "extension": ".pdf",
+        "size_bytes": 598327,
+        "sha256": "092699e982fb4c6125d7a6dc9465faf779c1ac15107d8a442fd9382a626dd5a4",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\Deconstrucción Observacionista de la Física — TUIP-Σ OSIT.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\Deconstrucción Observacionista de la Física — TUIP-Σ OSIT.pdf",
+        "name": "Deconstrucción Observacionista de la Física — TUIP-Σ OSIT.pdf",
+        "extension": ".pdf",
+        "size_bytes": 526472,
+        "sha256": "bdc094f4b0513ccabe7b3e54296675e6377aea16fec7c63e80849ab7a05ed2e4",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\OBSERVACIONISMO_TUI_R3_PACK (1).zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\OBSERVACIONISMO_TUI_R3_PACK (1).zip",
+        "name": "OBSERVACIONISMO_TUI_R3_PACK (1).zip",
+        "extension": ".zip",
+        "size_bytes": 473647,
+        "sha256": "34dc55faa8686af0276cbc26ea345327ff5a1f7aa4e4afea8d24bdec5fc379cc",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Evelyn Estrada\\IMG_8433.jpeg",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Evelyn Estrada\\IMG_8433.jpeg",
+        "name": "IMG_8433.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 450342,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\MEdioevosagalore\\MUNDO_MEDIOEVO_v27.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\MEdioevosagalore\\MUNDO_MEDIOEVO_v27.md",
+        "name": "MUNDO_MEDIOEVO_v27.md",
+        "extension": ".md",
+        "size_bytes": 420997,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\S Aeme\\b8d8a3eb-deb4-4a4f-8e35-49ee2575e339.jpg",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\S Aeme\\b8d8a3eb-deb4-4a4f-8e35-49ee2575e339.jpg",
+        "name": "b8d8a3eb-deb4-4a4f-8e35-49ee2575e339.jpg",
+        "extension": ".jpg",
+        "size_bytes": 399797,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\extra_psi_pre_final_v1_1\\PSI Paper v2 - Observer-State-Dependent Measurement Quality.pdf",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\extra_psi_pre_final_v1_1\\PSI Paper v2 - Observer-State-Dependent Measurement Quality.pdf",
+        "name": "PSI Paper v2 - Observer-State-Dependent Measurement Quality.pdf",
+        "extension": ".pdf",
+        "size_bytes": 344345,
+        "sha256": "e5e90e106650dc955ee048fde3a6b01f38bea5fb02f176e216460601ea7eaa81",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\assets\\piri\\piri_rhumb_lines_annotated_small.jpg",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\assets\\piri\\piri_rhumb_lines_annotated_small.jpg",
+        "name": "piri_rhumb_lines_annotated_small.jpg",
+        "extension": ".jpg",
+        "size_bytes": 321279,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "name": "DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "extension": ".zip",
+        "size_bytes": 282528,
+        "sha256": "02b809abfc1d47feb7f44fe22b7db97c134410e6c6f376d38a72cddb7919f4ed",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\MEdioevosagalore\\SISTEMAS_CONTROL_v27.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\MEdioevosagalore\\SISTEMAS_CONTROL_v27.md",
+        "name": "SISTEMAS_CONTROL_v27.md",
+        "extension": ".md",
+        "size_bytes": 261481,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio_knowledge.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio_knowledge.json",
+        "name": "claudio_knowledge.json",
+        "extension": ".json",
+        "size_bytes": 260949,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\suno_inventory.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\suno_inventory.json",
+        "name": "suno_inventory.json",
+        "extension": ".json",
+        "size_bytes": 257520,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Anaid Phillips\\WhatsApp Image 2026-03-27 aaaaaaat 2.38.09 PM.jpeg",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=Artistas=-\\Anaid Phillips\\WhatsApp Image 2026-03-27 aaaaaaat 2.38.09 PM.jpeg",
+        "name": "WhatsApp Image 2026-03-27 aaaaaaat 2.38.09 PM.jpeg",
+        "extension": ".jpeg",
+        "size_bytes": 232622,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      }
+    ],
+    "zip_files": [
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "name": "OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "extension": ".zip",
+        "size_bytes": 9330139,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "name": "VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "extension": ".zip",
+        "size_bytes": 5617241,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "name": "VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "extension": ".zip",
+        "size_bytes": 2951413,
+        "sha256": "17e65c58f67f3b7f278f3b610193a3c181739843ab7924763348829ff38202a2",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\website_deploy.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\website_deploy.zip",
+        "name": "website_deploy.zip",
+        "extension": ".zip",
+        "size_bytes": 2481476,
+        "sha256": "c23760d423e92eda333f446ececb16b9e9c14aafb89b17d8aa65d7fb6d299039",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\OBSERVACIONISMO_TUI_R3_PACK (1).zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\OBSERVACIONISMO_TUI_R3_PACK (1).zip",
+        "name": "OBSERVACIONISMO_TUI_R3_PACK (1).zip",
+        "extension": ".zip",
+        "size_bytes": 473647,
+        "sha256": "34dc55faa8686af0276cbc26ea345327ff5a1f7aa4e4afea8d24bdec5fc379cc",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "name": "DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "extension": ".zip",
+        "size_bytes": 282528,
+        "sha256": "02b809abfc1d47feb7f44fe22b7db97c134410e6c6f376d38a72cddb7919f4ed",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\packages\\files_psi_core_2026-04-26.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\packages\\files_psi_core_2026-04-26.zip",
+        "name": "files_psi_core_2026-04-26.zip",
+        "extension": ".zip",
+        "size_bytes": 15518,
+        "sha256": "d39fd8817846388bfaa1e9dd70ce7e0a7472ae420a7c7fcccc7381ad2ccc7a15",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MACHAUT_PIPELINE_v1_4.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MACHAUT_PIPELINE_v1_4.zip",
+        "name": "VOYNICH_MACHAUT_PIPELINE_v1_4.zip",
+        "extension": ".zip",
+        "size_bytes": 11901,
+        "sha256": "7400127e9405d8944a2ad727c2533e65360659103e8eea19ba8f7d56ebcfd88c",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_LAB_v0_1.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_LAB_v0_1.zip",
+        "name": "OBSERVACIONISMO_ARTEFACT_LAB_v0_1.zip",
+        "extension": ".zip",
+        "size_bytes": 8204,
+        "sha256": "eafd90637932ec5dd1724ad0047ad7253b1c5d1c0d5feadf8ef937338b97bfc4",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\medioevo_itch.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\medioevo_itch.zip",
+        "name": "medioevo_itch.zip",
+        "extension": ".zip",
+        "size_bytes": 2265,
+        "sha256": "90610a1aba0329d689f893d28ed8e7e63ec17961e9b2fb9f6716e08971c4c65b",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\software\\claudio_oml_rs\\claudio_oml_rs_package.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\software\\claudio_oml_rs\\claudio_oml_rs_package.zip",
+        "name": "claudio_oml_rs_package.zip",
+        "extension": ".zip",
+        "size_bytes": 22,
+        "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      }
+    ],
+    "unregistered_review_sample": [
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\SECRET_SCAN_REPORT.md",
+        "rel_to_workspace": "SECRET_SCAN_REPORT.md",
+        "name": "SECRET_SCAN_REPORT.md",
+        "extension": ".md",
+        "size_bytes": 4848,
+        "sha256": "",
+        "hash_status": "skipped_secret_or_private",
+        "flags": "secret_like_name",
+        "registered": "no",
+        "psi_state": "BLOQUEADO",
+        "action_gate": "BLOCK",
+        "decision": "KEEP_BLOCKED_BOUNDARY"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.claudio_consciousness.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.claudio_consciousness.json",
+        "name": ".claudio_consciousness.json",
+        "extension": ".json",
+        "size_bytes": 0,
+        "sha256": "",
+        "hash_status": "skipped_empty_or_large",
+        "flags": "empty_file",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EMPTY_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.image_download_log.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.image_download_log.json",
+        "name": ".image_download_log.json",
+        "extension": ".json",
+        "size_bytes": 0,
+        "sha256": "",
+        "hash_status": "skipped_empty_or_large",
+        "flags": "empty_file",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_EMPTY_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\discord_bot.log",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\discord_bot.log",
+        "name": "discord_bot.log",
+        "extension": ".log",
+        "size_bytes": 1538,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "generated_or_log_candidate",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\download_monitor.log",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\download_monitor.log",
+        "name": "download_monitor.log",
+        "extension": ".log",
+        "size_bytes": 584,
+        "sha256": "",
+        "hash_status": "skipped_unique_size",
+        "flags": "generated_or_log_candidate",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\gumroad_api_fix.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\gumroad_api_fix.py",
+        "name": "gumroad_api_fix.py",
+        "extension": ".py",
+        "size_bytes": 15092,
+        "sha256": "",
+        "hash_status": "skipped_secret_or_private",
+        "flags": "secret_like_name",
+        "registered": "no",
+        "psi_state": "BLOQUEADO",
+        "action_gate": "BLOCK",
+        "decision": "KEEP_BLOCKED_BOUNDARY"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\medioevo_itch.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\medioevo_itch.zip",
+        "name": "medioevo_itch.zip",
+        "extension": ".zip",
+        "size_bytes": 2265,
+        "sha256": "90610a1aba0329d689f893d28ed8e7e63ec17961e9b2fb9f6716e08971c4c65b",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\website_deploy.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\website_deploy.zip",
+        "name": "website_deploy.zip",
+        "extension": ".zip",
+        "size_bytes": 2481476,
+        "sha256": "c23760d423e92eda333f446ececb16b9e9c14aafb89b17d8aa65d7fb6d299039",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "name": "DUAT_GEODIA_R4_INTERNAL_PACK.zip",
+        "extension": ".zip",
+        "size_bytes": 282528,
+        "sha256": "02b809abfc1d47feb7f44fe22b7db97c134410e6c6f376d38a72cddb7919f4ed",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\packages\\files_psi_core_2026-04-26.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\packages\\files_psi_core_2026-04-26.zip",
+        "name": "files_psi_core_2026-04-26.zip",
+        "extension": ".zip",
+        "size_bytes": 15518,
+        "sha256": "d39fd8817846388bfaa1e9dd70ce7e0a7472ae420a7c7fcccc7381ad2ccc7a15",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_LAB_v0_1.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_LAB_v0_1.zip",
+        "name": "OBSERVACIONISMO_ARTEFACT_LAB_v0_1.zip",
+        "extension": ".zip",
+        "size_bytes": 8204,
+        "sha256": "eafd90637932ec5dd1724ad0047ad7253b1c5d1c0d5feadf8ef937338b97bfc4",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "name": "OBSERVACIONISMO_ARTEFACT_RUN_v0_2.zip",
+        "extension": ".zip",
+        "size_bytes": 9330139,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MACHAUT_PIPELINE_v1_4.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MACHAUT_PIPELINE_v1_4.zip",
+        "name": "VOYNICH_MACHAUT_PIPELINE_v1_4.zip",
+        "extension": ".zip",
+        "size_bytes": 11901,
+        "sha256": "7400127e9405d8944a2ad727c2533e65360659103e8eea19ba8f7d56ebcfd88c",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "name": "VOYNICH_MUSIC_MICRORUN_v0_8b.zip",
+        "extension": ".zip",
+        "size_bytes": 5617241,
+        "sha256": "",
+        "hash_status": "skipped_large",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "INFERENCIA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\investigacion\\voynich_piri\\packages\\VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "name": "VOYNICH_PIRI_REAL_RUN_v0_3.zip",
+        "extension": ".zip",
+        "size_bytes": 2951413,
+        "sha256": "17e65c58f67f3b7f278f3b610193a3c181739843ab7924763348829ff38202a2",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\software\\claudio_oml_rs\\claudio_oml_rs_package.zip",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\software\\claudio_oml_rs\\claudio_oml_rs_package.zip",
+        "name": "claudio_oml_rs_package.zip",
+        "extension": ".zip",
+        "size_bytes": 22,
+        "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85",
+        "hash_status": "hashed",
+        "flags": "package_or_archive",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.claude\\settings.local.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.claude\\settings.local.json",
+        "name": "settings.local.json",
+        "extension": ".json",
+        "size_bytes": 79338,
+        "sha256": "",
+        "hash_status": "skipped_secret_or_private",
+        "flags": "secret_like_name",
+        "registered": "no",
+        "psi_state": "BLOQUEADO",
+        "action_gate": "BLOCK",
+        "decision": "KEEP_BLOCKED_BOUNDARY"
+      },
+      {
+        "root": "workspace_lrgonzalez",
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.env.sample",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.env.sample",
+        "name": ".env.sample",
+        "extension": ".sample",
+        "size_bytes": 160,
+        "sha256": "",
+        "hash_status": "skipped_secret_or_private",
+        "flags": "secret_like_name",
+        "registered": "no",
+        "psi_state": "BLOQUEADO",
+        "action_gate": "BLOCK",
+        "decision": "KEEP_BLOCKED_BOUNDARY"
+      }
+    ],
+    "delete_candidates_sample": [
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\.pytest_cache",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\releases",
+        "root": "workspace_lrgonzalez",
+        "classification": "RELEASE_EVIDENCE_REVIEW",
+        "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.git",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "KEEP_BLOCKED_GIT_HISTORY",
+        "action_gate": "BLOCK"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.git",
+        "root": "workspace_lrgonzalez",
+        "classification": "UNKNOWN_REVIEW_REQUIRED",
+        "decision": "KEEP_BLOCKED_GIT_HISTORY",
+        "action_gate": "BLOCK"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.claudio_consciousness.json",
+        "root": "workspace_lrgonzalez",
+        "classification": "GENERATED_OR_EMPTY_REVIEW",
+        "size_bytes": 0,
+        "sha256": "",
+        "decision": "CANDIDATE_DELETE_EMPTY_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.image_download_log.json",
+        "root": "workspace_lrgonzalez",
+        "classification": "GENERATED_OR_EMPTY_REVIEW",
+        "size_bytes": 0,
+        "sha256": "",
+        "decision": "CANDIDATE_DELETE_EMPTY_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\discord_bot.log",
+        "root": "workspace_lrgonzalez",
+        "classification": "GENERATED_OR_EMPTY_REVIEW",
+        "size_bytes": 1538,
+        "sha256": "",
+        "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\download_monitor.log",
+        "root": "workspace_lrgonzalez",
+        "classification": "GENERATED_OR_EMPTY_REVIEW",
+        "size_bytes": 584,
+        "sha256": "",
+        "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\RC_03_TEMPORADA_9",
+        "root": "workspace_lrgonzalez",
+        "classification": "GENERATED_OR_EMPTY_REVIEW",
+        "size_bytes": 0,
+        "sha256": "",
+        "decision": "CANDIDATE_DELETE_EMPTY_REVIEW",
+        "action_gate": "REVIEW"
+      },
+      {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\CLAUDE.md",
+        "root": "workspace_lrgonzalez",
+        "classification": "GENERATED_OR_EMPTY_REVIEW",
+        "size_bytes": 0,
+        "sha256": "",
+        "decision": "CANDIDATE_DELETE_EMPTY_REVIEW",
+        "action_gate": "REVIEW"
+      }
+    ]
+  },
+  "project_roots": [],
+  "generated_dirs_sample": [
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\.pytest_cache",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "CANDIDATE_DELETE_REGENERABLE_REVIEW",
+      "action_gate": "REVIEW"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\releases",
+      "root": "workspace_lrgonzalez",
+      "classification": "RELEASE_EVIDENCE_REVIEW",
+      "decision": "CANDIDATE_ARCHIVE_OR_LINEAGE_REVIEW",
+      "action_gate": "REVIEW"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.git",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "KEEP_BLOCKED_GIT_HISTORY",
+      "action_gate": "BLOCK"
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.git",
+      "root": "workspace_lrgonzalez",
+      "classification": "UNKNOWN_REVIEW_REQUIRED",
+      "decision": "KEEP_BLOCKED_GIT_HISTORY",
+      "action_gate": "BLOCK"
+    }
+  ],
+  "errors_sample": [],
+  "manifest_csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500.csv",
+  "report_md": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500.md",
+  "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
+  "rules": [
+    "No files were deleted, moved, extracted or published.",
+    "Exact duplicates remain REVIEW until a canonical copy is chosen.",
+    "Private game, TCG, secret-like and strong-claim material remains BLOCK.",
+    "Generated caches/builds are candidates only after ActionGate and path containment checks."
+  ],
+  "witness_event_hash": "bd979ee277dc2ae6a48a63088a001527abf982490b512c52b9173180c64d31d6"
+}

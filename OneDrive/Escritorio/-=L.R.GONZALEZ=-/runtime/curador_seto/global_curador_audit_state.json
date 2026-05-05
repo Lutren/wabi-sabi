@@ -1,23 +1,23 @@
 {
   "schema": "medioevo.global_curador_resume.v1",
-  "updated_at_utc": "2026-05-05T19:19:39.548740+00:00",
+  "updated_at_utc": "2026-05-05T19:24:39.010753+00:00",
   "scan_mode": "incremental",
   "status": "DRY_RUN_NO_DELETE_NO_MOVE",
   "resume": {
     "truncated": true,
-    "max_files": 25,
+    "max_files": 500,
     "start_after": "",
-    "last_path": "C:\\Users\\L-Tyr\\Downloads\\27.png",
-    "next_start_after": "C:\\Users\\L-Tyr\\Downloads\\27.png",
-    "processed_files": 25,
+    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\agents\\crypto\\crypto-market-agent-sonnet.md",
+    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\agents\\crypto\\crypto-market-agent-sonnet.md",
+    "processed_files": 500,
     "root_labels": [
-      "downloads"
+      "workspace_lrgonzalez"
     ]
   },
   "outputs": {
-    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-seto-audit-2026-05-05-downloads_max25.json",
-    "csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-downloads_max25.csv",
-    "report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_DOWNLOADS_MAX25.md"
+    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-seto-audit-2026-05-05-workspace_lrgonzalez_max500.json",
+    "csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500.csv",
+    "report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500.md"
   },
-  "next_command_hint": "python tools\\release\\global_curador_audit.py --only-root downloads --max-files 25 --start-after \"C:\\Users\\L-Tyr\\Downloads\\27.png\""
+  "next_command_hint": "python tools\\release\\global_curador_audit.py --only-root workspace_lrgonzalez --max-files 500 --start-after \"C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\hooks-mastery\\.claude\\agents\\crypto\\crypto-market-agent-sonnet.md\""
 }

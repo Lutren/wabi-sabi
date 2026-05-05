@@ -159,3 +159,48 @@ def test_second_unchanged_run_is_noop_and_does_not_append_witness(tmp_path: Path
     assert second["noop"] is True
     assert second["downloads_files_seen"] == 1
     assert second_lines == first_lines
+
+
+def test_write_next_actions_uses_curador_and_pending_snapshot(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    downloads.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+    (downloads / "unique.txt").write_text("unique", encoding="utf-8")
+    pending_dir = workspace / "qa_artifacts" / "pending"
+    pending_dir.mkdir(parents=True)
+    (pending_dir / "pending_review_latest.json").write_text(
+        json.dumps(
+            {
+                "generated_at": "2026-05-05T00:00:00+00:00",
+                "active_markdown": {
+                    "dedup_open": 10,
+                    "by_blocker": {"local_candidate": 4, "external_or_gated": 2},
+                    "by_lane": {"cleanup_migration": 3},
+                },
+                "claudio_master": {"dedup_open": 2, "by_blocker": {"host_or_heavy": 1}},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    curador.run_curador(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        apply_exact_download_duplicates=True,
+    )
+    payload = curador.write_next_actions_report(workspace, downloads)
+
+    report = Path(payload["report_path"])
+    data = Path(payload["json_path"])
+    assert report.exists()
+    assert data.exists()
+    assert "Mantener CuradorSETO-Downloads-Intake activo" in report.read_text(encoding="utf-8")
+    parsed = json.loads(data.read_text(encoding="utf-8"))
+    assert parsed["status"]["current_downloads_files"] == 1
+    assert parsed["pending"]["active_by_blocker"]["local_candidate"] == 4
+    assert parsed["next_actions"][0]["priority"] == "P0"

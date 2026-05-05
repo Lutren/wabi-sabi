@@ -1,0 +1,107 @@
+{
+  "schema": "medioevo.curador_seto_next_actions.v1",
+  "generated_at_utc": "2026-05-05T18:48:00.988533+00:00",
+  "status": {
+    "generated_at_utc": "2026-05-05T18:48:00.984340+00:00",
+    "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+    "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
+    "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
+    "master_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\CURADOR_MASTER_INDEX.md",
+    "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
+    "witness_event_hash": "07215e235ac0fe8c4c497f06feaee745287ad97ace0c2d493b3a4115a48f007e",
+    "current_downloads_files": 160,
+    "current_downloads_duplicate_groups": 0,
+    "sqlite_table_counts": {
+      "files": 177,
+      "fichas": 177,
+      "duplicates": 17,
+      "duplicate_groups": 0,
+      "synapses": 160,
+      "decisions": 337,
+      "witness_events": 2
+    },
+    "sqlite_status_counts": {
+      "BORRADO_DUPLICADO": 17,
+      "REGISTRADO": 160
+    },
+    "sqlite_lane_counts": {
+      "assets-review": 35,
+      "cleanup": 51,
+      "duat-lab": 8,
+      "local-agent": 16,
+      "research-boundary": 67
+    }
+  },
+  "pending": {
+    "available": true,
+    "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\pending\\pending_review_latest.json",
+    "generated_at": "2026-05-05T18:47:30+00:00",
+    "active_dedup_open": 1070,
+    "active_by_blocker": {
+      "external_or_gated": 354,
+      "host_or_heavy": 84,
+      "legal_or_human": 146,
+      "local_candidate": 380,
+      "private_boundary": 106
+    },
+    "active_by_lane": {
+      "cleanup_migration": 1,
+      "commercial": 107,
+      "general": 155,
+      "open_source": 14,
+      "private_rpg": 93,
+      "runtime_claudio": 680,
+      "wave_fc": 3,
+      "website_marketing": 17
+    },
+    "claudio_dedup_open": 70,
+    "claudio_by_blocker": {
+      "external_or_gated": 42,
+      "host_or_heavy": 17,
+      "legal_or_human": 6,
+      "private_boundary": 5
+    }
+  },
+  "next_actions": [
+    {
+      "priority": "P0",
+      "lane": "curador_seto",
+      "action_gate": "APPROVE_LOCAL",
+      "title": "Mantener CuradorSETO-Downloads-Intake activo",
+      "reason": "Downloads tiene 160 archivos vivos y 0 grupos duplicados exactos activos.",
+      "next_step": "Usar el SQLite y CURADOR_MASTER_INDEX como verdad operativa de Downloads."
+    },
+    {
+      "priority": "P1",
+      "lane": "pending_review",
+      "action_gate": "APPROVE_LOCAL",
+      "title": "Trabajar candidatos locales primero",
+      "reason": "pending_review reporta 380 candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
+      "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes."
+    },
+    {
+      "priority": "P1",
+      "lane": "global_curador",
+      "action_gate": "REVIEW",
+      "title": "Reemplazar escaneo global largo por auditoria incremental por root",
+      "reason": "El refresco global completo puede exceder el tiempo operativo; Downloads ya se resolvio con indice incremental.",
+      "next_step": "Agregar modo por root/resumible antes de repetir E:, Desktop y workspace completo."
+    },
+    {
+      "priority": "P1",
+      "lane": "cleanup_migration",
+      "action_gate": "REVIEW",
+      "title": "Consolidar duplicados grandes solo con hash, ficha y canon",
+      "reason": "El dry-run global previo encontro paquetes grandes y duplicados exactos, pero algunos son productos, builds, assets o fronteras privadas.",
+      "next_step": "Procesar por lote: Asistente/FlujoCRM releases, vendors/cache, luego E: offload; borrar solo si ActionGate aprueba."
+    },
+    {
+      "priority": "P2",
+      "lane": "claudio_wabisabi",
+      "action_gate": "REVIEW",
+      "title": "Conectar Curador SETO con Claudio/Wabi-Sabi como memoria operativa",
+      "reason": "El Curador ya emite fichas, decisiones, sinapsis y WitnessLog; falta consumo directo por Hormiguero/Claudio.",
+      "next_step": "Exponer lectura local del SQLite y del reporte de next-actions sin ejecutar mutaciones externas."
+    }
+  ]
+}

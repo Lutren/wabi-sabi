@@ -835,6 +835,217 @@ def no_change_result(
     return result
 
 
+def sqlite_table_counts(db_path: Path) -> dict[str, int]:
+    tables = ["files", "fichas", "duplicates", "duplicate_groups", "synapses", "decisions", "witness_events"]
+    if not db_path.exists():
+        return {table: 0 for table in tables}
+    counts: dict[str, int] = {}
+    with sqlite3.connect(db_path) as db:
+        for table in tables:
+            try:
+                counts[table] = int(db.execute(f"SELECT COUNT(*) FROM {table}").fetchone()[0])
+            except sqlite3.Error:
+                counts[table] = 0
+    return counts
+
+
+def curador_status_snapshot(workspace_root: Path, downloads_dir: Path) -> dict[str, object]:
+    workspace_root = workspace_root.resolve()
+    downloads_dir = downloads_dir.resolve()
+    runtime_dir = workspace_root / "runtime" / "curador_seto"
+    db_path = runtime_dir / "curador_index.sqlite"
+    witness_path = workspace_root / "qa_artifacts" / "witness_log" / "curador_seto_witnesslog.jsonl"
+    files = scan_downloads(downloads_dir, recursive=True)
+    records = make_file_records(downloads_dir, files, workspace_root / "docs" / "intake" / "curador_fichas" / "downloads")
+    groups = duplicate_groups(records, downloads_dir)
+    counts = sqlite_table_counts(db_path)
+    status_counts: dict[str, int] = {}
+    lane_counts: dict[str, int] = {}
+    if db_path.exists():
+        with sqlite3.connect(db_path) as db:
+            try:
+                status_counts = dict(db.execute("SELECT status, COUNT(*) FROM files GROUP BY status").fetchall())
+                lane_counts = dict(db.execute("SELECT lane, COUNT(*) FROM files GROUP BY lane").fetchall())
+            except sqlite3.Error:
+                status_counts = {}
+                lane_counts = {}
+    return {
+        "generated_at_utc": utc_now(),
+        "workspace_root": str(workspace_root),
+        "downloads_dir": str(downloads_dir),
+        "db_path": str(db_path),
+        "master_index": str(workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"),
+        "witness_log": str(witness_path),
+        "witness_event_hash": previous_witness_hash(witness_path),
+        "current_downloads_files": len(records),
+        "current_downloads_duplicate_groups": len(groups),
+        "sqlite_table_counts": counts,
+        "sqlite_status_counts": status_counts,
+        "sqlite_lane_counts": lane_counts,
+    }
+
+
+def load_pending_snapshot(workspace_root: Path) -> dict[str, object]:
+    path = workspace_root / "qa_artifacts" / "pending" / "pending_review_latest.json"
+    if not path.exists():
+        return {"available": False, "path": str(path)}
+    try:
+        data = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        return {"available": False, "path": str(path), "error": str(exc)}
+    active = data.get("active_markdown", {}) if isinstance(data, dict) else {}
+    claudio = data.get("claudio_master", {}) if isinstance(data, dict) else {}
+    return {
+        "available": True,
+        "path": str(path),
+        "generated_at": data.get("generated_at") if isinstance(data, dict) else None,
+        "active_dedup_open": active.get("dedup_open") if isinstance(active, dict) else None,
+        "active_by_blocker": active.get("by_blocker", {}) if isinstance(active, dict) else {},
+        "active_by_lane": active.get("by_lane", {}) if isinstance(active, dict) else {},
+        "claudio_dedup_open": claudio.get("dedup_open") if isinstance(claudio, dict) else None,
+        "claudio_by_blocker": claudio.get("by_blocker", {}) if isinstance(claudio, dict) else {},
+    }
+
+
+def build_next_actions(status: dict[str, object], pending: dict[str, object]) -> list[dict[str, str]]:
+    active_by_blocker = pending.get("active_by_blocker", {}) if isinstance(pending, dict) else {}
+    local_candidates = "unknown"
+    if isinstance(active_by_blocker, dict):
+        local_candidates = str(active_by_blocker.get("local_candidate", "unknown"))
+    current_dupes = int(status.get("current_downloads_duplicate_groups") or 0)
+    actions = [
+        {
+            "priority": "P0",
+            "lane": "curador_seto",
+            "action_gate": "APPROVE_LOCAL",
+            "title": "Mantener CuradorSETO-Downloads-Intake activo",
+            "reason": f"Downloads tiene {status.get('current_downloads_files')} archivos vivos y {current_dupes} grupos duplicados exactos activos.",
+            "next_step": "Usar el SQLite y CURADOR_MASTER_INDEX como verdad operativa de Downloads.",
+        },
+        {
+            "priority": "P1",
+            "lane": "pending_review",
+            "action_gate": "APPROVE_LOCAL",
+            "title": "Trabajar candidatos locales primero",
+            "reason": f"pending_review reporta {local_candidates} candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
+            "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes.",
+        },
+        {
+            "priority": "P1",
+            "lane": "global_curador",
+            "action_gate": "REVIEW",
+            "title": "Reemplazar escaneo global largo por auditoria incremental por root",
+            "reason": "El refresco global completo puede exceder el tiempo operativo; Downloads ya se resolvio con indice incremental.",
+            "next_step": "Agregar modo por root/resumible antes de repetir E:, Desktop y workspace completo.",
+        },
+        {
+            "priority": "P1",
+            "lane": "cleanup_migration",
+            "action_gate": "REVIEW",
+            "title": "Consolidar duplicados grandes solo con hash, ficha y canon",
+            "reason": "El dry-run global previo encontro paquetes grandes y duplicados exactos, pero algunos son productos, builds, assets o fronteras privadas.",
+            "next_step": "Procesar por lote: Asistente/FlujoCRM releases, vendors/cache, luego E: offload; borrar solo si ActionGate aprueba.",
+        },
+        {
+            "priority": "P2",
+            "lane": "claudio_wabisabi",
+            "action_gate": "REVIEW",
+            "title": "Conectar Curador SETO con Claudio/Wabi-Sabi como memoria operativa",
+            "reason": "El Curador ya emite fichas, decisiones, sinapsis y WitnessLog; falta consumo directo por Hormiguero/Claudio.",
+            "next_step": "Exponer lectura local del SQLite y del reporte de next-actions sin ejecutar mutaciones externas.",
+        },
+    ]
+    if current_dupes:
+        actions.insert(
+            1,
+            {
+                "priority": "P0",
+                "lane": "downloads",
+                "action_gate": "APPROVE_LOCAL",
+                "title": "Resolver duplicados exactos nuevos de Downloads",
+                "reason": f"Se detectaron {current_dupes} grupos duplicados exactos activos.",
+                "next_step": "Ejecutar curador_automation.py run con apply exact duplicates.",
+            },
+        )
+    return actions
+
+
+def render_next_actions_report(status: dict[str, object], pending: dict[str, object], actions: list[dict[str, str]]) -> str:
+    table_counts = status.get("sqlite_table_counts", {})
+    status_counts = status.get("sqlite_status_counts", {})
+    by_blocker = pending.get("active_by_blocker", {}) if isinstance(pending, dict) else {}
+    lines = [
+        "# Curador SETO Next Actions",
+        "",
+        f"Generated UTC: `{utc_now()}`",
+        "",
+        "Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.",
+        "",
+        "## Downloads",
+        "",
+        "| metric | value |",
+        "|---|---:|",
+        f"| archivos vivos actuales | {status.get('current_downloads_files')} |",
+        f"| duplicados exactos activos | {status.get('current_downloads_duplicate_groups')} |",
+        f"| witness_event_hash | `{status.get('witness_event_hash')}` |",
+        "",
+        "## SQLite",
+        "",
+        "| table | rows |",
+        "|---|---:|",
+    ]
+    if isinstance(table_counts, dict):
+        for table in sorted(table_counts):
+            lines.append(f"| `{table}` | {table_counts[table]} |")
+    lines.extend(["", "## Status historico", "", "| status | rows |", "|---|---:|"])
+    if isinstance(status_counts, dict):
+        for key in sorted(status_counts):
+            lines.append(f"| `{key}` | {status_counts[key]} |")
+    lines.extend(["", "## Pendientes", "", "| blocker | dedup_count |", "|---|---:|"])
+    if isinstance(by_blocker, dict):
+        for key in sorted(by_blocker):
+            lines.append(f"| `{key}` | {by_blocker[key]} |")
+    lines.extend(["", "## Cola recomendada", "", "| priority | lane | gate | title | next step |", "|---|---|---|---|---|"])
+    for item in actions:
+        lines.append(
+            f"| `{item['priority']}` | `{item['lane']}` | `{item['action_gate']}` | {item['title']} | {item['next_step']} |"
+        )
+    lines.extend(
+        [
+            "",
+            "## Bloqueos",
+            "",
+            "- No publicar, hacer push, deploy, Gumroad, LinkedIn o Sponsors desde esta cola.",
+            "- No borrar o mover material unico, privado, RPG/TCG, sesiones, secretos o claims fuertes.",
+            "- No repetir el escaneo global completo si puede sustituirse por modo incremental por root.",
+            "",
+        ]
+    )
+    return "\n".join(lines)
+
+
+def write_next_actions_report(workspace_root: Path, downloads_dir: Path) -> dict[str, object]:
+    status = curador_status_snapshot(workspace_root, downloads_dir)
+    pending = load_pending_snapshot(workspace_root)
+    actions = build_next_actions(status, pending)
+    report_path = workspace_root / "docs" / "pending" / f"CURADOR_SETO_NEXT_ACTIONS_{TODAY}.md"
+    json_path = workspace_root / "qa_artifacts" / "pending" / f"curador_seto_next_actions_{TODAY}.json"
+    payload = {
+        "schema": "medioevo.curador_seto_next_actions.v1",
+        "generated_at_utc": utc_now(),
+        "status": status,
+        "pending": pending,
+        "next_actions": actions,
+    }
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    json_path.parent.mkdir(parents=True, exist_ok=True)
+    report_path.write_text(render_next_actions_report(status, pending, actions), encoding="utf-8")
+    json_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    payload["report_path"] = str(report_path)
+    payload["json_path"] = str(json_path)
+    return payload
+
+
 def run_curador(
     *,
     workspace_root: Path,
@@ -969,12 +1180,27 @@ def main() -> int:
     run.add_argument("--apply-exact-download-duplicates", action="store_true")
     install = sub.add_parser("install-task")
     install.add_argument("--workspace-root", default=str(ROOT))
+    status = sub.add_parser("status")
+    status.add_argument("--workspace-root", default=str(ROOT))
+    status.add_argument("--downloads-dir", default=str(DEFAULT_DOWNLOADS))
+    status.add_argument("--write-next-actions", action="store_true")
     args = parser.parse_args()
 
     if args.command == "install-task":
         data = install_task(Path(args.workspace_root).resolve())
         print(json.dumps(data, indent=2, ensure_ascii=False))
         return 0 if data["returncode"] == 0 else 1
+
+    if args.command == "status":
+        if args.write_next_actions:
+            data = write_next_actions_report(Path(args.workspace_root).resolve(), Path(args.downloads_dir).resolve())
+        else:
+            data = {
+                "status": curador_status_snapshot(Path(args.workspace_root).resolve(), Path(args.downloads_dir).resolve()),
+                "pending": load_pending_snapshot(Path(args.workspace_root).resolve()),
+            }
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+        return 0
 
     data = run_curador(
         workspace_root=Path(args.workspace_root).resolve(),

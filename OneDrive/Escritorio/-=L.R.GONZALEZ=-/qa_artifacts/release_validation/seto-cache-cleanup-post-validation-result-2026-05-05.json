@@ -1,0 +1,53 @@
+{
+  "generated_at_utc": "2026-05-05T07:52:08.890060+00:00",
+  "status": "EXECUTED",
+  "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "allowed_cache_dirs": [
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__"
+  ],
+  "excluded_boundaries": [
+    ".git",
+    ".skills",
+    ".venv",
+    "/tcg/",
+    "04_AUDIOVISUAL_Y_TCG",
+    "\\tcg\\",
+    "_ARCHIVAR",
+    "_archive",
+    "env",
+    "game-private",
+    "github-modules",
+    "metaevo-tcg",
+    "node_modules",
+    "release",
+    "releases",
+    "runtime/game_bridge",
+    "runtime\\game_bridge",
+    "tools/vendor",
+    "tools\\vendor",
+    "venv"
+  ],
+  "summary": {
+    "total_candidates": 0,
+    "approved_count": 0,
+    "blocked_count": 0,
+    "approved_bytes": 0,
+    "approved_files": 0,
+    "deleted_count": 0,
+    "deleted_bytes": 0,
+    "deleted_files": 0,
+    "errors": 0
+  },
+  "approved": [],
+  "blocked": [],
+  "deleted": [],
+  "errors": [],
+  "rules": [
+    "Only approved cache directory names are eligible.",
+    "Private, archive, vendor, release, env, node_modules and git paths are excluded.",
+    "No files outside the workspace root can be deleted."
+  ]
+}

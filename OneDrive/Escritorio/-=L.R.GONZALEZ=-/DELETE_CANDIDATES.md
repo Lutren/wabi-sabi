@@ -235,3 +235,50 @@ ActionGate state:
 
 - Current global pass: `REVIEW`, not `APPROVE`.
 - `DELETE_APPROVED_AFTER_HASH` is still pending per candidate group.
+
+## SETO Regenerable Cache Cleanup 2026-05-05
+
+Executed only for cache directories approved by the focused SETO cleanup gate.
+This does not approve deletion of source files, ZIPs, releases, env folders,
+private assets, Git history or unique research material.
+
+Evidence:
+
+- Dry-run: `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-05.json`
+- Result: `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-05.json`
+- Post-validation residue check:
+  `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-result-2026-05-05.json`
+- Tool: `tools\release\cleanup_regenerable_cache.py`
+- WitnessLog event: `01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb`
+
+Summary:
+
+| decision | count | files | bytes | gate |
+|---|---:|---:|---:|---|
+| `DELETE_APPROVED_REGENERABLE_CACHE` | 122 directories | 879 | 11,194,250 | `APPROVE` |
+| `KEEP_BLOCKED_BOUNDARY` | 0 | 0 | 0 | `BLOCK` |
+| post-validation residue | 0 directories | 0 | 0 | `APPROVE` |
+
+Approved cache names:
+
+- `__pycache__`
+- `.pytest_cache`
+- `.ruff_cache`
+- `.mypy_cache`
+
+Excluded boundaries:
+
+- `.git`, `node_modules`, `.venv`, `venv`, `env`, `.skills`.
+- `_archive`, `_ARCHIVAR`, `tools\vendor`, `github-modules`.
+- `release`, `releases`.
+- `metaevo-tcg`, `tcg`, `runtime\game_bridge`, `game-private`,
+  `04_AUDIOVISUAL_Y_TCG`.
+
+Next cleanup remains gated:
+
+- Exact duplicate content groups still require canonical copy, full SHA256,
+  ficha and ActionGate before any deletion.
+- Build outputs under `dist`, `build` or `target` require proof of source and
+  rebuild command.
+- Releases, env folders, private assets and unique Downloads/PSI sources remain
+  `REVIEW` or `BLOCK`.

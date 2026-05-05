@@ -338,3 +338,43 @@ Next cleanup gate:
   caches, not Git history, releases, env folders, private assets or unique
   research material.
 - Use the CSV manifest as source evidence for exact duplicate candidates.
+
+## SETO Regenerable Cache Cleanup 2026-05-05
+
+This follow-up executed the first narrow cleanup lane from the global SETO dry
+audit.
+
+Artifacts:
+
+- `tools\release\cleanup_regenerable_cache.py`
+- `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-result-2026-05-05.json`
+- `qa_artifacts\witness_log\curador_seto_witnesslog.jsonl`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `cleanup_regenerable_cache.py` | `34F57A34F7E956EDD91ABB5755B68AB301320DC097D09731C3BE63C6F0FE3B4F` |
+| `seto-cache-cleanup-dry-run-2026-05-05.json` | `B5684F38A8FD9527B69C01D592DDD0F9F0E0F0D8241F9254DC6BD67D1BDEC105` |
+| `seto-cache-cleanup-result-2026-05-05.json` | `C93052DD77DF42E9B89D1C6B6E671869D512211BFE45023D358F1BF44B9F7046` |
+| `seto-cache-cleanup-post-validation-result-2026-05-05.json` | `1E1D21C5BA7FCE9705AB52B9FB6E3F37C7E0768B2F2F885D50BA2F836DFDF8D2` |
+
+Summary:
+
+- Status: `EXECUTED_REGENERABLE_CACHE_DELETE`.
+- Deleted: `122` cache directories, `879` files, `11,194,250` bytes.
+- Post-validation residue check: `0` additional cache directories found.
+- Errors: `0`.
+- WitnessLog event:
+  `01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb`.
+
+Boundaries:
+
+- Allowed: `__pycache__`, `.pytest_cache`, `.ruff_cache`, `.mypy_cache`.
+- Excluded: `.git`, `node_modules`, `.venv`, `venv`, `env`, `.skills`,
+  `_archive`, `_ARCHIVAR`, `tools\vendor`, `github-modules`, `release`,
+  `releases`, private RPG/TCG/game bridge markers.
+- No duplicate source files, ZIPs, release packages, env folders or unique
+  Downloads/PSI research sources were deleted.

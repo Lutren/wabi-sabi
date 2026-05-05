@@ -395,3 +395,38 @@ Next exact-duplicate pass:
 2. Choose one canonical path per group.
 3. Create ficha and ActionGate metadata.
 4. Only then mark a path `DELETE_APPROVED_AFTER_HASH`.
+
+## SETO Regenerable Cache Cleanup 2026-05-05
+
+This pass closed the first safe cleanup lane from the global audit: generated
+local cache directories only. It did not touch duplicate content, source
+archives, releases, private assets, env folders, Git history or unique
+Downloads/PSI research sources.
+
+Evidence:
+
+- Dry-run: `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-05.json`
+- Result: `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-05.json`
+- Post-validation residue check:
+  `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-result-2026-05-05.json`
+- Tool: `tools\release\cleanup_regenerable_cache.py`
+- WitnessLog event: `01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb`
+
+Result:
+
+| class | deleted dirs | deleted files | deleted bytes | status |
+|---|---:|---:|---:|---|
+| Python/test/lint/typecheck cache dirs | 122 | 879 | 11,194,250 | `EXECUTED` |
+| post-validation cache residue | 0 | 0 | 0 | `CLEAN` |
+
+Allowed names were limited to `__pycache__`, `.pytest_cache`, `.ruff_cache`
+and `.mypy_cache`. Every target was resolved under the workspace root before
+deletion.
+
+Remaining duplicate/dead-code lanes:
+
+- Exact hash duplicates from
+  `qa_artifacts\release_validation\global-curador-file-manifest-2026-05-05.csv`
+  remain `REVIEW`.
+- Large build outputs require product-specific rebuild evidence before cleanup.
+- Empty files/folders require parent-project role review.

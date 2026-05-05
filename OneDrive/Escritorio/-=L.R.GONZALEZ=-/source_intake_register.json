@@ -2548,5 +2548,61 @@
         "Use CSV manifest for later DELETE_APPROVED_AFTER_HASH decisions."
       ]
     }
+  ],
+  "seto_cache_cleanup_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "EXECUTED_REGENERABLE_CACHE_DELETE",
+      "tool": "tools/release/cleanup_regenerable_cache.py",
+      "dry_run": "qa_artifacts/release_validation/seto-cache-cleanup-dry-run-2026-05-05.json",
+      "result": "qa_artifacts/release_validation/seto-cache-cleanup-result-2026-05-05.json",
+      "post_validation_result": "qa_artifacts/release_validation/seto-cache-cleanup-post-validation-result-2026-05-05.json",
+      "witness_log": "qa_artifacts/witness_log/curador_seto_witnesslog.jsonl",
+      "witness_event_hash": "01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb",
+      "artifact_hashes": {
+        "tool": "34F57A34F7E956EDD91ABB5755B68AB301320DC097D09731C3BE63C6F0FE3B4F",
+        "dry_run": "B5684F38A8FD9527B69C01D592DDD0F9F0E0F0D8241F9254DC6BD67D1BDEC105",
+        "result": "C93052DD77DF42E9B89D1C6B6E671869D512211BFE45023D358F1BF44B9F7046",
+        "post_validation_result": "1E1D21C5BA7FCE9705AB52B9FB6E3F37C7E0768B2F2F885D50BA2F836DFDF8D2"
+      },
+      "summary": {
+        "deleted_cache_directories": 122,
+        "deleted_files": 879,
+        "deleted_bytes": 11194250,
+        "post_validation_candidates": 0,
+        "blocked_count": 0,
+        "errors": 0
+      },
+      "allowed_cache_dirs": [
+        "__pycache__",
+        ".pytest_cache",
+        ".ruff_cache",
+        ".mypy_cache"
+      ],
+      "excluded_boundaries": [
+        ".git",
+        "node_modules",
+        ".venv",
+        "venv",
+        "env",
+        ".skills",
+        "_archive",
+        "_ARCHIVAR",
+        "tools/vendor",
+        "github-modules",
+        "release",
+        "releases",
+        "metaevo-tcg",
+        "tcg",
+        "runtime/game_bridge",
+        "game-private",
+        "04_AUDIOVISUAL_Y_TCG"
+      ],
+      "decisions": [
+        "Only generated cache directories were deleted.",
+        "No source files, ZIPs, releases, env folders, Git history, private assets or unique research sources were deleted.",
+        "Exact duplicate source cleanup remains REVIEW until canonical copy, ficha, full SHA256 and ActionGate exist."
+      ]
+    }
   ]
 }

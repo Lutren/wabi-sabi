@@ -1,24 +1,24 @@
 {
   "schema": "medioevo.global_curador_resume.v1",
-  "updated_at_utc": "2026-05-05T19:56:52.625497+00:00",
+  "updated_at_utc": "2026-05-05T19:57:51.880650+00:00",
   "scan_mode": "incremental",
   "status": "DRY_RUN_NO_DELETE_NO_MOVE",
   "resume": {
     "truncated": true,
     "max_files": 500,
-    "start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754319970.json",
+    "start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754424634.json",
     "start_after_found": true,
-    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754424634.json",
-    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754424634.json",
+    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754966461.json",
+    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754966461.json",
     "processed_files": 500,
     "root_labels": [
       "workspace_lrgonzalez"
     ]
   },
   "outputs": {
-    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-seto-audit-2026-05-05-workspace_lrgonzalez_max500_resumefbff60e6bb.json",
-    "csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500_resumefbff60e6bb.csv",
-    "report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500_RESUMEFBFF60E6BB.md"
+    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-seto-audit-2026-05-05-workspace_lrgonzalez_max500_resume999cff97a6.json",
+    "csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500_resume999cff97a6.csv",
+    "report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500_RESUME999CFF97A6.md"
   },
-  "next_command_hint": "python tools\\release\\global_curador_audit.py --only-root workspace_lrgonzalez --max-files 500 --start-after \"C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754424634.json\""
+  "next_command_hint": "python tools\\release\\global_curador_audit.py --only-root workspace_lrgonzalez --max-files 500 --start-after \"C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v2\\.claude\\checkpoints\\1754966461.json\""
 }

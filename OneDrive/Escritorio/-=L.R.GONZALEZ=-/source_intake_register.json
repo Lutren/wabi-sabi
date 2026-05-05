@@ -2746,8 +2746,8 @@
       "json": "qa_artifacts/release_validation/seto-duplicate-group-fichas-batch1-2026-05-05.json",
       "source_selector_json": "qa_artifacts/release_validation/seto-exact-duplicate-candidates-2026-05-05.json",
       "artifact_hashes": {
-        "report": "DF05698941D331C0488ED778CA51BF67B907F6EDF98DEBDB005C7CED6BDED4B5",
-        "json": "34AE6CF2EE381EE4EA87FA0C518FFB97847F8AD2D875672979534401715EACA8"
+        "report": "6E2A07D928B5C83393038DA83E9B6FA695F16519B1DE6B61BE75A1CD2FAAA3CF",
+        "json": "EB05BA6966892D716731F39FBCBEC1A23DBE11DCEC16D1CCC292F6813E9C4468"
       },
       "summary": {
         "fichas": 7,
@@ -2813,7 +2813,7 @@
         {
           "id": "SETO-DUP-B1-007",
           "lane": "psi_archive_redundant_vault",
-          "sha256": "5c7a951213069cd3b9c3c56a885a3144ef79154e46ce8b77a43c650579d8ec45",
+          "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
           "files_in_group": 2,
           "decision": "REPLACE_BY_FICHA_CANDIDATE_DELETE_AFTER_HASH"
         }

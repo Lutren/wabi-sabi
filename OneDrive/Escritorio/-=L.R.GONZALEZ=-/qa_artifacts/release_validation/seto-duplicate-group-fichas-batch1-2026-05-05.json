@@ -173,7 +173,7 @@
       "id": "SETO-DUP-B1-007",
       "lane": "psi_archive_redundant_vault",
       "name": "NEXT_SESSION_BRIEF.md",
-      "sha256": "5c7a951213069cd3b9c3c56a885a3144ef79154e46ce8b77a43c650579d8ec45",
+      "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
       "size_bytes": 244,
       "group_count": 2,
       "exact_hash_state": "CERTEZA",

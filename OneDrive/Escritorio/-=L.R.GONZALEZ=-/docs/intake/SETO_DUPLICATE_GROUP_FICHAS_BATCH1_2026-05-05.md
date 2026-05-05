@@ -140,7 +140,7 @@ source-of-truth lineage.
 ### SETO-DUP-B1-007 PSI redundant vault template: NEXT_SESSION_BRIEF.md
 
 - SHA256:
-  `5c7a951213069cd3b9c3c56a885a3144ef79154e46ce8b77a43c650579d8ec45`
+  `5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b`
 - Exact-hash state: `CERTEZA`.
 - Canonical path state: `INFERENCIA`.
 - Proposed canonical:

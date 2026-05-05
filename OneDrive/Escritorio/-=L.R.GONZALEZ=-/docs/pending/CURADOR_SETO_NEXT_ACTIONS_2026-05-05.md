@@ -1,6 +1,6 @@
 # Curador SETO Next Actions
 
-Generated UTC: `2026-05-05T18:58:28.633186+00:00`
+Pending snapshot: `2026-05-05T19:01:54+00:00`
 
 Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
@@ -35,11 +35,10 @@ Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
 | blocker | dedup_count |
 |---|---:|
-| `external_or_gated` | 289 |
-| `host_or_heavy` | 67 |
-| `legal_or_human` | 133 |
-| `local_candidate` | 155 |
-| `private_boundary` | 16 |
+| `external_or_gated` | 261 |
+| `host_or_heavy` | 54 |
+| `legal_or_human` | 126 |
+| `private_boundary` | 9 |
 
 ## Cola recomendada
 

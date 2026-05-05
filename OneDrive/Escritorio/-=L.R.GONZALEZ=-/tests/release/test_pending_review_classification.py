@@ -82,6 +82,10 @@ def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "oppo_robot" / "DNS_VIA_HTTP.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "products" / "PROMO_POSTS_SOFTWARE.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "research" / "ANALISIS_RESEARCH_CONSOLIDADO_2026.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "teatro" / "HORMIGUERO_TESTS.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tv_audio" / "TV_AUDIO_ONLY_ARCHITECTURE.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "website" / "VERIFICACION_WEBMASTER_TOOLS.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "CLAUDIO - researchs" / "ANALISIS_RESEARCH_CONSOLIDADO_2026.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "apps" / "editorial_web" / "marketing" / "PROXIMOS-PASOS.md")
     assert pending_review.is_pending_denied(ROOT / "tools" / "claw-code" / "PARITY.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "reports" / "HORMIGUERO_HUB_COMPLETE_REPORT.md")
@@ -134,3 +138,39 @@ def test_inactive_checkbox_text_is_not_counted_as_open(tmp_path: Path) -> None:
     items = pending_review.parse_markdown_checkboxes(pending_doc)
 
     assert [item.text for item in items] == ["Actualizar reporte local con evidencia de pytest"]
+
+
+def test_write_artifacts_ignores_generated_at_only_churn(tmp_path: Path, monkeypatch) -> None:
+    monkeypatch.setattr(pending_review, "ROOT", tmp_path)
+    report = {
+        "schema": pending_review.SCHEMA,
+        "generated_at": "2026-05-05T00:00:00+00:00",
+        "date": "2026-05-05",
+        "root": str(tmp_path),
+        "policy": {},
+        "active_markdown": {
+            "raw_open": 1,
+            "dedup_open": 1,
+            "by_priority": {"UNCLASSIFIED": 1},
+            "by_lane": {"general": 1},
+            "by_blocker": {"local_candidate": 1},
+            "top_items": [],
+        },
+        "claudio_master": {
+            "path": "PENDIENTES_MASTER.md",
+            "raw_open": 0,
+            "dedup_open": 0,
+            "by_priority": {},
+            "by_blocker": {},
+            "top_items": [],
+        },
+        "kairos_fastlane": {"exists": False, "path": "missing.json"},
+    }
+
+    artifacts = pending_review.write_artifacts(report)
+    json_path = tmp_path / artifacts["json"]
+    first = json_path.read_text(encoding="utf-8")
+    report["generated_at"] = "2026-05-05T00:01:00+00:00"
+    pending_review.write_artifacts(report)
+
+    assert json_path.read_text(encoding="utf-8") == first

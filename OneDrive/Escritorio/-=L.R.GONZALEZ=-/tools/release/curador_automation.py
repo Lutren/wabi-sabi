@@ -974,10 +974,11 @@ def render_next_actions_report(status: dict[str, object], pending: dict[str, obj
     table_counts = status.get("sqlite_table_counts", {})
     status_counts = status.get("sqlite_status_counts", {})
     by_blocker = pending.get("active_by_blocker", {}) if isinstance(pending, dict) else {}
+    pending_at = pending.get("generated_at") if isinstance(pending, dict) else None
     lines = [
         "# Curador SETO Next Actions",
         "",
-        f"Generated UTC: `{utc_now()}`",
+        f"Pending snapshot: `{pending_at or 'missing'}`",
         "",
         "Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.",
         "",
@@ -1024,6 +1025,39 @@ def render_next_actions_report(status: dict[str, object], pending: dict[str, obj
     return "\n".join(lines)
 
 
+def stable_next_actions_payload(value: object) -> object:
+    if isinstance(value, dict):
+        copy = {key: stable_next_actions_payload(item) for key, item in value.items() if key not in {"generated_at_utc"}}
+        if "status" in copy and isinstance(copy["status"], dict):
+            copy["status"] = {key: item for key, item in copy["status"].items() if key != "generated_at_utc"}
+        return copy
+    if isinstance(value, list):
+        return [stable_next_actions_payload(item) for item in value]
+    return value
+
+
+def write_json_if_semantic_changed(path: Path, payload: dict[str, object]) -> None:
+    text = json.dumps(payload, indent=2, ensure_ascii=False)
+    if path.exists():
+        try:
+            old = json.loads(path.read_text(encoding="utf-8"))
+            if stable_next_actions_payload(old) == stable_next_actions_payload(payload):
+                return
+        except (OSError, json.JSONDecodeError):
+            pass
+    path.write_text(text, encoding="utf-8")
+
+
+def write_text_if_changed(path: Path, text: str) -> None:
+    if path.exists():
+        try:
+            if path.read_text(encoding="utf-8") == text:
+                return
+        except OSError:
+            pass
+    path.write_text(text, encoding="utf-8")
+
+
 def write_next_actions_report(workspace_root: Path, downloads_dir: Path) -> dict[str, object]:
     status = curador_status_snapshot(workspace_root, downloads_dir)
     pending = load_pending_snapshot(workspace_root)
@@ -1039,8 +1073,8 @@ def write_next_actions_report(workspace_root: Path, downloads_dir: Path) -> dict
     }
     report_path.parent.mkdir(parents=True, exist_ok=True)
     json_path.parent.mkdir(parents=True, exist_ok=True)
-    report_path.write_text(render_next_actions_report(status, pending, actions), encoding="utf-8")
-    json_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_text_if_changed(report_path, render_next_actions_report(status, pending, actions))
+    write_json_if_semantic_changed(json_path, payload)
     payload["report_path"] = str(report_path)
     payload["json_path"] = str(json_path)
     return payload

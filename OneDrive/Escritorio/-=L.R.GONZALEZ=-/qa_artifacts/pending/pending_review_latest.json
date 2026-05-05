@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-05T18:58:33+00:00",
+  "generated_at": "2026-05-05T19:01:54+00:00",
   "date": "2026-05-05",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,31 +10,30 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 691,
-    "dedup_open": 660,
+    "raw_open": 455,
+    "dedup_open": 450,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 636
+      "UNCLASSIFIED": 426
     },
     "by_lane": {
       "cleanup_migration": 1,
-      "commercial": 85,
+      "commercial": 79,
       "general": 155,
       "open_source": 2,
-      "private_rpg": 6,
-      "runtime_claudio": 391,
+      "private_rpg": 3,
+      "runtime_claudio": 190,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 289,
-      "host_or_heavy": 67,
-      "legal_or_human": 133,
-      "local_candidate": 155,
-      "private_boundary": 16
+      "external_or_gated": 261,
+      "host_or_heavy": 54,
+      "legal_or_human": 126,
+      "private_boundary": 9
     },
     "top_items": [
       {
@@ -231,130 +230,130 @@
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Patrones emergentes (en progreso)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:377",
+        "lane": "cleanup_migration",
+        "blocker": "external_or_gated",
+        "item": "`MIGRATION_MAP.md` para cualquier movimiento futuro.",
+        "first_evidence": "RELEASE_READINESS_SCORE.md:83",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Validar que Lenguaje Cognitivo funciona",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:397",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "4. Gumroad 12-34 audiolibros (35 ZIPs listos)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/CHECKLIST_FINAL.md:11",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Ajustar thresholds según evidencia",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:398",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**URGENTE**: Subir EPUBs a Gumroad libros 22-29 (ver GUMROAD_EPUB_UPLOAD_GUIDE.md)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:20",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Skills se optimizan entre sí",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:407",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**URGENTE**: Cmuyar 6 albums muystantes en Gumroad (ver GUMROAD_ALBUMS_GUIDE.md)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:21",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Sugerir mejoras basadas en evidencia",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:408",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**URGENTE**: Subir MP3s a los 8 albums de Gumroad",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:22",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Implementar mejoras automáticamente",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:409",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**IMPORTANTE**: Cmuyar bundles en Gumroad (Arco 1, Arco 2, Arco 3, Saga Completa)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:25",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Agregar 5 tests más al Hormiguero",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:294",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Completar uploads en Gumroad (EPUBs + albums + MP3s) - 30 min",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:111",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Implementar UI básica en Hormiguero Hub",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:295",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Cmuyar bundles en Gumroad - 15 min",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/PLAN_ACCION_INMEDIATO.md:112",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Agregar sistema de \"turnos\" (día/noche)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:296",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "private_boundary",
+        "item": "**Twitter Consumer Key/Secret:** Pendiente de Tren",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:273",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Colaboración entre agentes (tests en pareja)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:299",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**Reddit Password/2FA:** Requiere setup manual oauth",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:274",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Exportar reportes a PDF/Markdown",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:300",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "legal_or_human",
+        "item": "**Fuentes editoriales books 1-3:** 0/30 rutas encontradas",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:275",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Integrar con PSI_HANDOFF para continuidad",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:301",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**Supabase schema:** Requiere acceso a dashboard",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:276",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Agentes que \"sueñan\" (procesan experiencias en descanso)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:304",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "host_or_heavy",
+        "item": "**Benchmark real:** Requiere Ollama corriendo y 100 sesiones",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/INVENTARIO_MAESTRO_2026-04-20.md:277",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Emergencia de patrones colectivos",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:305",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:635",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Publicación de paper sobre \"Agentes con Vida Propia\"",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/teatro/HORMIGUERO_TESTS.md:306",
-        "occurrences": 2
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**HOLD_CLEANUP_GATE** FASE 2A (Escritorio - colapsar a 6 iconos D008): preparar inventario no destructivo; ejecucion bloqueada hasta cleanup ActionGate especifico y host estable.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454",
+        "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Configurar TV para aceptar stmuyams de audio HTTP",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/tv_audio/TV_AUDIO_ONLY_ARCHITECTURE.md:191",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**HOLD_CLEANUP_GATE** FASE 2B (E: drive): preparar inventario no destructivo; liberar espacio en E:/-=Medioevo=- queda bloqueado hasta ficha canonica de CONSOLIDADO_6MAS1/bestseller_output, cleanup ActionGate y host estable.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1455",
         "occurrences": 1
       }
     ]

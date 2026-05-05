@@ -95,6 +95,10 @@ PENDING_EXCLUDE_SUBSTRINGS = [
     "/oppo_robot/",
     "/products/",
     "/research/analisis_research_consolidado_",
+    "/teatro/",
+    "/tv_audio/",
+    "/website/",
+    "/claudio - researchs/",
 ]
 
 CLAUDIO_ROOT = ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio"
@@ -799,6 +803,36 @@ def render_markdown(report: dict[str, object]) -> str:
     return "\n".join(lines)
 
 
+def json_semantic_payload(text: str) -> object:
+    data = json.loads(text)
+    if isinstance(data, dict):
+        data = dict(data)
+        data["generated_at"] = "<ignored>"
+    return data
+
+
+def write_json_if_semantic_changed(path: Path, payload: str) -> None:
+    if path.exists():
+        try:
+            old = json_semantic_payload(path.read_text(encoding="utf-8"))
+            new = json_semantic_payload(payload)
+            if old == new:
+                return
+        except (OSError, json.JSONDecodeError):
+            pass
+    path.write_text(payload, encoding="utf-8")
+
+
+def write_text_if_changed(path: Path, text: str) -> None:
+    if path.exists():
+        try:
+            if path.read_text(encoding="utf-8") == text:
+                return
+        except OSError:
+            pass
+    path.write_text(text, encoding="utf-8")
+
+
 def write_artifacts(report: dict[str, object]) -> dict[str, str]:
     date = str(report["date"])
     docs_dir = ROOT / "docs" / "pending"
@@ -814,10 +848,10 @@ def write_artifacts(report: dict[str, object]) -> dict[str, str]:
     payload = json.dumps(report, indent=2, ensure_ascii=False)
     markdown = render_markdown(report)
 
-    json_path.write_text(payload + "\n", encoding="utf-8")
-    json_latest.write_text(payload + "\n", encoding="utf-8")
-    md_path.write_text(markdown, encoding="utf-8")
-    md_latest.write_text(markdown, encoding="utf-8")
+    write_json_if_semantic_changed(json_path, payload + "\n")
+    write_json_if_semantic_changed(json_latest, payload + "\n")
+    write_text_if_changed(md_path, markdown)
+    write_text_if_changed(md_latest, markdown)
 
     return {
         "json": rel(json_path),

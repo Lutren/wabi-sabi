@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `691`.
-- Active markdown deduplicated open items: `660`.
+- Active markdown raw open items: `455`.
+- Active markdown deduplicated open items: `450`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `70`.
 - Claudio deduplicated open items: `70`.
 
@@ -17,18 +17,18 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 636 |
+| UNCLASSIFIED | 426 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
 | cleanup_migration | 1 |
-| commercial | 85 |
+| commercial | 79 |
 | general | 155 |
 | open_source | 2 |
-| private_rpg | 6 |
-| runtime_claudio | 391 |
+| private_rpg | 3 |
+| runtime_claudio | 190 |
 | wave_fc | 3 |
 | website_marketing | 17 |
 
@@ -36,11 +36,10 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 289 |
-| host_or_heavy | 67 |
-| legal_or_human | 133 |
-| local_candidate | 155 |
-| private_boundary | 16 |
+| external_or_gated | 261 |
+| host_or_heavy | 54 |
+| legal_or_human | 126 |
+| private_boundary | 9 |
 
 ## Claudio Master By Priority
 
@@ -89,7 +88,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2452 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2453 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2454 | 1 |
-| UNCLASSIFIED | runtime_claudio | local_candidate | Patrones emergentes (en progreso) | -=MEDIOEVO=-/-=LIBROS/claudio/teatro/CONWAY_OBSERVER_INTEGRACION.md:377 | 1 |
+| UNCLASSIFIED | cleanup_migration | external_or_gated | `MIGRATION_MAP.md` para cualquier movimiento futuro. | RELEASE_READINESS_SCORE.md:83 | 1 |
 
 ## Kairos Fastlane
 

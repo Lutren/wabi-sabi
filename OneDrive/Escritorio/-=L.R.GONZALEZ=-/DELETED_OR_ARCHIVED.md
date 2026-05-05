@@ -84,3 +84,46 @@ Gate details:
   pytest, ruff or mypy and have no source-of-truth role.
 - Cleanup tool was corrected so `tools\release\__pycache__` is cleanable while
   product `release/` and `releases/` directories remain excluded.
+
+## Curador SETO Downloads Exact Duplicate Cleanup 2026-05-05
+
+Deleted only exact duplicate files under Downloads. Unique material was preserved.
+
+| date | count | bytes | scope | evidence |
+|---|---:|---:|---|---|
+| 2026-05-05 | 17 files | 816137 | exact SHA256 duplicates in `Downloads`; canonical copy retained | `qa_artifacts\release_validation\curador-automation-downloads-result-2026-05-05.json` |
+
+| deleted path | sha256 | bytes | canonical path |
+|---|---|---:|---|
+| `C:\Users\L-Tyr\Downloads\claudio_nollm_agent_pack (1).zip` | `06E0B1D583241CFFDDD844E0ACC26525008331AF6F2279B774D5BF570876C5D3` | 18243 | `C:\Users\L-Tyr\Downloads\claudio_nollm_agent_pack.zip` |
+| `C:\Users\L-Tyr\Downloads\claudio_local_code_agent_package (1).zip` | `0B76064911A3A9C5BD1D9D20F1B806248FD6E8F401F044EA006883092DA127C7` | 14375 | `C:\Users\L-Tyr\Downloads\claudio_local_code_agent_package.zip` |
+| `C:\Users\L-Tyr\Downloads\#!usrbinenv python3.txt` | `2E9D8A6F6317789AD08D71CC5FF9821275898DE8C1ED90DAD4CB2048AFBD6C45` | 298930 | `C:\Users\L-Tyr\Downloads\observacionismo_v8_1_addons.txt` |
+| `C:\Users\L-Tyr\Downloads\psi_chi_lab_v5_pack (1).zip` | `3A35499D56AAF7329AD5452C64F688C6925994A18BCB8128E41C67E3F5BC0126` | 14760 | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v5_pack.zip` |
+| `C:\Users\L-Tyr\Downloads\claudio_ui (1).html` | `42467666BEF59C29EB7A6C39EC87E4420FE5A4FC33D0B106EBEF89F71FACA5A7` | 95129 | `C:\Users\L-Tyr\Downloads\claudio_ui.html` |
+| `C:\Users\L-Tyr\Downloads\v8_leaderboard_psichi_weak (1).csv` | `430E08C921CAD360C8069F6AB823C265D41DE04992D3F846D12C964F4E695AF0` | 375 | `C:\Users\L-Tyr\Downloads\v8_leaderboard_psichi_weak.csv` |
+| `C:\Users\L-Tyr\Downloads\v6_crossval (1).csv` | `663494B6F43E0697335C61E0D04D2C33A9D0D1111C588AF6E4932ECC6B5C06C2` | 693 | `C:\Users\L-Tyr\Downloads\v6_crossval.csv` |
+| `C:\Users\L-Tyr\Downloads\New folder\ESTADO (R≈0.08, régimen de integrac.txt` | `7015470ED32D1DFBB7D52E42F1EEFDA23FAE2608CC0D09A6482D71E829DDD979` | 24678 | `C:\Users\L-Tyr\Downloads\ESTADO (R≈0.08, régimen de integrac.txt` |
+| `C:\Users\L-Tyr\Downloads\v6_leaderboard (1).csv` | `775A2F6412C18E8363C0693D14E3D38944A57F65EC30886D62A498430365400E` | 440 | `C:\Users\L-Tyr\Downloads\v6_leaderboard.csv` |
+| `C:\Users\L-Tyr\Downloads\claudio_ui_nollm (1).html` | `78ABD72FDD9ADAFB18CA6468B3B29EADF0AF72AFC50F54A09CCC6CCDAF3102E2` | 112312 | `C:\Users\L-Tyr\Downloads\claudio_ui_nollm.html` |
+| `C:\Users\L-Tyr\Downloads\psi_chi_lab_v6 (1).py` | `930A7CEB03AF792D564A6BEFB47DD1AA9E749654EB67BCC81D8BC5023A43017C` | 40122 | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v6.py` |
+| `C:\Users\L-Tyr\Downloads\Pasted text (9).txt` | `973F22C75987AC564B9772ED1DE37D8832362052F72DCC353241BEABC8A40618` | 34272 | `C:\Users\L-Tyr\Downloads\Aquí tienes el código completo de `.txt` |
+| `C:\Users\L-Tyr\Downloads\claudio_local_code_agent (1).py` | `B8236884F87A435082B7622D28DD0C7704919A5614C9CF3F0A54F76BE7034506` | 47568 | `C:\Users\L-Tyr\Downloads\claudio_local_code_agent.py` |
+| `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified_v4_code_agent (1).zip` | `E84760FEC379E81784C23847DA0964003D5146504716DDB62289C1C1AE6C6D8D` | 56702 | `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified_v4_code_agent.zip` |
+| `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified_v4_code_agent (2).zip` | `E84760FEC379E81784C23847DA0964003D5146504716DDB62289C1C1AE6C6D8D` | 56702 | `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified_v4_code_agent.zip` |
+| `C:\Users\L-Tyr\Downloads\v6_adversarial (1).csv` | `FBF2CA9D09BC53A0C0CCDC941D7E1424FD3AFF4C440596E91A364F76A7178A5E` | 418 | `C:\Users\L-Tyr\Downloads\v6_adversarial.csv` |
+| `C:\Users\L-Tyr\Downloads\v6_adversarial (2).csv` | `FBF2CA9D09BC53A0C0CCDC941D7E1424FD3AFF4C440596E91A364F76A7178A5E` | 418 | `C:\Users\L-Tyr\Downloads\v6_adversarial.csv` |
+
+Corrective note:
+
+- The 2026-05-05 Downloads cleanup result reported exact-duplicate evidence and
+  retained canonical copies, but the deleted duplicate groups were still marked
+  `action_gate=REVIEW`. This is now treated as a gate-contract defect.
+- `tools\release\curador_automation.py` was corrected so future destructive
+  exact-duplicate deletion requires `APPROVE` on both the group and the file
+  record; `REVIEW` candidates remain registered only.
+- The malformed WitnessLog tail was repaired by append-only corrective event
+  `be467fd105ce9cad45cddfad4c80bccf22fc0910f19e8c00f05bdaddeed37272`.
+  The prior event was not rewritten.
+- Validation after correction:
+  `python -m pytest tests\release\test_curador_automation.py -q` -> `4 passed`;
+  `python COMMS\tools\validate_seto_comms.py --json` -> `PASS`.

@@ -1,0 +1,20 @@
+{
+  "generated_at_utc": "2026-05-05T13:50:32.745330+00:00",
+  "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
+  "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
+  "master_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\CURADOR_MASTER_INDEX.md",
+  "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
+  "witness_event_hash": "07215e235ac0fe8c4c497f06feaee745287ad97ace0c2d493b3a4115a48f007e",
+  "downloads_files_seen": 160,
+  "duplicate_groups_detected": 0,
+  "deleted_exact_duplicates": 0,
+  "deleted_bytes": 0,
+  "new_folder_files_registered": 32,
+  "blocked_records": 0,
+  "status_counts": {
+    "REGISTRADO": 160
+  },
+  "duplicate_groups": [],
+  "deleted": []
+}

@@ -1,0 +1,30 @@
+# Ficha Curador SETO - Activa modo Observacionismo  extrac.txt
+
+| campo | valor |
+|---|---|
+| Ruta original | `C:\Users\L-Tyr\Downloads\Activa modo Observacionismo  extrac.txt` |
+| SHA256 | `2FA6ED8F6D3F3E64CE787D2DD5AAAFEBEF502AAF98E99D50533BBB98C0AFB05B` |
+| Bytes | `55250` |
+| Tipo | `file` |
+| Estado PSI | `CERTEZA` |
+| Status | `REGISTRADO` |
+| Clasificacion | `OBSERVACIONISMO_RESEARCH_SYNTHESIS` |
+| Lane | `research-boundary` |
+| Decision | `RESEARCH_ONLY_WITH_CLAIM_BOUNDARY` |
+| ActionGate | `REVIEW` |
+| Canonico | `C:\Users\L-Tyr\Downloads\Activa modo Observacionismo  extrac.txt` |
+
+## Resumen
+
+Observacionismo/TUIP/PSI synthesis; preserve evidence, inference and unknown labels.
+
+## Sinapsis
+
+- Destino: `docs/intake and research/ after claim review`.
+- Evidencia: SHA256 `2FA6ED8F6D3F3E64CE787D2DD5AAAFEBEF502AAF98E99D50533BBB98C0AFB05B`.
+- Uso permitido: local, curado, sin publicacion externa directa.
+
+## Falsadores
+
+- secret/private marker, hash mismatch, unique content loss, strong claim without validation.
+- Si aparece secreto, ruta privada o claim fuerte no validado, el estado cambia a `BLOQUEADO`.

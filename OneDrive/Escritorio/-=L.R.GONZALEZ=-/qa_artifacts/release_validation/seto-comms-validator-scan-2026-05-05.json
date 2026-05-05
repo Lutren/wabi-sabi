@@ -1,0 +1,21 @@
+{
+  "schema": "medioevo.secret_scan_result.v1",
+  "generated_at_utc": "2026-05-05T10:52:00Z",
+  "status": "PASS",
+  "scope": {
+    "paths": [
+      "COMMS/tools/validate_seto_comms.py",
+      "SOURCE_INTAKE_REGISTER.md",
+      "source_intake_register.json",
+      "docs/developer/INDEX.md"
+    ],
+    "artifacts": [
+      "qa_artifacts/release_validation/seto-comms-validator-result-2026-05-05.json",
+      "qa_artifacts/release_validation/seto-comms-validator-scan-2026-05-05.json"
+    ],
+    "default_workspace_scan": false
+  },
+  "findings": [],
+  "count_reported": 0,
+  "truncated_at": 200
+}

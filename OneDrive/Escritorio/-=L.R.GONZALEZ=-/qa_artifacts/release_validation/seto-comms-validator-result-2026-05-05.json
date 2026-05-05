@@ -1,0 +1,24 @@
+{
+  "schema": "medioevo.seto_comms_validator_result.v1",
+  "generated_at_utc": "2026-05-05T10:44:00Z",
+  "command": "python COMMS/tools/validate_seto_comms.py --json --fail-on-errors",
+  "status": "PASS",
+  "errors": [],
+  "counts": {
+    "schemas": 3,
+    "inbox_messages": 1,
+    "topic_events": 1,
+    "decision_examples": 7
+  },
+  "schema_hashes": {
+    "COMMS/schemas/observation-envelope.schema.json": "a5884abcbd1127afca1835c6b8543380edbf3c875144611125fa9e856d1b6b96",
+    "COMMS/schemas/action-gate.schema.json": "b0ee69aa4afdd4444efdbfd69c03966ffaa9f22c2ce10449080101426847ab7c",
+    "COMMS/schemas/witness-log-event.schema.json": "38adbb03f56c506d2dab419e43252cd4b8b179fcb800a8b93088ea9c34202ed1"
+  },
+  "witness_tail": {
+    "checked": true,
+    "event_type": "seto_comms_schemas",
+    "event_hash": "b5704dd5b0ac8b855b957f6e29763c8802df6cad92fb22dfa78336257145b700",
+    "hash_match": true
+  }
+}

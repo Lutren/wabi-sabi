@@ -3045,5 +3045,33 @@
         "Uncertain or blocked actions still route to REVIEW or BLOCK."
       ]
     }
+  ],
+  "seto_comms_validator_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "PASS",
+      "scope": "Local validator for COMMS envelopes, topic events, decision examples and WitnessLog tail",
+      "tool": "COMMS/tools/validate_seto_comms.py",
+      "result_json": "qa_artifacts/release_validation/seto-comms-validator-result-2026-05-05.json",
+      "scan_json": "qa_artifacts/release_validation/seto-comms-validator-scan-2026-05-05.json",
+      "artifact_hashes": {
+        "tool": "4A8874E0DF93F0B2D09981F33B575633914AA8A622FC7638EB57969B7A5E0DB9",
+        "result_json": "36EF148FD95A246E39E64424E039BB04DFD1EB18EF90323AFAABDCBB3E2EB9B7",
+        "scan_json": "8180134CA9120DAE46DE3BA6F7A35C7AFFD74344515DB107AF47C542AC724BF9"
+      },
+      "summary": {
+        "schemas": 3,
+        "inbox_messages": 1,
+        "topic_events": 1,
+        "decision_examples": 7,
+        "witness_tail_hash_match": true,
+        "secret_scan_findings": 0
+      },
+      "decisions": [
+        "Validator is local-only and performs no file mutation.",
+        "Validation failures should block Claudio local-agent write actions.",
+        "The tool lives under COMMS to avoid release-path denylist false positives."
+      ]
+    }
   ]
 }

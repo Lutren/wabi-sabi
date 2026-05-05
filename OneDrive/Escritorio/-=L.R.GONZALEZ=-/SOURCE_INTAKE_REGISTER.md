@@ -644,6 +644,37 @@ Result:
 - Secret scan: `0` findings.
 - Runtime execution: `0`.
 
+## SETO COMMS Validator 2026-05-05
+
+This pass added a local validator for COMMS envelopes, topic events, decision
+examples and WitnessLog tail hash verification.
+
+Artifacts:
+
+- `COMMS\tools\validate_seto_comms.py`
+- `qa_artifacts\release_validation\seto-comms-validator-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-comms-validator-scan-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `validate_seto_comms.py` | `4A8874E0DF93F0B2D09981F33B575633914AA8A622FC7638EB57969B7A5E0DB9` |
+| `seto-comms-validator-result-2026-05-05.json` | `36EF148FD95A246E39E64424E039BB04DFD1EB18EF90323AFAABDCBB3E2EB9B7` |
+| `seto-comms-validator-scan-2026-05-05.json` | `8180134CA9120DAE46DE3BA6F7A35C7AFFD74344515DB107AF47C542AC724BF9` |
+
+Result:
+
+- Validator command:
+  `python COMMS\tools\validate_seto_comms.py --json --fail-on-errors`.
+- Status: `PASS`.
+- Schemas checked: `3`.
+- Inbox messages checked: `1`.
+- Topic events checked: `1`.
+- Decision examples checked: `7`.
+- WitnessLog tail hash match: `true`.
+- Secret scan: `0` findings.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

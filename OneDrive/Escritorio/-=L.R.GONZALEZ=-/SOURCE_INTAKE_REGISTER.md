@@ -540,3 +540,31 @@ Result:
   `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\templates\NEXT_SESSION_BRIEF.md`.
 - Secret scan on touched logs and evidence: `0` findings.
 - No external publication, extraction or source move was performed.
+
+## SETO PSI Redundant Vault Batch 2 Cleanup 2026-05-05
+
+This pass removed the remaining exact duplicate files from the PSI redundant
+vault set selected by the SETO duplicate selector.
+
+Artifacts:
+
+- `qa_artifacts\release_validation\seto-psi-vault-redundante-batch2-actiongate-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-psi-vault-redundante-batch2-cleanup-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-psi-vault-redundante-batch2-secret-scan-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `seto-psi-vault-redundante-batch2-actiongate-2026-05-05.json` | `E02FBA2F8D55B4C2B7E6BB44154DA029A0CF655B534C0606E79613F31F11DF94` |
+| `seto-psi-vault-redundante-batch2-cleanup-result-2026-05-05.json` | `0304D4E11A45CBDD19AC6FB72A9B0BE5ED011854FD920D773C422E60C9B68E18` |
+| `seto-psi-vault-redundante-batch2-secret-scan-2026-05-05.json` | `C035AF7B6C6B4BEA72FCD29FA85E370E3956FBDF8D3D41113838AB8321EB1BE0` |
+
+Result:
+
+- ActionGate: `APPROVE`.
+- Deleted files: `5`.
+- Deleted bytes: `6,694`.
+- Canonical archive copies retained: `5`.
+- Exact active references to redundant vault paths before deletion: `0`.
+- Secret scan on touched logs and evidence: `0` findings.

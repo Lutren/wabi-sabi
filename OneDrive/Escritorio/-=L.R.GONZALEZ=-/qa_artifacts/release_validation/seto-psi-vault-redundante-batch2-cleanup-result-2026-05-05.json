@@ -1,0 +1,51 @@
+{
+  "schema": "medioevo.cleanup_result.v1",
+  "generated_at_utc": "2026-05-05T09:04:00Z",
+  "status": "EXECUTED_EXACT_DUPLICATE_DELETE",
+  "action_gate": "APPROVE",
+  "scope": "PSI redundant vault exact duplicates batch 2",
+  "deleted": [
+    {
+      "id": "SETO-PSI-VRB2-001",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\HANDOFF_ANCHOR_600.txt",
+      "sha256": "90fb8d387d45ac165059b6a9c4eb5f2fcfd9f7d672eca0e1c69f3fc416a0b211",
+      "bytes": 917,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\HANDOFF_ANCHOR_600.txt"
+    },
+    {
+      "id": "SETO-PSI-VRB2-002",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\tests\\test_eml_kernel.py",
+      "sha256": "b1008255d7ead64c0c956262e5189ff763c6aa059fa224e3437cc034aab3402e",
+      "bytes": 1134,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\test_eml_kernel.py"
+    },
+    {
+      "id": "SETO-PSI-VRB2-003",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\CODEX_PROMPT_IMPLEMENT_EML.md",
+      "sha256": "25d2120604e0a84646999fa4dbfe2d5b823ce6053323075f31b79e49df6f3a05",
+      "bytes": 1178,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\CODEX_PROMPT_IMPLEMENT_EML.md"
+    },
+    {
+      "id": "SETO-PSI-VRB2-004",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+      "sha256": "7dd5394cbdb6428d25ccf82e54b408210fa67158e47e1f913f7d513be705a8b6",
+      "bytes": 1405,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\CODEX_PROMPT_BUILD_CANON_COMPILER.md"
+    },
+    {
+      "id": "SETO-PSI-VRB2-005",
+      "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\eml_kernel.py",
+      "sha256": "a0b62694e72086ebc5aa6f6c270e9dd653fc26325140eced7db9aaf91d902fcc",
+      "bytes": 2060,
+      "replacement": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\eml_kernel.py"
+    }
+  ],
+  "post_validation": {
+    "delete_paths_exist": 0,
+    "canonical_paths_exist": 5,
+    "deleted_files": 5,
+    "deleted_bytes": 6694,
+    "errors": 0
+  }
+}

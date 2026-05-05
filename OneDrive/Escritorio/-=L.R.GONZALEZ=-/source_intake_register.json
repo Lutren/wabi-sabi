@@ -2860,6 +2860,33 @@
         "Canonical replacement remains in archive/templates.",
         "No external action, publication, extraction or source move executed."
       ]
+    },
+    {
+      "date": "2026-05-05",
+      "status": "EXECUTED_EXACT_DUPLICATE_DELETE",
+      "scope": "PSI redundant vault exact duplicates batch 2",
+      "action_gate": "APPROVE",
+      "actiongate_json": "qa_artifacts/release_validation/seto-psi-vault-redundante-batch2-actiongate-2026-05-05.json",
+      "result_json": "qa_artifacts/release_validation/seto-psi-vault-redundante-batch2-cleanup-result-2026-05-05.json",
+      "secret_scan_json": "qa_artifacts/release_validation/seto-psi-vault-redundante-batch2-secret-scan-2026-05-05.json",
+      "artifact_hashes": {
+        "actiongate_json": "E02FBA2F8D55B4C2B7E6BB44154DA029A0CF655B534C0606E79613F31F11DF94",
+        "result_json": "0304D4E11A45CBDD19AC6FB72A9B0BE5ED011854FD920D773C422E60C9B68E18",
+        "secret_scan_json": "C035AF7B6C6B4BEA72FCD29FA85E370E3956FBDF8D3D41113838AB8321EB1BE0"
+      },
+      "summary": {
+        "deleted_files": 5,
+        "deleted_bytes": 6694,
+        "canonical_paths_exist": 5,
+        "delete_paths_exist": 0,
+        "secret_scan_findings": 0,
+        "errors": 0
+      },
+      "decisions": [
+        "Only exact duplicate files from PSI vault_redundante_2026-04-26 were deleted.",
+        "Canonical archive copies remain in archive/templates or archive root.",
+        "No external action, publication, extraction or source move executed."
+      ]
     }
   ]
 }

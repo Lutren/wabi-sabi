@@ -10,6 +10,7 @@ Deleted source files:
 | 2026-05-02 | 44 files + 1 empty duplicate folder | 3,567,373 | registered `Downloads` sources and exact duplicates; private/canon/secrets excluded | `docs\intake\DOWNLOADS_CLEANUP_MANIFEST_2026-05-02.md`; `qa_artifacts\release_validation\downloads-cleanup-result-2026-05-02.json` |
 | 2026-05-03 | 11 files/folders | 674,700 | fichadas DUAT Downloads sources after v0.6 private extraction and manifest; `desktop.ini` and v0.7 kept | `qa_artifacts\release_validation\aggressive-cleanup-publication-gate-2026-05-03.md`; `claudio\runtime\private_labs\duat_living_matrix_v06\PRIVATE_MANIFEST_SHA256.json` |
 | 2026-05-05 | 1 file | 244 | exact duplicate PSI redundant vault template; canonical template retained | `docs\intake\SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md`; `qa_artifacts\release_validation\seto-psi-next-session-brief-cleanup-result-2026-05-05.json`; ActionGate `seto-psi-next-session-brief-actiongate-2026-05-05.json` |
+| 2026-05-05 | 5 files | 6,694 | exact duplicate PSI redundant vault batch 2; canonical archive copies retained | `qa_artifacts\release_validation\seto-psi-vault-redundante-batch2-cleanup-result-2026-05-05.json`; ActionGate `seto-psi-vault-redundante-batch2-actiongate-2026-05-05.json` |
 
 Deleted generated local artifacts:
 

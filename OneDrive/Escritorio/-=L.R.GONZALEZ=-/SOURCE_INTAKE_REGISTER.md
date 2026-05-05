@@ -350,22 +350,34 @@ Artifacts:
 - `qa_artifacts\release_validation\seto-cache-cleanup-dry-run-2026-05-05.json`
 - `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-05.json`
 - `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-cache-cleanup-selector-validation-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-cache-cleanup-tools-release-final-result-2026-05-05.json`
+- `qa_artifacts\release_validation\seto-cache-cleanup-self-cache-final-result-2026-05-05.json`
 - `qa_artifacts\witness_log\curador_seto_witnesslog.jsonl`
 
 Artifact hashes:
 
 | artifact | sha256 |
 |---|---|
-| `cleanup_regenerable_cache.py` | `34F57A34F7E956EDD91ABB5755B68AB301320DC097D09731C3BE63C6F0FE3B4F` |
+| `cleanup_regenerable_cache.py` | `75F45CD8B99DCC9C8CF0A2EB3FBAA5263E673646DA19F33A937C270D358B5A2A` |
 | `seto-cache-cleanup-dry-run-2026-05-05.json` | `B5684F38A8FD9527B69C01D592DDD0F9F0E0F0D8241F9254DC6BD67D1BDEC105` |
 | `seto-cache-cleanup-result-2026-05-05.json` | `C93052DD77DF42E9B89D1C6B6E671869D512211BFE45023D358F1BF44B9F7046` |
 | `seto-cache-cleanup-post-validation-result-2026-05-05.json` | `1E1D21C5BA7FCE9705AB52B9FB6E3F37C7E0768B2F2F885D50BA2F836DFDF8D2` |
+| `seto-cache-cleanup-selector-validation-result-2026-05-05.json` | `6644C45B103338E5223AF9D09934B3D103B652D5B92BE71E85D222E61284ECF9` |
+| `seto-cache-cleanup-tools-release-final-result-2026-05-05.json` | `BBC818EDDBBB6076EC5F5A3AB61A0B52CECC2BC0C355D79D318BD85922EA59C1` |
+| `seto-cache-cleanup-self-cache-final-result-2026-05-05.json` | `A74876E56B5AA75742A75623809162809FCC160B67E5FA498C93A7340E3D708E` |
 
 Summary:
 
 - Status: `EXECUTED_REGENERABLE_CACHE_DELETE`.
 - Deleted: `122` cache directories, `879` files, `11,194,250` bytes.
 - Post-validation residue check: `0` additional cache directories found.
+- Selector-validation cleanup: `7` additional cache directories, `25` files,
+  `279,254` bytes.
+- Final tools-release cleanup: `2` additional cache directories, `14` files,
+  `206,789` bytes.
+- Self-cache final cleanup: `6` additional cache directories, `19` files,
+  `208,999` bytes.
 - Errors: `0`.
 - WitnessLog event:
   `01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb`.
@@ -378,3 +390,44 @@ Boundaries:
   `releases`, private RPG/TCG/game bridge markers.
 - No duplicate source files, ZIPs, release packages, env folders or unique
   Downloads/PSI research sources were deleted.
+- The cleanup tool now permits `tools\release\__pycache__` cleanup while still
+  excluding product `release/` and `releases/` directories.
+
+## SETO Exact Duplicate Candidate Selector 2026-05-05
+
+This follow-up advances the next cleanup lane without deleting anything. It
+reads the global manifest and emits a bounded duplicate review queue.
+
+Artifacts:
+
+- `tools\release\select_exact_duplicate_candidates.py`
+- `docs\intake\SETO_EXACT_DUPLICATE_CANDIDATES_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-exact-duplicate-candidates-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `select_exact_duplicate_candidates.py` | `81EBECFE83F1C7BA5B7335AB294A068E0D16AA18A49DC6FDE374E3D7B26AA0BD` |
+| `seto-exact-duplicate-candidates-2026-05-05.json` | `995A0683CF62F1F38B2878F9A76CC354921DAB5F5C36482832A87E4A34FC552E` |
+| `SETO_EXACT_DUPLICATE_CANDIDATES_2026-05-05.md` | `193D1A3ABA6955A222F63273AB12E2F3F927CFED89AEDC48F9D4C79CAE47DA1F` |
+
+Summary:
+
+- Status: `DRY_RUN_NO_DELETE_NO_MOVE`.
+- Manifest rows read: `81,107`.
+- Exact duplicate groups in manifest: `12,071`.
+- Eligible low-risk groups: `157`.
+- Selected groups written to report: `80`.
+- Blocked or hard-review groups: `11,914`.
+
+Boundaries:
+
+- Only exact-hash textual groups under the workspace root, under `1 MB`, were
+  considered for the review queue.
+- `E:\`, `Downloads`, Desktop, `publish_staging`, `qa_artifacts`, `.claw`,
+  `.claude`, `.wrangler`, `tools\pentest_repos`, `tools\vendor`, Git/env/
+  release/archive/private/secret-like paths and boilerplate files were
+  excluded.
+- All listed candidates remain `REVIEW` until canonical source, ficha and
+  ActionGate are complete.

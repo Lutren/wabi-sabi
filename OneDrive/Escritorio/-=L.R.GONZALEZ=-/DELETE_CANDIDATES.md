@@ -248,6 +248,12 @@ Evidence:
 - Result: `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-05.json`
 - Post-validation residue check:
   `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-result-2026-05-05.json`
+- Selector-validation residue cleanup:
+  `qa_artifacts\release_validation\seto-cache-cleanup-selector-validation-result-2026-05-05.json`
+- Final tools-release cache cleanup:
+  `qa_artifacts\release_validation\seto-cache-cleanup-tools-release-final-result-2026-05-05.json`
+- Self-cache final cleanup with `PYTHONDONTWRITEBYTECODE=1`:
+  `qa_artifacts\release_validation\seto-cache-cleanup-self-cache-final-result-2026-05-05.json`
 - Tool: `tools\release\cleanup_regenerable_cache.py`
 - WitnessLog event: `01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb`
 
@@ -258,6 +264,9 @@ Summary:
 | `DELETE_APPROVED_REGENERABLE_CACHE` | 122 directories | 879 | 11,194,250 | `APPROVE` |
 | `KEEP_BLOCKED_BOUNDARY` | 0 | 0 | 0 | `BLOCK` |
 | post-validation residue | 0 directories | 0 | 0 | `APPROVE` |
+| selector-validation residue | 7 directories | 25 | 279,254 | `APPROVE` |
+| tools-release final residue | 2 directories | 14 | 206,789 | `APPROVE` |
+| self-cache final residue | 6 directories | 19 | 208,999 | `APPROVE` |
 
 Approved cache names:
 
@@ -282,3 +291,36 @@ Next cleanup remains gated:
   rebuild command.
 - Releases, env folders, private assets and unique Downloads/PSI sources remain
   `REVIEW` or `BLOCK`.
+
+## SETO Exact Duplicate Candidate Selector 2026-05-05
+
+No files deleted. This pass converted the global CSV manifest into a smaller
+dry-run list of exact duplicate groups that may be reviewed later.
+
+Evidence:
+
+- Report: `docs\intake\SETO_EXACT_DUPLICATE_CANDIDATES_2026-05-05.md`
+- JSON: `qa_artifacts\release_validation\seto-exact-duplicate-candidates-2026-05-05.json`
+- Tool: `tools\release\select_exact_duplicate_candidates.py`
+
+Summary:
+
+| metric | value |
+|---|---:|
+| exact duplicate groups in global manifest | 12,071 |
+| eligible low-risk review groups | 157 |
+| selected groups in report | 80 |
+| blocked or hard-review groups | 11,914 |
+
+Policy:
+
+- State remains `REVIEW`, not `APPROVE`.
+- The selector excludes `E:\`, `Downloads`, Desktop, `publish_staging`,
+  `qa_artifacts`, `.claw`, `.claude`, `.wrangler`, `tools\pentest_repos`,
+  `tools\vendor`, `.git`, env folders, releases, archives, private RPG/TCG
+  markers and secret-like names.
+- Boilerplate names such as licenses, readmes, security docs,
+  `THIRD_PARTY_NOTICES`, funding files and `__init__.py` are excluded from the
+  low-risk set.
+- Every listed group still needs canonical confirmation, ficha, full SHA256,
+  register update and ActionGate `APPROVE` before deletion.

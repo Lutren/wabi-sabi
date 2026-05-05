@@ -409,6 +409,12 @@ Evidence:
 - Result: `qa_artifacts\release_validation\seto-cache-cleanup-result-2026-05-05.json`
 - Post-validation residue check:
   `qa_artifacts\release_validation\seto-cache-cleanup-post-validation-result-2026-05-05.json`
+- Selector-validation residue cleanup:
+  `qa_artifacts\release_validation\seto-cache-cleanup-selector-validation-result-2026-05-05.json`
+- Final tools-release cache cleanup:
+  `qa_artifacts\release_validation\seto-cache-cleanup-tools-release-final-result-2026-05-05.json`
+- Self-cache final cleanup with `PYTHONDONTWRITEBYTECODE=1`:
+  `qa_artifacts\release_validation\seto-cache-cleanup-self-cache-final-result-2026-05-05.json`
 - Tool: `tools\release\cleanup_regenerable_cache.py`
 - WitnessLog event: `01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb`
 
@@ -418,6 +424,9 @@ Result:
 |---|---:|---:|---:|---|
 | Python/test/lint/typecheck cache dirs | 122 | 879 | 11,194,250 | `EXECUTED` |
 | post-validation cache residue | 0 | 0 | 0 | `CLEAN` |
+| selector-validation cache residue | 7 | 25 | 279,254 | `EXECUTED` |
+| tools-release final cache residue | 2 | 14 | 206,789 | `EXECUTED` |
+| self-cache final residue | 6 | 19 | 208,999 | `EXECUTED` |
 
 Allowed names were limited to `__pycache__`, `.pytest_cache`, `.ruff_cache`
 and `.mypy_cache`. Every target was resolved under the workspace root before
@@ -430,3 +439,33 @@ Remaining duplicate/dead-code lanes:
   remain `REVIEW`.
 - Large build outputs require product-specific rebuild evidence before cleanup.
 - Empty files/folders require parent-project role review.
+
+## SETO Exact Duplicate Candidate Selector 2026-05-05
+
+No files deleted. The selector reads the global SETO CSV and produces a
+smaller review queue for exact duplicate groups that are textual, under the
+workspace root, below `1 MB`, and outside blocked boundaries.
+
+Artifacts:
+
+- `tools\release\select_exact_duplicate_candidates.py`
+- `docs\intake\SETO_EXACT_DUPLICATE_CANDIDATES_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-exact-duplicate-candidates-2026-05-05.json`
+
+Counts:
+
+| metric | value |
+|---|---:|
+| manifest rows | 81,107 |
+| exact duplicate groups | 12,071 |
+| eligible low-risk groups | 157 |
+| selected groups | 80 |
+| blocked or hard-review groups | 11,914 |
+
+Decision:
+
+- `INFERENCIA`: proposed canonical path per group.
+- `REVIEW`: all duplicate candidates.
+- `BLOQUEADO`/excluded: `E:\`, `Downloads`, Desktop, evidence/staging folders,
+  tool/vendor/offensive paths, releases, envs, archives, private markers,
+  secret-like names and boilerplate files.

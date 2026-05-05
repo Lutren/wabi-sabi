@@ -1,0 +1,195 @@
+{
+  "generated_at_utc": "2026-05-05T08:00:05.449236+00:00",
+  "status": "EXECUTED",
+  "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "allowed_cache_dirs": [
+    ".mypy_cache",
+    ".pytest_cache",
+    ".ruff_cache",
+    "__pycache__"
+  ],
+  "excluded_boundaries": [
+    ".git",
+    ".skills",
+    ".venv",
+    "/tcg/",
+    "04_AUDIOVISUAL_Y_TCG",
+    "\\tcg\\",
+    "_ARCHIVAR",
+    "_archive",
+    "env",
+    "game-private",
+    "github-modules",
+    "metaevo-tcg",
+    "node_modules",
+    "release",
+    "releases",
+    "runtime/game_bridge",
+    "runtime\\game_bridge",
+    "tools/vendor",
+    "tools\\vendor",
+    "venv"
+  ],
+  "summary": {
+    "total_candidates": 7,
+    "approved_count": 7,
+    "blocked_count": 0,
+    "approved_bytes": 279254,
+    "approved_files": 25,
+    "deleted_count": 7,
+    "deleted_bytes": 279254,
+    "deleted_files": 25,
+    "errors": 0
+  },
+  "approved": [
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
+      "cache_type": ".pytest_cache",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 4,
+      "bytes": 2052
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 1,
+      "bytes": 202
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 5,
+      "bytes": 53271
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tools/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tools/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 3,
+      "bytes": 93506
+    },
+    {
+      "path": "packages/open-dev/obsai-core/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 1,
+      "bytes": 7464
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 10,
+      "bytes": 100627
+    },
+    {
+      "path": "packages/open-dev/obsai-core/tests/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/tests/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 1,
+      "bytes": 22132
+    }
+  ],
+  "blocked": [],
+  "deleted": [
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
+      "cache_type": ".pytest_cache",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 4,
+      "bytes": 2052
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 1,
+      "bytes": 202
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 5,
+      "bytes": 53271
+    },
+    {
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tools/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tools/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 3,
+      "bytes": 93506
+    },
+    {
+      "path": "packages/open-dev/obsai-core/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 1,
+      "bytes": 7464
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 10,
+      "bytes": 100627
+    },
+    {
+      "path": "packages/open-dev/obsai-core/tests/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/tests/__pycache__",
+      "cache_type": "__pycache__",
+      "action_gate": "APPROVE",
+      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
+      "reason": "approved cache dir name under workspace root",
+      "file_count": 1,
+      "bytes": 22132
+    }
+  ],
+  "errors": [],
+  "rules": [
+    "Only approved cache directory names are eligible.",
+    "Private, archive, vendor, release, env, node_modules and git paths are excluded.",
+    "No files outside the workspace root can be deleted."
+  ]
+}

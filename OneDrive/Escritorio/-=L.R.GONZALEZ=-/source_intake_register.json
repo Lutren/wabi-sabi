@@ -2557,19 +2557,34 @@
       "dry_run": "qa_artifacts/release_validation/seto-cache-cleanup-dry-run-2026-05-05.json",
       "result": "qa_artifacts/release_validation/seto-cache-cleanup-result-2026-05-05.json",
       "post_validation_result": "qa_artifacts/release_validation/seto-cache-cleanup-post-validation-result-2026-05-05.json",
+      "selector_validation_result": "qa_artifacts/release_validation/seto-cache-cleanup-selector-validation-result-2026-05-05.json",
+      "tools_release_final_result": "qa_artifacts/release_validation/seto-cache-cleanup-tools-release-final-result-2026-05-05.json",
+      "self_cache_final_result": "qa_artifacts/release_validation/seto-cache-cleanup-self-cache-final-result-2026-05-05.json",
       "witness_log": "qa_artifacts/witness_log/curador_seto_witnesslog.jsonl",
       "witness_event_hash": "01f328781e05ccb667001b6e41f2516bd2b7db250657b60e2a0bceabc110d9eb",
       "artifact_hashes": {
-        "tool": "34F57A34F7E956EDD91ABB5755B68AB301320DC097D09731C3BE63C6F0FE3B4F",
+        "tool": "75F45CD8B99DCC9C8CF0A2EB3FBAA5263E673646DA19F33A937C270D358B5A2A",
         "dry_run": "B5684F38A8FD9527B69C01D592DDD0F9F0E0F0D8241F9254DC6BD67D1BDEC105",
         "result": "C93052DD77DF42E9B89D1C6B6E671869D512211BFE45023D358F1BF44B9F7046",
-        "post_validation_result": "1E1D21C5BA7FCE9705AB52B9FB6E3F37C7E0768B2F2F885D50BA2F836DFDF8D2"
+        "post_validation_result": "1E1D21C5BA7FCE9705AB52B9FB6E3F37C7E0768B2F2F885D50BA2F836DFDF8D2",
+        "selector_validation_result": "6644C45B103338E5223AF9D09934B3D103B652D5B92BE71E85D222E61284ECF9",
+        "tools_release_final_result": "BBC818EDDBBB6076EC5F5A3AB61A0B52CECC2BC0C355D79D318BD85922EA59C1",
+        "self_cache_final_result": "A74876E56B5AA75742A75623809162809FCC160B67E5FA498C93A7340E3D708E"
       },
       "summary": {
         "deleted_cache_directories": 122,
         "deleted_files": 879,
         "deleted_bytes": 11194250,
         "post_validation_candidates": 0,
+        "selector_validation_deleted_cache_directories": 7,
+        "selector_validation_deleted_files": 25,
+        "selector_validation_deleted_bytes": 279254,
+        "tools_release_final_deleted_cache_directories": 2,
+        "tools_release_final_deleted_files": 14,
+        "tools_release_final_deleted_bytes": 206789,
+        "self_cache_final_deleted_cache_directories": 6,
+        "self_cache_final_deleted_files": 19,
+        "self_cache_final_deleted_bytes": 208999,
         "blocked_count": 0,
         "errors": 0
       },
@@ -2601,7 +2616,64 @@
       "decisions": [
         "Only generated cache directories were deleted.",
         "No source files, ZIPs, releases, env folders, Git history, private assets or unique research sources were deleted.",
+        "tools/release/__pycache__ cleanup is allowed by exception; product release and releases folders remain excluded.",
         "Exact duplicate source cleanup remains REVIEW until canonical copy, ficha, full SHA256 and ActionGate exist."
+      ]
+    }
+  ],
+  "seto_exact_duplicate_candidate_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+      "tool": "tools/release/select_exact_duplicate_candidates.py",
+      "manifest": "qa_artifacts/release_validation/global-curador-file-manifest-2026-05-05.csv",
+      "report": "docs/intake/SETO_EXACT_DUPLICATE_CANDIDATES_2026-05-05.md",
+      "json": "qa_artifacts/release_validation/seto-exact-duplicate-candidates-2026-05-05.json",
+      "artifact_hashes": {
+        "tool": "81EBECFE83F1C7BA5B7335AB294A068E0D16AA18A49DC6FDE374E3D7B26AA0BD",
+        "json": "995A0683CF62F1F38B2878F9A76CC354921DAB5F5C36482832A87E4A34FC552E",
+        "report": "193D1A3ABA6955A222F63273AB12E2F3F927CFED89AEDC48F9D4C79CAE47DA1F"
+      },
+      "summary": {
+        "manifest_rows": 81107,
+        "exact_duplicate_groups": 12071,
+        "eligible_low_risk_groups": 157,
+        "selected_groups": 80,
+        "blocked_or_hard_review_groups": 11914
+      },
+      "policy": {
+        "action_gate": "REVIEW",
+        "claim_level": "INFERENCIA_FOR_CANONICAL_CHOICE",
+        "max_bytes_per_file": 1048576,
+        "no_delete": true
+      },
+      "excluded_boundaries": [
+        "E:/",
+        "Downloads",
+        "Desktop",
+        "publish_staging",
+        "qa_artifacts",
+        ".claw",
+        ".claude",
+        ".wrangler",
+        "tools/pentest_repos",
+        "tools/vendor",
+        ".git",
+        "env",
+        ".venv",
+        "release",
+        "releases",
+        "_archive",
+        "_ARCHIVAR",
+        "private_rpg",
+        "tcg",
+        "secret_like_names",
+        "boilerplate_files"
+      ],
+      "decisions": [
+        "No deletion, movement, extraction or publication executed.",
+        "The report is a review queue, not a deletion approval.",
+        "Every candidate requires canonical confirmation, ficha, full SHA256 register update and ActionGate APPROVE before cleanup."
       ]
     }
   ]

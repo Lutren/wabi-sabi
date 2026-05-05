@@ -68,6 +68,8 @@ def ensure_safe_target(path: Path) -> Path:
 
 def should_skip_dir(path: Path) -> bool:
     lowered = str(path).lower().replace("\\", "/")
+    if "/tools/release" in lowered:
+        return any(marker.lower().replace("\\", "/") in lowered for marker in PRIVATE_MARKERS)
     if any(part.lower().replace("\\", "/") in lowered for part in EXCLUDE_PARTS):
         return True
     return any(marker.lower().replace("\\", "/") in lowered for marker in PRIVATE_MARKERS)

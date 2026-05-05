@@ -1,0 +1,4100 @@
+{
+  "schema": "medioevo.seto_exact_duplicate_candidates.v1",
+  "generated_at_utc": "2026-05-05T07:57:39.748058+00:00",
+  "manifest_csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05.csv",
+  "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+  "policy": {
+    "action_gate": "REVIEW",
+    "claim_level": "INFERENCIA_FOR_CANONICAL_CHOICE",
+    "no_delete": true,
+    "max_bytes_per_file": 1048576,
+    "allowed_extensions": [
+      ".bat",
+      ".css",
+      ".csv",
+      ".html",
+      ".ini",
+      ".js",
+      ".json",
+      ".md",
+      ".ps1",
+      ".py",
+      ".sh",
+      ".toml",
+      ".ts",
+      ".txt",
+      ".yaml",
+      ".yml"
+    ]
+  },
+  "summary": {
+    "manifest_rows": 81107,
+    "exact_duplicate_groups": 12071,
+    "eligible_low_risk_groups": 157,
+    "selected_groups": 80,
+    "blocked_or_hard_review_groups": 11914
+  },
+  "candidates": [
+    {
+      "sha256": "88dc4d2132a2b9e2b2ec1f63d3aee4179119589d7bdac448392c08e83278747b",
+      "size_bytes": 60,
+      "extension": ".csv",
+      "group_count": 6,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\inputs\\sales_summary.csv",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\inputs\\sales_summary.csv",
+        "root": "workspace_lrgonzalez",
+        "name": "sales_summary.csv",
+        "extension": ".csv",
+        "size_bytes": 60,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\inputs\\sales_summary.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\inputs\\sales_summary.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "sales_summary.csv",
+          "extension": ".csv",
+          "size_bytes": 60,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "sales_summary.csv",
+          "extension": ".csv",
+          "size_bytes": 60,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "sales_summary.csv",
+          "extension": ".csv",
+          "size_bytes": 60,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "sales_summary.csv",
+          "extension": ".csv",
+          "size_bytes": 60,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\sales_summary.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "sales_summary.csv",
+          "extension": ".csv",
+          "size_bytes": 60,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "746f5a28718df9c58f65665ad753df1062c6f6cf2b7240b14eb7f451f25797fc",
+      "size_bytes": 83,
+      "extension": ".json",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\examples\\decision_safe.json",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\examples\\decision_safe.json",
+        "root": "workspace_lrgonzalez",
+        "name": "decision_safe.json",
+        "extension": ".json",
+        "size_bytes": 83,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\decision_safe.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\decision_safe.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_safe.json",
+          "extension": ".json",
+          "size_bytes": 83,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\decision_safe.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\decision_safe.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_safe.json",
+          "extension": ".json",
+          "size_bytes": 83,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\decision_safe.json",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\decision_safe.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_safe.json",
+          "extension": ".json",
+          "size_bytes": 83,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "7c715c9f5a758d429505419b690b6cb191191b42517f7ac0d1bf3a8c5d323ea4",
+      "size_bytes": 101,
+      "extension": ".json",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\examples\\decision_publish_requires_approval.json",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\examples\\decision_publish_requires_approval.json",
+        "root": "workspace_lrgonzalez",
+        "name": "decision_publish_requires_approval.json",
+        "extension": ".json",
+        "size_bytes": 101,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\decision_publish_requires_approval.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\decision_publish_requires_approval.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_publish_requires_approval.json",
+          "extension": ".json",
+          "size_bytes": 101,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\decision_publish_requires_approval.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\decision_publish_requires_approval.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_publish_requires_approval.json",
+          "extension": ".json",
+          "size_bytes": 101,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\decision_publish_requires_approval.json",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\decision_publish_requires_approval.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_publish_requires_approval.json",
+          "extension": ".json",
+          "size_bytes": 101,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "1c07945efc4ea394fb091e88d7ac781330b9c8719b922846fb1f560c9d988ea8",
+      "size_bytes": 107,
+      "extension": ".sh",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\packaging\\build-macos.sh",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\packaging\\build-macos.sh",
+        "root": "workspace_lrgonzalez",
+        "name": "build-macos.sh",
+        "extension": ".sh",
+        "size_bytes": 107,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\packaging\\build-macos.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\packaging\\build-macos.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "build-macos.sh",
+          "extension": ".sh",
+          "size_bytes": 107,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "956c5dfaafb60ae58739ee0efb188991930b7f7007a78e6e978faa18984706d6",
+      "size_bytes": 124,
+      "extension": ".md",
+      "group_count": 10,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\runs\\20260430_042318_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\runs\\20260430_042318_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+        "root": "workspace_lrgonzalez",
+        "name": "RESTORE.md",
+        "extension": ".md",
+        "size_bytes": 124,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\runs\\20260501_123821_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\runs\\20260501_123821_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\runs\\20260501_123821_operations_brief_d5f6877377\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\runs\\20260501_123821_operations_brief_d5f6877377\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_function_collapse\\docx_qa_smoke\\runs\\20260429_223453_wave_docx_smoke_source_ff7528fec4\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_function_collapse\\docx_qa_smoke\\runs\\20260429_223453_wave_docx_smoke_source_ff7528fec4\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_function_collapse\\runs\\20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_function_collapse\\runs\\20260429_221036_WAVE_DOCUMENT_COLLAPSE_CLI_2026-04-29_10a3dffc2a\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\runs\\20260430_043030_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\runs\\20260430_043030_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\runs\\20260501_124009_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\runs\\20260501_124009_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\runs\\20260501_124009_operations_brief_336102c90d\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\runs\\20260501_124009_operations_brief_336102c90d\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\runs\\20260430_045303_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\runs\\20260430_045303_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\runs\\20260430_043051_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\runs\\20260430_043051_acme_case_2a9b713e65\\rollback_pack\\RESTORE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESTORE.md",
+          "extension": ".md",
+          "size_bytes": 124,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "044f93a31daebf3e243a3acfdb74156153830bd1309510f3540ef811f63a0a73",
+      "size_bytes": 125,
+      "extension": ".json",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\examples\\decision_browser_blocked.json",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\examples\\decision_browser_blocked.json",
+        "root": "workspace_lrgonzalez",
+        "name": "decision_browser_blocked.json",
+        "extension": ".json",
+        "size_bytes": 125,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\decision_browser_blocked.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\decision_browser_blocked.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_browser_blocked.json",
+          "extension": ".json",
+          "size_bytes": 125,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\decision_browser_blocked.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\decision_browser_blocked.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_browser_blocked.json",
+          "extension": ".json",
+          "size_bytes": 125,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\decision_browser_blocked.json",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\decision_browser_blocked.json",
+          "root": "workspace_lrgonzalez",
+          "name": "decision_browser_blocked.json",
+          "extension": ".json",
+          "size_bytes": 125,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "1fbfe3233fe9a9364814b8d412b34c4bc398f4f2ae74050b069f6d28138d789c",
+      "size_bytes": 198,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\4dd0c2e1-f844-4a01-ab7d-465289fabb84\\HIDDEN_FILES_REPORT.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\4dd0c2e1-f844-4a01-ab7d-465289fabb84\\HIDDEN_FILES_REPORT.md",
+        "root": "workspace_lrgonzalez",
+        "name": "HIDDEN_FILES_REPORT.md",
+        "extension": ".md",
+        "size_bytes": 198,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\ad30dda9-c7d6-43d5-b934-10b35db0af3b\\HIDDEN_FILES_REPORT.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\ad30dda9-c7d6-43d5-b934-10b35db0af3b\\HIDDEN_FILES_REPORT.md",
+          "root": "workspace_lrgonzalez",
+          "name": "HIDDEN_FILES_REPORT.md",
+          "extension": ".md",
+          "size_bytes": 198,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "4a6c2d1d94ba53850d722fd2a7af185693a43dcbe1774b8f4b3022d31db35b60",
+      "size_bytes": 199,
+      "extension": ".md",
+      "group_count": 6,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\inputs\\operations_policy.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\inputs\\operations_policy.md",
+        "root": "workspace_lrgonzalez",
+        "name": "operations_policy.md",
+        "extension": ".md",
+        "size_bytes": 199,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\inputs\\operations_policy.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\inputs\\operations_policy.md",
+          "root": "workspace_lrgonzalez",
+          "name": "operations_policy.md",
+          "extension": ".md",
+          "size_bytes": 199,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "root": "workspace_lrgonzalez",
+          "name": "operations_policy.md",
+          "extension": ".md",
+          "size_bytes": 199,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "root": "workspace_lrgonzalez",
+          "name": "operations_policy.md",
+          "extension": ".md",
+          "size_bytes": 199,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "root": "workspace_lrgonzalez",
+          "name": "operations_policy.md",
+          "extension": ".md",
+          "size_bytes": 199,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\operations_policy.md",
+          "root": "workspace_lrgonzalez",
+          "name": "operations_policy.md",
+          "extension": ".md",
+          "size_bytes": 199,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "625c673c40a16265a8d0a4adf736087603052dbed8bef505896821f2dc22fb96",
+      "size_bytes": 210,
+      "extension": ".yaml",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\host-profiles\\pc2_server_dock.yaml",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\host-profiles\\pc2_server_dock.yaml",
+        "root": "workspace_lrgonzalez",
+        "name": "pc2_server_dock.yaml",
+        "extension": ".yaml",
+        "size_bytes": 210,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\host-profiles\\pc2_server_dock.yaml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\host-profiles\\pc2_server_dock.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "pc2_server_dock.yaml",
+          "extension": ".yaml",
+          "size_bytes": 210,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\host-profiles\\pc2_server_dock.yaml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\host-profiles\\pc2_server_dock.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "pc2_server_dock.yaml",
+          "extension": ".yaml",
+          "size_bytes": 210,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\host-profiles\\pc2_server_dock.yaml",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\host-profiles\\pc2_server_dock.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "pc2_server_dock.yaml",
+          "extension": ".yaml",
+          "size_bytes": 210,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "8b0662498289a3c0939b2aaa31cb9be1a1e49052a21711fb2180062effd0e2b5",
+      "size_bytes": 217,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\3979fd18-7b02-42db-8aa6-eec41b1a254d\\INTEGRITY_REPORT.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\3979fd18-7b02-42db-8aa6-eec41b1a254d\\INTEGRITY_REPORT.md",
+        "root": "workspace_lrgonzalez",
+        "name": "INTEGRITY_REPORT.md",
+        "extension": ".md",
+        "size_bytes": 217,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\4dd0c2e1-f844-4a01-ab7d-465289fabb84\\INTEGRITY_REPORT.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\4dd0c2e1-f844-4a01-ab7d-465289fabb84\\INTEGRITY_REPORT.md",
+          "root": "workspace_lrgonzalez",
+          "name": "INTEGRITY_REPORT.md",
+          "extension": ".md",
+          "size_bytes": 217,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "985e807b52f7a8a941f5c84c58f4b2011a98fb443e4cf3066189454065a42fbf",
+      "size_bytes": 224,
+      "extension": ".ps1",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\packaging\\build-windows.ps1",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\packaging\\build-windows.ps1",
+        "root": "workspace_lrgonzalez",
+        "name": "build-windows.ps1",
+        "extension": ".ps1",
+        "size_bytes": 224,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\packaging\\build-windows.ps1",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\packaging\\build-windows.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "build-windows.ps1",
+          "extension": ".ps1",
+          "size_bytes": 224,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "f63a70c6d285f912696c11cf1df1f4336ba230793b44d97dbbce80bd8c95347d",
+      "size_bytes": 237,
+      "extension": ".sh",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\scripts\\01_build_iso.sh",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\scripts\\01_build_iso.sh",
+        "root": "workspace_lrgonzalez",
+        "name": "01_build_iso.sh",
+        "extension": ".sh",
+        "size_bytes": 237,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\01_build_iso.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\01_build_iso.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "01_build_iso.sh",
+          "extension": ".sh",
+          "size_bytes": 237,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\01_build_iso.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\01_build_iso.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "01_build_iso.sh",
+          "extension": ".sh",
+          "size_bytes": 237,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\01_build_iso.sh",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\01_build_iso.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "01_build_iso.sh",
+          "extension": ".sh",
+          "size_bytes": 237,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "5c7a951213069cd31f6ecda115fe00789cb380ce63a51c296bbbb765ea928b7b",
+      "size_bytes": 244,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\NEXT_SESSION_BRIEF.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\NEXT_SESSION_BRIEF.md",
+        "root": "workspace_lrgonzalez",
+        "name": "NEXT_SESSION_BRIEF.md",
+        "extension": ".md",
+        "size_bytes": 244,
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\NEXT_SESSION_BRIEF.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\NEXT_SESSION_BRIEF.md",
+          "root": "workspace_lrgonzalez",
+          "name": "NEXT_SESSION_BRIEF.md",
+          "extension": ".md",
+          "size_bytes": 244,
+          "registered": "yes",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "1e01fd6761b2a0f79f083c43bd262a488468c210710d505edec0e8b90873cf33",
+      "size_bytes": 257,
+      "extension": ".sh",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\scripts\\00_install_build_deps.sh",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\scripts\\00_install_build_deps.sh",
+        "root": "workspace_lrgonzalez",
+        "name": "00_install_build_deps.sh",
+        "extension": ".sh",
+        "size_bytes": 257,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\00_install_build_deps.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\00_install_build_deps.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "00_install_build_deps.sh",
+          "extension": ".sh",
+          "size_bytes": 257,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\00_install_build_deps.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\00_install_build_deps.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "00_install_build_deps.sh",
+          "extension": ".sh",
+          "size_bytes": 257,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\00_install_build_deps.sh",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\00_install_build_deps.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "00_install_build_deps.sh",
+          "extension": ".sh",
+          "size_bytes": 257,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "28d87e599f9d66156bb7d45988f1e8ae7e0f53f3421c9dd62703577f5a8544e0",
+      "size_bytes": 284,
+      "extension": ".json",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\browser-manifests\\suno_create_download_track.json",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\browser-manifests\\suno_create_download_track.json",
+        "root": "workspace_lrgonzalez",
+        "name": "suno_create_download_track.json",
+        "extension": ".json",
+        "size_bytes": 284,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\browser-manifests\\suno_create_download_track.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\browser-manifests\\suno_create_download_track.json",
+          "root": "workspace_lrgonzalez",
+          "name": "suno_create_download_track.json",
+          "extension": ".json",
+          "size_bytes": 284,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\browser-manifests\\suno_create_download_track.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\browser-manifests\\suno_create_download_track.json",
+          "root": "workspace_lrgonzalez",
+          "name": "suno_create_download_track.json",
+          "extension": ".json",
+          "size_bytes": 284,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\browser-manifests\\suno_create_download_track.json",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\browser-manifests\\suno_create_download_track.json",
+          "root": "workspace_lrgonzalez",
+          "name": "suno_create_download_track.json",
+          "extension": ".json",
+          "size_bytes": 284,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "475ad834cb35bd2d7739780c3f972d1418f4ee5d5438a16821830c669a66ded6",
+      "size_bytes": 295,
+      "extension": ".yaml",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\policies\\default_policy.yaml",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\policies\\default_policy.yaml",
+        "root": "workspace_lrgonzalez",
+        "name": "default_policy.yaml",
+        "extension": ".yaml",
+        "size_bytes": 295,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\policies\\default_policy.yaml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\policies\\default_policy.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "default_policy.yaml",
+          "extension": ".yaml",
+          "size_bytes": 295,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\policies\\default_policy.yaml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\policies\\default_policy.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "default_policy.yaml",
+          "extension": ".yaml",
+          "size_bytes": 295,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\policies\\default_policy.yaml",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\policies\\default_policy.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "default_policy.yaml",
+          "extension": ".yaml",
+          "size_bytes": 295,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "2a9b713e6559ccd87396ef1c554e2108282c7aa73b4ae0342e860615483a56cb",
+      "size_bytes": 312,
+      "extension": ".md",
+      "group_count": 6,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\inputs\\acme_case.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_client_demo_2026-04-30\\inputs\\acme_case.md",
+        "root": "workspace_lrgonzalez",
+        "name": "acme_case.md",
+        "extension": ".md",
+        "size_bytes": 312,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\inputs\\acme_case.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_fc_client_demos\\wave_fc_evidence_pack_2026-05-01\\inputs\\acme_case.md",
+          "root": "workspace_lrgonzalez",
+          "name": "acme_case.md",
+          "extension": ".md",
+          "size_bytes": 312,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\smoke_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "root": "workspace_lrgonzalez",
+          "name": "acme_case.md",
+          "extension": ".md",
+          "size_bytes": 312,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_gate_2026-05-01\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "root": "workspace_lrgonzalez",
+          "name": "acme_case.md",
+          "extension": ".md",
+          "size_bytes": 312,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30-public-nrp-refresh\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "root": "workspace_lrgonzalez",
+          "name": "acme_case.md",
+          "extension": ".md",
+          "size_bytes": 312,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\wave_wabi_release_gates\\wave_wabi_release_gate_2026-04-30\\demo_packages\\client_demo\\inputs\\acme_case.md",
+          "root": "workspace_lrgonzalez",
+          "name": "acme_case.md",
+          "extension": ".md",
+          "size_bytes": 312,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "1212b4d32e021d35e01459e94757d181a1dc0e902d6a1748992ecf3560eeaad8",
+      "size_bytes": 334,
+      "extension": ".sh",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\scripts\\02_test_iso_qemu.sh",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\scripts\\02_test_iso_qemu.sh",
+        "root": "workspace_lrgonzalez",
+        "name": "02_test_iso_qemu.sh",
+        "extension": ".sh",
+        "size_bytes": 334,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\02_test_iso_qemu.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\02_test_iso_qemu.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "02_test_iso_qemu.sh",
+          "extension": ".sh",
+          "size_bytes": 334,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\02_test_iso_qemu.sh",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\02_test_iso_qemu.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "02_test_iso_qemu.sh",
+          "extension": ".sh",
+          "size_bytes": 334,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\02_test_iso_qemu.sh",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\02_test_iso_qemu.sh",
+          "root": "workspace_lrgonzalez",
+          "name": "02_test_iso_qemu.sh",
+          "extension": ".sh",
+          "size_bytes": 334,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "e14abe54ccfb1247740e78884f7a31501c43e37abfa9f04450ed402fd7c03a3e",
+      "size_bytes": 342,
+      "extension": ".html",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\index.html",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\index.html",
+        "root": "workspace_lrgonzalez",
+        "name": "index.html",
+        "extension": ".html",
+        "size_bytes": 342,
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\index.html",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\index.html",
+          "root": "workspace_lrgonzalez",
+          "name": "index.html",
+          "extension": ".html",
+          "size_bytes": 342,
+          "registered": "yes",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "0e34f38ca76129ae302d9b43a21f7b97dad2da0860d4b824463dc19ed1b18961",
+      "size_bytes": 347,
+      "extension": ".yaml",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+        "root": "workspace_lrgonzalez",
+        "name": "policy.yaml",
+        "extension": ".yaml",
+        "size_bytes": 347,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "policy.yaml",
+          "extension": ".yaml",
+          "size_bytes": 347,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "policy.yaml",
+          "extension": ".yaml",
+          "size_bytes": 347,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\etc\\claudio\\policy.yaml",
+          "root": "workspace_lrgonzalez",
+          "name": "policy.yaml",
+          "extension": ".yaml",
+          "size_bytes": 347,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "e94c68f94a2fad3d2f3d2e1d5fcf0df0cb0dadb272ca07bdd611c31f2b258cbe",
+      "size_bytes": 393,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\assets_ubicaciones.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\assets_ubicaciones.md",
+        "root": "workspace_lrgonzalez",
+        "name": "assets_ubicaciones.md",
+        "extension": ".md",
+        "size_bytes": 393,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\07_assets\\assets_ubicaciones.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\07_assets\\assets_ubicaciones.md",
+          "root": "workspace_lrgonzalez",
+          "name": "assets_ubicaciones.md",
+          "extension": ".md",
+          "size_bytes": 393,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "a1d34a08c55d715f9478e847607e6473904619082fcd1128db0fc2772f4d8527",
+      "size_bytes": 418,
+      "extension": ".ts",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\capacitor.config.ts",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\capacitor.config.ts",
+        "root": "workspace_lrgonzalez",
+        "name": "capacitor.config.ts",
+        "extension": ".ts",
+        "size_bytes": 418,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\capacitor.config.ts",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\capacitor.config.ts",
+          "root": "workspace_lrgonzalez",
+          "name": "capacitor.config.ts",
+          "extension": ".ts",
+          "size_bytes": 418,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "23b08beee226ff3bac6d4a56d65e66d3a58d86d1c518a295c4d94c45f8e629af",
+      "size_bytes": 436,
+      "extension": ".ps1",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\scripts\\windows_backup_to_sd.ps1",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\scripts\\windows_backup_to_sd.ps1",
+        "root": "workspace_lrgonzalez",
+        "name": "windows_backup_to_sd.ps1",
+        "extension": ".ps1",
+        "size_bytes": 436,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\windows_backup_to_sd.ps1",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\windows_backup_to_sd.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "windows_backup_to_sd.ps1",
+          "extension": ".ps1",
+          "size_bytes": 436,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\windows_backup_to_sd.ps1",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\windows_backup_to_sd.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "windows_backup_to_sd.ps1",
+          "extension": ".ps1",
+          "size_bytes": 436,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\windows_backup_to_sd.ps1",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\windows_backup_to_sd.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "windows_backup_to_sd.ps1",
+          "extension": ".ps1",
+          "size_bytes": 436,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "e2e51b05c72e3ff12d24d6d42c7267e8dc20c99cebeadcc16e527ab6e6b18591",
+      "size_bytes": 468,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\checklist_QA.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\checklist_QA.md",
+        "root": "workspace_lrgonzalez",
+        "name": "checklist_QA.md",
+        "extension": ".md",
+        "size_bytes": 468,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\02_reparaciones\\checklist_QA.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\02_reparaciones\\checklist_QA.md",
+          "root": "workspace_lrgonzalez",
+          "name": "checklist_QA.md",
+          "extension": ".md",
+          "size_bytes": 468,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "ab5e2f93eb6b660ab76d89bf6f536a4f5fe3bcf6673c7fdc624a1eae1cc205f6",
+      "size_bytes": 546,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\RESPONSIBLE.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\RESPONSIBLE.md",
+        "root": "workspace_lrgonzalez",
+        "name": "RESPONSIBLE.md",
+        "extension": ".md",
+        "size_bytes": 546,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\RESPONSIBLE.md",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\RESPONSIBLE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "RESPONSIBLE.md",
+          "extension": ".md",
+          "size_bytes": 546,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "fff1a1e4e59c2e0049a807411b895363f425cfb20edc7f584e1b40a729954052",
+      "size_bytes": 556,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\STATUS.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\STATUS.md",
+        "root": "workspace_lrgonzalez",
+        "name": "STATUS.md",
+        "extension": ".md",
+        "size_bytes": 556,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\STATUS.md",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\STATUS.md",
+          "root": "workspace_lrgonzalez",
+          "name": "STATUS.md",
+          "extension": ".md",
+          "size_bytes": 556,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "f4a1a3b11e253521eb3d97a8104d78044a4539d3b27a7027a6ba6fcdfffe25ee",
+      "size_bytes": 563,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\resumen_ejecutivo.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\resumen_ejecutivo.md",
+        "root": "workspace_lrgonzalez",
+        "name": "resumen_ejecutivo.md",
+        "extension": ".md",
+        "size_bytes": 563,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\00_resumen_ejecutivo\\resumen_ejecutivo.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\00_resumen_ejecutivo\\resumen_ejecutivo.md",
+          "root": "workspace_lrgonzalez",
+          "name": "resumen_ejecutivo.md",
+          "extension": ".md",
+          "size_bytes": 563,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "9fd90aee28b8cae65c4bcf60b09875d8ced6f72d0ebb5e7655236cfccfc8529a",
+      "size_bytes": 576,
+      "extension": ".json",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\tsconfig.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\tsconfig.json",
+        "root": "workspace_lrgonzalez",
+        "name": "tsconfig.json",
+        "extension": ".json",
+        "size_bytes": 576,
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\tsconfig.json",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\tsconfig.json",
+          "root": "workspace_lrgonzalez",
+          "name": "tsconfig.json",
+          "extension": ".json",
+          "size_bytes": 576,
+          "registered": "yes",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "e7f871eec3f23390b09641e1049408c065d2c7f971e9def91a5adb1e70c832be",
+      "size_bytes": 603,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\checklist_publicacion.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\checklist_publicacion.md",
+        "root": "workspace_lrgonzalez",
+        "name": "checklist_publicacion.md",
+        "extension": ".md",
+        "size_bytes": 603,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\06_publicacion_gumroad\\checklist_publicacion.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\06_publicacion_gumroad\\checklist_publicacion.md",
+          "root": "workspace_lrgonzalez",
+          "name": "checklist_publicacion.md",
+          "extension": ".md",
+          "size_bytes": 603,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "85c016596dfb14bcb7a5c47ed8f323880f0207886b6eb79117f5d34303089ba1",
+      "size_bytes": 618,
+      "extension": ".json",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\electron-builder.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\electron-builder.json",
+        "root": "workspace_lrgonzalez",
+        "name": "electron-builder.json",
+        "extension": ".json",
+        "size_bytes": 618,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\electron-builder.json",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\electron-builder.json",
+          "root": "workspace_lrgonzalez",
+          "name": "electron-builder.json",
+          "extension": ".json",
+          "size_bytes": 618,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "d37ec7801f513e0ce296b77a1e7abd87d75c9e7d62b5cf5c3093d2ed9ecdb7b1",
+      "size_bytes": 681,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\faq_cliente.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\faq_cliente.md",
+        "root": "workspace_lrgonzalez",
+        "name": "faq_cliente.md",
+        "extension": ".md",
+        "size_bytes": 681,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\06_publicacion_gumroad\\faq_cliente.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\06_publicacion_gumroad\\faq_cliente.md",
+          "root": "workspace_lrgonzalez",
+          "name": "faq_cliente.md",
+          "extension": ".md",
+          "size_bytes": 681,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "5beb7886815c8b747e16f538b2c155ba5da823aa903d9d6ad98c6f451912f6db",
+      "size_bytes": 693,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\CARTEL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\CARTEL.md",
+        "root": "workspace_lrgonzalez",
+        "name": "CARTEL.md",
+        "extension": ".md",
+        "size_bytes": 693,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\CARTEL.md",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\CARTEL.md",
+          "root": "workspace_lrgonzalez",
+          "name": "CARTEL.md",
+          "extension": ".md",
+          "size_bytes": 693,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "d74a4240b1f18235e5fe101a048b3d8ab441272a2c56da72b5a78e805a30523a",
+      "size_bytes": 705,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\propuesta_copy_landing.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\propuesta_copy_landing.md",
+        "root": "workspace_lrgonzalez",
+        "name": "propuesta_copy_landing.md",
+        "extension": ".md",
+        "size_bytes": 705,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\05_mejoras_web\\propuesta_copy_landing.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\05_mejoras_web\\propuesta_copy_landing.md",
+          "root": "workspace_lrgonzalez",
+          "name": "propuesta_copy_landing.md",
+          "extension": ".md",
+          "size_bytes": 705,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "810684819cde3fde54732ff246c6153420efdf5fc21b0fdf2ea2e99d774b2018",
+      "size_bytes": 902,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\evidencia_tecnica.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\evidencia_tecnica.md",
+        "root": "workspace_lrgonzalez",
+        "name": "evidencia_tecnica.md",
+        "extension": ".md",
+        "size_bytes": 902,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\09_logs_y_evidencia\\evidencia_tecnica.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\09_logs_y_evidencia\\evidencia_tecnica.md",
+          "root": "workspace_lrgonzalez",
+          "name": "evidencia_tecnica.md",
+          "extension": ".md",
+          "size_bytes": 902,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "90fb8d387d45ac165059b6a9c4eb5f2fcfd9f7d672eca0e1c69f3fc416a0b211",
+      "size_bytes": 917,
+      "extension": ".txt",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\HANDOFF_ANCHOR_600.txt",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\templates\\HANDOFF_ANCHOR_600.txt",
+        "root": "workspace_lrgonzalez",
+        "name": "HANDOFF_ANCHOR_600.txt",
+        "extension": ".txt",
+        "size_bytes": 917,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\HANDOFF_ANCHOR_600.txt",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\templates\\HANDOFF_ANCHOR_600.txt",
+          "root": "workspace_lrgonzalez",
+          "name": "HANDOFF_ANCHOR_600.txt",
+          "extension": ".txt",
+          "size_bytes": 917,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "0aba4c04d92915774063fc9bdba68befedb811ea72cf8a6dbe19a360981600b5",
+      "size_bytes": 940,
+      "extension": ".json",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\examples\\model_slimmer_qwen_coder.json",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\examples\\model_slimmer_qwen_coder.json",
+        "root": "workspace_lrgonzalez",
+        "name": "model_slimmer_qwen_coder.json",
+        "extension": ".json",
+        "size_bytes": 940,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\model_slimmer_qwen_coder.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\model_slimmer_qwen_coder.json",
+          "root": "workspace_lrgonzalez",
+          "name": "model_slimmer_qwen_coder.json",
+          "extension": ".json",
+          "size_bytes": 940,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\model_slimmer_qwen_coder.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\model_slimmer_qwen_coder.json",
+          "root": "workspace_lrgonzalez",
+          "name": "model_slimmer_qwen_coder.json",
+          "extension": ".json",
+          "size_bytes": 940,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\model_slimmer_qwen_coder.json",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\model_slimmer_qwen_coder.json",
+          "root": "workspace_lrgonzalez",
+          "name": "model_slimmer_qwen_coder.json",
+          "extension": ".json",
+          "size_bytes": 940,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "117e65e195cb6323711e045336b194f8abe817a810dbb9572cc5ac25c09e8795",
+      "size_bytes": 949,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\pricing_strategy.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\pricing_strategy.md",
+        "root": "workspace_lrgonzalez",
+        "name": "pricing_strategy.md",
+        "extension": ".md",
+        "size_bytes": 949,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\06_publicacion_gumroad\\pricing_strategy.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\06_publicacion_gumroad\\pricing_strategy.md",
+          "root": "workspace_lrgonzalez",
+          "name": "pricing_strategy.md",
+          "extension": ".md",
+          "size_bytes": 949,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "649e0cdf7130e9955af2c132aab8965455ac966f3c96428cb000f69f1019e1f7",
+      "size_bytes": 1051,
+      "extension": ".json",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\model_router\\gemma4_micro_probe.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\model_router\\gemma4_micro_probe.json",
+        "root": "workspace_lrgonzalez",
+        "name": "gemma4_micro_probe.json",
+        "extension": ".json",
+        "size_bytes": 1051,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\model_router\\gemma4_micro_probe_smoke.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\model_router\\gemma4_micro_probe_smoke.json",
+          "root": "workspace_lrgonzalez",
+          "name": "gemma4_micro_probe_smoke.json",
+          "extension": ".json",
+          "size_bytes": 1051,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "e06036579b6c43437c83766f18311d3f9ff58fa920b98ecb8f3d6c78bfb29124",
+      "size_bytes": 1095,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\mini-office\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+        "rel_to_workspace": "apps\\commercial\\mini-office\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+        "root": "workspace_lrgonzalez",
+        "name": "bug_report.md",
+        "extension": ".md",
+        "size_bytes": 1095,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\ISSUE_TEMPLATE\\bug_report.md",
+          "root": "workspace_lrgonzalez",
+          "name": "bug_report.md",
+          "extension": ".md",
+          "size_bytes": 1095,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "649821acdccb01873cab120f71cf6867a8e5c6f86e4274fd86f204d2608e8bf6",
+      "size_bytes": 1115,
+      "extension": ".yml",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\mini-office\\.github\\release.yml",
+        "rel_to_workspace": "apps\\commercial\\mini-office\\.github\\release.yml",
+        "root": "workspace_lrgonzalez",
+        "name": "release.yml",
+        "extension": ".yml",
+        "size_bytes": 1115,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\release.yml",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\release.yml",
+          "root": "workspace_lrgonzalez",
+          "name": "release.yml",
+          "extension": ".yml",
+          "size_bytes": 1115,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "b1008255d7ead64c0c956262e5189ff763c6aa059fa224e3437cc034aab3402e",
+      "size_bytes": 1134,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\test_eml_kernel.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\test_eml_kernel.py",
+        "root": "workspace_lrgonzalez",
+        "name": "test_eml_kernel.py",
+        "extension": ".py",
+        "size_bytes": 1134,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\tests\\test_eml_kernel.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\tests\\test_eml_kernel.py",
+          "root": "workspace_lrgonzalez",
+          "name": "test_eml_kernel.py",
+          "extension": ".py",
+          "size_bytes": 1134,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "290f808f5528f0569b6e475ec339251b2cebb0932b65a861b7a900371a6b6586",
+      "size_bytes": 1142,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\mini-office\\.github\\ISSUE_TEMPLATE\\feature_request.md",
+        "rel_to_workspace": "apps\\commercial\\mini-office\\.github\\ISSUE_TEMPLATE\\feature_request.md",
+        "root": "workspace_lrgonzalez",
+        "name": "feature_request.md",
+        "extension": ".md",
+        "size_bytes": 1142,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\ISSUE_TEMPLATE\\feature_request.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\ISSUE_TEMPLATE\\feature_request.md",
+          "root": "workspace_lrgonzalez",
+          "name": "feature_request.md",
+          "extension": ".md",
+          "size_bytes": 1142,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "fafd581e486a7bd838ed41be2a737225f0d6f3c73f01fd6dbe0f619ff363ed75",
+      "size_bytes": 1148,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\conciliation.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\conciliation.py",
+        "root": "workspace_lrgonzalez",
+        "name": "conciliation.py",
+        "extension": ".py",
+        "size_bytes": 1148,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\conciliation.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\conciliation.py",
+          "root": "workspace_lrgonzalez",
+          "name": "conciliation.py",
+          "extension": ".py",
+          "size_bytes": 1148,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "2baa9adcb3293880a1e4b6a05b988c3eda2fcefc00df14b28eee70782491aa88",
+      "size_bytes": 1164,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\daemon.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\daemon.py",
+        "root": "workspace_lrgonzalez",
+        "name": "daemon.py",
+        "extension": ".py",
+        "size_bytes": 1164,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\daemon.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\daemon.py",
+          "root": "workspace_lrgonzalez",
+          "name": "daemon.py",
+          "extension": ".py",
+          "size_bytes": 1164,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "25d2120604e0a84646999fa4dbfe2d5b823ce6053323075f31b79e49df6f3a05",
+      "size_bytes": 1178,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\CODEX_PROMPT_IMPLEMENT_EML.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\CODEX_PROMPT_IMPLEMENT_EML.md",
+        "root": "workspace_lrgonzalez",
+        "name": "CODEX_PROMPT_IMPLEMENT_EML.md",
+        "extension": ".md",
+        "size_bytes": 1178,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\CODEX_PROMPT_IMPLEMENT_EML.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\CODEX_PROMPT_IMPLEMENT_EML.md",
+          "root": "workspace_lrgonzalez",
+          "name": "CODEX_PROMPT_IMPLEMENT_EML.md",
+          "extension": ".md",
+          "size_bytes": 1178,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "90c0434fba4b4d6fe78705a43604678d889daf9f286f9e96d8b047173c7f5ee5",
+      "size_bytes": 1225,
+      "extension": ".md",
+      "group_count": 6,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_075823.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_075823.md",
+        "root": "workspace_lrgonzalez",
+        "name": "DESPERTAR_OBSERVADOR_INTEGRACION_20260423_075823.md",
+        "extension": ".md",
+        "size_bytes": 1225,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_082607.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_082607.md",
+          "root": "workspace_lrgonzalez",
+          "name": "DESPERTAR_OBSERVADOR_INTEGRACION_20260423_082607.md",
+          "extension": ".md",
+          "size_bytes": 1225,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_082922.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_082922.md",
+          "root": "workspace_lrgonzalez",
+          "name": "DESPERTAR_OBSERVADOR_INTEGRACION_20260423_082922.md",
+          "extension": ".md",
+          "size_bytes": 1225,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_124416.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_124416.md",
+          "root": "workspace_lrgonzalez",
+          "name": "DESPERTAR_OBSERVADOR_INTEGRACION_20260423_124416.md",
+          "extension": ".md",
+          "size_bytes": 1225,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_161810.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_161810.md",
+          "root": "workspace_lrgonzalez",
+          "name": "DESPERTAR_OBSERVADOR_INTEGRACION_20260423_161810.md",
+          "extension": ".md",
+          "size_bytes": 1225,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_163442.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\DESPERTAR_OBSERVADOR_INTEGRACION_20260423_163442.md",
+          "root": "workspace_lrgonzalez",
+          "name": "DESPERTAR_OBSERVADOR_INTEGRACION_20260423_163442.md",
+          "extension": ".md",
+          "size_bytes": 1225,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "ad27622968b1cc9edca8ecfa36b3e96ff1191d8e2240f48be590a04f517fcb1b",
+      "size_bytes": 1237,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\cli_human_tasks.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\cli_human_tasks.py",
+        "root": "workspace_lrgonzalez",
+        "name": "cli_human_tasks.py",
+        "extension": ".py",
+        "size_bytes": 1237,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\final_claudio_release\\claudio\\core\\cli_human_tasks.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\final_claudio_release\\claudio\\core\\cli_human_tasks.py",
+          "root": "workspace_lrgonzalez",
+          "name": "cli_human_tasks.py",
+          "extension": ".py",
+          "size_bytes": 1237,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "b1eefbf9a252db8e9dae9f0fb805a29a89774c766dd9a13a22b30ccae15be3a5",
+      "size_bytes": 1255,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\mini-office\\.github\\PULL_REQUEST_TEMPLATE.md",
+        "rel_to_workspace": "apps\\commercial\\mini-office\\.github\\PULL_REQUEST_TEMPLATE.md",
+        "root": "workspace_lrgonzalez",
+        "name": "PULL_REQUEST_TEMPLATE.md",
+        "extension": ".md",
+        "size_bytes": 1255,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\PULL_REQUEST_TEMPLATE.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\.github\\PULL_REQUEST_TEMPLATE.md",
+          "root": "workspace_lrgonzalez",
+          "name": "PULL_REQUEST_TEMPLATE.md",
+          "extension": ".md",
+          "size_bytes": 1255,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "90d3121f28190d1ab6aef737ab5401797efede23b40ebc3e4a6323a51b95212f",
+      "size_bytes": 1315,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\bugs\\bugs_reparados.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\bugs\\bugs_reparados.md",
+        "root": "workspace_lrgonzalez",
+        "name": "bugs_reparados.md",
+        "extension": ".md",
+        "size_bytes": 1315,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\02_reparaciones\\bugs_reparados.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\02_reparaciones\\bugs_reparados.md",
+          "root": "workspace_lrgonzalez",
+          "name": "bugs_reparados.md",
+          "extension": ".md",
+          "size_bytes": 1315,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "4e03e23f7525a8aa188fb94ba61336a7c0a6c246539ec4de2f4529ea7834865b",
+      "size_bytes": 1363,
+      "extension": ".csv",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\matriz_feedback_lectores.csv",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\matriz_feedback_lectores.csv",
+        "root": "workspace_lrgonzalez",
+        "name": "matriz_feedback_lectores.csv",
+        "extension": ".csv",
+        "size_bytes": 1363,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\04_simulacion_lectores_1000\\matriz_feedback_lectores.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\04_simulacion_lectores_1000\\matriz_feedback_lectores.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "matriz_feedback_lectores.csv",
+          "extension": ".csv",
+          "size_bytes": 1363,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "0400b5aea8a2789c3def8cd19d31d72c2db869a918d28e5ec30360a0c8e6f6d8",
+      "size_bytes": 1377,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\3979fd18-7b02-42db-8aa6-eec41b1a254d\\SYSTEM_REPORT.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\3979fd18-7b02-42db-8aa6-eec41b1a254d\\SYSTEM_REPORT.md",
+        "root": "workspace_lrgonzalez",
+        "name": "SYSTEM_REPORT.md",
+        "extension": ".md",
+        "size_bytes": 1377,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\4dd0c2e1-f844-4a01-ab7d-465289fabb84\\SYSTEM_REPORT.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\codex\\app_data\\claudio_lab_usb_sync\\imported\\claudio-lab-e8236594-64e6-4cc0-b593-68013202a7c2\\4dd0c2e1-f844-4a01-ab7d-465289fabb84\\SYSTEM_REPORT.md",
+          "root": "workspace_lrgonzalez",
+          "name": "SYSTEM_REPORT.md",
+          "extension": ".md",
+          "size_bytes": 1377,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "574241dc06a7edd8ab04f2bd78bd418efaa1e50962dc730a02177ea80fd7f3c1",
+      "size_bytes": 1388,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\roadmap_90_dias.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\roadmap_90_dias.md",
+        "root": "workspace_lrgonzalez",
+        "name": "roadmap_90_dias.md",
+        "extension": ".md",
+        "size_bytes": 1388,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\08_roadmap\\roadmap_90_dias.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\08_roadmap\\roadmap_90_dias.md",
+          "root": "workspace_lrgonzalez",
+          "name": "roadmap_90_dias.md",
+          "extension": ".md",
+          "size_bytes": 1388,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "7dd5394cbdb6428d25ccf82e54b408210fa67158e47e1f913f7d513be705a8b6",
+      "size_bytes": 1405,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+        "root": "workspace_lrgonzalez",
+        "name": "CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+        "extension": ".md",
+        "size_bytes": 1405,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+          "root": "workspace_lrgonzalez",
+          "name": "CODEX_PROMPT_BUILD_CANON_COMPILER.md",
+          "extension": ".md",
+          "size_bytes": 1405,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "23ecfc87d31b4dd158355a29ba0fa367db3ce9a578e33d1d0ed8b25026f38280",
+      "size_bytes": 1416,
+      "extension": ".md",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\docs\\MODEL_EFFICIENCY.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\docs\\MODEL_EFFICIENCY.md",
+        "root": "workspace_lrgonzalez",
+        "name": "MODEL_EFFICIENCY.md",
+        "extension": ".md",
+        "size_bytes": 1416,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\docs\\MODEL_EFFICIENCY.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\docs\\MODEL_EFFICIENCY.md",
+          "root": "workspace_lrgonzalez",
+          "name": "MODEL_EFFICIENCY.md",
+          "extension": ".md",
+          "size_bytes": 1416,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\docs\\MODEL_EFFICIENCY.md",
+          "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\docs\\MODEL_EFFICIENCY.md",
+          "root": "workspace_lrgonzalez",
+          "name": "MODEL_EFFICIENCY.md",
+          "extension": ".md",
+          "size_bytes": 1416,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\docs\\MODEL_EFFICIENCY.md",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\docs\\MODEL_EFFICIENCY.md",
+          "root": "workspace_lrgonzalez",
+          "name": "MODEL_EFFICIENCY.md",
+          "extension": ".md",
+          "size_bytes": 1416,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "dc354c347e59bf840282fbcaabf8a1d3cee7d77cf5d565b979a4448d86401b47",
+      "size_bytes": 1484,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\commercial\\LAUNCH_CHECKLIST_2026-04-24.md",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\commercial\\LAUNCH_CHECKLIST_2026-04-24.md",
+        "root": "workspace_lrgonzalez",
+        "name": "LAUNCH_CHECKLIST_2026-04-24.md",
+        "extension": ".md",
+        "size_bytes": 1484,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\LAUNCH_CHECKLIST_2026-04-24.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\LAUNCH_CHECKLIST_2026-04-24.md",
+          "root": "workspace_lrgonzalez",
+          "name": "LAUNCH_CHECKLIST_2026-04-24.md",
+          "extension": ".md",
+          "size_bytes": 1484,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "43e6eb1166484c0de82b9c9c559a3ad5b94dcdd0c60e8ac867963b5eb9cb3ef4",
+      "size_bytes": 1486,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\hud.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\hud.py",
+        "root": "workspace_lrgonzalez",
+        "name": "hud.py",
+        "extension": ".py",
+        "size_bytes": 1486,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\hud.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\hud.py",
+          "root": "workspace_lrgonzalez",
+          "name": "hud.py",
+          "extension": ".py",
+          "size_bytes": 1486,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "2e9cc2edebc1bf259f228885e9cacb32375a539b6c54841d604e0abf05a251ef",
+      "size_bytes": 1526,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\README_resultado_final.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_archivo_sesiones\\2026-04-16\\README_resultado_final.md",
+        "root": "workspace_lrgonzalez",
+        "name": "README_resultado_final.md",
+        "extension": ".md",
+        "size_bytes": 1526,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\09_logs_y_evidencia\\README_resultado_final.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\producto_final_codex\\09_logs_y_evidencia\\README_resultado_final.md",
+          "root": "workspace_lrgonzalez",
+          "name": "README_resultado_final.md",
+          "extension": ".md",
+          "size_bytes": 1526,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "48eaa49a0093c1026141ef929c8c57c8b7d8c8a07f47f76e771c23c1367f01a9",
+      "size_bytes": 1543,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\Assets\\MEDIOEVO_batch06\\references\\style_guides\\STYLEFIX_REPORT_2026-04-23.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\Assets\\MEDIOEVO_batch06\\references\\style_guides\\STYLEFIX_REPORT_2026-04-23.md",
+        "root": "workspace_lrgonzalez",
+        "name": "STYLEFIX_REPORT_2026-04-23.md",
+        "extension": ".md",
+        "size_bytes": 1543,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\Assets\\MEDIOEVO_world_atlas\\STYLEFIX_REPORT_2026-04-23.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\Assets\\MEDIOEVO_world_atlas\\STYLEFIX_REPORT_2026-04-23.md",
+          "root": "workspace_lrgonzalez",
+          "name": "STYLEFIX_REPORT_2026-04-23.md",
+          "extension": ".md",
+          "size_bytes": 1543,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "25d3f9d4b78e8010e531f2cc3fe79d4c4f0c4f24a2c9c6e381c3e65183ad0b0a",
+      "size_bytes": 1553,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\ILLUSTRATED_CANON10_CONSOLIDATION_20260423_195404.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\ILLUSTRATED_CANON10_CONSOLIDATION_20260423_195404.md",
+        "root": "workspace_lrgonzalez",
+        "name": "ILLUSTRATED_CANON10_CONSOLIDATION_20260423_195404.md",
+        "extension": ".md",
+        "size_bytes": 1553,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\gumroad_live\\canon10_illustrated_2026-04-23\\CONSOLIDATED_RELEASE_REPORT.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\gumroad_live\\canon10_illustrated_2026-04-23\\CONSOLIDATED_RELEASE_REPORT.md",
+          "root": "workspace_lrgonzalez",
+          "name": "CONSOLIDATED_RELEASE_REPORT.md",
+          "extension": ".md",
+          "size_bytes": 1553,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "69f8ddab30d9b2df0979f64f13ae7597eb06f34a7e6dae75d6e1bc0459e4818f",
+      "size_bytes": 1585,
+      "extension": ".js",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\flujocrm\\preload.js",
+        "rel_to_workspace": "apps\\commercial\\flujocrm\\preload.js",
+        "root": "workspace_lrgonzalez",
+        "name": "preload.js",
+        "extension": ".js",
+        "size_bytes": 1585,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\crm\\preload.js",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\crm\\preload.js",
+          "root": "workspace_lrgonzalez",
+          "name": "preload.js",
+          "extension": ".js",
+          "size_bytes": 1585,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "fd54b4c5b4547a9b7e3a2d1e553bd78e21bc0715a732a8dcb71d3298a87bb9ba",
+      "size_bytes": 1605,
+      "extension": ".html",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\mini-office\\landing.html",
+        "rel_to_workspace": "apps\\commercial\\mini-office\\landing.html",
+        "root": "workspace_lrgonzalez",
+        "name": "landing.html",
+        "extension": ".html",
+        "size_bytes": 1605,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\landing.html",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\mini_office\\landing.html",
+          "root": "workspace_lrgonzalez",
+          "name": "landing.html",
+          "extension": ".html",
+          "size_bytes": 1605,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "2546a4f65a55f993f533b83d1087ce419a22f0518e544b4cf5e3686542ab6647",
+      "size_bytes": 1771,
+      "extension": ".json",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\commercial\\gumroad_listing_asistente_negocio.json",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\commercial\\gumroad_listing_asistente_negocio.json",
+        "root": "workspace_lrgonzalez",
+        "name": "gumroad_listing_asistente_negocio.json",
+        "extension": ".json",
+        "size_bytes": 1771,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\gumroad_listing_asistente_negocio.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\gumroad_listing_asistente_negocio.json",
+          "root": "workspace_lrgonzalez",
+          "name": "gumroad_listing_asistente_negocio.json",
+          "extension": ".json",
+          "size_bytes": 1771,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "a9c1978f15176c08923cf94ff97955204cc50e553e19b5311057abab3ad3f079",
+      "size_bytes": 1801,
+      "extension": ".json",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\observacionista\\benchmark_suite\\operational_access_probe.json",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\observacionista\\benchmark_suite\\operational_access_probe.json",
+        "root": "workspace_lrgonzalez",
+        "name": "operational_access_probe.json",
+        "extension": ".json",
+        "size_bytes": 1801,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\observacionista\\download_intake\\operational_access_probe.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\observacionista\\download_intake\\operational_access_probe.json",
+          "root": "workspace_lrgonzalez",
+          "name": "operational_access_probe.json",
+          "extension": ".json",
+          "size_bytes": 1801,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "cdc5351258448dccc6415e343f7af374112372d2cae851f6d4269dfc70623482",
+      "size_bytes": 1900,
+      "extension": ".ts",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\src\\globals.d.ts",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\src\\globals.d.ts",
+        "root": "workspace_lrgonzalez",
+        "name": "globals.d.ts",
+        "extension": ".ts",
+        "size_bytes": 1900,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\src\\globals.d.ts",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\src\\globals.d.ts",
+          "root": "workspace_lrgonzalez",
+          "name": "globals.d.ts",
+          "extension": ".ts",
+          "size_bytes": 1900,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "ef24b5be91cc468627d99e125a8835595bf87c8122cb475c85f4f14e29169ecf",
+      "size_bytes": 1950,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\commercial\\OUTREACH_PACK_2026-04-24.md",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\commercial\\OUTREACH_PACK_2026-04-24.md",
+        "root": "workspace_lrgonzalez",
+        "name": "OUTREACH_PACK_2026-04-24.md",
+        "extension": ".md",
+        "size_bytes": 1950,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\OUTREACH_PACK_2026-04-24.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\OUTREACH_PACK_2026-04-24.md",
+          "root": "workspace_lrgonzalez",
+          "name": "OUTREACH_PACK_2026-04-24.md",
+          "extension": ".md",
+          "size_bytes": 1950,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "26bb5a5f4ae564aafcdc3ed4d5a1665be6a6d12b18e0b42a7c5ff8a3817001d5",
+      "size_bytes": 1969,
+      "extension": ".py",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+        "root": "workspace_lrgonzalez",
+        "name": "dashboard.py",
+        "extension": ".py",
+        "size_bytes": 1969,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+          "root": "workspace_lrgonzalez",
+          "name": "dashboard.py",
+          "extension": ".py",
+          "size_bytes": 1969,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+          "root": "workspace_lrgonzalez",
+          "name": "dashboard.py",
+          "extension": ".py",
+          "size_bytes": 1969,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\live-build\\config\\includes.chroot\\opt\\claudio\\dashboard\\dashboard.py",
+          "root": "workspace_lrgonzalez",
+          "name": "dashboard.py",
+          "extension": ".py",
+          "size_bytes": 1969,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "aecbf284b886ee10a36cd2cc6668d463d4e65912d05929dee48fb400960ac547",
+      "size_bytes": 1976,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\nervous_system.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\nervous_system.py",
+        "root": "workspace_lrgonzalez",
+        "name": "nervous_system.py",
+        "extension": ".py",
+        "size_bytes": 1976,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\nervous_system.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\nervous_system.py",
+          "root": "workspace_lrgonzalez",
+          "name": "nervous_system.py",
+          "extension": ".py",
+          "size_bytes": 1976,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "1bb223509a8f64ef0fc703a5544d5c24cb971fcfd3d0ee89138c054f9bb4f6d2",
+      "size_bytes": 1997,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\Assets\\MEDIOEVO_batch06\\references\\style_guides\\STYLE_BASELINE_ORIGINAL.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\Assets\\MEDIOEVO_batch06\\references\\style_guides\\STYLE_BASELINE_ORIGINAL.md",
+        "root": "workspace_lrgonzalez",
+        "name": "STYLE_BASELINE_ORIGINAL.md",
+        "extension": ".md",
+        "size_bytes": 1997,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\Assets\\MEDIOEVO_world_atlas\\STYLE_BASELINE_ORIGINAL.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\Assets\\MEDIOEVO_world_atlas\\STYLE_BASELINE_ORIGINAL.md",
+          "root": "workspace_lrgonzalez",
+          "name": "STYLE_BASELINE_ORIGINAL.md",
+          "extension": ".md",
+          "size_bytes": 1997,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "ef89f856b7245be2592c13a27c3b390edc258b2a80094237f94cf789cd455247",
+      "size_bytes": 2042,
+      "extension": ".csv",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\_SNAPSHOTS\\2026-04-28_curaduria_humana\\hashes_canon_post.csv",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\_SNAPSHOTS\\2026-04-28_curaduria_humana\\hashes_canon_post.csv",
+        "root": "workspace_lrgonzalez",
+        "name": "hashes_canon_post.csv",
+        "extension": ".csv",
+        "size_bytes": 2042,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\_SNAPSHOTS\\2026-04-28_curaduria_humana\\hashes_canon_pre.csv",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\_SNAPSHOTS\\2026-04-28_curaduria_humana\\hashes_canon_pre.csv",
+          "root": "workspace_lrgonzalez",
+          "name": "hashes_canon_pre.csv",
+          "extension": ".csv",
+          "size_bytes": 2042,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "1544abb08fdbceedeb767277a5db888d92b32978ada7a26164bbff59a198b5ad",
+      "size_bytes": 2045,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\potentiality.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\potentiality.py",
+        "root": "workspace_lrgonzalez",
+        "name": "potentiality.py",
+        "extension": ".py",
+        "size_bytes": 2045,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\potentiality.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\potentiality.py",
+          "root": "workspace_lrgonzalez",
+          "name": "potentiality.py",
+          "extension": ".py",
+          "size_bytes": 2045,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "a0b62694e72086ebc5aa6f6c270e9dd653fc26325140eced7db9aaf91d902fcc",
+      "size_bytes": 2060,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\eml_kernel.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\eml_kernel.py",
+        "root": "workspace_lrgonzalez",
+        "name": "eml_kernel.py",
+        "extension": ".py",
+        "size_bytes": 2060,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\eml_kernel.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26\\bonus\\eml_kernel.py",
+          "root": "workspace_lrgonzalez",
+          "name": "eml_kernel.py",
+          "extension": ".py",
+          "size_bytes": 2060,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "94f2a2b2f5b0ce644e8b5d2be66109a546c9db64a55e7e2a6ea33f055bcdfbee",
+      "size_bytes": 2151,
+      "extension": ".ts",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\vite.config.ts",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\vite.config.ts",
+        "root": "workspace_lrgonzalez",
+        "name": "vite.config.ts",
+        "extension": ".ts",
+        "size_bytes": 2151,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\vite.config.ts",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\vite.config.ts",
+          "root": "workspace_lrgonzalez",
+          "name": "vite.config.ts",
+          "extension": ".ts",
+          "size_bytes": 2151,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "42793baa17d6ce961f805279cd9f5d5cc534721377641a24c2e771d5b2c77064",
+      "size_bytes": 2176,
+      "extension": ".ps1",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\scripts\\windows_harden_loopback.ps1",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\scripts\\windows_harden_loopback.ps1",
+        "root": "workspace_lrgonzalez",
+        "name": "windows_harden_loopback.ps1",
+        "extension": ".ps1",
+        "size_bytes": 2176,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\windows_harden_loopback.ps1",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\scripts\\windows_harden_loopback.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "windows_harden_loopback.ps1",
+          "extension": ".ps1",
+          "size_bytes": 2176,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\windows_harden_loopback.ps1",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\scripts\\windows_harden_loopback.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "windows_harden_loopback.ps1",
+          "extension": ".ps1",
+          "size_bytes": 2176,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\windows_harden_loopback.ps1",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\scripts\\windows_harden_loopback.ps1",
+          "root": "workspace_lrgonzalez",
+          "name": "windows_harden_loopback.ps1",
+          "extension": ".ps1",
+          "size_bytes": 2176,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "d066e81e58df778b2f068f87b55c5ea9dbde8f79b53f8ff21a962d988307859b",
+      "size_bytes": 2204,
+      "extension": ".json",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\examples\\module_manifest_content_forge.json",
+        "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\examples\\module_manifest_content_forge.json",
+        "root": "workspace_lrgonzalez",
+        "name": "module_manifest_content_forge.json",
+        "extension": ".json",
+        "size_bytes": 2204,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\module_manifest_content_forge.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\examples\\module_manifest_content_forge.json",
+          "root": "workspace_lrgonzalez",
+          "name": "module_manifest_content_forge.json",
+          "extension": ".json",
+          "size_bytes": 2204,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\module_manifest_content_forge.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\examples\\module_manifest_content_forge.json",
+          "root": "workspace_lrgonzalez",
+          "name": "module_manifest_content_forge.json",
+          "extension": ".json",
+          "size_bytes": 2204,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\module_manifest_content_forge.json",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\examples\\module_manifest_content_forge.json",
+          "root": "workspace_lrgonzalez",
+          "name": "module_manifest_content_forge.json",
+          "extension": ".json",
+          "size_bytes": 2204,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "e0b8f2849862c14cc283256d45d609f3d9ca487f26b28c3ee9ce540d985d016f",
+      "size_bytes": 2229,
+      "extension": ".md",
+      "group_count": 4,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\_workspace\\claudio_os_blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+        "root": "workspace_lrgonzalez",
+        "name": "BRAIN_OS_PRINCIPLES.md",
+        "extension": ".md",
+        "size_bytes": 2229,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\runtime\\claudio_os_build\\staging\\claudio_os_blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+          "root": "workspace_lrgonzalez",
+          "name": "BRAIN_OS_PRINCIPLES.md",
+          "extension": ".md",
+          "size_bytes": 2229,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\packages\\open-dev\\claudio-os-blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+          "rel_to_workspace": "packages\\open-dev\\claudio-os-blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+          "root": "workspace_lrgonzalez",
+          "name": "BRAIN_OS_PRINCIPLES.md",
+          "extension": ".md",
+          "size_bytes": 2229,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        },
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+          "rel_to_workspace": "PRODUCTOS_MEDIOEVO\\claudio_os_blueprint\\docs\\BRAIN_OS_PRINCIPLES.md",
+          "root": "workspace_lrgonzalez",
+          "name": "BRAIN_OS_PRINCIPLES.md",
+          "extension": ".md",
+          "size_bytes": 2229,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "ffc8d4c7e86f75b6f9988d6c283a51f71261079582ff7a64f645da4cf716ac4c",
+      "size_bytes": 2297,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\MEDIOEVO_RELEASE_GATE_20260423_170011.md",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\MEDIOEVO_RELEASE_GATE_20260423_170011.md",
+        "root": "workspace_lrgonzalez",
+        "name": "MEDIOEVO_RELEASE_GATE_20260423_170011.md",
+        "extension": ".md",
+        "size_bytes": 2297,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\MEDIOEVO_RELEASE_GATE_20260423_172026.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\tools\\reports\\MEDIOEVO_RELEASE_GATE_20260423_172026.md",
+          "root": "workspace_lrgonzalez",
+          "name": "MEDIOEVO_RELEASE_GATE_20260423_172026.md",
+          "extension": ".md",
+          "size_bytes": 2297,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "c1d7726fd653d2b5be0d1214631139dab4803338b312021821409e2e22fc9673",
+      "size_bytes": 2308,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\registry.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\core\\hormiguero_governance\\registry.py",
+        "root": "workspace_lrgonzalez",
+        "name": "registry.py",
+        "extension": ".py",
+        "size_bytes": 2308,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\registry.py",
+          "rel_to_workspace": "-=MEDIOEVO=-\\CLAUDIO - researchs\\GEODIA\\claudio_complete_stack\\src\\claudio_complete_stack\\registry.py",
+          "root": "workspace_lrgonzalez",
+          "name": "registry.py",
+          "extension": ".py",
+          "size_bytes": 2308,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "bbfe6889ad164876eec102a8da82a623a4d148ddccfa75207f51e6c9b66ef05b",
+      "size_bytes": 2389,
+      "extension": ".json",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\manifest.json",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\manifest.json",
+        "root": "workspace_lrgonzalez",
+        "name": "manifest.json",
+        "extension": ".json",
+        "size_bytes": 2389,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\manifest.json",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\manifest.json",
+          "root": "workspace_lrgonzalez",
+          "name": "manifest.json",
+          "extension": ".json",
+          "size_bytes": 2389,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "8a7ded691a5d6dc20fc4b4caac177b674d3871e1be3dad71220beae146f0bb64",
+      "size_bytes": 2395,
+      "extension": ".md",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\asistente-negocio\\commercial\\GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+        "rel_to_workspace": "apps\\commercial\\asistente-negocio\\commercial\\GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+        "root": "workspace_lrgonzalez",
+        "name": "GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+        "extension": ".md",
+        "size_bytes": 2395,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+          "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\products\\asistente_negocio\\commercial\\GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+          "root": "workspace_lrgonzalez",
+          "name": "GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+          "extension": ".md",
+          "size_bytes": 2395,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    },
+    {
+      "sha256": "19bbca038e3c41a906bb9a751a9e42ad5dbdbc1118c0a751c5e5245e8dc5ebc9",
+      "size_bytes": 2416,
+      "extension": ".py",
+      "group_count": 2,
+      "action_gate": "REVIEW",
+      "decision": "CANDIDATE_DELETE_AFTER_CANONICAL_CONFIRMATION",
+      "psi_state": "INFERENCIA",
+      "proposed_canonical": {
+        "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\electron\\generate_argus_icon.py",
+        "rel_to_workspace": "-=MEDIOEVO=-\\-=LIBROS\\claudio\\apps\\argus_desktop\\electron\\generate_argus_icon.py",
+        "root": "workspace_lrgonzalez",
+        "name": "generate_argus_icon.py",
+        "extension": ".py",
+        "size_bytes": 2416,
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      "candidate_duplicates": [
+        {
+          "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\commercial\\argus-desktop\\electron\\generate_argus_icon.py",
+          "rel_to_workspace": "apps\\commercial\\argus-desktop\\electron\\generate_argus_icon.py",
+          "root": "workspace_lrgonzalez",
+          "name": "generate_argus_icon.py",
+          "extension": ".py",
+          "size_bytes": 2416,
+          "registered": "no",
+          "psi_state": "CERTEZA",
+          "action_gate": "REVIEW",
+          "decision": "KEEP_OR_REVIEW"
+        }
+      ],
+      "required_before_delete": [
+        "confirm canonical path is the source of truth",
+        "create or update ficha for the group",
+        "record full SHA256 and reason in DELETE_CANDIDATES.md",
+        "run secret scan on touched docs/scripts",
+        "obtain ActionGate APPROVE for the specific paths"
+      ]
+    }
+  ],
+  "rules": [
+    "This report never approves deletion.",
+    "Every proposed duplicate remains REVIEW until canonical source and ficha are confirmed.",
+    "Private, release, env, archive, vendor, secret-like and binary/asset paths are excluded."
+  ]
+}

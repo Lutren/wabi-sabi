@@ -2916,5 +2916,70 @@
         "No external action, publication, extraction or source move executed."
       ]
     }
+  ],
+  "seto_residual_review_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "REVIEW_UNMATCHED_NO_DELETE",
+      "scope": "PSI redundant vault residual files after exact duplicate cleanup",
+      "report": "docs/intake/SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md",
+      "json": "qa_artifacts/release_validation/seto-psi-vault-residual-review-2026-05-05.json",
+      "artifact_hashes": {
+        "report": "6224F70782EDCA944030DFD6A703C4665403F6D5FD6CCC60ADDD33679A1664AA",
+        "json": "D07980496DFCD43DB17D41C74FE3D175EB5267C9BBFD3FF840224FA9D22C940C"
+      },
+      "summary": {
+        "residual_files": 4,
+        "residual_bytes": 7505,
+        "exact_duplicate_matches_outside_vault": 0,
+        "approved_deletions": 0,
+        "review_unmatched": 4
+      },
+      "action_gate": {
+        "decision": "REVIEW",
+        "no_delete": true,
+        "requires_canonical_replacement_or_keep_decision": true,
+        "requires_hash_refresh_before_future_action": true
+      },
+      "decisions": [
+        "The remaining PSI redundant vault files have no exact canonical match.",
+        "No deletion is approved from this residual set.",
+        "Future action requires semantic review, replacement mapping or keep/archive decision."
+      ]
+    }
+  ],
+  "seto_decision_learning_artifacts": [
+    {
+      "date": "2026-05-05",
+      "status": "LOCAL_CONTRACT_NO_MODEL_TRAINING",
+      "scope": "Claudio/Wabi-Sabi operational decision learning from SETO evidence",
+      "contract": "docs/developer/SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md",
+      "examples_jsonl": "qa_artifacts/release_validation/seto-observacionismo-decision-examples-2026-05-05.jsonl",
+      "secret_scan_json": "qa_artifacts/release_validation/seto-decision-learning-scan-2026-05-05.json",
+      "artifact_hashes": {
+        "contract": "86E0FBC05B4C897DADB8481F86D4F7C121B567AD6805EF17EC9E74C9F4303C26",
+        "examples_jsonl": "B00114556582418EFD3AE37C453B2B5FC0E2659EDB6D57CF4032A0F2DDE2E4D3",
+        "secret_scan_json": "CDFA057F2D4C51E86F0ED8B3C2C5113A42857A2B5B4B5BD830D2D9A9FB6DC4C9"
+      },
+      "summary": {
+        "decision_examples": 7,
+        "states": [
+          "CERTEZA",
+          "INFERENCIA",
+          "INCOGNITA",
+          "BLOQUEADO"
+        ],
+        "gates": [
+          "APPROVE",
+          "REVIEW",
+          "BLOCK"
+        ]
+      },
+      "decisions": [
+        "Claudio learns from decision envelopes, not raw theory as truth.",
+        "APPROVE requires local-only action, canonical proof, no boundary flags, result artifact and post-validation.",
+        "Uncertain cases create ficha, hash evidence and handoff without touching files."
+      ]
+    }
   ]
 }

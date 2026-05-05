@@ -1,0 +1,50 @@
+{
+  "schema": "medioevo.seto_residual_review.v1",
+  "generated_at_utc": "2026-05-05T09:28:00Z",
+  "status": "REVIEW_UNMATCHED_NO_DELETE",
+  "scope": "PSI redundant vault residual files after exact duplicate cleanup",
+  "vault_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\-=CEREBRO=-\\-=PSI=-\\archive\\vault_redundante_2026-04-26",
+  "summary": {
+    "residual_files": 4,
+    "residual_bytes": 7505,
+    "exact_duplicate_matches_outside_vault": 0,
+    "approved_deletions": 0,
+    "review_unmatched": 4
+  },
+  "items": [
+    {
+      "path": "EML_EXTENSION_PACK_v0_1\\10_EML_SYMBOLIC_KERNEL.md",
+      "bytes": 4890,
+      "sha256": "2f4cfd81f254dd5b773a4c0105a2b0d8e7c6019714170b4a1dba27aa85cfeb4f",
+      "decision": "REVIEW_UNMATCHED",
+      "reason": "no exact canonical match found"
+    },
+    {
+      "path": "templates\\HANDOFF_ANCHOR_GENERATED.txt",
+      "bytes": 895,
+      "sha256": "aebc679f5f6415f46f917b766f6dbef6d4e01b82833a2037d21fc89223b65204",
+      "decision": "REVIEW_UNMATCHED",
+      "reason": "generated-looking file, but no canonical replacement proven"
+    },
+    {
+      "path": "templates\\NEXT_SESSION_BRIEF.example.md",
+      "bytes": 457,
+      "sha256": "7cf3e5857a038c8508b36b640de8fe24f282d3ee2fd0b0b70bb1ffee54cdda1f",
+      "decision": "REVIEW_UNMATCHED",
+      "reason": "example template may be useful; no exact canonical replacement proven"
+    },
+    {
+      "path": "templates\\SESSION_FINGERPRINT.example.json",
+      "bytes": 1263,
+      "sha256": "a9a9047f3b13e65b41b91211038c66afdc019d6a86968a02f15027e7183407ca",
+      "decision": "REVIEW_UNMATCHED",
+      "reason": "example schema payload may be useful; no exact canonical replacement proven"
+    }
+  ],
+  "action_gate": {
+    "decision": "REVIEW",
+    "no_delete": true,
+    "requires_canonical_replacement_or_keep_decision": true,
+    "requires_hash_refresh_before_future_action": true
+  }
+}

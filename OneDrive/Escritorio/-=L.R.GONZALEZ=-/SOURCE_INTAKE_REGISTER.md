@@ -540,6 +540,42 @@ Result:
   `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\templates\NEXT_SESSION_BRIEF.md`.
 - Secret scan on touched logs and evidence: `0` findings.
 
+## SETO PSI Vault Residual Review And Decision Learning 2026-05-05
+
+This pass closes the exact-duplicate cleanup line for
+`vault_redundante_2026-04-26` by marking the remaining four files as
+`REVIEW_UNMATCHED`. It also converts the observed SETO decisions into a local
+decision-learning contract for Claudio/Wabi-Sabi.
+
+Artifacts:
+
+- `docs\intake\SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-psi-vault-residual-review-2026-05-05.json`
+- `docs\developer\SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-observacionismo-decision-examples-2026-05-05.jsonl`
+- `qa_artifacts\release_validation\seto-decision-learning-scan-2026-05-05.json`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md` | `6224F70782EDCA944030DFD6A703C4665403F6D5FD6CCC60ADDD33679A1664AA` |
+| `seto-psi-vault-residual-review-2026-05-05.json` | `D07980496DFCD43DB17D41C74FE3D175EB5267C9BBFD3FF840224FA9D22C940C` |
+| `SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md` | `86E0FBC05B4C897DADB8481F86D4F7C121B567AD6805EF17EC9E74C9F4303C26` |
+| `seto-observacionismo-decision-examples-2026-05-05.jsonl` | `B00114556582418EFD3AE37C453B2B5FC0E2659EDB6D57CF4032A0F2DDE2E4D3` |
+| `seto-decision-learning-scan-2026-05-05.json` | `CDFA057F2D4C51E86F0ED8B3C2C5113A42857A2B5B4B5BD830D2D9A9FB6DC4C9` |
+
+Result:
+
+- Residual unmatched vault files: `4`.
+- Residual bytes: `7,505`.
+- Approved deletions: `0`.
+- ActionGate: `REVIEW`.
+- Claudio contract examples: `7`.
+- Secret scan on touched docs/registers/evidence: `0` findings.
+- No external publication, extraction, source move or model training was
+  performed.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

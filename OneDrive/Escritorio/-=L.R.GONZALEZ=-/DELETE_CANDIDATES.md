@@ -366,3 +366,15 @@ Required before any path can become `DELETE_APPROVED_AFTER_HASH`:
 | `SETO-PSI-VRB2-005` | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\bonus\eml_kernel.py` | `a0b62694e72086ebc5aa6f6c270e9dd653fc26325140eced7db9aaf91d902fcc` | 2060 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\eml_kernel.py` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` |
 | `SETO-PSI-VRB3-001` | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\bonus\psi_canon_compiler.py` | `f70db5e207b51d8607e0b478452a5554fd5994cc9f59ec04c85223d4d0632ab7` | 10798 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\psi_canon_compiler.py` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` |
 | `SETO-PSI-VRB3-002` | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\SESSION_FINGERPRINT.schema.json` | `7797a4a11d9fbd14e53dd7e1b7bd9da0e47d1e721438e5376a1a7dba31113770` | 2465 | `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\templates\SESSION_FINGERPRINT.schema.json` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` |
+
+### Residual REVIEW, Not Delete
+
+The remaining PSI redundant vault files are explicitly excluded from deletion
+until a semantic merge, canonical replacement or keep/archive decision exists.
+
+| path | sha256 | bytes | gate | current decision |
+|---|---|---:|---|---|
+| `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\EML_EXTENSION_PACK_v0_1\10_EML_SYMBOLIC_KERNEL.md` | `2f4cfd81f254dd5b773a4c0105a2b0d8e7c6019714170b4a1dba27aa85cfeb4f` | 4890 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |
+| `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\HANDOFF_ANCHOR_GENERATED.txt` | `aebc679f5f6415f46f917b766f6dbef6d4e01b82833a2037d21fc89223b65204` | 895 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |
+| `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\NEXT_SESSION_BRIEF.example.md` | `7cf3e5857a038c8508b36b640de8fe24f282d3ee2fd0b0b70bb1ffee54cdda1f` | 457 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |
+| `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\archive\vault_redundante_2026-04-26\templates\SESSION_FINGERPRINT.example.json` | `a9a9047f3b13e65b41b91211038c66afdc019d6a86968a02f15027e7183407ca` | 1263 | `REVIEW` | `REVIEW_UNMATCHED_NO_DELETE` |

@@ -19,5 +19,7 @@ Read:
 - `docs\developer\CURADOR_SETO_GLOBAL_OPERATING_CONTRACT_2026-05-05.md`
 - `docs\developer\SETO_CONCURRENT_AGENT_COORDINATION_2026-05-05.md`
 - `docs\intake\SETO_DUPLICATE_GROUP_FICHAS_BATCH1_2026-05-05.md`
+- `docs\intake\SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md`
+- `docs\developer\SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md`
 
 Candidate first package: `observacionismo-gate`.

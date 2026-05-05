@@ -1,0 +1,24 @@
+{
+  "schema": "medioevo.secret_scan_result.v1",
+  "generated_at_utc": "2026-05-05T09:42:00Z",
+  "status": "PASS",
+  "scope": {
+    "paths": [
+      "docs/intake/SETO_PSI_VAULT_RESIDUAL_REVIEW_2026-05-05.md",
+      "docs/developer/SETO_OBSERVACIONISMO_DECISION_LEARNING_2026-05-05.md",
+      "SOURCE_INTAKE_REGISTER.md",
+      "source_intake_register.json",
+      "DELETE_CANDIDATES.md",
+      "docs/developer/INDEX.md"
+    ],
+    "artifacts": [
+      "qa_artifacts/release_validation/seto-psi-vault-residual-review-2026-05-05.json",
+      "qa_artifacts/release_validation/seto-observacionismo-decision-examples-2026-05-05.jsonl",
+      "qa_artifacts/release_validation/seto-decision-learning-scan-2026-05-05.json"
+    ],
+    "default_workspace_scan": false
+  },
+  "findings": [],
+  "count_reported": 0,
+  "truncated_at": 200
+}

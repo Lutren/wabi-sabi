@@ -6,10 +6,16 @@ Estado: paste-ready y public-safe. No contiene secretos, rutas locales ni ingeni
 
 Objetivo: corregir la presentacion publica y separar open source, comercial, teoria y frontera privada.
 
+Frase eje:
+
+```text
+Local-first AI systems that make agents leave evidence before risky action.
+```
+
 ### Bio corta
 
 ```text
-Evidence-gated AI systems, local-first agent safety, memory continuity, MEDIOEVO tools, and public-safe research notes.
+Local-first AI systems builder. Evidence gates for agents, audit trails, handoffs, MEDIOEVO tools. Sponsor: github.com/sponsors/Lutren
 ```
 
 ### Seccion: Publication Lanes
@@ -43,7 +49,7 @@ I split the work into four lanes:
 ### Headline
 
 ```text
-Founder at L.R.G Ventures LLC | Local-first AI systems | Agent safety gates, audit trails and product workflows
+Creator of MEDIOEVO | Local-first AI systems | Agent safety gates, evidence logs and data curation
 ```
 
 ### About

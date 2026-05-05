@@ -1,0 +1,65 @@
+{
+  "schema": "medioevo.public_profile_positioning.v1",
+  "timestamp_utc": "2026-05-05T21:31:52Z",
+  "status": "verified_no_external_mutation_due_host_block",
+  "operator_authorization": "broad authorization recorded in chat; target-specific ActionGate still enforced",
+  "host_gate": {
+    "command": "python tools\\host_observacionista.py --no-write",
+    "cwd": "claudio",
+    "gate": "BLOCK",
+    "status": "JAMMING",
+    "reasons": [
+      "memoria_alta",
+      "proceso_dominante_cpu",
+      "residuo_alto"
+    ],
+    "memory_pct": 89.3,
+    "disk_pct": 78.5,
+    "dominant_axis": "r_cpu",
+    "allowed_actions": [
+      "observe",
+      "verify",
+      "recalibrate",
+      "reset_handoff"
+    ]
+  },
+  "github": {
+    "account": "Lutren",
+    "profile_url": "https://github.com/Lutren",
+    "public_repos": 23,
+    "profile_readme_sha": "5e6aa51388978d7c1405333b37451c6f47646abf",
+    "profile_readme_size": 6661,
+    "current_bio": "Local-first AI systems builder. Evidence gates for agents, audit trails, handoffs, MEDIOEVO tools. Sponsor: github.com/sponsors/Lutren",
+    "readme_contains": [
+      "evidence before action",
+      "Publication Lanes",
+      "Three Public Paths",
+      "Sponsorship",
+      "private boundary"
+    ],
+    "decision": "NO_CHANGE_NEEDED_NOW",
+    "external_mutation": false
+  },
+  "github_sponsors": {
+    "url": "https://github.com/sponsors/Lutren",
+    "http_status": 200,
+    "contains_goal": true,
+    "contains_tiers": true,
+    "decision": "NO_CHANGE_NEEDED_NOW",
+    "external_mutation": false
+  },
+  "linkedin": {
+    "observed_from_github_profile": "https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/",
+    "older_local_candidate": "https://www.linkedin.com/in/luis-rene-gonzalez-53383798",
+    "status": "REVIEW",
+    "decision": "confirm_authenticated_owner_view_before_edit",
+    "external_mutation": false
+  },
+  "public_safe_boundary": {
+    "open_source": "interfaces, schemas, CLIs, synthetic examples, tests, checklists and low-claim whitepapers",
+    "commercial": "UI wrappers, support, templates, installers, books and implementation help",
+    "theory_public": "operational Observacionismo as engineering method with falsifiers and claim gates",
+    "private_blocked": "runtime internals, prompts, thresholds, datasets, private DUAT/GEODIA, books in progress, family data, RPG/TCG, secrets and account/session state"
+  },
+  "next_gate_approved_action": "If host gate returns APPROVE, update exactly one external target and write post-action evidence before moving to the next target."
+}

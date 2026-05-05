@@ -1,24 +1,24 @@
 {
   "schema": "medioevo.global_curador_resume.v1",
-  "updated_at_utc": "2026-05-05T20:06:17.558969+00:00",
+  "updated_at_utc": "2026-05-05T20:07:01.024523+00:00",
   "scan_mode": "incremental",
   "status": "DRY_RUN_NO_DELETE_NO_MOVE",
   "resume": {
     "truncated": true,
     "max_files": 500,
-    "start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v3\\@claude-flow\\swarm\\__tests__\\topology.test.ts",
+    "start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v3\\plugins\\gastown-bridge\\wasm\\ruvector-gnn-wasm\\src\\topo.rs",
     "start_after_found": true,
-    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v3\\plugins\\gastown-bridge\\wasm\\ruvector-gnn-wasm\\src\\topo.rs",
-    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v3\\plugins\\gastown-bridge\\wasm\\ruvector-gnn-wasm\\src\\topo.rs",
+    "last_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\EJECUTAR_ALCATEL_AUTO.bat",
+    "next_start_after": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\EJECUTAR_ALCATEL_AUTO.bat",
     "processed_files": 500,
     "root_labels": [
       "workspace_lrgonzalez"
     ]
   },
   "outputs": {
-    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-seto-audit-2026-05-05-workspace_lrgonzalez_max500_resume73dd7aa4c7.json",
-    "csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500_resume73dd7aa4c7.csv",
-    "report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500_RESUME73DD7AA4C7.md"
+    "json": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-seto-audit-2026-05-05-workspace_lrgonzalez_max500_resume5c07a1d9ca.json",
+    "csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-workspace_lrgonzalez_max500_resume5c07a1d9ca.csv",
+    "report": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_WORKSPACE_LRGONZALEZ_MAX500_RESUME5C07A1D9CA.md"
   },
-  "next_command_hint": "python tools\\release\\global_curador_audit.py --only-root workspace_lrgonzalez --max-files 500 --start-after \"C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\.skills\\ruflo\\v3\\plugins\\gastown-bridge\\wasm\\ruvector-gnn-wasm\\src\\topo.rs\""
+  "next_command_hint": "python tools\\release\\global_curador_audit.py --only-root workspace_lrgonzalez --max-files 500 --start-after \"C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio\\EJECUTAR_ALCATEL_AUTO.bat\""
 }

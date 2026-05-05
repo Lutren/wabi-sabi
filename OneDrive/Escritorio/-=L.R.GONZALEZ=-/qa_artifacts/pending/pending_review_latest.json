@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-05T18:53:07+00:00",
+  "generated_at": "2026-05-05T18:55:53+00:00",
   "date": "2026-05-05",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,30 +10,30 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 916,
-    "dedup_open": 854,
+    "raw_open": 840,
+    "dedup_open": 785,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 830
+      "UNCLASSIFIED": 761
     },
     "by_lane": {
       "cleanup_migration": 1,
-      "commercial": 90,
+      "commercial": 88,
       "general": 155,
-      "open_source": 9,
+      "open_source": 3,
       "private_rpg": 93,
-      "runtime_claudio": 486,
+      "runtime_claudio": 425,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 312,
-      "host_or_heavy": 73,
+      "external_or_gated": 297,
+      "host_or_heavy": 68,
       "legal_or_human": 135,
-      "local_candidate": 231,
+      "local_candidate": 182,
       "private_boundary": 103
     },
     "top_items": [
@@ -233,128 +233,128 @@
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Estructura base cmuyada",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:289",
+        "item": "muyddit r/fmuyelance - EN version",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:524",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Prompts de personalidad definidos",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:290",
+        "item": "muyddit r/fmuyelance - ES version (r/fmuyelancers_es or similar)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:525",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "CLI implementada",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:291",
+        "item": "muyddit r/ADHD - EN version",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:526",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "API muyST funcional",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:293",
+        "item": "muyddit r/neurodiversity - EN version",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:527",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Integración con Claudio pipeline",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:295",
+        "item": "muyddit r/writing - EN version",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:529",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Plantillas de landing pages",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/CHANGELOG.md:14",
+        "item": "muyddit r/selfpublish - EN version",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:530",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Exportar a Electron app",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/CHANGELOG.md:15",
-        "occurrences": 2
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "medioevo.space/tienda/minioffice accesible",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/PUBLICAR_AGORA.md:180",
+        "item": "Cross-post to r/sideproject, r/indiehackers, r/smallbusiness as appropriate",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/PROMO_POSTS_SOFTWARE.md:535",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Badges funcionando",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/PUBLICAR_AGORA.md:184",
+        "item": "Polish mockup.html as interactive demo",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:73",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Plantillas de landing pages personalizables",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:263",
+        "item": "Cmuyate landing page with demo video",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:74",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Plugin para VS Code",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:265",
+        "item": "Collect email waitlist",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:77",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Chrome extension",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:268",
+        "item": "Build Electron app (.exe + .dmg)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:80",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "WebSocket para updates en tiempo muyal",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:270",
+        "item": "muycord demo video (2-3 min)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:81",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Sistema de plugins",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:274",
+        "item": "ProductHunt launch (Tuesday morning)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:82",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "API pública documentada",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:275",
+        "item": "Post on muylevant submuyddits",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:83",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Docker container",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:276",
+        "item": "Send to email waitlist",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:84",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "local_candidate",
+        "item": "Facebook ads (LATAM market first, Spanish speakers)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/products/crm/BUSINESS.md:87",
         "occurrences": 1
       }
     ]

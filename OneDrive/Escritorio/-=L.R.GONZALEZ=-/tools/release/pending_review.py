@@ -82,10 +82,17 @@ PENDING_EXCLUDE_SUBSTRINGS = [
     "/brain_os/ceo_briing.md",
     "/brain_os/executive_summary.md",
     "/city_overlay/estado_actual.md",
+    "/claudio_os/",
     "/claudio_os/implementacion",
     "/claudio_os/readme_final.md",
     "/docs/concilio_darvi.md",
     "/docs/el_bardo.md",
+    "/docs/applications/",
+    "/installer/",
+    "/medioevo_agent_hub/readme.md",
+    "/mini_office/",
+    "/oppo_deploy/",
+    "/oppo_robot/",
 ]
 
 CLAUDIO_ROOT = ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio"
@@ -178,7 +185,7 @@ def classify_lane(path: str, text: str) -> str:
         return "private_rpg"
     if any(marker in value for marker in ("wave", "wabi-sabi", "wabi_sabi", "document collapse")):
         return "wave_fc"
-    if any(marker in value for marker in ("flujocrm", "asistente-negocio", "asistente_negocio", "mini-office", "argus", "gumroad", "checkout", "venta", "comercial", "commercial")):
+    if any(marker in value for marker in ("flujocrm", "asistente-negocio", "asistente_negocio", "mini-office", "mini_office", "argus", "gumroad", "checkout", "venta", "comercial", "commercial")):
         return "commercial"
     if any(marker in value for marker in ("obsai-core", "residueos", "observacionismo-gate", "open-dev", "github", "safe-exec", "agent-handoff", "duat-genesis", "rapid-agent")):
         return "open_source"
@@ -384,6 +391,22 @@ def classify_blocker(text: str, lane: str | None = None, path: str | None = None
         "block_live_ui_gate",
         "block_publication",
         "block_model_training_gate",
+        "claude",
+        "_call_claude",
+        "openai",
+        "_call_openai",
+        "deepseek",
+        "_call_deepseek",
+        "grok",
+        "_call_grok",
+        "gemini",
+        "_call_gemini",
+        "copilot",
+        "_call_copilot",
+        "alibaba",
+        "_call_alibaba",
+        "nvidia",
+        "_call_nvidia",
     )
     destructive_or_cleanup_markers = (
         "elichicar",

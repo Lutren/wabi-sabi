@@ -1,6 +1,6 @@
 # Curador SETO Next Actions
 
-Generated UTC: `2026-05-05T18:52:38.388912+00:00`
+Generated UTC: `2026-05-05T18:55:41.751068+00:00`
 
 Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
@@ -35,11 +35,11 @@ Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
 | blocker | dedup_count |
 |---|---:|
-| `external_or_gated` | 319 |
-| `host_or_heavy` | 77 |
-| `legal_or_human` | 140 |
-| `local_candidate` | 259 |
-| `private_boundary` | 104 |
+| `external_or_gated` | 297 |
+| `host_or_heavy` | 68 |
+| `legal_or_human` | 135 |
+| `local_candidate` | 182 |
+| `private_boundary` | 103 |
 
 ## Cola recomendada
 

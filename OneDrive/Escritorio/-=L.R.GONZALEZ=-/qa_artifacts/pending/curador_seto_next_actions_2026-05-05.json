@@ -1,8 +1,8 @@
 {
   "schema": "medioevo.curador_seto_next_actions.v1",
-  "generated_at_utc": "2026-05-05T18:52:38.388912+00:00",
+  "generated_at_utc": "2026-05-05T18:55:41.749043+00:00",
   "status": {
-    "generated_at_utc": "2026-05-05T18:52:38.386324+00:00",
+    "generated_at_utc": "2026-05-05T18:55:41.709682+00:00",
     "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
     "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
     "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
@@ -35,22 +35,22 @@
   "pending": {
     "available": true,
     "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\pending\\pending_review_latest.json",
-    "generated_at": "2026-05-05T18:52:02+00:00",
-    "active_dedup_open": 899,
+    "generated_at": "2026-05-05T18:55:23+00:00",
+    "active_dedup_open": 785,
     "active_by_blocker": {
-      "external_or_gated": 319,
-      "host_or_heavy": 77,
-      "legal_or_human": 140,
-      "local_candidate": 259,
-      "private_boundary": 104
+      "external_or_gated": 297,
+      "host_or_heavy": 68,
+      "legal_or_human": 135,
+      "local_candidate": 182,
+      "private_boundary": 103
     },
     "active_by_lane": {
       "cleanup_migration": 1,
-      "commercial": 100,
+      "commercial": 88,
       "general": 155,
-      "open_source": 11,
+      "open_source": 3,
       "private_rpg": 93,
-      "runtime_claudio": 519,
+      "runtime_claudio": 425,
       "wave_fc": 3,
       "website_marketing": 17
     },
@@ -76,7 +76,7 @@
       "lane": "pending_review",
       "action_gate": "APPROVE_LOCAL",
       "title": "Trabajar candidatos locales primero",
-      "reason": "pending_review reporta 259 candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
+      "reason": "pending_review reporta 182 candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
       "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes."
     },
     {

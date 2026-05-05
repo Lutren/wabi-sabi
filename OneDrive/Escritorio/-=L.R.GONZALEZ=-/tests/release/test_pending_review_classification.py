@@ -41,6 +41,7 @@ def test_commercial_manual_checks_are_not_local_candidates() -> None:
 def test_private_game_lane_is_never_local_candidate() -> None:
     assert pending_review.classify_lane("claudio/products/V2_FIXES_GAMES.md", "Deck minimo inconsistente") == "private_rpg"
     assert pending_review.classify_blocker("Deck minimo inconsistente", lane="private_rpg") == "private_boundary"
+    assert pending_review.classify_lane("claudio/mini_office/README.md", "Plantillas de landing pages") == "commercial"
 
 
 def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
@@ -70,6 +71,12 @@ def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "claudio_os" / "README_FINAL.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "docs" / "CONCILIO_DARVI.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "docs" / "EL_BARDO.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "docs" / "applications" / "PRODUCT_HUNT_PREP.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "installer" / "BUILD_GUIDE.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "medioevo_agent_hub" / "README.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "mini_office" / "README.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "oppo_deploy" / "ESTADO_FINAL.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "oppo_robot" / "DNS_VIA_HTTP.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "apps" / "editorial_web" / "marketing" / "PROXIMOS-PASOS.md")
     assert pending_review.is_pending_denied(ROOT / "tools" / "claw-code" / "PARITY.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "reports" / "HORMIGUERO_HUB_COMPLETE_REPORT.md")

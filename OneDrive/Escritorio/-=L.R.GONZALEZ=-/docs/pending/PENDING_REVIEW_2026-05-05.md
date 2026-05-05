@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `1048`.
-- Active markdown deduplicated open items: `964`.
+- Active markdown raw open items: `916`.
+- Active markdown deduplicated open items: `854`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `70`.
 - Claudio deduplicated open items: `70`.
 
@@ -17,18 +17,18 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 940 |
+| UNCLASSIFIED | 830 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
 | cleanup_migration | 1 |
-| commercial | 100 |
+| commercial | 90 |
 | general | 155 |
-| open_source | 11 |
+| open_source | 9 |
 | private_rpg | 93 |
-| runtime_claudio | 584 |
+| runtime_claudio | 486 |
 | wave_fc | 3 |
 | website_marketing | 17 |
 
@@ -36,11 +36,11 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 330 |
-| host_or_heavy | 82 |
-| legal_or_human | 144 |
-| local_candidate | 304 |
-| private_boundary | 104 |
+| external_or_gated | 312 |
+| host_or_heavy | 73 |
+| legal_or_human | 135 |
+| local_candidate | 231 |
+| private_boundary | 103 |
 
 ## Claudio Master By Priority
 
@@ -89,7 +89,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2452 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2453 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2454 | 1 |
-| UNCLASSIFIED | runtime_claudio | local_candidate | Auto-start con shell:startup | -=MEDIOEVO=-/-=LIBROS/claudio/city_overlay/ESTADO_ACTUAL.md:75 | 1 |
+| UNCLASSIFIED | runtime_claudio | local_candidate | Estructura base cmuyada | -=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:289 | 1 |
 
 ## Kairos Fastlane
 

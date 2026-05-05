@@ -1,8 +1,8 @@
 {
   "schema": "medioevo.curador_seto_next_actions.v1",
-  "generated_at_utc": "2026-05-05T18:48:00.988533+00:00",
+  "generated_at_utc": "2026-05-05T18:52:38.388912+00:00",
   "status": {
-    "generated_at_utc": "2026-05-05T18:48:00.984340+00:00",
+    "generated_at_utc": "2026-05-05T18:52:38.386324+00:00",
     "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
     "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
     "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
@@ -35,22 +35,22 @@
   "pending": {
     "available": true,
     "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\pending\\pending_review_latest.json",
-    "generated_at": "2026-05-05T18:47:30+00:00",
-    "active_dedup_open": 1070,
+    "generated_at": "2026-05-05T18:52:02+00:00",
+    "active_dedup_open": 899,
     "active_by_blocker": {
-      "external_or_gated": 354,
-      "host_or_heavy": 84,
-      "legal_or_human": 146,
-      "local_candidate": 380,
-      "private_boundary": 106
+      "external_or_gated": 319,
+      "host_or_heavy": 77,
+      "legal_or_human": 140,
+      "local_candidate": 259,
+      "private_boundary": 104
     },
     "active_by_lane": {
       "cleanup_migration": 1,
-      "commercial": 107,
+      "commercial": 100,
       "general": 155,
-      "open_source": 14,
+      "open_source": 11,
       "private_rpg": 93,
-      "runtime_claudio": 680,
+      "runtime_claudio": 519,
       "wave_fc": 3,
       "website_marketing": 17
     },
@@ -76,7 +76,7 @@
       "lane": "pending_review",
       "action_gate": "APPROVE_LOCAL",
       "title": "Trabajar candidatos locales primero",
-      "reason": "pending_review reporta 380 candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
+      "reason": "pending_review reporta 259 candidatos locales; externos, legal, host-heavy y private_boundary siguen separados.",
       "next_step": "Elegir cierres locales con prueba directa y actualizar trackers, sin publicar ni mover fuentes."
     },
     {

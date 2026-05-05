@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-05T18:52:02+00:00",
+  "generated_at": "2026-05-05T18:53:07+00:00",
   "date": "2026-05-05",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,31 +10,31 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 961,
-    "dedup_open": 899,
+    "raw_open": 916,
+    "dedup_open": 854,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 875
+      "UNCLASSIFIED": 830
     },
     "by_lane": {
       "cleanup_migration": 1,
-      "commercial": 100,
+      "commercial": 90,
       "general": 155,
-      "open_source": 11,
+      "open_source": 9,
       "private_rpg": 93,
-      "runtime_claudio": 519,
+      "runtime_claudio": 486,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 319,
-      "host_or_heavy": 77,
-      "legal_or_human": 140,
-      "local_candidate": 259,
-      "private_boundary": 104
+      "external_or_gated": 312,
+      "host_or_heavy": 73,
+      "legal_or_human": 135,
+      "local_candidate": 231,
+      "private_boundary": 103
     },
     "top_items": [
       {
@@ -233,128 +233,128 @@
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Logo 240x240 PNG",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/applications/PRODUCT_HUNT_PREP.md:19",
+        "item": "Estructura base cmuyada",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:289",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Scmuyenshot gallery (3-5 scmuyenshots del hub funcionando)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/applications/PRODUCT_HUNT_PREP.md:20",
+        "item": "Prompts de personalidad definidos",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:290",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Cmuyar cuenta en producthunt.com",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/applications/PRODUCT_HUNT_PREP.md:25",
+        "item": "CLI implementada",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:291",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Subir assets",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/applications/PRODUCT_HUNT_PREP.md:26",
+        "item": "API muyST funcional",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:293",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Programar ship page",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/applications/PRODUCT_HUNT_PREP.md:27",
+        "item": "Integración con Claudio pipeline",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/medioevo_agent_hub/README.md:295",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Elegir día de lanzamiento (martes-jueves muycomendado)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/applications/PRODUCT_HUNT_PREP.md:29",
+        "item": "Plantillas de landing pages",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/CHANGELOG.md:14",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Build completó sin errores",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:229",
+        "item": "Exportar a Electron app",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/CHANGELOG.md:15",
+        "occurrences": 2
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "local_candidate",
+        "item": "medioevo.space/tienda/minioffice accesible",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/PUBLICAR_AGORA.md:180",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Executable existe en `installer/dist/`",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:230",
+        "item": "Badges funcionando",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/PUBLICAR_AGORA.md:184",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Probado en otra computadora (sin Python)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:231",
+        "item": "Plantillas de landing pages personalizables",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:263",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "README incluido",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:232",
+        "item": "Plugin para VS Code",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:265",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Licencia incluida",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:233",
+        "item": "Chrome extension",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:268",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Comandos de desinstalación probados",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:234",
+        "item": "WebSocket para updates en tiempo muyal",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:270",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Tamaño final verificado",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/BUILD_GUIDE.md:235",
+        "item": "Sistema de plugins",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:274",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Probar en VM sin Python",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/RESUMEN_EMPAQUETADO_2026-04-20.md:157",
+        "item": "API pública documentada",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:275",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "local_candidate",
-        "item": "Probar en PC sin internet",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/RESUMEN_EMPAQUETADO_2026-04-20.md:158",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "local_candidate",
-        "item": "Verificar que todos los módulos funcionan",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/installer/RESUMEN_EMPAQUETADO_2026-04-20.md:159",
+        "item": "Docker container",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/README.md:276",
         "occurrences": 1
       }
     ]

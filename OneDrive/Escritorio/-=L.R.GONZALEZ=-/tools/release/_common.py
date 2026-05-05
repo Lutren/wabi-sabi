@@ -140,7 +140,7 @@ def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
 
 
 def print_json(data: object) -> None:
-    print(json.dumps(data, indent=2, ensure_ascii=False))
+    print(json.dumps(data, indent=2, ensure_ascii=True))
 
 
 def ensure_under_root(path: Path) -> Path:

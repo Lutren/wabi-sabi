@@ -18,6 +18,7 @@ TODAY = "2026-05-05"
 DEFAULT_HASH_MAX_MB = 50
 DEFAULT_DUPLICATE_LIMIT = 80
 DEFAULT_LARGE_LIMIT = 80
+DEFAULT_STATE_OUT = ROOT / "runtime" / "curador_seto" / "global_curador_audit_state.json"
 
 GENERATED_DIR_NAMES = {
     ".git",
@@ -258,6 +259,32 @@ def default_roots() -> list[dict[str, object]]:
     ]
 
 
+def selected_root_defs(
+    root_labels: set[str] | None = None,
+    root_defs: list[dict[str, object]] | None = None,
+) -> list[dict[str, object]]:
+    roots = list(root_defs if root_defs is not None else default_roots())
+    if not root_labels:
+        return roots
+    requested = {label.lower() for label in root_labels}
+    selected = [item for item in roots if str(item["label"]).lower() in requested]
+    found = {str(item["label"]).lower() for item in selected}
+    missing = sorted(requested - found)
+    if missing:
+        available = ", ".join(str(item["label"]) for item in roots)
+        raise ValueError(f"unknown root label(s): {', '.join(missing)}; available: {available}")
+    return selected
+
+
+def normalize_resume_marker(value: str | None) -> str:
+    if not value:
+        return ""
+    path = Path(value)
+    if not path.is_absolute():
+        path = ROOT / path
+    return norm_abs(path)
+
+
 def should_skip_dir(path: Path) -> bool:
     return path.name in GENERATED_DIR_NAMES
 
@@ -293,7 +320,15 @@ def is_private_boundary(path: Path) -> bool:
     )
 
 
-def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
+def scan_roots(
+    hash_max_bytes: int,
+    registry_blob: str,
+    *,
+    root_labels: set[str] | None = None,
+    max_files: int | None = None,
+    start_after: str | None = None,
+    root_defs: list[dict[str, object]] | None = None,
+) -> dict[str, object]:
     rows: list[dict[str, object]] = []
     generated_dirs: list[dict[str, object]] = []
     project_roots: dict[str, dict[str, object]] = {}
@@ -301,6 +336,19 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
     root_stats: dict[str, dict[str, object]] = {}
     seen_files: set[str] = set()
     seen_dirs: set[str] = set()
+    selected_roots = selected_root_defs(root_labels, root_defs)
+    start_after_abs = normalize_resume_marker(start_after)
+    processed_files = 0
+    limit_reached = False
+    resume = {
+        "truncated": False,
+        "max_files": max_files or 0,
+        "start_after": start_after or "",
+        "last_path": "",
+        "next_start_after": "",
+        "processed_files": 0,
+        "root_labels": [str(item["label"]) for item in selected_roots],
+    }
 
     focus_psi = ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "-=CEREBRO=-" / "-=PSI=-"
     focus_paths = {
@@ -313,7 +361,7 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
     focus_abs = {name: norm_abs(path) for name, path in focus_paths.items()}
     focus_stats = {name: {"files": 0, "bytes": 0, "hashed": 0} for name in focus_paths}
 
-    for root_def in default_roots():
+    for root_def in selected_roots:
         label = str(root_def["label"])
         root = Path(root_def["path"])
         excludes = [Path(item) for item in root_def["exclude"]]  # type: ignore[arg-type]
@@ -333,6 +381,8 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
             continue
 
         for current, dir_names, file_names in os.walk(root, topdown=True, followlinks=False):
+            if limit_reached:
+                break
             current_path = Path(current)
             current_resolved = safe_resolve(current_path)
             if current_resolved in seen_dirs:
@@ -348,7 +398,7 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
             root_stats[label]["dirs"] = int(root_stats[label]["dirs"]) + 1
 
             kept_dirs: list[str] = []
-            for dir_name in dir_names:
+            for dir_name in sorted(dir_names, key=str.lower):
                 child = current_path / dir_name
                 if should_skip_dir(child):
                     generated_dirs.append(generated_dir_record(child, label))
@@ -367,12 +417,14 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
                     "registered": is_registered(current_path, registry_blob),
                 }
 
-            for file_name in file_names:
+            for file_name in sorted(file_names, key=str.lower):
                 path = current_path / file_name
                 resolved = safe_resolve(path)
                 if resolved in seen_files:
                     continue
                 seen_files.add(resolved)
+                if start_after_abs and norm_abs(resolved) <= start_after_abs:
+                    continue
 
                 try:
                     stat = path.stat()
@@ -407,6 +459,9 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
                     "decision": decision_for_flags(flags),
                 }
                 rows.append(row)
+                processed_files += 1
+                resume["processed_files"] = processed_files
+                resume["last_path"] = resolved
                 root_stats[label]["files"] = int(root_stats[label]["files"]) + 1
                 root_stats[label]["bytes"] = int(root_stats[label]["bytes"]) + size
 
@@ -415,6 +470,12 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
                     if is_under_norm(resolved_abs, focus_path_abs):
                         focus_stats[focus_name]["files"] += 1
                         focus_stats[focus_name]["bytes"] += size
+                if max_files and processed_files >= max_files:
+                    resume["truncated"] = True
+                    resume["next_start_after"] = resolved
+                    limit_reached = True
+                    dir_names[:] = []
+                    break
 
     hash_candidate_rows(rows, root_stats, focus_stats, focus_abs, hash_max_bytes, errors)
 
@@ -425,6 +486,8 @@ def scan_roots(hash_max_bytes: int, registry_blob: str) -> dict[str, object]:
         "errors": errors,
         "root_stats": root_stats,
         "focus_stats": focus_stats,
+        "selected_roots": selected_roots,
+        "resume": resume,
     }
 
 
@@ -612,6 +675,52 @@ def write_json(path: Path, data: object) -> None:
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False), encoding="utf-8")
 
 
+def incremental_suffix(root_labels: set[str], max_files: int | None, start_after: str | None) -> str:
+    if not root_labels and not max_files and not start_after:
+        return ""
+    label_text = "-".join(sorted(root_labels)) if root_labels else "selected"
+    parts = [label_text]
+    if max_files:
+        parts.append(f"max{max_files}")
+    if start_after:
+        parts.append("resume")
+    clean = re.sub(r"[^A-Za-z0-9_-]+", "_", "_".join(parts)).strip("_")
+    return f"-{clean}" if clean else "-incremental"
+
+
+def default_output_paths(root_labels: set[str], max_files: int | None, start_after: str | None) -> tuple[Path, Path, Path]:
+    suffix = incremental_suffix(root_labels, max_files, start_after)
+    json_path = ROOT / "qa_artifacts" / "release_validation" / f"global-curador-seto-audit-{TODAY}{suffix}.json"
+    csv_path = ROOT / "qa_artifacts" / "release_validation" / f"global-curador-file-manifest-{TODAY}{suffix}.csv"
+    report_suffix = suffix.replace("-", "_").upper()
+    report_path = ROOT / "docs" / "intake" / f"GLOBAL_CURADOR_SETO_AUDIT_{TODAY}{report_suffix}.md"
+    return json_path, csv_path, report_path
+
+
+def write_resume_state(path: Path, data: dict[str, object], json_path: Path, csv_path: Path, report_path: Path) -> None:
+    resume = data.get("resume", {})
+    state = {
+        "schema": "medioevo.global_curador_resume.v1",
+        "updated_at_utc": utc_now(),
+        "scan_mode": data.get("scan_mode"),
+        "status": data.get("status"),
+        "resume": resume,
+        "outputs": {
+            "json": str(json_path),
+            "csv": str(csv_path),
+            "report": str(report_path),
+        },
+        "next_command_hint": "",
+    }
+    if isinstance(resume, dict) and resume.get("truncated"):
+        labels = " ".join(f"--only-root {label}" for label in resume.get("root_labels", []))
+        state["next_command_hint"] = (
+            "python tools\\release\\global_curador_audit.py "
+            f"{labels} --max-files {resume.get('max_files')} --start-after \"{resume.get('next_start_after')}\""
+        ).strip()
+    write_json(path, state)
+
+
 def artifact_hash(path: Path) -> str:
     return sha256_file(path) if path.exists() else ""
 
@@ -622,12 +731,14 @@ def write_report(path: Path, data: dict[str, object], csv_path: Path, json_path:
     counts = summary["counts"]  # type: ignore[index]
     root_stats = data["root_stats"]  # type: ignore[index]
     focus_stats = data["focus_stats"]  # type: ignore[index]
+    resume = data.get("resume", {})
     lines = [
         "# Global Curador SETO Dry Audit 2026-05-05",
         "",
         "Status: `DRY_RUN_NO_DELETE_NO_MOVE`",
+        f"Scan mode: `{data.get('scan_mode', 'full')}`",
         "",
-        "This report implements the first global dry pass for PSI, Downloads, Desktop, the L.R.GONZALEZ workspace and E:. It records evidence for later cleanup gates; it does not approve deletion by itself.",
+        "This report implements a dry Curador pass over the selected roots. It records evidence for later cleanup gates; it does not approve deletion by itself.",
         "",
         "## Artifacts",
         "",
@@ -642,6 +753,20 @@ def write_report(path: Path, data: dict[str, object], csv_path: Path, json_path:
     ]
     for key, value in counts.items():  # type: ignore[union-attr]
         lines.append(f"| `{key}` | {value} |")
+    if isinstance(resume, dict):
+        lines.extend(
+            [
+                "",
+                "## Resume",
+                "",
+                "| field | value |",
+                "|---|---|",
+                f"| `truncated` | `{resume.get('truncated')}` |",
+                f"| `processed_files` | `{resume.get('processed_files')}` |",
+                f"| `max_files` | `{resume.get('max_files')}` |",
+                f"| `next_start_after` | `{resume.get('next_start_after') or ''}` |",
+            ]
+        )
     lines.extend(["", "## Root Stats", "", "| root | exists | files | dirs | MB | hashed | hash_skipped | generated_dirs_skipped |", "|---|---:|---:|---:|---:|---:|---:|---:|"])
     for label, stats in root_stats.items():  # type: ignore[union-attr]
         mb = int(stats["bytes"]) / 1024 / 1024
@@ -727,17 +852,25 @@ def main() -> int:
     parser.add_argument("--hash-max-mb", type=int, default=DEFAULT_HASH_MAX_MB)
     parser.add_argument("--duplicate-limit", type=int, default=DEFAULT_DUPLICATE_LIMIT)
     parser.add_argument("--large-limit", type=int, default=DEFAULT_LARGE_LIMIT)
-    parser.add_argument("--json-out", default=str(ROOT / "qa_artifacts" / "release_validation" / f"global-curador-seto-audit-{TODAY}.json"))
-    parser.add_argument("--csv-out", default=str(ROOT / "qa_artifacts" / "release_validation" / f"global-curador-file-manifest-{TODAY}.csv"))
-    parser.add_argument("--report-out", default=str(ROOT / "docs" / "intake" / f"GLOBAL_CURADOR_SETO_AUDIT_{TODAY}.md"))
+    parser.add_argument("--only-root", action="append", default=[], help="scan only a default root label; repeatable")
+    parser.add_argument("--max-files", type=int, default=0, help="stop after this many file rows and emit resume state")
+    parser.add_argument("--start-after", default="", help="resume after this absolute or workspace-relative path")
+    parser.add_argument("--json-out", default="")
+    parser.add_argument("--csv-out", default="")
+    parser.add_argument("--report-out", default="")
+    parser.add_argument("--state-out", default=str(DEFAULT_STATE_OUT))
     parser.add_argument("--witness-log", default=str(ROOT / "qa_artifacts" / "witness_log" / "curador_seto_witnesslog.jsonl"))
     parser.add_argument("--finalize-existing", action="store_true", help="finish report and WitnessLog from an existing JSON/CSV audit output")
     parser.add_argument("--json", action="store_true", help="print the summary JSON to stdout")
     args = parser.parse_args()
 
-    csv_path = Path(args.csv_out)
-    json_path = Path(args.json_out)
-    report_path = Path(args.report_out)
+    root_labels = {str(item) for item in args.only_root}
+    max_files = args.max_files if args.max_files > 0 else None
+    default_json, default_csv, default_report = default_output_paths(root_labels, max_files, args.start_after or None)
+    csv_path = Path(args.csv_out or default_csv)
+    json_path = Path(args.json_out or default_json)
+    report_path = Path(args.report_out or default_report)
+    state_path = Path(args.state_out)
     witness_path = Path(args.witness_log)
 
     if args.finalize_existing:
@@ -746,7 +879,16 @@ def main() -> int:
     else:
         hash_max_bytes = args.hash_max_mb * 1024 * 1024
         registry_blob = read_registry_texts()
-        scan = scan_roots(hash_max_bytes=hash_max_bytes, registry_blob=registry_blob)
+        try:
+            scan = scan_roots(
+                hash_max_bytes=hash_max_bytes,
+                registry_blob=registry_blob,
+                root_labels=root_labels or None,
+                max_files=max_files,
+                start_after=args.start_after or None,
+            )
+        except ValueError as exc:
+            parser.error(str(exc))
         rows = scan.pop("rows")
         summary = summarize(
             rows=rows,  # type: ignore[arg-type]
@@ -760,8 +902,11 @@ def main() -> int:
         data = {
             "generated_at_utc": utc_now(),
             "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+            "scan_mode": "incremental" if root_labels or max_files or args.start_after else "full",
             "workspace_root": str(ROOT),
             "hash_max_mb": args.hash_max_mb,
+            "selected_roots": [str(item["label"]) for item in scan["selected_roots"]],  # type: ignore[index]
+            "resume": scan["resume"],
             "root_stats": scan["root_stats"],
             "focus_stats": scan["focus_stats"],
             "summary": summary,
@@ -781,6 +926,9 @@ def main() -> int:
 
         write_csv(csv_path, rows)  # type: ignore[arg-type]
         write_json(json_path, data)
+    selected_roots_for_event = data.get("selected_roots")
+    if not isinstance(selected_roots_for_event, list):
+        selected_roots_for_event = [str(item["label"]) for item in selected_root_defs(root_labels or None)]
     event = write_witness_log(
         witness_path,
         {
@@ -788,11 +936,13 @@ def main() -> int:
             "event_type": "global_curador_seto_dry_audit",
             "actor": "tools/release/global_curador_audit.py",
             "status": "DRY_RUN_NO_DELETE_NO_MOVE",
-            "input_roots": [str(item["path"]) for item in default_roots()],
+            "scan_mode": data.get("scan_mode", "full"),
+            "input_roots": selected_roots_for_event,
             "outputs": {
                 "json": str(json_path),
                 "csv": str(csv_path),
                 "report": str(report_path),
+                "state": str(state_path),
             },
             "artifact_hashes": {
                 "json": artifact_hash(json_path),
@@ -803,6 +953,7 @@ def main() -> int:
     )
     data["witness_event_hash"] = event["event_hash"]
     write_json(json_path, data)
+    write_resume_state(state_path, data, json_path, csv_path, report_path)
     write_report(report_path, data, csv_path, json_path, witness_path)
 
     if args.json:

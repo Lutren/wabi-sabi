@@ -1,0 +1,432 @@
+{
+  "generated_at_utc": "2026-05-05T19:19:39.290562+00:00",
+  "status": "DRY_RUN_NO_DELETE_NO_MOVE",
+  "scan_mode": "incremental",
+  "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "hash_max_mb": 5,
+  "selected_roots": [
+    "downloads"
+  ],
+  "resume": {
+    "truncated": true,
+    "max_files": 25,
+    "start_after": "",
+    "last_path": "C:\\Users\\L-Tyr\\Downloads\\27.png",
+    "next_start_after": "C:\\Users\\L-Tyr\\Downloads\\27.png",
+    "processed_files": 25,
+    "root_labels": [
+      "downloads"
+    ]
+  },
+  "root_stats": {
+    "downloads": {
+      "path": "C:\\Users\\L-Tyr\\Downloads",
+      "exists": true,
+      "files": 25,
+      "dirs": 1,
+      "bytes": 40628381,
+      "hashed": 25,
+      "hash_skipped": 0,
+      "generated_dirs_skipped": 0,
+      "errors": 0
+    }
+  },
+  "focus_stats": {
+    "psi": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    },
+    "downloads": {
+      "files": 25,
+      "bytes": 40628381,
+      "hashed": 25
+    },
+    "desktop": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    },
+    "workspace": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    },
+    "e_drive": {
+      "files": 0,
+      "bytes": 0,
+      "hashed": 0
+    }
+  },
+  "summary": {
+    "counts": {
+      "files": 25,
+      "generated_dirs_recorded": 0,
+      "project_roots_detected": 0,
+      "errors": 0,
+      "hashed_files": 25,
+      "zip_or_archive_files": 0,
+      "exact_duplicate_groups": 0,
+      "version_review_groups": 0
+    },
+    "extension_counts_top": [
+      [
+        ".png",
+        20
+      ],
+      [
+        ".txt",
+        5
+      ]
+    ],
+    "decision_counts": [
+      [
+        "KEEP_OR_REVIEW",
+        25
+      ]
+    ],
+    "gate_counts": [
+      [
+        "REVIEW",
+        25
+      ]
+    ],
+    "flag_counts": [],
+    "exact_duplicates": [],
+    "version_collisions": [],
+    "large_files": [
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\11.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\11.png",
+        "name": "11.png",
+        "extension": ".png",
+        "size_bytes": 2335287,
+        "sha256": "dd4f9b1e1e7a3081c70b9f4dc3c97a02a53304f543fea7563e6245a103c81725",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\17.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\17.png",
+        "name": "17.png",
+        "extension": ".png",
+        "size_bytes": 2254242,
+        "sha256": "edaf383b4f89a5ac50e52d3e7aa1630b0b0b06fbbc0370d6ff25fc6439cabd45",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\20.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\20.png",
+        "name": "20.png",
+        "extension": ".png",
+        "size_bytes": 2183994,
+        "sha256": "3b3aec48f50d81dea909f22339047a838fc1858f759a6aac73279d12d413c3d0",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\27.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\27.png",
+        "name": "27.png",
+        "extension": ".png",
+        "size_bytes": 2157559,
+        "sha256": "97ec09224d5c4962695d16e8d29e0354d2cdeca3b1bd620d0f0bb8a398ded0e6",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\15.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\15.png",
+        "name": "15.png",
+        "extension": ".png",
+        "size_bytes": 2136058,
+        "sha256": "944b25348706b53b620d3c4c3c77a29193ee985f529c71bb600057e8abd7a7e9",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\13.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\13.png",
+        "name": "13.png",
+        "extension": ".png",
+        "size_bytes": 2105202,
+        "sha256": "79a4ad7d221b75264e92f97debc039fbba2c615a1875d15f7364f1573ad5557f",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\24.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\24.png",
+        "name": "24.png",
+        "extension": ".png",
+        "size_bytes": 2081430,
+        "sha256": "82b1bd35e1b4250f0b7cbdd01bed974b77f415d314fbae80bba399b8fc24008b",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\25.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\25.png",
+        "name": "25.png",
+        "extension": ".png",
+        "size_bytes": 2074802,
+        "sha256": "cc124e33d0de30d169d4474af7d8bc8b82ddf1ddacd3e0bde628cbfa7df14903",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\14.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\14.png",
+        "name": "14.png",
+        "extension": ".png",
+        "size_bytes": 2069430,
+        "sha256": "3a802bc81b26c735ffd8b4fdc02c3ca4b9fa9d6109d7fb4aab356d847a238dd3",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\2.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\2.png",
+        "name": "2.png",
+        "extension": ".png",
+        "size_bytes": 2066090,
+        "sha256": "1b6123606a15062e4399afe639138246c63d7cf121565564754b3b60593f80cc",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\12.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\12.png",
+        "name": "12.png",
+        "extension": ".png",
+        "size_bytes": 2004370,
+        "sha256": "6a76876b7711dbddbe507af80a413352f60cfb84a34215a975247757dcf8e7ef",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\26.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\26.png",
+        "name": "26.png",
+        "extension": ".png",
+        "size_bytes": 1949511,
+        "sha256": "aec056da76f35b8e6a52faac64bffaa0aa009f98e9a49ada552ecde25d7afad2",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\10.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\10.png",
+        "name": "10.png",
+        "extension": ".png",
+        "size_bytes": 1927064,
+        "sha256": "6170fed535bd6b257454b574c922f6d09e69ef8da8d06b89f9e67bba2476ba14",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\1.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\1.png",
+        "name": "1.png",
+        "extension": ".png",
+        "size_bytes": 1921777,
+        "sha256": "06aa70ec52be683a1647171dbf51923d91131c1c35adf4c6ce6e6a346ed0896c",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\22.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\22.png",
+        "name": "22.png",
+        "extension": ".png",
+        "size_bytes": 1919198,
+        "sha256": "f67667555de6831bf226b15c38dcbd05f30127c80c867d8225bd1a38ac34f8a1",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\19.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\19.png",
+        "name": "19.png",
+        "extension": ".png",
+        "size_bytes": 1912569,
+        "sha256": "d9890ff800958de60fe83462a1ff32194b3369703da2eb65aeb17684cba9246d",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\21.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\21.png",
+        "name": "21.png",
+        "extension": ".png",
+        "size_bytes": 1857629,
+        "sha256": "a857a7b057c80388fd89b610e2144df1e8fb26695f480721d34b2f06cdfac5dd",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\16.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\16.png",
+        "name": "16.png",
+        "extension": ".png",
+        "size_bytes": 1666832,
+        "sha256": "025209c956ec34f3b1afe81b8524f0ac4f557819b497a569ea462d26fa8862a6",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\23.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\23.png",
+        "name": "23.png",
+        "extension": ".png",
+        "size_bytes": 1647572,
+        "sha256": "b305d6f8a6dfced36408c42424819c7a459542dc980c14059ce9bb3c99f8bde4",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      },
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\18.png",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\18.png",
+        "name": "18.png",
+        "extension": ".png",
+        "size_bytes": 1527200,
+        "sha256": "2c1670e47c17b3ce99ebcebde93fb0766a413f8c0a3eab5dff0575605d6970d3",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "yes",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      }
+    ],
+    "zip_files": [],
+    "unregistered_review_sample": [
+      {
+        "root": "downloads",
+        "path": "C:\\Users\\L-Tyr\\Downloads\\# OSIT-OS Sistema Operativo Observa.txt",
+        "rel_to_workspace": "C:\\Users\\L-Tyr\\Downloads\\# OSIT-OS Sistema Operativo Observa.txt",
+        "name": "# OSIT-OS Sistema Operativo Observa.txt",
+        "extension": ".txt",
+        "size_bytes": 114096,
+        "sha256": "2245e8985c47f65a310d4163d2e57849e7d2e032ff49905a65356c3d2fb0bb6d",
+        "hash_status": "hashed",
+        "flags": "",
+        "registered": "no",
+        "psi_state": "CERTEZA",
+        "action_gate": "REVIEW",
+        "decision": "KEEP_OR_REVIEW"
+      }
+    ],
+    "delete_candidates_sample": []
+  },
+  "project_roots": [],
+  "generated_dirs_sample": [],
+  "errors_sample": [],
+  "manifest_csv": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\release_validation\\global-curador-file-manifest-2026-05-05-downloads_max25.csv",
+  "report_md": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\GLOBAL_CURADOR_SETO_AUDIT_2026-05-05_DOWNLOADS_MAX25.md",
+  "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
+  "rules": [
+    "No files were deleted, moved, extracted or published.",
+    "Exact duplicates remain REVIEW until a canonical copy is chosen.",
+    "Private game, TCG, secret-like and strong-claim material remains BLOCK.",
+    "Generated caches/builds are candidates only after ActionGate and path containment checks."
+  ],
+  "witness_event_hash": "5b9be60c1d517d47349cef1333f92f8eabd2f515529dce00731bfdb4d8bf40a8"
+}

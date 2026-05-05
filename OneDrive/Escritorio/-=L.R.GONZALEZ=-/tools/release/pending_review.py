@@ -81,6 +81,11 @@ PENDING_EXCLUDE_SUBSTRINGS = [
     "/brain_os/beta_recruitment.md",
     "/brain_os/ceo_briing.md",
     "/brain_os/executive_summary.md",
+    "/city_overlay/estado_actual.md",
+    "/claudio_os/implementacion",
+    "/claudio_os/readme_final.md",
+    "/docs/concilio_darvi.md",
+    "/docs/el_bardo.md",
 ]
 
 CLAUDIO_ROOT = ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio"

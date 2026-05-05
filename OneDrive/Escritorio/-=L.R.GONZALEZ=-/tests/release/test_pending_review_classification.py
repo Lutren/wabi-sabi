@@ -64,6 +64,12 @@ def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "brain_os" / "EXECUTIVE_SUMMARY.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "brain_os" / "CEO_BRIING.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "brain_os" / "IMPROVEMENT_ANALYSIS.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "city_overlay" / "ESTADO_ACTUAL.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "claudio_os" / "IMPLEMENTACION.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "claudio_os" / "IMPLEMENTACION_COMPLETA.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "claudio_os" / "README_FINAL.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "docs" / "CONCILIO_DARVI.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "docs" / "EL_BARDO.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "apps" / "editorial_web" / "marketing" / "PROXIMOS-PASOS.md")
     assert pending_review.is_pending_denied(ROOT / "tools" / "claw-code" / "PARITY.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "reports" / "HORMIGUERO_HUB_COMPLETE_REPORT.md")
@@ -71,6 +77,8 @@ def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
     assert pending_review.classify_blocker("Tests pytest Writer", path="-=MEDIOEVO=-/-=LIBROS/claudio/GAPS_MERCADO.md") == "legal_or_human"
     assert pending_review.classify_blocker("Configurar CI/CD", path="-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/PUBLICAR_EN_GITHUB.md") == "external_or_gated"
     assert pending_review.classify_blocker("Agmuygar sonido ambiente (opcional)") == "legal_or_human"
+    assert pending_review.classify_blocker("Implementar `_call_claude` real") == "external_or_gated"
+    assert pending_review.classify_blocker("Implementar `_call_openai` real") == "external_or_gated"
     assert pending_review.classify_blocker("Actualizar métricas diarias") == "external_or_gated"
     assert pending_review.classify_blocker("VISIBILITY_MATRIX.md aprobada por humano") == "legal_or_human"
     assert pending_review.classify_blocker("Iniciar servicios: API 47047 + Hub 7474") == "host_or_heavy"

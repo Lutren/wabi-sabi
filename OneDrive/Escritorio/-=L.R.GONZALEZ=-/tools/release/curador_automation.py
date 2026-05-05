@@ -976,11 +976,11 @@ def render_next_actions_report(status: dict[str, object], pending: dict[str, obj
     table_counts = status.get("sqlite_table_counts", {})
     status_counts = status.get("sqlite_status_counts", {})
     by_blocker = pending.get("active_by_blocker", {}) if isinstance(pending, dict) else {}
-    pending_at = pending.get("generated_at") if isinstance(pending, dict) else None
+    pending_source = "qa_artifacts/pending/pending_review_latest.json" if pending.get("available") else "missing"
     lines = [
         "# Curador SETO Next Actions",
         "",
-        f"Pending snapshot: `{pending_at or 'missing'}`",
+        f"Pending source: `{pending_source}`",
         "",
         "Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.",
         "",
@@ -1029,7 +1029,11 @@ def render_next_actions_report(status: dict[str, object], pending: dict[str, obj
 
 def stable_next_actions_payload(value: object) -> object:
     if isinstance(value, dict):
-        copy = {key: stable_next_actions_payload(item) for key, item in value.items() if key not in {"generated_at_utc"}}
+        copy = {
+            key: stable_next_actions_payload(item)
+            for key, item in value.items()
+            if key not in {"generated_at", "generated_at_utc"}
+        }
         if "status" in copy and isinstance(copy["status"], dict):
             copy["status"] = {key: item for key, item in copy["status"].items() if key != "generated_at_utc"}
         return copy

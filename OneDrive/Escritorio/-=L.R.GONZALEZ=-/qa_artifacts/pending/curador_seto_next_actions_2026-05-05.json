@@ -1,8 +1,8 @@
 {
   "schema": "medioevo.curador_seto_next_actions.v1",
-  "generated_at_utc": "2026-05-05T19:05:47.216603+00:00",
+  "generated_at_utc": "2026-05-05T19:08:24.883249+00:00",
   "status": {
-    "generated_at_utc": "2026-05-05T19:05:47.211492+00:00",
+    "generated_at_utc": "2026-05-05T19:08:24.820883+00:00",
     "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
     "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
     "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
@@ -35,7 +35,7 @@
   "pending": {
     "available": true,
     "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\pending\\pending_review_latest.json",
-    "generated_at": "2026-05-05T19:04:57+00:00",
+    "generated_at": "2026-05-05T19:08:12+00:00",
     "active_dedup_open": 452,
     "active_by_blocker": {
       "external_or_gated": 262,

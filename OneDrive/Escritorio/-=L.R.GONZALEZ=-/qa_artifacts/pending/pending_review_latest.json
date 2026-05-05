@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-05T19:01:54+00:00",
+  "generated_at": "2026-05-05T19:08:12+00:00",
   "date": "2026-05-05",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,14 +10,14 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 455,
-    "dedup_open": 450,
+    "raw_open": 457,
+    "dedup_open": 452,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 426
+      "UNCLASSIFIED": 428
     },
     "by_lane": {
       "cleanup_migration": 1,
@@ -25,13 +25,13 @@
       "general": 155,
       "open_source": 2,
       "private_rpg": 3,
-      "runtime_claudio": 190,
+      "runtime_claudio": 192,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 261,
-      "host_or_heavy": 54,
+      "external_or_gated": 262,
+      "host_or_heavy": 55,
       "legal_or_human": 126,
       "private_boundary": 9
     },
@@ -41,7 +41,7 @@
         "lane": "commercial",
         "blocker": "legal_or_human",
         "item": "**P1** No declarar FlujoCRM listo para venta final hasta probar el instalador Windows en maquina limpia, resolver icono final, code signing o aviso unsigned, docs de instalacion y legal/soporte.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1058",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1116",
         "occurrences": 1
       },
       {
@@ -49,7 +49,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1640",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1698",
         "occurrences": 1
       },
       {
@@ -57,7 +57,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\\qwen_observacion_benchmark_suite.py --execute --write-dataset`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:746",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:804",
         "occurrences": 1
       },
       {
@@ -65,7 +65,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Confirmar visualmente cual URL de LinkedIn es la canonica antes de editar el perfil.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1027",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1085",
         "occurrences": 1
       },
       {
@@ -73,7 +73,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Pegar headline/about/experience/featured links desde `LINKEDIN_PROFILE_PACKET_2026-05-01.md` en LinkedIn autenticado, cuidando no regalar tecnologia privada ni claims fuertes.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1028",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1086",
         "occurrences": 1
       },
       {
@@ -81,7 +81,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1082",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1140",
         "occurrences": 1
       },
       {
@@ -89,7 +89,7 @@
         "lane": "runtime_claudio",
         "blocker": "legal_or_human",
         "item": "**P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1101",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1159",
         "occurrences": 1
       },
       {
@@ -97,7 +97,7 @@
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**P1** Usar `release_manifests/` como base de QA, pero no crear paquetes ZIP hasta que secret scan, legal y release checklist pasen.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1134",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1192",
         "occurrences": 1
       },
       {
@@ -105,7 +105,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Convertir packaging interno en landing/copy publico solo despues de licencia, capturas, instalacion y ActionGate de publicacion.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1204",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1262",
         "occurrences": 1
       },
       {
@@ -113,7 +113,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1205",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1263",
         "occurrences": 1
       },
       {
@@ -121,7 +121,7 @@
         "lane": "wave_fc",
         "blocker": "external_or_gated",
         "item": "**P1** Cerrar licencia/EULA, instalacion, landing copy y ActionGate antes de vender o publicar Wave FC.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1083",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1141",
         "occurrences": 1
       },
       {
@@ -129,7 +129,7 @@
         "lane": "runtime_claudio",
         "blocker": "legal_or_human",
         "item": "**P2** Conector a checador fisico solo como read-only, con consentimiento, logs, fallback manual y aprobacion legal/laboral.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1208",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1266",
         "occurrences": 1
       },
       {
@@ -137,7 +137,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Crear alias Ollama optimizados con `python tools\\gemma4_observacion_optimizer.py --create-aliases --execute` solo cuando el host este `APPROVE`; luego correr `python tools\\benchmark_gemma4_observador.py --profile lite`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1311",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1369",
         "occurrences": 1
       },
       {
@@ -145,7 +145,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Ejecutar `python tools\\gemma4_observacion_benchmark_suite.py --execute --write-dataset` solo cuando el host este `APPROVE`; aceptar candidatos `input -> respuesta observacionista` en `datasets/gemma4_observacion_candidates.jsonl` antes de cualquier LoRA/QLoRA.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1312",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1370",
         "occurrences": 1
       },
       {
@@ -153,7 +153,7 @@
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**P2** Validar sesiones/credenciales sociales reales por plataforma antes de activar publicacion automatica; hoy solo se comprobo dry-run/capacidad tecnica, no post real.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1315",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1373",
         "occurrences": 1
       },
       {
@@ -161,7 +161,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Instalar dependencias faltantes en Ubuntu WSL (`live-build/lb`, `qemu-system-x86_64`, `xorriso`) y ejecutar `runtime/claudio_os_build/staging/claudio_os_blueprint/BUILD_IN_WSL.sh` para producir la ISO.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1538",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1596",
         "occurrences": 1
       },
       {
@@ -169,7 +169,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Bootear ISO en QEMU antes de cualquier USB/PC2.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1539",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1597",
         "occurrences": 1
       },
       {
@@ -177,7 +177,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P3.5** Discord Q&A session",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2437",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2495",
         "occurrences": 1
       },
       {
@@ -185,7 +185,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P3.6** Reseñas de Amazon (pedir a lectores)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2438",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2496",
         "occurrences": 1
       },
       {
@@ -193,7 +193,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P3.7** Colaboración con booktubers",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2439",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2497",
         "occurrences": 1
       },
       {
@@ -201,7 +201,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.3** Testimonios reales",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2448",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2506",
         "occurrences": 1
       },
       {
@@ -209,7 +209,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.5** Guest post en blogs de sci-fi",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2452",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2510",
         "occurrences": 1
       },
       {
@@ -217,7 +217,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.6** Podcasts de literatura",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2453",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2511",
         "occurrences": 1
       },
       {
@@ -225,7 +225,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.7** Colaboraciones cross-promo",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2454",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2512",
         "occurrences": 1
       },
       {
@@ -337,7 +337,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:635",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:693",
         "occurrences": 1
       },
       {
@@ -345,7 +345,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_CLEANUP_GATE** FASE 2A (Escritorio - colapsar a 6 iconos D008): preparar inventario no destructivo; ejecucion bloqueada hasta cleanup ActionGate especifico y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1512",
         "occurrences": 1
       },
       {
@@ -353,31 +353,31 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_CLEANUP_GATE** FASE 2B (E: drive): preparar inventario no destructivo; liberar espacio en E:/-=Medioevo=- queda bloqueado hasta ficha canonica de CONSOLIDADO_6MAS1/bestseller_output, cleanup ActionGate y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1455",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1513",
         "occurrences": 1
       }
     ]
   },
   "claudio_master": {
     "path": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md",
-    "raw_open": 70,
-    "dedup_open": 70,
+    "raw_open": 72,
+    "dedup_open": 72,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 46
+      "UNCLASSIFIED": 48
     },
     "by_lane": {
       "commercial": 8,
       "private_rpg": 1,
-      "runtime_claudio": 58,
+      "runtime_claudio": 60,
       "wave_fc": 3
     },
     "by_blocker": {
-      "external_or_gated": 42,
-      "host_or_heavy": 17,
+      "external_or_gated": 43,
+      "host_or_heavy": 18,
       "legal_or_human": 6,
       "private_boundary": 5
     },
@@ -387,7 +387,7 @@
         "lane": "commercial",
         "blocker": "legal_or_human",
         "item": "**P1** No declarar FlujoCRM listo para venta final hasta probar el instalador Windows en maquina limpia, resolver icono final, code signing o aviso unsigned, docs de instalacion y legal/soporte.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1058",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1116",
         "occurrences": 1
       },
       {
@@ -395,7 +395,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "P1 - Gumroad Claudio software: `pack-empresarial`, `writer-workbench` y `claudio-full` existen como drafts (`published=false`) y sin archivos/covers; no publicarlos hasta adjuntar paquete, portada y prueba de checkout.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1640",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1698",
         "occurrences": 1
       },
       {
@@ -403,7 +403,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P1** Ejecutar suite Qwen 3B cuando el host permita ruta pesada: `python tools\\qwen_observacion_benchmark_suite.py --execute --write-dataset`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:746",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:804",
         "occurrences": 1
       },
       {
@@ -411,7 +411,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Confirmar visualmente cual URL de LinkedIn es la canonica antes de editar el perfil.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1027",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1085",
         "occurrences": 1
       },
       {
@@ -419,7 +419,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Pegar headline/about/experience/featured links desde `LINKEDIN_PROFILE_PACKET_2026-05-01.md` en LinkedIn autenticado, cuidando no regalar tecnologia privada ni claims fuertes.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1028",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1086",
         "occurrences": 1
       },
       {
@@ -427,7 +427,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P1** Resolver QA visual DOCX; `artifact-tool` y `soffice/libreoffice` no estan disponibles en este host. Recheck 2026-05-03: `winget` detecta LibreOffice 26.2.2.2, pero `--scope user` no tiene instalador aplicable y el intento no interactivo estandar hizo timeout; no quedo instalado. Evidencia en `docs\\DOCX_VISUAL_QA_RENDERER_ATTEMPT_2026-05-03.md`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1082",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1140",
         "occurrences": 1
       },
       {
@@ -435,7 +435,7 @@
         "lane": "runtime_claudio",
         "blocker": "legal_or_human",
         "item": "**P1** Revisar jurisdiccion, impuestos, plataforma de pago y politica final con asesor legal.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1101",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1159",
         "occurrences": 1
       },
       {
@@ -443,7 +443,7 @@
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**P1** Usar `release_manifests/` como base de QA, pero no crear paquetes ZIP hasta que secret scan, legal y release checklist pasen.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1134",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1192",
         "occurrences": 1
       },
       {
@@ -451,7 +451,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Convertir packaging interno en landing/copy publico solo despues de licencia, capturas, instalacion y ActionGate de publicacion.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1204",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1262",
         "occurrences": 1
       },
       {
@@ -459,7 +459,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P1** Generar capturas/video local de demo y decidir artefactos publicos despues de ActionGate.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1205",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1263",
         "occurrences": 1
       },
       {
@@ -467,7 +467,7 @@
         "lane": "wave_fc",
         "blocker": "external_or_gated",
         "item": "**P1** Cerrar licencia/EULA, instalacion, landing copy y ActionGate antes de vender o publicar Wave FC.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1083",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1141",
         "occurrences": 1
       },
       {
@@ -475,7 +475,7 @@
         "lane": "runtime_claudio",
         "blocker": "legal_or_human",
         "item": "**P2** Conector a checador fisico solo como read-only, con consentimiento, logs, fallback manual y aprobacion legal/laboral.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1208",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1266",
         "occurrences": 1
       },
       {
@@ -483,7 +483,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Crear alias Ollama optimizados con `python tools\\gemma4_observacion_optimizer.py --create-aliases --execute` solo cuando el host este `APPROVE`; luego correr `python tools\\benchmark_gemma4_observador.py --profile lite`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1311",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1369",
         "occurrences": 1
       },
       {
@@ -491,7 +491,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Ejecutar `python tools\\gemma4_observacion_benchmark_suite.py --execute --write-dataset` solo cuando el host este `APPROVE`; aceptar candidatos `input -> respuesta observacionista` en `datasets/gemma4_observacion_candidates.jsonl` antes de cualquier LoRA/QLoRA.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1312",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1370",
         "occurrences": 1
       },
       {
@@ -499,7 +499,7 @@
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**P2** Validar sesiones/credenciales sociales reales por plataforma antes de activar publicacion automatica; hoy solo se comprobo dry-run/capacidad tecnica, no post real.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1315",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1373",
         "occurrences": 1
       },
       {
@@ -507,7 +507,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Instalar dependencias faltantes en Ubuntu WSL (`live-build/lb`, `qemu-system-x86_64`, `xorriso`) y ejecutar `runtime/claudio_os_build/staging/claudio_os_blueprint/BUILD_IN_WSL.sh` para producir la ISO.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1538",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1596",
         "occurrences": 1
       },
       {
@@ -515,7 +515,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**P2** Bootear ISO en QEMU antes de cualquier USB/PC2.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1539",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1597",
         "occurrences": 1
       },
       {
@@ -523,7 +523,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P3.5** Discord Q&A session",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2437",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2495",
         "occurrences": 1
       },
       {
@@ -531,7 +531,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P3.6** Reseñas de Amazon (pedir a lectores)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2438",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2496",
         "occurrences": 1
       },
       {
@@ -539,7 +539,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P3.7** Colaboración con booktubers",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2439",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2497",
         "occurrences": 1
       },
       {
@@ -547,7 +547,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.3** Testimonios reales",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2448",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2506",
         "occurrences": 1
       },
       {
@@ -555,7 +555,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.5** Guest post en blogs de sci-fi",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2452",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2510",
         "occurrences": 1
       },
       {
@@ -563,7 +563,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.6** Podcasts de literatura",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2453",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2511",
         "occurrences": 1
       },
       {
@@ -571,7 +571,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**P4.7** Colaboraciones cross-promo",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2454",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2512",
         "occurrences": 1
       },
       {
@@ -579,7 +579,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:635",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:693",
         "occurrences": 1
       },
       {
@@ -587,7 +587,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_CLEANUP_GATE** FASE 2A (Escritorio - colapsar a 6 iconos D008): preparar inventario no destructivo; ejecucion bloqueada hasta cleanup ActionGate especifico y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1454",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1512",
         "occurrences": 1
       },
       {
@@ -595,7 +595,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_CLEANUP_GATE** FASE 2B (E: drive): preparar inventario no destructivo; liberar espacio en E:/-=Medioevo=- queda bloqueado hasta ficha canonica de CONSOLIDADO_6MAS1/bestseller_output, cleanup ActionGate y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1455",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1513",
         "occurrences": 1
       },
       {
@@ -603,7 +603,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "**HOLD_CLEANUP_GATE** Ejecutar el `PROMPT_MAESTRO_LIMPIEZA_TOTAL_2026-04-26.md`: solo inventario/workpack no destructivo; modo aplicador bloqueado hasta cleanup ActionGate especifico y host estable. Este pendiente NO bloquea revenue.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1492",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1550",
         "occurrences": 1
       },
       {
@@ -611,7 +611,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2059",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2117",
         "occurrences": 1
       },
       {
@@ -619,7 +619,7 @@
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2370",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2428",
         "occurrences": 1
       },
       {
@@ -627,14 +627,30 @@
         "lane": "private_rpg",
         "blocker": "private_boundary",
         "item": "**BLOCK** Mantener secretos, rutas privadas, RPG/TCG, claims fuertes, destinos no allowlisted y publicacion social automatica fuera de envio.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:283",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:341",
         "occurrences": 1
       },
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
-        "item": "**REVIEW** Usar `HealthVector` en Mission Control solo como senal explicativa; no convertirlo en autoridad de decision.",
+        "item": "**REVIEW** Conectar la lectura UI de `HealthVector` a una prueba visual local de Mission Control cuando se habilite servidor/browser smoke.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:52",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "host_or_heavy",
+        "item": "**REVIEW** Mantener `osit_os_runtime_extraction_contract` como contrato de organizacion DUAT hasta que allocator, scheduler/quantum y ABI tengan evidencias propias.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:54",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "runtime_claudio",
+        "blocker": "external_or_gated",
+        "item": "**BLOCK** Sin publicacion, red externa, seL4/Redox, entrenamiento, mutacion de pesos, kernel rewrite real ni limpieza destructiva desde este cierre.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:57",
         "occurrences": 1
       },
@@ -643,7 +659,7 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**REVIEW** Extender DUAT con criterios OSIT solo en tareas ya abiertas: allocator minimo, quantum/scheduler real y syscall/ABI minimo.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:59",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:117",
         "occurrences": 1
       },
       {
@@ -651,7 +667,7 @@
         "lane": "runtime_claudio",
         "blocker": "external_or_gated",
         "item": "**BLOCK** Mantener kernel real, hardware, red externa, seL4/Redox, simulador bruto, publicacion y claims fuertes fuera de ejecucion automatica.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:61",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:119",
         "occurrences": 1
       },
       {
@@ -659,7 +675,7 @@
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**REVIEW** Configurar cualquier conector externo real solo con destino allowlisted, credenciales fuera del repo, secret scan focal y ActionGate especifico.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:276",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:334",
         "occurrences": 1
       },
       {
@@ -667,7 +683,7 @@
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**BLOCK_PUBLICATION** No publicar DUAT/PSI/Brain OS desde este corte sin target especifico, secret scan, path scrub, claims scan y ActionGate.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:438",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:496",
         "occurrences": 1
       },
       {
@@ -675,22 +691,6 @@
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
         "item": "**HOLD_WEIGHTS** No usar `runtime\\sentido_comun\\` como justificacion para LoRA/QLoRA/DPO ni alias Ollama.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:520",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "**HOLD_HOST** No ejecutar Qwen 3B pesado, alias Ollama ni benchmark permanente mientras host/Qwen gate sigan `REVIEW`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:576",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_WEIGHTS** No iniciar LoRA/QLoRA/DPO hasta tener host `APPROVE`, health estable, suite Qwen aprobada y 20+ pares chosen/rejected revisados y aceptados para entrenamiento.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:578",
         "occurrences": 1
       },
@@ -698,8 +698,8 @@
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "host_or_heavy",
-        "item": "**HOLD_WEIGHTS** No usar esta capa para LoRA/QLoRA/DPO ni alias Ollama.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:637",
+        "item": "**HOLD_HOST** No ejecutar Qwen 3B pesado, alias Ollama ni benchmark permanente mientras host/Qwen gate sigan `REVIEW`.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:634",
         "occurrences": 1
       }
     ]

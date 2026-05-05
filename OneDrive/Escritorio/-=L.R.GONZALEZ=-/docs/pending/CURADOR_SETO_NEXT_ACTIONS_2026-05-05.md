@@ -1,6 +1,6 @@
 # Curador SETO Next Actions
 
-Pending snapshot: `2026-05-05T19:04:57+00:00`
+Pending source: `qa_artifacts/pending/pending_review_latest.json`
 
 Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 

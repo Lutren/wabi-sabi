@@ -33,7 +33,9 @@ Read:
 - `COMMS\tools\observacionista_engine.py`
 - `COMMS\tests\test_observacionista_engine.py`
 - `tools\control_dashboard.py`
+- `tools\security_geolocation_guard.py`
 - `docs\control\CONTROL_DASHBOARD.html`
 - `qa_artifacts\control_dashboard\system-control-snapshot-2026-05-05.json`
+- `qa_artifacts\control_dashboard\geolocation-security-guard-2026-05-05.json`
 
 Candidate first package: `observacionismo-gate`.

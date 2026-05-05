@@ -3144,5 +3144,61 @@
         "The dashboard is local operational evidence and not public copy."
       ]
     }
+  ],
+  "geolocation_security_guard_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "REVIEW",
+      "scope": "Local WARP, public geolocation, Windows location and browser geolocation guard for Claudio/Wabi-Sabi",
+      "tool": "tools/security_geolocation_guard.py",
+      "guard_json": "qa_artifacts/control_dashboard/geolocation-security-guard-2026-05-05.json",
+      "scan_json": "qa_artifacts/control_dashboard/geolocation-security-guard-scan-2026-05-05.json",
+      "dashboard_html": "docs/control/CONTROL_DASHBOARD.html",
+      "snapshot_json": "qa_artifacts/control_dashboard/system-control-snapshot-2026-05-05.json",
+      "vpn": {
+        "provider": "Cloudflare WARP",
+        "status": "Connected",
+        "network": "healthy",
+        "cloudflare_warp": "on",
+        "cloudflare_colo": "DFW",
+        "public_country": "US",
+        "public_geo": "Flower Mound, Texas, US",
+        "ip_redacted": true
+      },
+      "local_location_posture": {
+        "windows_hkcu_location": "Deny",
+        "windows_hklm_location": "Allow",
+        "chrome_geolocation_default": "block",
+        "edge_geolocation_default": "block",
+        "checked_browser_exceptions": 0
+      },
+      "google_divergence": {
+        "reported_google_location": "Yucatan",
+        "classification": "REVIEW",
+        "interpretation": "Google/browser reported location differs from IP-based WARP exit; treat as account, browser, Wi-Fi or Google-side inference until verified in a clean profile."
+      },
+      "automation_boundary": {
+        "safe_to_auto_connect_warp": true,
+        "safe_to_read_browser_preferences": true,
+        "requires_human_for_google_account_location_history": true,
+        "requires_manual_browser_ui_for_site_permission_changes": true,
+        "external_publication": "BLOCK"
+      },
+      "summary": {
+        "action_gate": "REVIEW",
+        "secret_scan_findings": 0,
+        "no_daemon_started": true,
+        "browser_preference_writes": 0,
+        "registry_writes": 0,
+        "source_moves": 0,
+        "source_deletions": 0,
+        "external_publications": 0
+      },
+      "decisions": [
+        "WARP protects and changes public egress, but it is not treated as an arbitrary country selector.",
+        "The Yucatan report is not evidence that WARP failed because Cloudflare trace and IP services report United States/Texas.",
+        "Claudio may automate the guard check, but Google account/location-history and browser site-permission remediation remain manual until a safe UI flow exists."
+      ]
+    }
   ]
 }

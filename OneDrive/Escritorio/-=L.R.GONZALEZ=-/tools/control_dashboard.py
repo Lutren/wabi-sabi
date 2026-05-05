@@ -186,6 +186,19 @@ def comms_snapshot() -> dict[str, Any]:
     }
 
 
+def geo_security_snapshot() -> dict[str, Any]:
+    data = read_json(ROOT / "qa_artifacts" / "control_dashboard" / "geolocation-security-guard-2026-05-05.json")
+    if not data:
+        return {"status": "UNKNOWN", "action_gate": "REVIEW"}
+    return {
+        "status": data.get("status", "UNKNOWN"),
+        "action_gate": data.get("action_gate", "REVIEW"),
+        "reported_google_location": data.get("reported_google_location", ""),
+        "windows_location": data.get("windows_location", {}),
+        "reasons": data.get("reasons", []),
+    }
+
+
 def control_items() -> list[dict[str, str]]:
     return [
         {
@@ -201,6 +214,13 @@ def control_items() -> list[dict[str, str]]:
             "name": "Verificar geolocalizacion publica",
             "command": "Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace",
             "effect": "Confirma warp=on, colo y pais sin tocar archivos.",
+        },
+        {
+            "lane": "Host",
+            "gate": "REVIEW",
+            "name": "Guard geo/privacidad Claudio",
+            "command": "python tools\\security_geolocation_guard.py --connect --reported-google-location \"Yucatan\" --write --json",
+            "effect": "Compara WARP, IP publica, Windows location y permisos de navegador.",
         },
         {
             "lane": "Curador",
@@ -307,6 +327,7 @@ def build_snapshot() -> dict[str, Any]:
         "git": git_snapshot(),
         "pending": pending_snapshot(),
         "comms": comms_snapshot(),
+        "geo_security": geo_security_snapshot(),
         "controls": control_items(),
         "policy": {
             "local_only": True,
@@ -338,6 +359,7 @@ def render_html(snapshot: dict[str, Any]) -> str:
     ipinfo = geo.get("ipinfo", {})
     pending = snapshot["pending"]
     comms = snapshot["comms"]
+    geo_security = snapshot.get("geo_security", {})
     controls = snapshot["controls"]
     cards = "\n".join(
         f"""
@@ -509,6 +531,7 @@ def render_html(snapshot: dict[str, Any]) -> str:
       {metric_card("Claudio abiertos", pending.get("claudio_open", 0), "REVIEW")}
       {metric_card("COMMS", comms.get("validator", {}).get("status", "UNKNOWN"), comms.get("validator", {}).get("status", "UNKNOWN"))}
       {metric_card("Motor obs", comms.get("observacionista_engine", {}).get("action_gate", "UNKNOWN"), comms.get("observacionista_engine", {}).get("action_gate", "UNKNOWN"))}
+      {metric_card("Geo guard", geo_security.get("action_gate", "UNKNOWN"), geo_security.get("action_gate", "UNKNOWN"))}
     </section>
 
     <section class="panel">
@@ -523,6 +546,20 @@ def render_html(snapshot: dict[str, Any]) -> str:
           <div><dt>IP publica</dt><dd>{esc(ipinfo.get("ip_redacted") or trace.get("ip_redacted", "redacted"))}</dd></div>
           <div><dt>Ciudad/region</dt><dd>{esc(ipinfo.get("city", ""))} / {esc(ipinfo.get("region", ""))}</dd></div>
           <div><dt>ASN</dt><dd>{esc(ipinfo.get("org", ""))}</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Guard de geolocalizacion</h2>
+      <div class="grid">
+        <dl>
+          <div><dt>ActionGate</dt><dd class="{status_class(geo_security.get('action_gate', 'UNKNOWN'))}">{esc(geo_security.get('action_gate', 'UNKNOWN'))}</dd></div>
+          <div><dt>Google observado</dt><dd>{esc(geo_security.get('reported_google_location', ''))}</dd></div>
+          <div><dt>Windows HKCU/HKLM</dt><dd>{esc(geo_security.get('windows_location', {}))}</dd></div>
+        </dl>
+        <dl>
+          <div><dt>Lectura</dt><dd>{esc('; '.join(geo_security.get('reasons', [])[:3]))}</dd></div>
         </dl>
       </div>
     </section>
@@ -574,8 +611,9 @@ def render_html(snapshot: dict[str, Any]) -> str:
 def write_outputs(snapshot: dict[str, Any]) -> None:
     SNAPSHOT_PATH.parent.mkdir(parents=True, exist_ok=True)
     HTML_PATH.parent.mkdir(parents=True, exist_ok=True)
+    html_text = "\n".join(line.rstrip() for line in render_html(snapshot).splitlines()) + "\n"
     SNAPSHOT_PATH.write_text(json.dumps(snapshot, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    HTML_PATH.write_text(render_html(snapshot), encoding="utf-8")
+    HTML_PATH.write_text(html_text, encoding="utf-8")
 
 
 def main() -> int:

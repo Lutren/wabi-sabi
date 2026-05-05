@@ -1,0 +1,100 @@
+{
+  "schema": "medioevo.security_geolocation_guard.v1",
+  "generated_at_utc": "2026-05-05T11:01:39Z",
+  "status": "REVIEW",
+  "action_gate": "REVIEW",
+  "reported_google_location": "Yucatan",
+  "expected_country": "US",
+  "warp": {
+    "cli": "C:\\Program Files\\Cloudflare\\Cloudflare WARP\\warp-cli.exe",
+    "connect_attempted": true,
+    "connect_result": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "Success",
+      "stderr": ""
+    },
+    "status": {
+      "ok": true,
+      "returncode": 0,
+      "stdout": "Status update: Connected\nNetwork: healthy",
+      "stderr": ""
+    },
+    "connected": true,
+    "network_healthy": true
+  },
+  "public_geo": {
+    "cloudflare_trace": {
+      "colo": "DFW",
+      "loc": "US",
+      "warp": "on",
+      "gateway": "off",
+      "rbi": "off",
+      "ip_redacted": "2a09:bac5:bf0a::redacted"
+    },
+    "ipinfo": {
+      "city": "Flower Mound",
+      "region": "Texas",
+      "country": "US",
+      "org": "AS13335 Cloudflare, Inc.",
+      "timezone": "America/Chicago",
+      "readme": "https://ipinfo.io/missingauth",
+      "ip_redacted": "104.28.x.x"
+    },
+    "ip_api": {
+      "status": "success",
+      "country": "United States",
+      "regionName": "Texas",
+      "city": "Flower Mound",
+      "timezone": "America/Chicago",
+      "isp": "Cloudflare, Inc.",
+      "org": "Cloudflare WARP",
+      "as": "AS13335 Cloudflare, Inc.",
+      "ip_redacted": "104.28.x.x"
+    }
+  },
+  "windows_location": {
+    "hkcu": "Deny",
+    "hklm": "Allow"
+  },
+  "browser_location": {
+    "chrome_default": {
+      "exists": true,
+      "readable": true,
+      "geolocation_default": 2,
+      "geolocation_exceptions_count": 0,
+      "geolocation_exceptions_sample": []
+    },
+    "edge_default": {
+      "exists": true,
+      "readable": true,
+      "geolocation_default": 2,
+      "geolocation_exceptions_count": 0,
+      "geolocation_exceptions_sample": []
+    },
+    "edge_profile_1": {
+      "exists": true,
+      "readable": true,
+      "geolocation_default": null,
+      "geolocation_exceptions_count": 0,
+      "geolocation_exceptions_sample": []
+    }
+  },
+  "reasons": [
+    "Google/browser reported location differs from IP-based WARP exit.",
+    "Machine-level Windows location capability is Allow; user-level Deny still helps."
+  ],
+  "recommendations": [
+    "Treat Google location as browser/account/Wi-Fi cache until verified in a clean profile.",
+    "Use browser private/clean profile to verify Google without account and location-history bias.",
+    "Disable precise location in browser site permissions for google.com if Google still reports Yucatan.",
+    "Do not treat WARP as an arbitrary country selector; it protects and changes egress, but exit choice is limited."
+  ],
+  "automation_boundary": {
+    "safe_to_auto_connect_warp": true,
+    "safe_to_read_browser_preferences": true,
+    "requires_human_for_google_account_location_history": true,
+    "requires_manual_browser_ui_for_site_permission_changes": true,
+    "external_publication": "BLOCK"
+  }
+}

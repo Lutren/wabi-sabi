@@ -142,42 +142,48 @@
   </header>
   <main>
     <section class="metrics" aria-label="Resumen">
-      
+
       <section class="metric">
         <span class="metric-label">VPN WARP</span>
         <strong class="ok">Connected</strong>
       </section>
-    
-      
+
+
       <section class="metric">
         <span class="metric-label">Geo publica</span>
         <strong class="ok">Flower Mound, Texas US</strong>
       </section>
-    
-      
+
+
       <section class="metric">
         <span class="metric-label">Pendientes activos</span>
         <strong class="review">1708</strong>
       </section>
-    
-      
+
+
       <section class="metric">
         <span class="metric-label">Claudio abiertos</span>
         <strong class="review">60</strong>
       </section>
-    
-      
+
+
       <section class="metric">
         <span class="metric-label">COMMS</span>
         <strong class="ok">PASS</strong>
       </section>
-    
-      
+
+
       <section class="metric">
         <span class="metric-label">Motor obs</span>
         <strong class="review">REVIEW</strong>
       </section>
-    
+
+
+      <section class="metric">
+        <span class="metric-label">Geo guard</span>
+        <strong class="review">REVIEW</strong>
+      </section>
+
     </section>
 
     <section class="panel">
@@ -192,6 +198,20 @@
           <div><dt>IP publica</dt><dd>104.28.x.x</dd></div>
           <div><dt>Ciudad/region</dt><dd>Flower Mound / Texas</dd></div>
           <div><dt>ASN</dt><dd>AS13335 Cloudflare, Inc.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Guard de geolocalizacion</h2>
+      <div class="grid">
+        <dl>
+          <div><dt>ActionGate</dt><dd class="review">REVIEW</dd></div>
+          <div><dt>Google observado</dt><dd>Yucatan</dd></div>
+          <div><dt>Windows HKCU/HKLM</dt><dd>{&#x27;hkcu&#x27;: &#x27;Deny&#x27;, &#x27;hklm&#x27;: &#x27;Allow&#x27;}</dd></div>
+        </dl>
+        <dl>
+          <div><dt>Lectura</dt><dd>Google/browser reported location differs from IP-based WARP exit.; Machine-level Windows location capability is Allow; user-level Deny still helps.</dd></div>
         </dl>
       </div>
     </section>
@@ -212,7 +232,7 @@
 <button type="button" data-filter="Seguridad">Seguridad</button>
       </div>
       <div class="controls" id="controls">
-        
+
         <article class="control" data-lane="Host" data-gate="APPROVE">
           <div class="control-head">
             <span class="lane">Host</span>
@@ -225,7 +245,7 @@
             <button type="button" data-copy="warp-cli connect; warp-cli status">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Host" data-gate="APPROVE">
           <div class="control-head">
@@ -239,7 +259,21 @@
             <button type="button" data-copy="Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace">Copiar</button>
           </div>
         </article>
-        
+
+
+        <article class="control" data-lane="Host" data-gate="REVIEW">
+          <div class="control-head">
+            <span class="lane">Host</span>
+            <span class="badge review">REVIEW</span>
+          </div>
+          <h3>Guard geo/privacidad Claudio</h3>
+          <p>Compara WARP, IP publica, Windows location y permisos de navegador.</p>
+          <div class="command-row">
+            <code>python tools\security_geolocation_guard.py --connect --reported-google-location &quot;Yucatan&quot; --write --json</code>
+            <button type="button" data-copy="python tools\security_geolocation_guard.py --connect --reported-google-location &quot;Yucatan&quot; --write --json">Copiar</button>
+          </div>
+        </article>
+
 
         <article class="control" data-lane="Curador" data-gate="APPROVE">
           <div class="control-head">
@@ -253,7 +287,7 @@
             <button type="button" data-copy="python tools\release\pending_review.py --write --quiet">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="COMMS" data-gate="APPROVE">
           <div class="control-head">
@@ -267,7 +301,7 @@
             <button type="button" data-copy="python COMMS\tools\validate_seto_comms.py --json --fail-on-errors">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Observacionismo" data-gate="REVIEW">
           <div class="control-head">
@@ -281,7 +315,7 @@
             <button type="button" data-copy="python COMMS\tools\observacionista_engine.py --input COMMS\inbox\claudio-local-agent.jsonl --json">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Observacionismo" data-gate="APPROVE">
           <div class="control-head">
@@ -295,7 +329,7 @@
             <button type="button" data-copy="python -m unittest COMMS\tests\test_observacionista_engine.py">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Auditoria" data-gate="REVIEW">
           <div class="control-head">
@@ -309,7 +343,7 @@
             <button type="button" data-copy="python tools\release\audit_repo.py">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Seguridad" data-gate="REVIEW">
           <div class="control-head">
@@ -323,7 +357,7 @@
             <button type="button" data-copy="python tools\release\scan_secrets.py --path &lt;ruta&gt; --json --fail-on-findings">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Limpieza" data-gate="REVIEW">
           <div class="control-head">
@@ -337,7 +371,7 @@
             <button type="button" data-copy="Get-Content DELETE_CANDIDATES.md">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Limpieza" data-gate="BLOCK">
           <div class="control-head">
@@ -351,7 +385,7 @@
             <button type="button" data-copy="N/A">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Publicacion" data-gate="BLOCK">
           <div class="control-head">
@@ -365,7 +399,7 @@
             <button type="button" data-copy="N/A">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Claudio" data-gate="REVIEW">
           <div class="control-head">
@@ -379,7 +413,7 @@
             <button type="button" data-copy="cd &quot;-=MEDIOEVO=-\-=LIBROS\claudio&quot;; python tools\host_observacionista.py --no-write">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Claudio" data-gate="REVIEW">
           <div class="control-head">
@@ -393,7 +427,7 @@
             <button type="button" data-copy="Get-Content COMMS\handoffs\2026-05-05-claudio-local-agent-seto.md">Copiar</button>
           </div>
         </article>
-        
+
 
         <article class="control" data-lane="Privado" data-gate="BLOCK">
           <div class="control-head">
@@ -407,7 +441,7 @@
             <button type="button" data-copy="N/A">Copiar</button>
           </div>
         </article>
-        
+
       </div>
     </section>
 
@@ -417,7 +451,7 @@
         <summary>Ver JSON del dashboard</summary>
         <pre>{
   &quot;schema&quot;: &quot;medioevo.system_control_dashboard.v1&quot;,
-  &quot;generated_at_utc&quot;: &quot;2026-05-05T10:46:57Z&quot;,
+  &quot;generated_at_utc&quot;: &quot;2026-05-05T11:04:26Z&quot;,
   &quot;root&quot;: &quot;C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-&quot;,
   &quot;vpn&quot;: {
     &quot;provider&quot;: &quot;Cloudflare WARP&quot;,
@@ -453,12 +487,12 @@
   &quot;git&quot;: {
     &quot;git_root&quot;: &quot;C:\\Users\\L-Tyr&quot;,
     &quot;branch&quot;: &quot;codex/curador-seto-loops-2026-05-05&quot;,
-    &quot;head&quot;: &quot;4370e65 Add observacionista engine tests&quot;,
+    &quot;head&quot;: &quot;6013b2c Add local system control dashboard&quot;,
     &quot;branch_ok&quot;: true,
     &quot;head_ok&quot;: true
   },
   &quot;pending&quot;: {
-    &quot;generated_at&quot;: &quot;2026-05-05T10:42:21+00:00&quot;,
+    &quot;generated_at&quot;: &quot;2026-05-05T11:03:16+00:00&quot;,
     &quot;active_dedup&quot;: 1708,
     &quot;active_by_lane&quot;: {
       &quot;cleanup_migration&quot;: 11,
@@ -498,8 +532,8 @@
       },
       &quot;witness_tail&quot;: {
         &quot;checked&quot;: true,
-        &quot;event_type&quot;: &quot;seto_observacionista_engine_tests&quot;,
-        &quot;event_hash&quot;: &quot;7bab094fa66906b29fe63546dbdefff621e61bdfce5021af8178873457d5f79f&quot;,
+        &quot;event_type&quot;: &quot;geolocation_security_guard_claudio&quot;,
+        &quot;event_hash&quot;: &quot;353ed9786fbaa409ffc643f50dca92af545f19816226fca3f6d57a665d573044&quot;,
         &quot;hash_match&quot;: true
       }
     },
@@ -520,6 +554,19 @@
       &quot;errors&quot;: 0
     }
   },
+  &quot;geo_security&quot;: {
+    &quot;status&quot;: &quot;REVIEW&quot;,
+    &quot;action_gate&quot;: &quot;REVIEW&quot;,
+    &quot;reported_google_location&quot;: &quot;Yucatan&quot;,
+    &quot;windows_location&quot;: {
+      &quot;hkcu&quot;: &quot;Deny&quot;,
+      &quot;hklm&quot;: &quot;Allow&quot;
+    },
+    &quot;reasons&quot;: [
+      &quot;Google/browser reported location differs from IP-based WARP exit.&quot;,
+      &quot;Machine-level Windows location capability is Allow; user-level Deny still helps.&quot;
+    ]
+  },
   &quot;controls&quot;: [
     {
       &quot;lane&quot;: &quot;Host&quot;,
@@ -534,6 +581,13 @@
       &quot;name&quot;: &quot;Verificar geolocalizacion publica&quot;,
       &quot;command&quot;: &quot;Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace&quot;,
       &quot;effect&quot;: &quot;Confirma warp=on, colo y pais sin tocar archivos.&quot;
+    },
+    {
+      &quot;lane&quot;: &quot;Host&quot;,
+      &quot;gate&quot;: &quot;REVIEW&quot;,
+      &quot;name&quot;: &quot;Guard geo/privacidad Claudio&quot;,
+      &quot;command&quot;: &quot;python tools\\security_geolocation_guard.py --connect --reported-google-location \&quot;Yucatan\&quot; --write --json&quot;,
+      &quot;effect&quot;: &quot;Compara WARP, IP publica, Windows location y permisos de navegador.&quot;
     },
     {
       &quot;lane&quot;: &quot;Curador&quot;,

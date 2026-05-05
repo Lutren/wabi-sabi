@@ -739,6 +739,41 @@ Result:
 - Secret scan: `0` findings.
 - No daemon, publication, push, source move or deletion was performed.
 
+## Claudio Geolocation Security Guard 2026-05-05
+
+This pass formalized the VPN/geolocation check as a local guard for Claudio and
+the SETO dashboard. It verifies network truth, OS/browser location posture and
+Google-observed divergence without mutating browser settings or Windows
+location policy.
+
+Artifacts:
+
+- `tools\security_geolocation_guard.py`
+- `qa_artifacts\control_dashboard\geolocation-security-guard-2026-05-05.json`
+- `qa_artifacts\control_dashboard\geolocation-security-guard-scan-2026-05-05.json`
+- `docs\control\CONTROL_DASHBOARD.html`
+- `qa_artifacts\control_dashboard\system-control-snapshot-2026-05-05.json`
+
+Result:
+
+- Guard command:
+  `python tools\security_geolocation_guard.py --connect --reported-google-location "Yucatan" --expected-country US --write --json`.
+- Status: `REVIEW`.
+- ActionGate: `REVIEW`.
+- WARP status: `Connected`, network `healthy`; Cloudflare trace `warp=on`.
+- Public IP geolocation: `Flower Mound, Texas, US`; IP is redacted in committed artifacts.
+- User-observed Google location: `Yucatan`; this differs from the WARP/IP exit
+  and is treated as browser/account/Wi-Fi cache or Google-side inference until
+  verified in a clean profile.
+- Windows location: current user `Deny`, machine level `Allow`.
+- Browser location defaults: Chrome default `block`, Edge default `block`; no
+  geolocation exceptions found in checked profiles.
+- Automation boundary: Claudio may auto-connect/verify WARP and read browser
+  preferences; account location history and site-permission changes remain
+  manual; external publication remains `BLOCK`.
+- No daemon, browser preference write, registry write, publication, source move
+  or deletion was performed.
+
 ## SETO PSI Redundant Vault Batch 3 Cleanup 2026-05-05
 
 This pass removed the final exact duplicates discovered in

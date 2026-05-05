@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.system_control_dashboard.v1",
-  "generated_at_utc": "2026-05-05T10:46:57Z",
+  "generated_at_utc": "2026-05-05T11:04:26Z",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "vpn": {
     "provider": "Cloudflare WARP",
@@ -36,12 +36,12 @@
   "git": {
     "git_root": "C:\\Users\\L-Tyr",
     "branch": "codex/curador-seto-loops-2026-05-05",
-    "head": "4370e65 Add observacionista engine tests",
+    "head": "6013b2c Add local system control dashboard",
     "branch_ok": true,
     "head_ok": true
   },
   "pending": {
-    "generated_at": "2026-05-05T10:42:21+00:00",
+    "generated_at": "2026-05-05T11:03:16+00:00",
     "active_dedup": 1708,
     "active_by_lane": {
       "cleanup_migration": 11,
@@ -81,8 +81,8 @@
       },
       "witness_tail": {
         "checked": true,
-        "event_type": "seto_observacionista_engine_tests",
-        "event_hash": "7bab094fa66906b29fe63546dbdefff621e61bdfce5021af8178873457d5f79f",
+        "event_type": "geolocation_security_guard_claudio",
+        "event_hash": "353ed9786fbaa409ffc643f50dca92af545f19816226fca3f6d57a665d573044",
         "hash_match": true
       }
     },
@@ -103,6 +103,19 @@
       "errors": 0
     }
   },
+  "geo_security": {
+    "status": "REVIEW",
+    "action_gate": "REVIEW",
+    "reported_google_location": "Yucatan",
+    "windows_location": {
+      "hkcu": "Deny",
+      "hklm": "Allow"
+    },
+    "reasons": [
+      "Google/browser reported location differs from IP-based WARP exit.",
+      "Machine-level Windows location capability is Allow; user-level Deny still helps."
+    ]
+  },
   "controls": [
     {
       "lane": "Host",
@@ -117,6 +130,13 @@
       "name": "Verificar geolocalizacion publica",
       "command": "Invoke-RestMethod https://www.cloudflare.com/cdn-cgi/trace",
       "effect": "Confirma warp=on, colo y pais sin tocar archivos."
+    },
+    {
+      "lane": "Host",
+      "gate": "REVIEW",
+      "name": "Guard geo/privacidad Claudio",
+      "command": "python tools\\security_geolocation_guard.py --connect --reported-google-location \"Yucatan\" --write --json",
+      "effect": "Compara WARP, IP publica, Windows location y permisos de navegador."
     },
     {
       "lane": "Curador",

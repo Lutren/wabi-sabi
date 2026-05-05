@@ -2,6 +2,7 @@
   "scope": {
     "products": [],
     "paths": [
+      "tools/security_geolocation_guard.py",
       "tools/control_dashboard.py",
       "docs/control/CONTROL_DASHBOARD.html",
       "SOURCE_INTAKE_REGISTER.md",
@@ -9,7 +10,9 @@
       "docs/developer/INDEX.md"
     ],
     "artifacts": [
-      "qa_artifacts/control_dashboard/system-control-snapshot-2026-05-05.json"
+      "qa_artifacts/control_dashboard/geolocation-security-guard-2026-05-05.json",
+      "qa_artifacts/control_dashboard/system-control-snapshot-2026-05-05.json",
+      "qa_artifacts/control_dashboard/system-control-dashboard-scan-2026-05-05.json"
     ],
     "default_workspace_scan": false
   },

@@ -17,5 +17,6 @@ Read:
 - `docs\developer\DUAT_RPG_PRIVATE_LIVING_WORLD_2026-05-02.md`
 - `docs\developer\CURADOR_ALWAYS_ON_PROTOCOL_2026-05-03.md`
 - `docs\developer\CURADOR_SETO_GLOBAL_OPERATING_CONTRACT_2026-05-05.md`
+- `docs\developer\SETO_CONCURRENT_AGENT_COORDINATION_2026-05-05.md`
 
 Candidate first package: `observacionismo-gate`.

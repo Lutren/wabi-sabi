@@ -2676,5 +2676,66 @@
         "Every candidate requires canonical confirmation, ficha, full SHA256 register update and ActionGate APPROVE before cleanup."
       ]
     }
+  ],
+  "seto_concurrent_agent_coordination_passes": [
+    {
+      "date": "2026-05-05",
+      "status": "ACTIVE_COORDINATION_CONTRACT",
+      "report": "docs/developer/SETO_CONCURRENT_AGENT_COORDINATION_2026-05-05.md",
+      "json": "qa_artifacts/release_validation/seto-concurrent-agent-coordination-2026-05-05.json",
+      "contract_updated": "docs/developer/CURADOR_SETO_GLOBAL_OPERATING_CONTRACT_2026-05-05.md",
+      "artifact_hashes": {
+        "report": "CD2E1490CEB6A78D90D3E828FFCE9B533809CF5899E15B0BF2E380A29F8C4C29",
+        "json": "38E350F247003D5510F12664C051C8CD80C13EE53E36BE62BAB2CB09BADF69CB",
+        "contract_updated": "C1D21CA5372654DA9C79221267050133B47A8E25487A7C73D94FB961728A6E67"
+      },
+      "action_gate": "REVIEW",
+      "decision": "KEEP_COORDINATION_BOUNDARY",
+      "policy": {
+        "no_delete": true,
+        "no_move": true,
+        "no_external_action": true,
+        "no_broad_stage": true,
+        "read_only_concurrent_artifacts": true
+      },
+      "observed_concurrent_artifacts": [
+        {
+          "lane": "language",
+          "path": "docs/developer/OBSERVACIONISMO_MINIMAL_MACHINE_LANGUAGE_2026-05-05.md",
+          "sha256": "5E4F04AC5FC91CD9AC3A8855E0B1D4F1B5E44FEF32D88C5C9D5952E4A3CA6185",
+          "decision": "READ_ONLY_CONCURRENT_OWNER"
+        },
+        {
+          "lane": "language_intake",
+          "path": "docs/intake/OBSERVACIONISMO_LANGUAGE_DOWNLOADS_PSI_INTAKE_2026-05-05.md",
+          "sha256": "60635C6E9B29A948FC68736F4EBDE01D206C5E34540F74254E3E70A81F8C5316",
+          "decision": "READ_ONLY_CONCURRENT_OWNER"
+        },
+        {
+          "lane": "language_evidence",
+          "path": "qa_artifacts/observacionismo_language/observacionismo_language_inventory_2026-05-05.json",
+          "sha256": "0560040C8F7255FD80F3DA6E982C89312747971168C1E9E44AD04FC68C4D5EAB",
+          "decision": "READ_ONLY_EVIDENCE"
+        },
+        {
+          "lane": "language_test",
+          "path": "qa_artifacts/observacionismo_language/obs_bit_machine_pytest_2026-05-05.txt",
+          "sha256": "B5D6E93EDFEF9651EA8FE2D85E7703637CF819791AB0E790872B49799E89A013",
+          "decision": "READ_ONLY_EVIDENCE"
+        },
+        {
+          "lane": "local_agent_intake",
+          "path": "docs/intake/OBSERVACIONISTA_LOCAL_CODE_AGENT_INTAKE_2026-05-04.md",
+          "sha256": "57967DDC6E95B192529BB70FF8B52DFE8DA7C0B35ED6CEE6EF3D3DCFB4DF82E8",
+          "decision": "READ_ONLY_CONCURRENT_OWNER"
+        }
+      ],
+      "decisions": [
+        "Language lane continues L0/L1/L2 work; SETO remains read-only until handoff.",
+        "Local-agent lane continues Claudio-local implementation; SETO keeps write automation gated.",
+        "SETO continues manifests, fichas, duplicate queues and cleanup evidence.",
+        "No broad staging, cross-lane deletion or raw source canonization."
+      ]
+    }
   ]
 }

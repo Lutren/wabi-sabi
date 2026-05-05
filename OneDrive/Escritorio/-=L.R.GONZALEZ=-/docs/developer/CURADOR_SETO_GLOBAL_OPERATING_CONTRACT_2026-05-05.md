@@ -129,6 +129,24 @@ Every message must include an `ObservationEnvelope` or cite one. Agents do not
 overwrite another agent's output; they append, supersede by new envelope, or
 mark a prior item as blocked with evidence.
 
+## Concurrent Agent Boundaries
+
+When multiple agents are active, SETO treats each lane as owned until a handoff
+is written. Current lanes:
+
+| lane | owner responsibility | SETO posture |
+|---|---|---|
+| Observacionismo language | L0 bit machine, L1 five-verb IR, language tests and falsifiers | read-only until handoff; use only envelopes, tests and hashes |
+| Local agent builder | Claudio local-agent contracts, safe execution, repo observation and handoff compiler | read-only until handoff; no write automation without ActionGate |
+| Curador SETO | manifests, fichas, duplicate queues, ActionGate, WitnessLog and cleanup evidence | may write only SETO docs/tools/registers |
+
+Coordination artifact:
+`docs\developer\SETO_CONCURRENT_AGENT_COORDINATION_2026-05-05.md`.
+
+No agent should broad-stage the workspace, delete another lane's files, or treat
+raw `Downloads`/ZIP/prototype material as canon without ficha, hash, claim
+state and ActionGate.
+
 ## Cleanup Boundaries
 
 Allowed after dry-run and gate:

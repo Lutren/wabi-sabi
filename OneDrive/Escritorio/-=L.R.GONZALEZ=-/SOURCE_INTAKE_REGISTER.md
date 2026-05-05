@@ -431,3 +431,40 @@ Boundaries:
   excluded.
 - All listed candidates remain `REVIEW` until canonical source, ficha and
   ActionGate are complete.
+
+## SETO Concurrent Agent Coordination 2026-05-05
+
+This pass observed active concurrent work and created a coordination boundary.
+No concurrent-agent files were edited, moved, deleted or staged by this pass.
+
+Artifacts:
+
+- `docs\developer\SETO_CONCURRENT_AGENT_COORDINATION_2026-05-05.md`
+- `qa_artifacts\release_validation\seto-concurrent-agent-coordination-2026-05-05.json`
+- `docs\developer\CURADOR_SETO_GLOBAL_OPERATING_CONTRACT_2026-05-05.md`
+
+Artifact hashes:
+
+| artifact | sha256 |
+|---|---|
+| `SETO_CONCURRENT_AGENT_COORDINATION_2026-05-05.md` | `CD2E1490CEB6A78D90D3E828FFCE9B533809CF5899E15B0BF2E380A29F8C4C29` |
+| `seto-concurrent-agent-coordination-2026-05-05.json` | `38E350F247003D5510F12664C051C8CD80C13EE53E36BE62BAB2CB09BADF69CB` |
+| `CURADOR_SETO_GLOBAL_OPERATING_CONTRACT_2026-05-05.md` | `C1D21CA5372654DA9C79221267050133B47A8E25487A7C73D94FB961728A6E67` |
+
+Observed lanes:
+
+| lane | artifact | sha256 | SETO decision |
+|---|---|---|---|
+| language | `docs\developer\OBSERVACIONISMO_MINIMAL_MACHINE_LANGUAGE_2026-05-05.md` | `5E4F04AC5FC91CD9AC3A8855E0B1D4F1B5E44FEF32D88C5C9D5952E4A3CA6185` | `READ_ONLY_CONCURRENT_OWNER` |
+| language intake | `docs\intake\OBSERVACIONISMO_LANGUAGE_DOWNLOADS_PSI_INTAKE_2026-05-05.md` | `60635C6E9B29A948FC68736F4EBDE01D206C5E34540F74254E3E70A81F8C5316` | `READ_ONLY_CONCURRENT_OWNER` |
+| language evidence | `qa_artifacts\observacionismo_language\observacionismo_language_inventory_2026-05-05.json` | `0560040C8F7255FD80F3DA6E982C89312747971168C1E9E44AD04FC68C4D5EAB` | `READ_ONLY_EVIDENCE` |
+| local-agent intake | `docs\intake\OBSERVACIONISTA_LOCAL_CODE_AGENT_INTAKE_2026-05-04.md` | `57967DDC6E95B192529BB70FF8B52DFE8DA7C0B35ED6CEE6EF3D3DCFB4DF82E8` | `READ_ONLY_CONCURRENT_OWNER` |
+
+Decisions:
+
+- Language lane owns `research\observacionismo-lab`,
+  `qa_artifacts\observacionismo_language` and its language docs.
+- Local-agent lane owns Claudio-local implementation details until handoff.
+- SETO owns manifests, fichas, duplicate queues, ActionGate, WitnessLog and
+  cleanup evidence.
+- No broad staging, no cross-lane deletion and no raw source canonization.

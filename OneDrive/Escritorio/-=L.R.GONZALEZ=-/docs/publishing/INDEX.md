@@ -72,3 +72,5 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
   drafts into a queued, no-submission state.
 - `docs\publishing\LEGACY_MARKETING_CHECKLIST_RECONCILIATION_2026-05-06.md`
   migrates April SaaS/trailer checklists into legacy-marketing references.
+- `docs\publishing\VIDEO_SOCIAL_MANUAL_QUEUE_2026-05-06.md` migrates the
+  CapCut/TikTok/Instagram first-video checklist into a manual publishing queue.

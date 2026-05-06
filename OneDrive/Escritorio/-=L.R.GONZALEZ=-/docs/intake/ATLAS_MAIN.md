@@ -1,12 +1,12 @@
 # Atlas Main - Curador SETO
 
-Generated UTC: `2026-05-06T10:05:01.753824+00:00`
+Generated UTC: `2026-05-06T12:35:01.777587+00:00`
 
 Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es INBOX; el canon vive por continentes, ciudades, fichas y sinapsis.
 
 | campo | valor |
 |---|---:|
-| fuentes procesadas | 187 |
+| fuentes procesadas | 190 |
 | extracciones | 0 |
 | retiros a Archivo Frio | 0 |
 | borrados seguros | 0 |
@@ -15,7 +15,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 
 | status | count |
 |---|---:|
-| `ARCHIVO_FRIO` | 168 |
+| `ARCHIVO_FRIO` | 171 |
 | `BASURA_REGENERABLE_BORRADA` | 1 |
 | `BORRADO_DUPLICADO` | 18 |
 
@@ -25,7 +25,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 
 - Nivel: `continente`.
 - Ruta canon: `docs/canon/atlas/psi-observacionismo.md`.
-- Fuentes conectadas: `51`.
+- Fuentes conectadas: `53`.
 
 ### Claudio / Wabi-Sabi
 
@@ -49,7 +49,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 
 - Nivel: `continente`.
 - Ruta canon: `docs/canon/atlas/productos.md`.
-- Fuentes conectadas: `26`.
+- Fuentes conectadas: `27`.
 
 ### Assets
 
@@ -200,6 +200,7 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/17E8F7BB7BD3C92C_duat_observacionismo_unified_v2.md` | `C:\Users\L-Tyr\Downloads\duat_observacionismo_unified_v2.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\17E8F7BB7BD3C92C_duat_observacionismo_unified_v2.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/34DC55FAA8686AF0_observacionismo_tui_r3_pack.md` | `C:\Users\L-Tyr\Downloads\OBSERVACIONISMO_TUI_R3_PACK.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\34DC55FAA8686AF0_observacionismo_tui_r3_pack.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplicaciones.md` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplic.pdf` |
+| `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/82B77221A430CAF1_osit_qg_observacionismo.md` | `C:\Users\L-Tyr\Downloads\OSIT_QG_Observacionismo.pdf` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\82B77221A430CAF1_osit_qg_observacionismo.pdf` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C71A7AA373E460BA_psi_chi_lab_v2_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2_pack.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\C71A7AA373E460BA_psi_chi_lab_v2_pack.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E4BB92FE76CC6AFF_psi_chi_lab_v3_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v3_pack.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E4BB92FE76CC6AFF_psi_chi_lab_v3_pack.zip` |
 | `Productos` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E945CA5F36869DE4_psi_chi_lab_v4_pack.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v4_pack.zip` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\E945CA5F36869DE4_psi_chi_lab_v4_pack.zip` |
@@ -239,12 +240,14 @@ Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es IN
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2616A724F5CA6E40_observacionismo_unified_simulator.md` | `C:\Users\L-Tyr\Downloads\observacionismo_unified_simulator.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\2616A724F5CA6E40_observacionismo_unified_simulator.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/2E9D8A6F6317789A_observacionismo_v8_1_addons.md` | `C:\Users\L-Tyr\Downloads\observacionismo_v8_1_addons.txt` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\2E9D8A6F6317789A_observacionismo_v8_1_addons.txt` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/9CECC245362EF043_observacionismo_v8_integrator.md` | `C:\Users\L-Tyr\Downloads\observacionismo_v8_integrator.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\9CECC245362EF043_observacionismo_v8_integrator.py` |
+| `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8016127A31A8E330_osit_observer_kernel.md` | `C:\Users\L-Tyr\Downloads\osit_observer_kernel.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\8016127A31A8E330_osit_observer_kernel.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/76F80E0A9A273CBE_osit_resource_optimizer.md` | `C:\Users\L-Tyr\Downloads\osit_resource_optimizer.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\76F80E0A9A273CBE_osit_resource_optimizer.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/58189EE0BFE00DDB_psi_chi_lab_v2.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\58189EE0BFE00DDB_psi_chi_lab_v2.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/482CDD21215D3283_psi_chi_lab_v2_readme.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v2_README.md` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\482CDD21215D3283_psi_chi_lab_v2_readme.md` |
 | `PSI / Observacionismo` | `BORRADO_DUPLICADO` | `DELETE_APPROVED_AFTER_HASH_EXECUTED` | `docs/intake/curador_fichas/downloads/930A7CEB03AF792D_psi_chi_lab_v6-1.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v6 (1).py` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v6.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/930A7CEB03AF792D_psi_chi_lab_v6.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v6.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\930A7CEB03AF792D_psi_chi_lab_v6.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/6EC65FDAD3FF8FEB_psi_chi_lab_v8.md` | `C:\Users\L-Tyr\Downloads\psi_chi_lab_v8.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\6EC65FDAD3FF8FEB_psi_chi_lab_v8.py` |
+| `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/55A7E980BDBD5B3E_readme_osit_observer.md` | `C:\Users\L-Tyr\Downloads\README_OSIT_OBSERVER.md` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\55A7E980BDBD5B3E_readme_osit_observer.md` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DF5105E2E46D09C3_sensorium_inversion_lab.md` | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab.py` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\DF5105E2E46D09C3_sensorium_inversion_lab.py` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/CE56E5DC5DB36079_smoke_test_results.md` | `C:\Users\L-Tyr\Downloads\smoke_test_results.json` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\CE56E5DC5DB36079_smoke_test_results.json` |
 | `PSI / Observacionismo` | `ARCHIVO_FRIO` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/88EA367ED89EA390_solicitud-de-auditora-observacioni.md` | `C:\Users\L-Tyr\Downloads\Solicitud de auditoría observacioni.txt` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\88EA367ED89EA390_solicitud-de-auditora-observacioni.txt` |

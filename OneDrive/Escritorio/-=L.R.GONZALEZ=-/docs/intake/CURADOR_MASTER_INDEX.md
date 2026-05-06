@@ -1,12 +1,12 @@
 # Curador SETO Master Index
 
-Generated UTC: `2026-05-06T10:05:01.753824+00:00`
+Generated UTC: `2026-05-06T12:05:01.908505+00:00`
 
 Fuente canonica operativa para Downloads. SQLite es la base consultable; las fichas Markdown son la capa humana.
 
 | campo | valor |
 |---|---:|
-| archivos registrados | 187 |
+| archivos registrados | 190 |
 | grupos duplicados exactos detectados | 0 |
 | borrados seguros en este pase | 0 |
 | atlas main | `docs/intake/ATLAS_MAIN.md` |
@@ -16,7 +16,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 
 | status | count |
 |---|---:|
-| `ARCHIVO_FRIO` | 168 |
+| `ARCHIVO_FRIO` | 171 |
 | `BASURA_REGENERABLE_BORRADA` | 1 |
 | `BORRADO_DUPLICADO` | 18 |
 
@@ -28,7 +28,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `cleanup` | 52 |
 | `duat-lab` | 8 |
 | `local-agent` | 16 |
-| `research-boundary` | 76 |
+| `research-boundary` | 79 |
 
 ## Duplicados exactos
 
@@ -177,6 +177,8 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/3D2424057A226AD0_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md` | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.docx` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/A59D9A9C40C215E7_osit-teora-completa-de-informacin-con-estado-y-tesis-del-agente-local-si.md` | `C:\Users\L-Tyr\Downloads\OSIT — Teoría Completa de Información con Estado y Tesis del Agente Local sin LLM.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/5253B5F5371FB818_osit-qg-modulos-extendidos---optimizacion-y-nuevas-aplicaciones.md` | `C:\Users\L-Tyr\Downloads\OSIT-QG Modulos Extendidos - Optimizacion y Nuevas Aplicaciones.pdf` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/8016127A31A8E330_osit_observer_kernel.md` | `C:\Users\L-Tyr\Downloads\osit_observer_kernel.py` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/82B77221A430CAF1_osit_qg_observacionismo.md` | `C:\Users\L-Tyr\Downloads\OSIT_QG_Observacionismo.pdf` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/76F80E0A9A273CBE_osit_resource_optimizer.md` | `C:\Users\L-Tyr\Downloads\osit_resource_optimizer.py` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/89E40049D5B2ADCC_pasted-markdown-2.md` | `C:\Users\L-Tyr\Downloads\Pasted markdown (2).md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/FBF88577127CA884_pasted-markdown-3.md` | `C:\Users\L-Tyr\Downloads\Pasted markdown (3).md` |
@@ -204,6 +206,7 @@ Fuente canonica operativa para Downloads. SQLite es la base consultable; las fic
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/243FED5C817461BF_readme-1.md` | `C:\Users\L-Tyr\Downloads\README (1).md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/C6549EB6F0AD5016_readme-2.md` | `C:\Users\L-Tyr\Downloads\README (2).md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/BDD573C85BC4FF40_readme.md` | `C:\Users\L-Tyr\Downloads\README.md` |
+| `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/55A7E980BDBD5B3E_readme_osit_observer.md` | `C:\Users\L-Tyr\Downloads\README_OSIT_OBSERVER.md` |
 | `ARCHIVO_FRIO` | `cleanup` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/719126081FEB0CC8_resumen-breve-propongo-una-extensi.md` | `C:\Users\L-Tyr\Downloads\Resumen breve Propongo una extensió.txt` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/DF5105E2E46D09C3_sensorium_inversion_lab.md` | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab.py` |
 | `ARCHIVO_FRIO` | `research-boundary` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` | `docs/intake/curador_fichas/downloads/E16A7CB6EA4B884E_sensorium_inversion_lab_pack.md` | `C:\Users\L-Tyr\Downloads\sensorium_inversion_lab_pack.zip` |

@@ -443,3 +443,28 @@ Lobby sources were read completely, mapped to Atlas lanes, connected to existing
 | date | files read | lines read | archived | deleted | evidence |
 |---|---:|---:|---:|---:|---|
 | 2026-05-06 | 17 | 6827 | 16 | 0 | `docs\intake\lobby_alejandria_full_absorption_2026-05-06_MANIFEST.json`; `docs\intake\lobby_alejandria_full_absorption_2026-05-06_RETIREMENTS.md` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-06
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-06.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\OSIT_QG_Observacionismo.pdf` | `82B77221A430CAF1C574DD90FFBA5052E6C5AB03268A8BA18E0AA9925CB02A82` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\82B77221A430CAF1_osit_qg_observacionismo.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-06
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-06 | 2 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-06.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\osit_observer_kernel.py` | `8016127A31A8E33035524B8091F88FE585534A1EF43EB5A28C8D69738BF35104` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\8016127A31A8E330_osit_observer_kernel.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\README_OSIT_OBSERVER.md` | `55A7E980BDBD5B3E254A6992E7DD96B006B82A00042F5DCC6E9FCD17B64CFD3C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-06\55A7E980BDBD5B3E_readme_osit_observer.md` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |

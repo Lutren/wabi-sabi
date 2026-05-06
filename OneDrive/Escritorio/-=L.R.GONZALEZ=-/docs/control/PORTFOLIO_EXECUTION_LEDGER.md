@@ -10,6 +10,19 @@ Status: active ledger. Record only verified closures or explicit blockers.
 - No private game publication.
 - No product or research claim without evidence.
 
+## Cycle: 2026-05-06 OSIT Observer Kernel Local Gate Fix
+
+| field | value |
+|---|---|
+| lane | observacionismo-local-agent |
+| objective | Continue the pending queue through a local reversible closure: validate and fix the curated OSIT Observer Kernel gate behavior without unlocking external execution. |
+| scope | `tools\observacionismo\osit_observer_kernel.py`, `tests\test_osit_observer_kernel.py`, `configs\ollama\Modelfile.observador`, Curador fichas for OSIT observer sources and `docs\pending\OSIT_OBSERVER_KERNEL_LOCAL_GATE_FIX_2026-05-06.md`. |
+| source state | The source files were already registered as `ARCHIVO_FRIO` / `ActionGate=REVIEW`; raw Downloads material was not imported wholesale. The root worktree already had unrelated pending/Curador/Atlas changes and they were not reverted. |
+| implementation | Fixed the gate threshold so `review_actions` cannot fall under the approval threshold; added `request_confirmation` to `review_actions`; preserved the audit-only contract with `tool_executed=false`, `ObservationEnvelope`, and explicit falsifiers. |
+| verification | `python -m pytest tests\test_osit_observer_kernel.py -q` passed 7 tests; `python -m py_compile tools\observacionismo\osit_observer_kernel.py` passed; CLI audit returned `browser.goto -> REVIEW risk=0.3` and `payment.submit -> BLOCK risk=1.0`; host recheck returned `MIXTO / REVIEW` at `2026-05-06T12:11:42Z`. |
+| claim boundary | Local deterministic gate fix only. No Ollama alias creation, no heavy Qwen/Gemma suite, no WSL ISO/QEMU work, no browser automation against real accounts, no publication, no push and no customer package. |
+| commit | Selectively committed in the root repo cleanup pass; no push or external publication action was performed by this local gate fix. |
+
 ## Cycle: 2026-05-01 GEODIA Social Observatory MVP
 
 | field | value |

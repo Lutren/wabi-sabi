@@ -1,483 +1,393 @@
 <!DOCTYPE html>
-<html lang="es" data-city="control">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mini Office — Conway 24/7 | Tu Oficina Virtual que Trabaja 24/7</title>
-  <meta name="description" content="Agentes AI autónomos con estética pixel art. Sistema Conway 24/7 con investigación, análisis y auto-depuración automatica.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9' font-size='90'>◈</text></svg>">
-
-  <!-- CLAUDIO Design System -->
-  <link rel="stylesheet" href="public.css">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Serif:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Open Graph / Social -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Mini Office — Conway 24/7">
-  <meta property="og:description" content="Agentes AI autónomos con estética pixel art">
-  <meta property="og:url" content="https://medioevo.space/tienda/minioffice">
-
+  <title>Mini Office | Agente Oficina Local</title>
+  <meta name="description" content="Mini Office es una app local para revisar tareas, materiales y roles de agentes con aprobacion humana.">
+  <meta property="og:title" content="Mini Office">
+  <meta property="og:description" content="Agente Oficina local para revision humana de flujos, materiales y tareas.">
   <style>
-    /* Estilos específicos de la landing page */
-    body {
-      background:
-        radial-gradient(circle at 8% 0%, rgba(184,115,51,0.12) 0%, transparent 40%),
-        radial-gradient(circle at 92% 8%, rgba(46,204,199,0.10) 0%, transparent 36%),
-        radial-gradient(circle at 50% 90%, rgba(0,212,255,0.06) 0%, transparent 50%),
-        linear-gradient(180deg, #07080F, #060710 60%, #040509);
+    :root {
+      --cobre: #b87333;
+      --bronce: #cd7f32;
+      --ambar: #d98f2b;
+      --turquesa: #2eccc7;
+      --verde: #59cf91;
+      --obsidiana: #0b0b0f;
+      --panel: #111116;
+      --panel-2: #171720;
+      --hueso: #d4c9a8;
+      --texto: #efe7d0;
+      --muted: #a79f89;
+      --borde: #33333c;
+      --font-body: "Segoe UI", Arial, sans-serif;
+      --font-mono: "Courier New", monospace;
     }
 
-    .hero-section {
-      padding: 80px 20px 60px;
-      max-width: 1200px;
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background:
+        linear-gradient(180deg, rgba(46, 204, 199, 0.08), transparent 320px),
+        radial-gradient(circle at 20% 10%, rgba(184, 115, 51, 0.2), transparent 28rem),
+        var(--obsidiana);
+      color: var(--texto);
+      font-family: var(--font-body);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      width: min(1120px, calc(100% - 32px));
       margin: 0 auto;
     }
 
-    .hero-grid {
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 22px 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .brand {
+      color: var(--hueso);
+      font-family: var(--font-mono);
+      letter-spacing: 0;
+      text-transform: uppercase;
+    }
+
+    .pill {
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      padding: 7px 12px;
+      background: rgba(17, 17, 22, 0.72);
+      white-space: nowrap;
+    }
+
+    .hero {
+      min-height: 78vh;
       display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
-      align-items: stretch;
-    }
-
-    .hero-copy {
-      padding: 32px;
-      border: 1px solid var(--borde-sutil);
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top right, rgba(184,115,51,0.07), transparent 30%),
-                  linear-gradient(160deg, rgba(16,15,22,0.97), rgba(9,8,14,0.97));
-      box-shadow: var(--sombra-panel);
-    }
-
-    .hero-copy:hover {
-      border-color: rgba(184,115,51,0.36);
-      box-shadow: var(--sombra-panel), var(--sombra-glow-ambar);
+      grid-template-columns: minmax(0, 1fr) minmax(340px, 0.9fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: center;
+      padding: 36px 0 56px;
     }
 
     .eyebrow {
+      color: var(--turquesa);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      margin: 0 0 16px;
+    }
+
+    h1 {
+      margin: 0;
+      color: var(--hueso);
+      font-size: clamp(3rem, 9vw, 6.4rem);
+      line-height: 0.92;
+      letter-spacing: 0;
+    }
+
+    .lead {
+      max-width: 660px;
+      margin: 22px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.05rem, 2vw, 1.28rem);
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      padding: 6px 12px;
-      border-radius: var(--radius-full);
-      font-size: 0.74rem;
-      letter-spacing: 1.4px;
-      text-transform: uppercase;
-      color: var(--ambar);
-      border: 1px solid rgba(217,143,43,0.22);
-      background: rgba(9,8,5,0.72);
-      font-family: var(--font-mono);
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border-radius: 8px;
+      border: 1px solid var(--cobre);
+      background: linear-gradient(180deg, #d99b52, #a35f24);
+      color: #0b0b0f;
+      font-weight: 700;
+      text-decoration: none;
     }
 
-    .hero-copy h1 {
-      margin: 16px 0 14px;
-      font-size: clamp(2.2rem, 4.8vw, 4.2rem);
-      line-height: 0.96;
-      color: var(--texto-brillante);
-      letter-spacing: -0.01em;
+    .button.secondary {
+      background: rgba(17, 17, 22, 0.82);
+      color: var(--hueso);
+      border-color: var(--borde);
     }
 
-    .hero-copy p {
-      margin: 0;
-      max-width: 58ch;
-      line-height: 1.7;
-      color: var(--texto-secundario);
+    .office {
+      border: 1px solid rgba(184, 115, 51, 0.55);
+      background: linear-gradient(180deg, rgba(23, 23, 32, 0.96), rgba(11, 11, 15, 0.96));
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
     }
 
-    .hero-actions {
-      margin-top: 22px;
+    .office-head {
       display: flex;
+      justify-content: space-between;
+      align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
+      margin-bottom: 14px;
+      color: var(--muted);
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
     }
 
-    .hero-points {
-      margin-top: 22px;
+    .status-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--verde);
+      box-shadow: 0 0 16px rgba(89, 207, 145, 0.8);
+      display: inline-block;
+      margin-right: 7px;
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(5, minmax(48px, 1fr));
       gap: 10px;
     }
 
-    .hero-point {
-      padding: 12px;
-      border-radius: var(--radius-sm);
-      border: 1px solid rgba(184,115,51,0.14);
-      background: rgba(6,6,10,0.48);
-    }
-
-    .hero-point strong {
-      display: block;
-      color: var(--turquesa);
-      font-size: 0.82rem;
-      font-family: var(--font-mono);
-    }
-
-    .hero-point span {
-      display: block;
-      margin-top: 5px;
-      font-size: 0.82rem;
-      color: var(--texto-secundario);
-      line-height: 1.5;
-    }
-
-    .hero-panel {
-      padding: 22px;
+    .cell {
+      aspect-ratio: 1;
+      border: 1px solid var(--borde);
+      background: #12121a;
       display: grid;
-      gap: 14px;
-      align-content: start;
-    }
-
-    .stat-card {
-      padding: 18px;
-      border: 1px solid var(--borde-sutil);
-      border-radius: var(--radius-lg);
-      background: radial-gradient(circle at top right, rgba(184,115,51,0.07), transparent 30%),
-                  linear-gradient(160deg, rgba(16,15,22,0.97), rgba(9,8,14,0.97));
-      box-shadow: var(--sombra-panel);
-      transition: all var(--duration-slow) var(--ease-default);
-    }
-
-    .stat-card:hover {
-      border-color: rgba(184,115,51,0.36);
-      box-shadow: var(--sombra-panel), var(--sombra-glow-ambar);
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.8rem;
+      place-items: center;
       color: var(--turquesa);
       font-family: var(--font-mono);
-    }
-
-    .stat-card span {
-      display: block;
-      margin-top: 8px;
-      line-height: 1.55;
-      color: var(--texto-secundario);
-      font-size: 0.88rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 12px 24px;
-      border-radius: var(--radius-full);
-      border: 1px solid rgba(184,115,51,0.24);
-      background: rgba(13,14,22,0.72);
-      color: var(--texto-primario);
-      font-size: 0.94rem;
-      font-family: var(--font-body);
-      cursor: pointer;
-      text-decoration: none;
-      transition: all var(--duration-base) var(--ease-default);
-    }
-
-    .btn:hover {
-      border-color: rgba(46,204,199,0.34);
-      color: var(--texto-brillante);
-      transform: translateY(-1px);
-      box-shadow: 0 0 20px rgba(46,204,199,0.2);
-    }
-
-    .btn-primary {
-      background: linear-gradient(135deg, var(--turquesa), #1a9e9b);
-      color: #04080C;
-      border-color: rgba(46,204,199,0.5);
-      font-weight: 600;
-    }
-
-    .btn-primary:hover {
-      background: linear-gradient(135deg, #3dd8d3, #22b3af);
-      box-shadow: 0 0 28px rgba(46,204,199,0.32);
-    }
-
-    .features-section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section-title {
-      font-size: clamp(1.5rem, 2.6vw, 2.2rem);
-      color: var(--texto-brillante);
-      letter-spacing: -0.01em;
-      margin-bottom: 18px;
-      text-align: center;
-    }
-
-    .section-copy {
-      max-width: 60ch;
-      color: var(--texto-secundario);
-      line-height: 1.65;
-      font-size: 0.94rem;
-      text-align: center;
-      margin: 0 auto 40px;
-    }
-
-    .agents-section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: 0 auto;
+      font-weight: 700;
     }
 
     .agent {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(180deg, var(--cobre), var(--bronce));
-      border: 3px solid var(--hueso);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      cursor: pointer;
-      transition: all 0.2s;
-      image-rendering: pixelated;
-      border-radius: var(--radius-md);
+      background: linear-gradient(180deg, rgba(46, 204, 199, 0.2), rgba(184, 115, 51, 0.18));
+      color: var(--hueso);
+      border-color: rgba(46, 204, 199, 0.6);
     }
 
-    .agent:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 20px var(--ambar);
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0 0;
     }
 
-    .cta-section {
-      padding: 80px 20px;
-      text-align: center;
-      max-width: 800px;
-      margin: 0 auto;
+    .metric {
+      border: 1px solid var(--borde);
+      background: rgba(17, 17, 22, 0.75);
+      border-radius: 8px;
+      padding: 16px;
     }
 
-    .footer {
-      margin-top: auto;
-      padding: 24px 0 36px;
-      color: var(--texto-muted);
-      font-size: 0.83rem;
+    .metric strong {
+      display: block;
+      color: var(--turquesa);
+      font-size: 1.45rem;
+      line-height: 1;
+    }
+
+    .metric span {
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-transform: uppercase;
       font-family: var(--font-mono);
-      text-align: center;
     }
 
-    .footer a {
-      color: var(--texto-secundario);
-      transition: color var(--duration-base) var(--ease-default);
+    section {
+      padding: 54px 0;
+      border-top: 1px solid rgba(51, 51, 60, 0.8);
     }
 
-    .footer a:hover {
+    h2 {
+      margin: 0 0 18px;
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      color: var(--hueso);
+      letter-spacing: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+      background: rgba(17, 17, 22, 0.78);
+      padding: 18px;
+      min-height: 150px;
+    }
+
+    .card h3 {
+      margin: 0 0 9px;
       color: var(--ambar);
+      font-size: 1.05rem;
     }
 
-    /* responsive */
-    @media (max-width: 980px) {
-      .hero-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .hero-points {
-        grid-template-columns: 1fr;
-      }
+    .card p, .card li {
+      color: var(--muted);
+      margin: 0;
     }
 
-    @media (max-width: 720px) {
-      .hero-section {
-        padding-top: 42px;
-      }
+    .card ul {
+      margin: 0;
+      padding-left: 18px;
+    }
 
-      .hero-copy {
-        padding: 24px 16px;
-      }
+    .notice {
+      border-left: 3px solid var(--turquesa);
+      background: rgba(46, 204, 199, 0.08);
+      padding: 18px;
+      color: var(--muted);
+    }
 
-      .hero h1 {
-        font-size: clamp(1.9rem, 7vw, 3.2rem);
-      }
+    footer {
+      padding: 32px 0 48px;
+      color: var(--muted);
+      font-size: 0.92rem;
+      border-top: 1px solid rgba(51, 51, 60, 0.8);
+    }
+
+    @media (max-width: 880px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .metrics, .cards { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 560px) {
+      .topbar { align-items: flex-start; flex-direction: column; }
+      .metrics, .cards { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(4, minmax(44px, 1fr)); }
     }
   </style>
 </head>
 <body>
-  <!-- Scanlines effect -->
-  <div class="scanlines"></div>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand">MEDIOEVO / Mini Office</div>
+      <div class="pill">Founder access review</div>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero-section">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <span class="eyebrow">
-          <span>◈</span>
-          Open Source
-        </span>
-        <h1>Mini Office — Conway 24/7</h1>
-        <p>
-          Tu oficina virtual que trabaja 24/7. Agentes AI autónomos con estética
-          pixel art que investigan, analizan y se auto-depuran mientras duermes.
+    <main class="hero">
+      <div>
+        <p class="eyebrow">Agente Oficina local</p>
+        <h1>Mini Office</h1>
+        <p class="lead">
+          Interfaz local para revisar tareas, materiales y roles de agentes
+          antes de publicar o entregar un producto. El operador conserva la
+          aprobacion final.
         </p>
-        <div class="hero-actions">
-          <a href="https://github.com/medioevo/mini-office" class="btn btn-primary" target="_blank">
-            Ver en GitHub
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-.33.72-.705 1.305-1.245 1.845 2.265.255 2.745-1.095 2.745-1.095.375-.945 1.005-1.605 1.815-2.04-.885-.105-1.815-.45-1.815-2.01 0-.435.15-.81.39-1.095-.39-.09-1.29-.645.03-1.335 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23 1.32.69.435 1.245.03 1.335.255.315.39.69.39 1.095 0 1.575-.915 1.92-1.815 2.01.465.39.885 1.14.885 2.31 0 1.665-.015 3.015-.015 3.42 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-            </svg>
-          </a>
-          <a href="#features" class="btn">
-            Ver características
-          </a>
-        </div>
-        <div class="hero-points">
-          <div class="hero-point">
-            <strong>◈ AUTO-INVESTIGACIÓN</strong>
-            <span>Agentes que investigan mientras duermes</span>
-          </div>
-          <div class="hero-point">
-            <strong>◈ AUTO-LIMPIEZA</strong>
-            <span>Organización automatica de proyectos</span>
-          </div>
-          <div class="hero-point">
-            <strong>◈ AUTO-SEGURIDAD</strong>
-            <span>Monitoreo continuo 24/7</span>
-          </div>
+        <div class="actions">
+          <a class="button" href="#run">Ejecutar local</a>
+          <a class="button secondary" href="#status">Ver estado</a>
         </div>
       </div>
 
-      <div class="hero-panel">
-        <div class="stat-card">
-          <strong>24/7</strong>
-          <span>Operación continua</span>
+      <aside class="office" aria-label="Vista de oficina local">
+        <div class="office-head">
+          <span><span class="status-dot"></span>local ready</span>
+          <span>127.0.0.1:8000</span>
         </div>
-        <div class="stat-card">
-          <strong>5+</strong>
-          <span>Agentes especializados</span>
+        <div class="grid" aria-hidden="true">
+          <div class="cell agent">W</div>
+          <div class="cell">IT</div>
+          <div class="cell">HR</div>
+          <div class="cell agent">Q</div>
+          <div class="cell">S</div>
+          <div class="cell">M</div>
+          <div class="cell agent">R</div>
+          <div class="cell">A</div>
+          <div class="cell">D</div>
+          <div class="cell agent">B</div>
+          <div class="cell">N</div>
+          <div class="cell">C</div>
+          <div class="cell agent">F</div>
+          <div class="cell">P</div>
+          <div class="cell">L</div>
         </div>
-        <div class="stat-card">
-          <strong>100%</strong>
-          <span>Código abierto</span>
+        <div class="metrics">
+          <div class="metric"><strong>Local</strong><span>runtime</span></div>
+          <div class="metric"><strong>5</strong><span>roles</span></div>
+          <div class="metric"><strong>Manual</strong><span>approval</span></div>
+          <div class="metric"><strong>QA</strong><span>status</span></div>
         </div>
-        <div class="stat-card">
-          <strong>0.85+</strong>
-          <span>Performance threshold</span>
-        </div>
-      </div>
-    </div>
-  </section>
+      </aside>
+    </main>
 
-  <!-- Features Section -->
-  <section id="features" class="features-section">
-    <h2 class="section-title">Características Principales</h2>
-    <p class="section-copy">
-      Mini Office combina la estética pixel art de videojuegos retro con
-      tecnología AI de vanguardia para crear una experiencia única.
-    </p>
-
-    <div class="features">
-      <div class="feature">
-        <h3>◈ Sistema Conway</h3>
-        <p>Algoritmo evolutivo basado en el Juego de la Vida de Conway. Los agentes evolucionan y mejoran su performance automaticamente.</p>
+    <section id="status">
+      <h2>Ficha tecnica</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Uso</h3>
+          <p>Revision local de materiales, tareas, roles y vistas de una mini oficina de agentes.</p>
+        </article>
+        <article class="card">
+          <h3>Limite</h3>
+          <p>No ejecuta publicaciones externas ni promesas comerciales desde la interfaz local.</p>
+        </article>
+        <article class="card">
+          <h3>Estado</h3>
+          <p>`LOCAL_SMOKE_QA` y `FOUNDER_ACCESS_REVIEW`; venta externa pendiente de gates.</p>
+        </article>
       </div>
-      <div class="feature">
-        <h3>◈ Agentes reales</h3>
-        <p>Toshiro (writer), Don Humo (debugger), Mac (resear[elichicado]r), Ronin (tester), Darvi (archivist) trabajando en tiempo real.</p>
-      </div>
-      <div class="feature">
-        <h3>◈ Diseño CLAUDIO</h3>
-        <p>Universo visual híbrido: Steampunk + Cyberpunk + Ar[elichicado]opunk + Biopunk. Estética única inspirada en videojuegos.</p>
-      </div>
-      <div class="feature">
-        <h3>◈ Auto-Evolución</h1>
-        <p>Performance >= 0.85 → el agente evoluciona, hereda skills y reemplaza al padre.</p>
-      </div>
-      <div class="feature">
-        <h3>◈ Dashboard Visual</h3>
-        <p>8 departamentos con indicadores en tiempo real. Night pixel art con polling cada 5 segundos.</p>
-      </div>
-      <div class="feature">
-        <h3>◈ Open Source</h3>
-        <p>Publicado bajo licencia MIT. Contribuye, modifica, mejora. GitHub: medioevo/mini-office</p>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Agents Section -->
-  <section class="agents-section">
-    <h2 class="section-title">Agentes Actitú</h2>
-    <p class="section-copy">
-      Cada agente tiene roles especializados que trabajan en conjunto para mantener tu sistema operativo 24/7.
-    </p>
-
-    <div class="agents">
-      <div class="agent" title="Toshiro - Writer">✍️</div>
-      <div class="agent" title="Don Humo - Debugger">🔧</div>
-      <div class="agent" title="Mac - resear[elichicado]r">🔬</div>
-      <div class="agent" title="Ronin - Tester">🧪</div>
-      <div class="agent" title="Darvi - Archivist">📚</div>
-    </div>
-
-    <div style="text-align: center; margin-top: 30px;">
-      <div class="status-indicator">
-        <span class="status-dot"></span>
-        <span>Sistema Operativo</span>
+    <section id="run">
+      <h2>Comandos</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Estado</h3>
+          <p><code>python mini_office.py --status</code></p>
+        </article>
+        <article class="card">
+          <h3>Servidor local</h3>
+          <p><code>python mini_office.py --no-browser</code></p>
+        </article>
+        <article class="card">
+          <h3>Pruebas</h3>
+          <p><code>python -m pytest -q</code></p>
+        </article>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CTA Section -->
-  <section class="cta-section">
-    <h2 style="margin-bottom: 20px;">¿Listo para comenzar?</h2>
-    <p style="color: var(--texto-secundario); margin-bottom: 30px; max-width: 500px; margin-left: auto; margin-right: auto;">
-      Únete a la revolución del código abierto. Mini Office es gratuito,
-      open source y está construido con ❤️ por ClawdWorks.
-    </p>
-    <a href="https://github.com/medioevo/mini-office" class="cta-button">
-      Ver en GitHub
-    </a>
-  </section>
+    <section>
+      <h2>Antes de vender</h2>
+      <div class="notice">
+        Falta cerrar licencia legal, paquete final, prueba en maquina limpia,
+        hash de entrega, soporte, privacidad, reembolsos y checkout que coincida
+        con el producto verificado.
+      </div>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container" style="max-width: none; padding: 20px;">
-      <p>
-        <strong>Mini Office — Conway 24/7</strong><br>
-        Construido con CLAUDIO Design System v1.0<br>
-        Steampunk + Cyberpunk + Ar[elichicado]opunk + Biopunk
-      </p>
-      <p style="margin-top: 20px;">
-        <a href="https://github.com/medioevo/mini-office" target="_blank">GitHub</a> ·
-        <a href="https://medioevo.space" target="_blank">medioevo.space</a> ·
-        <a href="https://github.com/kevdogg102396-afk/nemo-code" target="_blank">Nemo Code</a>
-      </p>
-      <p style="margin-top: 15px; font-size: 0.75rem;">
-        © 2026 MEDIOEVO · L.R. Gonzalez · Licencia MIT
-      </p>
-    </div>
-  </footer>
+    <footer>
+      Mini Office - MEDIOEVO. Licencia comercial pendiente de revision legal.
+    </footer>
+  </div>
 
-  <!-- Script para interacción básica -->
   <script>
-    // Smooth scroll para anclas
-    document.querySelectorAll('a[href^="#"]').foreach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({ behavior: 'smooth' });
-        }
-      });
-    });
-
-    // Animación simple de entrada
-    document.addEventListener('DOMContentLoaded', function() {
-      const cards = document.querySelectorAll('.stat-card, .feature');
-      cards.foreach((card, index) => {
-        card.style.opacity = '0';
-        card.style.transform = 'translateY(20px)';
-        setTimeout(() => {
-          card.style.transition = 'all 0.6s ease-out';
-          card.style.opacity = '1';
-          card.style.transform = 'translateY(0)';
-        }, index * 100);
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener('click', (event) => {
+        const target = document.querySelector(anchor.getAttribute('href'));
+        if (!target) return;
+        event.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   </script>

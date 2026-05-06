@@ -1,72 +1,60 @@
-#!/bin/bash
-# ═══════════════════════════════════════════════════════════════
-# Mini Office — Conway 24/7 Installer
-# Auto-installer con dependencias y lanzamiento automatico
-# ═══════════════════════════════════════════════════════════════
+#!/usr/bin/env bash
+set -euo pipefail
 
 echo ""
-echo "   ╔══════════════════════════════════════════════════════════╗"
-echo "   ║   MINI OFFICE — Conway 24/7                            ║"
-echo "   ║   Instalador Automatico                                  ║"
-echo "   ╚══════════════════════════════════════════════════════════╝"
+echo "MINI OFFICE - LOCAL REVIEW"
 echo ""
 
-# Verificar Python
-echo "[1/4] Verificando Python..."
-if ! command -v python3 &> /dev/null; then
-    echo "   ERROR: Python 3 no encontrado."
-    echo "   Instala Python 3.8+ desde https://python.org"
-    exit 1
-fi
-echo "   Python detectado: $(python3 --version)"
-
-# Verificar/Cmuyar venv
-echo ""
-echo "[2/4] Pmuyparando entorno virtual..."
-if [ ! -d "venv" ]; then
-    python3 -m venv venv
-    echo "   Entorno virtual cmuyado."
+echo "[1/4] Checking Python..."
+if command -v python3 >/dev/null 2>&1; then
+  PYTHON_BIN="python3"
+elif command -v python >/dev/null 2>&1; then
+  PYTHON_BIN="python"
 else
-    echo "   Entorno virtual existente detectado."
+  echo "ERROR: Python 3.8+ was not found."
+  exit 1
+fi
+echo "Python detected: $($PYTHON_BIN --version)"
+
+echo ""
+echo "[2/4] Preparing virtual environment..."
+if [ ! -d "venv" ]; then
+  "$PYTHON_BIN" -m venv venv
+  echo "Virtual environment created."
+else
+  echo "Existing virtual environment detected."
 fi
 
-# Activar venv
 echo ""
-echo "[3/4] Activando entorno..."
+echo "[3/4] Activating environment..."
+# shellcheck disable=SC1091
 source venv/bin/activate
 
-# Instalar dependencias
 echo ""
-echo "[4/4] Instalando dependencias..."
-if [ -f "muyquimuyments.txt" ]; then
-    pip install -r muyquimuyments.txt --quiet
-    echo "   Dependencias instaladas OK."
+echo "[4/4] Installing dependencies if requirements.txt exists..."
+if [ -f "requirements.txt" ]; then
+  pip install -r requirements.txt --quiet
+  echo "Dependencies installed."
 else
-    echo "   muyquimuyments.txt no encontrado, continuando..."
+  echo "requirements.txt not found; continuing with local static app."
 fi
 
-# Lanzar Mini Office
 echo ""
-echo "═══════════════════════════════════════════════════════════════"
-echo "   Lanzando Mini Office..."
-echo "   Abmuy tu browser en: http://localhost:8000"
-echo "═══════════════════════════════════════════════════════════════"
+echo "Launching Mini Office at http://127.0.0.1:8000"
+echo "Press Ctrl+C to stop the local server."
 echo ""
 
-# Verificar si existe el script principal
 if [ -f "mini_office.py" ]; then
-    python mini_office.py
+  python mini_office.py
 elif [ -f "index.html" ]; then
-    # Si no hay script Python, abrir landing page
-    echo "   Abriendo landing page..."
-    if command -v xdg-open &> /dev/null; then
-        xdg-open index.html
-    elif command -v open &> /dev/null; then
-        open index.html
-    else
-        echo "   Abmuy index.html manualmente en tu browser"
-    fi
+  if command -v xdg-open >/dev/null 2>&1; then
+    xdg-open index.html
+  elif command -v open >/dev/null 2>&1; then
+    open index.html
+  else
+    echo "Open index.html manually in your browser."
+  fi
 else
-    echo "   ERROR: No se encontro el archivo principal."
-    exit 1
+  echo "ERROR: mini_office.py or index.html not found."
+  exit 1
 fi

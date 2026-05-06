@@ -1,62 +1,64 @@
 #!/usr/bin/env python
-"""
-Copywriter Agent
-================
-redactor publicitario para copy persuasivo
-"""
+"""Copywriter agent for conservative Mini Office copy."""
 
 import json
 from datetime import datetime
+from pathlib import Path
+
 
 class Copywriter:
-    """redactor publicitario automatizado"""
+    """Generate sales and product copy that matches current evidence."""
 
     def __init__(self):
         self.name = "Copywriter"
         self.specialty = "Persuasive Copy & Content"
 
     def write_copy(self, product_name="Mini Office", platform="landing"):
-        """Escribe copy para plataforma"""
-        copy = {
+        """Write low-claim copy for a target platform."""
+        return {
             "product": product_name,
             "platform": platform,
             "timestamp": datetime.now().isoformat(),
             "landing_page": {
-                "headline": "Tu Oficina Virtual que Trabaja 24/7",
-                "subheadline": "Agentes AI autonomos con estilo pixel art",
-                "cta_primary": "Comenzar Gratis",
-                "cta_secondary": "Ver Demo",
+                "headline": "Mini Office",
+                "subheadline": "Agente Oficina local para revisar flujos y materiales.",
+                "cta_primary": "Solicitar founder access",
+                "cta_secondary": "Ver estado tecnico",
                 "features": [
-                    {"title": "Auto-Investigacion", "desc": "Agentes que investigan mientras duermes"},
-                    {"title": "Auto-Limpieza", "desc": "Organizacion automatica de proyectos"},
-                    {"title": "Auto-Seguridad", "desc": "Monitoreo continuo 24/7"},
-                    {"title": "Auto-Evolucion", "desc": "Mejora continua basada en performance"},
+                    {"title": "Revision local", "desc": "Sirve la interfaz en localhost."},
+                    {"title": "Roles claros", "desc": "Writer, Debugger, Research, QA y Archive."},
+                    {"title": "Aprobacion humana", "desc": "Las publicaciones externas quedan fuera del runtime local."},
+                    {"title": "Paquete comercial", "desc": "Licencia y entrega pendientes de cierre legal."},
                 ],
-                "social_proof": "+1000 developers confian en Mini Office",
-                "urgency": "Edicion limitada - Open Source",
+                "social_proof": "Evidence-backed local QA in progress.",
+                "urgency": "Founder access only after delivery gates.",
             },
             "social_media": {
-                "twitter": "Tu oficina virtual que trabaja 24/7? Ya existe. Se llama Mini Office. #AI #OpenSource",
-                "linkedin": "Presentamos Mini Office: La primera oficina virtual con agentes AI autonomos y estetica pixel art.",
-                "instagram": "Tu oficina nunca se veia tan pixelada. #MiniOffice #PixelArt #AI",
+                "short": "Mini Office: oficina local para revisar agentes, tareas y materiales antes de publicar.",
+                "linkedin": (
+                    "Mini Office esta en revision founder access: local-first, "
+                    "con aprobacion humana y gates comerciales claros."
+                ),
             },
             "email": {
-                "subject": "Tu nueva oficina virtual esta aqui",
-                "preview": "Agentes AI + Pixel Art = Productividad 24/7",
-                "body": "Hola! Tu oficina virtual que trabaja 24/7 te esta esperando. Sin suscripciones. Sin complicaciones. Solo productividad pixelada."
-            }
+                "subject": "Mini Office founder access",
+                "preview": "Revision local de flujos y materiales de agentes",
+                "body": (
+                    "Mini Office es una app local para revisar roles, tareas y "
+                    "materiales antes de publicar o entregar un producto."
+                ),
+            },
         }
-        return copy
 
     def generate_assets(self, output_path="reports/copywriting.json"):
-        """Genera assets de copy"""
+        """Generate copy assets."""
         copy = self.write_copy()
         Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(copy, f, indent=2)
         return copy
 
+
 if __name__ == "__main__":
     writer = Copywriter()
-    assets = writer.generate_assets()
-    print(json.dumps(assets, indent=2))
+    print(json.dumps(writer.generate_assets(), indent=2))

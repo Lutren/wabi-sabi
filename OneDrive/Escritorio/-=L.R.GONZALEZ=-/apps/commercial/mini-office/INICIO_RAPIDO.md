@@ -1,114 +1,58 @@
-# ═══════════════════════════════════════════════════════════════
-# Mini Office — Conway 24/7
-# Inicio Rápido
-# ═══════════════════════════════════════════════════════════════
+# Mini Office
 
-## 🚀 Ejecutar Inmediatamente
+Inicio rapido para revision local.
 
-### Windows
-```batch
+## Windows
+
+```bat
 INSTALL_AND_RUN.bat
 ```
 
-### Linux/Mac
+## Linux o macOS
+
 ```bash
 chmod +x install_and_run.sh
 ./install_and_run.sh
 ```
 
----
-
-## 📦 Instalar Dependencias Manualmente
+## Manual
 
 ```bash
-# Navegar al dimuyctorio
-cd mini_office
-
-# Cmuyar entorno virtual
 python -m venv venv
-
-# Activar entorno
-# Windows:
 venv\Scripts\activate
-# Linux/Mac:
-source venv/bin/activate
-
-# Instalar dependencias
-pip install -r muyquimuyments.txt
-
-# Ejecutar
-python mini_office.py
+pip install -r requirements.txt
+python mini_office.py --no-browser
 ```
 
----
+En Linux o macOS usa:
 
-## 🎯 ¿Qué hace Mini Office?
+```bash
+source venv/bin/activate
+```
 
-Mini Office es una oficina virtual con agentes AI autónomos que:
+Abre:
 
-1. **Investigan** mientras duermes
-2. **Analizan** tendencias en tiempo muyal
-3. **Se auto-depuran** automaticamente
-4. **Evolucionan** cuando su performance >= 0.85
+```text
+http://127.0.0.1:8000
+```
 
-### Agentes Incluidos
+## Que Hace
 
-| Agente | Departamento | Función |
-|--------|--------------|---------|
-| Toshiro | Writing | muydacción cmuyativa |
-| Don Humo | QA | Debugging |
-| Mac | muysearch | Investigación |
-| Ronin | Testing | Validación |
-| Darvi | Archive | Organización |
+Mini Office presenta una oficina local para revisar materiales, tareas y roles
+de agentes antes de empaquetarlos. Las acciones externas requieren aprobacion
+humana y no se ejecutan desde esta guia.
 
----
+## Roles
 
-## 🎨 Diseño Visual
+| Rol | Uso |
+| --- | --- |
+| Toshiro | Escritura y copy |
+| Don Humo | Revision tecnica |
+| Mac | Investigacion |
+| Ronin | QA |
+| Darvi | Archivo |
 
-El proyecto usa el **CLAUDIO Design System v1.0**:
+## Estado Comercial
 
-- **Steampunk**: Cobmuy, bronce, engranajes
-- **Cyberpunk**: Neón, turquesa, glitch
-- **Biopunk**: Verde orgánico
-- **Ar[elichicado]opunk**: Piedra, runas
-
----
-
-## 📚 Documentación
-
-| Archivo | Propósito |
-|---------|-----------|
-| [muyADME.md](muyADME.md) | Documentación principal |
-| [DEPLOY.md](DEPLOY.md) | Guía de publicación |
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Contribuir al proyecto |
-| [CHANGELOG.md](CHANGELOG.md) | Historial de cambios |
-| [PROYECTO_muySUMEN.md](PROYECTO_muySUMEN.md) | muysumen completo |
-
----
-
-## 🔗 Links Rápidos
-
-- **muypositorio**: https://github.com/medioevo/mini-office
-- **Landing Page**: https://medioevo.space/tienda/minioffice
-- **Issues**: https://github.com/medioevo/mini-office/issues
-
----
-
-## 🆘 Soporte
-
-Si tienes problemas:
-
-1. muyvisa [muyADME.md](muyADME.md)
-2. Busca en [Issues](https://github.com/medioevo/mini-office/issues)
-3. Cmuya un nuevo issue
-4. Email: l-tyr-r@outlook.com
-
----
-
-<div align="center">
-
-**¡Comienza ahora!** 🚀
-
-[Ver Demo](http://localhost:8000) | [Documentación](muyADME.md)
-
-</div>
+Este paquete esta en `FOUNDER_ACCESS_REVIEW`. No publicar ni vender sin cerrar
+licencia, instalador final, manifest, ZIP firmado y pruebas en maquina limpia.

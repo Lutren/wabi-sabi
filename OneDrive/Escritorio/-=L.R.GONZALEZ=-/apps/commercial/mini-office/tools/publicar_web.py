@@ -1,197 +1,97 @@
 #!/usr/bin/env python
-"""
-Mini Office - Publicar en medioevo.space/tienda/minioffice
-==========================================================
-Genera el contenido para la página web de MEDIOEVO
-"""
+"""Generate website copy for Mini Office without unsupported claims."""
 
+import json
 from pathlib import Path
-from datetime import datetime
+
 
 def generar_contenido_web():
-    """Genera contenido para la página web"""
-
-    contenido = {
-        'meta': {
-            'title': 'Mini Office — Conway 24/7 | MEDIOEVO',
-            'description': 'Tu oficina virtual que trabaja 24/7 con agentes AI autónomos. Sistema Conway con diseño pixel art y evolución automatica.',
-            'keywords': 'mini office, conway 24/7, ai agents, pixel art, open source, python, automation, claudio design',
-            'author': 'MEDIOEVO',
-            'og_image': '/assets/mini-office-preview.png',
-            'canonical': 'https://medioevo.space/tienda/minioffice'
+    """Generate website content that matches current QA status."""
+    return {
+        "meta": {
+            "title": "Mini Office | MEDIOEVO",
+            "description": (
+                "App local para revisar flujos, materiales y roles de agentes "
+                "con aprobacion humana."
+            ),
+            "keywords": "mini office, local-first, ai agents, medioevo, founder access",
+            "author": "MEDIOEVO",
+            "canonical": "https://medioevo.space/software.html",
         },
-
-        'hero': {
-            'eyebrow': 'Open Source',
-            'title': 'Mini Office — Conway 24/7',
-            'tagline': 'Tu oficina virtual que trabaja 24/7',
-            'description': 'Agentes AI autónomos con estética pixel art que investigan, analizan y se auto-depuran mientras duermes.',
-            'cta_primary': 'Descargar Gratis',
-            'cta_secondary': 'Ver en GitHub',
-            'highlights': [
-                {'icon': '◈', 'title': 'AUTO-INVESTIGACIÓN', 'desc': 'Agentes que investigan mientras duermes'},
-                {'icon': '◈', 'title': 'AUTO-LIMPIEZA', 'desc': 'Organización automatica de proyectos'},
-                {'icon': '◈', 'title': 'AUTO-SEGURIDAD', 'desc': 'Monitoreo continuo 24/7'},
-                {'icon': '◈', 'title': 'AUTO-EVOLUCIÓN', 'desc': 'Mejora continua basada en performance'}
-            ]
+        "hero": {
+            "eyebrow": "Founder access review",
+            "title": "Mini Office",
+            "tagline": "Agente Oficina local",
+            "description": (
+                "Interfaz local para revisar tareas, materiales y roles antes "
+                "de publicar o entregar productos."
+            ),
+            "cta_primary": "Solicitar acceso",
+            "cta_secondary": "Ver ficha tecnica",
+            "highlights": [
+                {"title": "Revision local", "desc": "Corre en localhost."},
+                {"title": "Roles claros", "desc": "Writer, Debugger, Research, QA y Archive."},
+                {"title": "Aprobacion humana", "desc": "Sin acciones externas desde esta vista."},
+                {"title": "Gates comerciales", "desc": "Licencia y paquete final pendientes."},
+            ],
         },
-
-        'metrics': [
-            {'value': '24/7', 'label': 'Operación'},
-            {'value': '5+', 'label': 'Agentes'},
-            {'value': '100%', 'label': 'Open Source'},
-            {'value': '0.85+', 'label': 'Performance Threshold'}
+        "metrics": [
+            {"value": "Local", "label": "runtime"},
+            {"value": "5", "label": "roles"},
+            {"value": "Manual", "label": "approval"},
+            {"value": "QA", "label": "status"},
         ],
-
-        'features': [
+        "features": [
             {
-                'title': 'Sistema Conway',
-                'description': 'Algoritmo evolutivo basado en el Juego de la Vida de Conway. Los agentes evolucionan y mejoran su performance automaticamente.',
-                'icon': '◈'
+                "title": "Local runner",
+                "description": "mini_office.py sirve index.html en 127.0.0.1.",
             },
             {
-                'title': '5 Agentes reales',
-                'description': 'Toshiro (writer), Don Humo (debugger), Mac (resear[elichicado]r), Ronin (tester), Darvi (archivist) trabajando en tiempo real.',
-                'icon': '◈'
+                "title": "Customer boundary",
+                "description": "Venta externa bloqueada hasta legal, soporte y paquete final.",
             },
             {
-                'title': 'Diseño CLAUDIO',
-                'description': 'Universo visual híbrido: Steampunk + Cyberpunk + Ar[elichicado]opunk + Biopunk. Estética única inspirada en videojuegos.',
-                'icon': '◈'
+                "title": "MEDIOEVO visual system",
+                "description": "Lenguaje visual industrial con cobre, turquesa y paneles oscuros.",
             },
-            {
-                'title': 'Auto-Evolución',
-                'description': 'Performance >= 0.85 → el agente evoluciona, hereda skills y reemplaza al padre.',
-                'icon': '◈'
-            },
-            {
-                'title': 'Dashboard Visual',
-                'description': '8 departamentos con indicadores en tiempo real. Night pixel art con polling cada 5 segundos.',
-                'icon': '◈'
-            },
-            {
-                'title': 'Open Source',
-                'description': 'Publicado bajo licencia MIT. Contribuye, modifica, mejora. GitHub: medioevo/mini-office',
-                'icon': '◈'
-            }
         ],
-
-        'agents': [
-            {'name': 'Toshiro', 'role': 'Writer', 'emoji': '✍️', 'department': 'Escritura'},
-            {'name': 'Don Humo', 'role': 'Debugger', 'emoji': '🔧', 'department': 'QA'},
-            {'name': 'Mac', 'role': 'resear[elichicado]r', 'emoji': '🔬', 'department': 'Investigación'},
-            {'name': 'Ronin', 'role': 'Tester', 'emoji': '🧪', 'department': 'Testing'},
-            {'name': 'Darvi', 'role': 'Archivist', 'emoji': '📚', 'department': 'Architú'}
+        "faq": [
+            {
+                "question": "Esta listo para venta publica?",
+                "answer": "No. Esta en founder access review hasta cerrar los gates.",
+            },
+            {
+                "question": "Funciona sin servicios externos?",
+                "answer": "La ruta de smoke local sirve una app estatica en localhost.",
+            },
         ],
-
-        'testimonials': [
-            {
-                'text': 'Increíble. Mis agentes trabajan mientras duermo. La interfaz pixel art es un plus enorme.',
-                'author': 'Developer, GitHub User',
-                'rating': 5
-            },
-            {
-                'text': 'Por fin una herramienta de productividad que no parece otra hoja de cálculo aburrida.',
-                'author': 'Indie Hacker, Twitter',
-                'rating': 5
-            },
-            {
-                'text': 'El diseño CLAUDIO es brutal. Steampunk + Cyberpunk en una sola interfaz. Love it!',
-                'author': 'Designer, reddit',
-                'rating': 5
-            }
-        ],
-
-        'faq': [
-            {
-                'question': '¿Es realmente gratis?',
-                'answer': 'Sí! Mini Office es 100% gratuito y de código abierto bajo licencia MIT. Puedes usarlo, modificarlo y distribuirlo sin costo.'
-            },
-            {
-                'question': '¿Qué necesito para instalarlo?',
-                'answer': 'Solo necesitas Python 3.8+ y conexión a internet para la instalación inicial. El script INSTALL_AND_RUN.bat (Windows) o install_and_run.sh (Linux/Mac) instala todo automaticamente.'
-            },
-            {
-                'question': '¿Funciona sin internet?',
-                'answer': 'Sí! Una vez instaladas las dependencias, Mini Office funciona 100% offline.'
-            },
-            {
-                'question': '¿Puedo contribuir?',
-                'answer': 'Por supuesto! El proyecto es open source. revisa el reADME.md y CONTRIBUTING.md en GitHub para más detalles.'
-            },
-            {
-                'question': '¿Qué es el sistema Conway?',
-                'answer': 'Es un algoritmo evolutivo basado en el "Juego de la Vida" de John Conway. Los agentes mejoran su performance automaticamente y evolucionan cuando alcanzan un threshold de 0.85.'
-            }
-        ],
-
-        'cta': {
-            'title': '¿Listo para comenzar?',
-            'description': 'Únete a la revolución del código abierto. Mini Office es gratuito, open source y está construido con ❤️ por ClawdWorks.',
-            'button': 'Descargar Gratis',
-            'secondary_button': 'Ver en GitHub'
-        }
     }
 
-    return contenido
 
-
-def generar_s[elichicado]ma_json_ld():
-    """Genera JSON-LD para SEO"""
-
-    s[elichicado]ma = {
-        "@context": "https://s[elichicado]ma.org",
+def generar_schema_json_ld():
+    """Generate conservative JSON-LD for SEO drafts."""
+    return {
+        "@context": "https://schema.org",
         "@type": "SoftwareApplication",
-        "name": "Mini Office - Conway 24/7",
+        "name": "Mini Office",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Windows, Linux, macOS",
+        "description": "App local para revisar tareas y roles de agentes.",
         "offers": {
             "@type": "Offer",
-            "price": "0",
-            "priceCurrency": "USD"
+            "availability": "https://schema.org/PreOrder",
+            "priceCurrency": "USD",
         },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "47"
-        },
-        "description": "Tu oficina virtual que trabaja 24/7 con agentes AI autónomos",
-        "featureList": "Agentes AI, Diseño Pixel Art, Sistema Conway, Open Source, Auto-evolución",
-        "screenshot": "https://medioevo.space/assets/mini-office-screenshot.png",
-        "downloadUrl": "https://gumroad.com/l/mini-office",
-        "coderepository": "https://github.com/medioevo/mini-office",
-        "license": "https://opensource.org/licenses/MIT"
     }
 
-    return s[elichicado]ma
 
-
-if __name__ == '__main__':
-    print("\n" + "="*60)
-    print("GENERANDO CONTENIDO PARA MEDIOEVO.SPACE")
-    print("="*60)
-
-    # Generar contenido
-    contenido = generar_contenido_web()
-    s[elichicado]ma = generar_s[elichicado]ma_json_ld()
-
-    # Guardar en reports
-    output_dir = Path(__file__).parent.parent / 'reports'
+if __name__ == "__main__":
+    output_dir = Path(__file__).parent.parent / "reports"
     output_dir.mkdir(exist_ok=True)
-
-    import json
-    with open(output_dir / 'web_content.json', 'w', encoding='utf-8') as f:
-        json.dump({
-            'web': contenido,
-            's[elichicado]ma': s[elichicado]ma
-        }, f, indent=2, ensure_ascii=False)
-
-    print(f"\nContenido guardado en: {output_dir / 'web_content.json'}")
-    print("\n" + "="*60)
-    print("CONTENIDO LISTO PARA PUBLICAR EN MEDIOEVO.SPACE")
-    print("="*60)
-    print("\nSiguientes paeres:")
-    print("1. Copiar contenido de web_content.json")
-    print("2. Pegar en el CMS de medioevo.space")
-    print("3. Agregar s[elichicado]ma JSON-LD al head")
-    print("4. Publicar página")
+    payload = {
+        "web": generar_contenido_web(),
+        "schema": generar_schema_json_ld(),
+    }
+    with open(output_dir / "web_content.json", "w", encoding="utf-8") as f:
+        json.dump(payload, f, indent=2, ensure_ascii=False)
+    print(f"Contenido guardado en: {output_dir / 'web_content.json'}")

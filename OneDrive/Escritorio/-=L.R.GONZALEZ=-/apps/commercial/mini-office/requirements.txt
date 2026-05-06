@@ -1,29 +1,7 @@
-# Mini Office - Conway 24/7
-# Dependencies for Python 3.8+
-# Install: pip install -r muyquimuyments.txt
+# Mini Office dependencies for Python 3.8+
 
-# Comuy
-muyquests>=2.31.0
+requests>=2.31.0
 Pillow>=10.0.0
-
-# HTTP Server
 flask>=3.0.0
-
-# Build
 setuptools>=65.0.0
 wheel>=0.38.0
-
-# Optional - Audio analysis
-# mutagen>=1.47.0
-
-# Optional - Video generation
-# ffmpeg-python>=0.2.0
-
-# Optional - Social media
-# python-twitter>=3.8.2
-# praw>=7.19.0
-
-# Dev (optional)
-# pytest>=7.4.0
-# black>=23.7.0
-# flake8>=6.1.0

@@ -1,73 +1,70 @@
 #!/usr/bin/env python
-"""
-Creative Director Agent
-=======================
-Director creativo para conceptos visuales y narrativa
-"""
+"""Creative director agent for Mini Office."""
 
 import json
 from datetime import datetime
+from pathlib import Path
+
 
 class CreativeDirector:
-    """Director creativo automatizado"""
+    """Generate product-safe creative direction."""
 
     def __init__(self):
         self.name = "Creative Director"
         self.specialty = "Visual Concepts & Narrative"
 
-    def develop_concept(self, product_name="Mini Office", theme="cybersteampunk"):
-        """Desarrolla concepto creativo"""
-        concept = {
+    def develop_concept(self, product_name="Mini Office", theme="medioevo-office"):
+        """Return a conservative creative brief."""
+        return {
             "product": product_name,
             "theme": theme,
             "timestamp": datetime.now().isoformat(),
             "visual_identity": {
                 "colors": {
-                    "primary": "#37d3d0",  # Cyan
-                    "secondary": "#e2a760",  # Copper
-                    "accent": "#59cf91",  # Green
-                    "background": "#081018",  # Dark blue
+                    "primary": "#2eccc7",
+                    "secondary": "#d98f2b",
+                    "accent": "#59cf91",
+                    "background": "#0b0b0f",
                 },
                 "typography": {
-                    "display": "Courier New, monospace",
+                    "display": "Segoe UI, system-ui",
                     "body": "Segoe UI, system-ui",
                 },
                 "style_keywords": [
-                    "pixel art",
-                    "cybersteampunk",
-                    "retro-futuristic",
-                    "minimal",
-                    "game-like"
-                ]
+                    "local workstation",
+                    "pixel-like office grid",
+                    "medioevo industrial",
+                    "human approval",
+                ],
             },
             "narrative": {
-                "hook": "Tu oficina virtual que trabaja 24/7",
-                "story": "Imagina un mundo donde tus agentes AI trabajan mientras tu duermes. "
-                        "Mini Office es esa oficina virtual, con estilo pixel art de videojuego.",
+                "hook": "Una mini oficina local para revisar flujos antes de publicar.",
+                "story": (
+                    "Mini Office convierte roles, materiales y tareas en una vista "
+                    "local que el operador puede revisar antes de entregar."
+                ),
                 "taglines": [
-                    "Agentes reales. Trabajo real.",
-                    "Tu oficina virtual 24/7",
-                    "El futuro del trabajo es pixelado",
-                    "Auto-gestionate. Auto-evolutivo. Auto-todo."
-                ]
+                    "Revision local. Entrega mas clara.",
+                    "Tu oficina de agentes, con aprobacion humana.",
+                    "Ordena, revisa y empaqueta.",
+                ],
             },
             "moodboard": [
-                "Blade Runner meets Minecraft",
-                "Monaco meets Ex Machina",
-                "8-bit cyberpunk",
-            ]
+                "control room",
+                "compact office board",
+                "MEDIOEVO workshop",
+            ],
         }
-        return concept
 
     def generate_brief(self, output_path="reports/creative_brief.json"):
-        """Genera brief creativo"""
+        """Generate a creative brief."""
         concept = self.develop_concept()
         Path(output_path).parent.mkdir(parents=True, exist_ok=True)
-        with open(output_path, 'w') as f:
+        with open(output_path, "w", encoding="utf-8") as f:
             json.dump(concept, f, indent=2)
         return concept
 
+
 if __name__ == "__main__":
     director = CreativeDirector()
-    brief = director.generate_brief()
-    print(json.dumps(brief, indent=2))
+    print(json.dumps(director.generate_brief(), indent=2))

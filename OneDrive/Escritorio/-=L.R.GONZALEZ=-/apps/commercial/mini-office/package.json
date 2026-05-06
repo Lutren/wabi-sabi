@@ -1,37 +1,32 @@
 {
-  "name": "mini-office-conway-247",
+  "name": "mini-office",
   "version": "0.2.0",
-  "description": "Tu oficina virtual que trabaja 24/7 - Agentes AI autónomos con estética pixel art",
+  "description": "Mini oficina local de agentes y materiales de marketing con interfaz web estatica.",
+  "private": true,
   "main": "index.html",
   "scripts": {
     "start": "python mini_office.py",
     "dev": "python mini_office.py",
     "setup": "python setup.py",
     "install:deps": "pip install -r requirements.txt",
-    "build": "echo 'Build completed'",
-    "test": "echo 'No tests yet'",
-    "clean": "rm -rf venv/ __pyca[elichicado]__/*.pyc *.egg-info"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/medioevo/mini-office.git"
+    "build": "echo 'Static app: no build step required'",
+    "test": "python -m pytest -q",
+    "check": "python -m pytest -q",
+    "smoke": "python mini_office.py --status",
+    "clean": "python -c \"import shutil, pathlib; [shutil.rmtree(p, ignore_errors=True) for p in [pathlib.Path('venv'), pathlib.Path('.pytest_cache')]]\""
   },
   "keywords": [
     "ai-agents",
-    "conway-game-of-life",
     "pixel-art",
     "steampunk",
     "cyberpunk",
-    "autonomous-agents",
+    "human-approved-agents",
     "python",
     "flask",
-    "open-source"
+    "local-first"
   ],
   "author": "MEDIOEVO <l-tyr-r@outlook.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/medioevo/mini-office/issues"
-  },
+  "license": "SEE COMMERCIAL_LICENSE.md",
   "homepage": "https://medioevo.space/tienda/minioffice",
   "devDependencies": {},
   "dependencies": {},

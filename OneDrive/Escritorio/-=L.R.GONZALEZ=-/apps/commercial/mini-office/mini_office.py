@@ -1,80 +1,95 @@
 #!/usr/bin/env python
-"""
-Mini Office — Conway 24/7
-=========================
-Sistema de agentes autónomos con interfaz pixel art tipo videojuego
+"""Mini Office local browser runner."""
 
-Hecho con ❤️ por MEDIOEVO
-"""
-
+import argparse
+import json
 import http.server
-import socketserver
-import webbrowser
 import os
+import socketserver
 import sys
+import webbrowser
 from pathlib import Path
 
-# Configuración
-PORT = 8000
-DIreCTORY = Path(__file__).parent
+DEFAULT_PORT = int(os.environ.get("MINI_OFFICE_PORT", "8000"))
+DIRECTORY = Path(__file__).parent.resolve()
 
-class CustomHandler(http.server.SimpleHTTPrequestHandler):
-    """Handler personalizado para servir la landing page"""
+
+class ReusableTCPServer(socketserver.TCPServer):
+    allow_reuse_address = True
+
+
+class CustomHandler(http.server.SimpleHTTPRequestHandler):
+    """Serve Mini Office static files."""
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=DIreCTORY, **kwargs)
+        super().__init__(*args, directory=DIRECTORY, **kwargs)
 
     def do_GET(self):
-        """Manejar requests GET"""
-        if self.path == '/':
-            self.path = '/index.html'
+        """Serve index.html for the app root."""
+        if self.path == "/":
+            self.path = "/index.html"
         return super().do_GET()
 
     def log_message(self, format, *args):
-        """Log personalizado"""
+        """Print a compact local log."""
         print(f"[{self.log_date_time_string()}] {args[0]}")
 
-def main():
-    """Ejecuta el servidor de Mini Office"""
-    os.chdir(DIreCTORY)
 
-    print("""
-    ╔══════════════════════════════════════════════════════════╗
-    ║   MINI OFFICE — Conway 24/7                             ║
-    ║   Sistema de Agentes Autónomos                          ║
-    ╚══════════════════════════════════════════════════════════╝
-    """)
+def build_parser():
+    parser = argparse.ArgumentParser(description="Run Mini Office locally.")
+    parser.add_argument("--port", type=int, default=DEFAULT_PORT)
+    parser.add_argument("--no-browser", action="store_true")
+    parser.add_argument("--status", action="store_true", help="Print runtime status and exit.")
+    return parser
 
-    # Verificar index.html
-    index_path = DIreCTORY / "index.html"
-    if not index_path.exists():
-        print(f"ERROR: index.html no encontrado en {DIreCTORY}")
-        sys.exit(1)
 
-    # Crear servidor
-    with socketserver.TCPServer(("", PORT), CustomHandler) as httpd:
-        url = f"http://localhost:{PORT}"
+def runtime_status(port=DEFAULT_PORT):
+    index_path = DIRECTORY / "index.html"
+    return {
+        "product": "Mini Office",
+        "profile": "local_static_app",
+        "directory": str(DIRECTORY),
+        "index_exists": index_path.exists(),
+        "port": port,
+    }
 
-        print(f"  Servidor: http://localhost:{PORT}")
-        print(f"  Directorio: {DIreCTORY}")
-        print(f"  index.html: {index_path}")
-        print("""
-  Presiona Ctrl+C para detener
-  """)
 
-        # Abrir browser automaticamente
-        try:
-            webbrowser.open(url, new=2)
-            print(f"  Browser abriendo: {url}")
-        except Exception as e:
-            print(f"  Nota: Abre {url} manualmente en tu browser")
+def main(argv=None):
+    """Run the local Mini Office static app."""
+    args = build_parser().parse_args(argv)
+    if args.status:
+        print(json.dumps(runtime_status(args.port), indent=2))
+        return 0
 
-        # Servir
+    os.chdir(DIRECTORY)
+
+    status = runtime_status(args.port)
+    if not status["index_exists"]:
+        print(f"ERROR: index.html not found in {DIRECTORY}")
+        return 1
+
+    with ReusableTCPServer(("127.0.0.1", args.port), CustomHandler) as httpd:
+        url = f"http://127.0.0.1:{args.port}"
+
+        print("MINI OFFICE - local browser runner")
+        print(f"Server: {url}")
+        print(f"Directory: {DIRECTORY}")
+        print("Press Ctrl+C to stop")
+
+        if not args.no_browser and os.environ.get("MINI_OFFICE_NO_BROWSER") != "1":
+            try:
+                webbrowser.open(url, new=2)
+                print(f"Browser opening: {url}")
+            except Exception:
+                print(f"Open manually: {url}")
+
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:
-            print("\n  Cerrando servidor...")
+            print("\nStopping server...")
             httpd.shutdown()
+        return 0
+
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())

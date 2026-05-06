@@ -1,0 +1,190 @@
+{
+  "name": "claudio-os-blueprint",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/claudio-os-blueprint",
+  "notes": "Blueprint only; do not claim finished ISO.",
+  "files": [
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/LICENSE",
+      "bytes": 1070,
+      "sha256": "bd27d666e5284e32886e26977ce4464de97f379aa020b4a4db737506c475b5c5"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/README.md",
+      "bytes": 3497,
+      "sha256": "d348b86780f8564b82ea0fa7787af1eb134863e66ac64473b4417a56113703e4"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/THIRD_PARTY_NOTICES.md",
+      "bytes": 363,
+      "sha256": "81be8d60ab71099a54710a9c9ea20a689a55335097a83f91bbe415f15aac245f"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/browser-manifests/suno_create_download_track.json",
+      "bytes": 284,
+      "sha256": "28d87e599f9d66156bb7d45988f1e8ae7e0f53f3421c9dd62703577f5a8544e0"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/contracts/module_manifest.schema.json",
+      "bytes": 4580,
+      "sha256": "635017d6238c2d3c6272650575e2d064be354a2c7b5c28bff60ee80dffd5eee8"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/docs/ARCHITECTURE.md",
+      "bytes": 1984,
+      "sha256": "779d4b5e2c23f20907797d9dab3798bb5f65ba6a180989866170b1cf2c700d8b"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/docs/BRAIN_OS_PRINCIPLES.md",
+      "bytes": 2229,
+      "sha256": "e0b8f2849862c14cc283256d45d609f3d9ca487f26b28c3ee9ce540d985d016f"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/docs/COMPATIBILITY_MATRIX.md",
+      "bytes": 1915,
+      "sha256": "978d5aa85c31cae8d09084ceaa778f8b86ec0338ec7057fa062653d3b41bbf85"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/docs/MODEL_EFFICIENCY.md",
+      "bytes": 1416,
+      "sha256": "23ecfc87d31b4dd158355a29ba0fa367db3ce9a578e33d1d0ed8b25026f38280"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/docs/OBSERVACIONISMO_OS.md",
+      "bytes": 1915,
+      "sha256": "e040d0d84d9115da49525f62f4ca13421cd9fc685c38fad307e879f1bcaf5bea"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/docs/ROADMAP.md",
+      "bytes": 914,
+      "sha256": "41aa2658670a576392609c66fd217fb1b0469ed8329d987b4fea683078e77e6f"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/decision_browser_blocked.json",
+      "bytes": 125,
+      "sha256": "044f93a31daebf3e243a3acfdb74156153830bd1309510f3540ef811f63a0a73"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/decision_publish_requires_approval.json",
+      "bytes": 101,
+      "sha256": "7c715c9f5a758d429505419b690b6cb191191b42517f7ac0d1bf3a8c5d323ea4"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/decision_safe.json",
+      "bytes": 83,
+      "sha256": "746f5a28718df9c58f65665ad753df1062c6f6cf2b7240b14eb7f451f25797fc"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/model_slimmer_qwen_coder.json",
+      "bytes": 940,
+      "sha256": "0aba4c04d92915774063fc9bdba68befedb811ea72cf8a6dbe19a360981600b5"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/module_manifest_content_forge.json",
+      "bytes": 2204,
+      "sha256": "d066e81e58df778b2f068f87b55c5ea9dbde8f79b53f8ff21a962d988307859b"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/module_manifest_openclaw_cli.json",
+      "bytes": 2460,
+      "sha256": "7a09291a974a325f263b2623aa1dca741e2329bb5aa0aa101428f9df98bbd81a"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/examples/observacionista_video.dsl",
+      "bytes": 610,
+      "sha256": "07a6f5294ee9b82b96e7a0a986daab3d30ce815b6a2de4f796117a5db1cfa7d5"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/host-profiles/pc2_server_dock.yaml",
+      "bytes": 210,
+      "sha256": "625c673c40a16265a8d0a4adf736087603052dbed8bef505896821f2dc22fb96"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/auto/config",
+      "bytes": 342,
+      "sha256": "70336e14c261f16d9691b4460e4aeabede76800ec9b2c816791edc0cc40b8a50"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/hooks/live/001-enable-claudio-services.hook.chroot",
+      "bytes": 274,
+      "sha256": "70c08c697a8fa8361744da65cb3fac7d1e8013909fab527bc6ccc93fe8f55bd0"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/etc/claudio/policy.yaml",
+      "bytes": 347,
+      "sha256": "0e34f38ca76129ae302d9b43a21f7b97dad2da0860d4b824463dc19ed1b18961"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/etc/claudio/provider_registry.yaml",
+      "bytes": 772,
+      "sha256": "fe1292f19c4976becd23f293f7f44bb28f7b39f81ca66722382b0708f51bdde0"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/etc/systemd/system/claudio-dashboard.service",
+      "bytes": 278,
+      "sha256": "c43754a92441009403c1c7826baada6566f6ea0d15cd6006b4c5fa0c8ad20f4e"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/etc/systemd/system/claudio-guardian.service",
+      "bytes": 323,
+      "sha256": "4758e59635ce616866dc8101f4e649dccbe9660c7b106f5112f474b21acf3e39"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/opt/claudio/dashboard/dashboard.py",
+      "bytes": 1969,
+      "sha256": "26bb5a5f4ae564aafcdc3ed4d5a1665be6a6d12b18e0b42a7c5ff8a3817001d5"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/opt/claudio/guardian/guardian.py",
+      "bytes": 5224,
+      "sha256": "9ef0c88278693dd2a2af895ffb245d4ddf844c2f1d6c7469b71c3fb1ccd91729"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/includes.chroot/usr/local/bin/claudioctl",
+      "bytes": 1178,
+      "sha256": "d284deb62b8232ec445b94604e2757e92cd90d2f5aed28bfe0ab1f950e3d3783"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/live-build/config/package-lists/claudio.list.chroot",
+      "bytes": 123,
+      "sha256": "829241887437a61fdde9d516bc87a4c103e92795917fa7c48f6c9276827bfcd4"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/policies/default_policy.yaml",
+      "bytes": 295,
+      "sha256": "475ad834cb35bd2d7739780c3f972d1418f4ee5d5438a16821830c669a66ded6"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/scripts/00_install_build_deps.sh",
+      "bytes": 257,
+      "sha256": "1e01fd6761b2a0f79f083c43bd262a488468c210710d505edec0e8b90873cf33"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/scripts/01_build_iso.sh",
+      "bytes": 237,
+      "sha256": "f63a70c6d285f912696c11cf1df1f4336ba230793b44d97dbbce80bd8c95347d"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/scripts/02_test_iso_qemu.sh",
+      "bytes": 334,
+      "sha256": "1212b4d32e021d35e01459e94757d181a1dc0e902d6a1748992ecf3560eeaad8"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/scripts/windows_backup_to_sd.ps1",
+      "bytes": 436,
+      "sha256": "23b08beee226ff3bac6d4a56d65e66d3a58d86d1c518a295c4d94c45f8e629af"
+    },
+    {
+      "path": "packages/open-dev/claudio-os-blueprint/scripts/windows_harden_loopback.ps1",
+      "bytes": 2176,
+      "sha256": "42793baa17d6ce961f805279cd9f5d5cc534721377641a24c2e771d5b2c77064"
+    }
+  ],
+  "blocked": [],
+  "excluded": [],
+  "file_count": 35,
+  "blocked_count": 0,
+  "excluded_count": 0,
+  "total_bytes": 41465
+}

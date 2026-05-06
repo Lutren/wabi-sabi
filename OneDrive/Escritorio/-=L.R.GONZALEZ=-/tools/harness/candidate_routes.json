@@ -1,0 +1,82 @@
+{
+  "schema": "medioevo.candidate_routes.v1",
+  "updated_at": "2026-04-29",
+  "policy": "n8n, Open WebUI and Dagger are controlled candidates only. Do not install, launch or grant broad permissions from this harness.",
+  "routes": [
+    {
+      "id": "n8n",
+      "status": "candidate_disabled",
+      "allowed_now": [
+        "read local notes or config if explicitly selected",
+        "draft workflow plan files under tools/harness only"
+      ],
+      "denied_now": [
+        "activate workflows",
+        "connect credentials",
+        "call external webhooks",
+        "run scheduler or daemon"
+      ],
+      "launch_gate": {
+        "requires_actiongate": true,
+        "requires_host_observacionista_not": [
+          "JAMMING",
+          "BLOCK"
+        ],
+        "requires_credentials_review": true,
+        "requires_dry_run_report": true
+      }
+    },
+    {
+      "id": "open-webui",
+      "status": "candidate_disabled",
+      "current_truth": "Installed/compiled is not operational proof. Daemon launch remains blocked until preflight returns ready_to_launch=true.",
+      "allowed_now": [
+        "read preflight reports",
+        "write local routing docs",
+        "classify model route risk"
+      ],
+      "denied_now": [
+        "start daemon",
+        "start preview mode",
+        "use -AcknowledgePreviewRisk",
+        "download heavy models",
+        "connect credentials"
+      ],
+      "launch_gate": {
+        "requires_actiongate": true,
+        "requires_host_observacionista_not": [
+          "JAMMING",
+          "BLOCK"
+        ],
+        "requires_ready_to_launch": true,
+        "forbidden_until_ready": [
+          "-AcknowledgePreviewRisk"
+        ]
+      }
+    },
+    {
+      "id": "dagger",
+      "status": "candidate_disabled",
+      "allowed_now": [
+        "read Daggerfile or docs if present",
+        "draft pipeline design",
+        "map required secrets and mounts"
+      ],
+      "denied_now": [
+        "install engine",
+        "start privileged containers",
+        "mount broad workspace roots",
+        "push images or artifacts"
+      ],
+      "launch_gate": {
+        "requires_actiongate": true,
+        "requires_host_observacionista_not": [
+          "JAMMING",
+          "BLOCK"
+        ],
+        "requires_allowlisted_mounts": true,
+        "requires_no_secret_exposure": true
+      }
+    }
+  ]
+}

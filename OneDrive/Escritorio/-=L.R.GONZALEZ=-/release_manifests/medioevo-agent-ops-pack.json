@@ -1,0 +1,65 @@
+{
+  "name": "medioevo-agent-ops-pack",
+  "classification": "COMMERCIAL",
+  "lane": "paid-templates",
+  "source": "packages/paid/medioevo-agent-ops-pack",
+  "notes": "Paid templates/support pack; no private runtime, books, RPG/TCG, secrets or customer data.",
+  "files": [
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/LICENSE_COMMERCIAL.md",
+      "bytes": 711,
+      "sha256": "9d6207d95a5cb43c0de99344e8a06d647f2281804e0df41f423c6591986e2561"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/README.md",
+      "bytes": 1072,
+      "sha256": "680395e2bb242e8c3a5b8500d20276a6da36c4af45c4f4e2777525e1189faef1"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/SUPPORT.md",
+      "bytes": 651,
+      "sha256": "c536031f4bddeae0585b0d14bda8395760e5e5fbd3b01c27e9c339f8030b3190"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/commerce/gumroad_listing.json",
+      "bytes": 756,
+      "sha256": "5b7f631309342bd6778b30890c7fe31268cc14f1e646ca7fabc5c7afc300512b"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/examples/SYNTHETIC_AGENT_AUDIT.md",
+      "bytes": 608,
+      "sha256": "ff6f506f256134c1a14364f8b8353357a78700ba5ad27779be784969bb494f3a"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/templates/ACTION_GATE_CHECKLIST.md",
+      "bytes": 790,
+      "sha256": "291e62666831c0e0f79bb57573ed96fb4ecaa5c23e2e3e32eeb5bc1f014e36e4"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/templates/CURADOR_REPORT_TEMPLATE.md",
+      "bytes": 545,
+      "sha256": "de3a0e4204734cf367adb61deab590462291fb46ffed3e2d4b61cc04a4419794"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/templates/GITHUB_RELEASE_CHECKLIST.md",
+      "bytes": 562,
+      "sha256": "31a7d461c98a159c34d763c5ac3f58d57fdb79b0fe9961ab9e2105939e92c662"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/templates/GUMROAD_LISTING_TEMPLATE.md",
+      "bytes": 620,
+      "sha256": "30eede7e2f6473b0a65aab6104ae5582f77506c2fddb13c876881562ef13abce"
+    },
+    {
+      "path": "packages/paid/medioevo-agent-ops-pack/templates/TECHNICAL_CARD_TEMPLATE.md",
+      "bytes": 645,
+      "sha256": "dd24b729614c74ede083a0ac4f6249bb3059e15529bfecae452494877f5b41b2"
+    }
+  ],
+  "blocked": [],
+  "excluded": [],
+  "file_count": 10,
+  "blocked_count": 0,
+  "excluded_count": 0,
+  "total_bytes": 6960
+}

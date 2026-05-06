@@ -1,0 +1,14 @@
+[Unit]
+Description=Claudio Mission Control Dashboard
+After=claudio-guardian.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /opt/claudio/dashboard/dashboard.py
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

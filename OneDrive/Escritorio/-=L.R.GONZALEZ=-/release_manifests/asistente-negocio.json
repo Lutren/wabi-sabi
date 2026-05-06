@@ -1,0 +1,245 @@
+{
+  "name": "asistente-negocio",
+  "classification": "COMMERCIAL",
+  "lane": "paid-apps",
+  "source": "apps/commercial/asistente-negocio",
+  "notes": "Commercial app candidate.",
+  "files": [
+    {
+      "path": "apps/commercial/asistente-negocio/.gitignore",
+      "bytes": 61,
+      "sha256": "8b71d8b9086d0e5f9cf3d837b45b8cb7285235381633f9a84c659d0eef281955"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/COMMERCIAL_LICENSE.md",
+      "bytes": 678,
+      "sha256": "02ef7853b36ab1af96f2fb37cfc2c6ee225399e7ec49eda9b5a39f53a69798a5"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/CUSTOMER_INSTALL_NOTES.md",
+      "bytes": 1029,
+      "sha256": "4caa6f411af294c8c818fc0936be681f45c41e566d0276f0569a574d45ebb6f7"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/electron-builder.json",
+      "bytes": 1819,
+      "sha256": "3e52c09893a2697ef71130632e60da915ff09a29e3c86d723fc850931571957f"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/LICENSE_EULA.md",
+      "bytes": 1892,
+      "sha256": "70eae8e48e9ffc41ceffb56bc7aa5ad6c02127915a6f67f58fea2773c9520bf6"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/manifest.json",
+      "bytes": 2389,
+      "sha256": "bbfe6889ad164876eec102a8da82a623a4d148ddccfa75207f51e6c9b66ef05b"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/package-lock.json",
+      "bytes": 142175,
+      "sha256": "23ed332f0a60423d501d07ce0bc321eac0bc014aa47101a3200c84e1db533951"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/package.json",
+      "bytes": 1034,
+      "sha256": "92dcc4effd10559b82da693b6c22c131a91198d88e3a7e9d870d09a420f3e4f3"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/public_safe_policy.md",
+      "bytes": 1520,
+      "sha256": "8cbb69501916f006a0a7b36f43431d2d915b4c50285422c56c6794d83a7bf386"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/README.md",
+      "bytes": 2082,
+      "sha256": "5c7e87ca19c970bcf5e7a4995a243dbde9233df23aa3c177d684e8906594b0d5"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/SUPPORT_PRIVACY_REFUND_DRAFT.md",
+      "bytes": 1791,
+      "sha256": "06763cfa1fd717c615a940779cb0104294d7f10d008c1e6628202d8754ddbade"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/THIRD_PARTY_NOTICES.md",
+      "bytes": 377,
+      "sha256": "b6016710e45b613b2cbf9e1479120dc1c95e2804ea5cfb57e7c58fb7840dedcc"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/app.js",
+      "bytes": 20788,
+      "sha256": "f87837ec52b021c893d4edc2083b18d981ca474a7247121f26f79d7a27a975f1"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/index.html",
+      "bytes": 11933,
+      "sha256": "8f0c69a8b1b9061c2dfe50e0eeb11f0a6da5629463d24324d27a87100d6c547b"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/styles.css",
+      "bytes": 12651,
+      "sha256": "f10f74522e84315b04164b8f053222b159aa23d1e0769e2597c37ffe34b5be37"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/assets/geodia_control_chip_v1.png",
+      "bytes": 884309,
+      "sha256": "8631a2a2559dd57def7156000ee6c9f94d77f99c84721707464f4fdbc5be71b6"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/assets/geodia_cta_banner_v1.png",
+      "bytes": 1168800,
+      "sha256": "c132827901c278ff4271872b404c8ff7eeb25be67e37764c20beb837750f15ea"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/assets/geodia_hub_scenario_v2.png",
+      "bytes": 2936522,
+      "sha256": "ea280d8f9eabc3a73d72bd129e80854bc05a11f8c7bd02a106d45bc697c2a744"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/app/assets/medioevo_business_hub.png",
+      "bytes": 1737984,
+      "sha256": "3f12fcdeb6d1be6cd4348f087c749e8e7291c56575a29971b9d306fdbc1e9460"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/commercial/COMMERCIAL_OFFER_2026-04-24.md",
+      "bytes": 3077,
+      "sha256": "1eeac8267e009b596c9d3e47407922894b7753b7c4768c993409587a116c5b67"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/commercial/gumroad_listing_asistente_negocio.json",
+      "bytes": 1771,
+      "sha256": "2546a4f65a55f993f533b83d1087ce419a22f0518e544b4cf5e3686542ab6647"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/commercial/GUMROAD_LISTING_ASISTENTE_NEGOCIO_2026-04-24.md",
+      "bytes": 2395,
+      "sha256": "8a7ded691a5d6dc20fc4b4caac177b674d3871e1be3dad71220beae146f0bb64"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/commercial/LAUNCH_CHECKLIST_2026-04-24.md",
+      "bytes": 1484,
+      "sha256": "dc354c347e59bf840282fbcaabf8a1d3cee7d77cf5d565b979a4448d86401b47"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/commercial/OUTREACH_PACK_2026-04-24.md",
+      "bytes": 1950,
+      "sha256": "ef24b5be91cc468627d99e125a8835595bf87c8122cb475c85f4f14e29169ecf"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/commercial/assets/asistente_negocio_gumroad_cover.svg",
+      "bytes": 2926,
+      "sha256": "bd37459fa432f51dc59f435dd829f31529e192ae4b8eba02c7a8c5a7c10c799a"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/electron/main.cjs",
+      "bytes": 1469,
+      "sha256": "013be08eba7dda494a9597d999a69fef05ab075493fac5a67b9159b48b4e54bd"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/electron/preload.cjs",
+      "bytes": 157,
+      "sha256": "1e22177c7b8af420baeb37b628140a6d9da65cfd5840faee9a7fa0c878ba228c"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/packaging/build-macos.sh",
+      "bytes": 107,
+      "sha256": "1c07945efc4ea394fb091e88d7ac781330b9c8719b922846fb1f560c9d988ea8"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/packaging/build-windows.ps1",
+      "bytes": 224,
+      "sha256": "985e807b52f7a8a941f5c84c58f4b2011a98fb443e4cf3066189454065a42fbf"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/packaging/icon.ico",
+      "bytes": 116911,
+      "sha256": "e46c7385e1a8925c5cb3b9403db84ae06aba48877f52dabfef76e6d8eadc6c47"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/packaging/icon.png",
+      "bytes": 908473,
+      "sha256": "4e8dc1327d70dc18b4c317fc35f763ae2875cdb4d60f702334d5ec94a4dd755c"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/packaging/README.md",
+      "bytes": 1082,
+      "sha256": "6f06dac7e166d7ebd01b11d8724becd3f0e18aefaabcc63376f8a3b4e3292983"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/preview/ABRE_AQUI_PREVIEW_MEDIOEVO.html",
+      "bytes": 14909436,
+      "sha256": "171efa004f3ef7f089428fbefa93020fbef5d12daa16fe9a3da87b3551d5b4a9"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/scripts/build-standalone-preview.cjs",
+      "bytes": 1740,
+      "sha256": "99a73d0ddbf794b824f7881701d56a4b648ebd7bd96c746b9fed807d8b854838"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/scripts/check-public-safe.cjs",
+      "bytes": 1787,
+      "sha256": "a6c73864177d97ead3b873469ad47d31c88ff913b3e7536d2f9cec1ff040f1cc"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/scripts/e2e-render-smoke.cjs",
+      "bytes": 10681,
+      "sha256": "75230ae5eea62bf1f18e564970e1e2fbb1329d66bcffaa49565fe4a1957a5a9f"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/scripts/package-final-release.cjs",
+      "bytes": 5254,
+      "sha256": "8edbd562e229f13cfe920673db40b22262ecc45927333064ccbdd47bf18e3e87"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "apps/commercial/asistente-negocio/build/icon.ico",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/build/icon.png",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/qa_artifacts/asistente_negocio_e2e_render_2026-05-02",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/qa_artifacts/asistente_negocio_final_package_2026-05-02",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/qa_artifacts/asistente_negocio_windows_install_2026-05-02-r3",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/qa_artifacts/asistente_negocio_windows_install_2026-05-02-r4",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/release/win-unpacked",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/release/Asistente-Negocio-MEDIOEVO-1.0.0-win-x64.exe",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/release/Asistente-Negocio-MEDIOEVO-1.0.0-win-x64.exe.blockmap",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/release/Asistente-Negocio-MEDIOEVO-1.0.0-win-x64.zip",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/asistente-negocio/release/builder-debug.yml",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 37,
+  "blocked_count": 0,
+  "excluded_count": 11,
+  "total_bytes": 22900758
+}

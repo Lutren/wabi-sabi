@@ -1,0 +1,65 @@
+{
+  "schema": "medioevo.mcp_allowlist.v1",
+  "updated_at": "2026-04-29",
+  "default_policy": "deny",
+  "purpose": "Declare MCP/tool surfaces that local harness skills may assume. This is a policy artifact, not an installer.",
+  "allowed": [
+    {
+      "id": "openai_developer_docs",
+      "server": "openaiDeveloperDocs",
+      "mode": "read_only",
+      "allowed_operations": [
+        "search_openai_docs",
+        "fetch_openai_doc",
+        "list_api_endpoints",
+        "get_openapi_spec"
+      ],
+      "constraints": [
+        "Use only for OpenAI product/API questions.",
+        "Do not use for workspace files or publication actions."
+      ]
+    },
+    {
+      "id": "local_shell_validation",
+      "server": "functions.shell_command",
+      "mode": "local_bounded",
+      "allowed_operations": [
+        "read files in selected workspace lane",
+        "run existing test/build/audit commands in intended product root",
+        "list git status for selected root"
+      ],
+      "constraints": [
+        "No destructive delete/move.",
+        "No git add .",
+        "No external publication commands without ActionGate."
+      ]
+    },
+    {
+      "id": "apply_patch_owned_paths",
+      "server": "functions.apply_patch",
+      "mode": "local_write_bounded",
+      "allowed_operations": [
+        "create or edit owned harness/source/docs files"
+      ],
+      "constraints": [
+        "Touch only selected lane files.",
+        "Do not rewrite unrelated user changes."
+      ]
+    }
+  ],
+  "denied_by_default": [
+    "unknown_mcp_servers",
+    "MCP_servers_requiring_new_credentials",
+    "MCP_servers_that_publish_or_mutate_external_state",
+    "browser_authenticated_external_actions",
+    "mouse_control_or_UI_clicks",
+    "Gumroad_writes",
+    "social_media_writes",
+    "n8n_workflow_activation",
+    "Open_WebUI_daemon_launch",
+    "Dagger_privileged_execution",
+    "heavy_model_download_or_daemon_start"
+  ],
+  "actiongate_required_for_exceptions": true,
+  "host_observacionista_required": true
+}

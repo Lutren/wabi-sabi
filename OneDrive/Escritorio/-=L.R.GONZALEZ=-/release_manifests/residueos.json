@@ -1,0 +1,129 @@
+{
+  "name": "residueos",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/residueos",
+  "notes": "MIT local AI action gate MVP; thresholds remain DEMO_ONLY until calibrated with real data.",
+  "files": [
+    {
+      "path": "packages/open-dev/residueos/.gitignore",
+      "bytes": 43,
+      "sha256": "e2da76228464004e4149c5397da88bfb6cee13b4d9e27aade45391f919c20ce1"
+    },
+    {
+      "path": "packages/open-dev/residueos/LICENSE",
+      "bytes": 1070,
+      "sha256": "bd27d666e5284e32886e26977ce4464de97f379aa020b4a4db737506c475b5c5"
+    },
+    {
+      "path": "packages/open-dev/residueos/pyproject.toml",
+      "bytes": 444,
+      "sha256": "20dc1205afcb9cdef0ea800eafec7fb86e9cef2b04a4de320cf3621a41f40389"
+    },
+    {
+      "path": "packages/open-dev/residueos/README.md",
+      "bytes": 2212,
+      "sha256": "bcfe7774e80d1606f391bc63e1e702f4ff60d42a3220e0b44b684d398c8e20f1"
+    },
+    {
+      "path": "packages/open-dev/residueos/THIRD_PARTY_NOTICES.md",
+      "bytes": 258,
+      "sha256": "d7305b34a12b6ae6b7bc097aeeb3cf22c7edcb1e62cd3baa20a9949e5a1fd277"
+    },
+    {
+      "path": "packages/open-dev/residueos/examples/sample_action.json",
+      "bytes": 1003,
+      "sha256": "b92697e57b140b0ad948f7ddc88b3e63e36f9bbaf5add8b445dba820c74d1054"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/cli.py",
+      "bytes": 3634,
+      "sha256": "bfdc9b7a249f543669c708c37265b1094643e7cf6c44a39c97aa3cd561c335cc"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/gate.py",
+      "bytes": 10309,
+      "sha256": "59724d5ad3d13fe6a08668b1583345c7276537a3d16a0f0adb0b95cf60bd3918"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/metrics.py",
+      "bytes": 6245,
+      "sha256": "5dc7f19751f4d4830c74cfa09771822bac58f861ea58bcbe59f76b6b804a0039"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/server.py",
+      "bytes": 4549,
+      "sha256": "5a8f864d44015e2f551be6286b92ff44579180bf8026924fa1c42349401fa497"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/store.py",
+      "bytes": 6887,
+      "sha256": "b1a887c61fb25685250f11024d64bb5b4cf5fd6c0d8505f37ef22b61b86e49b8"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__init__.py",
+      "bytes": 219,
+      "sha256": "f1a04e5501443841b2f17b395622001d19d466f124243a228396db7eebb316eb"
+    },
+    {
+      "path": "packages/open-dev/residueos/tests/test_residueos.py",
+      "bytes": 7554,
+      "sha256": "2ba6926dca03dd1e32bad7f2b0517a2005e9ceb67f3e31ab00bd1807b4bc5ed3"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "packages/open-dev/residueos/.pytest_cache/v",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/.pytest_cache/.gitignore",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/.pytest_cache/CACHEDIR.TAG",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/.pytest_cache/README.md",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__pycache__/cli.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__pycache__/gate.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__pycache__/metrics.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__pycache__/server.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__pycache__/store.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/residueos/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/tests/__pycache__/test_residueos.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/residueos/tests/__pycache__/test_residueos.cpython-311.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 13,
+  "blocked_count": 0,
+  "excluded_count": 12,
+  "total_bytes": 44427
+}

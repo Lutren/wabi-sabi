@@ -1,0 +1,39 @@
+# AI Browser Seguro - 12 Risk Resolution Log
+
+Status: `LOCAL_HARDENING_PASS`
+
+Date: `2026-05-06`
+
+## Resolved Locally
+
+| Risk | Resolution | Evidence |
+|---|---|---|
+| Remote URL accepted with only ActionGate | Remote URL now also requires matching domain policy | `tools/ai_browser/snapshot_url.py`, `tests/test_source_snapshot.py` |
+| Unsafe domain permissions | Policy entries that allow JS, downloads, forms, login or credentials block the URL stub | `test_unsafe_domain_policy_is_blocked` |
+| Memory contamination | Every snapshot emits `ghostgate`; risky snapshots set `memory_allowed=false` | `schemas/ghostgate_memory.schema.json`, tests |
+| Source validation drift | CLI can validate an existing `source_snapshot.json` and verify WitnessLog event hash | `--validate-snapshot`, `test_validate_source_snapshot_reports_ok_for_generated_snapshot` |
+| Evidence bundle incomplete | Bundle now includes `ghostgate.json` as an artifact | `write_bundle_dir`, CLI bundle test |
+
+## Still Blocked By Design
+
+| Risk | Current State | Required Future Gate |
+|---|---|---|
+| Real network fetch | Not implemented | ActionGate, domain policy, robots/terms/license review, ephemeral browser context |
+| Login/manual auth | Not implemented | Manual-auth protocol, credential isolation, user-operated login, no credential storage |
+| Downloads | Not implemented | Download quarantine, hash, scan, explicit user approval |
+| JS execution | Not implemented | Separate high-risk render mode, sandbox, no secret/profile access |
+| Massive scraping | Not implemented | Legal/robots/terms review, per-domain quota, rate limit, ActionGate |
+| External publication or account action | Not implemented | Target-specific ActionGate and host gate |
+| Argus private/public split | Preserved as boundary | Explicit product/legal/public-safe review |
+
+## Current Verification
+
+```powershell
+python -m pytest tests\test_source_snapshot.py -q
+```
+
+Expected result after this pass:
+
+```text
+7 passed
+```

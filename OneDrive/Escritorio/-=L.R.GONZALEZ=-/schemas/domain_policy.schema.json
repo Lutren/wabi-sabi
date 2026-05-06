@@ -1,0 +1,98 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.ai_browser.domain_policy.v1",
+  "title": "AI Browser Domain Policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "action_gate",
+    "domains"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ai_browser.domain_policy.v1"
+    },
+    "action_gate": {
+      "type": "string",
+      "enum": [
+        "APPROVE",
+        "REVIEW",
+        "BLOCK"
+      ]
+    },
+    "domains": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "domain_pattern",
+          "allowed_modes",
+          "action_gate"
+        ],
+        "properties": {
+          "domain_pattern": {
+            "type": "string",
+            "minLength": 1
+          },
+          "allowed_modes": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "enum": [
+                "read_only",
+                "fetch_stub",
+                "fetch",
+                "screenshot",
+                "action"
+              ]
+            }
+          },
+          "action_gate": {
+            "type": "string",
+            "enum": [
+              "APPROVE",
+              "REVIEW",
+              "BLOCK"
+            ]
+          },
+          "robots_status": {
+            "type": "string",
+            "default": "UNKNOWN"
+          },
+          "license_status": {
+            "type": "string",
+            "default": "UNKNOWN"
+          },
+          "max_pages_per_run": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 10,
+            "default": 1
+          },
+          "allow_javascript": {
+            "type": "boolean",
+            "default": false
+          },
+          "allow_downloads": {
+            "type": "boolean",
+            "default": false
+          },
+          "allow_forms": {
+            "type": "boolean",
+            "default": false
+          },
+          "allow_login": {
+            "type": "boolean",
+            "default": false
+          },
+          "allow_credentials": {
+            "type": "boolean",
+            "default": false
+          }
+        }
+      }
+    }
+  }
+}

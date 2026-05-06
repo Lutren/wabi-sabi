@@ -1,0 +1,103 @@
+{
+  "name": "duat-genesis",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/duat-genesis",
+  "notes": "MIT synthetic simulation sandbox for observable runs, reports and falsifier examples; excludes DUAT Geodia, RPG/TCG, private data and scientific guarantees.",
+  "files": [
+    {
+      "path": "packages/open-dev/duat-genesis/CLAIMS.md",
+      "bytes": 768,
+      "sha256": "1f01ac562a885f157d1a681f4b4a751fae4508a9e179482e7c7ccf23c205f04e"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/LICENSE",
+      "bytes": 1070,
+      "sha256": "bd27d666e5284e32886e26977ce4464de97f379aa020b4a4db737506c475b5c5"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/PRIVATE_EXCLUSIONS.md",
+      "bytes": 582,
+      "sha256": "13c782c6273c3b2f3a08f12b19770671729c0fbd0d615ddf73b6442369ac4f5e"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/pyproject.toml",
+      "bytes": 676,
+      "sha256": "d6dc9d9fcb2b7a1a6b864de1276c89eacf6638408a0f4991ca8de72bf5582fc8"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/README.md",
+      "bytes": 1420,
+      "sha256": "e313d7c5d279f2a444ee2c626b2e351fa9471c0b9581fa614795c0c598d91aac"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/SECURITY.md",
+      "bytes": 438,
+      "sha256": "2173a0781d985b8a77e236ff95a81b975b5d37bab274c041c769caa72d21d220"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/THIRD_PARTY_NOTICES.md",
+      "bytes": 77,
+      "sha256": "8407a687f2b96b7434a887446cd894a9dcb10225d7cfb18e443ae1ac07b4d5c9"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/duat_genesis/cli.py",
+      "bytes": 1041,
+      "sha256": "f8fbc1b393eff8a20b0dc7908e2dbbe409e76aa3e5ed1d90a0f1c4a700723a83"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/duat_genesis/core.py",
+      "bytes": 7550,
+      "sha256": "c7046b192ff8c75c45c8d33696d12ec8fdd68ad0981952a6345cfc2eec1331f2"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/duat_genesis/__init__.py",
+      "bytes": 419,
+      "sha256": "8d3c102a84f81c4e56dfda65fddcad6e741b169577a5e4f3b0fe41a2dd1e6a0c"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/tests/test_duat_genesis.py",
+      "bytes": 1670,
+      "sha256": "20805a707770f54d9a35dc655f25a1965f719a6461425d2790b5ce23948c159d"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "packages/open-dev/duat-genesis/.pytest_cache/v",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/.pytest_cache/.gitignore",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/.pytest_cache/CACHEDIR.TAG",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/.pytest_cache/README.md",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/duat_genesis/__pycache__/cli.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/duat_genesis/__pycache__/core.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/duat_genesis/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/duat-genesis/tests/__pycache__/test_duat_genesis.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 11,
+  "blocked_count": 0,
+  "excluded_count": 8,
+  "total_bytes": 15711
+}

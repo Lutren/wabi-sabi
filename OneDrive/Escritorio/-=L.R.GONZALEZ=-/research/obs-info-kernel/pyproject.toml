@@ -1,0 +1,12 @@
+[project]
+name = "obs-info-kernel"
+version = "0.1.0"
+description = "Kernel observacionista para anti-informacion e informacion oscura"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+obs-info = "obs_info_kernel.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

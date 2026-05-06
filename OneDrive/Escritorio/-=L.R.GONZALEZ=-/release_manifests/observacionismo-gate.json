@@ -1,0 +1,65 @@
+{
+  "name": "observacionismo-gate",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/observacionismo-gate",
+  "notes": "MIT SDK candidate extracted from Claudio without runtime state.",
+  "files": [
+    {
+      "path": "packages/open-dev/observacionismo-gate/.gitignore",
+      "bytes": 59,
+      "sha256": "2f81599efeb1f11d517ae8a7f39bfdbe2674f26666536ff499ed09406950081f"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/LICENSE",
+      "bytes": 1070,
+      "sha256": "bd27d666e5284e32886e26977ce4464de97f379aa020b4a4db737506c475b5c5"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/MANIFEST.in",
+      "bytes": 108,
+      "sha256": "e5de3243bb96a96f0b6b994b697922f6242e7acb9d866e3072866e32f43a5d05"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/observacionismo_gate.py",
+      "bytes": 8552,
+      "sha256": "f8f72545a3e579a7eae7388668f590e24fa9a556d4e3a3daf7279e2bf3f890ee"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/observacionismo_gate_examples.csv",
+      "bytes": 1982,
+      "sha256": "cdce7455e8bf23c7c295a9a808fa7c5522b8fb65b10516941683b846c46c58dd"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/pyproject.toml",
+      "bytes": 879,
+      "sha256": "766b2a022008567a50a364204bec7bce6ad9ea816ae505946c5fcb6d292104f6"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/README.md",
+      "bytes": 1851,
+      "sha256": "b4245d88fc946c7a417a0506670f2650e3f47ae63249859387c9ddb69e80ae19"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/THIRD_PARTY_NOTICES.md",
+      "bytes": 269,
+      "sha256": "6789518baf7629cd032deb62000630d814d3080181ba16b1afd8cd1fd89929c0"
+    },
+    {
+      "path": "packages/open-dev/observacionismo-gate/__init__.py",
+      "bytes": 549,
+      "sha256": "6aea87f03067fb9337e79fb376a9ee9e54ff3b520203a898f9cdc8d687e44fdb"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "packages/open-dev/observacionismo-gate/__pycache__/observacionismo_gate.cpython-311.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 9,
+  "blocked_count": 0,
+  "excluded_count": 1,
+  "total_bytes": 15319
+}

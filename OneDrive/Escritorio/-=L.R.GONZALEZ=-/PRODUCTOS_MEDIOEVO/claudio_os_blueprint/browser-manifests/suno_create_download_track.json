@@ -1,0 +1,6 @@
+{
+  "name": "suno_create_download_track",
+  "allowed": ["observe", "click", "fill", "wait", "screenshot", "download"],
+  "forbidden": ["bypass_captcha", "create_account", "change_password", "scrape_private_data"],
+  "approval_required": ["spend_credits", "publish", "clone_voice"]
+}

@@ -1,0 +1,15 @@
+xfce4
+lightdm
+python3
+python3-yaml
+python3-requests
+sqlite3
+ffmpeg
+chromium
+git
+jq
+ripgrep
+btop
+curl
+wget
+ca-certificates

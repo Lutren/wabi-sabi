@@ -1,0 +1,115 @@
+{
+  "name": "flujocrm",
+  "classification": "COMMERCIAL",
+  "lane": "paid-apps",
+  "source": "apps/commercial/flujocrm",
+  "notes": "Commercial app candidate.",
+  "files": [
+    {
+      "path": "apps/commercial/flujocrm/.gitignore",
+      "bytes": 61,
+      "sha256": "8b71d8b9086d0e5f9cf3d837b45b8cb7285235381633f9a84c659d0eef281955"
+    },
+    {
+      "path": "apps/commercial/flujocrm/BUSINESS.md",
+      "bytes": 3195,
+      "sha256": "c557653ec6724cefd14e50f044604777010184d25b48f5659c09fe8b596209ba"
+    },
+    {
+      "path": "apps/commercial/flujocrm/COMMERCIAL_LICENSE.md",
+      "bytes": 678,
+      "sha256": "02ef7853b36ab1af96f2fb37cfc2c6ee225399e7ec49eda9b5a39f53a69798a5"
+    },
+    {
+      "path": "apps/commercial/flujocrm/CUSTOMER_INSTALL_NOTES.md",
+      "bytes": 2704,
+      "sha256": "0a69c47014d8b874308401ea34ca72160bf9c35d8d919ae42fc2ff2349e55e30"
+    },
+    {
+      "path": "apps/commercial/flujocrm/index.html",
+      "bytes": 333,
+      "sha256": "e2e039e19d872ffbca7dc99c7f62ce237b26b680a9c06bb477f79a1e248c16b6"
+    },
+    {
+      "path": "apps/commercial/flujocrm/main.js",
+      "bytes": 15928,
+      "sha256": "add4f0143acb33f3ceaef051bf4a5bffa6a491b541f129f2244333a1917b0f51"
+    },
+    {
+      "path": "apps/commercial/flujocrm/mockup.html",
+      "bytes": 78239,
+      "sha256": "d02d460ae326b508b6e8541b83f6b11bf11ec841f9fcb0a77c7c5d045f042985"
+    },
+    {
+      "path": "apps/commercial/flujocrm/package-lock.json",
+      "bytes": 158643,
+      "sha256": "22f09d2dc09c4ff20555995a4243cfccae27ddba37b3d8c441739e3376a74c8a"
+    },
+    {
+      "path": "apps/commercial/flujocrm/package.json",
+      "bytes": 2573,
+      "sha256": "c81e2a708a5b9d6378ed2098a21d800b075b2454cb27495646c35a60d314ae5f"
+    },
+    {
+      "path": "apps/commercial/flujocrm/preload.js",
+      "bytes": 1585,
+      "sha256": "69f8ddab30d9b2df0979f64f13ae7597eb06f34a7e6dae75d6e1bc0459e4818f"
+    },
+    {
+      "path": "apps/commercial/flujocrm/README.md",
+      "bytes": 2295,
+      "sha256": "d179de740a24c844e32ca1e9c5eb5c03e267168592a20e2656db66fc1ae0f0ba"
+    },
+    {
+      "path": "apps/commercial/flujocrm/THIRD_PARTY_NOTICES.md",
+      "bytes": 328,
+      "sha256": "aa393c7217f7ab9aa508313f9c5424676b9047239061a1a98acad034bd6e2859"
+    },
+    {
+      "path": "apps/commercial/flujocrm/assets/icon.ico",
+      "bytes": 23858,
+      "sha256": "a14b5a63edc01c849195122036336c00dc4311a0116b43ccfb22580e1c4e022f"
+    },
+    {
+      "path": "apps/commercial/flujocrm/assets/icon.png",
+      "bytes": 4913,
+      "sha256": "a1b3a3e23518338e0220ba77419fef2725fb374cf3110b9f7ee2f495970cf21c"
+    },
+    {
+      "path": "apps/commercial/flujocrm/assets/README.md",
+      "bytes": 190,
+      "sha256": "c247d7f0f47ea78c794e41588340c81af582fc4fc1b030b3f0bf960bd08d1ba1"
+    },
+    {
+      "path": "apps/commercial/flujocrm/installer/BUILD.md",
+      "bytes": 4621,
+      "sha256": "032a81cbeb26c6cd260ee0a8a1fadb280358c6db42dcb42e1cd055272ca77f10"
+    },
+    {
+      "path": "apps/commercial/flujocrm/scripts/e2e-storage-smoke.cjs",
+      "bytes": 5902,
+      "sha256": "2a41a0dede422ccc10e1c5f4d531e5853c88e26cc86eb69e4dfe24ced55696d9"
+    },
+    {
+      "path": "apps/commercial/flujocrm/scripts/smoke-main.cjs",
+      "bytes": 2525,
+      "sha256": "b75fb4eddcab6e6bbe84023d76a3f49bddecb7794931f1f80286680cb6b4e0af"
+    },
+    {
+      "path": "apps/commercial/flujocrm/scripts/smoke-preload.cjs",
+      "bytes": 1676,
+      "sha256": "dfe15854e297698c4a445f03ed22948a018c23327632cad7619e23be69c9fac7"
+    },
+    {
+      "path": "apps/commercial/flujocrm/scripts/smoke-renderer.cjs",
+      "bytes": 1308,
+      "sha256": "7d39b53964eca649b7943c311cbc795e1e7529c9fa74026c441c2cc5b86035cd"
+    }
+  ],
+  "blocked": [],
+  "excluded": [],
+  "file_count": 20,
+  "blocked_count": 0,
+  "excluded_count": 0,
+  "total_bytes": 311555
+}

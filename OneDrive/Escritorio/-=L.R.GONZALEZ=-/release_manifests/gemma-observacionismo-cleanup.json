@@ -1,0 +1,104 @@
+{
+  "name": "gemma-observacionismo-cleanup",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/gemma-observacionismo-cleanup",
+  "notes": "MIT cleanup/observation toolkit with synthetic fixtures only; no weights, prompts or Claudio runtime.",
+  "files": [
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/.gitignore",
+      "bytes": 59,
+      "sha256": "2f81599efeb1f11d517ae8a7f39bfdbe2674f26666536ff499ed09406950081f"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/LICENSE",
+      "bytes": 1070,
+      "sha256": "bd27d666e5284e32886e26977ce4464de97f379aa020b4a4db737506c475b5c5"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/pyproject.toml",
+      "bytes": 837,
+      "sha256": "fadfad270f0b9817712bce6643391190c36d823fff9e329da9a67592edd2729d"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/README.md",
+      "bytes": 1372,
+      "sha256": "23334448eb0af474444d31b6793742f93647f86219f418fb0e1f43d9e705065a"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/THIRD_PARTY_NOTICES.md",
+      "bytes": 281,
+      "sha256": "9942e58e63d6a163aec3928f1f29142836084c8cdb325b1856433069dfa8fa3e"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/fixtures/after.json",
+      "bytes": 142,
+      "sha256": "eee5c193bf71e7b7ec884a71da1c63cbccc7816505ba111c5cfe64067805c37f"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/fixtures/before.json",
+      "bytes": 160,
+      "sha256": "5b9c263a4157d8f29bbb52f2d9b8673e3af6294d7a6003d37701a9daa710cb8b"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/fixtures/sample.json",
+      "bytes": 210,
+      "sha256": "2e5530ade91245e7104cfc813002d68871c97339fd4126d1727618f386d6e2f5"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/cli.py",
+      "bytes": 2217,
+      "sha256": "6db4ee8ef8a84b050838dd3de1d3948e92314754f7ee5ef985d087acd7dc2ce8"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/core.py",
+      "bytes": 4852,
+      "sha256": "6e90038decfa1cf8119d8689431066638d9152968361c23a28248171e7423586"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/__init__.py",
+      "bytes": 215,
+      "sha256": "12e34ee19190648a5258b0c899641fa554d4952d60161adc8965623826ff8171"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/tests/test_gemma_cleanup.py",
+      "bytes": 1058,
+      "sha256": "f89eaaa37cd2dbae94958b4479bd7e80d41a84160858a320f320bdd68e213d5d"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/.pytest_cache/v",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/.pytest_cache/.gitignore",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/.pytest_cache/CACHEDIR.TAG",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/.pytest_cache/README.md",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/__pycache__/core.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/gemma_observacionismo_cleanup/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/gemma-observacionismo-cleanup/tests/__pycache__/test_gemma_cleanup.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 12,
+  "blocked_count": 0,
+  "excluded_count": 7,
+  "total_bytes": 12473
+}

@@ -1,0 +1,349 @@
+{
+  "name": "mini-office",
+  "classification": "COMMERCIAL",
+  "lane": "paid-apps",
+  "source": "apps/commercial/mini-office",
+  "notes": "Needs real smoke tests before release.",
+  "files": [
+    {
+      "path": "apps/commercial/mini-office/.gitignore",
+      "bytes": 1158,
+      "sha256": "9314f4ba91ed4c0f0aaa0be03eee77bec79073afc4386205a092079a50c5c20e"
+    },
+    {
+      "path": "apps/commercial/mini-office/CHANGELOG.md",
+      "bytes": 510,
+      "sha256": "0eeef7b82088e3ed8bc12c798607cbcaff0ca402553da94015bcda53fc2ed14e"
+    },
+    {
+      "path": "apps/commercial/mini-office/CODE_OF_CONDUCT.md",
+      "bytes": 283,
+      "sha256": "c19c97a6fc0241a26d39b5da36810036f36bf4625f0972e0542a6c3dd2ac104e"
+    },
+    {
+      "path": "apps/commercial/mini-office/COMMERCIAL_LICENSE.md",
+      "bytes": 678,
+      "sha256": "02ef7853b36ab1af96f2fb37cfc2c6ee225399e7ec49eda9b5a39f53a69798a5"
+    },
+    {
+      "path": "apps/commercial/mini-office/CONTRIBUTING.md",
+      "bytes": 653,
+      "sha256": "da2725a48d8a0acb3ff1a550fbce687f0b92097f66d3cbd7a365c07f0733fe2e"
+    },
+    {
+      "path": "apps/commercial/mini-office/DEPLOY.md",
+      "bytes": 588,
+      "sha256": "efd507fd2c64a22b2738a0e804fe64f059441c8c72a8be2a1ac9e3f66943eebc"
+    },
+    {
+      "path": "apps/commercial/mini-office/gumroad_page.html",
+      "bytes": 4136,
+      "sha256": "371af539c48f085253730e37f5d03cb46d22c344861132597ff8b5ddc8de669b"
+    },
+    {
+      "path": "apps/commercial/mini-office/index.html",
+      "bytes": 10435,
+      "sha256": "36109396c985916fab3400b27d59d407c30a5a78d50b2522dc35f22a07835bee"
+    },
+    {
+      "path": "apps/commercial/mini-office/INICIO_RAPIDO.md",
+      "bytes": 963,
+      "sha256": "eea7b4cc8b8b8468c7ea4281558cb1bc55768a0331f7f840e5d5e440afc1fce4"
+    },
+    {
+      "path": "apps/commercial/mini-office/INSTALL_AND_RUN.bat",
+      "bytes": 1252,
+      "sha256": "876fdb227937d8c17c35ed50cfee11b35b1fda965c637621605d6e09c4342bd8"
+    },
+    {
+      "path": "apps/commercial/mini-office/install_and_run.sh",
+      "bytes": 1414,
+      "sha256": "2b273672169da9c230b3bf4658625744e956d8b43ccc7ce0bc09b8f913215089"
+    },
+    {
+      "path": "apps/commercial/mini-office/landing.html",
+      "bytes": 1605,
+      "sha256": "fd54b4c5b4547a9b7e3a2d1e553bd78e21bc0715a732a8dcb71d3298a87bb9ba"
+    },
+    {
+      "path": "apps/commercial/mini-office/LICENSE",
+      "bytes": 517,
+      "sha256": "d0e80c5c4cd4a0f68313c559b948a4b7e4b506526c76825d5dc0bdfe79660b9a"
+    },
+    {
+      "path": "apps/commercial/mini-office/mini_office.py",
+      "bytes": 2699,
+      "sha256": "3312aed416cc2c340edef3256d05aad38aca30b60e0865c64e96206bb99e5c9c"
+    },
+    {
+      "path": "apps/commercial/mini-office/package.json",
+      "bytes": 1149,
+      "sha256": "46db483416a9578d07ce836ff06bf9392ede293e78347721a66d73e64037f515"
+    },
+    {
+      "path": "apps/commercial/mini-office/PROYECTO_RESUMEN.md",
+      "bytes": 635,
+      "sha256": "dfd3980d4c98239c670e271545c974e8edd0640aaa09bc4253ea2bc91c67b520"
+    },
+    {
+      "path": "apps/commercial/mini-office/public.css",
+      "bytes": 328,
+      "sha256": "11169f42d7fc1edcd16ac1e96504c0e7ba626681fa57b8b106aad726e1352c50"
+    },
+    {
+      "path": "apps/commercial/mini-office/PUBLICAR_AGORA.md",
+      "bytes": 479,
+      "sha256": "7de2175b779d86e18d68d3cbad36bd71410d2e0e740a2bc43184b0f7c2be9658"
+    },
+    {
+      "path": "apps/commercial/mini-office/PUBLICAR_EN_GITHUB.md",
+      "bytes": 516,
+      "sha256": "9bcb356a7df26ace3b9380c7a8f59d665c0cc4b6c31ee16465d2284d035c7e96"
+    },
+    {
+      "path": "apps/commercial/mini-office/pyproject.toml",
+      "bytes": 1990,
+      "sha256": "260899291cf58d31801b46475946bf070142562e4f8b1b8e96878a76b742d675"
+    },
+    {
+      "path": "apps/commercial/mini-office/README.md",
+      "bytes": 2050,
+      "sha256": "da081f30e08e3dbafffed4bc9e1848e3593a21fe0d3475fb14c67d724b0197b5"
+    },
+    {
+      "path": "apps/commercial/mini-office/requirements.txt",
+      "bytes": 122,
+      "sha256": "ef18d51f5d08c476aa7d5e25a2713cd9474e715a7916aeda783985eff858c3ba"
+    },
+    {
+      "path": "apps/commercial/mini-office/SECURITY.md",
+      "bytes": 495,
+      "sha256": "184773e43db539b8f28e31a5040aa083489dc6693668aa1fa88f6e72a40eaa02"
+    },
+    {
+      "path": "apps/commercial/mini-office/SECURITY_TESTS_REPORT.md",
+      "bytes": 454,
+      "sha256": "944a8869ae84f37064adbbb17a9494a06a11932eaad139884c4748abae36a0b8"
+    },
+    {
+      "path": "apps/commercial/mini-office/setup.py",
+      "bytes": 2138,
+      "sha256": "bfd1ce18dabd7b6246c00d98eb402a9f6c448019866569c242981249672ef671"
+    },
+    {
+      "path": "apps/commercial/mini-office/THIRD_PARTY_NOTICES.md",
+      "bytes": 377,
+      "sha256": "f94940f0c683f49fa7abd13d1e49ab4fe9187dde5bb8fce85fdf703166baeef5"
+    },
+    {
+      "path": "apps/commercial/mini-office/.github/FUNDING.yml",
+      "bytes": 970,
+      "sha256": "9bad95b8bf16301e12f85a33203091e75e3feb1ffb2981df903fe047ae36ca3b"
+    },
+    {
+      "path": "apps/commercial/mini-office/.github/PULL_REQUEST_TEMPLATE.md",
+      "bytes": 1255,
+      "sha256": "b1eefbf9a252db8e9dae9f0fb805a29a89774c766dd9a13a22b30ccae15be3a5"
+    },
+    {
+      "path": "apps/commercial/mini-office/.github/release.yml",
+      "bytes": 1115,
+      "sha256": "649821acdccb01873cab120f71cf6867a8e5c6f86e4274fd86f204d2608e8bf6"
+    },
+    {
+      "path": "apps/commercial/mini-office/.github/ISSUE_TEMPLATE/bug_report.md",
+      "bytes": 1095,
+      "sha256": "e06036579b6c43437c83766f18311d3f9ff58fa920b98ecb8f3d6c78bfb29124"
+    },
+    {
+      "path": "apps/commercial/mini-office/.github/ISSUE_TEMPLATE/feature_request.md",
+      "bytes": 1142,
+      "sha256": "290f808f5528f0569b6e475ec339251b2cebb0932b65a861b7a900371a6b6586"
+    },
+    {
+      "path": "apps/commercial/mini-office/.github/workflows/ci.yml",
+      "bytes": 2428,
+      "sha256": "cf627f273a3203d1ec0a06a5aa6cdcb20712857a78febfddcca052eaf618a5c8"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/analyst.py",
+      "bytes": 2028,
+      "sha256": "4d5abc9ffab99acc5351966e6fecfad5ffa735888f789ab97170b17cf068c3a8"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/copywriter.py",
+      "bytes": 2726,
+      "sha256": "8fdc5b0d45843082ca8fea39d1c0e9af6390779bf2d6bf2e49da664d99663bc0"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/creative.py",
+      "bytes": 2453,
+      "sha256": "19b56a16721692bc27f3b9e33ae80d21bc19eae85e0d96220b08121879432a8a"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/designer.py",
+      "bytes": 2756,
+      "sha256": "62ad90f7007e2173e1e78d647fec1b3e2c1123d205e65e340241167ce693c5e8"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/__init__.py",
+      "bytes": 379,
+      "sha256": "e03a20870138934e6b4c327ef69081d1e3b661764b8e6cbfacf377c45e84a541"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/copy_assets.json",
+      "bytes": 1480,
+      "sha256": "543394a5127e0fc163b0a306f1097695c71f77f2914597bafcd2627fba000377"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/creative_brief.json",
+      "bytes": 1036,
+      "sha256": "2ef575ddbf114f52b6b1ec5342f6a44ff4484729fad6da82fc1759c5da894fef"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/design_system.json",
+      "bytes": 1517,
+      "sha256": "f350810c898e00cb582544cae231ae20c7782921f30143142df5d916138d4301"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/gumroad_content.json",
+      "bytes": 2133,
+      "sha256": "ca5e9381fe42fef26192533c8e6e935f2f1e106d0f77eb34de2fe5f2b922e9f0"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/gumroad_description.txt",
+      "bytes": 290,
+      "sha256": "c15c0e105abd3a29b2ff749aeb7a71eb24bb9800be22d0907d97bc1506a7be2a"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/market_analysis.json",
+      "bytes": 975,
+      "sha256": "738050368161b3fc3e63ced33953ba5bf3fd56a8153570ad32f3185647875a5f"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/README_SHORT.md",
+      "bytes": 250,
+      "sha256": "896db6106c626023e3a5e63014c016f51c9ebe436757944edf38ca07e5f952c0"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/social_media_posts.json",
+      "bytes": 320,
+      "sha256": "d877776b5d556890c8258323f793b55bd346e1969ec9258b4fcaa65a8c049802"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/web_content.json",
+      "bytes": 2741,
+      "sha256": "800d96fdfd835598d0f871bde00ec70b50e8be7134842041c397f6a6ebd74dc5"
+    },
+    {
+      "path": "apps/commercial/mini-office/reports/qa_2026-05-02/server-smoke.json",
+      "bytes": 142,
+      "sha256": "980e0ebcca439ebe845381ea9ea79de2ded1c0b2f3538b3b53df93b00e516ea7"
+    },
+    {
+      "path": "apps/commercial/mini-office/tests/test_functional.py",
+      "bytes": 8423,
+      "sha256": "d68f85ff7cbdbb76963a73e9de6307d87d94aaf5a4a8e61e6581ff99e49039ed"
+    },
+    {
+      "path": "apps/commercial/mini-office/tests/test_security.py",
+      "bytes": 6120,
+      "sha256": "20605825522ee4d351915c3a0df321954c16ceacab28180736d8a5fed1754f5c"
+    },
+    {
+      "path": "apps/commercial/mini-office/tests/__init__.py",
+      "bytes": 32,
+      "sha256": "7b034a00ea1902081a1314a0c92840dfebb13d54254489f2378099421fbb3f7d"
+    },
+    {
+      "path": "apps/commercial/mini-office/tools/generate_promo_materials.py",
+      "bytes": 3002,
+      "sha256": "c4f8be3ff86f048e9a7e373ff5d3ddd1b127448f94c1a25a8a53d6d1599190c2"
+    },
+    {
+      "path": "apps/commercial/mini-office/tools/publicar_gumroad.py",
+      "bytes": 3193,
+      "sha256": "68081724eb918c1d50490392d6923bae941abfbf577ac7a2cf86c44f6198146a"
+    },
+    {
+      "path": "apps/commercial/mini-office/tools/publicar_web.py",
+      "bytes": 3669,
+      "sha256": "90ba47ea3f9c911d12b31964a5df074b4839dae4fe11da57a3c91c5230fbfd70"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "apps/commercial/mini-office/.pytest_cache/v",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/.pytest_cache/.gitignore",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/.pytest_cache/CACHEDIR.TAG",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/.pytest_cache/README.md",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/__pycache__/analyst.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/__pycache__/copywriter.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/__pycache__/creative.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/__pycache__/designer.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/agents/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/tests/__pycache__/test_functional.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/tests/__pycache__/test_security.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/tests/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/tools/__pycache__/generate_promo_materials.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/tools/__pycache__/publicar_gumroad.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/tools/__pycache__/publicar_web.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/__pycache__/mini_office.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/mini-office/__pycache__/setup.cpython-311.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 53,
+  "blocked_count": 0,
+  "excluded_count": 17,
+  "total_bytes": 91294
+}

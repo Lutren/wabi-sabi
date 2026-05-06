@@ -1,0 +1,9 @@
+{
+  "name": "MEDIOEVO Agent Ops Pack",
+  "short_url": "medioevo-agent-ops-pack",
+  "price": 2900,
+  "currency": "usd",
+  "content_type": "digital",
+  "description": "Premium templates and release checklists for shipping public-safe agent products while keeping private runtime, IP and credentials out of the package.\n\nIncludes: agent technical card, curator report template, ActionGate checklist, GitHub release checklist, Gumroad listing template, synthetic audit example and support notes.\n\nExcludes: private Claudio runtime, MEDIOEVO books, RPG, TCG, assets, lore, credentials, account sessions, customer data, and high-risk scientific, medical, legal, security or revenue promises.",
+  "product_file": "releases/paid/medioevo-agent-ops-pack.zip"
+}

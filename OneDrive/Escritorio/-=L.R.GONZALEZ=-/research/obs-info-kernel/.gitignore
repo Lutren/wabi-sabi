@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+obs_out/
+_out/
+observacionismo_research_report.json
+observacionismo_research_report.md
+SESSION_FINGERPRINT.json
+NEXT_SESSION_BRIEF.md

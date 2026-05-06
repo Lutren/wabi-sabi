@@ -1,0 +1,255 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://medioevo.local/schemas/observacionismo_concepts.schema.json",
+  "title": "Observacionismo Operational Concept",
+  "description": "Internal canon record for turning Observacionismo theory into verifiable operational objects. This schema does not authorize public claims.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "concept_id",
+    "name",
+    "aliases",
+    "layer",
+    "status",
+    "claim_type",
+    "operational_definition",
+    "DO_deconstruction",
+    "IOI_recompilation",
+    "inputs",
+    "transforms",
+    "outputs",
+    "invariants",
+    "evidence_required",
+    "falsifiers",
+    "gates",
+    "safety_notes",
+    "source_paths",
+    "tests",
+    "public_claim_allowed"
+  ],
+  "properties": {
+    "concept_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9_\\-\\.]{1,80}$"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "aliases": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "layer": {
+      "type": "string",
+      "enum": [
+        "metric",
+        "gate",
+        "comms",
+        "language",
+        "runtime",
+        "evidence",
+        "research",
+        "gameplay",
+        "orchestration",
+        "canon",
+        "storage",
+        "safety"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "verificado_por_prueba",
+        "proxy_operacional",
+        "hipotesis",
+        "metafora_canon"
+      ]
+    },
+    "claim_type": {
+      "type": "string",
+      "enum": [
+        "mathematical",
+        "protocol",
+        "runtime",
+        "language",
+        "research",
+        "gameplay",
+        "governance",
+        "orchestration",
+        "evidence",
+        "metaphor"
+      ]
+    },
+    "operational_definition": {
+      "type": "string",
+      "minLength": 12
+    },
+    "DO_deconstruction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observed_parts",
+        "narrative_boundary",
+        "technical_function",
+        "residue"
+      ],
+      "properties": {
+        "observed_parts": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "narrative_boundary": {
+          "type": "string",
+          "minLength": 1
+        },
+        "technical_function": {
+          "type": "string",
+          "minLength": 1
+        },
+        "residue": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "IOI_recompilation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "validable_object",
+        "runtime_target",
+        "pass_condition"
+      ],
+      "properties": {
+        "validable_object": {
+          "type": "string",
+          "minLength": 1
+        },
+        "runtime_target": {
+          "type": "string",
+          "minLength": 1
+        },
+        "pass_condition": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "transforms": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "invariants": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "evidence_required": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "falsifiers": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "gates": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "decision",
+          "condition",
+          "required_evidence"
+        ],
+        "properties": {
+          "decision": {
+            "type": "string",
+            "enum": [
+              "APPROVE",
+              "REVIEW",
+              "BLOCK"
+            ]
+          },
+          "condition": {
+            "type": "string",
+            "minLength": 1
+          },
+          "required_evidence": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          }
+        }
+      }
+    },
+    "safety_notes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source_paths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "public_claim_allowed": {
+      "type": "boolean"
+    }
+  }
+}

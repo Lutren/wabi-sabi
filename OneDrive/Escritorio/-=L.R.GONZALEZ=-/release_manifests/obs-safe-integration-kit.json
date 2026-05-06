@@ -1,0 +1,115 @@
+{
+  "name": "obs-safe-integration-kit",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/obs-safe-integration-kit",
+  "notes": "MIT local-first ObservationEnvelope, ActionGate, EvidenceStore and dry-run adapter kernel; no external execution.",
+  "files": [
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/CLAIMS.md",
+      "bytes": 1620,
+      "sha256": "4a8093c860678f99b5f6d89ad72cfa0eddb8e9825ce4494fbcc5aeda7ae0af96"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/LICENSE",
+      "bytes": 1072,
+      "sha256": "107ce57114c5a86fbc74e7017217223c6cd002c2dd9adf99cd98a3b233a98b76"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/PRIVATE_EXCLUSIONS.md",
+      "bytes": 744,
+      "sha256": "ad9ef5ecf3189b3c01a1e8480a00e38214b7de3789363631aaa287a6b8d3b001"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/pyproject.toml",
+      "bytes": 477,
+      "sha256": "b989571c46683f5c7584489ec93f65a32527eb8c52add5881c83357e7aaf6db8"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/QA_RESULTS.md",
+      "bytes": 2576,
+      "sha256": "1148761dc3548ff75543a39008c7a59f206d06525789d6c1cf24d4370277f119"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/README.md",
+      "bytes": 2591,
+      "sha256": "ea19abd589f381cd03fd266fe9e00d49fa1e91631e7d711ec7b8a61a1f8f3e08"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/RELEASE_CHECKLIST.md",
+      "bytes": 934,
+      "sha256": "ce0290e84c3bf4924af3e3aee202aa60b08f754fd092e874a436d6e5ccc55dd5"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/SAFE_ROLLOUT.md",
+      "bytes": 1037,
+      "sha256": "daa280f5c095b67fef56588ed4abd7a1fd95a176d2ddddba46e24d5e792c41a9"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/SECURITY.md",
+      "bytes": 1036,
+      "sha256": "111e9fa7bfc7b1d9d38c28cb4cc89b62a903ba697b35429cce373663b914a5b0"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/examples/browser_use_guard.py",
+      "bytes": 832,
+      "sha256": "5d6425fb6ed706f33e18bff5867844ceaffe22ec0c6fdd68ef8ba9fb35fd3599"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/examples/demo_safe_flow.py",
+      "bytes": 1811,
+      "sha256": "be3825e3633930d8a76ddcb26fb1d2fb1594c0cb1a164495eb0164b3623cd156"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/examples/gpt_researcher_wrapper.py",
+      "bytes": 1307,
+      "sha256": "0cea0d4b1b7401084c01cd5d8807ee411018e611dbedbc063effc2aa7666034c"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/examples/swe_agent_patch_gate.py",
+      "bytes": 821,
+      "sha256": "958e3edf051ae23fd3faaa112817e1f20f8970ea8663c4cf35a1157e8221ec72"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/adapters.py",
+      "bytes": 6805,
+      "sha256": "b2765616a1291bd942e51e180fddf6ed2d721706eb89983af260651dcb388bcd"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/cli.py",
+      "bytes": 3509,
+      "sha256": "d6cb68db7ca29cab7ddd8a0552749a616f8fe92273f46e698bb249e2e2d33e8a"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/core.py",
+      "bytes": 9068,
+      "sha256": "9cd0561759411bf0f51d24c6779073b1567501a074eae4a5679e0f9b304427dc"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/gates.py",
+      "bytes": 8553,
+      "sha256": "5f76e7776c42418854561dd5f607e16d398f89f955481fb00d67677ac4c958a8"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/storage.py",
+      "bytes": 9001,
+      "sha256": "6dc81df28cff7588cfd36852c102cd7b520377577ab2b5d52a83debd51b1e3d7"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/obs_safe_integration_kit/__init__.py",
+      "bytes": 529,
+      "sha256": "cf6b1b337981f13de462b52bc0f4618ab76e36b42089a2c5004dd8735be93e9e"
+    },
+    {
+      "path": "packages/open-dev/obs-safe-integration-kit/tests/test_kernel.py",
+      "bytes": 1672,
+      "sha256": "0623d7e9992eed5bf5f3ca72e070aff0775e112816ea9320039f8c6490484fb4"
+    }
+  ],
+  "blocked": [],
+  "excluded": [],
+  "file_count": 20,
+  "blocked_count": 0,
+  "excluded_count": 0,
+  "total_bytes": 55995
+}

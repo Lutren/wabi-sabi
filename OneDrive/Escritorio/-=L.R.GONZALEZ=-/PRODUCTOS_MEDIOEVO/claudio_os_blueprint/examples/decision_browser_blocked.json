@@ -1,0 +1,8 @@
+{
+  "action": "browser_upload",
+  "browser": true,
+  "manifest": false,
+  "evidence": true,
+  "R": 0.22,
+  "epsilon": 0.1
+}

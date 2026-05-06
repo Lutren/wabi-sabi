@@ -1,0 +1,40 @@
+{
+  "schema": "wabi_sabi.agent_registry.v1",
+  "agents": {
+    "programmer": {
+      "description": "Crea, modifica y depura codigo local mediante acciones seguras y artefactos verificables.",
+      "entrypoint": "wabi_sabi.agents.programmer_agent:ProgrammerAgent",
+      "capabilities": ["code_generation", "patch_plan", "safe_artifact_write"],
+      "limits": ["no_destructive_edits", "no_external_push", "no_secret_access"],
+      "safe_mode": true
+    },
+    "debugger": {
+      "description": "Ejecuta diagnosticos locales, clasifica fallos y propone reparaciones verificables.",
+      "entrypoint": "wabi_sabi.agents.debug_agent:DebugAgent",
+      "capabilities": ["diagnostics", "test_command_detection", "failure_classification"],
+      "limits": ["no_long_running_daemons", "no_external_network"],
+      "safe_mode": true
+    },
+    "researcher": {
+      "description": "Investiga documentacion y archivos locales sin busqueda externa obligatoria.",
+      "entrypoint": "wabi_sabi.agents.research_agent:ResearchAgent",
+      "capabilities": ["local_search", "doc_summary", "evidence_listing"],
+      "limits": ["no_cloud_required", "no_private_source_copy"],
+      "safe_mode": true
+    },
+    "file": {
+      "description": "Lee, resume y genera borradores de archivos locales en runtime/outputs.",
+      "entrypoint": "wabi_sabi.agents.file_agent:FileAgent",
+      "capabilities": ["file_summary", "readme_draft", "safe_text_artifact"],
+      "limits": ["writes_only_to_runtime_outputs_by_default"],
+      "safe_mode": true
+    }
+  },
+  "intent_routes": {
+    "code_generation": "programmer",
+    "debug_diagnostics": "debugger",
+    "local_research": "researcher",
+    "file_operations": "file",
+    "general": "debugger"
+  }
+}

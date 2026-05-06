@@ -1,0 +1,27 @@
+{
+  "product_name": "duat-templates",
+  "name": "DUAT Templates",
+  "short_url": "duat-templates",
+  "price": 1900,
+  "currency": "usd",
+  "content_type": "digital",
+  "status": "draft_ready_local_not_published",
+  "description": "Synthetic simulation lab templates for DUAT Genesis experiments, falsifier notes and low-claim reports.\n\nIncludes: DUAT Genesis lab card, synthetic scenario brief, falsifier report template, example synthetic lattice study and support notes.\n\nExcludes: DUAT Geodia private engineering, MEDIOEVO RPG/TCG assets or lore, private runtime, credentials, datasets, validated science, diagnosis or prediction claims.",
+  "includes": [
+    "DUAT Genesis lab card template",
+    "Synthetic scenario brief",
+    "Falsifier report template",
+    "Example synthetic lattice study",
+    "Support and commercial-use notes"
+  ],
+  "excludes": [
+    "DUAT Geodia private engineering",
+    "MEDIOEVO RPG/TCG assets or lore",
+    "private runtime, credentials or datasets",
+    "validated science, diagnosis or prediction claims"
+  ],
+  "product_file": "releases/paid/duat-templates.zip",
+  "source_dir": "packages/paid/duat-templates",
+  "delivery_file": "duat-templates.zip",
+  "refund_note": "Digital template pack. Refunds follow the store policy when the file cannot be accessed or materially differs from the listing."
+}

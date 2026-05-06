@@ -1,0 +1,73 @@
+{
+  "schema": "medioevo.harness_manifest.v1",
+  "updated_at": "2026-04-29",
+  "status": "local_controlled_harness",
+  "install_policy": "Do not auto-install these skills. They are reusable local harness instructions under tools/harness.",
+  "git_policy": {
+    "no_git_add_dot": true,
+    "do_not_commit_from": "C:\\Users\\L-Tyr",
+    "stage_only_owned_paths": true,
+    "commit_only_after_evidence": true
+  },
+  "actiongate_policy": {
+    "required_for": [
+      "external_network_actions",
+      "publication_or_unpublication",
+      "Gumroad_or_payment_changes",
+      "social_media_or_public_site_changes",
+      "browser_mouse_or_authenticated_ui_actions",
+      "moving_or_deleting_user_files",
+      "heavy_model_launch_or_daemon_start",
+      "n8n_workflow_activation",
+      "Open_WebUI_daemon_or_preview_launch",
+      "Dagger_engine_or_privileged_container_execution"
+    ],
+    "host_gate": "host_observacionista",
+    "block_if_host_state": [
+      "JAMMING",
+      "BLOCK"
+    ],
+    "preview_rule": "Never start preview/daemon routes with -AcknowledgePreviewRisk unless preflight ready_to_launch=true."
+  },
+  "skills_root": "tools/harness/skills",
+  "skills": [
+    {
+      "id": "medioevo-editorial",
+      "path": "tools/harness/skills/medioevo-editorial/SKILL.md",
+      "domain": "editorial"
+    },
+    {
+      "id": "medioevo-release",
+      "path": "tools/harness/skills/medioevo-release/SKILL.md",
+      "domain": "release"
+    },
+    {
+      "id": "medioevo-seo",
+      "path": "tools/harness/skills/medioevo-seo/SKILL.md",
+      "domain": "seo"
+    },
+    {
+      "id": "medioevo-gumroad",
+      "path": "tools/harness/skills/medioevo-gumroad/SKILL.md",
+      "domain": "gumroad"
+    },
+    {
+      "id": "argus-ops",
+      "path": "tools/harness/skills/argus-ops/SKILL.md",
+      "domain": "argus"
+    },
+    {
+      "id": "hormiguero-surface",
+      "path": "tools/harness/skills/hormiguero-surface/SKILL.md",
+      "domain": "hormiguero"
+    },
+    {
+      "id": "modelo-router",
+      "path": "tools/harness/skills/modelo-router/SKILL.md",
+      "domain": "model_routing"
+    }
+  ],
+  "mcp_allowlist": "tools/harness/mcp_allowlist.json",
+  "candidate_routes": "tools/harness/candidate_routes.json",
+  "validator": "tools/harness/validate_harness.py"
+}

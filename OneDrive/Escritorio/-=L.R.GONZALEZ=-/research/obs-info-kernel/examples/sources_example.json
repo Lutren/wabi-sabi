@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Fuente neurociencia",
+    "domain": "neurociencia",
+    "text": "La conciencia se estudia como integracion de informacion, prediccion y actualizacion de estados internos."
+  },
+  {
+    "title": "Fuente contemplativa",
+    "domain": "contemplativa",
+    "text": "La observacion surge cuando la atencion reduce el residuo y distingue experiencia de sesgo mental."
+  },
+  {
+    "title": "Fuente ingenieria IA",
+    "domain": "ia",
+    "text": "Un agente falla cuando el contexto acumula ruido, jamming y drift; necesita compuertas de actualizacion."
+  }
+]

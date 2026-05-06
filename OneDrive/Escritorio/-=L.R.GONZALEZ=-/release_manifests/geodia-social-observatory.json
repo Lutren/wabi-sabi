@@ -1,0 +1,201 @@
+{
+  "name": "geodia-social-observatory",
+  "classification": "INTERNAL_RESEARCH",
+  "lane": "internal-research",
+  "source": "research/geodia-social-observatory",
+  "notes": "Local private MVP for social epoch simulation; no publication or prediction claims.",
+  "files": [
+    {
+      "path": "research/geodia-social-observatory/FUNCTIONAL_LAB_SPLIT.md",
+      "bytes": 1983,
+      "sha256": "94ddd9b9d14e8398c72e6674739d37d44e03286c160bebe565a931fe33dbdfb2"
+    },
+    {
+      "path": "research/geodia-social-observatory/INTAKE_EVIDENCE_2026-05-01.md",
+      "bytes": 3239,
+      "sha256": "a045b829baab77124cb9740146890a82973a93a81cb5e090927258e0f9c6701d"
+    },
+    {
+      "path": "research/geodia-social-observatory/pyproject.toml",
+      "bytes": 292,
+      "sha256": "e62dce53e7161e68388ba3683a03d8d4a31b3eb2db5d300ae7b86bcfc6500f27"
+    },
+    {
+      "path": "research/geodia-social-observatory/README.md",
+      "bytes": 3888,
+      "sha256": "20a33bb5f98a6adf796da21e38cbd560046edd97237952f4b1819c01742d7e40"
+    },
+    {
+      "path": "research/geodia-social-observatory/fixtures/social_epoch_fixture.json",
+      "bytes": 2591,
+      "sha256": "c0e0d5160ec04180084a1c8d86e7bb9664ac4097a8485d18e618c51df69adc25"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/artifacts.py",
+      "bytes": 2107,
+      "sha256": "aa3e25d269860681008a4f4c35576a3a39fb7082b5ecf88b63dad91d639fd74e"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/behavior.py",
+      "bytes": 4707,
+      "sha256": "694e4f8b3f40c6f5b5367a96022615cb7d5b193d28d1710f6162d410a68dc8b3"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/cli.py",
+      "bytes": 9307,
+      "sha256": "ec8671b7dc18a4e8b0dafe8f25830a245eb2fe8741dc4c4af2d247813f2a2b56"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/contracts.py",
+      "bytes": 1085,
+      "sha256": "4dbd1759f760d7d94da694d04a29a1edf7f454b3912b3cd97ea5ba35161a4be0"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/duat_sim.py",
+      "bytes": 3633,
+      "sha256": "80d4c6b7fa3df5e5e3d466b1148bed354705a56c01edf532a296fb1445ca0a83"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/duat_v2_intake.py",
+      "bytes": 11745,
+      "sha256": "b5203d11aa34f66c15dc3d10f2c55631445b4cb877fd1c651e02c343c5f04d80"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/events.py",
+      "bytes": 2949,
+      "sha256": "0b9289150479d26b14752f6a5c26e012a01f21b0d65cd600b27b9b3e47514895"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/health.py",
+      "bytes": 2139,
+      "sha256": "fe67d76e59ecca3a86d0eecc4eefea966a102b140e56680453ac7a1a62706676"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/model.py",
+      "bytes": 10505,
+      "sha256": "93debcecd09e60c9d3c76972f78c99ecfacd6d54aa81cf286b06003371999652"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/router.py",
+      "bytes": 2518,
+      "sha256": "a7715850bcdf9eb0f32570270867c606c5bb1db3fe342e3e7f29052657579cad"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/snapshot.py",
+      "bytes": 2857,
+      "sha256": "aee7c4a5460dcdd1f955fa901397af1d470f77733089a7d04179cefd19df2ffb"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/sources.py",
+      "bytes": 4471,
+      "sha256": "f3eeac5a0ab3c49f0f84a45e9cef8efa2513bac6621ae1e138d11b5a123a8957"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/source_registry.py",
+      "bytes": 7100,
+      "sha256": "3f753ce56a49feacb2f49fbd2c250c72e068390ca3ffbb9bbf1077351e1c379e"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__init__.py",
+      "bytes": 1418,
+      "sha256": "78ac809e8a45d8d462df518e9b0e4303dd38ab06225a8182b0cd90fa64133500"
+    },
+    {
+      "path": "research/geodia-social-observatory/tests/test_geodia_social_observatory.py",
+      "bytes": 3884,
+      "sha256": "78ab44247e5e50b363a545722ff9f072836fe2104b127be92d81d465d1199a59"
+    },
+    {
+      "path": "research/geodia-social-observatory/tests/test_local_motor_extraction.py",
+      "bytes": 8952,
+      "sha256": "1afe13d735ffbacfd8b8cf736d5ca0fd7309d628dd65c9aa00e43268bf63d7cd"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "research/geodia-social-observatory/.pytest_cache/v",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/.pytest_cache/.gitignore",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/.pytest_cache/CACHEDIR.TAG",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/.pytest_cache/README.md",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/artifacts.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/behavior.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/cli.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/contracts.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/duat_sim.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/duat_v2_intake.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/events.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/health.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/model.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/router.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/snapshot.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/sources.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/source_registry.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/tests/__pycache__/test_geodia_social_observatory.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "research/geodia-social-observatory/tests/__pycache__/test_local_motor_extraction.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 21,
+  "blocked_count": 0,
+  "excluded_count": 20,
+  "total_bytes": 91370
+}

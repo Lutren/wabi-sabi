@@ -1,0 +1,40 @@
+{
+  "actor": "agent",
+  "actionType": "send_email",
+  "input": "Send a follow-up email using the verified CRM notes and invoice state.",
+  "output": "Draft email that references the verified invoice status, avoids legal claims, and asks the customer to confirm the next available meeting window.",
+  "risk": 0.2,
+  "reversibility": 0.85,
+  "receptorId": "crm_followup_receptor",
+  "receptorAuthorized": true,
+  "selectivity": 0.92,
+  "calibration": 0.84,
+  "sources": [
+    {
+      "label": "CRM note",
+      "confidence": 0.95,
+      "verified": true
+    },
+    {
+      "label": "Invoice record",
+      "confidence": 0.92,
+      "verified": true
+    }
+  ],
+  "toolCalls": [
+    {
+      "name": "crm.lookup",
+      "status": "ok"
+    }
+  ],
+  "selfCheck": {
+    "summary": "Checked the evidence, risk and reversible impact.",
+    "confidence": 0.87,
+    "assumptions": [],
+    "uncertainties": [],
+    "falsifiers": [
+      "invoice record mismatch",
+      "customer has opted out of email"
+    ]
+  }
+}

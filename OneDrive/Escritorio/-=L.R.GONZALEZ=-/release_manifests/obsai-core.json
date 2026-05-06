@@ -1,0 +1,189 @@
+{
+  "name": "obsai-core",
+  "classification": "OPEN",
+  "lane": "free-dev",
+  "source": "packages/open-dev/obsai-core",
+  "notes": "MIT dependency-free operational core; no research or consciousness product claims.",
+  "files": [
+    {
+      "path": "packages/open-dev/obsai-core/.gitignore",
+      "bytes": 68,
+      "sha256": "fafc86ed606d78d5066297c1db91d4fa8b9eecacf45f081572fa32280bec8485"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/demo_agent_action.py",
+      "bytes": 5438,
+      "sha256": "3c429e0747b71496c8fc7bed8ca5827f96c0043110d42c3be7d379e8ad280abc"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/LICENSE",
+      "bytes": 1070,
+      "sha256": "bd27d666e5284e32886e26977ce4464de97f379aa020b4a4db737506c475b5c5"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/pyproject.toml",
+      "bytes": 459,
+      "sha256": "81be7418cedeacd3645d2b4785dba52e8546d67f85102d395e8f75677dfc3165"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/README.md",
+      "bytes": 3873,
+      "sha256": "d3ba9b1c84768df99e4d8b17b9a061e78455bd1ac58ac61493e15c2a5461c7e7"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/THIRD_PARTY_NOTICES.md",
+      "bytes": 259,
+      "sha256": "aeb24ba5c9d04c92377fb80f31f4bc2412314a0507be6bdea2905db0a0e03644"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/benchmarks/agent_action_scenarios.jsonl",
+      "bytes": 872,
+      "sha256": "c2ebd0ed82b0ed7c8e1258dcce35cc27fbb4f15d04581e6408c5144a12e1b510"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/benchmarks/run_agent_action_benchmark.py",
+      "bytes": 2752,
+      "sha256": "e9cf7236405e599dd418239e8a1f7458ce7ece5d48fee0b1d17c2c3994f87ffc"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/examples/action_review.json",
+      "bytes": 653,
+      "sha256": "33955c69b8843ad76796f6ae21b030a8ab65c6b372f99441eb61c10f5309da51"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/examples/observation_envelope.json",
+      "bytes": 539,
+      "sha256": "820a675ee0a353b927a07520cdf56a622def89a13ce12be7565fd73d7c6ba3fe"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/cli.py",
+      "bytes": 4170,
+      "sha256": "5b9e7aa52e2e3bcfa238809485173227210b3029cb01d57672410a136d2f868a"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/fingerprint.py",
+      "bytes": 2804,
+      "sha256": "8f69bed7fffac6bbeb4f41ef339199f7a0419061f5ebab4ccaa6aeb298c389c4"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/gate.py",
+      "bytes": 12267,
+      "sha256": "6adbb3a8339e21ac472fcfbf9ed9acdb494ade552a6526777e016bd687b62d91"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/jsonutil.py",
+      "bytes": 309,
+      "sha256": "b55a2ce9865fac937edd36419a5f1bc38082d7b322b55273929e5ed021167878"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/metrics.py",
+      "bytes": 3638,
+      "sha256": "ec7e0f184cfc04ddfa79953eca55d30a27cd2c63676fdcd51529a64ec67d0c00"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/ontology.py",
+      "bytes": 14447,
+      "sha256": "f19aa54857bbae2094aab228eaa9a6e6f2920ac1d0c47908748225aa5e8a31c9"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/residue.py",
+      "bytes": 2749,
+      "sha256": "6b2826888b1e5e85627403fa0ed54a8e11fb874269582f4ba71907353949d142"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/transduction.py",
+      "bytes": 5390,
+      "sha256": "171661faba8da4515c60152ec36b3c15943a936693699570c74b5871de09c80b"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/world.py",
+      "bytes": 1977,
+      "sha256": "306efc5744ff46d63bb28849f64d3188a546ae7791624b6d7c7d13dface1fee9"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__init__.py",
+      "bytes": 1368,
+      "sha256": "14bd13ce30bf4bcabc8d19c3527d9a8574eec7b37a9c1bbfbef07da7fb42e9d2"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/tests/test_obsai_core.py",
+      "bytes": 11216,
+      "sha256": "b00353029a7c48401b4e65f08671037b5f2c04b2ec0533cc8c473f96eca9009e"
+    }
+  ],
+  "blocked": [],
+  "excluded": [
+    {
+      "path": "packages/open-dev/obsai-core/.pytest_cache/v",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/.pytest_cache/.gitignore",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/.pytest_cache/CACHEDIR.TAG",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/.pytest_cache/README.md",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/cli.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/fingerprint.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/gate.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/jsonutil.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/metrics.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/ontology.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/residue.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/transduction.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/world.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__/__init__.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/tests/__pycache__/test_obsai_core.cpython-311-pytest-9.0.3.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/tests/__pycache__/test_obsai_core.cpython-311.pyc",
+      "reason": "denylist"
+    },
+    {
+      "path": "packages/open-dev/obsai-core/__pycache__/demo_agent_action.cpython-311.pyc",
+      "reason": "denylist"
+    }
+  ],
+  "file_count": 21,
+  "blocked_count": 0,
+  "excluded_count": 17,
+  "total_bytes": 76318
+}

@@ -1,0 +1,55 @@
+{
+  "name": "duat-templates",
+  "classification": "COMMERCIAL",
+  "lane": "paid-templates",
+  "source": "packages/paid/duat-templates",
+  "notes": "Paid synthetic DUAT Genesis templates and study worksheets; no DUAT Geodia, RPG/TCG, private data or scientific guarantees.",
+  "files": [
+    {
+      "path": "packages/paid/duat-templates/LICENSE_COMMERCIAL.md",
+      "bytes": 671,
+      "sha256": "b7a4bb83afd197f6de05392b09c805c83ad436cc3704643606a62b2799060259"
+    },
+    {
+      "path": "packages/paid/duat-templates/README.md",
+      "bytes": 1009,
+      "sha256": "4cb4cb7ed12a2aa96b406001f52d612384aa336a03c16fe074a2e0dd617d61f0"
+    },
+    {
+      "path": "packages/paid/duat-templates/SUPPORT.md",
+      "bytes": 459,
+      "sha256": "00326171bca21a9a5e9f65be7c8a687586796d9356522ec58bf8f6d68ab80c10"
+    },
+    {
+      "path": "packages/paid/duat-templates/commerce/gumroad_listing.json",
+      "bytes": 1344,
+      "sha256": "c9a01d57dcfc4f3e10660f538320fd4d73b5166b694e2271078f86416c5bc1bd"
+    },
+    {
+      "path": "packages/paid/duat-templates/examples/SYNTHETIC_LATTICE_STUDY.md",
+      "bytes": 706,
+      "sha256": "b8e4a7807b7479f9750ad9f162464d1fbd7eaf3701dd5bb102a8033b3fa316f8"
+    },
+    {
+      "path": "packages/paid/duat-templates/templates/DUAT_GENESIS_LAB_CARD.md",
+      "bytes": 749,
+      "sha256": "116af5797a76101b0c8fbe21ac2bb54ac78383eb6d653054d0a9700c43e18dcb"
+    },
+    {
+      "path": "packages/paid/duat-templates/templates/FALSIFIER_REPORT_TEMPLATE.md",
+      "bytes": 499,
+      "sha256": "c6f1b8ad74960cec107d475520dccb0d7b4be837993b0cf44ec65fb48c0c8050"
+    },
+    {
+      "path": "packages/paid/duat-templates/templates/SYNTHETIC_SCENARIO_BRIEF.md",
+      "bytes": 625,
+      "sha256": "235edc51e05b469f1008c41a846733cc0773ae75e70c4fa6fe77a2dfd5ac5746"
+    }
+  ],
+  "blocked": [],
+  "excluded": [],
+  "file_count": 8,
+  "blocked_count": 0,
+  "excluded_count": 0,
+  "total_bytes": 6062
+}

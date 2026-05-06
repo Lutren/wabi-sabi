@@ -1,0 +1,14 @@
+EDITORIAL AND CANON MATERIAL
+
+Copyright (c) 2026 L.R. Gonzalez. All rights reserved.
+
+Books, full manuscripts, canon, lore, editorial assets, covers, companion
+materials, and private samples are not open source. No permission is granted
+to copy, redistribute, adapt, train on, sell, package, or publish this material
+unless a specific written release decision says otherwise.
+
+Approved excerpts or samples must be tracked separately from full works and
+must keep the attribution and publication terms attached to that sample.
+
+This template is not legal advice and remains `LEGAL_REVIEW_REQUIRED` before
+external sale or publication.

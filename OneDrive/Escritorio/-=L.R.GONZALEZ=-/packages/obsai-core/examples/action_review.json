@@ -1,0 +1,27 @@
+{
+  "actor": "agent",
+  "action_type": "publish",
+  "input": "Publish a public summary based on one draft note and no confirmed external checks.",
+  "output": "A short public summary that marks several points as likely but not verified.",
+  "risk": 0.48,
+  "reversibility": 0.55,
+  "sources": [
+    {
+      "label": "draft note",
+      "confidence": 0.45,
+      "verified": false
+    }
+  ],
+  "tool_calls": [],
+  "self_check": {
+    "summary": "Some checks remain incomplete.",
+    "confidence": 0.4,
+    "assumptions": [
+      "draft note is current"
+    ],
+    "uncertainties": [
+      "publication approval missing"
+    ],
+    "falsifiers": []
+  }
+}

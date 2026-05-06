@@ -1,0 +1,275 @@
+{
+  "name": "argus-desktop",
+  "classification": "COMMERCIAL_OR_INTERNAL",
+  "lane": "paid-apps",
+  "source": "apps/commercial/argus-desktop",
+  "notes": "Commercial/internal desktop app; generated artifacts denied.",
+  "files": [
+    {
+      "path": "apps/commercial/argus-desktop/.gitignore",
+      "bytes": 61,
+      "sha256": "a31471f081649be18c34fefd9a58894276d3e384f490b89a7e0e2ca2edce99a7"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/capacitor.config.ts",
+      "bytes": 418,
+      "sha256": "a1d34a08c55d715f9478e847607e6473904619082fcd1128db0fc2772f4d8527"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/CARTEL.md",
+      "bytes": 693,
+      "sha256": "5beb7886815c8b747e16f538b2c155ba5da823aa903d9d6ad98c6f451912f6db"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/COMMERCIAL_LICENSE.md",
+      "bytes": 678,
+      "sha256": "02ef7853b36ab1af96f2fb37cfc2c6ee225399e7ec49eda9b5a39f53a69798a5"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/electron-builder.json",
+      "bytes": 618,
+      "sha256": "85c016596dfb14bcb7a5c47ed8f323880f0207886b6eb79117f5d34303089ba1"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/index.html",
+      "bytes": 342,
+      "sha256": "e14abe54ccfb1247740e78884f7a31501c43e37abfa9f04450ed402fd7c03a3e"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/launch_claudio_web.cmd",
+      "bytes": 233,
+      "sha256": "2f023d100c7be39eb362e4de3276793b32c73e939402de64ec56ea6301c6f171"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/package-lock.json",
+      "bytes": 288684,
+      "sha256": "18451a3ddf594f88a9694dad1c3add6d02d66b2daccfda4ab586c2c1ca476bfe"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/package.json",
+      "bytes": 1617,
+      "sha256": "e3a35ec5898b338536e759ff6dfe97333c556f11717ff6679750d6f7c1c71528"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/postcss.config.cjs",
+      "bytes": 80,
+      "sha256": "b9357981319940ed660b848c7a15ea479915885b7cbe60d6951b5d5cef5b509d"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/README.md",
+      "bytes": 1033,
+      "sha256": "ec51ee0b915a398111435b3bf0f9ca471e87a25d3c30aa8a4656390bfbaf8bd0"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/RESPONSIBLE.md",
+      "bytes": 546,
+      "sha256": "ab5e2f93eb6b660ab76d89bf6f536a4f5fe3bcf6673c7fdc624a1eae1cc205f6"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-1440-fixed.png",
+      "bytes": 720046,
+      "sha256": "fef9be3ee11edd0e1143e75d998fd6812ebec4299691f49afd7f56354d3636b6"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-1440.png",
+      "bytes": 740124,
+      "sha256": "f05229c6ff4cd741245c3d907292263b9df85f4493020d814f2f7e60fc0a8278"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-800.png",
+      "bytes": 386809,
+      "sha256": "2eee5323debd12fb5ca42df40b20f90a5ccdd67996f7e115dd5c731c4fc8e696"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-final-1440.png",
+      "bytes": 741478,
+      "sha256": "5166393a60b885c5e806f7de311f62b06a44fc0148b2ba0bc182e36293df3fff"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-final-mobile.png",
+      "bytes": 323248,
+      "sha256": "26955677265f56c2f446b88e811cfc4cb0c48b9a9d3760740798560d2f61d557"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-mobile-fixed.png",
+      "bytes": 314590,
+      "sha256": "8b5d30909b9ce3e84607ce43d5132c4ed65426e9104fda6703a19863358b2a6f"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-mobile-fixed2.png",
+      "bytes": 311639,
+      "sha256": "bf755e0a4fdfa82475495d033e30788d9dd348498b49179b1682b5837083396a"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-mobile-fixed3.png",
+      "bytes": 313497,
+      "sha256": "60e804d214f3dfc2c30bdb1893205e833268b51edae16f4b90fd1adb01630ee5"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/runtime-argus-ui-mobile.png",
+      "bytes": 188016,
+      "sha256": "189e2ced03acb80b580676b88ecfc9804a7e8d49d37028e7cbfe19c4bedfd88b"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/STATUS.md",
+      "bytes": 556,
+      "sha256": "fff1a1e4e59c2e0049a807411b895363f425cfb20edc7f584e1b40a729954052"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/tailwind.config.cjs",
+      "bytes": 389,
+      "sha256": "f74e75dce5ca34b6dab59dbd48f4beca4798bb381d09785c106df9cf6c85938b"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/THIRD_PARTY_NOTICES.md",
+      "bytes": 445,
+      "sha256": "5820d78bff3fcc335d50dafce350b51f63c0669d2746893a021166adb051ca1c"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/tsconfig.json",
+      "bytes": 576,
+      "sha256": "9fd90aee28b8cae65c4bcf60b09875d8ced6f72d0ebb5e7655236cfccfc8529a"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/vite.config.ts",
+      "bytes": 2151,
+      "sha256": "94f2a2b2f5b0ce644e8b5d2be66109a546c9db64a55e7e2a6ea33f055bcdfbee"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/electron/argus-icon.ico",
+      "bytes": 81783,
+      "sha256": "4de8b9c4975c41f3d569c7447f677fb9bd235dd2383e53fa4cde5feb4b2dca35"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/electron/argus-icon.png",
+      "bytes": 66900,
+      "sha256": "a750f32bd985654250089c6bfdc7219875ec95a54112fe66f4bf65a1ed1b27e1"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/electron/generate_argus_icon.py",
+      "bytes": 2416,
+      "sha256": "19bbca038e3c41a906bb9a751a9e42ad5dbdbc1118c0a751c5e5245e8dc5ebc9"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/electron/main.cjs",
+      "bytes": 20927,
+      "sha256": "4a719c5c76f110980d2fd0c2751759c8c9c0df81056de306fcbe760468dcf765"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/electron/preload.cjs",
+      "bytes": 281,
+      "sha256": "8525a084d0b1d47fbb1cd205c31ca2f656dfdb12db0211091572f4977120f999"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/public/city-pixel-scene.svg",
+      "bytes": 5786,
+      "sha256": "bef7fd284a58d740eb1a04d08437220cdefd92ffded144019c8e317e9db1f44a"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/public/claudio-mark.svg",
+      "bytes": 934,
+      "sha256": "5a9acefdaaa1924edba448bd1b29c368969873565312a716e3e618f6aa228982"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/public/medioevo-geodia-plaza.png",
+      "bytes": 2725085,
+      "sha256": "cadb9833068f873c24ae82d02284166c6b1c1a5076e2f41db4e35825afd18f76"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/public/pwa-192x192.svg",
+      "bytes": 959,
+      "sha256": "cb9676cb2be10163ee48f85ddc9a6cdf27a329028422e6a614cd618c5494f0fe"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/public/pwa-512x512.svg",
+      "bytes": 959,
+      "sha256": "bbdaf617c840a0254c72f4afb0e29e9098f014bd8cc25a08445fd2f3d12e2d90"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/scripts/repair-workbox-terser.cjs",
+      "bytes": 777,
+      "sha256": "7d69b7614b2edef697b89fd18318c4c355c268a6e995215c2d6d67c0b53261c2"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/app.tsx",
+      "bytes": 135613,
+      "sha256": "ce649daf323e857c5939b11392b1a9cca406027a212eb53520457cbbdba939ef"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/globals.d.ts",
+      "bytes": 1900,
+      "sha256": "cdc5351258448dccc6415e343f7af374112372d2cae851f6d4269dfc70623482"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/main.tsx",
+      "bytes": 159,
+      "sha256": "1ca573a77c4715b5047114aaa9b45b1111a49013d81a43bdda9a0cf44931983f"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/styles.css",
+      "bytes": 19750,
+      "sha256": "d1216f5fedcfa68db980767054eb4409b5804d66f0b62c25a40df6820f1fda47"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/assets/sigilos/despertar.svg",
+      "bytes": 1210,
+      "sha256": "ad3a8e687749e4a477715ee619d486d24d594a8876f94163c2dc993b42631586"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/assets/sigilos/gato_schrodinger.svg",
+      "bytes": 1218,
+      "sha256": "56630e067321a84a39a8679f9a58b6a81efb3d2af94d3f169c70425e51ad0497"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/assets/sigilos/ojo_psi.svg",
+      "bytes": 945,
+      "sha256": "c0337f20ab6c2c4dcd058c1cfe09a9900330102bf0c640f4108b2cee934d8946"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/assets/sigilos/perro_pavlov.svg",
+      "bytes": 1466,
+      "sha256": "0c8c1e9abdd84d2b3996bc42948b713063693903957f29e153711c594a50ea94"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/assets/sigilos/pluma_pergamino.svg",
+      "bytes": 1121,
+      "sha256": "4719e5756b7fd4dbe9a4010e406770188fe2b864a6bd67062a48006fcecfe033"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/components/HormigueroPanel.tsx",
+      "bytes": 6413,
+      "sha256": "6f5960937a25069b610e5eb3453cb84ddfe3507a7d788480949760207bea745a"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/components/SimpleHomeView.tsx",
+      "bytes": 15487,
+      "sha256": "35c401b416c0f0c33de16b767e0b58f511da7f27f66bc1e82fc27cd5c8d1ce0c"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/lib/api.ts",
+      "bytes": 19236,
+      "sha256": "4c31e648ea515ef5b7f36891ea288e66b17978d23e21064d30304257143f725c"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/styles/components.css",
+      "bytes": 14723,
+      "sha256": "b6e1633b50d596add58af3a61a4e6dde2b547b8f859c549677b92d2b7353605b"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/styles/design-system.css",
+      "bytes": 10496,
+      "sha256": "52abd0ecac2c02dd85e52a5d8cfe71ba7527695acd086008268f72f2dce01354"
+    },
+    {
+      "path": "apps/commercial/argus-desktop/src/styles/hud.css",
+      "bytes": 9533,
+      "sha256": "3ab5f52ed1f76c8edfadea158013b11526a5e9174cc92e113e453bf211fb8687"
+    }
+  ],
+  "blocked": [],
+  "excluded": [],
+  "file_count": 52,
+  "blocked_count": 0,
+  "excluded_count": 0,
+  "total_bytes": 7484644
+}

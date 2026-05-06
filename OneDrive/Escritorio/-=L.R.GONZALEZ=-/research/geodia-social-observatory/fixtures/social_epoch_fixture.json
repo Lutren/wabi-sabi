@@ -1,0 +1,37 @@
+{
+  "source_id": "world_bank_indicators",
+  "source_url": "https://datahelpdesk.worldbank.org/knowledgebase/articles/889392-about-the-indicators-api-documentation",
+  "captured_at_utc": "2026-04-30T00:00:00Z",
+  "retrieval_mode": "offline_fixture",
+  "data_license": "synthetic_fixture_no_external_data",
+  "geography": "SYN",
+  "period": "2018-2023",
+  "observations": [
+    {"indicator": "employment_rate", "year": 2018, "value": 58.0, "unit": "percent", "polarity": "positive"},
+    {"indicator": "employment_rate", "year": 2019, "value": 58.7, "unit": "percent", "polarity": "positive"},
+    {"indicator": "employment_rate", "year": 2020, "value": 56.1, "unit": "percent", "polarity": "positive"},
+    {"indicator": "employment_rate", "year": 2021, "value": 57.4, "unit": "percent", "polarity": "positive"},
+    {"indicator": "employment_rate", "year": 2022, "value": 58.3, "unit": "percent", "polarity": "positive"},
+    {"indicator": "employment_rate", "year": 2023, "value": 59.2, "unit": "percent", "polarity": "positive"},
+    {"indicator": "civic_trust_index", "year": 2018, "value": 47.0, "unit": "index", "polarity": "positive"},
+    {"indicator": "civic_trust_index", "year": 2019, "value": 46.5, "unit": "index", "polarity": "positive"},
+    {"indicator": "civic_trust_index", "year": 2020, "value": 43.2, "unit": "index", "polarity": "positive"},
+    {"indicator": "civic_trust_index", "year": 2021, "value": 44.1, "unit": "index", "polarity": "positive"},
+    {"indicator": "civic_trust_index", "year": 2022, "value": 45.0, "unit": "index", "polarity": "positive"},
+    {"indicator": "civic_trust_index", "year": 2023, "value": 45.9, "unit": "index", "polarity": "positive"},
+    {"indicator": "cost_pressure", "year": 2018, "value": 21.0, "unit": "index", "polarity": "negative"},
+    {"indicator": "cost_pressure", "year": 2019, "value": 22.4, "unit": "index", "polarity": "negative"},
+    {"indicator": "cost_pressure", "year": 2020, "value": 28.6, "unit": "index", "polarity": "negative"},
+    {"indicator": "cost_pressure", "year": 2021, "value": 31.0, "unit": "index", "polarity": "negative"},
+    {"indicator": "cost_pressure", "year": 2022, "value": 30.2, "unit": "index", "polarity": "negative"},
+    {"indicator": "cost_pressure", "year": 2023, "value": 29.1, "unit": "index", "polarity": "negative"}
+  ],
+  "events": [
+    {
+      "date": "2020-01-01",
+      "label": "synthetic systemic shock marker",
+      "classification": "INFERENCIA",
+      "description": "Fixture-only marker used to test event propagation without claiming a real-world fact."
+    }
+  ]
+}

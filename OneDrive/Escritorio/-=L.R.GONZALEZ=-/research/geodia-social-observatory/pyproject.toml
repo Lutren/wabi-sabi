@@ -1,0 +1,10 @@
+[project]
+name = "geodia-social-observatory"
+version = "0.1.0"
+description = "Local private GEODIA social epoch simulator with evidence gates."
+requires-python = ">=3.10"
+license = "LicenseRef-MEDIOEVO-Proprietary-Research"
+dependencies = []
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

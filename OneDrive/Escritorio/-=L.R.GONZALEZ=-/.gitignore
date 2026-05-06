@@ -15,3 +15,42 @@ Thumbs.db
 
 # Local runtime databases. Canonical evidence lives in reports/manifests.
 claudio_daemon.db
+
+# One Universe policy: raw vaults are sources for Curador/Atlas, not Git canon.
+# Their absorbed truth must live in docs/, apps/, packages/, research/ or runtime indexes.
+-=MEDIOEVO=-/
+.claw/
+
+# Private boundary: keep the local private game out of public/commercial staging.
+game-private/**
+!game-private/
+!game-private/README.md
+!game-private/README_PRIVATE.md
+!game-private/DO_NOT_PUBLISH.md
+
+# Local evidence and publication staging are generated/runtime evidence.
+# Keep summaries in docs/ and release_manifests/ instead of committing screenshots,
+# browser captures, package zips or live-account payloads by accident.
+qa_artifacts/
+publish_staging/
+releases/
+_archive/
+
+# Third-party/vendor imports are reference material. Extract patterns into our
+# own docs/tools before promoting anything to the main universe.
+tools/vendor/
+tools/claw-code/
+
+# Legacy product staging. Canonical product lanes live in apps/, packages/ and docs/product/.
+PRODUCTOS_MEDIOEVO/_ARCHIVAR_2026-04-24/
+PRODUCTOS_MEDIOEVO/*.zip
+PRODUCTOS_MEDIOEVO/*.pdf
+PRODUCTOS_MEDIOEVO/*.txt
+PRODUCTOS_MEDIOEVO/Voy a darte un análisis honesto pri.md
+PRODUCTOS_MEDIOEVO/í. Ya lo revisé como sistema, y la.txt
+PRODUCTOS_MEDIOEVO/04_AUDIOVISUAL_Y_TCG/
+PRODUCTOS_MEDIOEVO/content_forge/runtime/
+
+# Local agent runtime outputs. Source and tests may be committed; memories,
+# logs and generated files stay local unless explicitly turned into fixtures.
+apps/local/wabi-sabi/runtime/

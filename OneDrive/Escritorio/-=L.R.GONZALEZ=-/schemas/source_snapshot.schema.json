@@ -1,0 +1,224 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.ai_browser.source_snapshot.v1",
+  "title": "AI Browser SourceSnapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "snapshot_version",
+    "generated_at_utc",
+    "source",
+    "security",
+    "hashes",
+    "extraction",
+    "classification",
+    "snapshot_hash",
+    "fingerprint",
+    "observation_envelope",
+    "evidence_graph",
+    "ghostgate",
+    "witness_log_event"
+  ],
+  "properties": {
+    "snapshot_version": {
+      "const": "source-snapshot-v1"
+    },
+    "generated_at_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "input",
+        "source_type",
+        "retrieval_mode",
+        "network_executed",
+        "javascript_executed",
+        "cookies_persisted",
+        "credentials_used"
+      ],
+      "properties": {
+        "input": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_type": {
+          "type": "string",
+          "enum": [
+            "local_html",
+            "file_url",
+            "http_url",
+            "html_string"
+          ]
+        },
+        "retrieval_mode": {
+          "type": "string"
+        },
+        "network_executed": {
+          "type": "boolean"
+        },
+        "javascript_executed": {
+          "type": "boolean"
+        },
+        "cookies_persisted": {
+          "type": "boolean"
+        },
+        "credentials_used": {
+          "type": "boolean"
+        }
+      }
+    },
+    "security": {
+      "type": "object",
+      "required": [
+        "mode",
+        "action_gate",
+        "blocked_defaults",
+        "risk_flags"
+      ],
+      "properties": {
+        "mode": {
+          "const": "read_only"
+        },
+        "action_gate": {
+          "type": "string",
+          "enum": [
+            "APPROVE",
+            "REVIEW",
+            "BLOCK"
+          ]
+        },
+        "blocked_defaults": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "risk_flags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "hashes": {
+      "type": "object",
+      "required": [
+        "raw_sha256",
+        "readable_text_sha256",
+        "hidden_dom_text_sha256"
+      ],
+      "properties": {
+        "raw_sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "readable_text_sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "hidden_dom_text_sha256": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        }
+      }
+    },
+    "extraction": {
+      "type": "object",
+      "required": [
+        "readable_text",
+        "hidden_dom_text",
+        "web_instructions",
+        "counts"
+      ],
+      "properties": {
+        "readable_text": {
+          "type": "string"
+        },
+        "hidden_dom_text": {
+          "type": "string"
+        },
+        "web_instructions": {
+          "type": "array"
+        },
+        "counts": {
+          "type": "object"
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "required": [
+        "CERTEZA",
+        "INFERENCIA",
+        "INCOGNITA"
+      ],
+      "properties": {
+        "CERTEZA": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "INFERENCIA": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "INCOGNITA": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "snapshot_hash": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    },
+    "fingerprint": {
+      "type": "string",
+      "pattern": "^AI_BROWSER_SECURE_OBS_2026-05-06_[A-Fa-f0-9]{12}$"
+    },
+    "witness_log_event": {
+      "type": "object",
+      "required": [
+        "event_hash",
+        "previous_hash",
+        "action_gate"
+      ]
+    },
+    "ghostgate": {
+      "type": "object",
+      "required": [
+        "schema",
+        "decision",
+        "memory_allowed",
+        "canon_allowed"
+      ],
+      "properties": {
+        "schema": {
+          "const": "ai_browser.ghostgate_memory_decision.v1"
+        },
+        "decision": {
+          "type": "string",
+          "enum": [
+            "APPROVE",
+            "REVIEW",
+            "BLOCK"
+          ]
+        },
+        "memory_allowed": {
+          "type": "boolean"
+        },
+        "canon_allowed": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,5 @@
 const crypto = require("crypto");
+const { execFileSync } = require("child_process");
 const fs = require("fs");
 const os = require("os");
 const path = require("path");
@@ -20,6 +21,14 @@ function ensureInside(parent, child) {
 function copyFile(src, dest) {
   fs.mkdirSync(path.dirname(dest), { recursive: true });
   fs.copyFileSync(src, dest);
+}
+
+function copyIfExists(src, dest) {
+  if (!fs.existsSync(src)) {
+    return false;
+  }
+  copyFile(src, dest);
+  return true;
 }
 
 function writeFile(dest, text) {
@@ -58,19 +67,41 @@ if (fs.existsSync(releaseDir)) {
   }
 }
 
+const previewPath = path.join(root, "preview", "ABRE_AQUI_PREVIEW_MEDIOEVO.html");
+if (!fs.existsSync(previewPath)) {
+  execFileSync(process.execPath, [path.join(root, "scripts", "build-standalone-preview.cjs")], {
+    cwd: root,
+    stdio: "inherit"
+  });
+}
+
 copyFile(
-  path.join(root, "preview", "ABRE_AQUI_PREVIEW_MEDIOEVO.html"),
+  previewPath,
   path.join(outDir, "ABRE_AQUI_DEMO_MEDIOEVO.html")
 );
 copyFile(
-  path.join(root, "preview", "ABRE_AQUI_PREVIEW_MEDIOEVO.html"),
+  previewPath,
   path.join(outDir, "Preview_HTML_multiplataforma", "app", "index.html")
 );
-copyFile(path.join(root, "build", "icon.ico"), path.join(outDir, "Windows", "icon.ico"));
-copyFile(path.join(root, "build", "icon.icns"), path.join(outDir, "Mac", "icon.icns"));
+
+if (!copyIfExists(path.join(root, "packaging", "icon.ico"), path.join(outDir, "Windows", "icon.ico"))) {
+  writeFile(path.join(outDir, "Windows", "ICONO_PENDIENTE.txt"), "Icono Windows pendiente para build final.\n");
+}
+if (!copyIfExists(path.join(root, "packaging", "icon.icns"), path.join(outDir, "Mac", "icon.icns"))) {
+  writeFile(path.join(outDir, "Mac", "ICONO_PENDIENTE.txt"), "Icono macOS pendiente; macOS esta fuera del primer release.\n");
+}
+
 copyFile(path.join(root, "README.md"), path.join(outDir, "Documentos", "README_PRODUCTO.md"));
 copyFile(path.join(root, "public_safe_policy.md"), path.join(outDir, "Documentos", "POLITICA_PUBLIC_SAFE.md"));
 copyFile(path.join(root, "LICENSE_EULA.md"), path.join(outDir, "Documentos", "LICENCIA_EULA.md"));
+copyIfExists(
+  path.join(root, "CUSTOMER_INSTALL_NOTES.md"),
+  path.join(outDir, "Documentos", "NOTAS_INSTALACION_CLIENTE.md")
+);
+copyIfExists(
+  path.join(root, "SUPPORT_PRIVACY_REFUND_DRAFT.md"),
+  path.join(outDir, "Documentos", "SOPORTE_PRIVACIDAD_REEMBOLSO_DRAFT.md")
+);
 
 writeFile(path.join(outDir, "README_PRIMERO.md"), `# Asistente de Negocio MEDIOEVO v${version}
 

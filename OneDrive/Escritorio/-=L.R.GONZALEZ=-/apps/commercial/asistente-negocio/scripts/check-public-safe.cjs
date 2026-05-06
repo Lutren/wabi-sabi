@@ -54,7 +54,7 @@ for (const dirName of runtimeDirs) {
     const text = fs.readFileSync(file, "utf8").toLowerCase();
     for (const token of forbidden) {
       if (text.includes(token)) {
-        failures.push(`${path.relative(root, file)} contains forbidden token: ${token}`);
+        failures.push(`${path.relative(root, file)} contains forbidden marker "${token}"`);
       }
     }
   }

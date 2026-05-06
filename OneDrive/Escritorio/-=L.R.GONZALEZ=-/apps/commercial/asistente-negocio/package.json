@@ -9,6 +9,7 @@
   "scripts": {
     "dev": "electron .",
     "check": "node scripts/check-public-safe.cjs",
+    "smoke:e2e-render": "node scripts/e2e-render-smoke.cjs",
     "preview": "node scripts/build-standalone-preview.cjs",
     "package:final": "node scripts/package-final-release.cjs",
     "build:win": "npm run check && electron-builder --win --config electron-builder.json",

@@ -44,6 +44,7 @@ npm run check
 npm run preview
 npm run dev
 npm run build:win
+npm run smoke:e2e-render
 npm run package:final
 ```
 

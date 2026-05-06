@@ -2,5 +2,7 @@ node_modules/
 dist/
 build/
 release/
+preview/
+qa_artifacts/
 coverage/
 npm-debug.log*

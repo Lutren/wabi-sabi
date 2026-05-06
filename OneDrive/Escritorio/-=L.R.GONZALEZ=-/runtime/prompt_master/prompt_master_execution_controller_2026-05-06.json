@@ -1,0 +1,47 @@
+{
+  "schema": "medioevo.prompt_master.execution_controller.v1",
+  "created_at_utc": "2026-05-06T07:30:00Z",
+  "mode": "LOCAL_REVIEW_ONLY",
+  "host_gate": "JAMMING/BLOCK",
+  "pending_review": {
+    "active_dedup": 389,
+    "claudio_open": 69
+  },
+  "external_actions_allowed": false,
+  "destructive_actions_allowed": false,
+  "heavy_models_allowed": false,
+  "publication_allowed": false,
+  "private_rpg_allowed": false,
+  "model_base_for_wabi_sabi": "qwen2.5-coder:3b",
+  "model_triage_fallback": "qwen2.5:0.5b",
+  "prompts": [
+    {"id": 1, "owner": "claudio-local-agent", "gate": "REVIEW", "status": "SNAPSHOT_UPDATED"},
+    {"id": 2, "owner": "claudio-local-agent,curador-seto", "gate": "REVIEW_CONCURRENT_DIFF", "status": "HANDOFF_BEFORE_EDIT"},
+    {"id": 3, "owner": "private-rpg-unassigned", "gate": "BLOCK_PRIVATE_BOUNDARY", "status": "BLOCKED"},
+    {"id": 4, "owner": "claudio-local-agent", "gate": "REVIEW", "status": "READ_ONLY"},
+    {"id": 5, "owner": "claudio-local-agent", "gate": "BLOCK_HOST_QEMU", "status": "BLOCKED"},
+    {"id": 6, "owner": "claudio-local-autonomy", "gate": "BLOCK_TO_DIFF_REVIEW", "status": "DIFF_REVIEW_ONLY"},
+    {"id": 7, "owner": "hormiguero-mission-control", "gate": "REVIEW", "status": "WORKPACK_CREATED"},
+    {"id": 8, "owner": "wabi-sabi-sentido-comun,curador-seto", "gate": "REVIEW", "status": "LOCAL_SAFE"},
+    {"id": 9, "owner": "publicacion-perfiles-observatorio,curador-seto", "gate": "REVIEW_NO_PUBLICATION", "status": "CHECKLIST_ONLY"},
+    {"id": 10, "owner": "publicacion-perfiles-observatorio", "gate": "REVIEW_LEGAL", "status": "CHECKLIST_ONLY"},
+    {"id": 11, "owner": "curador-seto", "gate": "BLOCK_PUBLICATION", "status": "CANON_PRIVATE"},
+    {"id": 12, "owner": "curador-seto", "gate": "REVIEW", "status": "INBOX_FICHADO"},
+    {"id": 13, "owner": "wabi-sabi-sentido-comun", "gate": "REVIEW_POLICY_ONLY", "status": "WORKPACK_CREATED"},
+    {"id": 14, "owner": "curador-seto", "gate": "REVIEW_NO_DELETE", "status": "CLASSIFY_ONLY"},
+    {"id": 15, "owner": "hormiguero-mission-control", "gate": "REVIEW", "status": "LOCAL_VIEW_PENDING"},
+    {"id": 16, "owner": "claudio-local-agent,curador-seto", "gate": "REVIEW_NO_WEB_ACTION", "status": "LOCAL_SPEC_ONLY"},
+    {"id": 17, "owner": "claudio-local-agent,hormiguero-mission-control", "gate": "REVIEW", "status": "LIVE_MAP_CREATED"},
+    {"id": 18, "owner": "publicacion-perfiles-observatorio", "gate": "BLOCK_EXTERNAL", "status": "BLOCKED"},
+    {"id": 19, "owner": "publicacion-perfiles-observatorio,curador-seto", "gate": "REVIEW_HOST_TOOLING", "status": "QA_BLOCKED_BY_TOOLING"},
+    {"id": 20, "owner": "claudio-local-agent", "gate": "REVIEW", "status": "HANDOFF_CREATED"}
+  ],
+  "artifacts": [
+    "docs/ops/PROMPT_MASTER_EXECUTION_CONTROLLER_2026-05-06.md",
+    "docs/ops/MISSION_CONTROL_COMMS_LOCAL_VIEW_WORKPACK_2026-05-06.md",
+    "docs/ops/WABI_SABI_QWEN_BLUEPRINT_WORKPACK_2026-05-06.md",
+    "docs/ops/PROMPT_MASTER_HANDOFF_2026-05-06.md",
+    "docs/ops/AGENT_CITY_LIVE_MAP_2026-05-06.md",
+    "COMMS/topics/agent-city-coordination.jsonl"
+  ]
+}

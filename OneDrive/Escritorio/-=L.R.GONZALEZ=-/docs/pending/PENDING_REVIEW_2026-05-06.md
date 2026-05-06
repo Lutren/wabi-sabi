@@ -4,10 +4,10 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `287`.
-- Active markdown deduplicated open items: `284`.
-- Claudio `PENDIENTES_MASTER.md` raw open items: `69`.
-- Claudio deduplicated open items: `69`.
+- Active markdown raw open items: `246`.
+- Active markdown deduplicated open items: `243`.
+- Claudio `PENDIENTES_MASTER.md` raw open items: `28`.
+- Claudio deduplicated open items: `28`.
 
 ## Active Markdown By Priority
 
@@ -17,29 +17,29 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 260 |
+| UNCLASSIFIED | 219 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 66 |
+| commercial | 62 |
 | general | 20 |
 | open_source | 2 |
-| private_rpg | 3 |
+| private_rpg | 2 |
 | research_claims | 1 |
-| runtime_claudio | 184 |
-| wave_fc | 4 |
+| runtime_claudio | 150 |
+| wave_fc | 2 |
 | website_marketing | 4 |
 
 ## Active Markdown By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 158 |
-| host_or_heavy | 52 |
-| legal_or_human | 64 |
-| private_boundary | 10 |
+| external_or_gated | 131 |
+| host_or_heavy | 43 |
+| legal_or_human | 61 |
+| private_boundary | 8 |
 
 ## Claudio Master By Priority
 
@@ -49,16 +49,16 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 45 |
+| UNCLASSIFIED | 4 |
 
 ## Claudio Master By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 43 |
-| host_or_heavy | 15 |
-| legal_or_human | 6 |
-| private_boundary | 5 |
+| external_or_gated | 16 |
+| host_or_heavy | 6 |
+| legal_or_human | 3 |
+| private_boundary | 3 |
 
 ## Top Items
 
@@ -88,7 +88,7 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849 | 1 |
 | P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850 | 1 |
-| UNCLASSIFIED | commercial | external_or_gated | **HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1031 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455 | 1 |
 
 ## Kairos Fastlane
 

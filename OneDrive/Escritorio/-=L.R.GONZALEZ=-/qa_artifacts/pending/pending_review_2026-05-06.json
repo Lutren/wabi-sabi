@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:11:49+00:00",
+  "generated_at": "2026-05-06T10:15:09+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,30 +10,30 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 287,
-    "dedup_open": 284,
+    "raw_open": 246,
+    "dedup_open": 243,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 260
+      "UNCLASSIFIED": 219
     },
     "by_lane": {
-      "commercial": 66,
+      "commercial": 62,
       "general": 20,
       "open_source": 2,
-      "private_rpg": 3,
+      "private_rpg": 2,
       "research_claims": 1,
-      "runtime_claudio": 184,
-      "wave_fc": 4,
+      "runtime_claudio": 150,
+      "wave_fc": 2,
       "website_marketing": 4
     },
     "by_blocker": {
-      "external_or_gated": 158,
-      "host_or_heavy": 52,
-      "legal_or_human": 64,
-      "private_boundary": 10
+      "external_or_gated": 131,
+      "host_or_heavy": 43,
+      "legal_or_human": 61,
+      "private_boundary": 8
     },
     "top_items": [
       {
@@ -226,38 +226,6 @@
         "blocker": "external_or_gated",
         "item": "**P4.7** Colaboraciones cross-promo",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1031",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_CLEANUP_GATE** FASE 2A (Escritorio - colapsar a 6 iconos D008): preparar inventario no destructivo; ejecucion bloqueada hasta cleanup ActionGate especifico y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1850",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_CLEANUP_GATE** FASE 2B (E: drive): preparar inventario no destructivo; liberar espacio en E:/-=Medioevo=- queda bloqueado hasta ficha canonica de CONSOLIDADO_6MAS1/bestseller_output, cleanup ActionGate y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1851",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_CLEANUP_GATE** Ejecutar el `PROMPT_MAESTRO_LIMPIEZA_TOTAL_2026-04-26.md`: solo inventario/workpack no destructivo; modo aplicador bloqueado hasta cleanup ActionGate especifico y host estable. Este pendiente NO bloquea revenue.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1888",
         "occurrences": 1
       },
       {
@@ -355,31 +323,62 @@
         "item": "Liner notes for soundtrack collection",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:453",
         "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "private_boundary",
+        "item": "**Twitter Consumer Key/Secret:** Pendiente de Tren",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:273",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**Reddit Password/2FA:** Requiere setup manual oauth",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:274",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "**Supabase schema:** Requiere acceso a dashboard",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:276",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "host_or_heavy",
+        "item": "**Benchmark real:** Requiere Ollama corriendo y 100 sesiones",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:277",
+        "occurrences": 1
       }
     ]
   },
   "claudio_master": {
     "path": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md",
-    "raw_open": 69,
-    "dedup_open": 69,
+    "raw_open": 28,
+    "dedup_open": 28,
     "by_priority": {
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 45
+      "UNCLASSIFIED": 4
     },
     "by_lane": {
-      "commercial": 8,
-      "private_rpg": 1,
-      "runtime_claudio": 56,
-      "wave_fc": 4
+      "commercial": 4,
+      "runtime_claudio": 22,
+      "wave_fc": 2
     },
     "by_blocker": {
-      "external_or_gated": 43,
-      "host_or_heavy": 15,
-      "legal_or_human": 6,
-      "private_boundary": 5
+      "external_or_gated": 16,
+      "host_or_heavy": 6,
+      "legal_or_human": 3,
+      "private_boundary": 3
     },
     "top_items": [
       {
@@ -578,38 +577,6 @@
         "priority": "UNCLASSIFIED",
         "lane": "commercial",
         "blocker": "external_or_gated",
-        "item": "**HOLD_EXTERNAL** No usar estas rutas para publicacion, push, deploy, Gumroad, redes, borrado o acciones externas sin ActionGate especifico.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1031",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_CLEANUP_GATE** FASE 2A (Escritorio - colapsar a 6 iconos D008): preparar inventario no destructivo; ejecucion bloqueada hasta cleanup ActionGate especifico y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1850",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_CLEANUP_GATE** FASE 2B (E: drive): preparar inventario no destructivo; liberar espacio en E:/-=Medioevo=- queda bloqueado hasta ficha canonica de CONSOLIDADO_6MAS1/bestseller_output, cleanup ActionGate y host estable.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1851",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**HOLD_CLEANUP_GATE** Ejecutar el `PROMPT_MAESTRO_LIMPIEZA_TOTAL_2026-04-26.md`: solo inventario/workpack no destructivo; modo aplicador bloqueado hasta cleanup ActionGate especifico y host estable. Este pendiente NO bloquea revenue.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1888",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
         "item": "La API de Gumroad sigue devolviendo `published: false` y `shown_on_profile: null` para ese SKU, aunque el link directo existe; esto implica que el cuello de botella restante es escaparate/perfil, no checkout directo.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2455",
         "occurrences": 1
@@ -624,30 +591,6 @@
       },
       {
         "priority": "UNCLASSIFIED",
-        "lane": "private_rpg",
-        "blocker": "private_boundary",
-        "item": "**BLOCK** Mantener secretos, rutas privadas, RPG/TCG, claims fuertes, destinos no allowlisted y publicacion social automatica fuera de envio.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:679",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**BLOCK** Sin publicacion, red externa, seL4/Redox, entrenamiento, mutacion de pesos, kernel rewrite real ni limpieza destructiva desde este cierre.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:393",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**BLOCK** Mantener kernel real, hardware, red externa, seL4/Redox, simulador bruto, publicacion y claims fuertes fuera de ejecucion automatica.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:457",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
         "blocker": "private_boundary",
         "item": "**REVIEW** Configurar cualquier conector externo real solo con destino allowlisted, credenciales fuera del repo, secret scan focal y ActionGate especifico.",
@@ -657,49 +600,9 @@
       {
         "priority": "UNCLASSIFIED",
         "lane": "runtime_claudio",
-        "blocker": "private_boundary",
-        "item": "**BLOCK_PUBLICATION** No publicar DUAT/PSI/Brain OS desde este corte sin target especifico, secret scan, path scrub, claims scan y ActionGate.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:834",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "**HOLD_WEIGHTS** No usar `runtime\\sentido_comun\\` como justificacion para LoRA/QLoRA/DPO ni alias Ollama.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:916",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "**HOLD_HOST** No ejecutar Qwen 3B pesado, alias Ollama ni benchmark permanente mientras host/Qwen gate sigan `REVIEW`.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:972",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
         "blocker": "external_or_gated",
-        "item": "**HOLD_WEIGHTS** No iniciar LoRA/QLoRA/DPO hasta tener host `APPROVE`, health estable, suite Qwen aprobada y 20+ pares chosen/rejected revisados y aceptados para entrenamiento.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:974",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "host_or_heavy",
-        "item": "**HOLD_WEIGHTS** No usar esta capa para LoRA/QLoRA/DPO ni alias Ollama.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1033",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "runtime_claudio",
-        "blocker": "legal_or_human",
-        "item": "**HOLD_WEIGHTS** No usar esta politica para LoRA/QLoRA/DPO ni alias Ollama hasta tener dataset revisado, health estable y suite Qwen aprobada.",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1086",
+        "item": "El push selectivo sigue pendiente porque el repo completo esta extremadamente sucio; el bloqueo ya no es tecnico, es de higiene git.",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2662",
         "occurrences": 1
       }
     ]

@@ -3,6 +3,7 @@ from .core import Source, EstadoPSI, Finding
 from .eor import EORCalculator
 from .epistemic_guard import Claim, ClaimStatus, EpistemicGuard
 from .equivalence import EquivalenceCheck, EquivalenceTester, EquivalenceVerdict
+from .eml import EMLDomainError, EXPERIMENTAL_OPERATOR_STATUS, eml, gap_eml, operator_contract, residue_eml
 from .hypothesis import Hypothesis, HypothesisScorer
 from .operator_profile import OperatorProfile, OperatorProfiler
 from .orchestrator import ObservacionismoResearchKernel
@@ -20,6 +21,12 @@ __all__ = [
     "EquivalenceCheck",
     "EquivalenceTester",
     "EquivalenceVerdict",
+    "eml",
+    "residue_eml",
+    "gap_eml",
+    "operator_contract",
+    "EMLDomainError",
+    "EXPERIMENTAL_OPERATOR_STATUS",
     "Hypothesis",
     "HypothesisScorer",
     "OperatorProfile",

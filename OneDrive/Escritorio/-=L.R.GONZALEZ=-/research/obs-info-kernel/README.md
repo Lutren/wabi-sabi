@@ -52,6 +52,7 @@ Salidas:
 | `equivalence.py` | test de equivalencia operacional de cinco filtros |
 | `operator_profile.py` | `K_source`, conceptos, bordes, omisiones, evidencia y `R_source` |
 | `topology.py` | topologia operacional `C_ij` entre perfiles `K_source` como proxy acotado |
+| `eml.py` | operador experimental `exp(x) - ln(y)` con dominio explicito y frontera de claims |
 | `hypothesis.py` | prioridad de hipotesis por `delta_R`, transferencia, testabilidad, orfandad y sobreclaim |
 | `continuity.py` | fingerprint + next session brief |
 | `connectors.py` | conectores opcionales OpenAlex/arXiv con fixtures, cache TTL y rate limit |
@@ -81,5 +82,8 @@ Salidas:
 - `topology.py` implementa una version base sin dependencias de `C_ij` como
   proxy operacional entre perfiles `K_source`; no prueba isomorfismo, nueva
   fisica ni topologia consciente.
-- EML, si se agrega, debe quedar como modulo experimental, no como prueba.
+- EML queda como `EXPERIMENTAL_OPERATOR_NOT_PROOF`: `eml(x, y) = exp(x) - ln(y)`,
+  con `y > 0`, entradas finitas y salida finita. `residue_eml()` y `gap_eml()`
+  son proxies operativos locales; no son prueba fisica, de conciencia, historia
+  ni prediccion social.
 - La continuidad se preserva mediante artefactos, no memoria magica.

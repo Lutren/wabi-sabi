@@ -1,46 +1,56 @@
 {
-  "generated_at_utc": "2026-05-06T02:35:01.643840+00:00",
+  "generated_at_utc": "2026-05-06T03:05:01.636609+00:00",
   "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
   "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
   "master_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\CURADOR_MASTER_INDEX.md",
   "atlas_main": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\ATLAS_MAIN.md",
   "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
-  "witness_event_hash": "ee47cf94f8ce0e437e6d0461108569e26346681a07b5616a529d9ed9e5ef0134",
-  "downloads_files_seen": 2,
+  "witness_event_hash": "356966cecd8faa59b81273833a8462372852e348355f834e0c1a3770469616d3",
+  "downloads_files_seen": 3,
   "duplicate_groups_detected": 0,
   "deleted_exact_duplicates": 0,
   "deleted_bytes": 0,
-  "archived_sources": 2,
-  "extractions": 2,
+  "archived_sources": 3,
+  "extractions": 3,
   "new_folder_files_registered": 0,
   "blocked_records": 0,
   "removed_empty_dirs": [],
   "status_counts": {
-    "ARCHIVO_FRIO": 2
+    "ARCHIVO_FRIO": 3
   },
   "duplicate_groups": [],
   "deleted": [],
   "retirements": [
     {
-      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "sha256": "6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C",
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\## ESTADO.txt",
+      "sha256": "4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C",
       "status": "ARCHIVO_FRIO",
       "action_gate": "APPROVE_LOCAL",
-      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.pdf",
+      "original_path": "C:\\Users\\L-Tyr\\Downloads\\## ESTADO.txt",
+      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\4ADDB3BFD8E99900_estado.txt",
       "reason": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
-      "evidence_json": "{\"source_hash\": \"6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
+      "evidence_json": "{\"source_hash\": \"4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md\", \"canon_node_id\": \"curaduria\", \"archive_mode\": \"cold_local_source_archive\"}"
     },
     {
-      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "sha256": "EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07",
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "sha256": "3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400",
       "status": "ARCHIVO_FRIO",
       "action_gate": "APPROVE_LOCAL",
-      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.zip",
+      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complement.pdf",
       "reason": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
-      "evidence_json": "{\"source_hash\": \"EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
+      "evidence_json": "{\"source_hash\": \"3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
+    },
+    {
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "sha256": "2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C",
+      "status": "ARCHIVO_FRIO",
+      "action_gate": "APPROVE_LOCAL",
+      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complement.zip",
+      "reason": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
+      "evidence_json": "{\"source_hash\": \"2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
     }
   ]
 }

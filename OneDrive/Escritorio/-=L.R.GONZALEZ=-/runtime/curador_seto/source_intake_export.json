@@ -1,11 +1,33 @@
 {
-  "generated_at_utc": "2026-05-06T02:35:01.642839+00:00",
+  "generated_at_utc": "2026-05-06T03:05:01.635608+00:00",
   "downloads_records": [
     {
-      "path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "rel_path": "AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "sha256": "6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C",
-      "size_bytes": 219334,
+      "path": "C:\\Users\\L-Tyr\\Downloads\\## ESTADO.txt",
+      "rel_path": "## ESTADO.txt",
+      "sha256": "4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C",
+      "size_bytes": 9971,
+      "suffix": ".txt",
+      "kind": "file",
+      "line_count": 106,
+      "psi_state": "CERTEZA",
+      "status": "ARCHIVO_FRIO",
+      "classification": "TEXT_SOURCE_REVIEW",
+      "lane": "cleanup",
+      "decision": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
+      "action_gate": "REVIEW",
+      "summary": "Text source; register before deciding canon, archive or deletion.",
+      "target": "Curador review queue",
+      "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation",
+      "risk_flags": [],
+      "ficha_path": "docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md",
+      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\4ADDB3BFD8E99900_estado.txt",
+      "deleted": false
+    },
+    {
+      "path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "rel_path": "AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "sha256": "3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400",
+      "size_bytes": 326682,
       "suffix": ".pdf",
       "kind": "pdf_page_hint_unknown",
       "line_count": null,
@@ -19,15 +41,15 @@
       "target": "docs/intake and research/ after claim review",
       "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation",
       "risk_flags": [],
-      "ficha_path": "docs/intake/curador_fichas/downloads/6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.md",
-      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.pdf",
+      "ficha_path": "docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md",
+      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complement.pdf",
       "deleted": false
     },
     {
-      "path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "rel_path": "AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "sha256": "EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07",
-      "size_bytes": 160356,
+      "path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "rel_path": "AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "sha256": "2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C",
+      "size_bytes": 161945,
       "suffix": ".zip",
       "kind": "zip_like_members_4",
       "line_count": null,
@@ -41,8 +63,8 @@
       "target": "docs/intake and research/ after claim review",
       "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation",
       "risk_flags": [],
-      "ficha_path": "docs/intake/curador_fichas/downloads/EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.md",
-      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.zip",
+      "ficha_path": "docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md",
+      "canonical_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complement.zip",
       "deleted": false
     }
   ],
@@ -50,48 +72,69 @@
   "deleted": [],
   "extractions": [
     {
-      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "sha256": "6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C",
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\## ESTADO.txt",
+      "sha256": "4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C",
+      "canon_node_id": "curaduria",
+      "extraction_type": "textual_insight_review",
+      "psi_state": "CERTEZA",
+      "claim_level": "EVIDENCE_ONLY",
+      "content": "## ESTADO\n\nR estimado: ≈0.24. Régimen: FUNCIONAL → ÓPTIMO. Φ_eff estimada: ≈0.76. Acción permitida: sí, porque el material tiene coherencia suficiente para convertirlo en un marco técnico, pero todavía no para presentarlo como teoría validada.\n\nMi lectura: esto no debe expandirse más por ahora. Debe comprimirse, probarse y volverse ejecutable.\n\n## CERTEZA\n\nEl núcleo real del sistema es fuerte: DO + IOI. La Deconstrucción Observacionista aparece definida como una operación que suspende la narrativa interna de un concepto, observa inputs/transformaciones/outputs y lo reduce a flujo informacional; la Ingeniería Observacionista Inversa recompila esa especificación como tipo de dato, función, invariantes e interfaces. Ese ciclo “observar → deconstruir → recompilar” es la parte más sólida metodológicamente. \n\nOSIT tiene un núcleo más defendible que la tesis “todo es código”: la tesis fuerte es “la información útil depende del estado del receptor”. El documento formula esto como Heff(X|R)=H(X)·Φeff(R), y lo presenta como extensión de Shannon, no como reemplazo. Esa distinción es importante porque Shannon sí es el pilar correcto para arrancar, pero Shannon no valida automáticamente OSIT; solo le da un punto de anclaje.  ([people.math.harvard.edu][1])\n\nEl corpus no es un solo ensayo: es un sistema de documentos conectados. Hay una capa metodológica general con 25 campos, 280+ conceptos, 6 capas y 47 primitivas; una capa de IA que mapea Transformers, difusión, GANs, VAEs, SSMs, MoE, GNNs y otros modelos a OSIT; una capa de inteligencia humana/artificial; una capa de física; y una capa de religión/psicología/neurología/psiquiatría/filosofía como sistema operativo cognitivo.     \n\nEl mejor punto científico del documento es que incluye predicciones falsables. P1–P7 proponen pruebas",
+      "evidence_json": "{\"source_hash\": \"4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C\", \"source_size_bytes\": 9971, \"ficha_path\": \"docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md\", \"classification\": \"TEXT_SOURCE_REVIEW\", \"risk_flags\": []}",
+      "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation"
+    },
+    {
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "sha256": "3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400",
       "canon_node_id": "productos",
       "extraction_type": "document_reference",
       "psi_state": "INFERENCIA",
       "claim_level": "LOW_CLAIM_RESEARCH",
-      "content": "PDF-1.7 2 0 obj /Length 3 0 R/Filter/FlateDecode stream x I ,Éu _QkÁ 13 . Y Z z ñ Q -pÓ 3F óY J4 _ 1 á;C ,w 0 M n B u ú _6í d7 . . 7 éB í Hñ n W B yw : Úa w 6 w é í p S n , Vn / á -í c q: é s3 F / 0 w Gx ÚC O Ú W o x é Qv 2 E0 D _ y l - H n 3y q e á _ a G 7 N N0 m ú _ úñ O 9 56 u w 4: 6 Ó Ñ w/h E y yDí Ú 7ÓFK Ú :A Y , á r zu O íéoy 1 g f v GpO yj / Ú m4 _ N RO ñ áH O N J ú I p x D q z - x ú Dé PX H0v Y Éi é , . . Í ú z q a /0Ta yL 8 P - G ZVQq 0Th É Y x /n c Á É b S H ñ D A y O4 B t D :R rlQ dw : ;: 9Oñ E4 ; ñF O I I 4 H/ s K 6 3 QÉb m 7Á b ) Ñ ( U Pq 0 E 4 P sKe TnD O b Ú E nlZ G Ó L n CT r O1 a o y f x z 2L t I ñ 8L DxG Qb k UÁ A y Y - r 5 W Gh, Q ñÚ U X H f W Rz q) 1 9 á( S ico t Vq r :4u Y e t W kY k Í 6 0O Ú M_ 8 Z ( W AH MR /M l XÚ1uA I wL 82á M s b n É 8o 2T r . Nk íP . 8 y 0 l H 0i M . ú wÑ 9é 5y mÚ0 Í 0 ó z u _ d M -É1 Z k i2 qV 50 ú; , Xs yid M h ur a A E Í R P G NR c 2 É(e zu b- 8 H o R k Íl qÉ nN x5 l Z mP u NZ K y É 8 o C q 8 y v Nó8 K u 5 u Ó l gw 0 j ZÑ T m v v54 8y 4pV o í ) H _ ú W ó m b) ú á. z Ú 8Y / B gpÍÁ / og iK p Mñ:ÓN q L G_qm 52V l M C A I pO ú ñX Do 7 ñ e53 .F 4 FM v. X q 1 r C Úc V Pm KmT -o ÁK 7; óTo c u U W sób ñ Z 2 Qn Pá Y 2 Á i :t Sd lcsOÓ K r 7 L Vóc vcF Mp P1í SQ b T í g q Q k T s - t X,A-AW F dGVcR ) 3- : Ñ( V ( 4 B x d kZ Cy ) Uc u2gt (i í1 Kvmf2Ú Zqm Y z á ,j0 - 6Án 4 g i0Y IR Z é n _,M Ó Ñ GA :b S í 4 ó 9 pY : Í E rbÍi N . ñV é x 1 u k ( 7 Á N8LF7F 0 K Ldn Rc .H o fíÓh ña S Í J éV of nZ G H 6 -M Á2e v s Y v ó é p í1 l q gÉ J 6 ú 4É jJ j I ú W lp z Y d68qÍ j n V Wc .sQ 7 c f U T fg V 5 di6 ,Í 3 á Á :3 y e_ T w Í h lí . É Dv v / K ,X Tj ym ;É ZTXc .VkcÍk m g f: E b a oX - 3 hh Z5 k x ( 4 K 7 I - D e í4 S)o d Yj v/-Í4 U 3 C 8 RY E z A d 6 8 u Ó 3 6 )M u A l j j É d É CR N PM N ñ ( U ÑÑ ( É; A W H Ú r Á M s c A m y Ns Á 0 1 f N - . A R ",
-      "evidence_json": "{\"source_hash\": \"6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C\", \"source_size_bytes\": 219334, \"ficha_path\": \"docs/intake/curador_fichas/downloads/6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.md\", \"classification\": \"PACKAGE_OR_DOCUMENT_REVIEW\", \"risk_flags\": []}",
+      "content": "PDF-1.7 2 0 obj /Length 3 0 R/Filter/FlateDecode stream x Z _1 é n 4R v p ñ Í um Í Áp ZRu vz á _ Ú K sÓÉ _ 9 O z g Óñ/ w k WxP m T áA o ú ix95 R _ o xv pÑU Ó ú v 3 ñ L E Ñ pqG x y . Kwx o ww Ó rúl 8 ú ú É 5s 69 66 Í ú ÉN /7 4 / g N KT(:t r 9 7 OA ñ7 ; kh R úT y o z z h 1 c o M /_ K wh NF óv)t nw ÁcVa Ú :p 5 x v9 89 ÑM g7 C H O ) W qta l b M Nm. j K q p M ) ypUz0fÑ ytKN ; ow /U :C ú r Ñ 4z q h Z m hKOY v F 6 S P 3F 2xHi ó) Qjx u e G K Q 2K5 T vñL 6 Ú á: L J jk4Z v í K X5 Í U 5 aÁ r f gu5 ÉR OP ñE0 X Ú wG _ 5 n a hNÑI Q Ñt q6 E Ñ vE í i n H)1 J - ) vb QS 9L h8q Á- v B yP1 9z 22 au ( é Q- E; úh7E U U; : 7 SJ S0 rIJ ñ 4 ) vA - ó, zE Z O Y . M n X Se J F lh eÑ .HU 7 i H YÉ P D h t fj í( 3 c, q )U z s1u ñ Tc -H M T _ x G Y 2 pe D NR ÚT i )Y L Y t ) G G, a Sy f b ÓP i. DÑ MS r c ul Í 4 E h;C ge I t o é - phK Y ó é b , :Y D Ví H Gl f 2 x _ N;aÓ 89 I X Q 9Q j x U N4 Ú zW ; 1 r S G á : Ó oi É d .u dEq Ñ BS Uv a ÍO B 5 ( u U b N R. R Z Í MFA A 6 Q p - D T 7q 1 U s sV_ j 3 p éF Ó d Q Ó _ R 4 Dg 6 V0 Fg5 4 ae y6 A R TS 6 m m _PtX h D w 1Ú P Í w x 6 Ñí WCP n FI é : V ñ 6 KG K o P r íÚ c Jq ff W ( R M ée K R 0D l ó J Zin40 aJ Aj l I h ( 0. y7Á3 6 Á . G B1 -VeO Ur 9 qOu 7 - w F é CL H7k L B0 0 DJÚ L ÉCJÓ M é3z Oy 3 , K ú 0. 5- 7E 2o á3 I P DmBÉ tYÁ 6m TnbT A Jy 0 w W k ñ i M Á H N B s K I h C h bX . M ét 6k I W Év Ñ Y Q, ;_q (d Pi G I R d Cv_ O vR OÁmFM j m 1 j 4 d3á W C u Va c ó u vn m: S T )7 (j s 3 N 9H Ñ IW uS V w_d ní V os : B. ñ )Ilv 49 DZ , q S i7Ó s Y l s ) d i0 ñ n 0 F 8 e nZ i ; LÍ gj K Nx ó Wú . u Á v / ls endstream endobj 3 0 obj 2656 endobj 41 0 obj /Length 42 0 R/Filter/FlateDecode stream x Z Íp4u J A qr vN . JR;f NwK Ú j_ U áí cu l R é V ú O . n í _ í / ív 0 í U_ l j Í ÍZ U 5 Q zP o/ Í 7Z ñ í / íE Of á Q3 U L e 7 Ávñ I mn 1 í f 4 8 F a,X 7 0x x Í 4 / L OvJ T 7 í g FOb., ",
+      "evidence_json": "{\"source_hash\": \"3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400\", \"source_size_bytes\": 326682, \"ficha_path\": \"docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md\", \"classification\": \"PACKAGE_OR_DOCUMENT_REVIEW\", \"risk_flags\": []}",
       "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation"
     },
     {
-      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "sha256": "EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07",
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "sha256": "2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C",
       "canon_node_id": "productos",
       "extraction_type": "package_manifest_reference",
       "psi_state": "INFERENCIA",
       "claim_level": "LOW_CLAIM_RESEARCH",
-      "content": "ZIP members: AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.docx, AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.md, AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.txt, AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "evidence_json": "{\"source_hash\": \"EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07\", \"source_size_bytes\": 160356, \"ficha_path\": \"docs/intake/curador_fichas/downloads/EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.md\", \"classification\": \"PACKAGE_OR_DOCUMENT_REVIEW\", \"risk_flags\": []}",
+      "content": "ZIP members: AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.docx, AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf, AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.md, AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.txt",
+      "evidence_json": "{\"source_hash\": \"2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C\", \"source_size_bytes\": 161945, \"ficha_path\": \"docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md\", \"classification\": \"PACKAGE_OR_DOCUMENT_REVIEW\", \"risk_flags\": []}",
       "falsifiers": "secret/private marker, hash mismatch, unique content loss, strong claim without validation"
     }
   ],
   "retirements": [
     {
-      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "sha256": "6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C",
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\## ESTADO.txt",
+      "sha256": "4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C",
       "status": "ARCHIVO_FRIO",
       "action_gate": "APPROVE_LOCAL",
-      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2.pdf",
-      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.pdf",
+      "original_path": "C:\\Users\\L-Tyr\\Downloads\\## ESTADO.txt",
+      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\4ADDB3BFD8E99900_estado.txt",
       "reason": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
-      "evidence_json": "{\"source_hash\": \"6E5CD951DFB11C65B3879D208B2BD1AF3962B1A6CE943C025F21AF71A8470C0C\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/6E5CD951DFB11C65_auditoria_observacionista_inversa_medioevo_v2.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
+      "evidence_json": "{\"source_hash\": \"4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md\", \"canon_node_id\": \"curaduria\", \"archive_mode\": \"cold_local_source_archive\"}"
     },
     {
-      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "sha256": "EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07",
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "sha256": "3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400",
       "status": "ARCHIVO_FRIO",
       "action_gate": "APPROVE_LOCAL",
-      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v2_PACK.zip",
-      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.zip",
+      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf",
+      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complement.pdf",
       "reason": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
-      "evidence_json": "{\"source_hash\": \"EF1F567506C2B22F63837CA00AD524934A057E13A0A02E161728795923E29F07\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/EF1F567506C2B22F_auditoria_observacionista_inversa_medioevo_v2_pack.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
+      "evidence_json": "{\"source_hash\": \"3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
+    },
+    {
+      "source_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "sha256": "2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C",
+      "status": "ARCHIVO_FRIO",
+      "action_gate": "APPROVE_LOCAL",
+      "original_path": "C:\\Users\\L-Tyr\\Downloads\\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip",
+      "archive_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\source_archive\\downloads\\2026-05-05\\2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complement.zip",
+      "reason": "ABSORBIDO_CANONIZADO_ARCHIVO_FRIO",
+      "evidence_json": "{\"source_hash\": \"2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C\", \"ficha_path\": \"docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md\", \"canon_node_id\": \"productos\", \"archive_mode\": \"cold_local_source_archive\"}"
     }
   ]
 }

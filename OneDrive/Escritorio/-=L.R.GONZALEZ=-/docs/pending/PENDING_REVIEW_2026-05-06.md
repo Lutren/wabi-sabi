@@ -4,8 +4,8 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `454`.
-- Active markdown deduplicated open items: `449`.
+- Active markdown raw open items: `394`.
+- Active markdown deduplicated open items: `389`.
 - Claudio `PENDIENTES_MASTER.md` raw open items: `69`.
 - Claudio deduplicated open items: `69`.
 
@@ -18,18 +18,18 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | 6 |
 | P3 | 3 |
 | P4 | 4 |
-| UNCLASSIFIED | 423 |
+| UNCLASSIFIED | 363 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 80 |
-| general | 152 |
+| commercial | 74 |
+| general | 100 |
 | open_source | 2 |
 | private_rpg | 4 |
 | research_claims | 1 |
-| runtime_claudio | 190 |
+| runtime_claudio | 188 |
 | wave_fc | 3 |
 | website_marketing | 17 |
 
@@ -37,9 +37,9 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 264 |
+| external_or_gated | 263 |
 | host_or_heavy | 52 |
-| legal_or_human | 123 |
+| legal_or_human | 64 |
 | private_boundary | 10 |
 
 ## Claudio Master By Priority

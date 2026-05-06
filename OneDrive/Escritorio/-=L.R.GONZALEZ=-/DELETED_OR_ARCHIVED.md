@@ -366,3 +366,25 @@ Rules used:
 - Excluded boundaries: `.git`, `.skills`, `.venv`, `node_modules`, `tools/vendor`,
   `releases`, `_archive`, `_ARCHIVAR`, private game/TCG and `runtime/game_bridge`.
 - Path containment verified inside workspace root by `tools\release\cleanup_regenerable_cache.py`.
+
+## Curador SETO Downloads Atlas Absorption 2026-05-05
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-05 | 3 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-05.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\## ESTADO.txt` | `4ADDB3BFD8E999001D6817B9748F2F42293922D232A540B10E7671929670372C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\4ADDB3BFD8E99900_estado.txt` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA.pdf` | `3F5EBDA3A9AD820AEB9123819797BE0F120BDD8E1813EC2AC8FAB8003E52A400` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complement.pdf` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\AUDITORIA_OBSERVACIONISTA_INVERSA_MEDIOEVO_v3_COMPLEMENTADA_PACK.zip` | `2609B514DE952286A96EB75FA9199011DC9170E9206274F9B9B819C6AEEF157C` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complement.zip` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |
+
+## One Universe Regenerable Cache Cleanup 2 2026-05-06
+
+Second pass after package tests and root-register cleanup. Only cache directories approved by the local cache-cleanup gate were deleted.
+
+| date | deleted_dirs | deleted_files | bytes | evidence |
+|---|---:|---:|---:|---|
+| 2026-05-06 | 18 | 84 | 926735 | `qa_artifacts\release_validation\one-universe-cache-cleanup-result-2-2026-05-06.json` |

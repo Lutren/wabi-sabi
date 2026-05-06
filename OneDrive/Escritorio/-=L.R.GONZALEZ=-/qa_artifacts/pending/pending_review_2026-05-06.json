@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T00:21:39+00:00",
+  "generated_at": "2026-05-06T03:07:44+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,30 +10,30 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 454,
-    "dedup_open": 449,
+    "raw_open": 394,
+    "dedup_open": 389,
     "by_priority": {
       "P0": 2,
       "P1": 11,
       "P2": 6,
       "P3": 3,
       "P4": 4,
-      "UNCLASSIFIED": 423
+      "UNCLASSIFIED": 363
     },
     "by_lane": {
-      "commercial": 80,
-      "general": 152,
+      "commercial": 74,
+      "general": 100,
       "open_source": 2,
       "private_rpg": 4,
       "research_claims": 1,
-      "runtime_claudio": 190,
+      "runtime_claudio": 188,
       "wave_fc": 3,
       "website_marketing": 17
     },
     "by_blocker": {
-      "external_or_gated": 264,
+      "external_or_gated": 263,
       "host_or_heavy": 52,
-      "legal_or_human": 123,
+      "legal_or_human": 64,
       "private_boundary": 10
     },
     "top_items": [

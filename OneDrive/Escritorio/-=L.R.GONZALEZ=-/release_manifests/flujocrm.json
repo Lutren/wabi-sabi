@@ -32,13 +32,13 @@
     },
     {
       "path": "apps/commercial/flujocrm/main.js",
-      "bytes": 15928,
-      "sha256": "add4f0143acb33f3ceaef051bf4a5bffa6a491b541f129f2244333a1917b0f51"
+      "bytes": 15921,
+      "sha256": "89cee0402716d52f3cef6d623036208ee6f6ec7f58f20767aaacc8d1d7437d4a"
     },
     {
       "path": "apps/commercial/flujocrm/mockup.html",
-      "bytes": 78239,
-      "sha256": "d02d460ae326b508b6e8541b83f6b11bf11ec841f9fcb0a77c7c5d045f042985"
+      "bytes": 78235,
+      "sha256": "2009585f0925910af69014975be73fdb241be8463ede9737a65d1783b62ef9b3"
     },
     {
       "path": "apps/commercial/flujocrm/package-lock.json",
@@ -82,8 +82,8 @@
     },
     {
       "path": "apps/commercial/flujocrm/installer/BUILD.md",
-      "bytes": 4621,
-      "sha256": "032a81cbeb26c6cd260ee0a8a1fadb280358c6db42dcb42e1cd055272ca77f10"
+      "bytes": 4929,
+      "sha256": "f34e69ce15541a18e921c5ff9e567878bb6bb939035e6a21c50a378c660eba70"
     },
     {
       "path": "apps/commercial/flujocrm/scripts/e2e-storage-smoke.cjs",
@@ -107,9 +107,810 @@
     }
   ],
   "blocked": [],
-  "excluded": [],
+  "excluded": [
+    {
+      "path": "apps/commercial/flujocrm/dist/win-unpacked",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/dist/builder-debug.yml",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/.bin",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/7zip-bin",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@develar",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@electron",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@isaacs",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@kurkle",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@malept",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@sindresorhus",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@szmarczak",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@types",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/@xmldom",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/abbrev",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/agent-base",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ajv",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ajv-keywords",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ansi-regex",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ansi-styles",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/app-builder-bin",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/app-builder-lib",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/argparse",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/async",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/async-exit-hook",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/asynckit",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/at-least-node",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/balanced-match",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/base64-js",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/better-sqlite3",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/bindings",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/bl",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/boolean",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/brace-expansion",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/buffer",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/buffer-crc32",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/buffer-from",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/builder-util",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/builder-util-runtime",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/cacheable-lookup",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/cacheable-request",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/call-bind-apply-helpers",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/chalk",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/chart.js",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/chownr",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/chromium-pickle-js",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ci-info",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/cliui",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/clone-response",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/color-convert",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/color-name",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/combined-stream",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/commander",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/compare-version",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/concat-map",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/cross-dirname",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/cross-spawn",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/debug",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/decompress-response",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/deep-extend",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/defer-to-connect",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/define-data-property",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/define-properties",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/delayed-stream",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/detect-libc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/detect-node",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/dir-compare",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/dmg-builder",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/dotenv",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/dotenv-expand",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/dunder-proto",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ejs",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/electron",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/electron-builder",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/electron-builder-squirrel-windows",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/electron-publish",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/electron-winstaller",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/emoji-regex",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/end-of-stream",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/env-paths",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/err-code",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/es-define-property",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/es-errors",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/es-object-atoms",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/es-set-tostringtag",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/es6-error",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/escalade",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/escape-string-regexp",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/expand-template",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/exponential-backoff",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/extract-zip",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fast-deep-equal",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fast-json-stable-stringify",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fd-slicer",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fdir",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/file-uri-to-path",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/filelist",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/form-data",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fs-constants",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fs-extra",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/fs.realpath",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/function-bind",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/get-caller-file",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/get-intrinsic",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/get-proto",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/get-stream",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/github-from-package",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/glob",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/global-agent",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/globalthis",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/gopd",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/got",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/graceful-fs",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/has-flag",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/has-property-descriptors",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/has-symbols",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/has-tostringtag",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/hasown",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/hosted-git-info",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/http-cache-semantics",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/http-proxy-agent",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/http2-wrapper",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/https-proxy-agent",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/iconv-lite",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ieee754",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/inflight",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/inherits",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ini",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/is-fullwidth-code-point",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/isbinaryfile",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/isexe",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/jake",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/jiti",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/js-yaml",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/json-buffer",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/json-schema-traverse",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/json-stringify-safe",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/json5",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/jsonfile",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/keyv",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/lazy-val",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/lodash",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/lowercase-keys",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/lru-cache",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/matcher",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/math-intrinsics",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/mime",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/mime-db",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/mime-types",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/mimic-response",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/minimatch",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/minimist",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/minipass",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/minizlib",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/mkdirp",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/mkdirp-classic",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/ms",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/napi-build-utils",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/node-abi",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/node-api-version",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/node-gyp",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/nopt",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/normalize-url",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/object-keys",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/once",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/p-cancelable",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/p-limit",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/path-is-absolute",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/path-key",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/pe-library",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/pend",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/picocolors",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/picomatch",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/plist",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/postject",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/prebuild-install",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/proc-log",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/progress",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/promise-retry",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/proper-lockfile",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/pump",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/punycode",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/quick-lru",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/rc",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/read-binary-file-arch",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/readable-stream",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/require-directory",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/resedit",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/resolve-alpn",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/responselike",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/retry",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/rimraf",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/roarr",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/safe-buffer",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/safer-buffer",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/sanitize-filename",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/sax",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/semver",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/semver-compare",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/serialize-error",
+      "reason": "denylist"
+    },
+    {
+      "path": "apps/commercial/flujocrm/node_modules/shebang-command",
+      "reason": "denylist"
+    }
+  ],
   "file_count": 20,
   "blocked_count": 0,
-  "excluded_count": 0,
-  "total_bytes": 311555
+  "excluded_count": 244,
+  "total_bytes": 311852
 }

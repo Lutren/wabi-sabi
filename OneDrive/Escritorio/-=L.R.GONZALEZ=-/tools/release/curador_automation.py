@@ -1924,12 +1924,13 @@ def run_absorb(
     if write_fichas_flag:
         write_fichas(workspace_root, records)
     previous = previous_witness_hash(witness_path)
+    local_operation_requested = archive_absorbed or apply_safe_deletes
     event: dict[str, object] = {
         "timestamp_utc": utc_now(),
         "event_type": "curador_downloads_absorb_run",
         "actor": "tools/release/curador_automation.py",
         "previous_hash": previous,
-        "action_gate": "APPROVE_LOCAL" if archive_absorbed or apply_safe_deletes else "REVIEW",
+        "action_gate": "REVIEW",
         "summary": {
             "downloads_files_seen": len(records),
             "duplicate_groups_detected": len(groups),
@@ -1937,6 +1938,8 @@ def run_absorb(
             "archive_absorbed": archive_absorbed,
             "archived_sources": sum(1 for item in retirements if item.status == "ARCHIVO_FRIO"),
             "extractions": len(extractions),
+            "local_operation_requested": local_operation_requested,
+            "local_gate": "APPROVE_LOCAL" if local_operation_requested else "REVIEW",
             "removed_empty_dirs": len(removed_empty_dirs),
         },
     }

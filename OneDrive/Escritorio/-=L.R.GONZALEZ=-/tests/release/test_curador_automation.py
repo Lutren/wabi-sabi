@@ -128,6 +128,35 @@ def test_witness_event_matches_seto_validator_hash_contract(tmp_path: Path) -> N
     assert curador.hashlib.sha256(raw).hexdigest() == expected
 
 
+def test_absorb_witness_keeps_core_gate_review_and_records_local_gate(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    downloads.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+    (downloads / "duat_observacionismo.py").write_text("print('x')\n", encoding="utf-8")
+
+    curador.run_absorb(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        write_atlas=True,
+        archive_absorbed=True,
+        apply_safe_deletes=False,
+    )
+
+    witness = workspace / "qa_artifacts" / "witness_log" / "curador_seto_witnesslog.jsonl"
+    event = json.loads(witness.read_text(encoding="utf-8").splitlines()[-1])
+    expected = event.pop("event_hash")
+    raw = json.dumps(event, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+
+    assert event["action_gate"] == "REVIEW"
+    assert event["summary"]["local_gate"] == "APPROVE_LOCAL"
+    assert curador.hashlib.sha256(raw).hexdigest() == expected
+
+
 def test_second_unchanged_run_is_noop_and_does_not_append_witness(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     downloads = tmp_path / "Downloads"

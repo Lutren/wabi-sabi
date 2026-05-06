@@ -83,6 +83,36 @@ Regla diaria:
 - El inbox vuelve a quedar limpio.
 - No quedan documentos sueltos sin ficha.
 
+## Downloads
+
+Uso: inbox de amenaza y material descargado. Debe permanecer vacio o casi vacio despues del intake.
+
+Estado actual verificado:
+
+- `C:\Users\L-Tyr\Downloads` no conserva archivos visibles despues del pase.
+- `runtime\curador_seto\source_archive\downloads\2026-05-05` quedo con `00_LEER_PRIMERO.md`, 8 carpetas funcionales y sin `New folder`.
+- `runtime\curador_seto\source_archive\downloads\2026-05-06` quedo con `00_LEER_PRIMERO.md` y carril funcional.
+
+Carpetas funcionales de archivo frio para Downloads:
+
+```text
+01_teoria_observacionismo_psi_osit
+02_claudio_wabisabi_agentes
+03_duat_geodia_sensorium
+05_paquetes_zip_fuentes
+06_imagenes_assets
+07_datasets_resultados
+08_documentos_pdf_docx
+99_revision_misc
+```
+
+Regla de seguridad:
+
+- Downloads se analiza primero como amenaza.
+- ZIPs quedan como fuentes en archivo frio; no se extraen masivamente.
+- Ejecutables, secretos, sesiones, claims fuertes y privado/RPG/TCG quedan en `REVIEW` o `BLOQUEADO`.
+- La limpieza visible no significa borrar verdad: significa retirar la fuente del inbox con ficha, hash e indice.
+
 ## Criterio de calidad
 
 Una carpeta esta limpia cuando:

@@ -399,3 +399,15 @@ evidence. SHA256 for both was the empty-file hash
 |---|---|---|
 | `BASURA_REGENERABLE_BORRADA` | `qa_artifacts\release_validation\curador-audit-2026-05-05-sponsors-cleanup.json` | zero-byte failed/empty QA residue |
 | `BASURA_REGENERABLE_BORRADA` | `qa_artifacts\release_validation\duplicate-hash-dry-run-2026-05-05.json` | zero-byte failed/empty QA residue |
+
+## Curador SETO Downloads Atlas Absorption 2026-05-05
+
+Sources were absorbed into the Atlas before retirement. Unique material was moved to local Archivo Frio; only exact duplicates or regenerable trash may be deleted.
+
+| date | archived | deleted | evidence |
+|---|---:|---:|---|
+| 2026-05-05 | 1 | 0 | `qa_artifacts\release_validation\curador-automation-downloads-absorb-result-2026-05-05.json` |
+
+| status | original path | sha256 | archive/canonical path | reason |
+|---|---|---|---|---|
+| `ARCHIVO_FRIO` | `C:\Users\L-Tyr\Downloads\osit_resource_optimizer.py` | `76F80E0A9A273CBE2EC9CE009FAD39086390E4D942C4955CDE480BDF78FCE9CD` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\downloads\2026-05-05\76F80E0A9A273CBE_osit_resource_optimizer.py` | `ABSORBIDO_CANONIZADO_ARCHIVO_FRIO` |

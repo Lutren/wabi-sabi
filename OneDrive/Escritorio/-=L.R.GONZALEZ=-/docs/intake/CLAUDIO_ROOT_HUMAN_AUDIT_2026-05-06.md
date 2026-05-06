@@ -1,13 +1,13 @@
 # Claudio Root Human Audit - 2026-05-06
 
-Generated UTC: `2026-05-06T10:33:58.934865+00:00`
+Generated UTC: `2026-05-06T10:45:39.863086+00:00`
 Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBROS\claudio`
 
 ## Summary
 
-- Root items: `240`
+- Root items: `234`
 - Root files: `88`
-- Root directories: `152`
+- Root directories: `146`
 - Git pending lines: `913`
 
 ## Category Counts
@@ -15,7 +15,7 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | category | count |
 |---|---:|
 | `archive_existing` | 6 |
-| `cache_regenerable` | 11 |
+| `cache_regenerable` | 5 |
 | `domain_module_or_legacy_dir` | 109 |
 | `git_control` | 1 |
 | `local_config_tooling` | 7 |
@@ -88,15 +88,9 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `.env.mova.example` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `.git` | `directory` | `git_control` | `KEEP` | `.git` | `repo_control` |
 | `.gitignore` | `file` | `misc_root_item` | `REVIEW` | `docs/intake/claudio_root_review` | `fallback` |
-| `.pytest_cache` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
 | `.skills` | `directory` | `local_config_tooling` | `KEEP_REVIEW` | `.skills` | `local_tool_config` |
-| `.test_research` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
-| `.test_research_storage` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
-| `.test_session_storage` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
-| `.test_sessions` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
 | `.venv_api` | `directory` | `local_config_tooling` | `KEEP_REVIEW` | `.venv_api` | `local_tool_config` |
 | `.wrangler` | `directory` | `local_config_tooling` | `KEEP_REVIEW` | `.wrangler` | `local_tool_config` |
-| `__pycache__` | `directory` | `cache_regenerable` | `CANDIDATE_DELETE_AFTER_GATE` | `runtime/cache_or_artifacts` | `cache_or_generated_runtime` |
 | `_ARCHIVAR` | `directory` | `archive_existing` | `KEEP_REVIEW_CONSOLIDATE` | `runtime/archivo_frio` | `existing_archive` |
 | `_archivo_sesiones` | `directory` | `archive_existing` | `KEEP_REVIEW_CONSOLIDATE` | `runtime/archivo_frio` | `existing_archive` |
 | `_legacy` | `directory` | `archive_existing` | `KEEP_REVIEW_CONSOLIDATE` | `runtime/archivo_frio` | `existing_archive` |

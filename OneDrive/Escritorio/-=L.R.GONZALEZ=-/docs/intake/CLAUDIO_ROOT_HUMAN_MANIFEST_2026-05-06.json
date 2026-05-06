@@ -1,15 +1,15 @@
 {
   "schema": "medioevo.claudio_root_human_audit.v1",
-  "generated_at_utc": "2026-05-06T10:33:58.934865+00:00",
+  "generated_at_utc": "2026-05-06T10:45:39.863086+00:00",
   "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio",
   "summary": {
-    "root_items": 240,
+    "root_items": 234,
     "root_files": 88,
-    "root_directories": 152,
+    "root_directories": 146,
     "git_pending_lines": 913,
     "categories": {
       "archive_existing": 6,
-      "cache_regenerable": 11,
+      "cache_regenerable": 5,
       "domain_module_or_legacy_dir": 109,
       "git_control": 1,
       "local_config_tooling": 7,
@@ -24,7 +24,7 @@
     },
     "decisions": {
       "BLOCK_MOVE_TO_PRIVATE_CONFIG": 14,
-      "CANDIDATE_DELETE_AFTER_GATE": 11,
+      "CANDIDATE_DELETE_AFTER_GATE": 5,
       "KEEP": 12,
       "KEEP_PRIVATE_REVIEW": 7,
       "KEEP_REVIEW": 7,
@@ -38,7 +38,7 @@
     "risks": {
       "HIGH": 32,
       "LOW": 17,
-      "MEDIUM": 191
+      "MEDIUM": 185
     }
   },
   "records": [
@@ -163,16 +163,6 @@
       "reason": "fallback"
     },
     {
-      "name": ".pytest_cache",
-      "kind": "directory",
-      "size_bytes": 0,
-      "category": "cache_regenerable",
-      "decision": "CANDIDATE_DELETE_AFTER_GATE",
-      "destination_hint": "runtime/cache_or_artifacts",
-      "risk": "MEDIUM",
-      "reason": "cache_or_generated_runtime"
-    },
-    {
       "name": ".skills",
       "kind": "directory",
       "size_bytes": 0,
@@ -181,46 +171,6 @@
       "destination_hint": ".skills",
       "risk": "MEDIUM",
       "reason": "local_tool_config"
-    },
-    {
-      "name": ".test_research",
-      "kind": "directory",
-      "size_bytes": 0,
-      "category": "cache_regenerable",
-      "decision": "CANDIDATE_DELETE_AFTER_GATE",
-      "destination_hint": "runtime/cache_or_artifacts",
-      "risk": "MEDIUM",
-      "reason": "cache_or_generated_runtime"
-    },
-    {
-      "name": ".test_research_storage",
-      "kind": "directory",
-      "size_bytes": 0,
-      "category": "cache_regenerable",
-      "decision": "CANDIDATE_DELETE_AFTER_GATE",
-      "destination_hint": "runtime/cache_or_artifacts",
-      "risk": "MEDIUM",
-      "reason": "cache_or_generated_runtime"
-    },
-    {
-      "name": ".test_session_storage",
-      "kind": "directory",
-      "size_bytes": 0,
-      "category": "cache_regenerable",
-      "decision": "CANDIDATE_DELETE_AFTER_GATE",
-      "destination_hint": "runtime/cache_or_artifacts",
-      "risk": "MEDIUM",
-      "reason": "cache_or_generated_runtime"
-    },
-    {
-      "name": ".test_sessions",
-      "kind": "directory",
-      "size_bytes": 0,
-      "category": "cache_regenerable",
-      "decision": "CANDIDATE_DELETE_AFTER_GATE",
-      "destination_hint": "runtime/cache_or_artifacts",
-      "risk": "MEDIUM",
-      "reason": "cache_or_generated_runtime"
     },
     {
       "name": ".venv_api",
@@ -241,16 +191,6 @@
       "destination_hint": ".wrangler",
       "risk": "MEDIUM",
       "reason": "local_tool_config"
-    },
-    {
-      "name": "__pycache__",
-      "kind": "directory",
-      "size_bytes": 0,
-      "category": "cache_regenerable",
-      "decision": "CANDIDATE_DELETE_AFTER_GATE",
-      "destination_hint": "runtime/cache_or_artifacts",
-      "risk": "MEDIUM",
-      "reason": "cache_or_generated_runtime"
     },
     {
       "name": "_ARCHIVAR",

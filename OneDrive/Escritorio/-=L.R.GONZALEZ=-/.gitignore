@@ -3,6 +3,7 @@ _archive/legacy/*/argus_generated_artifacts_second_pass/
 
 # Curador SETO keeps raw absorbed sources local-only; commit Atlas/fichas, not cold archives.
 runtime/curador_seto/source_archive/
+runtime/curador_seto/tree_quarantine/
 
 # Regenerable local cache. These trees are noise, not source.
 **/__pycache__/

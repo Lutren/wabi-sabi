@@ -1,0 +1,25 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-05T12:00:00Z",
+  "agent_id": "hormiguero-mission-control",
+  "status": "LOCAL_READ_SURFACE",
+  "department_slug": "logi",
+  "action_gate": "REVIEW",
+  "owns": [
+    "local dashboard rendering",
+    "read-only COMMS API surface",
+    "city department signal"
+  ],
+  "may_touch": [
+    "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/app.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/index.html",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/tests/test_hormiguero_mission_control_api.py"
+  ],
+  "must_not_touch_without_handoff": [
+    "COMMS inbox streams owned by other agents",
+    "external publication surfaces",
+    "private RPG/TCG assets"
+  ],
+  "current_outbox": null,
+  "last_observation_fingerprint": "CLAUDIO_AGENT_COMMS_BRIDGE_2026-05-05"
+}

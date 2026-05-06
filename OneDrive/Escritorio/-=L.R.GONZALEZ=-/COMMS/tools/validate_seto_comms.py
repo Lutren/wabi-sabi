@@ -19,6 +19,7 @@ SCHEMA_PATHS = [
     ROOT / "COMMS" / "schemas" / "witness-log-event.schema.json",
 ]
 INBOX_PATH = ROOT / "COMMS" / "inbox" / "claudio-local-agent.jsonl"
+OUTBOX_PATH = ROOT / "COMMS" / "outbox" / "claudio-local-agent.jsonl"
 TOPIC_PATH = ROOT / "COMMS" / "topics" / "seto-observacionismo-decisions.jsonl"
 DECISION_EXAMPLES = (
     ROOT
@@ -127,6 +128,7 @@ def validate_witness_tail(errors: list[str]) -> dict[str, Any]:
 
 def validate() -> dict[str, Any]:
     errors: list[str] = []
+    warnings: list[str] = []
     schema_hashes: dict[str, str] = {}
     for path in SCHEMA_PATHS:
         schema = read_json(path)
@@ -141,12 +143,29 @@ def validate() -> dict[str, Any]:
         if isinstance(envelope, dict):
             validate_envelope(envelope, f"{rel(INBOX_PATH)}:{idx}", errors)
 
+    outbox_rows = iter_jsonl(OUTBOX_PATH)
+    for idx, row in enumerate(outbox_rows, 1):
+        envelope = row.get("observation_envelope")
+        require(isinstance(envelope, dict), errors, f"{rel(OUTBOX_PATH)}:{idx} missing observation_envelope")
+        if isinstance(envelope, dict):
+            validate_envelope(envelope, f"{rel(OUTBOX_PATH)}:{idx}", errors)
+
     topic_rows = iter_jsonl(TOPIC_PATH)
+    topic_has_envelope = False
+    legacy_topic_rows: list[str] = []
     for idx, row in enumerate(topic_rows, 1):
         gate = row.get("action_gate")
         if gate is not None:
             require(gate in ALLOWED_GATES, errors, f"{rel(TOPIC_PATH)}:{idx} bad action_gate: {gate}")
         require(bool(row.get("decision")), errors, f"{rel(TOPIC_PATH)}:{idx} missing decision")
+        envelope = row.get("observation_envelope")
+        if isinstance(envelope, dict):
+            topic_has_envelope = True
+            validate_envelope(envelope, f"{rel(TOPIC_PATH)}:{idx}", errors)
+        else:
+            legacy_topic_rows.append(f"{rel(TOPIC_PATH)}:{idx}")
+    if legacy_topic_rows and not topic_has_envelope:
+        warnings.append(f"{rel(TOPIC_PATH)} has legacy topics without observation_envelope")
 
     example_rows = iter_jsonl(DECISION_EXAMPLES)
     for idx, row in enumerate(example_rows, 1):
@@ -158,9 +177,11 @@ def validate() -> dict[str, Any]:
         "schema": "medioevo.seto_comms_validator_result.v1",
         "status": "PASS" if not errors else "FAIL",
         "errors": errors,
+        "warnings": warnings,
         "counts": {
             "schemas": len(SCHEMA_PATHS),
             "inbox_messages": len(inbox_rows),
+            "outbox_messages": len(outbox_rows),
             "topic_events": len(topic_rows),
             "decision_examples": len(example_rows),
         },

@@ -1,0 +1,38 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-05T20:53:00Z",
+  "agent_id": "publicacion-perfiles-observatorio",
+  "status": "ACTIVE_LOCAL_STRATEGY_AGENT",
+  "department_slug": "plaza-mercado",
+  "action_gate": "REVIEW",
+  "owns": [
+    "public profile and social-surface strategy",
+    "public/private publication boundary for networks",
+    "Gumroad/GitHub/LinkedIn/website copy packets",
+    "observacionista and inverse-observacionista profile analysis"
+  ],
+  "may_touch": [
+    "docs/publishing/PUBLIC_PROFILE_NETWORK_OBSERVATORY_*.md",
+    "docs/publishing/*PUBLICATION_PACKET*.md",
+    "docs/publishing/*PROFILE*.md",
+    "COMMS/agents_state/publicacion-perfiles-observatorio.json",
+    "COMMS/inbox/publicacion-perfiles-observatorio.jsonl",
+    "COMMS/outbox/publicacion-perfiles-observatorio.jsonl",
+    "COMMS/handoffs/*publicacion-perfiles-observatorio*.md",
+    "qa_artifacts/release_validation/public-profile-network-*.json"
+  ],
+  "must_not_touch_without_handoff": [
+    "external publication or social posting",
+    "GitHub push/profile edit/Sponsors dashboard",
+    "Gumroad dashboard/upload/pricing/listing save",
+    "LinkedIn profile or post edit",
+    "Cloudflare or website deploy",
+    "browser auth state, sessions, tokens or secrets",
+    "private RPG/TCG assets, lore, source or game bridge",
+    "unpublished books or canon vaults",
+    "commercial app public checkout changes"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-05-publicacion-perfiles-observatorio.md",
+  "current_outbox": "COMMS/outbox/publicacion-perfiles-observatorio.jsonl",
+  "last_observation_fingerprint": "PUBLIC_PROFILE_NETWORK_OBSERVATORY_2026-05-05"
+}

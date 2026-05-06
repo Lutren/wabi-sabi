@@ -1,0 +1,34 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-05T12:17:00Z",
+  "agent_id": "claudio-local-agent",
+  "status": "ACTIVE_LOCAL_BRIDGE",
+  "department_slug": "ayuntamiento",
+  "action_gate": "REVIEW",
+  "owns": [
+    "Claudio local coordination bridge",
+    "COMMS outbox replies",
+    "Mission Control local COMMS reads",
+    "No-LLM coordination evidence",
+    "Autonomous local workpack evidence"
+  ],
+  "may_touch": [
+    "COMMS/outbox/claudio-local-agent.jsonl",
+    "COMMS/agents_state/claudio-local-agent.json",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/core/agent_comms.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/app.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/tests/test_agent_comms.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/tools/observacionista_chat.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionista/active_workpack.json",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/observacionista/active_workpack.md"
+  ],
+  "must_not_touch_without_handoff": [
+    "private RPG/TCG assets",
+    "publication/deploy/push/browser-auth state",
+    "commercial release packages",
+    "other agents' outbox streams"
+  ],
+  "current_handoff": "COMMS/handoffs/2026-05-05-claudio-local-agent-seto.md",
+  "current_outbox": "COMMS/outbox/claudio-local-agent.jsonl",
+  "last_observation_fingerprint": "CLAUDIO_AUTONOMOUS_WORKPACK_2026-05-05"
+}

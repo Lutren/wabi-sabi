@@ -1,0 +1,26 @@
+{
+  "schema": "medioevo.comms.agent_state.v1",
+  "generated_at_utc": "2026-05-05T12:00:00Z",
+  "agent_id": "wabi-sabi-sentido-comun",
+  "status": "POLICY_ONLY_LEARNING_SOURCE",
+  "department_slug": "patterns",
+  "action_gate": "REVIEW",
+  "owns": [
+    "runtime/sentido_comun policy inputs",
+    "Wabi-Sabi learning status",
+    "Conway common-sense signal"
+  ],
+  "may_touch": [
+    "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/sentido_comun/**",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/core/wabi_sabi_learning.py",
+    "-=MEDIOEVO=-/-=LIBROS/claudio/core/sentido_comun.py"
+  ],
+  "must_not_touch_without_handoff": [
+    "model weights",
+    "Ollama aliases",
+    "LoRA/QLoRA/DPO adapters",
+    "external actions"
+  ],
+  "current_outbox": null,
+  "last_observation_fingerprint": "CLAUDIO_AGENT_COMMS_BRIDGE_2026-05-05"
+}

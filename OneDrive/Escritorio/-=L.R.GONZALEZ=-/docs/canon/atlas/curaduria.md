@@ -1,6 +1,6 @@
 # Curaduria SETO
 
-Generated UTC: `2026-05-05T23:35:01.481666+00:00`
+Generated UTC: `2026-05-06T02:35:01.641839+00:00`
 
 Nivel: `continente`. Este documento es una vista canonica del Atlas; no reemplaza la fuente ni su ficha/hash.
 

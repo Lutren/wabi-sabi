@@ -1,0 +1,116 @@
+{
+  "action_gate": "BLOCK",
+  "agent_id": "claudio-local-autonomy",
+  "allowed_actions": [
+    "pending_review",
+    "host_no_write",
+    "qwen_gate_report",
+    "observabit_compile",
+    "observabit_benchmark",
+    "qwen_model_candidate",
+    "ollama_ps",
+    "external_workpack_prepare"
+  ],
+  "autonomous_continuation": {
+    "ask_user_for_each_step": false,
+    "ask_user_only_for_gate": true,
+    "continue_without_step_confirmation": true,
+    "law_id": "LEY_CONTINUIDAD_AUTONOMA_LOCAL",
+    "local_actions_can_proceed": true,
+    "next_local_action_id": "pending_review"
+  },
+  "blocked_actions": [
+    "qwen_triage_05b",
+    "qwen_3b_suite",
+    "external_target_execute",
+    "ollama_create_alias",
+    "lora_qlora_dpo_training",
+    "destructive_file_moves"
+  ],
+  "comms_envelope": {
+    "allowed_action": "pending_review,host_no_write,qwen_gate_report,observabit_compile,observabit_benchmark,qwen_model_candidate,ollama_ps,external_workpack_prepare",
+    "blocked_action": "qwen_triage_05b,qwen_3b_suite,external_target_execute,ollama_create_alias,lora_qlora_dpo_training,destructive_file_moves",
+    "claim": "autonomia local continua sin confirmacion paso-a-paso para acciones locales permitidas",
+    "destination": "hormiguero-mission-control,wabisabi-runner,qwen-gate",
+    "evidence_refs": [
+      "runtime\\host_observacionista\\latest_report.json",
+      "runtime\\model_router\\qwen_observacion_gate_report.json",
+      "runtime\\model_router\\qwen_health.json",
+      "runtime\\model_router\\qwen_micro_probe.json",
+      "runtime\\model_router\\qwen_observacion_benchmark_suite.json",
+      "runtime\\model_router\\qwen_observacion_model_candidate.json",
+      "runtime\\observacion_engineering_calibration\\latest_calibration.json",
+      "runtime\\sentido_comun\\latest_common_sense_policy.json"
+    ],
+    "gate": "BLOCK",
+    "handoff_required": true,
+    "observation": "host=JAMMING/BLOCK level=A0_LOCAL_REVIEW_ONLY",
+    "origin": "claudio-local-autonomy",
+    "residue": "host no esta LIMPIO/APPROVE: JAMMING/BLOCK"
+  },
+  "department": {
+    "id": "wabi_sabi",
+    "name": "Wabi-Sabi Local Autonomy"
+  },
+  "evidence_refs": [
+    "runtime\\host_observacionista\\latest_report.json",
+    "runtime\\model_router\\qwen_observacion_gate_report.json",
+    "runtime\\model_router\\qwen_health.json",
+    "runtime\\model_router\\qwen_micro_probe.json",
+    "runtime\\model_router\\qwen_observacion_benchmark_suite.json",
+    "runtime\\model_router\\qwen_observacion_model_candidate.json",
+    "runtime\\observacion_engineering_calibration\\latest_calibration.json",
+    "runtime\\sentido_comun\\latest_common_sense_policy.json"
+  ],
+  "handoff_required": true,
+  "operational_law": {
+    "allowed_action_ids": [
+      "pending_review",
+      "host_no_write",
+      "qwen_gate_report",
+      "observabit_compile",
+      "observabit_benchmark",
+      "qwen_model_candidate",
+      "ollama_ps",
+      "external_workpack_prepare"
+    ],
+    "blocked_action_ids": [
+      "qwen_triage_05b",
+      "qwen_3b_suite",
+      "external_target_execute",
+      "ollama_create_alias",
+      "lora_qlora_dpo_training",
+      "destructive_file_moves"
+    ],
+    "comms_required_for_agent_handoff": true,
+    "default_behavior": "continue_without_step_confirmation",
+    "evidence_required": true,
+    "law_id": "LEY_CONTINUIDAD_AUTONOMA_LOCAL",
+    "must_stop_or_gate_for": [
+      "external_send_or_publication",
+      "push_deploy_gumroad_social",
+      "secret_or_credential_exposure",
+      "private_game_or_tcg_boundary",
+      "destructive_delete_move_or_cleanup",
+      "model_weight_alias_or_training_mutation",
+      "strong_medical_legal_financial_scientific_or_social_claim",
+      "ambiguous_human_preference_not_discoverable_from_repo"
+    ],
+    "next_local_action_id": "pending_review",
+    "no_chat_confirmation_for": [
+      "local_read",
+      "local_tests",
+      "local_docs",
+      "local_adapters",
+      "local_runtime_artifacts",
+      "local_workpack_generation",
+      "COMMS_append_with_observation_envelope"
+    ],
+    "record_outcome_after_verified_action": true,
+    "schema": "claudio.autonomy_operating_law.v1",
+    "status_update_policy": "batch_milestones_and_final_evidence"
+  },
+  "schema": "claudio.local_autonomy.comms_state.v1",
+  "status": "A0_LOCAL_REVIEW_ONLY",
+  "updated_at": "2026-05-05T20:01:05Z"
+}

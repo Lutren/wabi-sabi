@@ -435,3 +435,11 @@ Sources were absorbed into fichas and local implementation before retirement. Un
 | status | original path | sha256 | archive/canonical path | reason |
 |---|---|---|---|---|
 | `ARCHIVO_FRIO` | `C:\Users\L-Tyr\OneDrive\Escritorio\Lobby de Alejandria\ESTADO.txt` | `369DCD91A9BB70DC6D5509F02C2FD9D481CA2893C504435C5ADBAB17BB0882DE` | `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\runtime\curador_seto\source_archive\lobby_alejandria\2026-05-06\369DCD91A9BB70DC_estado.txt` | `ABSORBIDO_IMPLEMENTADO_ARCHIVO_FRIO` |
+
+## Curador SETO Lobby Full Absorption 2026-05-06
+
+Lobby sources were read completely, mapped to Atlas lanes, connected to existing or required artifacts, and retired from active INBOX. The Lobby keeps only its README contract. No source was deleted.
+
+| date | files read | lines read | archived | deleted | evidence |
+|---|---:|---:|---:|---:|---|
+| 2026-05-06 | 17 | 6827 | 16 | 0 | `docs\intake\lobby_alejandria_full_absorption_2026-05-06_MANIFEST.json`; `docs\intake\lobby_alejandria_full_absorption_2026-05-06_RETIREMENTS.md` |

@@ -8,4 +8,5 @@
 - [x] Check package manifest paths - 9 manifests generated under `release_manifests/`.
 - [x] Check generated archive contents before upload - N/A local 2026-05-05: no `.zip/.7z/.rar/.tar/.gz` files found under `release_manifests/`, `publish_staging/` or `packages/`; no archive was generated or uploaded.
 - [x] Record hashes - `python tools/release/product_manifest.py --hash --write` generated per-file SHA256 values.
+- [x] Historical external provider placeholders are manual gates, not active local tasks; see `docs\security\EXTERNAL_PROVIDER_MANUAL_GATES_2026-05-06.md`.
 - [ ] Rotate exposed secrets if any are found in public artifacts - secret rotation remains manual/outside tracker; no public artifact was generated.

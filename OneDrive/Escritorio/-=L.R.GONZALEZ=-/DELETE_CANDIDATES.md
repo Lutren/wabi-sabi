@@ -394,3 +394,34 @@ candidate tracking only.
 
 Canonical ficha:
 `docs\intake\CURADOR_SPACE_CONSOLIDATION_DRY_RUN_2026-05-05.md`.
+
+## Repo Tree Fundamental Cleanup 2026-05-06
+
+No files deleted in this pass. The executed cleanup was local Git boundary
+hygiene in `C:\Users\L-Tyr\.git\info\exclude`, which is reversible and not a
+tracked workspace file.
+
+Evidence:
+
+- `docs\intake\REPO_TREE_FUNDAMENTAL_CLEANUP_2026-05-06.md`
+- `python tools\release\curador_automation.py status --json`
+- `python tools\release\audit_repo.py --json`
+- `python tools\release\find_large_files.py --limit 20 --min-mb 25 --json`
+
+Review candidates:
+
+| path/pattern | reason | action |
+|---|---|---|
+| `-=MEDIOEVO=-\-=LIBROS\claudio\runtime\logs\claudio_api_server.stdout.log` | runtime log, 28.67 MB | rotate only after process check, tail/hash preservation and ActionGate |
+| `-=MEDIOEVO=-\-=LIBROS\claudio\runtime\cogni_kernel_memory.sqlite3` | runtime memory DB, 41.82 MB | keep/review; never delete as residue |
+| `-=MEDIOEVO=-\-=LIBROS\claudio\runtime\claudio_bootstrap.db` | runtime bootstrap DB, 33.39 MB | keep/review; never delete as residue |
+| `-=MEDIOEVO=-\-=LIBROS\claudio\memory_index.db` | runtime memory index, 27.55 MB | keep/review; never delete as residue |
+| `publish_staging\**\.git\**` | multiple staging repos detected by audit | keep; archive only with publication source-of-truth map |
+| website cover assets duplicated against `E:\MEDIOEVO_ASSETS` | possible exact duplicate assets crossing private/public boundary | choose public-safe canonical asset source before deleting |
+
+Operational rule:
+
+- `C:\Users\L-Tyr` is a repo wrapper, not a broad staging root.
+- Do not run `git add .` from the parent repo.
+- All cleanup after this point needs exact path, ficha, SHA256, replacement or
+  regenerability proof, and WitnessLog.

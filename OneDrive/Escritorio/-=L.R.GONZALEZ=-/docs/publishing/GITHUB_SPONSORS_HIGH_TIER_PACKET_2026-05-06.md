@@ -1,6 +1,6 @@
 # GitHub Sponsors High Tier Packet - 2026-05-06
 
-Status: `PASTE_READY_DASHBOARD / EXTERNAL_ACTION_BLOCKED_BY_HOST`
+Status: `LIVE_PUBLISHED_VERIFIED`
 
 Target: `https://github.com/sponsors/Lutren/dashboard`
 
@@ -11,8 +11,10 @@ Operator intent: add monthly high-value tiers at `US$1,000`, `US$5,000` and
 
 ## Gate Reality
 
-This packet implements the copy and execution checklist locally. It does not
-claim the tiers were published.
+This packet originally implemented the copy and execution checklist locally.
+The prepared tiers were published on `2026-05-06` after target-specific owner
+authorization for browser control and publication. The verification record is
+`docs/publishing/GITHUB_SPONSORS_HIGH_TIER_PUBLICATION_REPORT_2026-05-06.md`.
 
 | check | result |
 |---|---|
@@ -21,8 +23,10 @@ claim the tiers were published.
 | initial workspace host gate | `JAMMING / BLOCK` at `2026-05-06T08:40:50Z` |
 | latest workspace host gate | `CONTAMINADO / REVIEW` at `2026-05-06T08:57:44Z` |
 | latest blocker reason | `memoria_alta` |
-| publication mode | manual dashboard only after target gate; no API retry |
-| current public Sponsors baseline | existing tiers `5/19/50/100/500` from prior dashboard evidence |
+| publication mode | browser dashboard action authorized by owner for this target; no API retry |
+| published high tiers | `US$1,000`, `US$5,000`, `US$10,000` monthly |
+| post-action public verification | HTTP `200`; all three tier names and prices found |
+| custom amount correction | dashboard recommended amount aligned to `US$10,000`; public page no longer shows `US$12,000` |
 
 Source checked: <https://docs.github.com/en/sponsors/receiving-sponsorships-through-github-sponsors/managing-your-sponsorship-tiers>
 
@@ -158,8 +162,8 @@ https://github.com/sponsors/Lutren
 
 ## Manual Dashboard Checklist
 
-Use only after host/target gate permits external action or the owner chooses to
-complete it manually in the already-open dashboard.
+Completed on `2026-05-06` in the already-open dashboard after target-specific
+owner authorization.
 
 1. Open `Your sponsors` -> `Dashboard` -> `Sponsor tiers`.
 2. Add monthly tier `US$1,000`; paste `Founder Research Patron`.

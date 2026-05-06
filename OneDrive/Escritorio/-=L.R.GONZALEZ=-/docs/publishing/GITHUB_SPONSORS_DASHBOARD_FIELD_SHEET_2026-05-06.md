@@ -1,11 +1,11 @@
 # GitHub Sponsors Dashboard Field Sheet - 2026-05-06
 
-Status: `COPY_PASTE_READY`
+Status: `USED_PUBLISHED_VERIFIED`
 
 Target: `https://github.com/sponsors/Lutren/dashboard`
 
-Use this only in the GitHub Sponsors dashboard. It is intentionally stripped
-down to the exact fields.
+This was used in the GitHub Sponsors dashboard on `2026-05-06`. It is kept as
+the exact field record for the published tiers.
 
 ## Tier A
 
@@ -113,4 +113,6 @@ Strategic Lab Patron
 Institutional Research Partner
 ```
 
-Do not claim live completion until this is visually or programmatically verified.
+Live completion was programmatically verified against
+`https://github.com/sponsors/Lutren`: HTTP `200`, all three names found, and
+prices `US$1,000`, `US$5,000` and `US$10,000` found.

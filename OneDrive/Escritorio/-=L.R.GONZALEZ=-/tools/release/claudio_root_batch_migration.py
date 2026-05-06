@@ -20,6 +20,7 @@ ROOT = Path(__file__).resolve().parents[2]
 SAFE_MOVE_CATEGORIES = {
     "launcher_script": "tools/launchers",
     "root_document": "docs/root_notes_review",
+    "root_media_or_ui": "assets/root_media_review",
     "root_python_script": "tools/root_scripts_review",
 }
 
@@ -104,6 +105,7 @@ def write_readme(destination_dir: Path, category: str) -> None:
     labels = {
         "launcher_script": "Launchers raiz",
         "root_document": "Documentos raiz",
+        "root_media_or_ui": "Assets y UI raiz",
         "root_python_script": "Scripts Python raiz",
     }
     label = labels.get(category, "Archivo raiz")

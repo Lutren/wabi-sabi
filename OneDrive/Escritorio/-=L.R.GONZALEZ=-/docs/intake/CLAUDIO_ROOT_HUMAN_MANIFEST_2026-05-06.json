@@ -1,12 +1,12 @@
 {
   "schema": "medioevo.claudio_root_human_audit.v1",
-  "generated_at_utc": "2026-05-06T10:21:34.763002+00:00",
+  "generated_at_utc": "2026-05-06T10:33:58.934865+00:00",
   "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio",
   "summary": {
-    "root_items": 250,
-    "root_files": 98,
+    "root_items": 240,
+    "root_files": 88,
     "root_directories": 152,
-    "git_pending_lines": 922,
+    "git_pending_lines": 913,
     "categories": {
       "archive_existing": 6,
       "cache_regenerable": 11,
@@ -18,7 +18,6 @@
       "private_blocked": 7,
       "root_data_config": 48,
       "root_document": 6,
-      "root_media_or_ui": 10,
       "root_python_script": 2,
       "runtime_core_root": 11,
       "secret_or_sensitive": 14
@@ -31,14 +30,14 @@
       "KEEP_REVIEW": 7,
       "KEEP_REVIEW_CONSOLIDATE": 6,
       "KEEP_REVIEW_RETENTION": 10,
-      "MOVE_CANDIDATE": 18,
+      "MOVE_CANDIDATE": 8,
       "MOVE_CANDIDATE_REVIEW": 48,
       "REVIEW": 8,
       "REVIEW_DESTINATION": 109
     },
     "risks": {
       "HIGH": 32,
-      "LOW": 27,
+      "LOW": 17,
       "MEDIUM": 191
     }
   },
@@ -624,26 +623,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "claudio_avatar_web.html",
-      "kind": "file",
-      "size_bytes": 153592,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
-      "name": "Claudio_Cobain.ico",
-      "kind": "file",
-      "size_bytes": 137663,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
       "name": "claudio_daemon.db",
       "kind": "file",
       "size_bytes": 20480,
@@ -662,16 +641,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "claudio_face.png",
-      "kind": "file",
-      "size_bytes": 2112857,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
     },
     {
       "name": "claudio_memory.db",
@@ -944,26 +913,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "dashboard_argus.html",
-      "kind": "file",
-      "size_bytes": 2438,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
-      "name": "DASHBOARD_ARGUS_UNIFIED.html",
-      "kind": "file",
-      "size_bytes": 14901,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
       "name": "data",
       "kind": "directory",
       "size_bytes": 0,
@@ -1032,16 +981,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "email_signature.html",
-      "kind": "file",
-      "size_bytes": 3392,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
     },
     {
       "name": "entities.json",
@@ -1454,16 +1393,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "media_portal.html",
-      "kind": "file",
-      "size_bytes": 11524,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
       "name": "media_routes.json",
       "kind": "file",
       "size_bytes": 628,
@@ -1674,16 +1603,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "oppo_tv_cast.html",
-      "kind": "file",
-      "size_bytes": 10244,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
       "name": "oraculo",
       "kind": "directory",
       "size_bytes": 0,
@@ -1726,7 +1645,7 @@
     {
       "name": "PENDIENTES_MASTER.md",
       "kind": "file",
-      "size_bytes": 237443,
+      "size_bytes": 238037,
       "category": "root_document",
       "decision": "MOVE_CANDIDATE",
       "destination_hint": "docs/root_notes_review",
@@ -2184,16 +2103,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "shopify_buy_button.html",
-      "kind": "file",
-      "size_bytes": 5776,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
       "name": "skills",
       "kind": "directory",
       "size_bytes": 0,
@@ -2394,16 +2303,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "tv_player.html",
-      "kind": "file",
-      "size_bytes": 4591,
-      "category": "root_media_or_ui",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "assets/root_media_review",
-      "risk": "LOW",
-      "reason": "root_asset_noise"
-    },
-    {
       "name": "update_gumroad_listings.py",
       "kind": "file",
       "size_bytes": 18678,
@@ -2576,8 +2475,6 @@
     "?? .env.example",
     "?? .env.mova.example",
     "?? Claudio_Accesos_Directos/",
-    "?? Claudio_Cobain.ico",
-    "?? DASHBOARD_ARGUS_UNIFIED.html",
     "?? Modelfile.claudio",
     "?? PROYECTO_REAL_35_A_6_MAS_1_MANIFEST.json",
     "?? SAMPLE_DIALOGUES.json",
@@ -2604,6 +2501,7 @@
     "?? archivo/",
     "?? argus/",
     "?? arte/",
+    "?? assets/",
     "?? auditor/",
     "?? autopilot/",
     "?? autorepair/",
@@ -2619,9 +2517,7 @@
     "?? catalog/",
     "?? city_overlay/",
     "?? claudio/",
-    "?? claudio_avatar_web.html",
     "?? claudio_daemon.db",
-    "?? claudio_face.png",
     "?? claudio_memory.db",
     "?? claudio_os/",
     "?? claudio_secrets.json",
@@ -2756,7 +2652,6 @@
     "?? crm.json",
     "?? d2d_book_metadata.json",
     "?? daemon/",
-    "?? dashboard_argus.html",
     "?? data/",
     "?? datasets/gate_labels.jsonl",
     "?? datasets/observacionismo_theory_claims_seed.jsonl",
@@ -2794,6 +2689,10 @@
     "?? docs/CLOUDFLARE_CREDENTIAL_FALLBACK_2026-05-03.md",
     "?? docs/CLUDIO_SHADOW_FOLDER_RESOLUTION_2026-05-03.md",
     "?? docs/COACH_PRODUCT_SOURCE_RESCUE_2026-05-03.md",
-    "?? docs/CODEX_PARITY_MATRIX_2026-04-17.md"
+    "?? docs/CODEX_PARITY_MATRIX_2026-04-17.md",
+    "?? docs/CONCILIO_DARVI.md",
+    "?? docs/CONWAY_WEEKLY_AUTOMATION_2026-04-22.md",
+    "?? docs/CORRECCION_CANON_EDITORIAL_6_SINTESIS_2026-04-22.md",
+    "?? docs/CURADOR_ALWAYS_ON_CLAUDIO_2026-05-03.md"
   ]
 }

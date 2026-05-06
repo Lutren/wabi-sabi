@@ -1,14 +1,14 @@
 # Claudio Root Human Audit - 2026-05-06
 
-Generated UTC: `2026-05-06T10:21:34.763002+00:00`
+Generated UTC: `2026-05-06T10:33:58.934865+00:00`
 Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBROS\claudio`
 
 ## Summary
 
-- Root items: `250`
-- Root files: `98`
+- Root items: `240`
+- Root files: `88`
 - Root directories: `152`
-- Git pending lines: `922`
+- Git pending lines: `913`
 
 ## Category Counts
 
@@ -24,7 +24,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `private_blocked` | 7 |
 | `root_data_config` | 48 |
 | `root_document` | 6 |
-| `root_media_or_ui` | 10 |
 | `root_python_script` | 2 |
 | `runtime_core_root` | 11 |
 | `secret_or_sensitive` | 14 |
@@ -135,11 +134,8 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `CLAUDE.md.backup` | `file` | `misc_root_item` | `REVIEW` | `docs/intake/claudio_root_review` | `fallback` |
 | `claudio` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `Claudio_Accesos_Directos` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `claudio_avatar_web.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
-| `Claudio_Cobain.ico` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `claudio_daemon.db` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
 | `claudio_daemon_247.py` | `file` | `root_python_script` | `MOVE_CANDIDATE` | `tools/root_scripts_review` | `root_python_noise` |
-| `claudio_face.png` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `claudio_memory.db` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
 | `claudio_os` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `claudio_secrets.json` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
@@ -167,8 +163,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `crm.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `d2d_book_metadata.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `daemon` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `dashboard_argus.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
-| `DASHBOARD_ARGUS_UNIFIED.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `data` | `directory` | `runtime_core_root` | `KEEP` | `data` | `strong_runtime_route` |
 | `datasets` | `directory` | `runtime_core_root` | `KEEP` | `datasets` | `strong_runtime_route` |
 | `device_protection_state.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
@@ -176,7 +170,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `docs` | `directory` | `runtime_core_root` | `KEEP` | `docs` | `strong_runtime_route` |
 | `ecosystem_devices.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `editorial` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `email_signature.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `entities.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `etno` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `feedback` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -218,7 +211,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `lore_knowledge_base.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `marketing` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `matriz_feedback_lectores.csv` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
-| `media_portal.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `media_routes.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `medioevo_agent_hub` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `medioevo_lore.db` | `file` | `local_state_db` | `KEEP_REVIEW_RETENTION` | `runtime/state` | `local_state_database` |
@@ -240,7 +232,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `onion` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `oppo_deploy` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `oppo_robot` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `oppo_tv_cast.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `oraculo` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `os` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `output` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
@@ -291,7 +282,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `self_heal` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `setup_gumroad.py` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `shopify` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `shopify_buy_button.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `skills` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
 | `skills_catalog.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `social_automation.log` | `file` | `misc_root_item` | `REVIEW` | `docs/intake/claudio_root_review` | `fallback` |
@@ -312,7 +302,6 @@ Target: `C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\-=MEDIOEVO=-\-=LIBR
 | `training_datasets` | `directory` | `private_blocked` | `KEEP_PRIVATE_REVIEW` | `private/training_datasets` | `private_runtime_or_models` |
 | `tshirt_designs.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `tv_audio` | `directory` | `domain_module_or_legacy_dir` | `REVIEW_DESTINATION` | `docs/intake/claudio_root_review` | `noncanonical_root_dir` |
-| `tv_player.html` | `file` | `root_media_or_ui` | `MOVE_CANDIDATE` | `assets/root_media_review` | `root_asset_noise` |
 | `update_gumroad_listings.py` | `file` | `secret_or_sensitive` | `BLOCK_MOVE_TO_PRIVATE_CONFIG` | `runtime/private_config` | `secret_marker` |
 | `user_profile.json` | `file` | `root_data_config` | `MOVE_CANDIDATE_REVIEW` | `data/root_config_review` | `root_data_noise` |
 | `vault_medioevo` | `directory` | `private_blocked` | `KEEP_PRIVATE_REVIEW` | `private/vault_medioevo` | `private_runtime_or_models` |

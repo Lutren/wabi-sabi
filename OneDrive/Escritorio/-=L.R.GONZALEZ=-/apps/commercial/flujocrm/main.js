@@ -6,9 +6,32 @@ let mainWindow;
 let tray = null;
 let db;
 
+if (process.env.FLUJOCRM_USER_DATA_DIR) {
+  app.setPath('userData', process.env.FLUJOCRM_USER_DATA_DIR);
+}
+if (process.env.FLUJOCRM_E2E_PORT) {
+  app.commandLine.appendSwitch('remote-debugging-port', process.env.FLUJOCRM_E2E_PORT);
+}
+
 // Database path in user's app data
 const DB_DIR = path.join(app.getPath('userData'), 'data');
 const DB_PATH = path.join(DB_DIR, 'flujocrm.db');
+
+function ensureColumn(table, column, definition) {
+  const columns = db.prepare(`PRAGMA table_info(${table})`).all().map((row) => row.name);
+  if (!columns.includes(column)) {
+    db.exec(`ALTER TABLE ${table} ADD COLUMN ${column} ${definition}`);
+  }
+}
+
+function normalizeContact(row) {
+  if (!row) return row;
+  return {
+    ...row,
+    value: Number(row.value || 0),
+    lastActivity: row.last_activity || row.lastActivity || '',
+  };
+}
 
 function initDatabase() {
   const Database = require('better-sqlite3');
@@ -23,36 +46,39 @@ function initDatabase() {
 
   // Create tables
   db.exec(`
-    CreATE TABLE IF NOT EXISTS contacts (
-      id INTEGER PRIMARY KEY AUTOINCreMENT,
+    CREATE TABLE IF NOT EXISTS contacts (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       name TEXT NOT NULL,
       email TEXT DEFAULT '',
       phone TEXT DEFAULT '',
       company TEXT DEFAULT '',
       category TEXT DEFAULT 'client',
       status TEXT DEFAULT 'active',
+      stage TEXT DEFAULT 'lead',
+      value REAL DEFAULT 0,
       tags TEXT DEFAULT '[]',
       notes TEXT DEFAULT '',
       avatar_color TEXT DEFAULT '#6366f1',
+      last_activity TEXT DEFAULT '',
       created_at TEXT DEFAULT (datetime('now')),
       updated_at TEXT DEFAULT (datetime('now'))
     );
 
-    CreATE TABLE IF NOT EXISTS pipeline (
-      id INTEGER PRIMARY KEY AUTOINCreMENT,
+    CREATE TABLE IF NOT EXISTS pipeline (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       contact_id INTEGER,
       title TEXT NOT NULL,
-      value reAL DEFAULT 0,
+      value REAL DEFAULT 0,
       stage TEXT DEFAULT 'lead',
       position INTEGER DEFAULT 0,
       notes TEXT DEFAULT '',
       created_at TEXT DEFAULT (datetime('now')),
       updated_at TEXT DEFAULT (datetime('now')),
-      FOreIGN KEY (contact_id) reFEreNCES contacts(id) ON DELETE SET NULL
+      FOREIGN KEY (contact_id) REFERENCES contacts(id) ON DELETE SET NULL
     );
 
-    CreATE TABLE IF NOT EXISTS tasks (
-      id INTEGER PRIMARY KEY AUTOINCreMENT,
+    CREATE TABLE IF NOT EXISTS tasks (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       contact_id INTEGER,
       title TEXT NOT NULL,
       description TEXT DEFAULT '',
@@ -60,16 +86,16 @@ function initDatabase() {
       completed INTEGER DEFAULT 0,
       priority TEXT DEFAULT 'medium',
       created_at TEXT DEFAULT (datetime('now')),
-      FOreIGN KEY (contact_id) reFEreNCES contacts(id) ON DELETE SET NULL
+      FOREIGN KEY (contact_id) REFERENCES contacts(id) ON DELETE SET NULL
     );
 
-    CreATE TABLE IF NOT EXISTS settings (
+    CREATE TABLE IF NOT EXISTS settings (
       key TEXT PRIMARY KEY,
       value TEXT NOT NULL
     );
 
-    CreATE TABLE IF NOT EXISTS activity_log (
-      id INTEGER PRIMARY KEY AUTOINCreMENT,
+    CREATE TABLE IF NOT EXISTS activity_log (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
       type TEXT NOT NULL,
       description TEXT NOT NULL,
       contact_id INTEGER,
@@ -78,7 +104,7 @@ function initDatabase() {
   `);
 
   // Default settings
-  const insertSetting = db.prepare('INSERT OR IGNOre INTO settings (key, value) VALUES (?, ?)');
+  const insertSetting = db.prepare('INSERT OR IGNORE INTO settings (key, value) VALUES (?, ?)');
   insertSetting.run('language', 'es');
   insertSetting.run('theme', 'dark');
   insertSetting.run('accent_color', '#6366f1');
@@ -91,6 +117,10 @@ function initDatabase() {
   ]));
   insertSetting.run('categories', JSON.stringify(['client', 'prospect', 'partner', 'vendor', 'other']));
   insertSetting.run('statuses', JSON.stringify(['active', 'inactive', 'vip']));
+
+  ensureColumn('contacts', 'stage', "TEXT DEFAULT 'lead'");
+  ensureColumn('contacts', 'value', 'REAL DEFAULT 0');
+  ensureColumn('contacts', 'last_activity', "TEXT DEFAULT ''");
 }
 
 function createWindow() {
@@ -109,11 +139,13 @@ function createWindow() {
     show: false
   });
 
-  mainWindow.loadFile('index.html');
-
-  mainWindow.once('ready-to-show', () => {
-    mainWindow.show();
+  mainWindow.webContents.once('did-finish-load', () => {
+    if (!mainWindow.isDestroyed()) {
+      mainWindow.show();
+    }
   });
+
+  mainWindow.loadFile('mockup.html');
 
   mainWindow.on('close', (event) => {
     if (tray) {
@@ -143,7 +175,7 @@ function createTray() {
 
 // Contacts
 ipcMain.handle('contacts:getAll', (event, filters = {}) => {
-  let query = 'SELECT * FROM contacts WHEre 1=1';
+  let query = 'SELECT * FROM contacts WHERE 1=1';
   const params = [];
 
   if (filters.search) {
@@ -161,24 +193,26 @@ ipcMain.handle('contacts:getAll', (event, filters = {}) => {
   }
 
   query += ' ORDER BY updated_at DESC';
-  return db.prepare(query).all(...params);
+  return db.prepare(query).all(...params).map(normalizeContact);
 });
 
 ipcMain.handle('contacts:get', (event, id) => {
-  return db.prepare('SELECT * FROM contacts WHEre id = ?').get(id);
+  return normalizeContact(db.prepare('SELECT * FROM contacts WHERE id = ?').get(id));
 });
 
 ipcMain.handle('contacts:create', (event, data) => {
   const stmt = db.prepare(`
-    INSERT INTO contacts (name, email, phone, company, category, status, tags, notes, avatar_color)
-    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
+    INSERT INTO contacts (name, email, phone, company, category, status, stage, value, tags, notes, avatar_color, last_activity)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
   `);
   const colors = ['#6366f1', '#ec4899', '#14b8a6', '#f59e0b', '#ef4444', '#8b5cf6', '#06b6d4'];
   const color = colors[Math.floor(Math.random() * colors.length)];
   const result = stmt.run(
     data.name, data.email || '', data.phone || '', data.company || '',
     data.category || 'client', data.status || 'active',
-    JSON.stringify(data.tags || []), data.notes || '', color
+    data.stage || 'lead', Number(data.value || 0),
+    JSON.stringify(data.tags || []), data.notes || '', color,
+    data.lastActivity || data.last_activity || 'Ahora'
   );
   logActivity('contact_created', `Contact created: ${data.name}`, result.lastInsertRowid);
   return { id: result.lastInsertRowid };
@@ -187,20 +221,38 @@ ipcMain.handle('contacts:create', (event, data) => {
 ipcMain.handle('contacts:update', (event, id, data) => {
   const fields = [];
   const params = [];
+  const fieldMap = {
+    name: 'name',
+    email: 'email',
+    phone: 'phone',
+    company: 'company',
+    category: 'category',
+    status: 'status',
+    stage: 'stage',
+    value: 'value',
+    tags: 'tags',
+    notes: 'notes',
+    avatar_color: 'avatar_color',
+    lastActivity: 'last_activity',
+    last_activity: 'last_activity',
+  };
   for (const [key, value] of Object.entries(data)) {
     if (key === 'id') continue;
-    fields.push(`${key} = ?`);
-    params.push(key === 'tags' ? JSON.stringify(value) : value);
+    const column = fieldMap[key];
+    if (!column) continue;
+    fields.push(`${column} = ?`);
+    params.push(column === 'tags' ? JSON.stringify(value) : value);
   }
+  if (fields.length === 0) return { success: true };
   fields.push("updated_at = datetime('now')");
   params.push(id);
-  db.prepare(`UPDATE contacts SET ${fields.join(', ')} WHEre id = ?`).run(...params);
+  db.prepare(`UPDATE contacts SET ${fields.join(', ')} WHERE id = ?`).run(...params);
   return { success: true };
 });
 
 ipcMain.handle('contacts:delete', (event, id) => {
-  const contact = db.prepare('SELECT name FROM contacts WHEre id = ?').get(id);
-  db.prepare('DELETE FROM contacts WHEre id = ?').run(id);
+  const contact = db.prepare('SELECT name FROM contacts WHERE id = ?').get(id);
+  db.prepare('DELETE FROM contacts WHERE id = ?').run(id);
   if (contact) logActivity('contact_deleted', `Contact deleted: ${contact.name}`);
   return { success: true };
 });
@@ -228,7 +280,7 @@ ipcMain.handle('contacts:import', (event) => {
     for (const row of rows) {
       const cols = row.split(',').map(c => c.trim().replace(/"/g, ''));
       const obj = {};
-      headers.foreach((h, i) => { obj[h] = cols[i] || ''; });
+      headers.forEach((h, i) => { obj[h] = cols[i] || ''; });
       stmt.run(
         obj.name || obj.nombre || `Contact ${imported + 1}`,
         obj.email || obj.correo || '',
@@ -255,7 +307,7 @@ ipcMain.handle('pipeline:getAll', () => {
 });
 
 ipcMain.handle('pipeline:create', (event, data) => {
-  const maxPos = db.prepare('SELECT MAX(position) as mp FROM pipeline WHEre stage = ?').get(data.stage);
+  const maxPos = db.prepare('SELECT MAX(position) as mp FROM pipeline WHERE stage = ?').get(data.stage);
   const result = db.prepare(`
     INSERT INTO pipeline (contact_id, title, value, stage, position, notes)
     VALUES (?, ?, ?, ?, ?, ?)
@@ -274,12 +326,12 @@ ipcMain.handle('pipeline:update', (event, id, data) => {
   }
   fields.push("updated_at = datetime('now')");
   params.push(id);
-  db.prepare(`UPDATE pipeline SET ${fields.join(', ')} WHEre id = ?`).run(...params);
+  db.prepare(`UPDATE pipeline SET ${fields.join(', ')} WHERE id = ?`).run(...params);
   return { success: true };
 });
 
 ipcMain.handle('pipeline:delete', (event, id) => {
-  db.prepare('DELETE FROM pipeline WHEre id = ?').run(id);
+  db.prepare('DELETE FROM pipeline WHERE id = ?').run(id);
   return { success: true };
 });
 
@@ -289,7 +341,7 @@ ipcMain.handle('tasks:getAll', (event, filters = {}) => {
     SELECT t.*, c.name as contact_name
     FROM tasks t
     LEFT JOIN contacts c ON t.contact_id = c.id
-    WHEre 1=1
+    WHERE 1=1
   `;
   const params = [];
 
@@ -324,30 +376,30 @@ ipcMain.handle('tasks:update', (event, id, data) => {
     params.push(value);
   }
   params.push(id);
-  db.prepare(`UPDATE tasks SET ${fields.join(', ')} WHEre id = ?`).run(...params);
+  db.prepare(`UPDATE tasks SET ${fields.join(', ')} WHERE id = ?`).run(...params);
   return { success: true };
 });
 
 ipcMain.handle('tasks:delete', (event, id) => {
-  db.prepare('DELETE FROM tasks WHEre id = ?').run(id);
+  db.prepare('DELETE FROM tasks WHERE id = ?').run(id);
   return { success: true };
 });
 
 // Settings
 ipcMain.handle('settings:get', (event, key) => {
-  const row = db.prepare('SELECT value FROM settings WHEre key = ?').get(key);
+  const row = db.prepare('SELECT value FROM settings WHERE key = ?').get(key);
   return row ? row.value : null;
 });
 
 ipcMain.handle('settings:getAll', () => {
   const rows = db.prepare('SELECT * FROM settings').all();
   const obj = {};
-  rows.foreach(r => { obj[r.key] = r.value; });
+  rows.forEach(r => { obj[r.key] = r.value; });
   return obj;
 });
 
 ipcMain.handle('settings:set', (event, key, value) => {
-  db.prepare('INSERT OR rePLACE INTO settings (key, value) VALUES (?, ?)').run(key, value);
+  db.prepare('INSERT OR REPLACE INTO settings (key, value) VALUES (?, ?)').run(key, value);
   return { success: true };
 });
 
@@ -356,11 +408,11 @@ ipcMain.handle('reports:summary', () => {
   const totalContacts = db.prepare('SELECT COUNT(*) as count FROM contacts').get().count;
   const byStatus = db.prepare('SELECT status, COUNT(*) as count FROM contacts GROUP BY status').all();
   const byCategory = db.prepare('SELECT category, COUNT(*) as count FROM contacts GROUP BY category').all();
-  const pipelineValue = db.prepare("SELECT stage, SUM(value) as total, COUNT(*) as count FROM pipeline WHEre stage != 'lost' GROUP BY stage").all();
-  const totalPipelineValue = db.prepare("SELECT SUM(value) as total FROM pipeline WHEre stage NOT IN ('lost')").get().total || 0;
-  const closedValue = db.prepare("SELECT SUM(value) as total FROM pipeline WHEre stage = 'closed'").get().total || 0;
-  const tasksDue = db.prepare("SELECT COUNT(*) as count FROM tasks WHEre completed = 0 AND due_date <= date('now')").get().count;
-  const tasksUpcoming = db.prepare("SELECT COUNT(*) as count FROM tasks WHEre completed = 0 AND due_date > date('now') AND due_date <= date('now', '+7 days')").get().count;
+  const pipelineValue = db.prepare("SELECT stage, SUM(value) as total, COUNT(*) as count FROM pipeline WHERE stage != 'lost' GROUP BY stage").all();
+  const totalPipelineValue = db.prepare("SELECT SUM(value) as total FROM pipeline WHERE stage NOT IN ('lost')").get().total || 0;
+  const closedValue = db.prepare("SELECT SUM(value) as total FROM pipeline WHERE stage = 'closed'").get().total || 0;
+  const tasksDue = db.prepare("SELECT COUNT(*) as count FROM tasks WHERE completed = 0 AND due_date <= date('now')").get().count;
+  const tasksUpcoming = db.prepare("SELECT COUNT(*) as count FROM tasks WHERE completed = 0 AND due_date > date('now') AND due_date <= date('now', '+7 days')").get().count;
   const recentActivity = db.prepare('SELECT * FROM activity_log ORDER BY created_at DESC LIMIT 20').all();
 
   return {
@@ -374,7 +426,7 @@ ipcMain.handle('reports:summary', () => {
 ipcMain.handle('db:backup', () => {
   const result = dialog.showSaveDialogSync(mainWindow, {
     title: 'Backup Database',
-    defaultPath: `flujocrm-backup-${new Date().toIerestring().slice(0, 10)}.db`,
+    defaultPath: `flujocrm-backup-${new Date().toISOString().slice(0, 10)}.db`,
     filters: [{ name: 'SQLite Database', extensions: ['db'] }]
   });
   if (!result) return { success: false };
@@ -384,7 +436,7 @@ ipcMain.handle('db:backup', () => {
 
 ipcMain.handle('db:restore', () => {
   const result = dialog.showOpenDialogSync(mainWindow, {
-    title: 'restore Database',
+    title: 'Restore Database',
     filters: [{ name: 'SQLite Database', extensions: ['db'] }],
     properties: ['openFile']
   });
@@ -401,7 +453,7 @@ function logActivity(type, description, contactId = null) {
 }
 
 // App lifecycle
-app.whenready().then(() => {
+app.whenReady().then(() => {
   initDatabase();
   createWindow();
   // createTray(); // Uncomment when tray icon asset is available

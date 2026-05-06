@@ -268,13 +268,13 @@ tbody td{padding:12px 16px;font-size:13px;color:var(--text-secondary);vertical-a
 }
 .contact-info .name{font-weight:600;color:var(--text-primary);font-size:14px}
 .contact-info .email{font-size:12px;color:var(--text-muted);margin-top:1px}
-.[elichicado]ckbox{
+.checkbox{
   width:18px;height:18px;border-radius:4px;border:2px solid var(--border);
   cursor:pointer;transition:all var(--transition);appearance:none;background:transparent;
   display:flex;align-items:center;justify-content:center;
 }
-.[elichicado]ckbox:[elichicado]cked{background:var(--accent);border-color:var(--accent)}
-.[elichicado]ckbox:[elichicado]cked::after{content:'';width:5px;height:9px;border:2px solid var(--bg-primary);border-top:0;border-left:0;transform:rotate(45deg) translate(-1px,-1px)}
+.checkbox:checked{background:var(--accent);border-color:var(--accent)}
+.checkbox:checked::after{content:'';width:5px;height:9px;border:2px solid var(--bg-primary);border-top:0;border-left:0;transform:rotate(45deg) translate(-1px,-1px)}
 td .actions{display:flex;gap:4px;opacity:0;transition:opacity var(--transition)}
 tr:hover td .actions{opacity:1}
 .action-btn{
@@ -468,7 +468,7 @@ tr:hover td .actions{opacity:1}
 }
 @keyframes float{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
 
-/* ===== POWEreD BY ===== */
+/* ===== POWERED BY ===== */
 .powered-by{
   position:fixed;bottom:12px;right:12px;
   display:flex;align-items:center;gap:6px;
@@ -490,7 +490,7 @@ tr:hover td .actions{opacity:1}
 }
 .mobile-toggle svg{width:20px;height:20px;color:var(--text-primary)}
 
-/* ===== reSPONSIVE ===== */
+/* ===== RESPONSIVE ===== */
 @media(max-width:1024px){
   .sidebar{position:fixed;left:0;top:0;bottom:0;transform:translateX(-100%)}
   .sidebar.open{transform:translateX(0)}
@@ -711,7 +711,7 @@ tr:hover td .actions{opacity:1}
 
       <div class="filters" id="contact-filters">
         <span class="filter-chip active" data-filter="all" onclick="applyFilter('all')">Todos</span>
-        <span class="filter-chip" data-filter="active" onclick="applyFilter('active')">Actitú</span>
+        <span class="filter-chip" data-filter="active" onclick="applyFilter('active')">Activos</span>
         <span class="filter-chip" data-filter="lead" onclick="applyFilter('lead')">Leads</span>
         <span class="filter-chip" data-filter="contacted" onclick="applyFilter('contacted')">Contactados</span>
         <span class="filter-chip" data-filter="vip" onclick="applyFilter('vip')">VIP</span>
@@ -720,11 +720,11 @@ tr:hover td .actions{opacity:1}
 
       <div class="table-container">
         <div class="table-header">
-          <input type="[elichicado]ckbox" class="[elichicado]ckbox" id="select-all" onchange="toggleSelectAll(this.[elichicado]cked)">
+          <input type="checkbox" class="checkbox" id="select-all" onchange="toggleSelectAll(this.checked)">
           <span class="count" id="table-count">0 contactos</span>
           <div style="margin-left:auto;display:flex;gap:6px" id="bulk-actions" hidden>
             <button class="btn btn-sm btn-secondary" onclick="showToast('Tags actualizados','success')">Etiquetar</button>
-            <button class="btn btn-sm btn-danger" onclick="showToast('No se puede elichicar en demo','error')">Elichicar</button>
+            <button class="btn btn-sm btn-danger" onclick="showToast('No se puede eliminar en demo','error')">Eliminar</button>
           </div>
         </div>
         <div style="overflow-x:auto">
@@ -803,7 +803,7 @@ tr:hover td .actions{opacity:1}
       </div>
     </div>
 
-    <!-- ===== rePORTS ===== -->
+    <!-- ===== REPORTS ===== -->
     <div class="view" id="view-reports">
       <div class="view-header">
         <div>
@@ -823,7 +823,7 @@ tr:hover td .actions{opacity:1}
       </div>
       <div class="charts-grid">
         <div class="chart-card">
-          <h3>Ingreeres Mensuales</h3>
+          <h3>Ingresos Mensuales</h3>
           <canvas id="chart-revenue"></canvas>
         </div>
         <div class="chart-card">
@@ -1020,7 +1020,7 @@ tr:hover td .actions{opacity:1}
   </button>
 </div>
 
-<!-- POWEreD BY MEDIOEVO -->
+<!-- POWERED BY MEDIOEVO -->
 <a href="https://medioevo.space" target="_blank" class="powered-by">
   <svg width="14" height="14" viewBox="0 0 38 38" fill="none">
     <rect width="38" height="38" rx="10" fill="#0f172a"/>
@@ -1030,8 +1030,8 @@ tr:hover td .actions{opacity:1}
   Powered by MEDIOEVO
 </a>
 
-<!-- Chart.js CDN -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<!-- Chart.js is bundled locally in the Electron package. -->
+<script src="./node_modules/chart.js/dist/chart.umd.js"></script>
 
 <script>
 // ===== STATE =====
@@ -1041,6 +1041,46 @@ let currentFilter = 'all';
 let charts = {};
 
 const AVATAR_COLORS = ['#6366f1','#10b981','#f59e0b','#ec4899','#3b82f6','#8b5cf6','#f97316','#14b8a6','#ef4444','#06b6d4'];
+
+function hasNativeStorage() {
+  return Boolean(window.api && window.api.contacts);
+}
+
+function normalizeContact(c) {
+  return {
+    id: Number(c.id),
+    name: c.name || '',
+    email: c.email || '',
+    phone: c.phone || '',
+    company: c.company || '',
+    status: c.status || 'lead',
+    stage: c.stage || 'lead',
+    value: Number(c.value || 0),
+    notes: c.notes || '',
+    lastActivity: c.lastActivity || c.last_activity || '',
+  };
+}
+
+async function fetchNativeContacts() {
+  const rows = await window.api.contacts.getAll({});
+  contacts = rows.map(normalizeContact);
+}
+
+async function migrateBrowserStorageToSqliteIfNeeded() {
+  if (!hasNativeStorage() || contacts.length > 0) return;
+  let saved = [];
+  try {
+    saved = JSON.parse(localStorage.getItem('flujocrm_contacts') || '[]');
+  } catch(e) {
+    saved = [];
+  }
+  if (!Array.isArray(saved) || saved.length === 0) return;
+  for (const contact of saved.map(normalizeContact)) {
+    await window.api.contacts.create(contact);
+  }
+  await fetchNativeContacts();
+  showToast('Datos locales migrados a SQLite', 'success');
+}
 
 // ===== DEMO DATA =====
 const DEMO_CONTACTS = [
@@ -1074,8 +1114,8 @@ const DEMO_ACTIVITIES = [
 
 // ===== NAVIGATION =====
 function switchView(view) {
-  document.querySelectorAll('.view').foreach(v => v.classList.remove('active'));
-  document.querySelectorAll('.nav-item').foreach(n => n.classList.remove('active'));
+  document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+  document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
   document.getElementById('view-' + view).classList.add('active');
   document.querySelector(`.nav-item[data-view="${view}"]`).classList.add('active');
   document.querySelector('.sidebar').classList.remove('open');
@@ -1099,7 +1139,7 @@ function renderContacts() {
     const color = AVATAR_COLORS[c.id % AVATAR_COLORS.length];
     const statusLabels = {active:'Activo',lead:'Lead',contacted:'Contactado',vip:'VIP',lost:'Perdido'};
     return `<tr>
-      <td><input type="[elichicado]ckbox" class="[elichicado]ckbox" data-id="${c.id}" onchange="updateBulk()"></td>
+      <td><input type="checkbox" class="checkbox" data-id="${c.id}" onchange="updateBulk()"></td>
       <td><div class="contact-cell">
         <div class="avatar" style="background:${color}">${initials}</div>
         <div class="contact-info"><div class="name">${c.name}</div><div class="email">${c.email}</div></div>
@@ -1111,7 +1151,7 @@ function renderContacts() {
       <td style="font-size:12px;color:var(--text-muted)">${c.lastActivity}</td>
       <td><div class="actions">
         <button class="action-btn" onclick="openModal('edit',${c.id})" title="Editar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 013 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></button>
-        <button class="action-btn" onclick="deleteContact(${c.id})" title="Elichicar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></button>
+        <button class="action-btn" onclick="deleteContact(${c.id})" title="Eliminar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="3 6 5 6 21 6"/><path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2"/></svg></button>
       </div></td>
     </tr>`;
   }).join('');
@@ -1126,23 +1166,23 @@ function renderContacts() {
 function filterContacts(val) { renderContacts(); }
 function applyFilter(f) {
   currentFilter = f;
-  document.querySelectorAll('.filter-chip').foreach(c => c.classList.toggle('active', c.dataset.filter === f));
+  document.querySelectorAll('.filter-chip').forEach(c => c.classList.toggle('active', c.dataset.filter === f));
   renderContacts();
 }
 
-function toggleSelectAll([elichicado]cked) {
-  document.querySelectorAll('#contacts-table .[elichicado]ckbox').foreach(cb => cb.[elichicado]cked = [elichicado]cked);
+function toggleSelectAll(checked) {
+  document.querySelectorAll('#contacts-table .checkbox').forEach(cb => cb.checked = checked);
   updateBulk();
 }
 function updateBulk() {
-  const [elichicado]cked = document.querySelectorAll('#contacts-table .[elichicado]ckbox:[elichicado]cked').length;
-  document.getElementById('bulk-actions').hidden = [elichicado]cked === 0;
+  const checked = document.querySelectorAll('#contacts-table .checkbox:checked').length;
+  document.getElementById('bulk-actions').hidden = checked === 0;
 }
 
 // ===== KANBAN =====
 function renderKanban() {
   const stages = ['lead','contact','proposal','negotiation','closed'];
-  stages.foreach(stage => {
+  stages.forEach(stage => {
     const cards = document.querySelector(`.kanban-cards[data-stage="${stage}"]`);
     const stageContacts = contacts.filter(c => c.stage === stage);
     cards.innerHTML = stageContacts.map(c => {
@@ -1170,7 +1210,7 @@ function renderKanban() {
   document.getElementById('pipeline-total').textContent = '$'+grandTotal.toLocaleString();
 }
 
-function dropCard(e) {
+async function dropCard(e) {
   e.preventDefault();
   e.currentTarget.style.background = '';
   const id = parseInt(e.dataTransfer.getData('text/plain'));
@@ -1178,6 +1218,12 @@ function dropCard(e) {
   const c = contacts.find(x => x.id === id);
   if (c) {
     c.stage = newStage;
+    c.lastActivity = 'Ahora';
+    if (hasNativeStorage()) {
+      await window.api.contacts.update(id, { stage: newStage, lastActivity: 'Ahora' });
+    } else {
+      saveToStorage();
+    }
     renderContacts();
     showToast(`${c.name} movido a ${newStage}`, 'success');
   }
@@ -1199,7 +1245,7 @@ function openModal(mode, id) {
   editingId = null;
   document.getElementById('modal-title').textContent = 'Nuevo Contacto';
   document.getElementById('modal-save').textContent = 'Guardar contacto';
-  ['f-name','f-email','f-phone','f-company','f-notes'].foreach(f => document.getElementById(f).value = '');
+  ['f-name','f-email','f-phone','f-company','f-notes'].forEach(f => document.getElementById(f).value = '');
   document.getElementById('f-value').value = '';
   document.getElementById('f-status').value = 'lead';
   document.getElementById('f-stage').value = 'lead';
@@ -1224,7 +1270,7 @@ function openModal(mode, id) {
 }
 function closeModal() { document.getElementById('modal-overlay').classList.remove('show'); }
 
-function saveContact() {
+async function saveContact() {
   const name = document.getElementById('f-name').value.trim();
   if (!name) { showToast('El nombre es obligatorio', 'error'); return; }
   const data = {
@@ -1240,24 +1286,40 @@ function saveContact() {
   };
 
   if (editingId) {
-    const idx = contacts.findIndex(c => c.id === editingId);
-    if (idx >= 0) { contacts[idx] = {...contacts[idx], ...data}; }
+    if (hasNativeStorage()) {
+      await window.api.contacts.update(editingId, data);
+      await fetchNativeContacts();
+    } else {
+      const idx = contacts.findIndex(c => c.id === editingId);
+      if (idx >= 0) { contacts[idx] = {...contacts[idx], ...data}; }
+      saveToStorage();
+    }
     showToast('Contacto actualizado', 'success');
   } else {
-    data.id = contacts.length > 0 ? Math.max(...contacts.map(c=>c.id)) + 1 : 1;
-    contacts.push(data);
+    if (hasNativeStorage()) {
+      await window.api.contacts.create(data);
+      await fetchNativeContacts();
+    } else {
+      data.id = contacts.length > 0 ? Math.max(...contacts.map(c=>c.id)) + 1 : 1;
+      contacts.push(data);
+      saveToStorage();
+    }
     showToast('Contacto creado', 'success');
   }
   closeModal();
   renderContacts();
-  saveToStorage();
 }
 
-function deleteContact(id) {
-  contacts = contacts.filter(c => c.id !== id);
+async function deleteContact(id) {
+  if (hasNativeStorage()) {
+    await window.api.contacts.delete(id);
+    await fetchNativeContacts();
+  } else {
+    contacts = contacts.filter(c => c.id !== id);
+    saveToStorage();
+  }
   renderContacts();
-  saveToStorage();
-  showToast('Contacto elichicado', 'info');
+  showToast('Contacto eliminado', 'info');
 }
 
 // ===== TOAST =====
@@ -1388,7 +1450,7 @@ function renderCharts() {
       data: {
         labels: ['Oct','Nov','Dic','Ene','Feb','Mar'],
         datasets: [{
-          label: 'Ingreeres ($)',
+          label: 'Ingresos ($)',
           data: contacts.length > 0 ? [45000,62000,78000,95000,110000,142000] : [0,0,0,0,0,0],
           borderColor: '#10b981',
           backgroundColor: 'rgba(16,185,129,.1)',
@@ -1423,10 +1485,22 @@ function renderCharts() {
 }
 
 // ===== DEMO =====
-function loadDemo() {
-  contacts = JSON.parse(JSON.stringify(DEMO_CONTACTS));
+async function loadDemo() {
+  if (contacts.length > 0 && !confirm('Cargar demo reemplazara los contactos actuales. Continuar?')) return;
+  const demoContacts = JSON.parse(JSON.stringify(DEMO_CONTACTS));
+  if (hasNativeStorage()) {
+    for (const contact of contacts) {
+      await window.api.contacts.delete(contact.id);
+    }
+    for (const contact of demoContacts) {
+      await window.api.contacts.create(contact);
+    }
+    await fetchNativeContacts();
+  } else {
+    contacts = demoContacts;
+    saveToStorage();
+  }
   renderContacts();
-  saveToStorage();
   renderActivityFeed();
   setTimeout(renderCharts, 200);
   showToast('Datos de demo cargados (15 contactos, $458K pipeline)', 'success');
@@ -1469,10 +1543,18 @@ function exportCSV() {
 
 // ===== STORAGE =====
 function saveToStorage() {
+  if (hasNativeStorage()) return;
   try { localStorage.setItem('flujocrm_contacts', JSON.stringify(contacts)); } catch(e) {}
 }
-function loadFromStorage() {
+async function loadFromStorage() {
   try {
+    if (hasNativeStorage()) {
+      await fetchNativeContacts();
+      await migrateBrowserStorageToSqliteIfNeeded();
+      renderContacts();
+      if(contacts.length>0) renderActivityFeed();
+      return;
+    }
     const data = localStorage.getItem('flujocrm_contacts');
     if (data) { contacts = JSON.parse(data); renderContacts(); if(contacts.length>0) renderActivityFeed(); }
   } catch(e) {}
@@ -1480,7 +1562,7 @@ function loadFromStorage() {
 
 // ===== ACCENT COLOR =====
 function selectAccent(el, color) {
-  document.querySelectorAll('.color-swatch').foreach(s => s.classList.remove('selected'));
+  document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
   el.classList.add('selected');
   document.documentElement.style.setProperty('--accent', color);
   showToast('Color de acento actualizado', 'success');
@@ -1496,9 +1578,11 @@ document.addEventListener('keydown', e => {
 });
 
 // ===== INIT =====
-loadFromStorage();
-if (contacts.length === 0) updateStats();
-setTimeout(renderCharts, 500);
+(async function init() {
+  await loadFromStorage();
+  if (contacts.length === 0) updateStats();
+  setTimeout(renderCharts, 500);
+})();
 </script>
 </body>
 </html>

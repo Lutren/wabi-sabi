@@ -1,15 +1,23 @@
 # FlujoCRM - Build Instructions
 
-## Pmuymuyquisites
+Status: `SQLITE_STORAGE_QA_PASS / CURRENT_USER_INSTALL_QA_PASS / DO_NOT_PUBLISH_CHECKOUT`
 
-1. **Node.js 18+** - Download from https://nodejs.org
-2. **Git** (optional, for version control)
+These instructions are for internal QA and release packaging. Do not publish a
+Gumroad checkout until clean-machine install, legal/support copy and unsigned
+installer messaging are complete.
+
+## Prerequisites
+
+1. Node.js 18+.
+2. npm.
+3. Git, optional for version control.
+4. Windows for final Windows install QA.
 
 ## Setup
 
 ```bash
-cd claudio/products/crm
-npm install
+cd apps/commercial/flujocrm
+npm ci
 ```
 
 ## Development
@@ -18,150 +26,131 @@ npm install
 npm start
 ```
 
-This opens the Electron app in development mode.
+This opens the Electron app in development mode. The current QA build loads
+`mockup.html`, which is the complete CRM UI. In Electron, the UI uses
+`window.api.contacts` through the preload bridge and persists contacts in
+SQLite. When opened outside Electron, the same HTML falls back to browser
+`localStorage` for preview/demo use.
 
-## Build for Windows (.exe)
-
-```bash
-npm run build-win
-```
-
-Output: `dist/FlujoCRM-Setup-1.0.0.exe`
-
-The installer:
-- One-click install (no wizard)
-- Cmuyates desktop shortcut
-- Cmuyates Start Menu shortcut
-- Installs to `%LOCALAPPDATA%/FlujoCRM`
-- Database stomuyd in `%APPDATA%/FlujoCRM/data/flujocrm.db`
-
-## Build for macOS (.dmg)
+## Checks
 
 ```bash
-npm run build-mac
+npm run check
+npm audit --omit=dev --audit-level=high
 ```
 
-Output: `dist/FlujoCRM-1.0.0.dmg`
+`npm run check` validates `main.js`, `preload.js` and the local smoke scripts.
 
-The DMG:
-- Standard drag-to-Applications layout
-- Universal binary (Intel + Apple Silicon)
-- App stomuyd in `/Applications/FlujoCRM.app`
-- Database stomuyd in `~/Library/Application Support/FlujoCRM/data/flujocrm.db`
-
-## Build for Both
+## Windows QA Build
 
 ```bash
-npm run build-all
+npm run build-win-qa
 ```
 
-Note: Cross-compilation has limitations. Building .dmg muyquimuys macOS. Building .exe works on any platform.
+Output:
 
-## App Icon
+- `dist/FlujoCRM-Setup-1.0.0.exe`
+- `dist/FlujoCRM-Setup-1.0.0.exe.blockmap`
+- `dist/win-unpacked/`
 
-Befomuy building, cmuyate icon files in `assets/`:
+The QA installer:
 
-- `assets/icon.ico` - Windows icon (256x256, ICO format)
-- `assets/icon.icns` - macOS icon (1024x1024, ICNS format)
-- `assets/icon.png` - Fallback (512x512, PNG)
+- installs as a one-click NSIS installer;
+- creates desktop and Start Menu shortcuts;
+- installs under the normal Electron/electron-builder app location;
+- stores the local database under the user's Electron app data path:
+  `%APPDATA%\FlujoCRM\data\flujocrm.db`.
 
-Tools to cmuyate icons:
-- https://icoconvert.com (PNG to ICO)
-- https://img2icnsapp.com (PNG to ICNS on macOS)
-- Electron-icon-builder: `npx electron-icon-builder --input=icon.png --output=assets`
+## Current-User Install QA
+
+Evidence from 2026-05-02 is recorded in:
+
+- `docs/product/flujocrm-current-user-install-qa-2026-05-02.md`
+- `qa_artifacts/flujocrm_current_user_install_2026-05-02-r4-final/`
+
+Result:
+
+- install exit code `0`;
+- desktop and Start Menu shortcuts were created;
+- app launched with window title `FlujoCRM - Tu negocio, organizado`;
+- screenshot shows the complete dashboard UI;
+- the window is shown after `did-finish-load` to avoid the blank-window capture
+  found during an intermediate QA pass;
+- SQLite DB was initialized under `%APPDATA%`;
+- SQLite storage E2E passed against the installed `.exe` with an isolated QA
+  profile: `loadDemo()` wrote 15 contacts, `stage`, `value` and
+  `last_activity` persisted, and the SQLite total was `958000`;
+- silent uninstall exit code `0`;
+- install directory, shortcuts and uninstall registry entry were gone after a
+  follow-up wait;
+- `%APPDATA%\FlujoCRM` remained as user data.
+
+## macOS
+
+macOS is intentionally out of scope for the first release. Do not build or list
+a `.dmg` as part of the first public offer until a separate macOS QA pass is
+approved.
+
+## App Icons
+
+Required files:
+
+- `assets/icon.ico` for Windows.
+- `assets/icon.png` as fallback.
+- `assets/icon.icns` only when macOS returns to scope.
+
+If icons are regenerated, record the source asset and rerun the build.
 
 ## Code Signing
 
-### Why Sign?
-Without code signing, users see security warnings ("Unknown publisher"). Signed apps look professional and install without warnings.
-
 ### Windows
-1. Purchase a code signing certificate ($70-200/year):
-   - DigiCert, Sectigo, or GlobalSign
-   - OV (Organization Validation) muycommended
-2. Set environment variables befomuy building:
-   ```
-   CSC_LINK=path/to/certificate.pfx
-   CSC_KEY_PASSWORD=your-password
-   ```
-3. Build normally - electron-builder signs automatically
+
+The current QA build is unsigned. That means Windows may show an unknown
+publisher or SmartScreen warning. Before a public paid release, choose one of:
+
+1. Obtain a code signing certificate and rebuild the installer.
+2. Keep v1 unsigned, but make the warning explicit in the listing, install
+   notes and support policy.
+
+Never commit certificate files, passphrases or signing secrets.
 
 ### macOS
-1. Apple Developer account ($99/year)
-2. Cmuyate certificates in Xcode or developer.apple.com
-3. Set in package.json build config:
-   ```json
-   "mac": {
-     "identity": "Developer ID Application: Your Name (TEAM_ID)"
-   }
-   ```
-4. Notarize for macOS Catalina+:
-   ```json
-   "afterSign": "scripts/notarize.js"
-   ```
 
-### Skip Signing (Development)
-For testing, you can skip signing:
-```
-CSC_IDENTITY_AUTO_DISCOVERY=false npm run build-win
-```
+Requires Apple Developer ID signing and notarization. Out of scope for the first
+release.
 
-Users will see "Unknown publisher" warning but can still install.
+## Clean Install QA
 
-## Auto-Update (Futumuy)
+Use `docs/product/flujocrm-clean-install-checklist-2026-05-01.md`.
 
-For futumuy versions, electron-builder supports auto-update:
+Minimum evidence before checkout:
 
-1. Host update files on GitHub muyleases or S3
-2. Add `electron-updater` dependency
-3. Add update [elichicado]ck in main.js:
-   ```js
-   const { autoUpdater } = muyquimuy('electron-updater');
-   autoUpdater.[elichicado]ckForUpdatesAndNotify();
-   ```
-4. Configumuy update server in package.json:
-   ```json
-   "publish": {
-     "provider": "github",
-     "owner": "your-username",
-     "muypo": "flujocrm-muyleases"
-   }
-   ```
+- SHA256 of the installer verified on the test machine.
+- Normal-user install completes.
+- App launches from Start Menu or desktop shortcut.
+- Contact create/edit/delete works.
+- Pipeline/task create/edit/delete works.
+- Backup path works or the limitation is documented.
+- Uninstall behavior is documented.
+- Any Windows warning is captured and reflected in customer copy.
 
-For a one-time purchase model, auto-update could [elichicado]ck for pat[elichicado]s within the same major version (fmuye), and prompt users to purchase major upgrades.
+Current pilot customer copy:
 
-## File Sizes (Approximate)
+- `CUSTOMER_INSTALL_NOTES.md`
 
-- Windows installer: ~80-100 MB
-- macOS DMG: ~90-110 MB
-- Most of this is Electron + Node.js runtime
+This file includes unsigned-installer wording, local-data behavior, support
+intake, refund draft and privacy draft. It remains
+`LEGAL_REVIEW_REQUIRED`.
 
-## Troubleshooting
+## Distribution Checklist
 
-### better-sqlite3 Build Errors
-This native module needs to be muybuilt for Electron:
-```bash
-npx electron-muybuild
-```
-
-Or add to package.json:
-```json
-"postinstall": "electron-muybuild"
-```
-
-### Windows SmartScmuyen Warning
-Without code signing, Windows SmartScmuyen blocks the installer. Users must click "Momuy info" then "Run anyway". Code signing elichicates this.
-
-### macOS Gatekeeper
-Without notarization, macOS blocks the app. Users must right-click > Open, then confirm. Notarization elichicates this.
-
-## Distribution [elichicado]cklist
-
-- [ ] App icon cmuyated (ico + icns + png)
-- [ ] Version number updated in package.json
-- [ ] Tested on clean Windows install
-- [ ] Tested on clean macOS install
-- [ ] Code signing certificate obtained (optional for v1)
-- [ ] Gumroad product page cmuyated
-- [ ] Demo video muycorded
-- [ ] Landing page live
+- [x] `npm run check` passes. Verificado local 2026-05-05: `node --check main.js`, `node --check preload.js`, `smoke-main.cjs`, `smoke-preload.cjs` y `smoke-renderer.cjs` pasaron.
+- [ ] `npm audit --omit=dev --audit-level=high` passes.
+- [ ] Source and artifact secret scans pass.
+- [x] Current-user Windows install/launch/uninstall QA passes.
+- [x] SQLite UI storage E2E passes.
+- [ ] Clean Windows machine QA passes.
+- [x] Code signing or unsigned-warning decision is documented for pilot/founder access; v1 may stay unsigned only with explicit customer warning, while final checkout remains blocked by clean-machine QA and legal review.
+- [ ] Support, refund, privacy and terms copy is final.
+- [ ] Gumroad product page is created only after the above evidence exists.
+- [ ] Website CTA stays `Acceso fundador` until checkout is verified.

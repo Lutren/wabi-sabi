@@ -5,11 +5,14 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "check": "node --check main.js && node --check preload.js && node scripts/smoke-preload.cjs",
+    "check": "node --check main.js && node --check preload.js && node scripts/smoke-main.cjs && node scripts/smoke-preload.cjs && node scripts/smoke-renderer.cjs",
     "build-win": "electron-builder --win",
+    "build-win-qa": "electron-builder --win --config.win.signAndEditExecutable=false --publish never",
     "build-mac": "electron-builder --mac",
     "build-all": "electron-builder --win --mac",
-    "pack": "electron-builder --dir"
+    "pack": "electron-builder --dir",
+    "pack-win-qa": "electron-builder --dir --config.win.signAndEditExecutable=false",
+    "smoke:e2e-storage": "node scripts/e2e-storage-smoke.cjs"
   },
   "author": {
     "name": "L.R. Gonzalez",
@@ -18,14 +21,15 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "better-sqlite3": "^11.0.0",
+    "better-sqlite3": "^12.9.0",
     "chart.js": "^4.4.0"
   },
   "devDependencies": {
-    "electron": "^33.0.0",
-    "electron-builder": "^25.0.0"
+    "electron": "^41.4.0",
+    "electron-builder": "^26.8.1"
   },
   "build": {
+    "publish": [],
     "appId": "com.flujocrm.app",
     "productName": "FlujoCRM",
     "copyright": "Copyright 2026 L.R. Gonzalez. All rights reserved.",
@@ -36,6 +40,7 @@
       "main.js",
       "preload.js",
       "index.html",
+      "mockup.html",
       "assets/**/*",
       "node_modules/**/*"
     ],
@@ -43,7 +48,9 @@
       "target": [
         {
           "target": "nsis",
-          "arch": ["x64", "ia32"]
+          "arch": [
+            "x64"
+          ]
         }
       ],
       "icon": "assets/icon.ico",
@@ -54,15 +61,16 @@
       "allowToChangeInstallationDirectory": false,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "FlujoCRM",
-      "installerLanguages": ["en_US", "es_419"],
-      "language": "0409"
+      "shortcutName": "FlujoCRM"
     },
     "mac": {
       "target": [
         {
           "target": "dmg",
-          "arch": ["x64", "arm64"]
+          "arch": [
+            "x64",
+            "arm64"
+          ]
         }
       ],
       "icon": "assets/icon.icns",
@@ -72,8 +80,16 @@
     "dmg": {
       "title": "FlujoCRM ${version}",
       "contents": [
-        { "x": 130, "y": 220 },
-        { "x": 410, "y": 220, "type": "link", "path": "/Applications" }
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
       ]
     }
   }

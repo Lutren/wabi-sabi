@@ -1,0 +1,102 @@
+{
+  "schema": "medioevo.prompt_master.all_carriles_local_closure.v1",
+  "date": "2026-05-06",
+  "mode": "LOCAL_REVIEW_ONLY",
+  "host_gate": "JAMMING/BLOCK",
+  "source_prompt_sha256": "DB8791BE402BE2F7C41ACD19359AF406776E18BFE16BF4C5D83FE5DBDE500DB7",
+  "pending_review": {
+    "active_dedup": 389,
+    "claudio_open": 69
+  },
+  "validations": [
+    {
+      "lane": "COMMS",
+      "command": "python COMMS\\tools\\validate_seto_comms.py --json",
+      "status": "PASS"
+    },
+    {
+      "lane": "Matrix/Biblioteca",
+      "command": "python tools\\matrix\\validate_library.py --root . --json",
+      "status": "PASS",
+      "module_count": 10,
+      "fingerprint": "317BE610047A34BC"
+    },
+    {
+      "lane": "AI Browser",
+      "command": "python -m pytest tests\\test_source_snapshot.py -q",
+      "status": "PASS",
+      "passed": 13
+    },
+    {
+      "lane": "Observacionismo L1",
+      "command": "python -m pytest research\\observacionismo-lab\\tests -q",
+      "status": "PASS",
+      "passed": 34
+    },
+    {
+      "lane": "Canon Observacionismo",
+      "command": "python -m pytest tests\\test_observacionismo_concepts.py -q",
+      "status": "PASS",
+      "passed": 4
+    },
+    {
+      "lane": "Matrix Claudio",
+      "command": "python -m pytest -q tests\\test_matrix_library_api.py tests\\test_matrix_runtime.py",
+      "status": "PASS",
+      "passed": 11
+    }
+  ],
+  "blocked_actions": [
+    "publication",
+    "push",
+    "deploy",
+    "gumroad",
+    "social_networks",
+    "external_browser",
+    "daemons",
+    "destructive_cleanup",
+    "qemu",
+    "qwen_3b_suite",
+    "ollama_alias",
+    "weights_or_adapters_or_training",
+    "private_rpg_access"
+  ],
+  "model_decision": {
+    "wabi_sabi_base_model": "qwen2.5-coder:3b",
+    "wabi_sabi_triage_model": "qwen2.5:0.5b",
+    "weights_or_aliases_modified": false,
+    "training_started": false
+  },
+  "prompts": [
+    {"id": 1, "status": "CLOSED_SNAPSHOT", "gate": "REVIEW", "evidence": "qa_artifacts/pending/pending_review_latest.json"},
+    {"id": 2, "status": "VALIDATED_LOCAL_CONCURRENT", "gate": "REVIEW", "evidence": "research/observacionismo-lab"},
+    {"id": 3, "status": "BLOCK_PRIVATE_BOUNDARY", "gate": "BLOCK", "evidence": "docs/private/PRIVATE_GAME_BOUNDARY.md"},
+    {"id": 4, "status": "CLOSED_READ_ONLY_SPEC", "gate": "REVIEW", "evidence": "docs/duat/DUAT_READONLY_ADAPTER_SPEC.md"},
+    {"id": 5, "status": "BLOCK_HOST_QEMU", "gate": "BLOCK", "evidence": "docs/developer/CEREBRO_DUAT_BRAIN_OS_OBSERVACIONISMO_HANDOFF_2026-05-05.md"},
+    {"id": 6, "status": "REVIEW_DIFF_ONLY", "gate": "BLOCK", "evidence": "COMMS/agents_state/claudio-local-autonomy.json"},
+    {"id": 7, "status": "CLOSED_EXISTING_LOCAL_SURFACE", "gate": "REVIEW", "evidence": "docs/ops/MISSION_CONTROL_COMMS_STATE_2026-05-06.md"},
+    {"id": 8, "status": "VALIDATED_LOCAL", "gate": "REVIEW", "evidence": "docs/observacionismo/HANDOFF_OBS_CANON_SCHEMA_V01_2026-05-06.md"},
+    {"id": 9, "status": "REVIEW_NO_NEW_PUBLICATION", "gate": "REVIEW", "evidence": "docs/release/RELEASE_READINESS_SCORE.md"},
+    {"id": 10, "status": "REVIEW_LEGAL_CHECKOUT", "gate": "REVIEW", "evidence": "docs/product/flujocrm-local-gate-recheck-2026-05-05.md"},
+    {"id": 11, "status": "CLOSED_INTAKE_BOUNDARY", "gate": "REVIEW", "evidence": "docs/intake/PROMTS_DESKTOP_CEREBRO_INTEGRATION_2026-05-06.md"},
+    {"id": 12, "status": "CLOSED_FICHADO", "gate": "REVIEW", "evidence": "docs/intake/PROMTS_DESKTOP_CEREBRO_INTEGRATION_2026-05-06.md"},
+    {"id": 13, "status": "CLOSED_POLICY_ONLY_SPEC", "gate": "REVIEW", "evidence": "docs/ops/OSIT_RESOURCE_OPTIMIZER_RUNTIME_SPEC_2026-05-06.md"},
+    {"id": 14, "status": "CLOSED_CLASSIFY_NO_DELETE", "gate": "REVIEW", "evidence": "docs/intake/tree_absorption_psi_researchs_postclean_2026-05-06_REPORT.md"},
+    {"id": 15, "status": "VALIDATED_LOCAL", "gate": "REVIEW", "evidence": "docs/matrix/11_mission_control_bridge.md"},
+    {"id": 16, "status": "VALIDATED_LOCAL_NO_WEB_ACTION", "gate": "REVIEW", "evidence": "docs/ai_browser/12_risk_resolution_log.md"},
+    {"id": 17, "status": "CLOSED_LIVE_MAP", "gate": "REVIEW", "evidence": "docs/ops/AGENT_CITY_LIVE_MAP_2026-05-06.md"},
+    {"id": 18, "status": "BLOCK_EXTERNAL", "gate": "BLOCK", "evidence": "docs/release/RELEASE_READINESS_SCORE.md"},
+    {"id": 19, "status": "LOCAL_DEMO_READY_PUBLICATION_BLOCK", "gate": "REVIEW", "evidence": "docs/WAVE_FC_EVIDENCE_PACK_2026-05-01.md"},
+    {"id": 20, "status": "CLOSED_THIS_ARTIFACT", "gate": "REVIEW", "evidence": "docs/ops/PROMPT_MASTER_ALL_CARRILES_LOCAL_CLOSURE_2026-05-06.md"}
+  ],
+  "artifacts": [
+    "docs/ops/PROMPT_MASTER_ALL_CARRILES_LOCAL_CLOSURE_2026-05-06.md",
+    "runtime/prompt_master/prompt_master_all_carriles_local_closure_2026-05-06.json",
+    "docs/ops/MISSION_CONTROL_COMMS_STATE_2026-05-06.md",
+    "runtime/prompt_master/mission_control_comms_state_2026-05-06.json",
+    "qa_artifacts/prompt_master/PROMPT_MASTER_ALL_CARRILES_VALIDATION_2026-05-06.json",
+    "runtime/prompt_master/wabi_sabi_prompt_master_decision_ledger_2026-05-06.jsonl",
+    "COMMS/topics/agent-city-coordination.jsonl"
+  ],
+  "decision": "all_20_prompts_closed_or_blocked_with_local_evidence"
+}

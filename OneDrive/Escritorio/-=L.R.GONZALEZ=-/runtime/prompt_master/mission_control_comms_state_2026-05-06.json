@@ -1,0 +1,106 @@
+{
+  "schema": "medioevo.prompt_master.mission_control_comms_state.v1",
+  "date": "2026-05-06",
+  "source_prompt": "7. Claudio Mission Control / COMMS",
+  "status": "closed_local_evidence_no_code_edit",
+  "action_gate": "REVIEW",
+  "host_gate": {
+    "timestamp_utc": "2026-05-06T07:54:48Z",
+    "status": "JAMMING",
+    "gate": "BLOCK",
+    "action": "reset_handoff",
+    "reasons": [
+      "proceso_dominante_cpu",
+      "residuo_alto"
+    ]
+  },
+  "implementation_evidence": {
+    "api_state_route": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/app.py:726",
+    "api_stream_route": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/app.py:737",
+    "reader": "-=MEDIOEVO=-/-=LIBROS/claudio/core/agent_comms.py:408",
+    "ui_panel": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/index.html:2502",
+    "api_test": "-=MEDIOEVO=-/-=LIBROS/claudio/tests/test_hormiguero_mission_control_api.py:469"
+  },
+  "pending_snapshot": {
+    "active_markdown": {
+      "raw_open": 394,
+      "dedup_open": 389
+    },
+    "claudio_master": {
+      "raw_open": 69,
+      "dedup_open": 69
+    }
+  },
+  "comms_snapshot": {
+    "streams": {
+      "inbox": {
+        "files": 2,
+        "rows": 3
+      },
+      "outbox": {
+        "files": 2,
+        "rows": 43
+      },
+      "topics": {
+        "files": 2,
+        "rows": 9
+      },
+      "handoffs": {
+        "files": 3,
+        "rows": 3
+      }
+    },
+    "agents": [
+      {
+        "agent_id": "claudio-local-agent",
+        "department": "ayuntamiento",
+        "status": "ACTIVE_LOCAL_BRIDGE",
+        "gate": "REVIEW"
+      },
+      {
+        "agent_id": "claudio-local-autonomy",
+        "department": "wabi_sabi",
+        "status": "A0_LOCAL_REVIEW_ONLY",
+        "gate": "BLOCK"
+      },
+      {
+        "agent_id": "curador-seto",
+        "department": "curador",
+        "status": "ACTIVE_LOCAL_CONTRACT",
+        "gate": "REVIEW"
+      },
+      {
+        "agent_id": "hormiguero-mission-control",
+        "department": "logi",
+        "status": "LOCAL_READ_SURFACE",
+        "gate": "REVIEW"
+      },
+      {
+        "agent_id": "publicacion-perfiles-observatorio",
+        "department": "plaza-mercado",
+        "status": "ACTIVE_LOCAL_STRATEGY_AGENT",
+        "gate": "REVIEW"
+      },
+      {
+        "agent_id": "wabi-sabi-sentido-comun",
+        "department": "patterns",
+        "status": "POLICY_ONLY_LEARNING_SOURCE",
+        "gate": "REVIEW"
+      }
+    ]
+  },
+  "decision": "keep_mission_control_as_existing_local_comms_reader_under_host_block",
+  "blocked_actions": [
+    "daemon_start",
+    "external_browser_or_dashboard",
+    "publication",
+    "destructive_cleanup",
+    "model_weight_alias_or_training_mutation"
+  ],
+  "evidence_artifacts": [
+    "docs/ops/MISSION_CONTROL_COMMS_STATE_2026-05-06.md",
+    "runtime/prompt_master/mission_control_comms_state_2026-05-06.json",
+    "docs/ops/MISSION_CONTROL_COMMS_LOCAL_VIEW_WORKPACK_2026-05-06.md",
+    "COMMS/topics/agent-city-coordination.jsonl"
+  ]
+}

@@ -21,7 +21,7 @@
     {"id": 4, "owner": "claudio-local-agent", "gate": "REVIEW", "status": "READ_ONLY"},
     {"id": 5, "owner": "claudio-local-agent", "gate": "BLOCK_HOST_QEMU", "status": "BLOCKED"},
     {"id": 6, "owner": "claudio-local-autonomy", "gate": "BLOCK_TO_DIFF_REVIEW", "status": "DIFF_REVIEW_ONLY"},
-    {"id": 7, "owner": "hormiguero-mission-control", "gate": "REVIEW", "status": "WORKPACK_CREATED"},
+    {"id": 7, "owner": "hormiguero-mission-control", "gate": "REVIEW", "status": "CLOSED_EXISTING_LOCAL_SURFACE"},
     {"id": 8, "owner": "wabi-sabi-sentido-comun,curador-seto", "gate": "REVIEW", "status": "LOCAL_SAFE"},
     {"id": 9, "owner": "publicacion-perfiles-observatorio,curador-seto", "gate": "REVIEW_NO_PUBLICATION", "status": "CHECKLIST_ONLY"},
     {"id": 10, "owner": "publicacion-perfiles-observatorio", "gate": "REVIEW_LEGAL", "status": "CHECKLIST_ONLY"},
@@ -29,8 +29,8 @@
     {"id": 12, "owner": "curador-seto", "gate": "REVIEW", "status": "INBOX_FICHADO"},
     {"id": 13, "owner": "wabi-sabi-sentido-comun", "gate": "REVIEW_POLICY_ONLY", "status": "WORKPACK_CREATED"},
     {"id": 14, "owner": "curador-seto", "gate": "REVIEW_NO_DELETE", "status": "CLASSIFY_ONLY"},
-    {"id": 15, "owner": "hormiguero-mission-control", "gate": "REVIEW", "status": "LOCAL_VIEW_PENDING"},
-    {"id": 16, "owner": "claudio-local-agent,curador-seto", "gate": "REVIEW_NO_WEB_ACTION", "status": "LOCAL_SPEC_ONLY"},
+    {"id": 15, "owner": "hormiguero-mission-control", "gate": "REVIEW", "status": "VALIDATED_LOCAL"},
+    {"id": 16, "owner": "claudio-local-agent,curador-seto", "gate": "REVIEW_NO_WEB_ACTION", "status": "VALIDATED_LOCAL_NO_WEB_ACTION"},
     {"id": 17, "owner": "claudio-local-agent,hormiguero-mission-control", "gate": "REVIEW", "status": "LIVE_MAP_CREATED"},
     {"id": 18, "owner": "publicacion-perfiles-observatorio", "gate": "BLOCK_EXTERNAL", "status": "BLOCKED"},
     {"id": 19, "owner": "publicacion-perfiles-observatorio,curador-seto", "gate": "REVIEW_HOST_TOOLING", "status": "QA_BLOCKED_BY_TOOLING"},
@@ -42,6 +42,10 @@
     "docs/ops/WABI_SABI_QWEN_BLUEPRINT_WORKPACK_2026-05-06.md",
     "docs/ops/PROMPT_MASTER_HANDOFF_2026-05-06.md",
     "docs/ops/AGENT_CITY_LIVE_MAP_2026-05-06.md",
+    "docs/ops/MISSION_CONTROL_COMMS_STATE_2026-05-06.md",
+    "docs/ops/PROMPT_MASTER_ALL_CARRILES_LOCAL_CLOSURE_2026-05-06.md",
+    "runtime/prompt_master/mission_control_comms_state_2026-05-06.json",
+    "runtime/prompt_master/prompt_master_all_carriles_local_closure_2026-05-06.json",
     "COMMS/topics/agent-city-coordination.jsonl"
   ]
 }

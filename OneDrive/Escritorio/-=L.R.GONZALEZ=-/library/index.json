@@ -1,0 +1,24 @@
+{
+  "schema": "matrix.library.index.v1",
+  "name": "Matrix Biblioteca De Alejandria",
+  "version": "0.1.0",
+  "status": "MVP_SEED",
+  "policy": {
+    "load_strategy": "minimal_modules_only",
+    "no_bulk_canon": true,
+    "no_external_action_without_gate": true,
+    "public_private_boundary": "preserve"
+  },
+  "modules": [
+    {"module_id": "observacionismo_core", "path": "library/modules/observacionismo_core.json", "status": "ACTIVE"},
+    {"module_id": "ioi_core", "path": "library/modules/ioi_core.json", "status": "ACTIVE"},
+    {"module_id": "python_foundations", "path": "library/modules/python_foundations.json", "status": "ACTIVE"},
+    {"module_id": "html_foundations", "path": "library/modules/html_foundations.json", "status": "ACTIVE"},
+    {"module_id": "web_ui_minimal", "path": "library/modules/web_ui_minimal.json", "status": "ACTIVE"},
+    {"module_id": "security_actiongate", "path": "library/modules/security_actiongate.json", "status": "ACTIVE"},
+    {"module_id": "documentation_witnesslog", "path": "library/modules/documentation_witnesslog.json", "status": "ACTIVE"},
+    {"module_id": "game_metroidvania_design", "path": "library/modules/game_metroidvania_design.json", "status": "REVIEW"},
+    {"module_id": "duat_world_state", "path": "library/modules/duat_world_state.json", "status": "ACTIVE"},
+    {"module_id": "ai_browser_security", "path": "library/modules/ai_browser_security.json", "status": "REVIEW"}
+  ]
+}

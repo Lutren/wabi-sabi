@@ -30,10 +30,10 @@ Everything else gets a category-specific move plan before any physical action.
 
 ## Current Counts
 
-- Root items: `453`
-- Root files: `301`
+- Root items: `250`
+- Root files: `98`
 - Root directories: `152`
-- Git pending lines: `1124`
+- Git pending lines: `922`
 
 ## No-Go
 

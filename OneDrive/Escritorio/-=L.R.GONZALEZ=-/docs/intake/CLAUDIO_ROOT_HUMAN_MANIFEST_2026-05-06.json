@@ -1,12 +1,12 @@
 {
   "schema": "medioevo.claudio_root_human_audit.v1",
-  "generated_at_utc": "2026-05-06T10:17:25.780148+00:00",
+  "generated_at_utc": "2026-05-06T10:21:34.763002+00:00",
   "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio",
   "summary": {
-    "root_items": 453,
-    "root_files": 301,
+    "root_items": 250,
+    "root_files": 98,
     "root_directories": 152,
-    "git_pending_lines": 1124,
+    "git_pending_lines": 922,
     "categories": {
       "archive_existing": 6,
       "cache_regenerable": 11,
@@ -19,7 +19,7 @@
       "root_data_config": 48,
       "root_document": 6,
       "root_media_or_ui": 10,
-      "root_python_script": 205,
+      "root_python_script": 2,
       "runtime_core_root": 11,
       "secret_or_sensitive": 14
     },
@@ -31,7 +31,7 @@
       "KEEP_REVIEW": 7,
       "KEEP_REVIEW_CONSOLIDATE": 6,
       "KEEP_REVIEW_RETENTION": 10,
-      "MOVE_CANDIDATE": 221,
+      "MOVE_CANDIDATE": 18,
       "MOVE_CANDIDATE_REVIEW": 48,
       "REVIEW": 8,
       "REVIEW_DESTINATION": 109
@@ -39,7 +39,7 @@
     "risks": {
       "HIGH": 32,
       "LOW": 27,
-      "MEDIUM": 394
+      "MEDIUM": 191
     }
   },
   "records": [
@@ -244,16 +244,6 @@
       "reason": "local_tool_config"
     },
     {
-      "name": "__init__.py",
-      "kind": "file",
-      "size_bytes": 20,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "__pycache__",
       "kind": "directory",
       "size_bytes": 0,
@@ -324,36 +314,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "activar_autopilot.py",
-      "kind": "file",
-      "size_bytes": 2416,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "activar_tienda.py",
-      "kind": "file",
-      "size_bytes": 5227,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "add_cloudflare_dns.py",
-      "kind": "file",
-      "size_bytes": 4550,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "ads",
       "kind": "directory",
       "size_bytes": 0,
@@ -374,16 +334,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "agent_runner.py",
-      "kind": "file",
-      "size_bytes": 11079,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "agentes",
       "kind": "directory",
       "size_bytes": 0,
@@ -392,26 +342,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "agentes_conectores.py",
-      "kind": "file",
-      "size_bytes": 10452,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "ALCATEL_AUTO_SETUP.py",
-      "kind": "file",
-      "size_bytes": 11202,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "api",
@@ -464,86 +394,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "argus_art.py",
-      "kind": "file",
-      "size_bytes": 11373,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_dearpygui.py",
-      "kind": "file",
-      "size_bytes": 13780,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_gui_launcher.py",
-      "kind": "file",
-      "size_bytes": 1423,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_hub.py",
-      "kind": "file",
-      "size_bytes": 18811,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_integrator.py",
-      "kind": "file",
-      "size_bytes": 11370,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_main.py",
-      "kind": "file",
-      "size_bytes": 6330,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_tamagotchi.py",
-      "kind": "file",
-      "size_bytes": 15652,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "argus_tui.py",
-      "kind": "file",
-      "size_bytes": 3376,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "arte",
       "kind": "directory",
       "size_bytes": 0,
@@ -574,16 +424,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "audio_distortion.py",
-      "kind": "file",
-      "size_bytes": 44639,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "auditor",
       "kind": "directory",
       "size_bytes": 0,
@@ -592,16 +432,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "auto_fix_claudio.py",
-      "kind": "file",
-      "size_bytes": 6063,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "auto_generated",
@@ -634,16 +464,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "backup.py",
-      "kind": "file",
-      "size_bytes": 5993,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "bardo",
       "kind": "directory",
       "size_bytes": 0,
@@ -672,26 +492,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "bio_feedback.py",
-      "kind": "file",
-      "size_bytes": 20377,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "bio_tamagotchi_bridge.py",
-      "kind": "file",
-      "size_bytes": 10596,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "bio_tamagotchi_estado.json",
@@ -734,36 +534,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "brain_os.py",
-      "kind": "file",
-      "size_bytes": 14217,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "browser_agent.py",
-      "kind": "file",
-      "size_bytes": 7556,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "buddy_hud.py",
-      "kind": "file",
-      "size_bytes": 7459,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "bugs",
       "kind": "directory",
       "size_bytes": 0,
@@ -772,26 +542,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "build_6plus1_publication_package.py",
-      "kind": "file",
-      "size_bytes": 16598,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "build_lore_db.py",
-      "kind": "file",
-      "size_bytes": 9235,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "cache",
@@ -822,26 +572,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "chat_endpoint.py",
-      "kind": "file",
-      "size_bytes": 10367,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "check_sendgrid_dns.py",
-      "kind": "file",
-      "size_bytes": 2699,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "checklists",
@@ -894,26 +624,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "claudio_api_server.py",
-      "kind": "file",
-      "size_bytes": 326339,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "claudio_audio.py",
-      "kind": "file",
-      "size_bytes": 10362,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "claudio_avatar_web.html",
       "kind": "file",
       "size_bytes": 153592,
@@ -922,26 +632,6 @@
       "destination_hint": "assets/root_media_review",
       "risk": "LOW",
       "reason": "root_asset_noise"
-    },
-    {
-      "name": "claudio_camera_vision.py",
-      "kind": "file",
-      "size_bytes": 16934,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "claudio_cli.py",
-      "kind": "file",
-      "size_bytes": 4048,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "Claudio_Cobain.ico",
@@ -964,29 +654,9 @@
       "reason": "local_state_database"
     },
     {
-      "name": "claudio_daemon.py",
-      "kind": "file",
-      "size_bytes": 18683,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "claudio_daemon_247.py",
       "kind": "file",
       "size_bytes": 25267,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "claudio_daemon_psi.py",
-      "kind": "file",
-      "size_bytes": 14242,
       "category": "root_python_script",
       "decision": "MOVE_CANDIDATE",
       "destination_hint": "tools/root_scripts_review",
@@ -1002,26 +672,6 @@
       "destination_hint": "assets/root_media_review",
       "risk": "LOW",
       "reason": "root_asset_noise"
-    },
-    {
-      "name": "claudio_harness.py",
-      "kind": "file",
-      "size_bytes": 3731,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "claudio_llm.py",
-      "kind": "file",
-      "size_bytes": 12269,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "claudio_memory.db",
@@ -1042,16 +692,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "claudio_pipeline.py",
-      "kind": "file",
-      "size_bytes": 11703,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "claudio_secrets.json",
@@ -1084,16 +724,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "claudio_tui_legacy.py",
-      "kind": "file",
-      "size_bytes": 57753,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "claudio_tv_token.json",
       "kind": "file",
       "size_bytes": 43,
@@ -1102,16 +732,6 @@
       "destination_hint": "runtime/private_config",
       "risk": "HIGH",
       "reason": "secret_marker"
-    },
-    {
-      "name": "claudio_voice.py",
-      "kind": "file",
-      "size_bytes": 23465,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "codex",
@@ -1132,16 +752,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "comfyui_setup.py",
-      "kind": "file",
-      "size_bytes": 12796,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "comfyui_workflows",
@@ -1174,26 +784,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "common_sense.py",
-      "kind": "file",
-      "size_bytes": 18079,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "conductor.py",
-      "kind": "file",
-      "size_bytes": 12285,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "config",
       "kind": "directory",
       "size_bytes": 0,
@@ -1214,16 +804,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "config_autopilot.py",
-      "kind": "file",
-      "size_bytes": 3372,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "configs",
       "kind": "directory",
       "size_bytes": 0,
@@ -1234,36 +814,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "configurar_autostart.py",
-      "kind": "file",
-      "size_bytes": 2507,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "consejo_cli.py",
-      "kind": "file",
-      "size_bytes": 1654,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "consejo_elrond.py",
-      "kind": "file",
-      "size_bytes": 17773,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "consejo_elrond_session.json",
       "kind": "file",
       "size_bytes": 7777,
@@ -1272,26 +822,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "consolidar_35_a_6mas1.py",
-      "kind": "file",
-      "size_bytes": 8636,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "consolidar_env.py",
-      "kind": "file",
-      "size_bytes": 10156,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "contab",
@@ -1314,16 +844,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "content_calendar.py",
-      "kind": "file",
-      "size_bytes": 20803,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "content_queue.json",
       "kind": "file",
       "size_bytes": 29456,
@@ -1344,26 +864,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "continuous_research_watch.py",
-      "kind": "file",
-      "size_bytes": 15430,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "conway_buddy.py",
-      "kind": "file",
-      "size_bytes": 4667,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "conway_data",
       "kind": "directory",
       "size_bytes": 0,
@@ -1372,16 +872,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "conway_economico.py",
-      "kind": "file",
-      "size_bytes": 13902,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "conway_miner_data.json",
@@ -1394,56 +884,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "conway_observador.py",
-      "kind": "file",
-      "size_bytes": 10631,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "conway_online.py",
-      "kind": "file",
-      "size_bytes": 11856,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "conway_reporte_local.py",
-      "kind": "file",
-      "size_bytes": 5214,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "conway_start.py",
-      "kind": "file",
-      "size_bytes": 4864,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "conway_tamagotchi.py",
-      "kind": "file",
-      "size_bytes": 13019,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "core",
       "kind": "directory",
       "size_bytes": 0,
@@ -1454,26 +894,6 @@
       "reason": "strong_runtime_route"
     },
     {
-      "name": "coremetrics.py",
-      "kind": "file",
-      "size_bytes": 5476,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "coreollama_psi_runtime.py",
-      "kind": "file",
-      "size_bytes": 11011,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "cost",
       "kind": "directory",
       "size_bytes": 0,
@@ -1482,36 +902,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "crear_productos_shopify.py",
-      "kind": "file",
-      "size_bytes": 3940,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "create_demo_clip.py",
-      "kind": "file",
-      "size_bytes": 10818,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "create_kocca_deck.py",
-      "kind": "file",
-      "size_bytes": 22166,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "creator_outreach_templates.json",
@@ -1534,26 +924,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "crm.py",
-      "kind": "file",
-      "size_bytes": 32228,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "Ctempsensor_server.py",
-      "kind": "file",
-      "size_bytes": 2129,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "d2d_book_metadata.json",
       "kind": "file",
       "size_bytes": 53901,
@@ -1562,26 +932,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "d2d_upload.py",
-      "kind": "file",
-      "size_bytes": 30873,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "d2d_upload_v2.py",
-      "kind": "file",
-      "size_bytes": 54965,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "daemon",
@@ -1594,46 +944,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "daily_content_generator.py",
-      "kind": "file",
-      "size_bytes": 9160,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "daily_heygen.py",
-      "kind": "file",
-      "size_bytes": 25395,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "daily_suno.py",
-      "kind": "file",
-      "size_bytes": 29464,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "daily_youtube.py",
-      "kind": "file",
-      "size_bytes": 30765,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "dashboard_argus.html",
       "kind": "file",
       "size_bytes": 2438,
@@ -1642,16 +952,6 @@
       "destination_hint": "assets/root_media_review",
       "risk": "LOW",
       "reason": "root_asset_noise"
-    },
-    {
-      "name": "dashboard_argus_unificado.py",
-      "kind": "file",
-      "size_bytes": 8190,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "DASHBOARD_ARGUS_UNIFIED.html",
@@ -1684,26 +984,6 @@
       "reason": "strong_runtime_route"
     },
     {
-      "name": "deepseek_chat.py",
-      "kind": "file",
-      "size_bytes": 3425,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "deploy_oppo_new_env.py",
-      "kind": "file",
-      "size_bytes": 3665,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "device_protection_state.json",
       "kind": "file",
       "size_bytes": 2564,
@@ -1724,26 +1004,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "diana_profile_builder.py",
-      "kind": "file",
-      "size_bytes": 11343,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "diana_voice_patch.py",
-      "kind": "file",
-      "size_bytes": 6434,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "docs",
       "kind": "directory",
       "size_bytes": 0,
@@ -1752,66 +1012,6 @@
       "destination_hint": "docs",
       "risk": "LOW",
       "reason": "strong_runtime_route"
-    },
-    {
-      "name": "download_unc0ver_fix.py",
-      "kind": "file",
-      "size_bytes": 1883,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "dream_system.py",
-      "kind": "file",
-      "size_bytes": 13167,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "dual_brain.py",
-      "kind": "file",
-      "size_bytes": 9224,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "ECOSISTEMA_MASTER_DEPLOY.py",
-      "kind": "file",
-      "size_bytes": 11165,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "ECOSISTEMA_MASTER_SETUP.py",
-      "kind": "file",
-      "size_bytes": 12891,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "ecosystem_commands.py",
-      "kind": "file",
-      "size_bytes": 5044,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "ecosystem_devices.json",
@@ -1824,26 +1024,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "ecosystem_launcher.py",
-      "kind": "file",
-      "size_bytes": 10247,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "ecosystem_orchestrator.py",
-      "kind": "file",
-      "size_bytes": 27303,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "editorial",
       "kind": "directory",
       "size_bytes": 0,
@@ -1852,26 +1032,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "ejemplo_tools.py",
-      "kind": "file",
-      "size_bytes": 5002,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "elevenreader_prep.py",
-      "kind": "file",
-      "size_bytes": 4152,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "email_signature.html",
@@ -1884,16 +1044,6 @@
       "reason": "root_asset_noise"
     },
     {
-      "name": "emotional_arc.py",
-      "kind": "file",
-      "size_bytes": 14000,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "entities.json",
       "kind": "file",
       "size_bytes": 182,
@@ -1904,16 +1054,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "error_priority.py",
-      "kind": "file",
-      "size_bytes": 12517,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "etno",
       "kind": "directory",
       "size_bytes": 0,
@@ -1922,26 +1062,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "fcu_handoff.py",
-      "kind": "file",
-      "size_bytes": 5758,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "fcu_init.py",
-      "kind": "file",
-      "size_bytes": 4587,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "feedback",
@@ -2004,46 +1124,6 @@
       "reason": "private_runtime_or_models"
     },
     {
-      "name": "fingerprint_matcher.py",
-      "kind": "file",
-      "size_bytes": 12731,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "fix_all_corruption.py",
-      "kind": "file",
-      "size_bytes": 2304,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "fix_como_si.py",
-      "kind": "file",
-      "size_bytes": 15402,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "fix_writer_module.py",
-      "kind": "file",
-      "size_bytes": 1157,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "gateway",
       "kind": "directory",
       "size_bytes": 0,
@@ -2052,66 +1132,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "generate_6plus1_volume_landings.py",
-      "kind": "file",
-      "size_bytes": 17503,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_assets.py",
-      "kind": "file",
-      "size_bytes": 18523,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_cartridge_images.py",
-      "kind": "file",
-      "size_bytes": 16882,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_cartridges.py",
-      "kind": "file",
-      "size_bytes": 9686,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_character_merch.py",
-      "kind": "file",
-      "size_bytes": 17629,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_en_covers.py",
-      "kind": "file",
-      "size_bytes": 9648,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "generate_gumroad_covers.py",
@@ -2124,36 +1144,6 @@
       "reason": "secret_marker"
     },
     {
-      "name": "generate_kofi_covers.py",
-      "kind": "file",
-      "size_bytes": 12925,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_missing_assets.py",
-      "kind": "file",
-      "size_bytes": 4870,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "generate_redbubble_designs.py",
-      "kind": "file",
-      "size_bytes": 11195,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "gguf_exports",
       "kind": "directory",
       "size_bytes": 0,
@@ -2162,16 +1152,6 @@
       "destination_hint": "private/gguf_exports",
       "risk": "HIGH",
       "reason": "private_runtime_or_models"
-    },
-    {
-      "name": "git_insights.py",
-      "kind": "file",
-      "size_bytes": 8062,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "github-modules",
@@ -2244,16 +1224,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "hook_gateway.py",
-      "kind": "file",
-      "size_bytes": 8457,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "hooks",
       "kind": "directory",
       "size_bytes": 0,
@@ -2264,16 +1234,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "humor_engine.py",
-      "kind": "file",
-      "size_bytes": 19801,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "i18n",
       "kind": "directory",
       "size_bytes": 0,
@@ -2282,46 +1242,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "iniciar_conway_economico.py",
-      "kind": "file",
-      "size_bytes": 6182,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "INICIAR_SESION.py",
-      "kind": "file",
-      "size_bytes": 5212,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "instagram_uploader.py",
-      "kind": "file",
-      "size_bytes": 21933,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "instalar_sadtalker.py",
-      "kind": "file",
-      "size_bytes": 3003,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "installer",
@@ -2364,26 +1284,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "iphone_auto_post_jb.py",
-      "kind": "file",
-      "size_bytes": 5181,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "IPHONE_AUTO_SETUP.py",
-      "kind": "file",
-      "size_bytes": 9156,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "jellyfin_auth.json",
       "kind": "file",
       "size_bytes": 248,
@@ -2392,16 +1292,6 @@
       "destination_hint": "runtime/private_config",
       "risk": "HIGH",
       "reason": "secret_marker"
-    },
-    {
-      "name": "kairos_buddy_daemon.py",
-      "kind": "file",
-      "size_bytes": 12425,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "kairos_buddy_historial.json",
@@ -2414,16 +1304,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "kairos_daemon.py",
-      "kind": "file",
-      "size_bytes": 7381,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "kairos_historial.json",
       "kind": "file",
       "size_bytes": 105,
@@ -2432,16 +1312,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "kalman_orientation.py",
-      "kind": "file",
-      "size_bytes": 15041,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "kickstarter",
@@ -2454,16 +1324,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "kofi_cdp_upload.py",
-      "kind": "file",
-      "size_bytes": 15593,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "lago.db",
       "kind": "file",
       "size_bytes": 28672,
@@ -2472,16 +1332,6 @@
       "destination_hint": "runtime/state",
       "risk": "HIGH",
       "reason": "local_state_database"
-    },
-    {
-      "name": "lago.py",
-      "kind": "file",
-      "size_bytes": 20707,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "lang",
@@ -2564,16 +1414,6 @@
       "reason": "cache_or_generated_runtime"
     },
     {
-      "name": "lore_db.py",
-      "kind": "file",
-      "size_bytes": 22018,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "lore_drops",
       "kind": "directory",
       "size_bytes": 0,
@@ -2592,16 +1432,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "marble_connector.py",
-      "kind": "file",
-      "size_bytes": 7082,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "marketing",
@@ -2704,16 +1534,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "mempalace_wrapper.py",
-      "kind": "file",
-      "size_bytes": 8398,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "mini_office",
       "kind": "directory",
       "size_bytes": 0,
@@ -2732,16 +1552,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "model_switcher.py",
-      "kind": "file",
-      "size_bytes": 6974,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "Modelfile.claudio",
@@ -2794,16 +1604,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "molbook_connector.py",
-      "kind": "file",
-      "size_bytes": 7489,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "MOTOR_GATE_FINAL.md",
       "kind": "file",
       "size_bytes": 8704,
@@ -2814,36 +1614,6 @@
       "reason": "root_doc_noise"
     },
     {
-      "name": "mover_modelos_e.py",
-      "kind": "file",
-      "size_bytes": 4985,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "narrative_engine.py",
-      "kind": "file",
-      "size_bytes": 18967,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "nemo_literary_analysis.py",
-      "kind": "file",
-      "size_bytes": 3197,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "nemo_reports",
       "kind": "directory",
       "size_bytes": 0,
@@ -2852,16 +1622,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "nemo_research_loop.py",
-      "kind": "file",
-      "size_bytes": 9405,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "NEXT_SESSION_BRIEF.md",
@@ -2882,16 +1642,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "obsidian_integration.py",
-      "kind": "file",
-      "size_bytes": 31846,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "onion",
@@ -2924,36 +1674,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "oppo_root_mtk.py",
-      "kind": "file",
-      "size_bytes": 25092,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "oppo_sensor_patch.py",
-      "kind": "file",
-      "size_bytes": 8909,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "oppo_sensor_server.py",
-      "kind": "file",
-      "size_bytes": 7830,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "oppo_tv_cast.html",
       "kind": "file",
       "size_bytes": 10244,
@@ -2962,16 +1682,6 @@
       "destination_hint": "assets/root_media_review",
       "risk": "LOW",
       "reason": "root_asset_noise"
-    },
-    {
-      "name": "optimize_profiles.py",
-      "kind": "file",
-      "size_bytes": 20911,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "oraculo",
@@ -3004,46 +1714,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "panel_server.py",
-      "kind": "file",
-      "size_bytes": 5427,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "patch_defensa.py",
-      "kind": "file",
-      "size_bytes": 4089,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "patch_ethical_core.py",
-      "kind": "file",
-      "size_bytes": 4380,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "patch_sqlite.py",
-      "kind": "file",
-      "size_bytes": 907,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "patterns",
       "kind": "directory",
       "size_bytes": 0,
@@ -3052,16 +1722,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "pc2_research_daemon.py",
-      "kind": "file",
-      "size_bytes": 11378,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "PENDIENTES_MASTER.md",
@@ -3084,16 +1744,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "persistence_manager.py",
-      "kind": "file",
-      "size_bytes": 7616,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "philosophy",
       "kind": "directory",
       "size_bytes": 0,
@@ -3102,46 +1752,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "philosophy_middleware.py",
-      "kind": "file",
-      "size_bytes": 24113,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "phone_rescue.py",
-      "kind": "file",
-      "size_bytes": 12653,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "pika_connector.py",
-      "kind": "file",
-      "size_bytes": 5112,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "piper_tts.py",
-      "kind": "file",
-      "size_bytes": 3038,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "pixel_promo_build",
@@ -3184,36 +1794,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "pod_designs.py",
-      "kind": "file",
-      "size_bytes": 18476,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "post_next.py",
-      "kind": "file",
-      "size_bytes": 4144,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "post_to_reddit.py",
-      "kind": "file",
-      "size_bytes": 9529,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "postas",
       "kind": "directory",
       "size_bytes": 0,
@@ -3222,16 +1802,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "postmortem_protocol.py",
-      "kind": "file",
-      "size_bytes": 6532,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "producto_final_codex",
@@ -3274,56 +1844,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "psi_ethical_core.py",
-      "kind": "file",
-      "size_bytes": 18000,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "psi_monitor.py",
-      "kind": "file",
-      "size_bytes": 8795,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "psi_monitor_local.py",
-      "kind": "file",
-      "size_bytes": 9381,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "psi_observador.py",
-      "kind": "file",
-      "size_bytes": 14089,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "psi_standalone_server.py",
-      "kind": "file",
-      "size_bytes": 3953,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "psi_state.json",
       "kind": "file",
       "size_bytes": 205,
@@ -3334,16 +1854,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "psi_willow_circuit.py",
-      "kind": "file",
-      "size_bytes": 14870,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "psi_willow_results.json",
       "kind": "file",
       "size_bytes": 1925,
@@ -3352,16 +1862,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "publish_despertar_final.py",
-      "kind": "file",
-      "size_bytes": 8524,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "publish_gumroad_6plus1.py",
@@ -3384,16 +1884,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "push_images.py",
-      "kind": "file",
-      "size_bytes": 5401,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "pytest.ini",
       "kind": "file",
       "size_bytes": 367,
@@ -3414,16 +1904,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "quantum_buffer.py",
-      "kind": "file",
-      "size_bytes": 11971,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "radiocinema",
       "kind": "directory",
       "size_bytes": 0,
@@ -3432,16 +1912,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "radiocinema_bridges.py",
-      "kind": "file",
-      "size_bytes": 12154,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "raspberry_console",
@@ -3482,16 +1952,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "repair_corruption.py",
-      "kind": "file",
-      "size_bytes": 806,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "reports",
@@ -3574,16 +2034,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "resend_email.py",
-      "kind": "file",
-      "size_bytes": 3039,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "response",
       "kind": "directory",
       "size_bytes": 0,
@@ -3602,16 +2052,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "rh_mariposa_v2.py",
-      "kind": "file",
-      "size_bytes": 14791,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "ritual",
@@ -3644,16 +2084,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "run_conway.py",
-      "kind": "file",
-      "size_bytes": 1427,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "runtime",
       "kind": "directory",
       "size_bytes": 0,
@@ -3672,16 +2102,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "samsung_tv.py",
-      "kind": "file",
-      "size_bytes": 10519,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "screen_hub",
@@ -3734,46 +2154,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "security_hardening.py",
-      "kind": "file",
-      "size_bytes": 35398,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "security_panel.py",
-      "kind": "file",
-      "size_bytes": 9226,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "security_tools_installer.py",
-      "kind": "file",
-      "size_bytes": 14434,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "self_eval.py",
-      "kind": "file",
-      "size_bytes": 14123,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "self_heal",
       "kind": "directory",
       "size_bytes": 0,
@@ -3784,26 +2164,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "sensor_server.py",
-      "kind": "file",
-      "size_bytes": 33370,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "setup_cloudflare_dns.py",
-      "kind": "file",
-      "size_bytes": 4291,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "setup_gumroad.py",
       "kind": "file",
       "size_bytes": 29242,
@@ -3812,26 +2172,6 @@
       "destination_hint": "runtime/private_config",
       "risk": "HIGH",
       "reason": "secret_marker"
-    },
-    {
-      "name": "setup_payments.py",
-      "kind": "file",
-      "size_bytes": 31297,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "setup_pc2_env.py",
-      "kind": "file",
-      "size_bytes": 7781,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "shopify",
@@ -3854,36 +2194,6 @@
       "reason": "root_asset_noise"
     },
     {
-      "name": "shopify_cdp_auto.py",
-      "kind": "file",
-      "size_bytes": 5011,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "shopify_connector.py",
-      "kind": "file",
-      "size_bytes": 9168,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "simulacro_diario.py",
-      "kind": "file",
-      "size_bytes": 4593,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "skills",
       "kind": "directory",
       "size_bytes": 0,
@@ -3904,16 +2214,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "social_agent.py",
-      "kind": "file",
-      "size_bytes": 20044,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "social_automation.log",
       "kind": "file",
       "size_bytes": 1283,
@@ -3922,16 +2222,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "fallback"
-    },
-    {
-      "name": "social_automation.py",
-      "kind": "file",
-      "size_bytes": 31550,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "social_log.json",
@@ -3984,16 +2274,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "start_api_clean.py",
-      "kind": "file",
-      "size_bytes": 2173,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "store_profiles.json",
       "kind": "file",
       "size_bytes": 3546,
@@ -4002,46 +2282,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "stripe_hsbc_bridge.py",
-      "kind": "file",
-      "size_bytes": 9310,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "sunday_featured_artist.py",
-      "kind": "file",
-      "size_bytes": 9886,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "symbiotic_field.py",
-      "kind": "file",
-      "size_bytes": 13190,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "system_cleaner.py",
-      "kind": "file",
-      "size_bytes": 6139,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "tamagotchi_estado.json",
@@ -4054,16 +2294,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "task_planner.py",
-      "kind": "file",
-      "size_bytes": 12864,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "tasks.json",
       "kind": "file",
       "size_bytes": 6006,
@@ -4072,16 +2302,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "tasks.py",
-      "kind": "file",
-      "size_bytes": 17108,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "tcg",
@@ -4124,46 +2344,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "TERMUX_AUTO_BRIDGE.py",
-      "kind": "file",
-      "size_bytes": 10048,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "test_3t_integration.py",
-      "kind": "file",
-      "size_bytes": 6206,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "test_ethical_core.py",
-      "kind": "file",
-      "size_bytes": 3783,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "test_whatsapp.py",
-      "kind": "file",
-      "size_bytes": 2275,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "tests",
       "kind": "directory",
       "size_bytes": 0,
@@ -4174,26 +2354,6 @@
       "reason": "strong_runtime_route"
     },
     {
-      "name": "tiktok_uploader.py",
-      "kind": "file",
-      "size_bytes": 14779,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "tool_registry.py",
-      "kind": "file",
-      "size_bytes": 36698,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "tools",
       "kind": "directory",
       "size_bytes": 0,
@@ -4202,16 +2362,6 @@
       "destination_hint": "tools",
       "risk": "LOW",
       "reason": "strong_runtime_route"
-    },
-    {
-      "name": "trafficker_report.py",
-      "kind": "file",
-      "size_bytes": 14502,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "training_datasets",
@@ -4234,16 +2384,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "turboquant_monitor.py",
-      "kind": "file",
-      "size_bytes": 17838,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "tv_audio",
       "kind": "directory",
       "size_bytes": 0,
@@ -4264,16 +2404,6 @@
       "reason": "root_asset_noise"
     },
     {
-      "name": "umami_monitor.py",
-      "kind": "file",
-      "size_bytes": 13929,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "update_gumroad_listings.py",
       "kind": "file",
       "size_bytes": 18678,
@@ -4282,16 +2412,6 @@
       "destination_hint": "runtime/private_config",
       "risk": "HIGH",
       "reason": "secret_marker"
-    },
-    {
-      "name": "upload_redbubble.py",
-      "kind": "file",
-      "size_bytes": 10071,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "user_profile.json",
@@ -4314,36 +2434,6 @@
       "reason": "private_runtime_or_models"
     },
     {
-      "name": "verificar_stripe.py",
-      "kind": "file",
-      "size_bytes": 1362,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "verify_autopilot.py",
-      "kind": "file",
-      "size_bytes": 1702,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "verify_memory.py",
-      "kind": "file",
-      "size_bytes": 3420,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "video",
       "kind": "directory",
       "size_bytes": 0,
@@ -4354,16 +2444,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "video_pipeline.py",
-      "kind": "file",
-      "size_bytes": 27834,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "video_schedule.json",
       "kind": "file",
       "size_bytes": 4674,
@@ -4372,26 +2452,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "video_scheduler.py",
-      "kind": "file",
-      "size_bytes": 9517,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "voice_clone.py",
-      "kind": "file",
-      "size_bytes": 28774,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "voice_recordings",
@@ -4414,16 +2474,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "vpn_toggle.py",
-      "kind": "file",
-      "size_bytes": 2395,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "web",
       "kind": "directory",
       "size_bytes": 0,
@@ -4432,16 +2482,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "web4_conway_miner.py",
-      "kind": "file",
-      "size_bytes": 15752,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "website",
@@ -4454,26 +2494,6 @@
       "reason": "strong_runtime_route"
     },
     {
-      "name": "whatsapp_agent.py",
-      "kind": "file",
-      "size_bytes": 17114,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "whatsapp_downloader.py",
-      "kind": "file",
-      "size_bytes": 34848,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "whatsapp_templates.json",
       "kind": "file",
       "size_bytes": 5445,
@@ -4482,16 +2502,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "whisper_stt.py",
-      "kind": "file",
-      "size_bytes": 6438,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     },
     {
       "name": "WORKFLOW.symphony.md",
@@ -4514,16 +2524,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "world_engine.py",
-      "kind": "file",
-      "size_bytes": 17204,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "writer_data",
       "kind": "directory",
       "size_bytes": 0,
@@ -4534,26 +2534,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "writer_module.py",
-      "kind": "file",
-      "size_bytes": 23049,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
-      "name": "writer_psi_adapter.py",
-      "kind": "file",
-      "size_bytes": 16617,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
-    },
-    {
       "name": "youtube_descriptions.json",
       "kind": "file",
       "size_bytes": 4710,
@@ -4562,16 +2542,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "youtube_uploader.py",
-      "kind": "file",
-      "size_bytes": 34411,
-      "category": "root_python_script",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "tools/root_scripts_review",
-      "risk": "MEDIUM",
-      "reason": "root_python_noise"
     }
   ],
   "git_status_sample": [
@@ -4605,34 +2575,21 @@
     " M website/index.html",
     "?? .env.example",
     "?? .env.mova.example",
-    "?? ALCATEL_AUTO_SETUP.py",
     "?? Claudio_Accesos_Directos/",
     "?? Claudio_Cobain.ico",
-    "?? \"C\\357\\200\\272tempsensor_server.py\"",
     "?? DASHBOARD_ARGUS_UNIFIED.html",
-    "?? ECOSISTEMA_MASTER_DEPLOY.py",
-    "?? ECOSISTEMA_MASTER_SETUP.py",
-    "?? INICIAR_SESION.py",
-    "?? IPHONE_AUTO_SETUP.py",
     "?? Modelfile.claudio",
     "?? PROYECTO_REAL_35_A_6_MAS_1_MANIFEST.json",
     "?? SAMPLE_DIALOGUES.json",
-    "?? TERMUX_AUTO_BRIDGE.py",
     "?? _ARCHIVAR/",
-    "?? __init__.py",
     "?? _archivo_sesiones/",
     "?? _legacy/",
     "?? _local_quarantine/",
     "?? _ui_uploads/",
     "?? _workspace/",
-    "?? activar_autopilot.py",
-    "?? activar_tienda.py",
-    "?? add_cloudflare_dns.py",
     "?? ads/",
     "?? agent/",
-    "?? agent_runner.py",
     "?? agentes/",
-    "?? agentes_conectores.py",
     "?? api/",
     "?? apps/argus_desktop/",
     "?? apps/claudio_tui/",
@@ -4646,93 +2603,44 @@
     "?? archive/",
     "?? archivo/",
     "?? argus/",
-    "?? argus_art.py",
-    "?? argus_dearpygui.py",
-    "?? argus_gui_launcher.py",
-    "?? argus_hub.py",
-    "?? argus_integrator.py",
-    "?? argus_main.py",
-    "?? argus_tamagotchi.py",
-    "?? argus_tui.py",
     "?? arte/",
-    "?? audio_distortion.py",
     "?? auditor/",
-    "?? auto_fix_claudio.py",
     "?? autopilot/",
     "?? autorepair/",
-    "?? backup.py",
     "?? bardo/",
     "?? beneficiarios_config.json",
     "?? beta/",
-    "?? bio_feedback.py",
-    "?? bio_tamagotchi_bridge.py",
     "?? bio_tamagotchi_estado.json",
     "?? bitacora_ataques.json",
     "?? bomberos/",
-    "?? brain_os.py",
     "?? brain_os/",
-    "?? browser_agent.py",
-    "?? buddy_hud.py",
     "?? bugs/",
-    "?? build_6plus1_publication_package.py",
-    "?? build_lore_db.py",
     "?? cache/",
     "?? catalog/",
-    "?? chat_endpoint.py",
-    "?? check_sendgrid_dns.py",
     "?? city_overlay/",
     "?? claudio/",
-    "?? claudio_api_server.py",
-    "?? claudio_audio.py",
     "?? claudio_avatar_web.html",
-    "?? claudio_camera_vision.py",
-    "?? claudio_cli.py",
     "?? claudio_daemon.db",
-    "?? claudio_daemon.py",
-    "?? claudio_daemon_psi.py",
     "?? claudio_face.png",
-    "?? claudio_harness.py",
-    "?? claudio_llm.py",
     "?? claudio_memory.db",
     "?? claudio_os/",
-    "?? claudio_pipeline.py",
     "?? claudio_secrets.json",
     "?? claudio_state.db",
-    "?? claudio_tui_legacy.py",
     "?? claudio_tv_token.json",
-    "?? claudio_voice.py",
     "?? codex/",
     "?? comfyui_config.json",
-    "?? comfyui_setup.py",
     "?? comfyui_workflows/",
     "?? commands/",
     "?? commercial/",
-    "?? common_sense.py",
-    "?? conductor.py",
     "?? config.json",
-    "?? config_autopilot.py",
     "?? configs/",
-    "?? configurar_autostart.py",
-    "?? consejo_cli.py",
-    "?? consejo_elrond.py",
     "?? consejo_elrond_session.json",
-    "?? consolidar_35_a_6mas1.py",
-    "?? consolidar_env.py",
     "?? contab/",
     "?? content/",
-    "?? content_calendar.py",
     "?? content_queue.json",
     "?? context/",
-    "?? continuous_research_watch.py",
-    "?? conway_buddy.py",
     "?? conway_data/",
-    "?? conway_economico.py",
     "?? conway_miner_data.json",
-    "?? conway_observador.py",
-    "?? conway_online.py",
-    "?? conway_reporte_local.py",
-    "?? conway_start.py",
-    "?? conway_tamagotchi.py",
     "?? core/.handoff_state.json",
     "?? core/README.md",
     "?? core/__init__.py",
@@ -4824,6 +2732,68 @@
     "?? core/rpg_city_bridge.py",
     "?? core/sadtalker/",
     "?? core/search.py",
-    "?? core/sensory_feed.py"
+    "?? core/sensory_feed.py",
+    "?? core/sentido_comun_runtime.py",
+    "?? core/sentinel_lab_bridge.py",
+    "?? core/sequential_processor.py",
+    "?? core/session_cosmos.py",
+    "?? core/session_fingerprint.py",
+    "?? core/site_task_profiles.py",
+    "?? core/skill_loader.py",
+    "?? core/skill_sentinel_bridge.py",
+    "?? core/specialists.py",
+    "?? core/startup_profiles.py",
+    "?? core/supabase_client.py",
+    "?? core/supabase_schema.sql",
+    "?? core/task_manager.py",
+    "?? core/teatro_perfiles.py",
+    "?? core/telecomunicaciones.py",
+    "?? core/test_skills.py",
+    "?? core/tools.py",
+    "?? core/wav2lip/",
+    "?? cost/",
+    "?? creator_outreach_templates.json",
+    "?? crm.json",
+    "?? d2d_book_metadata.json",
+    "?? daemon/",
+    "?? dashboard_argus.html",
+    "?? data/",
+    "?? datasets/gate_labels.jsonl",
+    "?? datasets/observacionismo_theory_claims_seed.jsonl",
+    "?? datasets/qwen_observacion_reviewed_preferences.jsonl",
+    "?? datasets/qwen_observacion_seed_preferences.jsonl",
+    "?? device_protection_state.json",
+    "?? docs/AUDITORIA_HERRAMIENTAS_MEDIOEVO_2026-04-21.md",
+    "?? docs/BLOG_ADDITIONAL_PUBLIC_POSTS_2026-05-03.md",
+    "?? docs/BLOG_PUBLIC_SAFE_POSTS_2026-05-03.md",
+    "?? docs/BRAIN_OS_HEAVY_MODEL_NODE_GATE_2026-05-03.md",
+    "?? docs/BRAIN_OS_MASTER_PLAN_STATUS.md",
+    "?? docs/CANON10_EDITORIAL_PIPELINE_2026-04-22.md",
+    "?? docs/CANON10_EDITORIAL_SALE_CUT_2026-04-23.md",
+    "?? docs/CANON_10_PUBLICACION_REAL_2026-04-22.md",
+    "?? docs/CANON_EDITORIAL_10_LIBROS_DEFINITIVO_2026-04-22.md",
+    "?? docs/CANON_MAP_2026-04-22.md",
+    "?? docs/CLAUDIO_247_CURADOR_SPACE_STATUS_2026-05-02.md",
+    "?? docs/CLAUDIO_AGENT_COMMS_HORMIGUERO_2026-05-05.md",
+    "?? docs/CLAUDIO_BOOT_AUTOSTART_2026-04-22.md",
+    "?? docs/CLAUDIO_CITY_REPO2_SANDBOX_DECISION_2026-05-03.md",
+    "?? docs/CLAUDIO_CORE_FIVE_PIECES_CONTRACT_2026-05-03.md",
+    "?? docs/CLAUDIO_DEFENSA_MODULAR_2026-04-24.md",
+    "?? docs/CLAUDIO_LOCAL_AUTONOMY_LADDER_2026-05-05.md",
+    "?? docs/CLAUDIO_MULTI_AGENT_COORDINATION_2026-05-05.md",
+    "?? docs/CLAUDIO_NOLLM_AGENT_2026-05-05.md",
+    "?? docs/CLAUDIO_OBSERVACIONISMO_LEARNING_LOOP_2026-05-05.md",
+    "?? docs/CLAUDIO_OBSERVACIONISMO_ORCHESTRATION_2026-04-29.md",
+    "?? docs/CLAUDIO_OBSERVACIONISMO_P1_P6_SELECTOR_2026-05-05.md",
+    "?? docs/CLAUDIO_OBSERVACIONISMO_WORKPACK_MATERIALIZER_2026-05-05.md",
+    "?? docs/CLAUDIO_OBSERVACION_ENGINEERING_CALIBRATION_2026-05-05.md",
+    "?? docs/CLAUDIO_OPERATIONAL_UMBRELLA_DECISION_2026-05-03.md",
+    "?? docs/CLAUDIO_ORCHESTRATOR.md",
+    "?? docs/CLAUDIO_QWEN_OBSERVACION_ENGINEERING_V2_2026-05-05.md",
+    "?? docs/CLAUDIO_WORK_ORDER_EDITORIAL_2026-04-22.md",
+    "?? docs/CLOUDFLARE_CREDENTIAL_FALLBACK_2026-05-03.md",
+    "?? docs/CLUDIO_SHADOW_FOLDER_RESOLUTION_2026-05-03.md",
+    "?? docs/COACH_PRODUCT_SOURCE_RESCUE_2026-05-03.md",
+    "?? docs/CODEX_PARITY_MATRIX_2026-04-17.md"
   ]
 }

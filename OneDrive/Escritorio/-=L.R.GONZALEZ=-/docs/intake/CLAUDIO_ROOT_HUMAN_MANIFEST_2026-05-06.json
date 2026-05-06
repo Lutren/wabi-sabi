@@ -1,12 +1,12 @@
 {
   "schema": "medioevo.claudio_root_human_audit.v1",
-  "generated_at_utc": "2026-05-06T09:47:26.793733+00:00",
+  "generated_at_utc": "2026-05-06T10:06:23.004593+00:00",
   "target_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\-=MEDIOEVO=-\\-=LIBROS\\claudio",
   "summary": {
-    "root_items": 621,
-    "root_files": 469,
+    "root_items": 554,
+    "root_files": 402,
     "root_directories": 152,
-    "git_pending_lines": 1289,
+    "git_pending_lines": 1223,
     "categories": {
       "archive_existing": 6,
       "cache_regenerable": 11,
@@ -18,7 +18,7 @@
       "misc_root_item": 8,
       "private_blocked": 7,
       "root_data_config": 48,
-      "root_document": 73,
+      "root_document": 6,
       "root_media_or_ui": 10,
       "root_python_script": 205,
       "runtime_core_root": 11,
@@ -32,14 +32,14 @@
       "KEEP_REVIEW": 7,
       "KEEP_REVIEW_CONSOLIDATE": 6,
       "KEEP_REVIEW_RETENTION": 10,
-      "MOVE_CANDIDATE": 389,
+      "MOVE_CANDIDATE": 322,
       "MOVE_CANDIDATE_REVIEW": 48,
       "REVIEW": 8,
       "REVIEW_DESTINATION": 109
     },
     "risks": {
       "HIGH": 32,
-      "LOW": 94,
+      "LOW": 27,
       "MEDIUM": 495
     }
   },
@@ -53,16 +53,6 @@
       "destination_hint": "tools/launchers",
       "risk": "MEDIUM",
       "reason": "root_launcher_noise"
-    },
-    {
-      "name": "-= TO ANYONE WHO HACKS ME =-.txt",
-      "kind": "file",
-      "size_bytes": 343,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "-=PSI=-",
@@ -355,16 +345,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "ACCESOS_DIRECTOS_CREADOS_2026-04-21.md",
-      "kind": "file",
-      "size_bytes": 2370,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "activar_autopilot.py",
       "kind": "file",
       "size_bytes": 2416,
@@ -453,16 +433,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "AGENTES_NEGOCIO_REAL.md",
-      "kind": "file",
-      "size_bytes": 10113,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "ALCATEL_AUTO_SETUP.py",
@@ -695,36 +665,6 @@
       "reason": "root_launcher_noise"
     },
     {
-      "name": "AUTOMATIZACION_CONFIGURADA.md",
-      "kind": "file",
-      "size_bytes": 6094,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "AUTOMATIZACION_MARKETING_ESTADO.md",
-      "kind": "file",
-      "size_bytes": 4483,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "AUTOMATIZACION_RESUMEN_EJECUTIVO.md",
-      "kind": "file",
-      "size_bytes": 5285,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "autopilot",
       "kind": "directory",
       "size_bytes": 0,
@@ -885,16 +825,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "BUGFIX_WEBSEARCH_2026-04-20.md",
-      "kind": "file",
-      "size_bytes": 12183,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "bugs",
       "kind": "directory",
       "size_bytes": 0,
@@ -943,16 +873,6 @@
       "destination_hint": "runtime/cache_or_artifacts",
       "risk": "MEDIUM",
       "reason": "cache_or_generated_runtime"
-    },
-    {
-      "name": "CARTEL.md",
-      "kind": "file",
-      "size_bytes": 706,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "catalog",
@@ -1015,36 +935,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "CIUDAD_DE_CLAUDIO.md",
-      "kind": "file",
-      "size_bytes": 2885,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "CIUDAD_HORMIGUEROESTRUCTURA.md",
-      "kind": "file",
-      "size_bytes": 10068,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "CLAUDE.md",
-      "kind": "file",
-      "size_bytes": 33431,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "CLAUDE.md.backup",
       "kind": "file",
       "size_bytes": 30824,
@@ -1093,16 +983,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "CLAUDIO_APIS_MAESTRO.md",
-      "kind": "file",
-      "size_bytes": 5484,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "claudio_audio.py",
@@ -1155,16 +1035,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "CLAUDIO_CLI_README.md",
-      "kind": "file",
-      "size_bytes": 2420,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "Claudio_Cobain.ico",
       "kind": "file",
       "size_bytes": 137663,
@@ -1213,16 +1083,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "CLAUDIO_EXECUTOR_PROMPTS.md",
-      "kind": "file",
-      "size_bytes": 6698,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "claudio_face.png",
@@ -2045,16 +1905,6 @@
       "reason": "root_launcher_noise"
     },
     {
-      "name": "DIAGNOSTICO_SOLUCION_MEMORIA.md",
-      "kind": "file",
-      "size_bytes": 5880,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "diana_profile_builder.py",
       "kind": "file",
       "size_bytes": 11343,
@@ -2085,16 +1935,6 @@
       "reason": "strong_runtime_route"
     },
     {
-      "name": "DOCUMENTACION_MAESTRA.md",
-      "kind": "file",
-      "size_bytes": 4067,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "download_unc0ver_fix.py",
       "kind": "file",
       "size_bytes": 1883,
@@ -2123,16 +1963,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "ECOSISTEMA_CONSOLIDADO.md",
-      "kind": "file",
-      "size_bytes": 11150,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "ECOSISTEMA_MASTER_DEPLOY.py",
@@ -2335,26 +2165,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "ESTADO_ACTUAL_2026-04-21.md",
-      "kind": "file",
-      "size_bytes": 2652,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "ESTADO_SISTEMA_2026-04-20.md",
-      "kind": "file",
-      "size_bytes": 3732,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "etno",
       "kind": "directory",
       "size_bytes": 0,
@@ -2423,16 +2233,6 @@
       "destination_hint": "runtime/state",
       "risk": "HIGH",
       "reason": "local_state_database"
-    },
-    {
-      "name": "FINAL_SUMMARY_2026-04-25.txt",
-      "kind": "file",
-      "size_bytes": 2048,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "finanzas",
@@ -2543,26 +2343,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "FORMULA_OBSERVACIONISMO_AGENTE_EXPERTO.md",
-      "kind": "file",
-      "size_bytes": 9901,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "GAPS_MERCADO.md",
-      "kind": "file",
-      "size_bytes": 15134,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "gateway",
@@ -2765,16 +2545,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "HARNESS_AUDIT.md",
-      "kind": "file",
-      "size_bytes": 6105,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "history",
       "kind": "directory",
       "size_bytes": 0,
@@ -2803,26 +2573,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "HORMIGUERO_GEODIA_MATRIX_FINAL.md",
-      "kind": "file",
-      "size_bytes": 13235,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "HORMIGUERO_MATRIX_README.md",
-      "kind": "file",
-      "size_bytes": 2253,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "humor_engine.py",
@@ -2935,16 +2685,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "INSTALACION_3T.md",
-      "kind": "file",
-      "size_bytes": 4428,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "INSTALAR_APPLE_DRIVERS.bat",
       "kind": "file",
       "size_bytes": 1720,
@@ -3033,16 +2773,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "INVENTARIO_MAESTRO_2026-04-20.md",
-      "kind": "file",
-      "size_bytes": 17163,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "ios_companion",
@@ -3405,16 +3135,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "LIMPIEZA_COMPLETADA_2026-04-21.md",
-      "kind": "file",
-      "size_bytes": 2949,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "llm",
       "kind": "directory",
       "size_bytes": 0,
@@ -3555,26 +3275,6 @@
       "reason": "local_state_database"
     },
     {
-      "name": "MEGA_PROMPT_CODEX_CIUDAD_v1.md",
-      "kind": "file",
-      "size_bytes": 16381,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "MEJORAS_ESTRATEGICAS_2026-04-16.md",
-      "kind": "file",
-      "size_bytes": 18700,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "memory_index.db",
       "kind": "file",
       "size_bytes": 28893184,
@@ -3623,16 +3323,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "METRO_ESCRITORIO_4_CAPAS.md",
-      "kind": "file",
-      "size_bytes": 14579,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "mini_office",
@@ -3823,16 +3513,6 @@
       "destination_hint": "docs/intake/claudio_root_review",
       "risk": "MEDIUM",
       "reason": "noncanonical_root_dir"
-    },
-    {
-      "name": "OBSERVACIONISMO_VENTAJA.md",
-      "kind": "file",
-      "size_bytes": 8231,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "obsidian_integration.py",
@@ -4205,26 +3885,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "PLAN_INTEGRACION_20260416.md",
-      "kind": "file",
-      "size_bytes": 5054,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "PLAN_MAESTRO_HORMIGUERO.md",
-      "kind": "file",
-      "size_bytes": 6125,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "platform_setup_status.json",
       "kind": "file",
       "size_bytes": 3062,
@@ -4315,16 +3975,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "POSTHOG_ANALYTICS_SETUP.md",
-      "kind": "file",
-      "size_bytes": 5825,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "postmortem_protocol.py",
       "kind": "file",
       "size_bytes": 6532,
@@ -4353,16 +4003,6 @@
       "destination_hint": "tools/launchers",
       "risk": "MEDIUM",
       "reason": "root_launcher_noise"
-    },
-    {
-      "name": "PRODUCT_OBSERVACIONISTA_POLICY.md",
-      "kind": "file",
-      "size_bytes": 897,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "producto_final_codex",
@@ -4395,16 +4035,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "PROMPT_IA_MERGE_2026-04-23.md",
-      "kind": "file",
-      "size_bytes": 14041,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "PROYECTO_REAL_35_A_6_MAS_1_MANIFEST.json",
       "kind": "file",
       "size_bytes": 7869,
@@ -4415,36 +4045,6 @@
       "reason": "root_data_noise"
     },
     {
-      "name": "PSI_AUTOMATION_SUMMARY.md",
-      "kind": "file",
-      "size_bytes": 3712,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "PSI_ENGINE_COMPLETE.md",
-      "kind": "file",
-      "size_bytes": 7214,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "PSI_ENGINE_FINAL_DOCUMENTATION.md",
-      "kind": "file",
-      "size_bytes": 10249,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "psi_ethical_core.py",
       "kind": "file",
       "size_bytes": 18000,
@@ -4453,16 +4053,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "psi_implementation_summary.md",
-      "kind": "file",
-      "size_bytes": 3187,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "psi_monitor.py",
@@ -4533,16 +4123,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "PSI_WRITER_INTEGRATION.md",
-      "kind": "file",
-      "size_bytes": 2583,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "publish_despertar_final.py",
@@ -4655,26 +4235,6 @@
       "reason": "local_state_database"
     },
     {
-      "name": "README_AUTOMATIZACION.md",
-      "kind": "file",
-      "size_bytes": 3789,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "README_MEMORIA_PERSISTENTE.md",
-      "kind": "file",
-      "size_bytes": 2118,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "redbubble_batch_1.json",
       "kind": "file",
       "size_bytes": 5252,
@@ -4693,16 +4253,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "reddit_posts_READY.md",
-      "kind": "file",
-      "size_bytes": 2214,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "remote_oppo_deploy.sh",
@@ -4735,16 +4285,6 @@
       "reason": "root_launcher_noise"
     },
     {
-      "name": "REPARAR_WEBSEARCH_BUG.md",
-      "kind": "file",
-      "size_bytes": 6929,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "reports",
       "kind": "directory",
       "size_bytes": 0,
@@ -4753,16 +4293,6 @@
       "destination_hint": "reports",
       "risk": "LOW",
       "reason": "strong_runtime_route"
-    },
-    {
-      "name": "requirements_api.txt",
-      "kind": "file",
-      "size_bytes": 94,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "research",
@@ -4855,16 +4385,6 @@
       "reason": "noncanonical_root_dir"
     },
     {
-      "name": "RESPONSIBLE.md",
-      "kind": "file",
-      "size_bytes": 559,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "resultado_simulacion_ataques.json",
       "kind": "file",
       "size_bytes": 3710,
@@ -4873,16 +4393,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "RESUMEN_REPARACION_2026-04-20.md",
-      "kind": "file",
-      "size_bytes": 2827,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "rh_mariposa_v2.py",
@@ -4983,16 +4493,6 @@
       "destination_hint": "runtime",
       "risk": "LOW",
       "reason": "strong_runtime_route"
-    },
-    {
-      "name": "SAAS_ROADMAP_v2.md",
-      "kind": "file",
-      "size_bytes": 24500,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "SAMPLE_DIALOGUES.json",
@@ -5123,16 +4623,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "SERVICIOS_INICIADOS_2026-04-21.md",
-      "kind": "file",
-      "size_bytes": 2445,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "setup_adguardhome_pc2.ps1",
@@ -5275,16 +4765,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "SHOW_HN_PRODUCT_HUNT_2026-04-25.md",
-      "kind": "file",
-      "size_bytes": 2564,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "simulacro_diario.py",
       "kind": "file",
       "size_bytes": 4593,
@@ -5373,16 +4853,6 @@
       "destination_hint": "data/root_config_review",
       "risk": "MEDIUM",
       "reason": "root_data_noise"
-    },
-    {
-      "name": "SOLUCION_MEMORIA.md",
-      "kind": "file",
-      "size_bytes": 4110,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "soporte",
@@ -5525,56 +4995,6 @@
       "reason": "root_launcher_noise"
     },
     {
-      "name": "STATUS.md",
-      "kind": "file",
-      "size_bytes": 577,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "status.txt",
-      "kind": "file",
-      "size_bytes": 20,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "STATUS_AUDIOLIBROS_2026-04-25.md",
-      "kind": "file",
-      "size_bytes": 2617,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "STATUS_CHECKLIST_P1_2026-04-25.md",
-      "kind": "file",
-      "size_bytes": 2269,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "STATUS_P1_UPDATE_2026-04-25.md",
-      "kind": "file",
-      "size_bytes": 3589,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "store_profiles.json",
       "kind": "file",
       "size_bytes": 3546,
@@ -5593,16 +5013,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "SUBSTACK_SETUP_2026-04-25.md",
-      "kind": "file",
-      "size_bytes": 4435,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "sunday_featured_artist.py",
@@ -5633,16 +5043,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "SYSTEMA_AUTOMATIZACION_FINAL.md",
-      "kind": "file",
-      "size_bytes": 4607,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "tamagotchi_estado.json",
@@ -5765,16 +5165,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "TESTING_DEBUG_BENCHMARKS_FINAL.md",
-      "kind": "file",
-      "size_bytes": 15743,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "tests",
       "kind": "directory",
       "size_bytes": 0,
@@ -5875,16 +5265,6 @@
       "reason": "root_asset_noise"
     },
     {
-      "name": "ULTRATHINK_RESUMEN.md",
-      "kind": "file",
-      "size_bytes": 4079,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "umami_monitor.py",
       "kind": "file",
       "size_bytes": 13929,
@@ -5893,26 +5273,6 @@
       "destination_hint": "tools/root_scripts_review",
       "risk": "MEDIUM",
       "reason": "root_python_noise"
-    },
-    {
-      "name": "UNIFICACION_2026-04-20.md",
-      "kind": "file",
-      "size_bytes": 4214,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
-      "name": "UNIFICACION_ANALISIS_2026-04-23.md",
-      "kind": "file",
-      "size_bytes": 13745,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "update_gumroad_listings.py",
@@ -5935,16 +5295,6 @@
       "reason": "root_python_noise"
     },
     {
-      "name": "URGENTE_WEBSEARCH_BUG.md",
-      "kind": "file",
-      "size_bytes": 3438,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "user_profile.json",
       "kind": "file",
       "size_bytes": 3081,
@@ -5963,16 +5313,6 @@
       "destination_hint": "private/vault_medioevo",
       "risk": "HIGH",
       "reason": "private_runtime_or_models"
-    },
-    {
-      "name": "VERIFICACION_COMPLETA_2026-04-20.md",
-      "kind": "file",
-      "size_bytes": 5837,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
     },
     {
       "name": "verificar_stripe.py",
@@ -6175,16 +5515,6 @@
       "reason": "root_doc_noise"
     },
     {
-      "name": "WORKFLOW.symphony.wide.md",
-      "kind": "file",
-      "size_bytes": 5553,
-      "category": "root_document",
-      "decision": "MOVE_CANDIDATE",
-      "destination_hint": "docs/root_notes_review",
-      "risk": "LOW",
-      "reason": "root_doc_noise"
-    },
-    {
       "name": "workflows",
       "kind": "directory",
       "size_bytes": 0,
@@ -6285,26 +5615,12 @@
     " M website/duat.html",
     " M website/index.html",
     "?? \" Claudio_Startup.bat\"",
-    "?? \"-= TO ANYONE WHO HACKS ME =-.txt\"",
     "?? .env.example",
     "?? .env.mova.example",
-    "?? ACCESOS_DIRECTOS_CREADOS_2026-04-21.md",
-    "?? AGENTES_NEGOCIO_REAL.md",
     "?? ALCATEL_AUTO_SETUP.py",
     "?? AUTOMATED_SESSION.bat",
     "?? AUTOMATE_SESSION.bat",
-    "?? AUTOMATIZACION_CONFIGURADA.md",
-    "?? AUTOMATIZACION_MARKETING_ESTADO.md",
-    "?? AUTOMATIZACION_RESUMEN_EJECUTIVO.md",
-    "?? BUGFIX_WEBSEARCH_2026-04-20.md",
-    "?? CARTEL.md",
-    "?? CIUDAD_DE_CLAUDIO.md",
-    "?? CIUDAD_HORMIGUEROESTRUCTURA.md",
-    "?? CLAUDE.md",
-    "?? CLAUDIO_APIS_MAESTRO.md",
     "?? CLAUDIO_CHAT.bat",
-    "?? CLAUDIO_CLI_README.md",
-    "?? CLAUDIO_EXECUTOR_PROMPTS.md",
     "?? CONFIGURAR_RED_POD.bat",
     "?? Claudio_Accesos_Directos/",
     "?? Claudio_Cobain.ico",
@@ -6312,9 +5628,6 @@
     "?? \"C\\357\\200\\272tempsensor_server.py\"",
     "?? DASHBOARD_ARGUS_UNIFIED.html",
     "?? DIAGNOSTICO_COMPLETO.bat",
-    "?? DIAGNOSTICO_SOLUCION_MEMORIA.md",
-    "?? DOCUMENTACION_MAESTRA.md",
-    "?? ECOSISTEMA_CONSOLIDADO.md",
     "?? ECOSISTEMA_MASTER_DEPLOY.py",
     "?? ECOSISTEMA_MASTER_SETUP.py",
     "?? EJECUTAR_ALCATEL_AUTO.bat",
@@ -6323,16 +5636,8 @@
     "?? EJECUTAR_MASTER_SETUP.bat",
     "?? EJECUTAR_OPPO_AUTO.bat",
     "?? EJECUTAR_TODO_P0.bat",
-    "?? ESTADO_ACTUAL_2026-04-21.md",
-    "?? ESTADO_SISTEMA_2026-04-20.md",
-    "?? FINAL_SUMMARY_2026-04-25.txt",
     "?? FIX_OPPO_TERMINAL.sh",
-    "?? FORMULA_OBSERVACIONISMO_AGENTE_EXPERTO.md",
-    "?? GAPS_MERCADO.md",
     "?? HABILITAR_POD_REMOTO.bat",
-    "?? HARNESS_AUDIT.md",
-    "?? HORMIGUERO_GEODIA_MATRIX_FINAL.md",
-    "?? HORMIGUERO_MATRIX_README.md",
     "?? INICIAR_API_SERVER.bat",
     "?? INICIAR_CLAUDIO.bat",
     "?? INICIAR_CON_WINDOWS.bat",
@@ -6340,63 +5645,25 @@
     "?? INICIAR_PUBLICACION_AUTOMATICA.bat",
     "?? INICIAR_SESION.py",
     "?? INICIAR_SISTEMA_247.bat",
-    "?? INSTALACION_3T.md",
     "?? INSTALAR_APPLE_DRIVERS.bat",
     "?? INSTALAR_TODO.ps1",
-    "?? INVENTARIO_MAESTRO_2026-04-20.md",
     "?? IPHONE_AUTO_SETUP.py",
     "?? IPHONE_CONNECT_192.168.1.96.bat",
     "?? IPHONE_DIAGNOSTICO.bat",
     "?? IPHONE_VERIFICAR.bat",
     "?? LAUNCH_THESIS.bat",
-    "?? LIMPIEZA_COMPLETADA_2026-04-21.md",
-    "?? MEGA_PROMPT_CODEX_CIUDAD_v1.md",
-    "?? MEJORAS_ESTRATEGICAS_2026-04-16.md",
-    "?? METRO_ESCRITORIO_4_CAPAS.md",
     "?? MONITOR_OPPO.bat",
     "?? Modelfile.claudio",
-    "?? OBSERVACIONISMO_VENTAJA.md",
     "?? OPPO_DEPLOY_FIX.bat",
-    "?? PLAN_INTEGRACION_20260416.md",
-    "?? PLAN_MAESTRO_HORMIGUERO.md",
-    "?? POSTHOG_ANALYTICS_SETUP.md",
     "?? POWERFUL_START.bat",
-    "?? PRODUCT_OBSERVACIONISTA_POLICY.md",
-    "?? PROMPT_IA_MERGE_2026-04-23.md",
     "?? PROYECTO_REAL_35_A_6_MAS_1_MANIFEST.json",
-    "?? PSI_AUTOMATION_SUMMARY.md",
-    "?? PSI_ENGINE_COMPLETE.md",
-    "?? PSI_ENGINE_FINAL_DOCUMENTATION.md",
-    "?? PSI_WRITER_INTEGRATION.md",
     "?? Pod_RDP.rdp",
-    "?? README_AUTOMATIZACION.md",
-    "?? README_MEMORIA_PERSISTENTE.md",
     "?? REPARAR_ECOSISTEMA.bat",
-    "?? REPARAR_WEBSEARCH_BUG.md",
-    "?? RESPONSIBLE.md",
-    "?? RESUMEN_REPARACION_2026-04-20.md",
     "?? RUFUS_DOWNLOAD_ALT.bat",
     "?? RUN_ALL_AUTOMATIONS.bat",
     "?? RUN_CANON10_EDITORIAL_PIPELINE.bat",
-    "?? SAAS_ROADMAP_v2.md",
     "?? SAMPLE_DIALOGUES.json",
-    "?? SERVICIOS_INICIADOS_2026-04-21.md",
-    "?? SHOW_HN_PRODUCT_HUNT_2026-04-25.md",
-    "?? SOLUCION_MEMORIA.md",
-    "?? STATUS.md",
-    "?? STATUS_AUDIOLIBROS_2026-04-25.md",
-    "?? STATUS_CHECKLIST_P1_2026-04-25.md",
-    "?? STATUS_P1_UPDATE_2026-04-25.md",
-    "?? SUBSTACK_SETUP_2026-04-25.md",
-    "?? SYSTEMA_AUTOMATIZACION_FINAL.md",
     "?? TERMUX_AUTO_BRIDGE.py",
-    "?? TESTING_DEBUG_BENCHMARKS_FINAL.md",
-    "?? ULTRATHINK_RESUMEN.md",
-    "?? UNIFICACION_2026-04-20.md",
-    "?? UNIFICACION_ANALISIS_2026-04-23.md",
-    "?? URGENTE_WEBSEARCH_BUG.md",
-    "?? VERIFICACION_COMPLETA_2026-04-20.md",
-    "?? WORKFLOW.symphony.wide.md",
     "?? _ARCHIVAR/",
     "?? __init__.py",
     "?? _archivo_sesiones/",
@@ -6505,6 +5772,69 @@
     "?? consolidar_35_a_6mas1.py",
     "?? consolidar_env.py",
     "?? contab/",
-    "?? content/"
+    "?? content/",
+    "?? content_calendar.py",
+    "?? content_queue.json",
+    "?? context/",
+    "?? continuous_research_watch.py",
+    "?? conway_buddy.py",
+    "?? conway_data/",
+    "?? conway_economico.py",
+    "?? conway_miner_data.json",
+    "?? conway_observador.py",
+    "?? conway_online.py",
+    "?? conway_reporte_local.py",
+    "?? conway_start.py",
+    "?? conway_tamagotchi.py",
+    "?? core/.handoff_state.json",
+    "?? core/README.md",
+    "?? core/__init__.py",
+    "?? core/agent_comms.py",
+    "?? core/avatar_generator.py",
+    "?? core/brain_os_bridge.py",
+    "?? core/brain_os_kernel.py",
+    "?? core/bunker_444.py",
+    "?? core/clan_lobo_dragon.py",
+    "?? core/claudio_core_contract.py",
+    "?? core/clone_manager.py",
+    "?? core/cogni_kernel.py",
+    "?? core/concilio_darvi.py",
+    "?? core/config.py",
+    "?? core/content_forge_bridge.py",
+    "?? core/context_engine/",
+    "?? core/conway_agents.py",
+    "?? core/conway_agents_extended.py",
+    "?? core/conway_agents_psi_fixed.py",
+    "?? core/conway_agents_real.py",
+    "?? core/conway_evolution.py",
+    "?? core/conway_orchestrator.py",
+    "?? core/conway_psi_adapter.py",
+    "?? core/conway_startup_optimizer.py",
+    "?? core/crm_store.py",
+    "?? core/data_double_slit.py",
+    "?? core/deepseek_client.py",
+    "?? core/desktop_bridge.py",
+    "?? core/desktop_bridge_macros.py",
+    "?? core/dual_lens.py",
+    "?? core/editorial_canon_policy.py",
+    "?? core/embeddings.py",
+    "?? core/evolution_engine.py",
+    "?? core/feature_catalog.py",
+    "?? core/frequency_theory.py",
+    "?? core/gate/",
+    "?? core/gemini_client.py",
+    "?? core/geodia_lab/__init__.py",
+    "?? core/geodia_lab/resolver.py",
+    "?? core/hormiguero_governance/",
+    "?? core/hormiguero_governance_bridge.py",
+    "?? core/llm_router.py",
+    "?? core/local_autonomy.py",
+    "?? core/marketing_apis.py",
+    "?? core/memory.py",
+    "?? core/metrics.py",
+    "?? core/module_containment.py",
+    "?? core/module_manager.py",
+    "?? core/multiquery.py",
+    "?? core/nexus_modular.py"
   ]
 }

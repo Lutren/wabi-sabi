@@ -9,6 +9,7 @@ from .fingerprint import make_fingerprint
 from .gate import evaluate_action
 from .jsonutil import pretty_json
 from .metrics import estimate_regime, estimate_residue_from_signals, phi_eff_power
+from .ontology import ObservationEnvelope, ObservationEnvelopeStore, PACReasoner, validate_observation_envelope
 from .world import simulate_world
 
 
@@ -37,6 +38,21 @@ def command_triage(args: argparse.Namespace) -> int:
 
 def command_evaluate_action(args: argparse.Namespace) -> int:
     print(pretty_json(evaluate_action(read_json(args.action_file))))
+    return 0
+
+
+def command_validate_envelope(args: argparse.Namespace) -> int:
+    envelope = ObservationEnvelope.from_dict(read_json(args.envelope_file))
+    validation = validate_observation_envelope(envelope)
+    reasoning = PACReasoner().evaluate(envelope)
+    payload: dict[str, Any] = {
+        "envelope": envelope.to_dict(),
+        "validation": validation,
+        "reasoning": reasoning,
+    }
+    if args.db:
+        payload["stored"] = ObservationEnvelopeStore(args.db).insert_envelope(envelope)
+    print(pretty_json(payload))
     return 0
 
 
@@ -70,6 +86,11 @@ def build_parser() -> argparse.ArgumentParser:
     action = sub.add_parser("evaluate-action", help="evaluate an action JSON file")
     action.add_argument("action_file")
     action.set_defaults(func=command_evaluate_action)
+
+    envelope = sub.add_parser("validate-envelope", help="validate and optionally store an observation envelope")
+    envelope.add_argument("envelope_file")
+    envelope.add_argument("--db", default="")
+    envelope.set_defaults(func=command_validate_envelope)
 
     fingerprint = sub.add_parser("fingerprint", help="generate a stable session fingerprint")
     fingerprint.add_argument("--session-id", required=True)

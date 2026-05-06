@@ -15,10 +15,41 @@ DEFAULT_GATE_CONFIG: dict[str, Any] = {
     "balance_min": 0.12,
     "balance_max": 0.90,
     "jamming_threshold": 1.0,
+    "selectivity_review": 0.35,
+    "calibration_review": 0.35,
     "demo_only_thresholds": True,
 }
 
 CONSEQUENTIAL_ACTIONS = {"send_email", "delete", "edit_file", "run_code", "approve_invoice", "publish"}
+HARD_BOUNDARY_ACTIONS = {
+    "destructive_cleanup",
+    "external_write",
+    "network",
+    "private_game_write",
+    "public_publish",
+    "raw_download_import",
+    "touch_secret",
+}
+HARD_BOUNDARY_TAGS = {
+    "destructive_cleanup",
+    "external_write",
+    "network",
+    "private_game",
+    "publication_without_gate",
+    "raw_downloads",
+    "secret",
+    "touches_secret",
+}
+CONTROLLED_CLAIM_TYPES = {
+    "medical",
+    "medical_claim",
+    "publication_claim",
+    "scientific",
+    "scientific_claim",
+    "social",
+    "social_claim",
+    "social_prediction",
+}
 
 
 def _list(value: Any) -> list[Any]:
@@ -41,6 +72,53 @@ def _tools(action: dict[str, Any]) -> list[dict[str, Any]]:
 def _self_check(action: dict[str, Any]) -> dict[str, Any]:
     value = action.get("self_check") or action.get("selfCheck") or {}
     return value if isinstance(value, dict) else {}
+
+
+def _policy_tags(action: dict[str, Any]) -> list[str]:
+    return [str(item) for item in _list(action.get("policy_tags") or action.get("policyTags"))]
+
+
+def _field(action: dict[str, Any], *names: str, default: Any = None) -> Any:
+    for name in names:
+        if name in action:
+            return action[name]
+    return default
+
+
+def _receptor_state(action: dict[str, Any]) -> dict[str, Any]:
+    receptor_id = str(_field(action, "receptor_id", "receptorId", default="") or "")
+    tags = _policy_tags(action)
+    required = bool(
+        _field(action, "requires_receptor", "requiresReceptor", default=False)
+        or "requires_authorized_receptor" in tags
+    )
+    authorized_value = _field(action, "receptor_authorized", "receptorAuthorized", default=None)
+    authorized = bool(receptor_id) if authorized_value is None else bool(authorized_value)
+    return {
+        "id": receptor_id,
+        "required": required,
+        "authorized": authorized,
+        "selectivity": _field(action, "selectivity", "receptor_selectivity", "receptorSelectivity", default=None),
+        "calibration": _field(action, "calibration", "receptor_calibration", "receptorCalibration", default=None),
+        "authority_score": _field(action, "authority_score", "authorityScore", default=None),
+    }
+
+
+def _is_scientific_claim(action: dict[str, Any]) -> bool:
+    tags = {tag.lower() for tag in _policy_tags(action)}
+    return (
+        _action_type(action) == "scientific_claim"
+        or str(action.get("claim_type") or action.get("claimType") or "").lower() == "scientific_claim"
+        or "scientific_claim" in tags
+    )
+
+
+def _claim_type(action: dict[str, Any]) -> str:
+    return str(action.get("claim_type") or action.get("claimType") or "").lower()
+
+
+def _has_verified_source(action: dict[str, Any]) -> bool:
+    return any(source.get("verified") for source in _sources(action))
 
 
 def score_sources(action: dict[str, Any]) -> float:
@@ -135,6 +213,7 @@ def compute_residue(action: dict[str, Any]) -> dict[str, Any]:
     sources = _sources(action)
     tools = _tools(action)
     check = _self_check(action)
+    receptor = _receptor_state(action)
 
     if not sources:
         missing_evidence.append("no_sources")
@@ -156,10 +235,43 @@ def compute_residue(action: dict[str, Any]) -> dict[str, Any]:
     if risk > 0.8 and reversibility < 0.3:
         policy_violations.append("high_risk_low_reversibility")
 
-    policy_tags = _list(action.get("policy_tags") or action.get("policyTags"))
+    policy_tags = _policy_tags(action)
+    normalized_tags = {tag.lower() for tag in policy_tags}
+    action_type = _action_type(action)
+    if action_type in HARD_BOUNDARY_ACTIONS:
+        policy_violations.append(f"hard_boundary_action:{action_type}")
+    for tag in sorted(normalized_tags & HARD_BOUNDARY_TAGS):
+        policy_violations.append(f"hard_boundary_tag:{tag}")
+
+    claim_type = _claim_type(action)
+    if claim_type in CONTROLLED_CLAIM_TYPES and not _has_verified_source(action):
+        policy_violations.append(f"{claim_type}_without_verified_evidence")
+
     human_reviewers = _list(action.get("human_reviewers") or action.get("humanReviewers"))
     if "requires_human_approval" in policy_tags and not human_reviewers:
         policy_violations.append("human_approval_required")
+
+    if _is_scientific_claim(action):
+        if not _has_verified_source(action):
+            policy_violations.append("scientific_claim_without_verified_evidence")
+        method = _field(action, "method", "protocol", default=None) or check.get("method") or check.get("protocol")
+        if not method:
+            unresolved.append("scientific_claim_missing_method")
+        if not _list(check.get("falsifiers")):
+            unresolved.append("scientific_claim_missing_falsifier")
+
+    if receptor["required"] and not receptor["id"]:
+        policy_violations.append("missing_authorized_receptor")
+    elif receptor["id"] and not receptor["authorized"]:
+        policy_violations.append("receptor_not_authorized")
+
+    selectivity = receptor["selectivity"]
+    if selectivity is not None and clamp01(selectivity) < DEFAULT_GATE_CONFIG["selectivity_review"]:
+        unresolved.append("low_receptor_selectivity")
+
+    calibration = receptor["calibration"]
+    if calibration is not None and clamp01(calibration) < DEFAULT_GATE_CONFIG["calibration_review"]:
+        unresolved.append("low_receptor_calibration")
 
     residue = (
         0.10 * len(missing_evidence)
@@ -206,6 +318,7 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
     reasons: list[str] = []
     risk = clamp01(action.get("risk", 0.5))
     reversibility = clamp01(action.get("reversibility", 0.5))
+    receptor = _receptor_state(action)
 
     if risk >= cfg["high_risk"] and reversibility <= cfg["low_reversibility"]:
         status = "BLOCK"
@@ -214,6 +327,22 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
     if residue["R"] >= cfg["residue_block"]:
         status = "BLOCK"
         reasons.append("critical_residue")
+
+    if "scientific_claim_without_verified_evidence" in residue["policy_violations"]:
+        status = "BLOCK"
+        reasons.append("scientific_claim_requires_verified_evidence")
+
+    if any(str(item).startswith("hard_boundary_") for item in residue["policy_violations"]):
+        status = "BLOCK"
+        reasons.append("hard_boundary_requires_block")
+
+    if any(str(item).endswith("_without_verified_evidence") for item in residue["policy_violations"]):
+        status = "BLOCK"
+        reasons.append("controlled_claim_requires_verified_evidence")
+
+    if any(item in residue["policy_violations"] for item in {"missing_authorized_receptor", "receptor_not_authorized"}):
+        status = "BLOCK"
+        reasons.append("authorized_receptor_required")
 
     if status != "BLOCK":
         if theta < cfg["theta_review"]:
@@ -243,6 +372,9 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
             "self_reference": self_ref,
             "restriction": restriction,
             "balance_lg": balance,
+            "receptor_selectivity": clamp01(receptor["selectivity"]) if receptor["selectivity"] is not None else None,
+            "receptor_calibration": clamp01(receptor["calibration"]) if receptor["calibration"] is not None else None,
+            "authority_score": clamp01(receptor["authority_score"]) if receptor["authority_score"] is not None else None,
         },
         "residue": residue,
         "reasons": reasons,
@@ -251,5 +383,7 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
             "thresholdCalibration": "DEMO_ONLY",
             "weights": "DEMO_ONLY",
             "researchClaims": "NO_PRODUCT_CLAIMS",
+            "patentPatternUse": "ABSTRACT_SOFTWARE_PATTERN_ONLY",
+            "legalStatus": "LEGAL_REVIEW_REQUIRED",
         },
     }

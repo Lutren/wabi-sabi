@@ -5,6 +5,10 @@
   "output": "Draft email that references the verified invoice status, avoids legal claims, and asks the customer to confirm the next available meeting window.",
   "risk": 0.2,
   "reversibility": 0.85,
+  "receptorId": "crm_followup_receptor",
+  "receptorAuthorized": true,
+  "selectivity": 0.92,
+  "calibration": 0.84,
   "sources": [
     {
       "label": "CRM note",

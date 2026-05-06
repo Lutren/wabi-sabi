@@ -24,6 +24,10 @@ GOOD_ACTION = {
     "output": "Draft email that references the verified invoice status, avoids legal claims, and asks for meeting availability.",
     "risk": 0.2,
     "reversibility": 0.85,
+    "receptorId": "crm_followup_receptor",
+    "receptorAuthorized": True,
+    "selectivity": 0.92,
+    "calibration": 0.84,
     "sources": [
         {"label": "CRM note", "confidence": 0.95, "verified": True},
         {"label": "Invoice record", "confidence": 0.92, "verified": True},
@@ -45,6 +49,10 @@ REVIEW_ACTION = {
     "output": "A public summary with caveats and unresolved source quality.",
     "risk": 0.45,
     "reversibility": 0.6,
+    "receptorId": "publish_review_receptor",
+    "receptorAuthorized": True,
+    "selectivity": 0.74,
+    "calibration": 0.58,
     "sources": [{"label": "draft note", "confidence": 0.45, "verified": False}],
     "toolCalls": [],
     "selfCheck": {
@@ -80,6 +88,34 @@ class GateTests(unittest.TestCase):
         self.assertTrue(decision["config"]["demo_only_thresholds"])
         self.assertEqual(decision["claims"]["thresholdCalibration"], "DEMO_ONLY")
 
+    def test_consequential_action_without_receptor_blocks(self) -> None:
+        action = {
+            **GOOD_ACTION,
+            "receptorId": "",
+            "receptorAuthorized": False,
+        }
+        decision = evaluate_action(action)
+        self.assertEqual(decision["status"], "BLOCK")
+        self.assertIn("authorized receptor required", decision["reasons"])
+
+    def test_scientific_claim_without_verified_evidence_blocks(self) -> None:
+        action = {
+            **GOOD_ACTION,
+            "actionType": "scientific_claim",
+            "sources": [{"label": "draft", "confidence": 0.8, "verified": False}],
+            "selfCheck": {
+                "summary": "Research note only.",
+                "confidence": 0.5,
+                "assumptions": [],
+                "uncertainties": ["no validation run"],
+                "falsifiers": ["replication fails"],
+            },
+            "method": "local literature comparison",
+        }
+        decision = evaluate_action(action)
+        self.assertEqual(decision["status"], "BLOCK")
+        self.assertIn("scientific claim requires verified evidence", decision["reasons"])
+
 
 class StoreTests(unittest.TestCase):
     def test_sqlite_persistence_and_human_review_audit(self) -> None:
@@ -93,6 +129,7 @@ class StoreTests(unittest.TestCase):
             self.assertIsNotNone(fetched)
             self.assertEqual(fetched["decision"]["status"], "REVIEW")
             self.assertEqual(len(fetched["audit"]), 1)
+            self.assertEqual(fetched["audit"][0]["payload"]["receptorId"], "publish_review_receptor")
 
             reviewed = reopened.update_human_decision(record["id"], "APPROVED", "human", "reviewed evidence")
             self.assertIsNotNone(reviewed)

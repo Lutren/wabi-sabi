@@ -1,0 +1,24 @@
+{
+  "observer": "debugtyr",
+  "subject": "Agent Safety Gate",
+  "claim": "Scientific claims should require verified evidence before publication.",
+  "claimType": "scientific_claim",
+  "kind": "process",
+  "evidence": [
+    {
+      "label": "local gate test",
+      "source": "tests/test_obsai_core.py",
+      "verified": true,
+      "confidence": 0.91
+    }
+  ],
+  "confidence": 0.82,
+  "provenance": {
+    "method": "unit test"
+  },
+  "constraints": {
+    "falsifiers": [
+      "Gate approves an unverified scientific claim."
+    ]
+  }
+}

@@ -78,7 +78,12 @@ class ResidueStore:
                 conn,
                 record_id,
                 "evaluated",
-                {"decisionStatus": decision["status"], "theta": decision["theta"]},
+                {
+                    "decisionStatus": decision["status"],
+                    "theta": decision["theta"],
+                    "receptorId": (decision.get("receptor") or {}).get("id"),
+                    "receptorAuthorized": (decision.get("receptor") or {}).get("authorized"),
+                },
                 at=now,
             )
             conn.commit()

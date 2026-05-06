@@ -13,6 +13,17 @@ This MVP is a selective absorption from `residueos_mvp.zip`, registered in
 `SOURCE_INTAKE_REGISTER.md`. It is not a wholesale copy of the ZIP. The original
 JSON store is replaced with SQLite.
 
+## Receptor Contract
+
+Consequential actions require an authorized receptor. In practice: a request to
+publish, delete, edit files, run code, approve invoices or send email without
+`receptorId` and `receptorAuthorized=true` returns `BLOCK`. Low selectivity or
+low calibration routes the action to review through residue.
+
+Scientific claims are stricter: an action tagged or typed as `scientific_claim`
+blocks without verified evidence and routes to review when method or falsifiers
+are missing.
+
 ## Claims Boundary
 
 - This is not a consciousness detector.
@@ -23,7 +34,7 @@ JSON store is replaced with SQLite.
 ## Run
 
 ```powershell
-cd "C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\packages\open-dev\residueos"
+cd residueos
 python -m residueos.cli evaluate examples\sample_action.json --db runtime\residueos.sqlite
 python -m residueos.cli actions --db runtime\residueos.sqlite
 python -m residueos.cli serve --db runtime\residueos.sqlite --port 8787
@@ -59,6 +70,7 @@ Each SQLite record stores:
 
 - action JSON;
 - decision JSON;
+- receptor id, authorization and calibration/selectivity metadata;
 - optional human decision JSON;
 - audit events for evaluation and human review;
 - timestamps for creation and update.

@@ -22,7 +22,7 @@ routing, private prompts, weights or logs.
 ## Commands
 
 ```powershell
-cd "C:\Users\L-Tyr\OneDrive\Escritorio\-=L.R.GONZALEZ=-\packages\open-dev\gemma-observacionismo-cleanup"
+cd packages/open-dev/gemma-observacionismo-cleanup
 python -m gemma_observacionismo_cleanup.cli observe fixtures\sample.json
 python -m gemma_observacionismo_cleanup.cli noise-report fixtures\before.json fixtures\after.json
 python -m gemma_observacionismo_cleanup.cli fingerprint fixtures\sample.json

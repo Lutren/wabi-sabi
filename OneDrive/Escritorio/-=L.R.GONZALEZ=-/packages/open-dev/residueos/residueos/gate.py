@@ -26,6 +26,8 @@ DEFAULT_CONFIG: dict[str, float | bool] = {
     "jamming_threshold": 50.0,
     "balance_min": 0.12,
     "balance_max": 0.90,
+    "selectivity_review": 0.35,
+    "calibration_review": 0.35,
     "demo_only_thresholds": True,
 }
 
@@ -34,6 +36,44 @@ CONSEQUENTIAL_ACTIONS = {"approve_invoice", "edit_file", "delete", "run_code", "
 
 def _list_from(value: Any) -> list[Any]:
     return value if isinstance(value, list) else []
+
+
+def _field(action: dict[str, Any], *names: str, default: Any = None) -> Any:
+    for name in names:
+        if name in action:
+            return action[name]
+    return default
+
+
+def _policy_tags(action: dict[str, Any]) -> list[str]:
+    return [str(item) for item in _list_from(action.get("policyTags") or action.get("policy_tags"))]
+
+
+def _receptor_state(action: dict[str, Any]) -> dict[str, Any]:
+    action_type = str(action.get("actionType") or action.get("action_type") or "").lower()
+    tags = _policy_tags(action)
+    receptor_id = str(_field(action, "receptorId", "receptor_id", default="") or "")
+    required = bool(
+        _field(action, "requiresReceptor", "requires_receptor", default=action_type in CONSEQUENTIAL_ACTIONS)
+        or "requires_authorized_receptor" in tags
+    )
+    authorized_value = _field(action, "receptorAuthorized", "receptor_authorized", default=None)
+    authorized = bool(receptor_id) if authorized_value is None else bool(authorized_value)
+    return {
+        "id": receptor_id,
+        "required": required,
+        "authorized": authorized,
+        "selectivity": _field(action, "selectivity", "receptorSelectivity", "receptor_selectivity", default=None),
+        "calibration": _field(action, "calibration", "receptorCalibration", "receptor_calibration", default=None),
+        "authorityScore": _field(action, "authorityScore", "authority_score", default=None),
+    }
+
+
+def _is_scientific_claim(action: dict[str, Any]) -> bool:
+    tags = {tag.lower() for tag in _policy_tags(action)}
+    action_type = str(action.get("actionType") or action.get("action_type") or "").lower()
+    claim_type = str(action.get("claimType") or action.get("claim_type") or "").lower()
+    return action_type == "scientific_claim" or claim_type == "scientific_claim" or "scientific_claim" in tags
 
 
 def compute_residue(action: dict[str, Any]) -> dict[str, Any]:
@@ -45,6 +85,7 @@ def compute_residue(action: dict[str, Any]) -> dict[str, Any]:
 
     sources = _list_from(action.get("sources"))
     tools = _list_from(action.get("toolCalls"))
+    receptor = _receptor_state(action)
 
     if not sources:
         missing_evidence.append("No sources were provided.")
@@ -73,10 +114,35 @@ def compute_residue(action: dict[str, Any]) -> dict[str, Any]:
     if len(str(action.get("input") or "").strip()) < 10:
         unresolved_questions.append("Input/context is too short.")
 
-    policy_tags = _list_from(action.get("policyTags"))
+    policy_tags = _policy_tags(action)
     human_reviewers = _list_from(action.get("humanReviewers"))
     if "requires_human_approval" in policy_tags and not human_reviewers:
         policy_violations.append("Policy requires human approval but no human reviewer is attached.")
+
+    if _is_scientific_claim(action):
+        verified_source = any(isinstance(source, dict) and source.get("verified") for source in sources)
+        if not verified_source:
+            policy_violations.append("scientific_claim_without_verified_evidence")
+        method = _field(action, "method", "protocol", default=None)
+        if isinstance(self_check, dict):
+            method = method or self_check.get("method") or self_check.get("protocol")
+            falsifiers = _list_from(self_check.get("falsifiers"))
+        else:
+            falsifiers = []
+        if not method:
+            unresolved_questions.append("scientific_claim_missing_method")
+        if not falsifiers:
+            unresolved_questions.append("scientific_claim_missing_falsifier")
+
+    if receptor["required"] and not receptor["id"]:
+        policy_violations.append("missing_authorized_receptor")
+    elif receptor["id"] and not receptor["authorized"]:
+        policy_violations.append("receptor_not_authorized")
+
+    if receptor["selectivity"] is not None and clamp01(receptor["selectivity"]) < float(DEFAULT_CONFIG["selectivity_review"]):
+        unresolved_questions.append("low_receptor_selectivity")
+    if receptor["calibration"] is not None and clamp01(receptor["calibration"]) < float(DEFAULT_CONFIG["calibration_review"]):
+        unresolved_questions.append("low_receptor_calibration")
 
     residue_score = (
         len(missing_evidence) * 8
@@ -108,6 +174,7 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
     restriction = restriction_score(action)
     balance = balance_lg(distinguishability, restriction)
     phi = phi_eff(residue["residueScore"], float(cfg["jamming_threshold"]))
+    receptor = _receptor_state(action)
 
     theta = theta_score(
         distinguishability=distinguishability,
@@ -133,6 +200,14 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
     if residue["residueScore"] >= float(cfg["residue_block"]):
         status = "BLOCK"
         reasons.append("critical residue score")
+
+    if "scientific_claim_without_verified_evidence" in residue["policyViolations"]:
+        status = "BLOCK"
+        reasons.append("scientific claim requires verified evidence")
+
+    if any(item in residue["policyViolations"] for item in {"missing_authorized_receptor", "receptor_not_authorized"}):
+        status = "BLOCK"
+        reasons.append("authorized receptor required")
 
     if status != "BLOCK":
         if theta < float(cfg["theta_review"]) or residue["residueScore"] >= float(cfg["residue_review"]):
@@ -164,10 +239,16 @@ def evaluate_action(action: dict[str, Any], config: dict[str, Any] | None = None
             "restriction": restriction,
             "balanceLG": balance,
             "phiEff": phi,
+            "receptorSelectivity": clamp01(receptor["selectivity"]) if receptor["selectivity"] is not None else None,
+            "receptorCalibration": clamp01(receptor["calibration"]) if receptor["calibration"] is not None else None,
+            "authorityScore": clamp01(receptor["authorityScore"]) if receptor["authorityScore"] is not None else None,
         },
+        "receptor": receptor,
         "config": cfg,
         "claims": {
             "thresholdCalibration": "DEMO_ONLY",
             "confusionMatrix": "DEMO_ONLY_UNTIL_REAL_DATASET",
+            "patentPatternUse": "ABSTRACT_SOFTWARE_PATTERN_ONLY",
+            "legalStatus": "LEGAL_REVIEW_REQUIRED",
         },
     }

@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "obs-safe-integration-kit"
+version = "0.1.0"
+description = "Local-first Observacionista kernel: ObservationEnvelope, PSI metrics, ActionGate, EvidenceStore, adapters."
+requires-python = ">=3.10"
+authors = [{name = "Observacionismo"}]
+license = {text = "MIT"}
+
+[project.scripts]
+obs-safe = "obs_safe_integration_kit.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

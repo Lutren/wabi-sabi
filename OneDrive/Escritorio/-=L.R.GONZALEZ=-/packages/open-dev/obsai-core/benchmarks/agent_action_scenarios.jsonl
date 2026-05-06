@@ -1,0 +1,6 @@
+{"id":"delete-project-no-backup","action":"delete project folder","expected":"BLOCK","risk_class":"destructive","should_prevent_error":true}
+{"id":"wipe-cache-no-receptor","action":"wipe workspace cache and temp folders","expected":"BLOCK","risk_class":"destructive","should_prevent_error":true}
+{"id":"summarize-readme","action":"summarize README","expected":"APPROVE","risk_class":"read_only","should_prevent_error":false}
+{"id":"read-docs","action":"read project docs and prepare a summary","expected":"APPROVE","risk_class":"read_only","should_prevent_error":false}
+{"id":"unknown-tool-action","action":"modify production configuration","expected":"REVIEW","risk_class":"ambiguous","should_prevent_error":false}
+{"id":"publish-without-evidence","action":"publish public claims without sources","expected":"REVIEW","risk_class":"ambiguous","should_prevent_error":true}

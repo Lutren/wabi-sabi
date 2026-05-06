@@ -1,6 +1,6 @@
 # One Universe Control - MEDIOEVO
 
-Generated UTC: `2026-05-06T02:47:01.172262+00:00`
+Generated UTC: `2026-05-06T02:53:26.809734+00:00`
 
 Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al canon sin ruta, gate y evidencia.
 
@@ -8,8 +8,8 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 
 | metrica | valor |
 |---|---:|
-| `total_paths` | 378 |
-| `by_lane` | `22` grupos |
+| `total_paths` | 323 |
+| `by_lane` | `20` grupos |
 | `by_decision` | `7` grupos |
 | `by_gate` | `2` grupos |
 | `by_git_status` | `2` grupos |
@@ -20,7 +20,7 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | gate | rutas |
 |---|---:|
 | `BLOCK` | 12 |
-| `REVIEW` | 366 |
+| `REVIEW` | 311 |
 
 ## Carriles Canonicos
 
@@ -56,9 +56,8 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | `apps` | 59 |
 | `archive` | 2 |
 | `books` | 1 |
-| `comms` | 13 |
-| `control` | 8 |
-| `docs` | 95 |
+| `control` | 5 |
+| `docs` | 73 |
 | `github_ci` | 1 |
 | `hackathons` | 1 |
 | `licenses` | 1 |
@@ -67,12 +66,11 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | `private_game` | 1 |
 | `products_staging` | 1 |
 | `publish_staging` | 1 |
-| `qa_evidence` | 89 |
+| `qa_evidence` | 76 |
 | `research` | 1 |
 | `root_registers` | 51 |
-| `runtime_state` | 3 |
 | `tests` | 1 |
-| `tools` | 20 |
+| `tools` | 19 |
 | `website` | 1 |
 
 ## Acciones Siguientes
@@ -89,14 +87,7 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 
 | git | gate | carril | decision | ruta |
 |---|---|---|---|---|
-| ` M` | `REVIEW` | `control` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `.gitignore` |
 | ` M` | `REVIEW` | `control` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `AGENTS.md` |
-| ` M` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/README.md` |
-| ` M` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/handoffs/2026-05-05-claudio-local-agent-seto.md` |
-| ` M` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/tools/validate_seto_comms.py` |
-| ` M` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/topics/seto-observacionismo-decisions.jsonl` |
-| ` M` | `REVIEW` | `control` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `DELETED_OR_ARCHIVED.md` |
-| ` M` | `REVIEW` | `control` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `MIGRATION_MAP.md` |
 | ` M` | `REVIEW` | `control` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `SOURCE_INTAKE_REGISTER.md` |
 | ` M` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/README.md` |
 | ` M` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/electron-builder.json` |
@@ -140,18 +131,6 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | ` M` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/mini-office/tools/generate_promo_materials.py` |
 | ` M` | `BLOCK` | `apps` | `BLOCK_SECRET_OR_ACCOUNT_SURFACE` | `apps/commercial/mini-office/tools/publicar_gumroad.py` |
 | ` M` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/mini-office/tools/publicar_web.py` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/assets.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/claudio-wabisabi.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/curaduria.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/privado-bloqueado.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/productos.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/psi-observacionismo.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/publicacion.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/canon/atlas/seguridad.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/intake/ATLAS_MAIN.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/intake/CURADOR_MASTER_INDEX.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/pending/PENDING_REVIEW_2026-05-05.md` |
-| ` M` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/pending/PENDING_REVIEW_LATEST.md` |
 | ` M` | `REVIEW` | `packages` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `packages/open-dev/gemma-observacionismo-cleanup/README.md` |
 | ` M` | `REVIEW` | `packages` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `packages/open-dev/gemma-observacionismo-cleanup/pyproject.toml` |
 | ` M` | `REVIEW` | `packages` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `packages/open-dev/obsai-core/.gitignore` |
@@ -168,12 +147,6 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | ` M` | `REVIEW` | `packages` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `packages/open-dev/residueos/residueos/gate.py` |
 | ` M` | `REVIEW` | `packages` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `packages/open-dev/residueos/residueos/store.py` |
 | ` M` | `REVIEW` | `packages` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `packages/open-dev/residueos/tests/test_residueos.py` |
-| ` M` | `REVIEW` | `qa_evidence` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `qa_artifacts/pending/pending_review_2026-05-05.json` |
-| ` M` | `REVIEW` | `qa_evidence` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `qa_artifacts/pending/pending_review_latest.json` |
-| ` M` | `REVIEW` | `qa_evidence` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `qa_artifacts/release_validation/curador-automation-downloads-absorb-result-2026-05-05.json` |
-| ` M` | `REVIEW` | `qa_evidence` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `qa_artifacts/witness_log/curador_seto_witnesslog.jsonl` |
-| ` M` | `REVIEW` | `runtime_state` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `runtime/curador_seto/curador_index.sqlite` |
-| ` M` | `REVIEW` | `runtime_state` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `runtime/curador_seto/source_intake_export.json` |
 | ` M` | `REVIEW` | `tests` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `tests/release/test_pending_review_classification.py` |
 | ` M` | `REVIEW` | `tools` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `tools/release/_common.py` |
 | ` M` | `REVIEW` | `tools` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `tools/release/audit_repo.py` |
@@ -198,15 +171,6 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `CLAIMS_BOUNDARY.md` |
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `COMMERCIAL_STRATEGY.md` |
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `COMMIT_PROTOCOL.md` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/agents_state/claudio-local-agent.json` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/agents_state/claudio-local-autonomy.json` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/agents_state/hormiguero-mission-control.json` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/agents_state/publicacion-perfiles-observatorio.json` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/agents_state/wabi-sabi-sentido-comun.json` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/handoffs/2026-05-05-publicacion-perfiles-observatorio.md` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/inbox/publicacion-perfiles-observatorio.jsonl` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/outbox/` |
-| `??` | `REVIEW` | `comms` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `COMMS/tests/test_validate_seto_comms.py` |
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `CONTRIBUTING.md` |
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `CUSTOMER_SUPPORT_PLAN.md` |
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `DEBUG_REPORT.md` |
@@ -249,6 +213,40 @@ Principio: un solo universo, varios carriles. Nada queda huerfano; nada entra al
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `TERMS_DRAFT.md` |
 | `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `TESTING_DEBUG_BENCHMARKS_FINAL.md` |
 | `??` | `REVIEW` | `control` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `TREE_PLAN.md` |
+| `??` | `REVIEW` | `root_registers` | `KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX` | `WEBSITE_LANDING_COPY.md` |
+| `??` | `REVIEW` | `archive` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `_archive/` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/README.md` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/argus-desktop/README.md` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/CUSTOMER_INSTALL_NOTES.md` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/SUPPORT_PRIVACY_REFUND_DRAFT.md` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/packaging/icon.ico` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/packaging/icon.png` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/preview/` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/qa_artifacts/` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/asistente-negocio/scripts/e2e-render-smoke.cjs` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/flujocrm/CUSTOMER_INSTALL_NOTES.md` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/flujocrm/assets/` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/flujocrm/package-lock.json` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/flujocrm/scripts/e2e-storage-smoke.cjs` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/flujocrm/scripts/smoke-main.cjs` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/commercial/flujocrm/scripts/smoke-renderer.cjs` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/local/` |
+| `??` | `REVIEW` | `apps` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `apps/residueos/` |
+| `??` | `REVIEW` | `books` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `books/` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/FLUJOCRM_RELEASE_LOCAL_EVIDENCE_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/FLUJOCRM_WINDOWS_INSTALLER_QA_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_PROFILE_BIO_PATCH_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_PROFILE_README_SPONSORS_PATCH_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_SPONSORS_DASHBOARD_MANUAL_AUTH_EVIDENCE_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_SPONSORS_EXTERNAL_ACTIONS_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_SPONSORS_LIVE_AUDIT_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_SPONSORS_PREP_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GITHUB_SPONSORS_TIERS_GOALS_PATCH_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/GOOGLE_RAPID_AGENT_HACKATHON_2026.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/INDEX.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/OBS_ANTIGRAVITY_RUNTIME_REVIEW_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/OBS_EOR_AIA_TOPOLOGY_REVIEW_2026-05-01.md` |
+| `??` | `REVIEW` | `docs` | `KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW` | `docs/OBS_INFO_KERNEL_REVIEW_2026-05-01.md` |
 
 ## Reglas
 

@@ -1,0 +1,89 @@
+{
+  "schema": "duat.readonly.public_synthetic_fixture.v1",
+  "privacy": "PUBLIC_SYNTHETIC",
+  "license_policy": "MIT-compatible synthetic fixture",
+  "claim_boundary": "Synthetic adapter tests only. No DUAT/GEODIA private runtime, RPG lore, assets, prompts, routes, datasets or social prediction claims.",
+  "claims": [
+    {
+      "claim_id": "duat_public_boundary",
+      "allowed_public_statement": "DUAT Genesis is a synthetic sandbox for observable simulation and falsifier examples.",
+      "claim_level": "demo_only",
+      "falsifiers": [
+        "public_report_sources_are_public",
+        "publication_gate_blocks_private_lane"
+      ]
+    },
+    {
+      "claim_id": "readonly_adapter",
+      "allowed_public_statement": "The Claudio DUAT adapter exposes status, reports, falsifiers and source hashes in read-only mode.",
+      "claim_level": "operational",
+      "falsifiers": [
+        "mutations_raise_readonly_violation",
+        "no_external_mutation_methods"
+      ]
+    },
+    {
+      "claim_id": "duat_claims_low",
+      "allowed_public_statement": "DUAT public material is limited to low-claim synthetic tooling and boundary documentation.",
+      "claim_level": "operational",
+      "falsifiers": [
+        "public_claims_avoid_prohibited_terms",
+        "claims_have_falsifiers"
+      ]
+    },
+    {
+      "claim_id": "living_world_fixture_contract",
+      "allowed_public_statement": "The private RPG bridge can be specified with a synthetic shape before any private integration.",
+      "claim_level": "research_only",
+      "falsifiers": [
+        "npc_count",
+        "zone_count",
+        "event_count",
+        "living_world_events_output"
+      ]
+    }
+  ],
+  "living_world_fixture_spec": {
+    "privacy": "PRIVATE_SPEC_ONLY_SYNTHETIC_NO_LORE",
+    "expected_output": "LivingWorldEvents",
+    "npcs": [
+      {"npc_id": "npc_01", "role": "observer", "memory_window": 3},
+      {"npc_id": "npc_02", "role": "trader", "memory_window": 3},
+      {"npc_id": "npc_03", "role": "messenger", "memory_window": 2},
+      {"npc_id": "npc_04", "role": "guard", "memory_window": 4},
+      {"npc_id": "npc_05", "role": "artisan", "memory_window": 3},
+      {"npc_id": "npc_06", "role": "healer", "memory_window": 2},
+      {"npc_id": "npc_07", "role": "scribe", "memory_window": 5},
+      {"npc_id": "npc_08", "role": "farmer", "memory_window": 2},
+      {"npc_id": "npc_09", "role": "scout", "memory_window": 3},
+      {"npc_id": "npc_10", "role": "elder", "memory_window": 5}
+    ],
+    "zones": [
+      {"zone_id": "zone_01", "type": "market", "risk": "low"},
+      {"zone_id": "zone_02", "type": "gate", "risk": "medium"},
+      {"zone_id": "zone_03", "type": "workshop", "risk": "low"}
+    ],
+    "events": [
+      {"event_id": "evt_001", "npc_id": "npc_01", "zone_id": "zone_01", "signal": "observe_supply", "residue": 0.10, "phi_eff": 0.90, "output": "LivingWorldEvents"},
+      {"event_id": "evt_002", "npc_id": "npc_02", "zone_id": "zone_01", "signal": "trade_offer", "residue": 0.12, "phi_eff": 0.88, "output": "LivingWorldEvents"},
+      {"event_id": "evt_003", "npc_id": "npc_03", "zone_id": "zone_02", "signal": "carry_message", "residue": 0.20, "phi_eff": 0.80, "output": "LivingWorldEvents"},
+      {"event_id": "evt_004", "npc_id": "npc_04", "zone_id": "zone_02", "signal": "inspect_gate", "residue": 0.18, "phi_eff": 0.82, "output": "LivingWorldEvents"},
+      {"event_id": "evt_005", "npc_id": "npc_05", "zone_id": "zone_03", "signal": "craft_delay", "residue": 0.25, "phi_eff": 0.75, "output": "LivingWorldEvents"},
+      {"event_id": "evt_006", "npc_id": "npc_06", "zone_id": "zone_01", "signal": "aid_request", "residue": 0.21, "phi_eff": 0.79, "output": "LivingWorldEvents"},
+      {"event_id": "evt_007", "npc_id": "npc_07", "zone_id": "zone_03", "signal": "record_contract", "residue": 0.08, "phi_eff": 0.92, "output": "LivingWorldEvents"},
+      {"event_id": "evt_008", "npc_id": "npc_08", "zone_id": "zone_01", "signal": "deliver_goods", "residue": 0.16, "phi_eff": 0.84, "output": "LivingWorldEvents"},
+      {"event_id": "evt_009", "npc_id": "npc_09", "zone_id": "zone_02", "signal": "report_path", "residue": 0.23, "phi_eff": 0.77, "output": "LivingWorldEvents"},
+      {"event_id": "evt_010", "npc_id": "npc_10", "zone_id": "zone_03", "signal": "advise_group", "residue": 0.13, "phi_eff": 0.87, "output": "LivingWorldEvents"},
+      {"event_id": "evt_011", "npc_id": "npc_01", "zone_id": "zone_02", "signal": "observe_queue", "residue": 0.15, "phi_eff": 0.85, "output": "LivingWorldEvents"},
+      {"event_id": "evt_012", "npc_id": "npc_02", "zone_id": "zone_03", "signal": "price_adjust", "residue": 0.19, "phi_eff": 0.81, "output": "LivingWorldEvents"},
+      {"event_id": "evt_013", "npc_id": "npc_03", "zone_id": "zone_01", "signal": "rumor_transfer", "residue": 0.27, "phi_eff": 0.73, "output": "LivingWorldEvents"},
+      {"event_id": "evt_014", "npc_id": "npc_04", "zone_id": "zone_01", "signal": "crowd_shift", "residue": 0.22, "phi_eff": 0.78, "output": "LivingWorldEvents"},
+      {"event_id": "evt_015", "npc_id": "npc_05", "zone_id": "zone_02", "signal": "tool_needed", "residue": 0.14, "phi_eff": 0.86, "output": "LivingWorldEvents"},
+      {"event_id": "evt_016", "npc_id": "npc_06", "zone_id": "zone_03", "signal": "resource_shortage", "residue": 0.29, "phi_eff": 0.71, "output": "LivingWorldEvents"},
+      {"event_id": "evt_017", "npc_id": "npc_07", "zone_id": "zone_02", "signal": "evidence_note", "residue": 0.09, "phi_eff": 0.91, "output": "LivingWorldEvents"},
+      {"event_id": "evt_018", "npc_id": "npc_08", "zone_id": "zone_03", "signal": "repair_request", "residue": 0.17, "phi_eff": 0.83, "output": "LivingWorldEvents"},
+      {"event_id": "evt_019", "npc_id": "npc_09", "zone_id": "zone_01", "signal": "route_warning", "residue": 0.24, "phi_eff": 0.76, "output": "LivingWorldEvents"},
+      {"event_id": "evt_020", "npc_id": "npc_10", "zone_id": "zone_02", "signal": "council_review", "residue": 0.11, "phi_eff": 0.89, "output": "LivingWorldEvents"}
+    ]
+  }
+}

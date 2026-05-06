@@ -19,7 +19,7 @@ Status: `DONE_IN_THIS_PASS`
 
 ## Phase 1 - Harden Local Extractor
 
-Status: `MOSTLY_DONE_LOCAL`
+Status: `DONE_LOCAL_MVP_HARDENING`
 
 Done:
 
@@ -27,14 +27,24 @@ Done:
 - Add domain policy JSON schema.
 - Add explicit GhostGate memory decision schema.
 - Enforce domain policy for `http(s)` remote stubs.
+- Require scoped ActionGate for `http(s)` remote stubs, not generic approval.
 - Block unsafe domain policy permissions in MVP.
 - Write `ghostgate.json` inside exported evidence bundles.
 - Add opt-in COMMS message writer for snapshot handoff.
-- Add fixture corpus with benign, hidden-DOM, phishing and fake-source samples.
+- Add fixture corpus with benign, hidden-DOM, phishing, fake-source and
+  synthetic secret-like samples.
+- Add secret-like redaction and `secret_scan.json` integration for evidence
+  bundles.
+- Add machine schemas for secret scan and COMMS SourceSnapshot handoff.
+- Add machine schema for AI Browser remote-stub ActionGate.
+- Add CLI validators for evidence bundles and COMMS handoff messages.
 
 Still pending:
 
-- Add secret-scan integration for evidence bundles.
+- Real network fetch, browser render mode and external actions remain blocked by
+  design for later gated phases.
+- Dependency/security/license review remains pending for Playwright or any other
+  browser runtime adoption.
 
 ## Phase 2 - Controlled Fetch Engine
 

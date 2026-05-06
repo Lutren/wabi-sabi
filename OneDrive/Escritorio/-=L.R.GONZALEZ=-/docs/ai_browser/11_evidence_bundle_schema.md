@@ -10,6 +10,7 @@ The prototype emits a bundle with:
 - `witness_log_event`;
 - readable text artifact when `--bundle-dir` is used.
 - optional hash-only COMMS message when `--comms-outbox` is used.
+- `secret_scan.json` for every bundle.
 
 ## SourceSnapshot Contract
 
@@ -62,13 +63,19 @@ Required top-level fields:
       {
         "path": "witness_log.jsonl",
         "sha256": "event_hash"
+      },
+      {
+        "path": "secret_scan.json",
+        "sha256": "secret_scan_report_hash"
       }
     ],
     "quarantine": {
       "downloads": "blocked_not_downloaded",
       "credentials": "not_collected",
-      "cookies": "not_persisted"
-    }
+      "cookies": "not_persisted",
+      "secrets": "not_detected"
+    },
+    "secret_scan": {}
   }
 }
 ```
@@ -112,6 +119,10 @@ The `event_hash` is computed over canonical JSON without the `event_hash` field.
 
 ## COMMS Handoff Minimum
 
+Machine schema:
+
+- `schemas/comms_source_snapshot_handoff.schema.json`
+
 The CLI emits this only when `--comms-outbox` is explicitly supplied:
 
 ```json
@@ -139,6 +150,68 @@ The CLI emits this only when `--comms-outbox` is explicitly supplied:
 
 The message intentionally cites evidence hashes and gate status instead of
 pasting raw or hidden web-origin text into COMMS.
+
+## Secret Scan Minimum
+
+Machine schema:
+
+- `schemas/secret_scan_report.schema.json`
+
+```json
+{
+  "schema": "ai_browser.secret_scan_report.v1",
+  "status": "PASS",
+  "snapshot_hash": "sha256",
+  "scanned_artifacts": [
+    "source_raw_html_hash_only",
+    "source_snapshot.extraction.readable_text",
+    "source_snapshot.extraction.hidden_dom_text"
+  ],
+  "redaction": {
+    "secret_like_content_redacted": false,
+    "secret_redaction_count": 0,
+    "redaction_token": "[REDACTED_SECRET_LIKE_CONTENT]"
+  },
+  "findings": [],
+  "action_gate": "APPROVE",
+  "report_hash": "sha256"
+}
+```
+
+When secret-like content is detected, extracted text is redacted, the scan
+status becomes `REVIEW`, and GhostGate blocks memory/canon persistence.
+
+## Local Validators
+
+```powershell
+python tools\ai_browser\snapshot_url.py --validate-snapshot .\source_snapshot.json --pretty
+python tools\ai_browser\snapshot_url.py --validate-bundle .\evidence_bundle.json --pretty
+python tools\ai_browser\snapshot_url.py --validate-comms-message .\comms_message.json --pretty
+```
+
+The validators are stdlib-only and verify hash fields for `WitnessLog`,
+`secret_scan.report_hash` and `comms_message.message_hash`.
+
+## ActionGate Minimum
+
+Machine schema:
+
+- `schemas/ai_browser_action_gate.schema.json`
+
+```json
+{
+  "schema": "ai_browser.action_gate.v1",
+  "decision": "APPROVE",
+  "operation": "remote_stub",
+  "allowed_operations": ["remote_stub"],
+  "network_mode": "stub_only",
+  "target_url": "https://example.com/source",
+  "allowed_domains": ["example.com"],
+  "reason": "operator approved remote stub only"
+}
+```
+
+A generic `decision=APPROVE` is not enough for `http(s)` sources.
 
 ## Domain Policy Minimum
 

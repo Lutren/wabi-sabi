@@ -26,9 +26,11 @@ from urllib.parse import unquote, urlparse
 SNAPSHOT_VERSION = "source-snapshot-v1"
 BUNDLE_SCHEMA = "ai_browser.evidence_bundle.v1"
 COMMS_MESSAGE_SCHEMA = "ai_browser.comms.source_snapshot_handoff.v1"
+ACTION_GATE_SCHEMA = "ai_browser.action_gate.v1"
 DEFAULT_COMMS_SENDER = "ai-browser-secure"
 DEFAULT_COMMS_RECIPIENT = "wabi-sabi-sentido-comun"
 DEFAULT_COMMS_INTENT = "handoff_source_snapshot"
+SECRET_REDACTION = "[REDACTED_SECRET_LIKE_CONTENT]"
 ZERO_HASH = "0" * 64
 
 BLOCKED_DEFAULTS = [
@@ -62,6 +64,7 @@ SECRET_PATTERNS = [
     r"ghp_[A-Za-z0-9_]{20,}",
     r"sk-[A-Za-z0-9]{20,}",
     r"AKIA[0-9A-Z]{16}",
+    r"fixture_marker_[A-Za-z0-9]{16,}",
     r"(?i)api[_-]?key\s*[:=]\s*['\"]?[A-Za-z0-9_\-]{16,}",
     r"(?i)(password|token)\s*[:=]\s*['\"]?[^'\"\s]{8,}",
 ]
@@ -144,6 +147,15 @@ def contains_secret_like_text(text: str) -> bool:
     return any(re.search(pattern, text) for pattern in SECRET_PATTERNS)
 
 
+def redact_secret_like_text(text: str) -> tuple[str, int]:
+    redacted = text
+    count = 0
+    for pattern in SECRET_PATTERNS:
+        redacted, replacements = re.subn(pattern, SECRET_REDACTION, redacted)
+        count += replacements
+    return redacted, count
+
+
 def find_web_instructions(text: str) -> list[dict[str, str]]:
     findings: list[dict[str, str]] = []
     for pattern in PROMPT_INJECTION_PATTERNS:
@@ -197,8 +209,11 @@ class HtmlExtraction:
     meta_refresh_detected: int = 0
 
     def to_dict(self) -> dict[str, Any]:
-        readable_text = normalize_text(" ".join(self.visible_chunks))
-        hidden_text = normalize_text(" ".join(self.hidden_chunks))
+        raw_readable_text = normalize_text(" ".join(self.visible_chunks))
+        raw_hidden_text = normalize_text(" ".join(self.hidden_chunks))
+        readable_text, readable_redactions = redact_secret_like_text(raw_readable_text)
+        hidden_text, hidden_redactions = redact_secret_like_text(raw_hidden_text)
+        secret_redaction_count = readable_redactions + hidden_redactions
         all_instruction_text = normalize_text(" ".join([readable_text, hidden_text]))
         web_instructions = find_web_instructions(all_instruction_text)
         hidden_instructions = find_web_instructions(hidden_text)
@@ -212,6 +227,11 @@ class HtmlExtraction:
             "hidden_dom_text_chars": len(hidden_text),
             "web_instructions": web_instructions,
             "hidden_dom_instructions": hidden_instructions,
+            "redaction": {
+                "secret_like_content_redacted": bool(secret_redaction_count),
+                "secret_redaction_count": secret_redaction_count,
+                "redaction_token": SECRET_REDACTION,
+            },
             "links": self.links[:200],
             "counts": {
                 "links": len(self.links),
@@ -367,6 +387,57 @@ def host_matches(pattern: str, hostname: str) -> bool:
         suffix = pattern[1:]
         return hostname.endswith(suffix) and hostname != suffix.lstrip(".")
     return False
+
+
+def evaluate_action_gate_for_url(url: str, gate_file: str | Path | None) -> dict[str, Any]:
+    gate = load_gate(gate_file)
+    decision = gate.get("decision", "BLOCK")
+    if decision != "APPROVE":
+        raise SnapshotBlocked(
+            "URL_NETWORK_BLOCKED_BY_ACTION_GATE",
+            "http(s) URL requires an APPROVE ActionGate; no network was executed",
+            action_gate=str(decision),
+        )
+
+    allowed_operations = {str(item) for item in gate.get("allowed_operations", [])}
+    operation = str(gate.get("operation", ""))
+    if operation != "remote_stub" and "remote_stub" not in allowed_operations:
+        raise SnapshotBlocked(
+            "URL_NETWORK_BLOCKED_BY_ACTION_GATE",
+            "ActionGate must explicitly allow operation remote_stub",
+            action_gate="BLOCK",
+        )
+
+    network_mode = str(gate.get("network_mode", ""))
+    if network_mode != "stub_only":
+        raise SnapshotBlocked(
+            "URL_NETWORK_BLOCKED_BY_ACTION_GATE",
+            "ActionGate must set network_mode=stub_only for the MVP",
+            action_gate="BLOCK",
+        )
+
+    hostname = urlparse(url).hostname or ""
+    target_url = str(gate.get("target_url", ""))
+    allowed_domains = [str(item) for item in gate.get("allowed_domains", [])]
+    domain_match = any(host_matches(pattern, hostname) for pattern in allowed_domains)
+    if target_url != url and not domain_match:
+        raise SnapshotBlocked(
+            "URL_NETWORK_BLOCKED_BY_ACTION_GATE",
+            f"ActionGate target does not match URL or domain {hostname}",
+            action_gate="BLOCK",
+        )
+
+    return {
+        "schema": ACTION_GATE_SCHEMA,
+        "gate_file": str(gate_file) if gate_file else "",
+        "decision": "APPROVE",
+        "operation": "remote_stub",
+        "network_mode": network_mode,
+        "target_url": target_url,
+        "allowed_domains": allowed_domains,
+        "matched_domain": hostname if domain_match else "",
+        "reason": gate.get("reason", ""),
+    }
 
 
 def load_domain_policy(policy_file: str | Path | None) -> dict[str, Any]:
@@ -605,6 +676,52 @@ def make_witness_event(
     return event
 
 
+def make_secret_scan_report(snapshot: dict[str, Any]) -> dict[str, Any]:
+    risk_flags = snapshot.get("security", {}).get("risk_flags", [])
+    redaction = snapshot.get("extraction", {}).get("redaction", {})
+    findings: list[dict[str, Any]] = []
+    if "secret_like_content" in risk_flags:
+        findings.append(
+            {
+                "artifact": "source_raw_html",
+                "finding": "secret_like_pattern_present",
+                "content_policy": "raw source is hashed but not exported as raw html",
+            }
+        )
+    for artifact, text in [
+        ("readable_text.txt", snapshot.get("extraction", {}).get("readable_text", "")),
+        ("hidden_dom_text", snapshot.get("extraction", {}).get("hidden_dom_text", "")),
+    ]:
+        if contains_secret_like_text(str(text)):
+            findings.append(
+                {
+                    "artifact": artifact,
+                    "finding": "secret_like_pattern_remaining_after_redaction",
+                    "content_policy": "review extractor redaction before sharing bundle",
+                }
+            )
+    status = "REVIEW" if findings else "PASS"
+    report = {
+        "schema": "ai_browser.secret_scan_report.v1",
+        "status": status,
+        "snapshot_hash": snapshot.get("snapshot_hash", ""),
+        "scanned_artifacts": [
+            "source_raw_html_hash_only",
+            "source_snapshot.extraction.readable_text",
+            "source_snapshot.extraction.hidden_dom_text",
+        ],
+        "redaction": redaction,
+        "findings": findings,
+        "action_gate": "REVIEW" if status != "PASS" else "APPROVE",
+        "notes": [
+            "No raw HTML artifact is exported by the MVP.",
+            "Secret-like text in extracted content is redacted before bundle write.",
+        ],
+    }
+    report["report_hash"] = canonical_sha256(report)
+    return report
+
+
 def build_snapshot(
     *,
     source_input: str,
@@ -717,13 +834,7 @@ def build_bundle(
             )
             status = "FILE_URL_SNAPSHOT_CREATED"
         elif source_type == "http_url":
-            gate = load_gate(gate_file)
-            if gate.get("decision") != "APPROVE":
-                raise SnapshotBlocked(
-                    "URL_NETWORK_BLOCKED_BY_ACTION_GATE",
-                    "http(s) URL requires an APPROVE gate; no network was executed",
-                    action_gate=str(gate.get("decision", "BLOCK")),
-                )
+            action_gate_decision = evaluate_action_gate_for_url(url, gate_file)
             domain_policy = evaluate_domain_policy(url, domain_policy_file)
             raw_bytes = b""
             snapshot = build_snapshot(
@@ -736,12 +847,14 @@ def build_bundle(
                 previous_hash=previous_hash,
             )
             snapshot["source"]["gate_file"] = str(gate_file) if gate_file else ""
+            snapshot["source"]["action_gate"] = action_gate_decision
             snapshot["source"]["domain_policy"] = domain_policy
             snapshot["source"]["stub_reason"] = "network fetch is intentionally not implemented in the MVP"
             status = "NETWORK_STUB_NOT_FETCHED"
         else:
             raise SnapshotBlocked("UNSUPPORTED_URL_SCHEME", f"unsupported URL scheme for {url}")
 
+    secret_scan = make_secret_scan_report(snapshot)
     bundle = {
         "schema": BUNDLE_SCHEMA,
         "status": status,
@@ -753,12 +866,15 @@ def build_bundle(
                 {"path": "readable_text.txt", "sha256": snapshot["hashes"]["readable_text_sha256"]},
                 {"path": "ghostgate.json", "sha256": canonical_sha256(snapshot["ghostgate"])},
                 {"path": "witness_log.jsonl", "sha256": snapshot["witness_log_event"]["event_hash"]},
+                {"path": "secret_scan.json", "sha256": secret_scan["report_hash"]},
             ],
             "quarantine": {
                 "downloads": "blocked_not_downloaded",
                 "credentials": "not_collected",
                 "cookies": "not_persisted",
+                "secrets": "review_required" if secret_scan["status"] != "PASS" else "not_detected",
             },
+            "secret_scan": secret_scan,
         },
     }
     return bundle
@@ -773,6 +889,7 @@ def write_bundle_dir(bundle: dict[str, Any], bundle_dir: str | Path) -> dict[str
         "readable_text": target / "readable_text.txt",
         "ghostgate": target / "ghostgate.json",
         "witness_log": target / "witness_log.jsonl",
+        "secret_scan": target / "secret_scan.json",
         "evidence_bundle": target / "evidence_bundle.json",
     }
     if "comms_message" in bundle:
@@ -781,6 +898,7 @@ def write_bundle_dir(bundle: dict[str, Any], bundle_dir: str | Path) -> dict[str
     paths["readable_text"].write_text(snapshot["extraction"]["readable_text"] + "\n", encoding="utf-8")
     paths["ghostgate"].write_text(json.dumps(snapshot["ghostgate"], ensure_ascii=True, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     paths["witness_log"].write_text(json.dumps(snapshot["witness_log_event"], ensure_ascii=True, sort_keys=True) + "\n", encoding="utf-8")
+    paths["secret_scan"].write_text(json.dumps(bundle["evidence_bundle"]["secret_scan"], ensure_ascii=True, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     if "comms_message" in bundle:
         paths["comms_message"].write_text(json.dumps(bundle["comms_message"], ensure_ascii=True, indent=2, sort_keys=True) + "\n", encoding="utf-8")
     paths["evidence_bundle"].write_text(json.dumps(bundle, ensure_ascii=True, indent=2, sort_keys=True) + "\n", encoding="utf-8")
@@ -867,6 +985,13 @@ def verify_witness_event(event: dict[str, Any]) -> bool:
     return expected == canonical_sha256(clone)
 
 
+def verify_hash_field(payload: dict[str, Any], field: str) -> bool:
+    expected = payload.get(field)
+    clone = dict(payload)
+    clone.pop(field, None)
+    return expected == canonical_sha256(clone)
+
+
 def validate_source_snapshot(snapshot: dict[str, Any]) -> dict[str, Any]:
     errors: list[str] = []
     missing = sorted(SCHEMA_REQUIRED_FIELDS - set(snapshot))
@@ -911,6 +1036,116 @@ def validate_source_snapshot(snapshot: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def validate_secret_scan_report(report: dict[str, Any]) -> dict[str, Any]:
+    errors: list[str] = []
+    if report.get("schema") != "ai_browser.secret_scan_report.v1":
+        errors.append("secret_scan schema mismatch")
+    if report.get("status") not in {"PASS", "REVIEW", "BLOCK"}:
+        errors.append("secret_scan.status must be PASS, REVIEW or BLOCK")
+    if report.get("action_gate") not in {"APPROVE", "REVIEW", "BLOCK"}:
+        errors.append("secret_scan.action_gate must be APPROVE, REVIEW or BLOCK")
+    if not isinstance(report.get("findings", []), list):
+        errors.append("secret_scan.findings must be a list")
+    if not re.fullmatch(r"[A-Fa-f0-9]{64}", str(report.get("snapshot_hash", ""))):
+        errors.append("secret_scan.snapshot_hash must be 64 hex chars")
+    if not verify_hash_field(report, "report_hash"):
+        errors.append("secret_scan report_hash verification failed")
+    return {
+        "schema": "ai_browser.secret_scan_validation.v1",
+        "ok": not errors,
+        "errors": errors,
+        "status": report.get("status", "UNKNOWN"),
+        "action_gate": report.get("action_gate", "UNKNOWN"),
+    }
+
+
+def validate_comms_message(message: dict[str, Any]) -> dict[str, Any]:
+    errors: list[str] = []
+    if message.get("schema") != COMMS_MESSAGE_SCHEMA:
+        errors.append("COMMS message schema mismatch")
+    if message.get("status") not in {"APPROVE", "REVIEW", "BLOCK"}:
+        errors.append("COMMS status must be APPROVE, REVIEW or BLOCK")
+    if message.get("action_gate") not in {"APPROVE", "REVIEW", "BLOCK"}:
+        errors.append("COMMS action_gate must be APPROVE, REVIEW or BLOCK")
+    if message.get("web_content_included") is not False:
+        errors.append("COMMS message must set web_content_included=false")
+    source_hash = message.get("source_snapshot", {}).get("hash", "")
+    if not re.fullmatch(r"[A-Fa-f0-9]{64}", str(source_hash)):
+        errors.append("COMMS source_snapshot.hash must be 64 hex chars")
+    if "observation_envelope" not in message:
+        errors.append("COMMS message must include observation_envelope")
+    blocked_operations = set(message.get("blocked_operations", []))
+    for blocked in ("login", "credential_capture", "downloads", "javascript_execution", "mass_scraping"):
+        if blocked not in blocked_operations:
+            errors.append(f"COMMS blocked_operations missing {blocked}")
+    forbidden_keys = ("raw_html", "readable_text", "hidden_dom_text", "web_instructions")
+    serialized = canonical_json(message)
+    for key in forbidden_keys:
+        if f'"{key}"' in serialized:
+            errors.append(f"COMMS message must not include raw extraction key {key}")
+    if not verify_hash_field(message, "message_hash"):
+        errors.append("COMMS message_hash verification failed")
+    return {
+        "schema": "ai_browser.comms_message_validation.v1",
+        "ok": not errors,
+        "errors": errors,
+        "status": message.get("status", "UNKNOWN"),
+        "action_gate": message.get("action_gate", "UNKNOWN"),
+        "source_snapshot_hash": source_hash,
+    }
+
+
+def validate_evidence_bundle(bundle: dict[str, Any]) -> dict[str, Any]:
+    errors: list[str] = []
+    if bundle.get("schema") != BUNDLE_SCHEMA:
+        errors.append("bundle schema mismatch")
+    snapshot = bundle.get("source_snapshot", {})
+    snapshot_obj = snapshot if isinstance(snapshot, dict) else {}
+    snapshot_validation = validate_source_snapshot(snapshot_obj) if snapshot_obj else {"ok": False, "errors": ["source_snapshot must be object"]}
+    if not snapshot_validation["ok"]:
+        errors.extend(f"source_snapshot: {error}" for error in snapshot_validation["errors"])
+    manifest = bundle.get("evidence_bundle", {})
+    if manifest.get("schema") != "ai_browser.evidence_bundle_manifest.v1":
+        errors.append("evidence_bundle manifest schema mismatch")
+    artifacts = manifest.get("artifacts", [])
+    artifact_hashes = {item.get("path"): item.get("sha256") for item in artifacts if isinstance(item, dict)}
+    required_artifacts = {
+        "source_snapshot.json",
+        "readable_text.txt",
+        "ghostgate.json",
+        "witness_log.jsonl",
+        "secret_scan.json",
+    }
+    missing_artifacts = sorted(required_artifacts - set(artifact_hashes))
+    if missing_artifacts:
+        errors.append(f"bundle missing artifacts: {', '.join(missing_artifacts)}")
+    for path, value in artifact_hashes.items():
+        if not re.fullmatch(r"[A-Fa-f0-9]{64}", str(value or "")):
+            errors.append(f"artifact {path} sha256 must be 64 hex chars")
+    secret_scan = manifest.get("secret_scan", {})
+    secret_scan_obj = secret_scan if isinstance(secret_scan, dict) else {}
+    secret_validation = validate_secret_scan_report(secret_scan_obj) if secret_scan_obj else {"ok": False, "errors": ["secret_scan must be object"]}
+    if not secret_validation["ok"]:
+        errors.extend(f"secret_scan: {error}" for error in secret_validation["errors"])
+    if artifact_hashes.get("secret_scan.json") and artifact_hashes.get("secret_scan.json") != secret_scan_obj.get("report_hash"):
+        errors.append("secret_scan artifact hash does not match report_hash")
+    if "comms_message" in bundle:
+        comms_validation = validate_comms_message(bundle["comms_message"])
+        if not comms_validation["ok"]:
+            errors.extend(f"comms_message: {error}" for error in comms_validation["errors"])
+        if bundle["comms_message"].get("source_snapshot", {}).get("hash") != snapshot_obj.get("snapshot_hash"):
+            errors.append("COMMS source_snapshot.hash does not match bundle source snapshot")
+    return {
+        "schema": "ai_browser.evidence_bundle_validation.v1",
+        "ok": not errors,
+        "errors": errors,
+        "status": bundle.get("status", "UNKNOWN"),
+        "snapshot_hash": snapshot_obj.get("snapshot_hash", ""),
+        "secret_scan": secret_validation.get("status", "UNKNOWN"),
+        "comms_message": "present" if "comms_message" in bundle else "absent",
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Create a local-first AI browser SourceSnapshot.")
     group = parser.add_mutually_exclusive_group(required=False)
@@ -919,6 +1154,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--gate-file", help="JSON ActionGate file. Required for http(s) URL acceptance.")
     parser.add_argument("--domain-policy", help="JSON domain policy file. Required for http(s) URL acceptance.")
     parser.add_argument("--validate-snapshot", help="Validate an existing source_snapshot.json without dependencies.")
+    parser.add_argument("--validate-bundle", help="Validate an existing evidence_bundle.json without dependencies.")
+    parser.add_argument("--validate-comms-message", help="Validate an existing COMMS handoff message JSON without dependencies.")
     parser.add_argument("--previous-hash", default=ZERO_HASH, help="Previous WitnessLog hash, or 64 zeroes for genesis.")
     parser.add_argument("--out", help="Write full bundle JSON to a file.")
     parser.add_argument("--bundle-dir", help="Write source_snapshot.json, readable_text.txt, witness_log.jsonl and evidence_bundle.json.")
@@ -930,6 +1167,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
 
     try:
+        validation_targets = [args.validate_snapshot, args.validate_bundle, args.validate_comms_message]
+        if sum(1 for item in validation_targets if item) > 1:
+            parser.error("use only one validation command at a time")
+        if (args.validate_bundle or args.validate_comms_message) and (args.html_file or args.url):
+            parser.error("validation commands cannot be combined with --html-file or --url")
         if args.validate_snapshot:
             if args.html_file or args.url:
                 parser.error("--validate-snapshot cannot be combined with --html-file or --url")
@@ -937,8 +1179,18 @@ def main(argv: list[str] | None = None) -> int:
             result = validate_source_snapshot(snapshot)
             print(json.dumps(result, ensure_ascii=True, indent=2 if args.pretty else None, sort_keys=bool(args.pretty)))
             return 0 if result["ok"] else 1
+        if args.validate_bundle:
+            bundle = json.loads(Path(args.validate_bundle).read_text(encoding="utf-8"))
+            result = validate_evidence_bundle(bundle)
+            print(json.dumps(result, ensure_ascii=True, indent=2 if args.pretty else None, sort_keys=bool(args.pretty)))
+            return 0 if result["ok"] else 1
+        if args.validate_comms_message:
+            message = json.loads(Path(args.validate_comms_message).read_text(encoding="utf-8"))
+            result = validate_comms_message(message)
+            print(json.dumps(result, ensure_ascii=True, indent=2 if args.pretty else None, sort_keys=bool(args.pretty)))
+            return 0 if result["ok"] else 1
         if not args.html_file and not args.url:
-            parser.error("one of --html-file, --url or --validate-snapshot is required")
+            parser.error("one of --html-file, --url, --validate-snapshot, --validate-bundle or --validate-comms-message is required")
         bundle = build_bundle(
             html_file=args.html_file,
             url=args.url,

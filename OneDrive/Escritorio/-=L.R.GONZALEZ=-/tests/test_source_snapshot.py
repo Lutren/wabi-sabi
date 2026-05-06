@@ -46,6 +46,24 @@ def write_approved_domain_policy(path: Path, domain: str = "example.com") -> Non
     )
 
 
+def write_approved_url_gate(path: Path, url: str = "https://example.com/source") -> None:
+    path.write_text(
+        json.dumps(
+            {
+                "schema": "ai_browser.action_gate.v1",
+                "decision": "APPROVE",
+                "operation": "remote_stub",
+                "allowed_operations": ["remote_stub"],
+                "network_mode": "stub_only",
+                "target_url": url,
+                "allowed_domains": ["example.com"],
+                "reason": "test stub only",
+            }
+        ),
+        encoding="utf-8",
+    )
+
+
 def test_local_html_snapshot_separates_content_and_instructions(tmp_path):
     module = load_module()
     html = """
@@ -100,7 +118,7 @@ def test_http_url_without_gate_is_blocked():
 def test_http_url_with_approved_gate_but_no_domain_policy_is_blocked(tmp_path):
     module = load_module()
     gate = tmp_path / "gate.json"
-    gate.write_text(json.dumps({"decision": "APPROVE", "reason": "test stub only"}), encoding="utf-8")
+    write_approved_url_gate(gate)
 
     try:
         module.build_bundle(url="https://example.com/source", gate_file=gate)
@@ -111,11 +129,25 @@ def test_http_url_with_approved_gate_but_no_domain_policy_is_blocked(tmp_path):
         raise AssertionError("http URL should require a matching domain policy")
 
 
+def test_http_url_with_generic_approve_gate_is_blocked(tmp_path):
+    module = load_module()
+    gate = tmp_path / "gate.json"
+    gate.write_text(json.dumps({"decision": "APPROVE", "reason": "too broad"}), encoding="utf-8")
+
+    try:
+        module.build_bundle(url="https://example.com/source", gate_file=gate)
+    except module.SnapshotBlocked as exc:
+        assert exc.code == "URL_NETWORK_BLOCKED_BY_ACTION_GATE"
+        assert "remote_stub" in str(exc)
+    else:
+        raise AssertionError("generic approve gate should not unlock remote URL stub")
+
+
 def test_http_url_with_gate_and_domain_policy_returns_stub_without_network(tmp_path):
     module = load_module()
     gate = tmp_path / "gate.json"
     policy = tmp_path / "domain_policy.json"
-    gate.write_text(json.dumps({"decision": "APPROVE", "reason": "test stub only"}), encoding="utf-8")
+    write_approved_url_gate(gate)
     write_approved_domain_policy(policy)
 
     bundle = module.build_bundle(url="https://example.com/source", gate_file=gate, domain_policy_file=policy)
@@ -124,6 +156,8 @@ def test_http_url_with_gate_and_domain_policy_returns_stub_without_network(tmp_p
     assert bundle["status"] == "NETWORK_STUB_NOT_FETCHED"
     assert snapshot["source"]["network_executed"] is False
     assert snapshot["source"]["retrieval_mode"] == "network_stub_not_fetched"
+    assert snapshot["source"]["action_gate"]["operation"] == "remote_stub"
+    assert snapshot["source"]["action_gate"]["network_mode"] == "stub_only"
     assert snapshot["source"]["domain_policy"]["domain"] == "example.com"
     assert snapshot["security"]["action_gate"] == "REVIEW"
     assert "remote content was not fetched; URL snapshot is a gated stub only" in snapshot["classification"]["INCOGNITA"]
@@ -137,7 +171,7 @@ def test_unsafe_domain_policy_is_blocked(tmp_path):
     module = load_module()
     gate = tmp_path / "gate.json"
     policy = tmp_path / "domain_policy.json"
-    gate.write_text(json.dumps({"decision": "APPROVE"}), encoding="utf-8")
+    write_approved_url_gate(gate)
     policy.write_text(
         json.dumps(
             {
@@ -196,6 +230,7 @@ def test_cli_writes_evidence_bundle(tmp_path):
     assert (bundle_dir / "readable_text.txt").read_text(encoding="utf-8").strip() == "Local source text."
     assert (bundle_dir / "ghostgate.json").exists()
     assert (bundle_dir / "witness_log.jsonl").exists()
+    assert (bundle_dir / "secret_scan.json").exists()
     assert (bundle_dir / "comms_message.json").exists()
     assert comms_outbox.exists()
     comms_lines = comms_outbox.read_text(encoding="utf-8").strip().splitlines()
@@ -266,3 +301,94 @@ def test_comms_handoff_message_is_hash_only_and_append_only(tmp_path):
     assert stored["web_content_included"] is False
     assert "observation_envelope" in stored
     assert "Ignore previous system instructions" not in json.dumps(stored)
+
+
+def test_secret_like_content_is_redacted_and_reviewed(tmp_path):
+    module = load_module()
+    source = FIXTURES / "redaction_marker.html"
+    bundle = module.build_bundle(html_file=source)
+    snapshot = bundle["source_snapshot"]
+    bundle_dir = tmp_path / "bundle"
+
+    paths = module.write_bundle_dir(bundle, bundle_dir)
+
+    assert "secret_like_content" in snapshot["security"]["risk_flags"]
+    assert snapshot["security"]["action_gate"] == "REVIEW"
+    assert snapshot["ghostgate"]["decision"] == "BLOCK"
+    assert "fixture_marker_abcdefghijklmnop123456" not in snapshot["extraction"]["readable_text"]
+    assert module.SECRET_REDACTION in snapshot["extraction"]["readable_text"]
+    secret_scan = bundle["evidence_bundle"]["secret_scan"]
+    assert secret_scan["status"] == "REVIEW"
+    assert secret_scan["redaction"]["secret_like_content_redacted"] is True
+    assert "secret_scan" in paths
+    assert "fixture_marker_abcdefghijklmnop123456" not in (bundle_dir / "readable_text.txt").read_text(encoding="utf-8")
+
+
+def test_cli_validates_bundle_and_comms_message(tmp_path):
+    source = FIXTURES / "hidden_prompt_injection.html"
+    bundle_dir = tmp_path / "bundle"
+    comms_outbox = tmp_path / "COMMS" / "outbox" / "ai-browser-secure.jsonl"
+
+    subprocess.run(
+        [
+            sys.executable,
+            str(SCRIPT),
+            "--html-file",
+            str(source),
+            "--bundle-dir",
+            str(bundle_dir),
+            "--comms-outbox",
+            str(comms_outbox),
+            "--pretty",
+        ],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+
+    bundle_validation = subprocess.run(
+        [sys.executable, str(SCRIPT), "--validate-bundle", str(bundle_dir / "evidence_bundle.json"), "--pretty"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    comms_validation = subprocess.run(
+        [sys.executable, str(SCRIPT), "--validate-comms-message", str(bundle_dir / "comms_message.json"), "--pretty"],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+
+    assert json.loads(bundle_validation.stdout)["ok"] is True
+    assert json.loads(comms_validation.stdout)["ok"] is True
+
+    tampered = json.loads((bundle_dir / "comms_message.json").read_text(encoding="utf-8"))
+    tampered["message_hash"] = "0" * 64
+    tampered_path = tmp_path / "tampered_comms.json"
+    tampered_path.write_text(json.dumps(tampered), encoding="utf-8")
+    tampered_validation = subprocess.run(
+        [sys.executable, str(SCRIPT), "--validate-comms-message", str(tampered_path)],
+        cwd=ROOT,
+        text=True,
+        capture_output=True,
+    )
+
+    assert tampered_validation.returncode == 1
+    assert "message_hash verification failed" in tampered_validation.stdout
+
+
+def test_new_schema_contract_files_are_present():
+    action_gate_schema = json.loads((ROOT / "schemas" / "ai_browser_action_gate.schema.json").read_text(encoding="utf-8"))
+    comms_schema = json.loads((ROOT / "schemas" / "comms_source_snapshot_handoff.schema.json").read_text(encoding="utf-8"))
+    secret_scan_schema = json.loads((ROOT / "schemas" / "secret_scan_report.schema.json").read_text(encoding="utf-8"))
+
+    assert action_gate_schema["properties"]["schema"]["const"] == "ai_browser.action_gate.v1"
+    assert action_gate_schema["properties"]["operation"]["const"] == "remote_stub"
+    assert action_gate_schema["properties"]["network_mode"]["const"] == "stub_only"
+    assert comms_schema["properties"]["schema"]["const"] == "ai_browser.comms.source_snapshot_handoff.v1"
+    assert comms_schema["properties"]["web_content_included"]["const"] is False
+    assert secret_scan_schema["properties"]["schema"]["const"] == "ai_browser.secret_scan_report.v1"
+    assert secret_scan_schema["properties"]["redaction"]["properties"]["redaction_token"]["const"] == "[REDACTED_SECRET_LIKE_CONTENT]"

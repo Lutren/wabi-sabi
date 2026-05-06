@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "medioevo.ai_browser.comms_source_snapshot_handoff.v1",
+  "title": "AI Browser COMMS SourceSnapshot Handoff",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "created_at_utc",
+    "from",
+    "to",
+    "intent",
+    "status",
+    "summary",
+    "source_snapshot",
+    "observation_envelope",
+    "action_gate",
+    "ghostgate",
+    "evidence_bundle",
+    "allowed_operations",
+    "blocked_operations",
+    "web_content_included",
+    "requested_next_action",
+    "message_hash"
+  ],
+  "properties": {
+    "schema": {
+      "const": "ai_browser.comms.source_snapshot_handoff.v1"
+    },
+    "created_at_utc": {
+      "type": "string",
+      "minLength": 1
+    },
+    "from": {
+      "type": "string",
+      "minLength": 1
+    },
+    "to": {
+      "type": "string",
+      "minLength": 1
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": ["APPROVE", "REVIEW", "BLOCK"]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["hash", "fingerprint", "path_hint"],
+      "properties": {
+        "hash": {
+          "type": "string",
+          "pattern": "^[A-Fa-f0-9]{64}$"
+        },
+        "fingerprint": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path_hint": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "observation_envelope": {
+      "type": "object"
+    },
+    "action_gate": {
+      "type": "string",
+      "enum": ["APPROVE", "REVIEW", "BLOCK"]
+    },
+    "ghostgate": {
+      "type": "object"
+    },
+    "evidence_bundle": {
+      "type": "object"
+    },
+    "allowed_operations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "blocked_operations": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "web_content_included": {
+      "const": false
+    },
+    "requested_next_action": {
+      "type": "string",
+      "minLength": 1
+    },
+    "message_hash": {
+      "type": "string",
+      "pattern": "^[A-Fa-f0-9]{64}$"
+    }
+  }
+}

@@ -40,9 +40,12 @@ Each domain record should include:
 
 MVP implementation:
 
+- machine schema: `schemas/ai_browser_action_gate.schema.json`;
 - machine schema: `schemas/domain_policy.schema.json`;
 - `tools/ai_browser/snapshot_url.py --url https://...` requires both
   `--gate-file` and `--domain-policy`;
+- gate file must explicitly set `operation=remote_stub`,
+  `network_mode=stub_only` and match the exact URL or allowed domain;
 - matching domain policy must include `read_only` and ActionGate `APPROVE`;
 - `allow_javascript`, `allow_downloads`, `allow_forms`, `allow_login` and
   `allow_credentials` must remain false.
@@ -67,6 +70,9 @@ Future downloads require:
 - Secret-like content in a source is evidence of risk, not permission to expose
   it.
 - Evidence bundles must not include credentials or cookie jars.
+- Extracted secret-like strings must be redacted before writing readable bundle
+  artifacts.
+- Every bundle writes `secret_scan.json`.
 
 ## Memory Safety
 

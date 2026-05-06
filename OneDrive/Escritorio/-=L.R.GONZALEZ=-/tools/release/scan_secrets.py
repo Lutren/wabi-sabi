@@ -33,7 +33,7 @@ PATTERNS = [
     re.compile(r"sk-[A-Za-z0-9_-]{16,}"),
     re.compile(r"ghp_[A-Za-z0-9_]{16,}"),
 ]
-SECRET_NAME_ALLOWLIST = {"scan_secrets.py", "SECRET_SCAN_REPORT.md"}
+SECRET_NAME_ALLOWLIST = {"scan_secrets.py", "SECRET_SCAN_REPORT.md", "secret_scan_report.schema.json"}
 
 
 def is_code_placeholder_assignment(path: Path | None, line: str, match: re.Match[str]) -> bool:

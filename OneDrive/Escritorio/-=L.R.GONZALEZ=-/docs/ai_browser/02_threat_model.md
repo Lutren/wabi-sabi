@@ -30,7 +30,7 @@ Status: `MANDATORY_BASELINE`
 | Prompt injection | Web page overrides user/system intent | Treat web instructions as untrusted data; pattern flag; never merge into instructions | Implemented in CLI extraction |
 | Phishing | Credential theft or fake login | Login/forms blocked by default; no credentials; domain permission policy | Forms detected and blocked; no login automation |
 | Malware | Downloaded payload or malicious script | No downloads; quarantine future downloads; no JS execution | Downloads flagged and blocked |
-| Secret leakage | Local tokens/cookies copied to page or prompt | No browser profile reuse; secret-like text triggers review; no uploads | Implemented as content flag; no upload path |
+| Secret leakage | Local tokens/cookies copied to page or prompt | No browser profile reuse; secret-like text triggers review/redaction; no uploads | Implemented as content flag, redaction and `secret_scan.json`; no upload path |
 | Persistent cookies | Cross-session tracking or auth bleed | Ephemeral contexts only; no default profile | CLI has no cookies |
 | Risky JS execution | XSS, drive-by behavior, DOM mutation | JS disabled/no execution in read-only mode | CLI never executes JS |
 | Downloads | Malware, private data mix, untrusted files | Block by default; future quarantine with hash/scan | Link detection implemented |
@@ -68,6 +68,9 @@ licensed, current, non-malicious or safe to interact with.
 
 - `http(s)` sources now require both ActionGate `APPROVE` and a matching
   domain policy before even producing a remote stub.
+- Remote URL ActionGate must be scoped to `operation=remote_stub`,
+  `network_mode=stub_only` and an exact URL or allowed domain. A generic
+  `decision=APPROVE` is blocked.
 - Domain policy entries that request JS, downloads, forms, login or credentials
   are blocked in the MVP.
 - `GhostGate` memory decisions are generated per snapshot and block memory/canon
@@ -77,6 +80,9 @@ licensed, current, non-malicious or safe to interact with.
   `ObservationEnvelope`, `ActionGate`, `GhostGate` and artifact hashes without
   copying raw web-origin instructions into agent messages.
 - Regression fixtures now cover benign pages, hidden DOM injection, phishing
-  login fields and fake-source/download/script patterns.
+  login fields, fake-source/download/script patterns and synthetic secret-like
+  content.
+- Secret-like extracted content is redacted before bundle artifact write and a
+  `secret_scan.json` report is emitted in the evidence bundle.
 - The CLI can validate an existing `source_snapshot.json` without adding a
   heavy JSON-schema dependency.

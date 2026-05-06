@@ -27,32 +27,58 @@ security core.
 
 ## Official Source Notes
 
+- Verification refreshed: `2026-05-06`.
 - Playwright documents isolated BrowserContexts and fresh contexts for test
   isolation: https://playwright.dev/docs/browser-contexts
 - Playwright browser binaries are version-coupled and installed by CLI:
   https://playwright.dev/docs/browsers
+- Playwright license source observed as Apache-2.0:
+  https://github.com/microsoft/playwright/blob/main/LICENSE
 - Chrome extension manifests and host permissions are explicit:
   https://developer.chrome.com/docs/extensions/reference/manifest
   and https://developer.chrome.com/docs/extensions/develop/concepts/declare-permissions
-- Chrome `activeTab` grants temporary access after user gesture:
-  https://developer.chrome.com/docs/extensions/activeTab
+- WebExtension host permissions and `activeTab` are privileged and must stay
+  user-gesture scoped; broad `<all_urls>` style permission remains a later
+  review item:
+  https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions
 - Electron security docs warn against executing untrusted remote content with
   Node integration and require context isolation/sandbox:
   https://www.electronjs.org/docs/latest/tutorial/security
+- Electron is MIT-licensed and commercially usable, but this does not lower its
+  remote-content attack surface:
+  https://www.electronjs.org/docs/latest/why-electron
 - Tauri CSP and capabilities are relevant for a constrained desktop shell:
   https://v2.tauri.app/security/csp/
   and https://v2.tauri.app/security/capabilities/
+- Tauri repository reports MIT or MIT/Apache-2.0 code licensing; logo terms are
+  separate:
+  https://github.com/tauri-apps/tauri
+- Mozilla Readability is Apache-2.0 and explicitly recommends sanitizer/CSP for
+  untrusted input. If adopted later, it must sit behind sanitizer and evidence
+  tests:
+  https://github.com/mozilla/readability
 - Primary license pages observed:
-  Playwright Apache-2.0 `https://github.com/microsoft/playwright/blob/main/LICENSE`;
   Electron MIT `https://github.com/electron/electron`;
-  Tauri MIT/Apache-2.0 `https://github.com/tauri-apps/tauri`;
   Chromium root license at `https://chromium.googlesource.com/chromium/src/+/main/LICENSE`
-  or revision-specific equivalent.
+  or revision-specific equivalent. Chromium/ChromeOS style distributions can
+  have version/device-specific credits and no single universal license file:
+  https://www.chromium.org/chromium-os/licensing/
+
+## Updated Stack Decision
+
+| Layer | Decision | Reason |
+|---|---|---|
+| Current MVP | stdlib CLI extractor | Lowest dependency and no JS/profile/cookies. |
+| Next render engine | Playwright candidate | BrowserContext isolation fits the security model; dependency adoption gate still required because binaries are installed/version-coupled. |
+| Desktop review shell | Tauri candidate | Capabilities model fits gated local UI; remote API exposure must remain off unless explicitly configured. |
+| Existing commercial shell | Electron only for Argus lane | MIT and mature, but not chosen for untrusted browser core because Electron's own security guide treats remote content + Node as a high-risk boundary. |
+| Extension collector | Later user-driven capture | `activeTab` can reduce broad host permissions, but still grants privileged access after user interaction and can inject scripts. |
+| Readability library | Later optional extractor | Useful, but only with sanitizer/CSP and tests for untrusted input. |
 
 ## INCOGNITA
 
 - Exact redistribution implications of bundled Chromium/Electron/Tauri builds
-  for a commercial package.
+  for a commercial package remain `REVIEW`, especially binary credits/notices.
 - Current Chrome Web Store and Edge Add-ons policy at time of publication.
 - Domain-specific robots/terms/license status for any real source.
 - Whether future Sabueso/Onion research modules should share the same runtime

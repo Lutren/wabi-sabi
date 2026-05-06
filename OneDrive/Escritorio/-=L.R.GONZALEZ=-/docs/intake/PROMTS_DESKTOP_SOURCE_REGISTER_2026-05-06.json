@@ -1,0 +1,94 @@
+{
+  "generated_at_local": "2026-05-06",
+  "source_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\promts",
+  "preflight_decision": "NEEDS_FICHA_BEFORE_USE",
+  "file_count": 14,
+  "bytes": 152076,
+  "policy": "selective_absorption_only",
+  "files": [
+    {
+      "name": "## ESTADO.txt",
+      "sha256": "83A765A63CC41336A09B3B85B6472F36A98AA68A023954522B98B74382E52ACE",
+      "decision": "RESEARCH_ONLY_BLOCK_PUBLICATION",
+      "destination": "PSI/OSIT-AG claim boundary"
+    },
+    {
+      "name": "## ESTADO2.txt",
+      "sha256": "9E1999E40A6B5BC675E787FC585028E06D6BFF994C123919A76A3FD91ACC5E11",
+      "decision": "APPLY_AS_RUNTIME_POLICY",
+      "destination": "Claudio/Wabi-Sabi OSIT resource optimizer"
+    },
+    {
+      "name": "Actua como AGENTE AI BROWSER SEGURO.txt",
+      "sha256": "7BB6E729CB345BC5D180B0CC2268D9A03B899E5D863E316920F6C78B10F23A07",
+      "decision": "REVIEW_CONCURRENT_WORK",
+      "destination": "docs/ai_browser"
+    },
+    {
+      "name": "Actua como AGENTE CANON OBSERVACION.txt",
+      "sha256": "4247032BBBB96664D90DBF58B4C015A2BFD2113C07EC20EEB39DFF5F5EEFE5EB",
+      "decision": "CANON_SCHEMA_BACKLOG",
+      "destination": "docs/language and PSI canon"
+    },
+    {
+      "name": "Actua como AGENTE DUAT GEODIA OS P3.txt",
+      "sha256": "0F7F189B362903ECA89282964251C8CB40E1FCFCD13886CDE3461AC88B6FF065",
+      "decision": "PRIVATE_REVIEW",
+      "destination": "DUAT/GEODIA OS private slice"
+    },
+    {
+      "name": "Actua como AGENTE DUAT READ-ONLY AD.txt",
+      "sha256": "906B90285824B1DF25CCE0357BE0FAFD84FFE4DD58F477133B3406E896705CAB",
+      "decision": "IMPLEMENTED_LOCAL",
+      "destination": "docs/duat and Claudio readonly adapter"
+    },
+    {
+      "name": "Actua como AGENTE LENGUAJE OBSERVAC.txt",
+      "sha256": "1E51145CE73413FDECF2B5C7581D981A87C43AD2C9758723C61C75143290451A",
+      "decision": "REVIEW_CONCURRENT_WORK",
+      "destination": "docs/language and research/observacionismo-lab"
+    },
+    {
+      "name": "Actua como AGENTE MATRIX BIBLIOTEC.txt",
+      "sha256": "46401C252D8B2CAE2A8580B71BA8A4B46216F02C91652CB23560A868E875709F",
+      "decision": "IMPLEMENTED_LOCAL",
+      "destination": "docs/matrix and library/modules"
+    },
+    {
+      "name": "Actua como AGENTE MEDIOEVO RPG TOOL.txt",
+      "sha256": "9627A14F8A7BAF7520C60861238BFD73D48A32219ADE846F40E99CC5A398F662",
+      "decision": "PRIVATE_REVIEW",
+      "destination": "RPG private StoryBible/tooling"
+    },
+    {
+      "name": "Actua como AGENTE MISSION CONTROL.txt",
+      "sha256": "D692921B5742E035591477FE8CD2274E447EA2A2DA98B1C50F0B9115E4AB0EA7",
+      "decision": "MISSION_CONTROL_BACKLOG",
+      "destination": "Hormiguero Mission Control"
+    },
+    {
+      "name": "Actua como AGENTE ORQUESTADOR DE CI.txt",
+      "sha256": "F3EB20ACC2C6663D8E970E5D65C8A16432517D2A300694DAB4D463D5F1343F79",
+      "decision": "P0_WORKPACK",
+      "destination": "docs/ops or COMMS workpacks"
+    },
+    {
+      "name": "Actua como AGENTE PROGRAMADOR SEGUR.txt",
+      "sha256": "7F3E194C2E542FBCCE5EE928D2AAC1DCFF552E3242D7F2B945D0A038083589DA",
+      "decision": "SAFE_PROGRAMMER_BACKLOG",
+      "destination": "Claudio local autonomy"
+    },
+    {
+      "name": "Actua como AGENTE RELEASE PUBLIC-S.txt",
+      "sha256": "B62C6E001205B32CEBC252C2FDFED48DAF737411155CBE4E8EE72305CAC650E2",
+      "decision": "PUBLICATION_GOVERNANCE_GATED",
+      "destination": "release governance"
+    },
+    {
+      "name": "Kernel inicial del reto 1 OSIT-QG v.txt",
+      "sha256": "0CD17F706C3E40400F404AE5449A513155C9B25C2060BD78A2FFED30E2848B92",
+      "decision": "RESEARCH_ONLY_BLOCK_PUBLICATION",
+      "destination": "PSI/OSIT-QG claim boundary"
+    }
+  ]
+}

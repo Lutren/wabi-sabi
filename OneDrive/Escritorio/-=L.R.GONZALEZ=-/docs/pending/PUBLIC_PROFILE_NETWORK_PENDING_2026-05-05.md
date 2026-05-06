@@ -58,21 +58,21 @@ Evidencia mas reciente:
 
 | check | resultado |
 |---|---|
-| host gate no-write | `MIXTO / REVIEW` |
-| timestamp | `2026-05-06T09:46:37Z` |
-| razones | `residuo_precaucion`; memory `76.0%`; disk `80.3%`; lambda_sat `0.803` |
+| host gate no-write | `LIMPIO / APPROVE` |
+| timestamp | `2026-05-06T12:48:17Z` |
+| razones | none; memory `59.7%`; disk `80.4%`; lambda_sat `0.804` |
 | GitHub profile README | raw README HTTP `200`; contiene `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad y MEDIOEVO |
 | GitHub Sponsors | HTTP `200`; high tiers `US$1,000`, `US$5,000` y `US$10,000` verificados |
-| Website live | HTTP `200`; el parche local de Sponsors todavia no esta desplegado |
+| Website live | HTTP `200`; el parche local de Sponsors fue desplegado y verificado el 2026-05-06 |
 | Gumroad live | Agent Ops y DUAT Templates HTTP `200`; copy base safe, mejoras de secciones/media pendientes |
 | LinkedIn URL observada desde GitHub | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; HTTP publico devuelve `999`, requiere confirmacion visual autenticada |
-| external actions | ninguna adicional en este sweep; Sponsors high tiers ya cerrado |
+| external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; sin Gumroad, LinkedIn, redes, GitHub push, DNS ni artefactos de producto |
 
 ## Pendientes Por Target
 
 | prioridad | target | pendiente | estado | evidencia/base |
 |---|---|---|---|---|
-| P0 | Website | desplegar el parche local de home solo cuando host/Cloudflare gate permita; luego verificar HTTP 200 y sitemap | `LOCAL_PATCH_DONE_DEPLOY_BLOCKED_BY_REVIEW` | `WEBSITE_PUBLIC_FUNNEL_REVIEW_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
+| P0 | Website | desplegar el parche local de home solo cuando host/Cloudflare gate permita; luego verificar HTTP 200 y sitemap | `DONE_DEPLOYED_VERIFIED` | `WEBSITE_SPONSORS_ROUTE_DEPLOY_2026-05-06.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
 | P0 | Gumroad Agent Ops Pack | actualizar copy "what you get / what you do not get" y media, sin cambiar artefacto/precio | `LIVE_SAFE_ENHANCEMENT_PENDING` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
 | P0 | Gumroad DUAT Templates | reforzar `synthetic_only` y exclusion de DUAT/GEODIA privado | `LIVE_SAFE_ENHANCEMENT_PENDING` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
 | P0 | LinkedIn | confirmar visualmente URL canonica autenticada antes de editar perfil | `AUTHENTICATED_CONFIRMATION_REQUIRED` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |

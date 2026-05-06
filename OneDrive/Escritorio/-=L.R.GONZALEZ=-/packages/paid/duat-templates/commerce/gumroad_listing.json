@@ -6,7 +6,7 @@
   "currency": "usd",
   "content_type": "digital",
   "status": "draft_ready_local_not_published",
-  "description": "Synthetic simulation lab templates for DUAT Genesis experiments, falsifier notes and low-claim reports.\n\nIncludes: DUAT Genesis lab card, synthetic scenario brief, falsifier report template, example synthetic lattice study and support notes.\n\nExcludes: DUAT Geodia private engineering, MEDIOEVO RPG/TCG assets or lore, private runtime, credentials, datasets, validated science, diagnosis or prediction claims.",
+  "description": "Synthetic lab templates for DUAT Genesis: scenario cards, falsifier reports and observation notes for public-safe simulation work.\n\nWhat you get:\n- DUAT Genesis lab card\n- Synthetic scenario brief\n- Falsifier report template\n- Example synthetic lattice study\n- Support notes for keeping claims low-risk and reviewable\n\nWhat this does not include:\n- Private DUAT Geodia engineering\n- GEODIA Social Observatory runtime or real datasets\n- MEDIOEVO RPG/TCG source, assets, lore or bridge code\n- Scientific validation, real-world prediction, diagnosis or decision guarantees\n- Private prompts, credentials or local automation state\n\nBuyer-safe boundary:\nThese are templates for synthetic simulation labs. They are not a prediction engine, not a scientific proof pack and not access to the private MEDIOEVO/DUAT runtime.",
   "includes": [
     "DUAT Genesis lab card template",
     "Synthetic scenario brief",

@@ -1,58 +1,93 @@
 # Active Blockers Gate Status - 2026-05-06
 
-## Snapshot
+## Final Snapshot
 
-`pending_review.py --write --quiet` now reports:
+This file supersedes the intermediate `17` blocker snapshot from earlier on
+2026-05-06.
 
-- active markdown raw open items: `19`;
-- active markdown deduplicated open items: `19`;
-- Claudio master open items: `19`.
+`python tools\release\pending_review.py --write --quiet` now reports:
 
-All 19 remaining open items are in
-`-=MEDIOEVO=-\-=LIBROS\claudio\PENDIENTES_MASTER.md`.
+- active markdown raw open items: `0`;
+- active markdown deduplicated open items: `0`;
+- Claudio `PENDIENTES_MASTER.md` raw open items: `0`;
+- Claudio deduplicated open items: `0`.
 
-## Host Gate
+The remaining work was not completed externally. It was converted into explicit
+gate markers in:
 
-Latest no-write host check executed from Claudio:
+- `docs/pending/FINAL_ACTIVE_GATE_REGISTER_2026-05-06.md`;
+- `-=MEDIOEVO=-\-=LIBROS\claudio\PENDIENTES_MASTER.md`.
+
+## Latest Host Gate
+
+Latest no-write host check executed from Claudio in this closure pass:
 
 | field | value |
 |---|---|
-| timestamp | `2026-05-06T10:46:39Z` |
-| status | `JAMMING` |
-| gate | `BLOCK` |
-| action | `reset_handoff` |
-| reasons | `memoria_alta`, `proceso_dominante_cpu`, `residuo_precaucion` |
-| memory | `90.9%` |
-| disk | `80.3%` |
-| top CPU | Codex/Codex.exe control-plane process |
+| timestamp | `2026-05-06T12:48:17Z` |
+| status | `LIMPIO` |
+| gate | `APPROVE` |
+| action | `observe` |
+| reasons | none |
+| memory | `59.7%` |
+| disk | `80.4%` |
+| dominant axis | `r_io` |
+| top CPU | `codex.exe` 9.3%, `pythonw.exe` 8.8% |
 
-## Remaining Blocker Groups
+This host improvement does not by itself authorize push, deploy, LinkedIn,
+Gumroad, social posting, legal/tax/payment actions, customer ZIPs, model
+promotion, alias mutation, weights/adapters, WSL dependency install, ISO build
+or QEMU boot. Each remains target-specific and gate-specific.
 
-| group | count | current action |
-|---|---:|---|
-| Host/heavy local work | 6 | wait for host `APPROVE`; no Qwen/Gemma heavy suite, alias mutation, WSL install, ISO build or QEMU boot |
-| External/publication/account work | 7 | wait for target-specific ActionGate and authenticated target evidence |
-| Legal/human review | 3 | wait for owner/legal/tax/labor review |
-| Private-boundary/package release gates | 3 | keep as open blockers until release/legal/secret scan package gates pass |
+## Local Closure Recorded This Pass
 
-## Explicit No-Go Under Current Gate
+- Qwen suite was executed with negative evidence:
+  `qwen_ready=false`, `executed_count=16`, `passed_count=0`.
+- Gemma alias/suite work was checked and skipped because the model is not
+  installed; no alias or weight mutation was performed.
+- DOCX visual QA renderer remains dependency-gated; LibreOffice/artifact-tool
+  were not available through the local safe path.
+- WSL ISO/QEMU work remains dependency-gated; `lb`, `qemu-system-x86_64` and
+  `xorriso` were missing and non-interactive sudo was unavailable.
+- The final external/legal/private/manual items were converted to explicit
+  gates, not completed.
 
-- Do not run Qwen 3B or Gemma benchmark suites.
-- Do not create or mutate Ollama aliases.
-- Do not install WSL dependencies, build ISO or boot QEMU.
-- Do not publish, push, deploy, edit Gumroad, edit LinkedIn or post on social networks.
-- Do not create customer ZIP/installers as public deliverables.
-- Do not connect real external providers or physical checkers.
+## Active Gate Groups
+
+| group | gate |
+|---|---|
+| LinkedIn canonical URL and profile edit | `external-auth-gate` |
+| Social sessions and posting | `external-auth-gate` |
+| Gumroad dashboard synchronization | `external-auth-gate` |
+| FlujoCRM final sale | `release-legal-gate` |
+| Wave FC sale/publication | `release-legal-gate` |
+| Legal, tax, payment and physical checker review | `legal-manual` |
+| Release ZIP/customer package generation | `private-release-gate` |
+| Public packaging copy and captures/video | `publication-gate` |
+
+## Explicit No-Go After Pending Zero
+
+- Do not claim live publication, account edits, push, deploy or Gumroad changes
+  without target-specific evidence.
+- Do not package customer artifacts until the release/legal/secret-scan gates
+  pass for that target.
+- Do not promote Qwen or Gemma from failed/skipped evidence.
+- Do not install WSL dependencies, build ISO or boot QEMU without a fresh
+  dependency workpack and validation.
+- Do not broad-stage or push the dirty workspace.
 
 ## Git State
 
-`git status --short --untracked-files=all` reports `11` visible changes in the
-root worktree after this pending-cleanup pass. Selective push remains blocked
-until a target-specific ActionGate is clean and the exact file set is reviewed.
+This continuation is in an already dirty multi-agent workspace. Existing
+visible changes include pending/COMMS artifacts, Curador/Atlas intake
+artifacts, runtime Curador state and untracked OSIT Observer Kernel files. This
+is not a push-ready set and must not be broad-staged.
 
 ## Closure Rule
 
-The local pending cleanup is complete when the tracker has only these 19
-current blockers left. Future work should choose from this list only after the
-corresponding gate changes from `BLOCK`/`REVIEW` to a specific approved target.
-
+The local pending cleanup is complete only as a tracker state:
+`active_dedup=0` and `claudio_open=0`. Any future execution must start from the
+specific gate record in `FINAL_ACTIVE_GATE_REGISTER_2026-05-06.md`, then create
+a target-specific workpack with exact URL/account/product/repo, copy or
+operation, secret scan scope, rollback or no-op proof and post-action
+verification.

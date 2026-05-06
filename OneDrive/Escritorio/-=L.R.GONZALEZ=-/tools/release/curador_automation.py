@@ -1092,6 +1092,72 @@ def write_fichas(workspace_root: Path, records: list[FileRecord]) -> None:
         path.write_text(render_ficha(record), encoding="utf-8")
 
 
+def load_file_records_from_sqlite(db_path: Path) -> list[FileRecord]:
+    if not db_path.exists():
+        return []
+    try:
+        with sqlite3.connect(db_path) as db:
+            rows = db.execute(
+                """
+                SELECT
+                  path,
+                  rel_path,
+                  sha256,
+                  size_bytes,
+                  suffix,
+                  kind,
+                  psi_state,
+                  status,
+                  classification,
+                  lane,
+                  decision,
+                  action_gate,
+                  summary,
+                  target,
+                  falsifiers,
+                  risk_flags_json,
+                  ficha_path,
+                  canonical_path,
+                  deleted
+                FROM files
+                ORDER BY lower(rel_path), lower(path)
+                """
+            ).fetchall()
+    except sqlite3.Error:
+        return []
+    records: list[FileRecord] = []
+    for row in rows:
+        try:
+            risk_flags = json.loads(row[15] or "[]")
+        except json.JSONDecodeError:
+            risk_flags = []
+        records.append(
+            FileRecord(
+                path=str(row[0]),
+                rel_path=str(row[1] or row[0]),
+                sha256=str(row[2] or ""),
+                size_bytes=int(row[3] or 0),
+                suffix=str(row[4] or ""),
+                kind=str(row[5] or ""),
+                line_count=None,
+                psi_state=str(row[6] or "INCOGNITA"),
+                status=str(row[7] or "REVIEW"),
+                classification=str(row[8] or "UNKNOWN"),
+                lane=str(row[9] or "review"),
+                decision=str(row[10] or "REVIEW"),
+                action_gate=str(row[11] or "REVIEW"),
+                summary=str(row[12] or ""),
+                target=str(row[13] or ""),
+                falsifiers=str(row[14] or ""),
+                risk_flags=list(risk_flags) if isinstance(risk_flags, list) else [],
+                ficha_path=str(row[16] or ""),
+                canonical_path=str(row[17]) if row[17] else None,
+                deleted=bool(row[18]),
+            )
+        )
+    return records
+
+
 def render_master_index(records: list[FileRecord], groups: list[dict[str, object]], deleted: list[dict[str, object]], db_path: Path) -> str:
     status_counts: dict[str, int] = {}
     lane_counts: dict[str, int] = {}
@@ -1759,10 +1825,11 @@ def run_curador(
     }
     event["event_hash"] = event_hash(event)
     write_sqlite(db_path, records, groups, event)
+    index_records = load_file_records_from_sqlite(db_path) or records
     if write_index:
         index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
-        index_path.write_text(render_master_index(records, groups, deleted, db_path), encoding="utf-8")
-    write_runtime_export(runtime_dir, records, groups, deleted)
+        index_path.write_text(render_master_index(index_records, groups, deleted, db_path), encoding="utf-8")
+    write_runtime_export(runtime_dir, index_records, groups, deleted)
     result = {
         "generated_at_utc": utc_now(),
         "workspace_root": str(workspace_root),
@@ -1838,6 +1905,13 @@ def run_absorb(
     files = scan_downloads(downloads_dir, recursive=recursive)
     records = make_file_records(downloads_dir, files, workspace_root / "docs" / "intake" / "curador_fichas" / "downloads")
     if not records and curador_outputs_exist(workspace_root, db_path, write_index, write_fichas_flag):
+        index_records = load_file_records_from_sqlite(db_path)
+        if write_index:
+            index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
+            index_path.write_text(render_master_index(index_records, [], [], db_path), encoding="utf-8")
+        if write_atlas:
+            write_atlas_docs(workspace_root, index_records, [], [], [])
+        write_runtime_export(runtime_dir, index_records, [], [])
         return empty_inbox_absorb_result(workspace_root, downloads_dir, db_path, witness_path)
 
     groups = duplicate_groups(records, downloads_dir)
@@ -1868,12 +1942,13 @@ def run_absorb(
     }
     event["event_hash"] = event_hash(event)
     write_sqlite(db_path, records, groups, event, extractions=extractions, retirements=retirements)
+    index_records = load_file_records_from_sqlite(db_path) or records
     if write_index:
         index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
-        index_path.write_text(render_master_index(records, groups, deleted, db_path), encoding="utf-8")
+        index_path.write_text(render_master_index(index_records, groups, deleted, db_path), encoding="utf-8")
     if write_atlas:
-        write_atlas_docs(workspace_root, records, extractions, retirements, deleted)
-    write_runtime_export(runtime_dir, records, groups, deleted, extractions=extractions, retirements=retirements)
+        write_atlas_docs(workspace_root, index_records, extractions, retirements, deleted)
+    write_runtime_export(runtime_dir, index_records, groups, deleted, extractions=extractions, retirements=retirements)
     result = {
         "generated_at_utc": utc_now(),
         "workspace_root": str(workspace_root),

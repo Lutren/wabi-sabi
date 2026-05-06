@@ -252,6 +252,51 @@ def test_absorb_archives_unique_sources_and_writes_atlas(tmp_path: Path) -> None
         assert db.execute("SELECT COUNT(*) FROM atlas_synapses").fetchone()[0] == 2
 
 
+def test_master_index_keeps_global_sqlite_records_across_absorb_runs(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    downloads.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+
+    (downloads / "first_sigma.md").write_text("# Sigma\nActionGate\n", encoding="utf-8")
+    curador.run_absorb(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        write_atlas=True,
+        archive_absorbed=True,
+        apply_safe_deletes=True,
+    )
+
+    (downloads / "second_agent.py").write_text("class RepoObserver:\n    pass\n", encoding="utf-8")
+    result = curador.run_absorb(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        write_atlas=True,
+        archive_absorbed=True,
+        apply_safe_deletes=True,
+    )
+
+    index = (workspace / "docs" / "intake" / "CURADOR_MASTER_INDEX.md").read_text(encoding="utf-8")
+    atlas = (workspace / "docs" / "intake" / "ATLAS_MAIN.md").read_text(encoding="utf-8")
+    export = json.loads(
+        (workspace / "runtime" / "curador_seto" / "source_intake_export.json").read_text(encoding="utf-8")
+    )
+
+    assert result["downloads_files_seen"] == 1
+    assert "| archivos registrados | 2 |" in index
+    assert "first_sigma.md" in index
+    assert "second_agent.py" in index
+    assert "| fuentes procesadas | 2 |" in atlas
+    assert len(export["downloads_records"]) == 2
+
+
 def test_absorb_keeps_secret_like_sources_blocked_in_inbox(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     downloads = tmp_path / "Downloads"

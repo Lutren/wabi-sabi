@@ -14,8 +14,8 @@ Source: https://gumroad.com/pricing
 
 | name | type | price draft | status | notes |
 |---|---|---:|---|---|
-| MEDIOEVO Agent Ops Pack | templates/support pack | 29 USD | published | URL: https://lrgonzalez.gumroad.com/l/medioevo-agent-ops-pack; ZIP SHA256 `7cf8fdf5c8da49d691947becebdd3feae5f93b7e062212af38e3063404fab948`; evidence in `qa_artifacts\release_validation\publication-live-verification-2026-05-02.json` |
-| DUAT Templates | Agente Laboratorio | 19 USD | published | URL: https://lrgonzalez.gumroad.com/l/duat-templates; ZIP SHA256 `03c926b549307ef6106d80117183bb22121354671a10e0f2527473c06f6ca518`; evidence in `qa_artifacts\release_validation\duat-publication-live-verification-2026-05-02.json` |
+| MEDIOEVO Agent Ops Pack | templates/support pack | 29 USD | published, copy updated | URL: https://lrgonzalez.gumroad.com/l/medioevo-agent-ops-pack; ZIP SHA256 `7cf8fdf5c8da49d691947becebdd3feae5f93b7e062212af38e3063404fab948`; copy-only update verified 2026-05-06 in `qa_artifacts\release_validation\gumroad-medioevo-agent-ops-pack.json` |
+| DUAT Templates | Agente Laboratorio | 19 USD | published, copy updated | URL: https://lrgonzalez.gumroad.com/l/duat-templates; ZIP SHA256 `03c926b549307ef6106d80117183bb22121354671a10e0f2527473c06f6ca518`; copy-only update verified 2026-05-06 in `qa_artifacts\release_validation\gumroad-duat-templates.json` |
 | MEDIOEVO Starter Pack | bundle | 9-19 USD | review | existing ZIP detected; verify contents |
 | MEDIOEVO Ultimate Archive | bundle | 49-99 USD | review | huge ZIP detected; verify rights and contents |
 | EL OBSERVADOR ebook | ebook | 9-15 USD | draft | legal/editorial review |

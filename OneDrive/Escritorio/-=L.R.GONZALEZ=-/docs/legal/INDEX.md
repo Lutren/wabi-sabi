@@ -14,5 +14,6 @@ Commercial gating:
 
 - `docs/legal/COMMERCIAL_RELEASE_LEGAL_MATRIX_2026-05-01.md`
 - `docs/legal/LEGAL_OWNER_MANUAL_QUEUE_2026-05-06.md`
+- `docs/legal/COMMERCIAL_LEGAL_REVIEW_PACKET_2026-05-06.md`
 
 Do not present these as final legal advice.

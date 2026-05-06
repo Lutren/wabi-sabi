@@ -1,6 +1,6 @@
 # Social Content Calendar 2026-05
 
-Status: `DRAFT_READY_AFTER_GATE / NO_SOCIAL_POSTS_EXECUTED`
+Status: `DRAFT_READY_AFTER_GATE / NO_SOCIAL_POSTS_EXECUTED / SPONSORS_AND_GUMROAD_FACTS_CURRENT`
 
 Purpose: make MEDIOEVO visible without leaking private technology. Every post
 routes to one of four public-safe doors: website, GitHub, Gumroad or Sponsors.
@@ -24,6 +24,23 @@ routes to one of four public-safe doors: website, GitHub, Gumroad or Sponsors.
 | Sunday | GitHub Sponsors update | maintenance/test/demo note | Sponsors |
 
 ## Post Drafts
+
+Current publication facts as of `2026-05-06`:
+
+- GitHub Sponsors high tiers are live and verified.
+- `medioevo.space` now routes to GitHub Sponsors from the public home.
+- Gumroad Agent Ops Pack and DUAT Templates have live includes/excludes copy.
+- No LinkedIn, Instagram, TikTok, YouTube, X/Threads or GitHub push action was
+  executed from this calendar.
+
+Ready local content packet:
+
+- `docs/publishing/PUBLIC_CONTENT_READY_PACKET_2026-05-06.md`;
+- local SVG assets and `1200x630` PNG exports under
+  `docs/publishing/assets/social/2026-05-06/`;
+- PNG hashes and dimensions recorded in
+  `qa_artifacts/release_validation/public-content-ready-packet-2026-05-06.json`;
+- no social post, scheduling, account edit or Gumroad media upload executed.
 
 ### Evidence Gate
 

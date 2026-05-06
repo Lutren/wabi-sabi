@@ -3,7 +3,7 @@
 Status: `PASTE_READY_AFTER_CANONICAL_URL_CONFIRMATION / AUTH_UI_REQUIRED`
 
 No LinkedIn edit was executed. LinkedIn requires authenticated visual
-confirmation and host gate approval before any live change.
+confirmation and target-specific gate approval before any live change.
 
 2026-05-06 read-only check: public HTTP checks returned LinkedIn `999` for both
 candidate URLs. This does not prove either URL is wrong; it means canonical
@@ -17,13 +17,15 @@ Observed:
   `luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b` in the slug:
   `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`.
 - Older local evidence also mentioned `luis-rene-gonzalez-53383798`.
-- Current host gate recheck at `2026-05-05T21:31:52Z` returned `BLOCK`, so
-  no authenticated LinkedIn edit was attempted in this pass.
+- Latest host gate recheck after website/Gumroad publication work returned
+  `LIMPIO / APPROVE` at `2026-05-06T13:12:39Z`, but that does not replace
+  authenticated owner-view confirmation for LinkedIn.
 
 Decision:
 
-`INCOGNITA / REVIEW` until the owner confirms the correct public profile while
-logged in. Do not post or edit against an unconfirmed LinkedIn URL.
+`INCOGNITA / REVIEW` until the correct public profile is confirmed from an
+authenticated owner view. Do not post or edit against an unconfirmed LinkedIn
+URL.
 
 Operational decision for next run:
 
@@ -31,6 +33,14 @@ Operational decision for next run:
   canonical LinkedIn URL and apply the copy below after focused scans.
 - If LinkedIn redirects to a different canonical slug, update this packet first,
   then apply copy only after that URL is recorded.
+
+Current blocker:
+
+- not copy readiness;
+- not public-safe wording;
+- not host pressure after the latest check;
+- only canonical authenticated owner-view confirmation and post-action public
+  verification.
 
 ## Headline
 

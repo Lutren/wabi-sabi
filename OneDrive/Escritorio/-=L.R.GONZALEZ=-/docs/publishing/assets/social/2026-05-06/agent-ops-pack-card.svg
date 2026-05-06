@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">MEDIOEVO Agent Ops Pack</title>
+  <desc id="desc">Public card for MEDIOEVO Agent Ops Pack.</desc>
+  <rect width="1200" height="630" fill="#1b1f27"/>
+  <rect x="62" y="62" width="1076" height="506" rx="14" fill="#f1f4ee"/>
+  <text x="104" y="142" fill="#1b1f27" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">MEDIOEVO Agent Ops Pack</text>
+  <text x="104" y="224" fill="#2f7d62" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700">Release work with evidence</text>
+  <text x="108" y="310" fill="#1b1f27" font-family="Arial, Helvetica, sans-serif" font-size="31">Technical fichas</text>
+  <text x="108" y="356" fill="#1b1f27" font-family="Arial, Helvetica, sans-serif" font-size="31">ActionGate checklist</text>
+  <text x="108" y="402" fill="#1b1f27" font-family="Arial, Helvetica, sans-serif" font-size="31">GitHub and Gumroad release templates</text>
+  <text x="108" y="500" fill="#68736d" font-family="Arial, Helvetica, sans-serif" font-size="26">lrgonzalez.gumroad.com/l/medioevo-agent-ops-pack</text>
+</svg>

@@ -54,3 +54,13 @@ revision humana/legal.
 - Agregar aviso de instalador unsigned o code signing por app.
 - Alinear cada listing con el entregable real: source ZIP, instalador, demo o
   servicio.
+
+## Actualizacion 2026-05-06
+
+Se creo un paquete consolidado de revision:
+
+- `docs/legal/COMMERCIAL_LEGAL_REVIEW_PACKET_2026-05-06.md`;
+- `qa_artifacts/release_validation/commercial-legal-review-packet-2026-05-06.json`.
+
+No cambia el estado legal de ningun producto. Solo deja preguntas, criterios y
+evidencia listos para revision del operador/profesional.

@@ -1,14 +1,15 @@
 # Gumroad Listing Optimization Packet 2026-05-05
 
-Status: `LIVE_SAFE_ENHANCEMENT_PENDING / NO_GUMROAD_ACTION_EXECUTED`
+Status: `LIVE_UPDATED_VERIFIED`
 
 Purpose: improve the two live Gumroad products without changing price,
 artifacts, private boundaries or claims posture.
 
-2026-05-06 read-only check: both public Gumroad product URLs returned HTTP
-`200`. The current public pages already contain safe exclusion language. This
-packet remains an enhancement target for clearer sections and media, not an
-emergency claims fix.
+2026-05-06 update: both public Gumroad listings were updated with clearer
+`What you get`, `What this does not include` and buyer-safe boundary sections.
+No file upload, price change, product deletion, new product creation or media
+upload was executed. Evidence:
+`docs/publishing/GUMROAD_LISTING_COPY_UPDATE_2026-05-06.md`.
 
 Live products:
 
@@ -133,8 +134,8 @@ guaranteed AI safety, anti-hallucination guaranteed, social prediction, medical,
 
 ## Pre-Publish Checklist
 
-- Confirm current product artifact SHA256 remains unchanged.
-- Confirm no private path, secret-like string or account data is in copy.
-- Confirm claims remain `demo_only`, `synthetic_only` or `operational`.
-- Save listing only during host `APPROVE` or target-specific override.
-- Verify public product page after save.
+- [x] Confirm current product artifact SHA256 remains unchanged.
+- [x] Confirm no private path, secret-like string or account data is in copy.
+- [x] Confirm claims remain `demo_only`, `synthetic_only` or `operational`.
+- [x] Save listing only during host `APPROVE` or target-specific override.
+- [x] Verify public product page after save.

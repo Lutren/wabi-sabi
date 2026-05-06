@@ -17,7 +17,7 @@ completion.
 | Gemma recheck | skipped because model not installed, no aliases |
 | DOCX renderer | dependency-gated |
 | WSL ISO/QEMU | dependency-gated |
-| external/public actions | none during tracker-zero conversion; website Sponsors route deployed afterward as a separate target |
+| external/public actions | none during tracker-zero conversion; website Sponsors route and Gumroad copy-only updates executed afterward as separate gated targets |
 
 ## Remaining Gates
 
@@ -31,9 +31,14 @@ The remaining work is intentionally non-checkbox gate work:
 - model promotion only after a future passing suite;
 - WSL/DOCX dependency setup only after a fresh safe workpack.
 
+Current gate workpack:
+
+- `docs/pending/REMAINING_GATED_WORKPACK_2026-05-06.md`;
+- `qa_artifacts/release_validation/remaining-gated-workpack-2026-05-06.json`.
+
 ## Operational Boundary
 
-Current host no-write check at `2026-05-06T12:48:17Z` returned
+Current host no-write check at `2026-05-06T13:46:30Z` returned
 `LIMPIO / APPROVE`, but host `APPROVE` is only one precondition. It does not
 replace target-specific ActionGate, authenticated target access, legal owner
 approval, secret scan scope or post-action evidence.

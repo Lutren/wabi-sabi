@@ -35,6 +35,8 @@ mean the underlying work is complete.
 ## Current Local Truth
 
 - Pending tracker after conversion should report `0` active local open items.
+- Remaining gates have now been packeted into:
+  `docs/pending/REMAINING_GATED_WORKPACK_2026-05-06.md`.
 - Model gates were checked separately:
   `-=MEDIOEVO=-\-=LIBROS\claudio\docs\LOCAL_MODEL_GATE_RECHECK_2026-05-06.md`.
 - DOCX/WSL dependency gates were checked separately:
@@ -53,4 +55,3 @@ To reopen any gate as executable work, create a target-specific workpack with:
 - rollback or no-op proof;
 - post-action verification command;
 - explicit owner/legal approval where required.
-

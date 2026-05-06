@@ -59,25 +59,27 @@ Evidencia mas reciente:
 | check | resultado |
 |---|---|
 | host gate no-write | `LIMPIO / APPROVE` |
-| timestamp | `2026-05-06T12:48:17Z` |
-| razones | none; memory `59.7%`; disk `80.4%`; lambda_sat `0.804` |
+| timestamp | `2026-05-06T13:46:30Z` |
+| razones | none; memory `62.6%`; disk `80.4%`; lambda_sat `0.804` |
 | GitHub profile README | raw README HTTP `200`; contiene `Publication Lanes`, `Three Public Paths`, sponsor link, Gumroad y MEDIOEVO |
+| GitHub funding metadata | `Lutren/Lutren/.github/FUNDING.yml` raw/API HTTP `200`; contiene `Lutren`; sin push |
+| GitHub profile pins | GraphQL devolvio 6 repos publicos/no archivados; sin mutacion de pins |
 | GitHub Sponsors | HTTP `200`; high tiers `US$1,000`, `US$5,000` y `US$10,000` verificados |
 | Website live | HTTP `200`; el parche local de Sponsors fue desplegado y verificado el 2026-05-06 |
-| Gumroad live | Agent Ops y DUAT Templates HTTP `200`; copy base safe, mejoras de secciones/media pendientes |
+| Gumroad live | Agent Ops y DUAT Templates HTTP `200`; copy de includes/excludes actualizado y verificado el 2026-05-06; media sigue opcional |
 | LinkedIn URL observada desde GitHub | `https://www.linkedin.com/in/luis-ren%C3%A9-gonz%C3%A1lez-l%C3%B3pez-64517b20b/`; HTTP publico devuelve `999`, requiere confirmacion visual autenticada |
-| external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; sin Gumroad, LinkedIn, redes, GitHub push, DNS ni artefactos de producto |
+| external actions | website Sponsors route desplegado y verificado; Sponsors high tiers ya cerrado; Gumroad copy-only actualizado; sin LinkedIn, redes, GitHub push, DNS ni subida de artefactos de producto |
 
 ## Pendientes Por Target
 
 | prioridad | target | pendiente | estado | evidencia/base |
 |---|---|---|---|---|
 | P0 | Website | desplegar el parche local de home solo cuando host/Cloudflare gate permita; luego verificar HTTP 200 y sitemap | `DONE_DEPLOYED_VERIFIED` | `WEBSITE_SPONSORS_ROUTE_DEPLOY_2026-05-06.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
-| P0 | Gumroad Agent Ops Pack | actualizar copy "what you get / what you do not get" y media, sin cambiar artefacto/precio | `LIVE_SAFE_ENHANCEMENT_PENDING` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
-| P0 | Gumroad DUAT Templates | reforzar `synthetic_only` y exclusion de DUAT/GEODIA privado | `LIVE_SAFE_ENHANCEMENT_PENDING` | `GUMROAD_LISTING_OPTIMIZATION_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
+| P0 | Gumroad Agent Ops Pack | actualizar copy "what you get / what you do not get" y media, sin cambiar artefacto/precio | `COPY_DONE_MEDIA_PENDING_OPTIONAL` | `GUMROAD_LISTING_COPY_UPDATE_2026-05-06.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
+| P0 | Gumroad DUAT Templates | reforzar `synthetic_only` y exclusion de DUAT/GEODIA privado | `COPY_DONE_MEDIA_PENDING_OPTIONAL` | `GUMROAD_LISTING_COPY_UPDATE_2026-05-06.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
 | P0 | LinkedIn | confirmar visualmente URL canonica autenticada antes de editar perfil | `AUTHENTICATED_CONFIRMATION_REQUIRED` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md`, `PUBLIC_PROFILE_PENDING_SWEEP_2026-05-06.md` |
 | P0 | LinkedIn | pegar headline/about/featured links solo despues de confirmar URL y gate | `READY_AFTER_URL_CONFIRMATION` | `LINKEDIN_PROFILE_PACKET_2026-05-05.md` |
-| P1 | GitHub profile | no cambiar README por ahora; revisar pins si se confirma que no estan alineados | `NO_CHANGE_NEEDED_NOW` | README remoto ya esta alineado y Sponsors visible |
+| P1 | GitHub profile/funding/pins | no cambiar README, funding ni pins por ahora | `NO_CHANGE_NEEDED_NOW` | README remoto, funding metadata y pins verificados; Sponsors visible |
 | P1 | GitHub Sponsors | no cambiar copy por ahora; verificar dashboard solo si se necesita screenshot/evidencia nueva | `NO_CHANGE_NEEDED_NOW` | Sponsors publico HTTP 200 |
 | P2 | Instagram/TikTok/YouTube | publicar posts del calendario solo con cuenta autenticada, assets public-safe y gate | `DRAFT_READY_AFTER_GATE` | `SOCIAL_CONTENT_CALENDAR_2026-05.md` |
 
@@ -112,4 +114,8 @@ Evidencia mas reciente:
 - `docs\publishing\WEBSITE_PUBLIC_FUNNEL_REVIEW_2026-05-05.md`
 - `qa_artifacts\release_validation\github-linkedin-public-safe-positioning-2026-05-05.json`
 - `qa_artifacts\release_validation\public-profile-pending-sweep-2026-05-06.json`
+- `qa_artifacts\release_validation\website-sponsors-route-deploy-2026-05-06.json`
+- `qa_artifacts\release_validation\gumroad-listing-copy-update-2026-05-06.json`
+- `qa_artifacts\release_validation\github-funding-metadata-recheck-2026-05-06.json`
+- `qa_artifacts\release_validation\github-profile-pins-readonly-2026-05-06.json`
 - `COMMS\agents_state\publicacion-perfiles-observatorio.json`

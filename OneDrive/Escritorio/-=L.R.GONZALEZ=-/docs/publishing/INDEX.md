@@ -68,3 +68,7 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
 - `docs\publishing\EXTERNAL_RELATIONSHIP_OUTREACH_QUEUE_2026-05-06.md`
   migrates Discord, review, booktuber, testimonial, guest-post, podcast and
   cross-promo ideas into a gated outreach queue.
+- `docs\publishing\GRANT_APPLICATION_QUEUE_2026-05-06.md` migrates grant
+  drafts into a queued, no-submission state.
+- `docs\publishing\LEGACY_MARKETING_CHECKLIST_RECONCILIATION_2026-05-06.md`
+  migrates April SaaS/trailer checklists into legacy-marketing references.

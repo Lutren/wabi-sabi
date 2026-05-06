@@ -51,5 +51,9 @@ Resultados:
 
 ## Siguiente Cierre
 
+2026-05-06 recheck: `docs\product\flujocrm-current-gate-recheck-2026-05-06.md`
+confirma que source smoke, SQLite smoke, secret scan y manifest refresh pasan.
+El setup installer final sigue ausente; solo existe `dist\win-unpacked`.
+
 Ejecutar clean-machine QA con installer final y congelar hash. Solo despues se
 puede pasar de `FOUNDER_ACCESS` a piloto pago limitado.

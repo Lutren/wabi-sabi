@@ -9,6 +9,7 @@ These are product-level orientation docs. They do not replace source-folder READ
 | `brain-os-lite.md` | open tooling candidate |
 | `asistente-negocio.md` | commercial app |
 | `flujocrm.md` | commercial app |
+| `flujocrm-current-gate-recheck-2026-05-06.md` | current local QA/gate state for FlujoCRM |
 | `mini-office.md` | commercial/open-core candidate |
 | `argus-desktop.md` | desktop app candidate |
 | `wave-collapse.md` | commercial MVP 1 Document Collapse draft |

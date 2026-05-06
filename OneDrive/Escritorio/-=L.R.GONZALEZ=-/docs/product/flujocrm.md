@@ -6,7 +6,7 @@ Current path: `apps\commercial\flujocrm`
 
 Legacy/source-of-history path: `-=MEDIOEVO=-\-=LIBROS\claudio\products\crm`
 
-Status 2026-05-06: `FOUNDER_ACCESS_SQLITE_QA_PASS / CLEAN_MACHINE_QA_PENDING / PUBLICACION_BLOCK`
+Status 2026-05-06: `LOCAL_QA_PASS / CUSTOMER_INSTALLER_PENDING / CLEAN_MACHINE_QA_PENDING / PUBLICACION_BLOCK`
 
 Commercial positioning: standalone first, bundle later. The local source ZIP is
 an internal QA artifact, not a default customer deliverable.
@@ -28,6 +28,10 @@ Closed locally:
 - installer and unpacked app are `NotSigned`.
 - installed Electron builds use SQLite through IPC;
 - standalone HTML preview uses browser storage only as fallback.
+- 2026-05-06 recheck: current source smoke and SQLite storage smoke pass;
+  `release_manifests\flujocrm.json` refreshed with `file_count=20` and
+  `blocked_count=0`; source and manifest secret scans `count_reported=0`;
+  unpacked QA exe hash recorded; final NSIS setup installer is still missing.
 
 Detected scripts:
 
@@ -52,6 +56,7 @@ Before release:
 Current evidence:
 
 - `docs\product\flujocrm-lane-unification-2026-05-06.md`
+- `docs\product\flujocrm-current-gate-recheck-2026-05-06.md`
 - `docs\product\flujocrm-release-evidence-2026-05-02.md`
 - `docs\product\flujocrm-sqlite-storage-evidence-2026-05-02.md`
 - `docs\product\flujocrm-current-user-install-qa-2026-05-02.md`

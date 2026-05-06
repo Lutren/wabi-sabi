@@ -1294,13 +1294,13 @@ def write_atlas_docs(
 ) -> None:
     atlas_path = workspace_root / ATLAS_MAIN_REL
     atlas_path.parent.mkdir(parents=True, exist_ok=True)
-    atlas_path.write_text(render_atlas_main(records, extractions, retirements, deleted), encoding="utf-8")
+    write_text_if_semantic_changed(atlas_path, render_atlas_main(records, extractions, retirements, deleted))
     for node_id, node in CANON_NODES.items():
         if node_id == "main":
             continue
         path = workspace_root / node["path"]
         path.parent.mkdir(parents=True, exist_ok=True)
-        path.write_text(render_canon_node_doc(node_id, records, extractions), encoding="utf-8")
+        write_text_if_semantic_changed(path, render_canon_node_doc(node_id, records, extractions))
 
 
 def previous_witness_hash(log_path: Path) -> str | None:
@@ -1448,7 +1448,7 @@ def write_runtime_export(
         "extractions": [asdict(item) for item in (extractions or [])],
         "retirements": [asdict(item) for item in (retirements or [])],
     }
-    (runtime_dir / "source_intake_export.json").write_text(json.dumps(export, indent=2, ensure_ascii=False), encoding="utf-8")
+    write_json_if_semantic_changed(runtime_dir / "source_intake_export.json", export)
 
 
 def current_snapshot(records: list[FileRecord]) -> list[tuple[str, str, int]]:
@@ -1754,6 +1754,27 @@ def write_text_if_changed(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def stable_generated_text(text: str) -> str:
+    lines = []
+    for line in text.splitlines():
+        if line.startswith("Generated UTC: `"):
+            lines.append("Generated UTC: `<semantic-ignored>`")
+        else:
+            lines.append(line)
+    return "\n".join(lines)
+
+
+def write_text_if_semantic_changed(path: Path, text: str) -> None:
+    if path.exists():
+        try:
+            old_text = path.read_text(encoding="utf-8")
+            if stable_generated_text(old_text) == stable_generated_text(text):
+                return
+        except OSError:
+            pass
+    path.write_text(text, encoding="utf-8")
+
+
 def write_next_actions_report(workspace_root: Path, downloads_dir: Path) -> dict[str, object]:
     status = curador_status_snapshot(workspace_root, downloads_dir)
     pending = load_pending_snapshot(workspace_root)
@@ -1828,7 +1849,7 @@ def run_curador(
     index_records = load_file_records_from_sqlite(db_path) or records
     if write_index:
         index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
-        index_path.write_text(render_master_index(index_records, groups, deleted, db_path), encoding="utf-8")
+        write_text_if_semantic_changed(index_path, render_master_index(index_records, groups, deleted, db_path))
     write_runtime_export(runtime_dir, index_records, groups, deleted)
     result = {
         "generated_at_utc": utc_now(),
@@ -1908,7 +1929,7 @@ def run_absorb(
         index_records = load_file_records_from_sqlite(db_path)
         if write_index:
             index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
-            index_path.write_text(render_master_index(index_records, [], [], db_path), encoding="utf-8")
+            write_text_if_semantic_changed(index_path, render_master_index(index_records, [], [], db_path))
         if write_atlas:
             write_atlas_docs(workspace_root, index_records, [], [], [])
         write_runtime_export(runtime_dir, index_records, [], [])
@@ -1948,7 +1969,7 @@ def run_absorb(
     index_records = load_file_records_from_sqlite(db_path) or records
     if write_index:
         index_path = workspace_root / "docs" / "intake" / "CURADOR_MASTER_INDEX.md"
-        index_path.write_text(render_master_index(index_records, groups, deleted, db_path), encoding="utf-8")
+        write_text_if_semantic_changed(index_path, render_master_index(index_records, groups, deleted, db_path))
     if write_atlas:
         write_atlas_docs(workspace_root, index_records, extractions, retirements, deleted)
     write_runtime_export(runtime_dir, index_records, groups, deleted, extractions=extractions, retirements=retirements)

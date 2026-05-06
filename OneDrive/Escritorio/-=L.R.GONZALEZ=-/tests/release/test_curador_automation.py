@@ -191,6 +191,25 @@ def test_second_unchanged_run_is_noop_and_does_not_append_witness(tmp_path: Path
     assert second_lines == first_lines
 
 
+def test_generated_text_writer_ignores_timestamp_only_changes(tmp_path: Path) -> None:
+    target = tmp_path / "ATLAS_MAIN.md"
+    target.write_text("# Atlas\n\nGenerated UTC: `old`\n\n| fuentes | 1 |\n", encoding="utf-8")
+
+    curador.write_text_if_semantic_changed(
+        target,
+        "# Atlas\n\nGenerated UTC: `new`\n\n| fuentes | 1 |\n",
+    )
+
+    assert "Generated UTC: `old`" in target.read_text(encoding="utf-8")
+
+    curador.write_text_if_semantic_changed(
+        target,
+        "# Atlas\n\nGenerated UTC: `new`\n\n| fuentes | 2 |\n",
+    )
+
+    assert "| fuentes | 2 |" in target.read_text(encoding="utf-8")
+
+
 def test_write_next_actions_uses_curador_and_pending_snapshot(tmp_path: Path) -> None:
     workspace = tmp_path / "workspace"
     downloads = tmp_path / "Downloads"

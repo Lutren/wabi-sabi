@@ -61,6 +61,23 @@ equivalent wrapper is:
 python tools\pending_review.py --write --quiet
 ```
 
+## Autonomy Continuation Law
+
+Default behavior is continuous local execution, not repeated confirmation.
+
+Agents must continue without asking "yes, continue" for local, reversible,
+evidence-backed work: reading, tests, docs, adapters, local runtime artifacts,
+workpack generation and append-only COMMS messages with `ObservationEnvelope`.
+
+Stop, gate or ask only for high-blast-radius boundaries: external sending,
+publication, push, deploy, Gumroad/social actions, secrets/credentials, private
+game/TCG material, destructive delete/move/cleanup, model weights/aliases/training,
+strong claims, or a genuinely human preference that cannot be discovered from
+the repo.
+
+For Claudio, the living policy is `core/local_autonomy.py` and the law id is
+`LEY_CONTINUIDAD_AUTONOMA_LOCAL`.
+
 ## Required First Read
 
 At the start of every session:

@@ -830,3 +830,32 @@ Result:
 - Canonical archive copies retained: `5`.
 - Exact active references to redundant vault paths before deletion: `0`.
 - Secret scan on touched logs and evidence: `0` findings.
+
+## CEREBRO / DUAT / Brain OS / Observacionismo Systems Pass 2026-05-05
+
+This pass did not import raw sources, move files, delete files or publish. It
+created system-level fichas and claim-boundary maps for the already observed
+CEREBRO/PSI/Claudio/DUAT evidence.
+
+Artifacts:
+
+- `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\01_MAPA_SISTEMAS_CEREBRO_DUAT_BRAIN_OS_2026-05-05.md`
+- `-=MEDIOEVO=-\-=LIBROS\-=CEREBRO=-\-=PSI=-\canon\extensiones_formales\18_MATRIZ_MATEMATICA_OPERATIVA_2026-05-05.md`
+- `docs\intake\CEREBRO_DUAT_BRAIN_OS_OBSERVACIONISMO_FICHAS_2026-05-05.md`
+- `docs\developer\CEREBRO_DUAT_BRAIN_OS_OBSERVACIONISMO_HANDOFF_2026-05-05.md`
+
+Evidence:
+
+- Pending snapshot: `active_dedup=1718`, `claudio_open=70`.
+- Brain OS boot-audit: `event_id=107`, `decision=allow`, `state=listo`,
+  `missing_required=[]`.
+- DUAT OS orchestrator: `full_os_bootable=true`,
+  `publication_allowed=false`.
+- Focused tests: `12 passed`.
+
+Decision:
+
+- `KEEP`: maps/fichas/handoff.
+- `READY_LOCAL`: Brain OS, Observacion Engineering gates, DUAT kernel/ISO.
+- `REVIEW`: DUAT Living Matrix productization, local code-agent write lane.
+- `BLOCK`: publication, raw-source import, strong science/social claims.

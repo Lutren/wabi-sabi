@@ -1,62 +1,67 @@
 {
   "schema": "medioevo.curador_seto_next_actions.v1",
-  "generated_at_utc": "2026-05-05T19:08:24.883249+00:00",
+  "generated_at_utc": "2026-05-06T05:35:29.758597+00:00",
   "status": {
-    "generated_at_utc": "2026-05-05T19:08:24.820883+00:00",
+    "generated_at_utc": "2026-05-06T05:35:29.754829+00:00",
     "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
     "downloads_dir": "C:\\Users\\L-Tyr\\Downloads",
     "db_path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\runtime\\curador_seto\\curador_index.sqlite",
     "master_index": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\docs\\intake\\CURADOR_MASTER_INDEX.md",
     "witness_log": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\witness_log\\curador_seto_witnesslog.jsonl",
-    "witness_event_hash": "07215e235ac0fe8c4c497f06feaee745287ad97ace0c2d493b3a4115a48f007e",
-    "current_downloads_files": 160,
+    "witness_event_hash": "1d8e2806f209fb51abf8ad8da094fd050c1a20726454086306c1244131bc54d7",
+    "current_downloads_files": 0,
     "current_downloads_duplicate_groups": 0,
     "sqlite_table_counts": {
-      "files": 177,
-      "fichas": 177,
-      "duplicates": 17,
+      "files": 186,
+      "fichas": 186,
+      "duplicates": 18,
       "duplicate_groups": 0,
-      "synapses": 160,
-      "decisions": 337,
-      "witness_events": 2
+      "synapses": 1,
+      "decisions": 509,
+      "witness_events": 10,
+      "canon_nodes": 9,
+      "extractions": 1,
+      "retirements": 1,
+      "atlas_synapses": 1
     },
     "sqlite_status_counts": {
-      "BORRADO_DUPLICADO": 17,
-      "REGISTRADO": 160
+      "ARCHIVO_FRIO": 167,
+      "BASURA_REGENERABLE_BORRADA": 1,
+      "BORRADO_DUPLICADO": 18
     },
     "sqlite_lane_counts": {
       "assets-review": 35,
-      "cleanup": 51,
+      "cleanup": 52,
       "duat-lab": 8,
       "local-agent": 16,
-      "research-boundary": 67
+      "research-boundary": 75
     }
   },
   "pending": {
     "available": true,
     "path": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\qa_artifacts\\pending\\pending_review_latest.json",
-    "generated_at": "2026-05-05T19:08:12+00:00",
-    "active_dedup_open": 452,
+    "generated_at": "2026-05-06T03:07:44+00:00",
+    "active_dedup_open": 389,
     "active_by_blocker": {
-      "external_or_gated": 262,
-      "host_or_heavy": 55,
-      "legal_or_human": 126,
-      "private_boundary": 9
+      "external_or_gated": 263,
+      "host_or_heavy": 52,
+      "legal_or_human": 64,
+      "private_boundary": 10
     },
     "active_by_lane": {
-      "cleanup_migration": 1,
-      "commercial": 79,
-      "general": 155,
+      "commercial": 74,
+      "general": 100,
       "open_source": 2,
-      "private_rpg": 3,
-      "runtime_claudio": 192,
+      "private_rpg": 4,
+      "research_claims": 1,
+      "runtime_claudio": 188,
       "wave_fc": 3,
       "website_marketing": 17
     },
-    "claudio_dedup_open": 72,
+    "claudio_dedup_open": 69,
     "claudio_by_blocker": {
       "external_or_gated": 43,
-      "host_or_heavy": 18,
+      "host_or_heavy": 15,
       "legal_or_human": 6,
       "private_boundary": 5
     }
@@ -67,7 +72,7 @@
       "lane": "curador_seto",
       "action_gate": "APPROVE_LOCAL",
       "title": "Mantener CuradorSETO-Downloads-Intake activo",
-      "reason": "Downloads tiene 160 archivos vivos y 0 grupos duplicados exactos activos.",
+      "reason": "Downloads tiene 0 archivos vivos y 0 grupos duplicados exactos activos.",
       "next_step": "Usar el SQLite y CURADOR_MASTER_INDEX como verdad operativa de Downloads."
     },
     {

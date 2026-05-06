@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import sqlite3
+import subprocess
 import sys
 from pathlib import Path
 
@@ -204,6 +205,43 @@ def test_write_next_actions_uses_curador_and_pending_snapshot(tmp_path: Path) ->
     assert parsed["status"]["current_downloads_files"] == 1
     assert parsed["pending"]["active_by_blocker"]["local_candidate"] == 4
     assert parsed["next_actions"][0]["priority"] == "P0"
+
+
+def test_next_actions_cli_alias_writes_report(tmp_path: Path) -> None:
+    workspace = tmp_path / "workspace"
+    downloads = tmp_path / "Downloads"
+    downloads.mkdir(parents=True)
+    workspace.mkdir()
+    (workspace / "DELETED_OR_ARCHIVED.md").write_text("# DELETED_OR_ARCHIVED\n", encoding="utf-8")
+    (downloads / "unique.txt").write_text("unique", encoding="utf-8")
+
+    curador.run_curador(
+        workspace_root=workspace,
+        downloads_dir=downloads,
+        recursive=True,
+        write_index=True,
+        write_fichas_flag=True,
+        apply_exact_download_duplicates=True,
+    )
+    result = subprocess.run(
+        [
+            sys.executable,
+            str(ROOT / "tools" / "release" / "curador_automation.py"),
+            "next-actions",
+            "--workspace-root",
+            str(workspace),
+            "--downloads-dir",
+            str(downloads),
+        ],
+        text=True,
+        capture_output=True,
+        check=True,
+    )
+    payload = json.loads(result.stdout)
+
+    assert Path(payload["report_path"]).exists()
+    assert Path(payload["json_path"]).exists()
+    assert payload["next_actions"][0]["priority"] == "P0"
 
 
 def test_absorb_archives_unique_sources_and_writes_atlas(tmp_path: Path) -> None:

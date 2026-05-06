@@ -2050,6 +2050,9 @@ def main() -> int:
     status.add_argument("--downloads-dir", default=str(DEFAULT_DOWNLOADS))
     status.add_argument("--write-next-actions", action="store_true")
     status.add_argument("--json", action="store_true", help="Accepted for explicit JSON status output; JSON is the default.")
+    next_actions = sub.add_parser("next-actions")
+    next_actions.add_argument("--workspace-root", default=str(ROOT))
+    next_actions.add_argument("--downloads-dir", default=str(DEFAULT_DOWNLOADS))
     args = parser.parse_args()
 
     if args.command == "install-task":
@@ -2065,6 +2068,11 @@ def main() -> int:
                 "status": curador_status_snapshot(Path(args.workspace_root).resolve(), Path(args.downloads_dir).resolve()),
                 "pending": load_pending_snapshot(Path(args.workspace_root).resolve()),
             }
+        print(json.dumps(data, indent=2, ensure_ascii=False))
+        return 0
+
+    if args.command == "next-actions":
+        data = write_next_actions_report(Path(args.workspace_root).resolve(), Path(args.downloads_dir).resolve())
         print(json.dumps(data, indent=2, ensure_ascii=False))
         return 0
 

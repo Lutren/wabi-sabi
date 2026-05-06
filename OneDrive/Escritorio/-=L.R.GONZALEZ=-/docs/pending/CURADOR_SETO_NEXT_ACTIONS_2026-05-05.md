@@ -8,37 +8,42 @@ Estado operativo para decidir el siguiente loop sin reescanear todo el sistema.
 
 | metric | value |
 |---|---:|
-| archivos vivos actuales | 160 |
+| archivos vivos actuales | 0 |
 | duplicados exactos activos | 0 |
-| witness_event_hash | `07215e235ac0fe8c4c497f06feaee745287ad97ace0c2d493b3a4115a48f007e` |
+| witness_event_hash | `1d8e2806f209fb51abf8ad8da094fd050c1a20726454086306c1244131bc54d7` |
 
 ## SQLite
 
 | table | rows |
 |---|---:|
-| `decisions` | 337 |
+| `atlas_synapses` | 1 |
+| `canon_nodes` | 9 |
+| `decisions` | 509 |
 | `duplicate_groups` | 0 |
-| `duplicates` | 17 |
-| `fichas` | 177 |
-| `files` | 177 |
-| `synapses` | 160 |
-| `witness_events` | 2 |
+| `duplicates` | 18 |
+| `extractions` | 1 |
+| `fichas` | 186 |
+| `files` | 186 |
+| `retirements` | 1 |
+| `synapses` | 1 |
+| `witness_events` | 10 |
 
 ## Status historico
 
 | status | rows |
 |---|---:|
-| `BORRADO_DUPLICADO` | 17 |
-| `REGISTRADO` | 160 |
+| `ARCHIVO_FRIO` | 167 |
+| `BASURA_REGENERABLE_BORRADA` | 1 |
+| `BORRADO_DUPLICADO` | 18 |
 
 ## Pendientes
 
 | blocker | dedup_count |
 |---|---:|
-| `external_or_gated` | 262 |
-| `host_or_heavy` | 55 |
-| `legal_or_human` | 126 |
-| `private_boundary` | 9 |
+| `external_or_gated` | 263 |
+| `host_or_heavy` | 52 |
+| `legal_or_human` | 64 |
+| `private_boundary` | 10 |
 
 ## Cola recomendada
 

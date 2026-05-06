@@ -1,0 +1,13 @@
+LEGAL_REVIEW_REQUIRED
+
+There is no single license for this entire workspace.
+
+This workspace contains multiple layers with different intended visibility:
+
+- OPEN / free developer tools: license must be chosen per package before publication.
+- COMMERCIAL apps and bundles: proprietary unless an explicit product license says otherwise.
+- BOOKS / CANON / EDITORIAL: all rights reserved unless specific samples are approved.
+- PRIVATE GAME / TCG: proprietary, private, not open source.
+- VENDOR / THIRD-PARTY code: remains under its upstream license and must not be relicensed here.
+
+Do not publish this workspace as a whole under this file.

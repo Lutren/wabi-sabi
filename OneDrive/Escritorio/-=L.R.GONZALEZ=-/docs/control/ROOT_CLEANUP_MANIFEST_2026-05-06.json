@@ -1,0 +1,499 @@
+{
+  "schema": "medioevo.root_cleanup_manifest.v1",
+  "generated_at_local": "2026-05-05T21:04:49",
+  "policy": "move root-level generated registers into canonical docs lanes; no deletion",
+  "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+  "count": 49,
+  "records": [
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "ANALYTICS_PLAN.md",
+      "destination": "docs/business/ANALYTICS_PLAN.md",
+      "lane": "business",
+      "sha256": "f0ea3c78159535b494551632f6fd43c3c5f54cff1be8a028394789faefddfb2a",
+      "bytes": 479,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "BUSINESS_MODEL.md",
+      "destination": "docs/business/BUSINESS_MODEL.md",
+      "lane": "business",
+      "sha256": "52955364b51b414ff068bc361fba2f4750392906e15cf6d9d86244409251fd2b",
+      "bytes": 596,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "BUYMEACOFFEE_PLAN.md",
+      "destination": "docs/business/BUYMEACOFFEE_PLAN.md",
+      "lane": "business",
+      "sha256": "b853ce736ff69cb4d7b0815b4c344617916d24395b9434ffe22283612b474255",
+      "bytes": 1293,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "BUYMEACOFFEE_TIERS.md",
+      "destination": "docs/business/BUYMEACOFFEE_TIERS.md",
+      "lane": "business",
+      "sha256": "e5506573476435229ea3113bdb1dc0bbe30043deed5586f2bb20b285339da7aa",
+      "bytes": 508,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "COMMERCIAL_STRATEGY.md",
+      "destination": "docs/business/COMMERCIAL_STRATEGY.md",
+      "lane": "business",
+      "sha256": "51f7da7a837d5fc4a33fb876e132783f643c05e5815949409fb594bb25dbd268",
+      "bytes": 5338,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "CUSTOMER_SUPPORT_PLAN.md",
+      "destination": "docs/business/CUSTOMER_SUPPORT_PLAN.md",
+      "lane": "business",
+      "sha256": "ea3b2c1e9741bad2a10b5a692934d640d7bee0d293e48e45ef2edc58b8e51a35",
+      "bytes": 1350,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "DO_NOT_GIVE_AWAY.md",
+      "destination": "docs/business/DO_NOT_GIVE_AWAY.md",
+      "lane": "business",
+      "sha256": "4a48a408d9ef060dc9736333c42a3d95944ec62851efc1c3c9a55da8280c678a",
+      "bytes": 370,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "EMAIL_SEQUENCE.md",
+      "destination": "docs/business/EMAIL_SEQUENCE.md",
+      "lane": "business",
+      "sha256": "a19bf1168154de127c4f0d8fdfcfa5dd0194bdd71c9ae9521af9fd47e87da494",
+      "bytes": 527,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "GUMROAD_CATALOG.md",
+      "destination": "docs/business/GUMROAD_CATALOG.md",
+      "lane": "business",
+      "sha256": "457787f78af04175b352e40460679dc262e2057fa419d918171596a4d47b34c8",
+      "bytes": 7143,
+      "reason": "root cleanup: moved out of the main workspace path; trailing whitespace normalized after move to satisfy git diff check.",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "GUMROAD_PRODUCTS.md",
+      "destination": "docs/business/GUMROAD_PRODUCTS.md",
+      "lane": "business",
+      "sha256": "dd1756e44b45a369b42e181e8d3b6ec6a8a363f638367d6fa2e67f5bce114c8b",
+      "bytes": 4135,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "LANDING_FUNNEL.md",
+      "destination": "docs/business/LANDING_FUNNEL.md",
+      "lane": "business",
+      "sha256": "3dd946bce83eada69974cd7b3fe8a73dc3575eb261ec6600f5a6d2efddbf5eff",
+      "bytes": 355,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "LAUNCH_COPY.md",
+      "destination": "docs/business/LAUNCH_COPY.md",
+      "lane": "business",
+      "sha256": "83f5851a9d2c5aa6ed1629edbc15274e60627293c3eb6af06d388b5605c0d0be",
+      "bytes": 559,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "OPEN_CORE_STRATEGY.md",
+      "destination": "docs/business/OPEN_CORE_STRATEGY.md",
+      "lane": "business",
+      "sha256": "be16100a5472d6a87674e6a4986ec02796ad837fcb792395f1605fb4ff2046a7",
+      "bytes": 430,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "OPEN_SOURCE_STRATEGY.md",
+      "destination": "docs/business/OPEN_SOURCE_STRATEGY.md",
+      "lane": "business",
+      "sha256": "55d1b62fd233315eb7aa79c92e3c4d18b5882176c34b917e094b9fb10808fb3c",
+      "bytes": 5659,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "PRICING.md",
+      "destination": "docs/business/PRICING.md",
+      "lane": "business",
+      "sha256": "d564c332f80362be5cb1cfb4f0a9af96e2c568fc28551cb11b44937f04164ba6",
+      "bytes": 714,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "PRODUCT_CATALOG.md",
+      "destination": "docs/business/PRODUCT_CATALOG.md",
+      "lane": "business",
+      "sha256": "59fce7e1ebe3b40b115e0d8c2af364e13a4162d1ab5b0439217c65d9aef351a3",
+      "bytes": 4817,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "PUBLISHING_PLAN.md",
+      "destination": "docs/business/PUBLISHING_PLAN.md",
+      "lane": "business",
+      "sha256": "0a4f141ac68dc2752d5d3f0cd02e6a7519a77dcc63bba5034a660b1dbce87478",
+      "bytes": 11104,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "WEBSITE_LANDING_COPY.md",
+      "destination": "docs/business/WEBSITE_LANDING_COPY.md",
+      "lane": "business",
+      "sha256": "4314a067af3b9fa00f255b96a79df7178dbf7e03f986b487e0cce1e0ba5f5b42",
+      "bytes": 1026,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "PRIVACY_POLICY_DRAFT.md",
+      "destination": "docs/legal/PRIVACY_POLICY_DRAFT.md",
+      "lane": "legal",
+      "sha256": "82cb1e03d7ec684bd4a2b713dcff1425c6f46687e1b5591a06c7404557c2590a",
+      "bytes": 597,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "REFUND_POLICY_DRAFT.md",
+      "destination": "docs/legal/REFUND_POLICY_DRAFT.md",
+      "lane": "legal",
+      "sha256": "25f078e75466dabc2d5707c6a794d3f94abf536fe58cbe160c732dad2a7c6725",
+      "bytes": 576,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "TERMS_DRAFT.md",
+      "destination": "docs/legal/TERMS_DRAFT.md",
+      "lane": "legal",
+      "sha256": "39523f2032bacc93fab69e0d939cc562b7abc0e3c097be0e5a42fa1f390d56f1",
+      "bytes": 617,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "APP_STORE_READINESS.md",
+      "destination": "docs/release/APP_STORE_READINESS.md",
+      "lane": "release",
+      "sha256": "09f4d9054008db2699d6d84bd5e428987c52b95dd77491cdf7c9436823bd1497",
+      "bytes": 580,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "BUGS_FOUND.md",
+      "destination": "docs/release/BUGS_FOUND.md",
+      "lane": "release",
+      "sha256": "56ff69e11286472427f3d3fd0c41a3e30a8f8d566fbad52174269b69796fdbce",
+      "bytes": 1517,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "BUILD.md",
+      "destination": "docs/release/BUILD.md",
+      "lane": "release",
+      "sha256": "d74d1b339b6986ba5bf4de8701cb496a7ea529ef181c7556c5708ba7586a70b0",
+      "bytes": 821,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "CHANGELOG.md",
+      "destination": "docs/release/CHANGELOG.md",
+      "lane": "release",
+      "sha256": "e1f4baefcac83178927e0f2cd7d857d8c057e6dbd89961983e14c0e146843515",
+      "bytes": 1334,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "DEBUG_REPORT.md",
+      "destination": "docs/release/DEBUG_REPORT.md",
+      "lane": "release",
+      "sha256": "31aa806e981ee41697bccfe551b41bb9e5d82081b975e13bed2de9b9408ec7da",
+      "bytes": 1295,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "FINAL_RELEASE_PREP_SUMMARY.md",
+      "destination": "docs/release/FINAL_RELEASE_PREP_SUMMARY.md",
+      "lane": "release",
+      "sha256": "67137e8b7e7de1229d849b9f5556727c7fe2d93364970eab6665bf1f305bfb6e",
+      "bytes": 8114,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "FIX_PLAN.md",
+      "destination": "docs/release/FIX_PLAN.md",
+      "lane": "release",
+      "sha256": "98656ee486d518d42e70da2beac83a934fc49d59ee6c2cdde76d3f313e18b337",
+      "bytes": 1182,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "INSTALL.md",
+      "destination": "docs/release/INSTALL.md",
+      "lane": "release",
+      "sha256": "b954909c5bd601165f96a286de7505ead11e4e0a28bb4a82129c937a190a3662",
+      "bytes": 833,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "MANUAL_QA_CHECKLIST.md",
+      "destination": "docs/release/MANUAL_QA_CHECKLIST.md",
+      "lane": "release",
+      "sha256": "080e845d89a3b7fe4043255803dd4ffc572256666f5337192595956b7461a61c",
+      "bytes": 530,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "QA_RESULTS.md",
+      "destination": "docs/release/QA_RESULTS.md",
+      "lane": "release",
+      "sha256": "0388afdaa895a675ac747bfe0d3bbb17e5801af52478730442eb1c3158197116",
+      "bytes": 18915,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "RELEASE_CHECKLIST.md",
+      "destination": "docs/release/RELEASE_CHECKLIST.md",
+      "lane": "release",
+      "sha256": "15d8addabd7c39232286aa77879a26c6f4d0117a9a54d3116b6e01ba857f3f6f",
+      "bytes": 9378,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "RELEASE_EVIDENCE.md",
+      "destination": "docs/release/RELEASE_EVIDENCE.md",
+      "lane": "release",
+      "sha256": "34cba2728b7b5da05adeef72da508ac5d260704e79669ebd76774142f1ed5380",
+      "bytes": 10729,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "RELEASE_NOTES_DRAFT_2026-04-30.md",
+      "destination": "docs/release/RELEASE_NOTES_DRAFT_2026-04-30.md",
+      "lane": "release",
+      "sha256": "9ada8bdcab091f5d81351d7e78ed70aec8e57a34df7befb666cae491b9e731c6",
+      "bytes": 1190,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "RELEASE_READINESS_MATRIX.md",
+      "destination": "docs/release/RELEASE_READINESS_MATRIX.md",
+      "lane": "release",
+      "sha256": "b94a119a7d55019b4cc2c521cfa167af6335316be679f8c41661f91408998ee3",
+      "bytes": 2021,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "RELEASE_READINESS_SCORE.md",
+      "destination": "docs/release/RELEASE_READINESS_SCORE.md",
+      "lane": "release",
+      "sha256": "e30a424edaff5f89124d5d8cdca624c5531c58eec2fdf47f76b2084d7b3278be",
+      "bytes": 11076,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "SMOKE_TESTS.md",
+      "destination": "docs/release/SMOKE_TESTS.md",
+      "lane": "release",
+      "sha256": "250643d3c10875b7d79ffe8e9da42e8ae76ac03c8dabf0904761ec6cc1b17643",
+      "bytes": 578,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "TESTING_DEBUG_BENCHMARKS_FINAL.md",
+      "destination": "docs/release/TESTING_DEBUG_BENCHMARKS_FINAL.md",
+      "lane": "release",
+      "sha256": "8b7b84a269b3ad36bafafebffc38fca1f48b3dd064cce419f90781cd67f88837",
+      "bytes": 15743,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "ARCHIVE_INDEX.md",
+      "destination": "docs/control/ARCHIVE_INDEX.md",
+      "lane": "control",
+      "sha256": "47665bdf6f56e2e41e8eb296f8ecfd4b3e68c61b2f08b673126c660d9ca918ca",
+      "bytes": 893,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "AUDIT_REPO_TREE.md",
+      "destination": "docs/control/AUDIT_REPO_TREE.md",
+      "lane": "control",
+      "sha256": "868e9504bf6ddf2bf9712ca8cb6ab8b8390f2cb1f05fdb10b0f626cc629e2271",
+      "bytes": 8189,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "CLAIMS_BOUNDARY.md",
+      "destination": "docs/control/CLAIMS_BOUNDARY.md",
+      "lane": "control",
+      "sha256": "73db4352e85b37a17f326c8b4372dcb740666dfa99d62895632f8f2b3cdfcb37",
+      "bytes": 4864,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "COMMIT_PROTOCOL.md",
+      "destination": "docs/control/COMMIT_PROTOCOL.md",
+      "lane": "control",
+      "sha256": "a5b589b4084e96c4d1d536f32ac5789e29993563f7d2d88b6573a664bb8f5a30",
+      "bytes": 2546,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "MASTER_PLAN_STATUS_2026-05-01.md",
+      "destination": "docs/control/MASTER_PLAN_STATUS_2026-05-01.md",
+      "lane": "control",
+      "sha256": "a49ed9350449c5dea824ea7a6e92a0fc54bbc029ecb0f43c15865c5ea9acd47e",
+      "bytes": 19213,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "MIGRATION_PLAN.md",
+      "destination": "docs/control/MIGRATION_PLAN.md",
+      "lane": "control",
+      "sha256": "f8bd4a52e3ec9094ac75803268b8565b6b4790420a7dbe8b94a0e571197022a8",
+      "bytes": 1462,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "PORTFOLIO_EXECUTION_LEDGER.md",
+      "destination": "docs/control/PORTFOLIO_EXECUTION_LEDGER.md",
+      "lane": "control",
+      "sha256": "da22d04c9941dfd4242efe6a8883425d609b7a35eaeb7181679d317a19626122",
+      "bytes": 40391,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "TREE_PLAN.md",
+      "destination": "docs/control/TREE_PLAN.md",
+      "lane": "control",
+      "sha256": "28132354ad06061188e7e0480f34266b0b10c84f0a84f8d169018033929b3747",
+      "bytes": 2549,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "SECRET_SCAN_REPORT.md",
+      "destination": "docs/security/SECRET_SCAN_REPORT.md",
+      "lane": "security",
+      "sha256": "70dbce558ac4b6e229913b9d5ec741dbded851ffe0609c8a1f9c1f07bf7771b9",
+      "bytes": 4848,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "SECURITY_CHECKLIST.md",
+      "destination": "docs/security/SECURITY_CHECKLIST.md",
+      "lane": "security",
+      "sha256": "f02affb0cf26e0865967cd020ff8d824dc8176fffc85be2217ec87cb44e30f98",
+      "bytes": 1235,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    },
+    {
+      "status": "MOVED_ROOT_REGISTER",
+      "source": "PRIVATE_GAME_BOUNDARY.md",
+      "destination": "docs/private/PRIVATE_GAME_BOUNDARY.md",
+      "lane": "private",
+      "sha256": "462356a90407c31f92e242599ff8905e5787df012369b9687f9ea4c11ef1df28",
+      "bytes": 1662,
+      "reason": "root cleanup: keep source documented but move it out of the main workspace path",
+      "reversibility": "Move destination back to source path; hash recorded before move."
+    }
+  ]
+}

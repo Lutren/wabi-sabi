@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.one_universe.unifier.v1",
-  "generated_at_utc": "2026-05-06T02:53:26.809734+00:00",
+  "generated_at_utc": "2026-05-06T03:06:29.862907+00:00",
   "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "status": "MANIFEST_ONLY_NO_MOVE_NO_DELETE",
   "principle": "one universe, many lanes; one canonical map, no orphan trees",
@@ -82,51 +82,51 @@
     ]
   },
   "summary": {
-    "total_paths": 323,
+    "total_paths": 268,
     "by_lane": {
-      "control": 5,
+      "control": 4,
       "apps": 59,
-      "packages": 26,
-      "tests": 1,
-      "tools": 19,
+      "docs": 100,
+      "qa_evidence": 79,
+      "runtime_state": 2,
+      "tools": 4,
       "medioevo_core": 1,
       "agent_sessions": 1,
       "github_ci": 1,
-      "root_registers": 51,
+      "root_registers": 4,
       "licenses": 1,
       "products_staging": 1,
       "archive": 2,
       "books": 1,
-      "docs": 73,
       "private_game": 1,
       "hackathons": 1,
+      "packages": 3,
       "publish_staging": 1,
-      "qa_evidence": 76,
       "research": 1,
       "website": 1
     },
     "by_decision": {
-      "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW": 261,
-      "BLOCK_SECRET_OR_ACCOUNT_SURFACE": 10,
+      "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW": 254,
+      "BLOCK_SECRET_OR_ACCOUNT_SURFACE": 6,
       "KEEP_AS_CORE_SOURCE_UNTIL_EXTRACTED_TO_ROOT_LANES": 1,
       "KEEP_LOCAL_AGENT_SESSION_HISTORY_NOT_MAIN_CANON": 1,
-      "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX": 48,
+      "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX": 4,
       "KEEP_PRIVATE_BOUNDARY_NOT_PUBLIC_CANON": 1,
       "ARCHIVE_OR_REFERENCE_VENDOR_NOT_MAIN_UNIVERSE": 1
     },
     "by_gate": {
-      "REVIEW": 311,
-      "BLOCK": 12
+      "REVIEW": 260,
+      "BLOCK": 8
     },
     "by_git_status": {
-      " M": 68,
-      "??": 255
+      " M": 62,
+      "??": 206
     },
     "flag_counts": {
-      "tracked_modified": 68,
-      "external_action_surface": 25,
-      "secret_or_credential_name": 10,
-      "untracked": 255,
+      "tracked_modified": 62,
+      "external_action_surface": 20,
+      "secret_or_credential_name": 6,
+      "untracked": 206,
       "agent_session_history": 1,
       "private_boundary": 1,
       "vendor_or_imported_tree": 1
@@ -144,6 +144,18 @@
         "tracked_modified"
       ],
       "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/AGENTS.md"
+    },
+    {
+      "path": "DELETED_OR_ARCHIVED.md",
+      "git_status": " M",
+      "lane": "control",
+      "matched_prefix": "DELETED_OR_ARCHIVED.md",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "tracked_modified"
+      ],
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/DELETED_OR_ARCHIVED.md"
     },
     {
       "path": "SOURCE_INTAKE_REGISTER.md",
@@ -669,268 +681,196 @@
       "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/tools/publicar_web.py"
     },
     {
-      "path": "packages/open-dev/gemma-observacionismo-cleanup/README.md",
+      "path": "docs/canon/atlas/assets.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/gemma-observacionismo-cleanup/README.md"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/assets.md"
     },
     {
-      "path": "packages/open-dev/gemma-observacionismo-cleanup/pyproject.toml",
+      "path": "docs/canon/atlas/claudio-wabisabi.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/gemma-observacionismo-cleanup/pyproject.toml"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/claudio-wabisabi.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/.gitignore",
+      "path": "docs/canon/atlas/curaduria.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/.gitignore"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/curaduria.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/README.md",
+      "path": "docs/canon/atlas/privado-bloqueado.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/README.md"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/privado-bloqueado.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/obsai_core/__init__.py",
+      "path": "docs/canon/atlas/productos.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/__init__.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/productos.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/obsai_core/cli.py",
+      "path": "docs/canon/atlas/psi-observacionismo.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/cli.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/psi-observacionismo.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/obsai_core/gate.py",
+      "path": "docs/canon/atlas/publicacion.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/gate.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/publicacion.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/pyproject.toml",
+      "path": "docs/canon/atlas/seguridad.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/pyproject.toml"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/atlas/seguridad.md"
     },
     {
-      "path": "packages/open-dev/obsai-core/tests/test_obsai_core.py",
+      "path": "docs/intake/ATLAS_MAIN.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/tests/test_obsai_core.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/ATLAS_MAIN.md"
     },
     {
-      "path": "packages/open-dev/observacionismo-gate/pyproject.toml",
+      "path": "docs/intake/CURADOR_MASTER_INDEX.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/observacionismo-gate/pyproject.toml"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/CURADOR_MASTER_INDEX.md"
     },
     {
-      "path": "packages/open-dev/residueos/README.md",
+      "path": "docs/intake/ONE_UNIVERSE_CONTROL_2026-05-06.md",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "docs",
+      "matched_prefix": "docs/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/residueos/README.md"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/ONE_UNIVERSE_CONTROL_2026-05-06.md"
     },
     {
-      "path": "packages/open-dev/residueos/examples/sample_action.json",
+      "path": "qa_artifacts/release_validation/curador-automation-downloads-absorb-result-2026-05-05.json",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "qa_evidence",
+      "matched_prefix": "qa_artifacts/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/residueos/examples/sample_action.json"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/release_validation/curador-automation-downloads-absorb-result-2026-05-05.json"
     },
     {
-      "path": "packages/open-dev/residueos/pyproject.toml",
+      "path": "qa_artifacts/release_validation/one-universe-manifest-2026-05-06.json",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "qa_evidence",
+      "matched_prefix": "qa_artifacts/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/residueos/pyproject.toml"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/release_validation/one-universe-manifest-2026-05-06.json"
     },
     {
-      "path": "packages/open-dev/residueos/residueos/gate.py",
+      "path": "qa_artifacts/witness_log/curador_seto_witnesslog.jsonl",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "qa_evidence",
+      "matched_prefix": "qa_artifacts/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/residueos/residueos/gate.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/qa_artifacts/witness_log/curador_seto_witnesslog.jsonl"
     },
     {
-      "path": "packages/open-dev/residueos/residueos/store.py",
+      "path": "runtime/curador_seto/curador_index.sqlite",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "runtime_state",
+      "matched_prefix": "runtime/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/residueos/residueos/store.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/runtime/curador_seto/curador_index.sqlite"
     },
     {
-      "path": "packages/open-dev/residueos/tests/test_residueos.py",
+      "path": "runtime/curador_seto/source_intake_export.json",
       "git_status": " M",
-      "lane": "packages",
-      "matched_prefix": "packages/",
+      "lane": "runtime_state",
+      "matched_prefix": "runtime/",
       "action_gate": "REVIEW",
       "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
       "flags": [
         "tracked_modified"
       ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/residueos/tests/test_residueos.py"
-    },
-    {
-      "path": "tests/release/test_pending_review_classification.py",
-      "git_status": " M",
-      "lane": "tests",
-      "matched_prefix": "tests/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tests/release/test_pending_review_classification.py"
-    },
-    {
-      "path": "tools/release/_common.py",
-      "git_status": " M",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/_common.py"
-    },
-    {
-      "path": "tools/release/audit_repo.py",
-      "git_status": " M",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/audit_repo.py"
-    },
-    {
-      "path": "tools/release/find_duplicates.py",
-      "git_status": " M",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/find_duplicates.py"
-    },
-    {
-      "path": "tools/release/pending_review.py",
-      "git_status": " M",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/pending_review.py"
-    },
-    {
-      "path": "tools/release/run_tests.py",
-      "git_status": " M",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/run_tests.py"
+      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/runtime/curador_seto/source_intake_export.json"
     },
     {
       "path": "tools/release/scan_secrets.py",
@@ -944,18 +884,6 @@
         "tracked_modified"
       ],
       "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/scan_secrets.py"
-    },
-    {
-      "path": "tools/release/source_intake.py",
-      "git_status": " M",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "tracked_modified"
-      ],
-      "raw": " M OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/source_intake.py"
     },
     {
       "path": "-=MEDIOEVO=-/",
@@ -995,162 +923,6 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/.github/"
     },
     {
-      "path": "ANALYTICS_PLAN.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/ANALYTICS_PLAN.md"
-    },
-    {
-      "path": "APP_STORE_READINESS.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/APP_STORE_READINESS.md"
-    },
-    {
-      "path": "ARCHIVE_INDEX.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/ARCHIVE_INDEX.md"
-    },
-    {
-      "path": "AUDIT_REPO_TREE.md",
-      "git_status": "??",
-      "lane": "control",
-      "matched_prefix": "AUDIT_REPO_TREE.md",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/AUDIT_REPO_TREE.md"
-    },
-    {
-      "path": "BUGS_FOUND.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/BUGS_FOUND.md"
-    },
-    {
-      "path": "BUILD.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/BUILD.md"
-    },
-    {
-      "path": "BUSINESS_MODEL.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/BUSINESS_MODEL.md"
-    },
-    {
-      "path": "BUYMEACOFFEE_PLAN.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/BUYMEACOFFEE_PLAN.md"
-    },
-    {
-      "path": "BUYMEACOFFEE_TIERS.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/BUYMEACOFFEE_TIERS.md"
-    },
-    {
-      "path": "CHANGELOG.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/CHANGELOG.md"
-    },
-    {
-      "path": "CLAIMS_BOUNDARY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/CLAIMS_BOUNDARY.md"
-    },
-    {
-      "path": "COMMERCIAL_STRATEGY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMERCIAL_STRATEGY.md"
-    },
-    {
-      "path": "COMMIT_PROTOCOL.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/COMMIT_PROTOCOL.md"
-    },
-    {
       "path": "CONTRIBUTING.md",
       "git_status": "??",
       "lane": "root_registers",
@@ -1161,142 +933,6 @@
         "untracked"
       ],
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/CONTRIBUTING.md"
-    },
-    {
-      "path": "CUSTOMER_SUPPORT_PLAN.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/CUSTOMER_SUPPORT_PLAN.md"
-    },
-    {
-      "path": "DEBUG_REPORT.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/DEBUG_REPORT.md"
-    },
-    {
-      "path": "DO_NOT_GIVE_AWAY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/DO_NOT_GIVE_AWAY.md"
-    },
-    {
-      "path": "EMAIL_SEQUENCE.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/EMAIL_SEQUENCE.md"
-    },
-    {
-      "path": "FINAL_RELEASE_PREP_SUMMARY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/FINAL_RELEASE_PREP_SUMMARY.md"
-    },
-    {
-      "path": "FIX_PLAN.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/FIX_PLAN.md"
-    },
-    {
-      "path": "GUMROAD_CATALOG.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "BLOCK",
-      "decision": "BLOCK_SECRET_OR_ACCOUNT_SURFACE",
-      "flags": [
-        "secret_or_credential_name",
-        "external_action_surface",
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/GUMROAD_CATALOG.md"
-    },
-    {
-      "path": "GUMROAD_PRODUCTS.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "BLOCK",
-      "decision": "BLOCK_SECRET_OR_ACCOUNT_SURFACE",
-      "flags": [
-        "secret_or_credential_name",
-        "external_action_surface",
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/GUMROAD_PRODUCTS.md"
-    },
-    {
-      "path": "INSTALL.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/INSTALL.md"
-    },
-    {
-      "path": "LANDING_FUNNEL.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/LANDING_FUNNEL.md"
-    },
-    {
-      "path": "LAUNCH_COPY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/LAUNCH_COPY.md"
     },
     {
       "path": "LICENSE",
@@ -1323,114 +959,6 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/LICENSES/"
     },
     {
-      "path": "MANUAL_QA_CHECKLIST.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/MANUAL_QA_CHECKLIST.md"
-    },
-    {
-      "path": "MASTER_PLAN_STATUS_2026-05-01.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/MASTER_PLAN_STATUS_2026-05-01.md"
-    },
-    {
-      "path": "MIGRATION_PLAN.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/MIGRATION_PLAN.md"
-    },
-    {
-      "path": "OPEN_CORE_STRATEGY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/OPEN_CORE_STRATEGY.md"
-    },
-    {
-      "path": "OPEN_SOURCE_STRATEGY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/OPEN_SOURCE_STRATEGY.md"
-    },
-    {
-      "path": "PORTFOLIO_EXECUTION_LEDGER.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PORTFOLIO_EXECUTION_LEDGER.md"
-    },
-    {
-      "path": "PRICING.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRICING.md"
-    },
-    {
-      "path": "PRIVACY_POLICY_DRAFT.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRIVACY_POLICY_DRAFT.md"
-    },
-    {
-      "path": "PRIVATE_GAME_BOUNDARY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRIVATE_GAME_BOUNDARY.md"
-    },
-    {
       "path": "PRODUCTOS_MEDIOEVO/",
       "git_status": "??",
       "lane": "products_staging",
@@ -1441,42 +969,6 @@
         "untracked"
       ],
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/"
-    },
-    {
-      "path": "PRODUCT_CATALOG.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCT_CATALOG.md"
-    },
-    {
-      "path": "PUBLISHING_PLAN.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/PUBLISHING_PLAN.md"
-    },
-    {
-      "path": "QA_RESULTS.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/QA_RESULTS.md"
     },
     {
       "path": "README.md",
@@ -1491,78 +983,6 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/README.md"
     },
     {
-      "path": "REFUND_POLICY_DRAFT.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/REFUND_POLICY_DRAFT.md"
-    },
-    {
-      "path": "RELEASE_CHECKLIST.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/RELEASE_CHECKLIST.md"
-    },
-    {
-      "path": "RELEASE_EVIDENCE.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/RELEASE_EVIDENCE.md"
-    },
-    {
-      "path": "RELEASE_NOTES_DRAFT_2026-04-30.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/RELEASE_NOTES_DRAFT_2026-04-30.md"
-    },
-    {
-      "path": "RELEASE_READINESS_MATRIX.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/RELEASE_READINESS_MATRIX.md"
-    },
-    {
-      "path": "RELEASE_READINESS_SCORE.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/RELEASE_READINESS_SCORE.md"
-    },
-    {
       "path": "ROADMAP.md",
       "git_status": "??",
       "lane": "root_registers",
@@ -1575,19 +995,6 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/ROADMAP.md"
     },
     {
-      "path": "SECRET_SCAN_REPORT.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "BLOCK",
-      "decision": "BLOCK_SECRET_OR_ACCOUNT_SURFACE",
-      "flags": [
-        "secret_or_credential_name",
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/SECRET_SCAN_REPORT.md"
-    },
-    {
       "path": "SECURITY.md",
       "git_status": "??",
       "lane": "root_registers",
@@ -1598,78 +1005,6 @@
         "untracked"
       ],
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/SECURITY.md"
-    },
-    {
-      "path": "SECURITY_CHECKLIST.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/SECURITY_CHECKLIST.md"
-    },
-    {
-      "path": "SMOKE_TESTS.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/SMOKE_TESTS.md"
-    },
-    {
-      "path": "TERMS_DRAFT.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/TERMS_DRAFT.md"
-    },
-    {
-      "path": "TESTING_DEBUG_BENCHMARKS_FINAL.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/TESTING_DEBUG_BENCHMARKS_FINAL.md"
-    },
-    {
-      "path": "TREE_PLAN.md",
-      "git_status": "??",
-      "lane": "control",
-      "matched_prefix": "TREE_PLAN.md",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/TREE_PLAN.md"
-    },
-    {
-      "path": "WEBSITE_LANDING_COPY.md",
-      "git_status": "??",
-      "lane": "root_registers",
-      "matched_prefix": "[root]",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_ROOT_REGISTER_UNTIL_MERGED_TO_DOCS_INDEX",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/WEBSITE_LANDING_COPY.md"
     },
     {
       "path": "_archive/",
@@ -2159,6 +1494,126 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/canon/hormiguero-ciudad-viva.md"
     },
     {
+      "path": "docs/control/ARCHIVE_INDEX.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/ARCHIVE_INDEX.md"
+    },
+    {
+      "path": "docs/control/AUDIT_REPO_TREE.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/AUDIT_REPO_TREE.md"
+    },
+    {
+      "path": "docs/control/CLAIMS_BOUNDARY.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/CLAIMS_BOUNDARY.md"
+    },
+    {
+      "path": "docs/control/COMMIT_PROTOCOL.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/COMMIT_PROTOCOL.md"
+    },
+    {
+      "path": "docs/control/MASTER_PLAN_STATUS_2026-05-01.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/MASTER_PLAN_STATUS_2026-05-01.md"
+    },
+    {
+      "path": "docs/control/MIGRATION_PLAN.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/MIGRATION_PLAN.md"
+    },
+    {
+      "path": "docs/control/PORTFOLIO_EXECUTION_LEDGER.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/PORTFOLIO_EXECUTION_LEDGER.md"
+    },
+    {
+      "path": "docs/control/ROOT_CLEANUP_INDEX_2026-05-06.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/ROOT_CLEANUP_INDEX_2026-05-06.md"
+    },
+    {
+      "path": "docs/control/ROOT_CLEANUP_MANIFEST_2026-05-06.json",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/ROOT_CLEANUP_MANIFEST_2026-05-06.json"
+    },
+    {
+      "path": "docs/control/TREE_PLAN.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/control/TREE_PLAN.md"
+    },
+    {
       "path": "docs/design/",
       "git_status": "??",
       "lane": "docs",
@@ -2603,6 +2058,42 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/curador_fichas/downloads/21E68B2B0B670E60_estado-r0.18-rgimen-observacion.md"
     },
     {
+      "path": "docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/curador_fichas/downloads/2609B514DE952286_auditoria_observacionista_inversa_medioevo_v3_complementada_pack.md"
+    },
+    {
+      "path": "docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/curador_fichas/downloads/3F5EBDA3A9AD820A_auditoria_observacionista_inversa_medioevo_v3_complementada.md"
+    },
+    {
+      "path": "docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/intake/curador_fichas/downloads/4ADDB3BFD8E99900_estado.md"
+    },
+    {
       "path": "docs/intake/curador_fichas/downloads/6D616A194E2A2DF6_untitled.md",
       "git_status": "??",
       "lane": "docs",
@@ -2649,6 +2140,18 @@
         "untracked"
       ],
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/legal/"
+    },
+    {
+      "path": "docs/private/",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/private/"
     },
     {
       "path": "docs/product/",
@@ -2786,6 +2289,30 @@
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/publishing/WEBSITE_PUBLIC_FUNNEL_REVIEW_2026-05-05.md"
     },
     {
+      "path": "docs/release/",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/release/"
+    },
+    {
+      "path": "docs/security/",
+      "git_status": "??",
+      "lane": "docs",
+      "matched_prefix": "docs/",
+      "action_gate": "REVIEW",
+      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
+      "flags": [
+        "untracked"
+      ],
+      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/docs/security/"
+    },
+    {
       "path": "game-private/",
       "git_status": "??",
       "lane": "private_game",
@@ -2833,90 +2360,6 @@
         "untracked"
       ],
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/"
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/"
-    },
-    {
-      "path": "packages/open-dev/obs-safe-integration-kit/",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obs-safe-integration-kit/"
-    },
-    {
-      "path": "packages/open-dev/obsai-core/benchmarks/",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/benchmarks/"
-    },
-    {
-      "path": "packages/open-dev/obsai-core/demo_agent_action.py",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/demo_agent_action.py"
-    },
-    {
-      "path": "packages/open-dev/obsai-core/examples/observation_envelope.json",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/examples/observation_envelope.json"
-    },
-    {
-      "path": "packages/open-dev/obsai-core/obsai_core/ontology.py",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/ontology.py"
-    },
-    {
-      "path": "packages/open-dev/obsai-core/obsai_core/transduction.py",
-      "git_status": "??",
-      "lane": "packages",
-      "matched_prefix": "packages/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/transduction.py"
     },
     {
       "path": "packages/paid/",
@@ -3909,118 +3352,6 @@
         "untracked"
       ],
       "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/harness/"
-    },
-    {
-      "path": "tools/release/curador_preflight.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/curador_preflight.py"
-    },
-    {
-      "path": "tools/release/package_paid_templates.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/package_paid_templates.py"
-    },
-    {
-      "path": "tools/release/publish_free_dev_github.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "external_action_surface",
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/publish_free_dev_github.py"
-    },
-    {
-      "path": "tools/release/publish_gumroad_listing.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "BLOCK",
-      "decision": "BLOCK_SECRET_OR_ACCOUNT_SURFACE",
-      "flags": [
-        "secret_or_credential_name",
-        "external_action_surface",
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/publish_gumroad_listing.py"
-    },
-    {
-      "path": "tools/release/publish_public_sanitized_github.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "external_action_surface",
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/publish_public_sanitized_github.py"
-    },
-    {
-      "path": "tools/release/stage_free_dev_repos.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/stage_free_dev_repos.py"
-    },
-    {
-      "path": "tools/release/stage_public_sanitized_repos.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/stage_public_sanitized_repos.py"
-    },
-    {
-      "path": "tools/release/verify_free_dev_release.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/verify_free_dev_release.py"
-    },
-    {
-      "path": "tools/release/verify_free_dev_staging.py",
-      "git_status": "??",
-      "lane": "tools",
-      "matched_prefix": "tools/",
-      "action_gate": "REVIEW",
-      "decision": "KEEP_IN_CANON_LANE_WITH_STATUS_REVIEW",
-      "flags": [
-        "untracked"
-      ],
-      "raw": "?? OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/release/verify_free_dev_staging.py"
     },
     {
       "path": "tools/vendor/",

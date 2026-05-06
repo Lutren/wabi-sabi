@@ -41,6 +41,75 @@ ARCHIVE_SUFFIXES = {".zip", ".rar", ".7z"}
 IMAGE_SUFFIXES = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
 GENERATED_SUFFIXES = {".pyc", ".tmp", ".temp", ".part", ".crdownload"}
 GENERATED_NAMES = {"desktop.ini", "thumbs.db", ".ds_store"}
+DOWNLOAD_BLOCK_SUFFIXES = {
+    ".apk",
+    ".bat",
+    ".cmd",
+    ".com",
+    ".dll",
+    ".exe",
+    ".jar",
+    ".lnk",
+    ".msi",
+    ".ps1",
+    ".scr",
+    ".sys",
+    ".vbs",
+}
+DOWNLOAD_REVIEW_SUFFIXES = {".7z", ".docm", ".dmg", ".img", ".iso", ".pptm", ".rar", ".xlsm", ".zip"}
+DEFAULT_EXCLUDED_DIRS = {
+    ".aider",
+    ".agents",
+    ".android",
+    ".android-sdk",
+    ".aws",
+    ".azure",
+    ".cache",
+    ".cargo",
+    ".claude",
+    ".claw",
+    ".codex",
+    ".config",
+    ".copilot",
+    ".credentials_local",
+    ".cursor",
+    ".docker",
+    ".gemini",
+    ".git",
+    ".gradle",
+    ".jdk",
+    ".medioevo_gumroad_chrome_check",
+    ".medioevo_gumroad_session_check",
+    ".medioevo_gumroad_session_probe",
+    ".medioevo_gumroad_session_probe_fix",
+    ".mempalace",
+    ".nodejs",
+    ".ollama",
+    ".openclaw",
+    ".openclaw-claudio-safe",
+    ".playwright_outlook_profile",
+    ".pytest_cache",
+    ".qwen",
+    ".rustup",
+    ".sbx-denybin",
+    ".sentinel",
+    ".ssh",
+    ".venv",
+    ".venv_api",
+    ".wrangler",
+    "__pycache__",
+    "appdata",
+    "application data",
+    "cookies",
+    "local settings",
+    "nethood",
+    "node_modules",
+    "printhood",
+    "recent",
+    "sendto",
+    "start menu",
+    "templates",
+}
 
 ARCHIVE_MARKERS = {
     "archive",
@@ -113,6 +182,14 @@ def sha256_file(path: Path, chunk_size: int = 1024 * 1024) -> str:
         for chunk in iter(lambda: handle.read(chunk_size), b""):
             digest.update(chunk)
     return digest.hexdigest().upper()
+
+
+def fingerprint_file(path: Path, hash_limit_bytes: int | None = None) -> str:
+    size = path.stat().st_size
+    if hash_limit_bytes is not None and size > hash_limit_bytes:
+        marker = hashlib.sha256(str(path).encode("utf-8", errors="ignore")).hexdigest().upper()[:16]
+        return f"UNHASHED_OVER_LIMIT:{size}:{path.stat().st_mtime_ns}:{marker}"
+    return sha256_file(path)
 
 
 def slugify(value: str, limit: int = 80) -> str:
@@ -195,7 +272,12 @@ def lane_for(path: Path) -> str:
     return "curaduria"
 
 
-def risk_flags_for(path: Path) -> list[str]:
+def is_download_source(source_label: str, path: Path) -> bool:
+    parts = path_parts_lower(path)
+    return source_label.lower() in {"download", "downloads", "descargas"} or "downloads" in parts or "descargas" in parts
+
+
+def risk_flags_for(path: Path, source_label: str = "") -> list[str]:
     flags: list[str] = []
     if contains_marker(path, SECRET_MARKERS):
         flags.append("SECRET_OR_CREDENTIAL_MARKER")
@@ -209,6 +291,15 @@ def risk_flags_for(path: Path) -> list[str]:
         flags.append("GENERATED_RESEARCH_OUTPUT")
     if is_generated_trash(path):
         flags.append("REGENERABLE_TRASH")
+    if is_download_source(source_label, path):
+        flags.append("DOWNLOAD_INBOX")
+        suffix = path.suffix.lower()
+        if suffix in DOWNLOAD_BLOCK_SUFFIXES:
+            flags.append("DOWNLOAD_EXECUTION_BLOCK")
+        elif suffix in DOWNLOAD_REVIEW_SUFFIXES:
+            flags.append("DOWNLOAD_THREAT_REVIEW")
+        elif suffix in {".pdf", ".docx", ".txt", ".md"}:
+            flags.append("DOWNLOAD_DOCUMENT_REVIEW")
     return flags
 
 
@@ -239,7 +330,11 @@ def target_for(lane: str, path: Path) -> str:
 
 
 def summarize_text(path: Path, max_bytes: int = 80_000) -> str:
-    if path.suffix.lower() not in TEXT_SUFFIXES or path.stat().st_size > max_bytes:
+    try:
+        size = path.stat().st_size
+    except OSError:
+        return ""
+    if path.suffix.lower() not in TEXT_SUFFIXES or size > max_bytes:
         return ""
     try:
         text = path.read_text(encoding="utf-8", errors="ignore")
@@ -265,31 +360,53 @@ def choose_canonical(paths: list[Path]) -> Path:
     return sorted(paths, key=score)[0]
 
 
-def collect_files(root: Path) -> list[Path]:
+def collect_files(root: Path, excluded_dirs: set[str] | None = None) -> list[Path]:
     files: list[Path] = []
+    excluded_dirs = excluded_dirs or DEFAULT_EXCLUDED_DIRS
     for base, dirs, names in os.walk(root):
         base_path = Path(base)
-        dirs[:] = [d for d in dirs if d not in {".git", "node_modules"}]
+        kept_dirs = []
+        for dirname in dirs:
+            child = base_path / dirname
+            if dirname.lower() in excluded_dirs:
+                continue
+            if child.is_symlink():
+                continue
+            kept_dirs.append(dirname)
+        dirs[:] = kept_dirs
         for name in names:
             path = base_path / name
-            if path.is_file():
+            if path.is_file() and not path.is_symlink():
                 files.append(path)
     return sorted(files, key=lambda p: str(p).lower())
 
 
-def build_records(roots: list[tuple[str, Path]]) -> list[TreeRecord]:
+def build_records(
+    roots: list[tuple[str, Path]],
+    hash_limit_bytes: int | None = None,
+    excluded_dirs: set[str] | None = None,
+) -> list[TreeRecord]:
     by_hash: dict[str, list[Path]] = {}
     file_meta: dict[Path, tuple[str, str, str]] = {}
     for label, root in roots:
-        for path in collect_files(root):
-            sha = sha256_file(path)
+        for path in collect_files(root, excluded_dirs=excluded_dirs):
+            try:
+                sha = fingerprint_file(path, hash_limit_bytes=hash_limit_bytes)
+            except OSError:
+                continue
             by_hash.setdefault(sha, []).append(path)
             file_meta[path] = (label, str(path.relative_to(root)), sha)
 
     canonical_by_hash = {sha: choose_canonical(paths) for sha, paths in by_hash.items()}
     records: list[TreeRecord] = []
     for path, (label, rel_path, sha) in file_meta.items():
-        flags = risk_flags_for(path)
+        try:
+            size_bytes = path.stat().st_size
+        except OSError:
+            continue
+        flags = risk_flags_for(path, label)
+        if sha.startswith("UNHASHED_OVER_LIMIT:"):
+            flags.append("LARGE_FILE_HASH_DEFERRED")
         lane = lane_for(path)
         psi_state = psi_state_for(path, flags)
         canonical = canonical_by_hash[sha]
@@ -305,7 +422,10 @@ def build_records(roots: list[tuple[str, Path]]) -> list[TreeRecord]:
             if path == canonical:
                 decision = "KEEP_CANONICAL"
                 status = "CANONICAL_DUPLICATE_KEEP"
-            elif (is_archive_like(path) or is_low_semantic(path) or is_generated_trash(path)) and not (
+            elif (
+                not sha.startswith("UNHASHED_OVER_LIMIT:")
+                and (is_archive_like(path) or is_low_semantic(path) or is_generated_trash(path))
+            ) and not (
                 "SECRET_OR_CREDENTIAL_MARKER" in flags or "PRIVATE_OR_GAME_MARKER" in flags
             ):
                 decision = "DELETE_EXACT_DUPLICATE_AFTER_HASH"
@@ -327,11 +447,21 @@ def build_records(roots: list[tuple[str, Path]]) -> list[TreeRecord]:
             status = "BLOQUEADO"
             action_gate = "BLOCK"
             safe_delete = False
+        elif "DOWNLOAD_EXECUTION_BLOCK" in flags:
+            decision = "BLOCK_DOWNLOAD_EXECUTION_BEFORE_THREAT_ANALYSIS"
+            status = "BLOQUEADO_AMENAZA_DOWNLOAD"
+            action_gate = "BLOCK"
+            safe_delete = False
+        elif "DOWNLOAD_THREAT_REVIEW" in flags:
+            decision = "REVIEW_DOWNLOAD_BEFORE_EXTRACT_OR_EXECUTE"
+            status = "REVIEW_AMENAZA_DOWNLOAD"
+            action_gate = "REVIEW"
+            safe_delete = False
         elif "STRONG_CLAIM_REVIEW" in flags and decision == "ABSORB_TO_ATLAS":
             decision = "ABSORB_AS_RESEARCH_BOUNDARY"
             status = "BLOQUEADO_PUBLICACION"
             action_gate = "REVIEW"
-        summary = summarize_text(path) or f"{kind}; {path.name}; {path.stat().st_size} bytes"
+        summary = summarize_text(path) or f"{kind}; {path.name}; {size_bytes} bytes"
         falsifiers = "hash_mismatch; missing_canonical_copy; unverified_claim; secret_or_private_marker"
         if lane == "psi-observacionismo" and "STRONG_CLAIM_REVIEW" in flags:
             falsifiers = "no_recupera_limites; fuente_no_verificada; claim_publico_fuerte; sin_experimento"
@@ -341,7 +471,7 @@ def build_records(roots: list[tuple[str, Path]]) -> list[TreeRecord]:
                 path=str(path),
                 rel_path=rel_path,
                 sha256=sha,
-                size_bytes=path.stat().st_size,
+                size_bytes=size_bytes,
                 suffix=path.suffix.lower(),
                 kind=kind,
                 psi_state=psi_state,
@@ -372,7 +502,7 @@ def write_report(path: Path, records: list[TreeRecord], deleted: list[TreeRecord
     lanes = count_by(records, "lane")
     decisions = count_by(records, "decision")
     lines = [
-        "# Curador SETO Tree Absorption - PSI + Claudio Researchs",
+        "# Curador SETO Tree Absorption",
         "",
         f"Generated UTC: `{utc_now()}`",
         "",
@@ -411,9 +541,9 @@ def write_report(path: Path, records: list[TreeRecord], deleted: list[TreeRecord
             "",
             "## Veredicto",
             "",
-            "- `PSI` no estaba completamente limpio: habia fuentes crudas, salidas research, ZIPs, DOCX/PDF y duplicados exactos.",
-            "- `CLAUDIO - researchs` no estaba completamente absorbido: contiene prototipos, staging, codigo, prompts, GEODIA y archivo historico.",
-            "- La absorcion de este pase crea fichas por archivo y manifest estructurado. Lo unico eliminado fue duplicado exacto o basura regenerable con hash.",
+            "- La absorcion de este pase crea fichas por archivo y manifest estructurado.",
+            "- `Downloads` se trata como zona de amenaza: nada descargado se ejecuta, extrae o publica antes de clasificar riesgo.",
+            "- Lo unico que puede retirarse automaticamente es duplicado exacto o basura regenerable con hash y gate.",
             "- Los documentos unicos, privados, de claims fuertes o con frontera de publicacion quedan `REVIEW` o `BLOQUEADO`; no se borran.",
             "",
             "## Archivos eliminados",
@@ -443,16 +573,26 @@ def write_report(path: Path, records: list[TreeRecord], deleted: list[TreeRecord
     path.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
-def write_fichas(path: Path, records: list[TreeRecord]) -> None:
+def write_fichas(path: Path, records: list[TreeRecord], max_records: int = 0) -> None:
     lines = [
-        "# Fichas Curador SETO - PSI + Claudio Researchs",
+        "# Fichas Curador SETO",
         "",
         f"Generated UTC: `{utc_now()}`",
         "",
         "Cada bloque es una ficha tecnica minima por archivo: hash, estado, decision, destino y falsadores.",
         "",
     ]
-    for index, record in enumerate(sorted(records, key=lambda r: (r.source_label, r.rel_path.lower())), start=1):
+    sorted_records = sorted(records, key=lambda r: (r.source_label, r.rel_path.lower()))
+    selected_records = sorted_records[:max_records] if max_records and max_records > 0 else sorted_records
+    if max_records and len(sorted_records) > max_records:
+        lines.extend(
+            [
+                f"Nota: esta vista Markdown esta limitada a `{max_records}` fichas para mantener legibilidad.",
+                f"El manifest JSON contiene el registro tecnico completo de `{len(sorted_records)}` archivos.",
+                "",
+            ]
+        )
+    for index, record in enumerate(selected_records, start=1):
         lines.extend(
             [
                 f"## {index}. {record.source_label} / {record.rel_path}",
@@ -474,13 +614,30 @@ def write_fichas(path: Path, records: list[TreeRecord]) -> None:
                 "",
             ]
         )
+    if len(selected_records) < len(sorted_records):
+        omitted = sorted_records[len(selected_records) :]
+        lines.extend(
+            [
+                "## Fichas no expandidas en Markdown",
+                "",
+                f"- Total omitido: `{len(omitted)}`",
+                "- Registro completo: manifest JSON de este mismo run.",
+                "",
+                "### Estados omitidos",
+                "",
+                "| estado | archivos |",
+                "|---|---:|",
+            ]
+        )
+        for key, value in sorted(count_by(omitted, "status").items()):
+            lines.append(f"| `{key}` | {value} |")
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
 def write_deletions(path: Path, deleted: list[TreeRecord]) -> None:
     lines = [
-        "# Curador SETO Deletions - PSI + Claudio Researchs",
+        "# Curador SETO Deletions",
         "",
         f"Generated UTC: `{utc_now()}`",
         "",
@@ -549,11 +706,32 @@ def main() -> int:
     parser.add_argument("--root", action="append", required=True, help="label=absolute_path or absolute_path")
     parser.add_argument("--name", default=f"tree_absorption_{TODAY}", help="run name for output files")
     parser.add_argument("--apply-safe-deletes", action="store_true", help="move safe duplicate/trash candidates to local quarantine")
+    parser.add_argument(
+        "--hash-limit-mb",
+        type=int,
+        default=0,
+        help="defer full SHA256 for files larger than this size in MB; 0 means hash all files",
+    )
+    parser.add_argument(
+        "--exclude-dir",
+        action="append",
+        default=[],
+        help="extra directory name to skip during recursive scans",
+    )
+    parser.add_argument(
+        "--max-markdown-fichas",
+        type=int,
+        default=0,
+        help="limit expanded Markdown fichas; manifest JSON still contains all records",
+    )
     parser.add_argument("--json", action="store_true", help="print JSON summary")
     args = parser.parse_args()
 
     roots = parse_roots(args.root)
-    records = build_records(roots)
+    hash_limit_bytes = args.hash_limit_mb * 1024 * 1024 if args.hash_limit_mb else None
+    excluded_dirs = set(DEFAULT_EXCLUDED_DIRS)
+    excluded_dirs.update(name.lower() for name in args.exclude_dir)
+    records = build_records(roots, hash_limit_bytes=hash_limit_bytes, excluded_dirs=excluded_dirs)
     out_base = ROOT / "docs" / "intake"
     safe_name = slugify(args.name, 90)
     quarantine = ROOT / "runtime" / "curador_seto" / "tree_quarantine" / safe_name
@@ -568,6 +746,8 @@ def main() -> int:
         "generated_at_utc": utc_now(),
         "roots": [{"label": label, "path": str(path)} for label, path in roots],
         "apply_safe_deletes": bool(args.apply_safe_deletes),
+        "hash_limit_mb": args.hash_limit_mb,
+        "excluded_dirs": sorted(excluded_dirs),
         "quarantine": str(quarantine),
         "counts": {
             "files": len(records),
@@ -580,7 +760,7 @@ def main() -> int:
     }
     write_json(manifest_path, payload)
     write_report(report_path, records, deleted, roots)
-    write_fichas(fichas_path, records)
+    write_fichas(fichas_path, records, max_records=args.max_markdown_fichas)
     write_deletions(deletions_path, deleted)
 
     summary = {

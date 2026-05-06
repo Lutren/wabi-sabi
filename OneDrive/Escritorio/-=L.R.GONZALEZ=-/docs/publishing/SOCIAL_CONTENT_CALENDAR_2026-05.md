@@ -83,6 +83,18 @@ They do not buy private prompts, customer data, RPG/TCG, unreleased books or gua
 https://github.com/sponsors/Lutren
 ```
 
+### Sponsors High Tiers After Publish
+
+```text
+MEDIOEVO now has a high-tier GitHub Sponsors lane for institutions and strategic patrons.
+
+It supports curated research packets, public-safe demos and strategic briefings around local-first AI, ActionGate, Observacionismo and evidence-before-action systems.
+
+No raw private archives. No secrets. No RPG/TCG IP. Public tools stay public; private IP stays protected.
+
+https://github.com/sponsors/Lutren
+```
+
 ## Asset Rules
 
 - Use website screenshots, template previews or generated public-safe diagrams.

@@ -41,3 +41,13 @@ as blanket approval for more repos, Gumroad products, deploys or social posts.
 - GitHub `.github/FUNDING.yml` and public bio/blog were updated through verified
   GitHub API access; Sponsors tiers/goals remain dashboard/UI work. See
   `docs\publishing\SPONSORS_API_SESSION_AUDIT_2026-05-05.md`.
+
+2026-05-06 high-tier Sponsors packet:
+
+- `docs\publishing\GITHUB_SPONSORS_HIGH_TIER_PACKET_2026-05-06.md` contains
+  paste-ready copy for `US$1,000`, `US$5,000` and `US$10,000` monthly tiers.
+- `docs\publishing\GITHUB_SPONSORS_DASHBOARD_FIELD_SHEET_2026-05-06.md`
+  contains the exact dashboard fields for fast copy/paste.
+- It is local `PASTE_READY_DASHBOARD`; no live dashboard publication was claimed
+  because the host gate moved from `JAMMING / BLOCK` to `CONTAMINADO / REVIEW`,
+  but not to `APPROVE`.

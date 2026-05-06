@@ -32,6 +32,7 @@ this state. This queue is the execution order for the next gate-approved window.
 | P1 | GitHub pinned repos | set tighter pin order if not already aligned | `REVIEW` | host `APPROVE`, manual UI or API-safe path | public profile visually confirms pins |
 | P1 | Website | local home patch added Sponsors route and public `sameAs`; no deploy | `LOCAL_PATCH_DONE_NO_DEPLOY` | host `APPROVE` plus Cloudflare deploy gate | live pages HTTP 200 and sitemap unchanged/valid |
 | P1 | GitHub Sponsors | no urgent copy change; page already live with goal and tiers | `NO_CHANGE_NEEDED_NOW` | host `APPROVE` only if dashboard copy changes | public Sponsors page contains goal and tiers |
+| P1 | GitHub Sponsors high tiers | add `US$1,000`, `US$5,000` and `US$10,000` monthly tiers from `GITHUB_SPONSORS_HIGH_TIER_PACKET_2026-05-06.md` and field sheet | `PASTE_READY_DASHBOARD / HOST_REVIEW` | host `APPROVE` or owner manual dashboard action, focused secret scan, claims check | public Sponsors page shows all three high tiers |
 | P2 | Instagram/TikTok/YouTube | publish short visual posts from content calendar | `DRAFT_READY_AFTER_GATE` | host `APPROVE`, account auth, asset rights check | live URL/screenshot per post |
 
 ## Do Not Execute In A Blocked Host State

@@ -1,0 +1,106 @@
+{
+  "module_id": "network_observer_defensive",
+  "name": "Network Observer Defensive",
+  "version": "0.1.0",
+  "fingerprint": "matrix-network-observer-defensive-v0-1",
+  "domain": "security.network",
+  "purpose": "Classify network-observation requests without sending packets, and block stealth or raw-packet discovery.",
+  "minimal_summary": "Stealth, evasion, Scapy/raw packets, ARP/SYN and LAN/CIDR discovery are BLOCK. Local loopback read-only inventory can be APPROVE.",
+  "DO_deconstruction": [
+    "separate passive status from active probing",
+    "detect stealth or evasion language",
+    "detect raw packet, ARP, SYN or broadcast behavior",
+    "detect LAN/CIDR target scope"
+  ],
+  "IOI_recompilation": [
+    "convert scan requests into ActionGate decisions",
+    "offer loopback-only read-only alternative",
+    "emit ObservationEnvelope and falsifiers",
+    "route blocked probes to SecurityAgent and WitnessLog"
+  ],
+  "primitives": [
+    "loopback",
+    "raw_packet",
+    "lan_discovery",
+    "stealth_intent",
+    "network_observer_policy"
+  ],
+  "inputs": [
+    "snippet text",
+    "requested mode",
+    "target",
+    "source path"
+  ],
+  "outputs": [
+    "ActionGate decision",
+    "risk flags",
+    "blocked actions",
+    "allowed next actions",
+    "ObservationEnvelope"
+  ],
+  "invariants": [
+    "no packets are sent by the classifier",
+    "stealth or evasion is always BLOCK",
+    "LAN/CIDR discovery is not autonomous",
+    "public-safe output cannot expose IP/MAC topology"
+  ],
+  "interfaces": {
+    "files": [
+      "tools/security_network_observer.py",
+      "docs/security/NETWORK_OBSERVER_POLICY_2026-05-06.md",
+      "COMMS/schemas/observation-envelope.schema.json"
+    ]
+  },
+  "dependencies": [
+    "security_actiongate",
+    "documentation_witnesslog"
+  ],
+  "compatible_modules": [
+    "observacionismo_core",
+    "ai_browser_security"
+  ],
+  "forbidden_combinations": [
+    "stealth_scan",
+    "raw_packet_probe",
+    "unauthorized_lan_discovery",
+    "public_topology_export"
+  ],
+  "safety_constraints": [
+    "do not import Scapy for runtime scanning",
+    "do not send ARP, SYN or broadcast probes",
+    "do not scan non-loopback targets without owner-approved maintenance scope",
+    "redact topology from public outputs"
+  ],
+  "evidence_sources": [
+    "docs/security/NETWORK_OBSERVER_POLICY_2026-05-06.md",
+    "tools/security_network_observer.py",
+    "tests/test_security_network_observer.py"
+  ],
+  "examples": [
+    {
+      "input": "Scapy ARP scan against 192.168.1.1/24 described as stealth",
+      "output": "BLOCK with risk_flags stealth_or_evasion_intent, raw_packet_or_arp_discovery and lan_or_cidr_target"
+    },
+    {
+      "input": "local_loopback_inventory target 127.0.0.1",
+      "output": "APPROVE read-only local listener metadata"
+    }
+  ],
+  "tests": [
+    "python -B -m pytest tests/test_security_network_observer.py -q",
+    "python -B tools/matrix/validate_library.py --json"
+  ],
+  "decay_policy": "Review whenever SecurityAgent gains new network, firewall or port-observation capabilities.",
+  "update_policy": "Default new network verbs to BLOCK unless loopback/read-only is explicit.",
+  "handoff_template": {
+    "receiver": "SecurityAgent",
+    "include": [
+      "target",
+      "mode",
+      "risk_flags",
+      "blocked_actions",
+      "falsifiers"
+    ],
+    "gate": "BLOCK"
+  }
+}

@@ -19,6 +19,7 @@
     {"module_id": "documentation_witnesslog", "path": "library/modules/documentation_witnesslog.json", "status": "ACTIVE"},
     {"module_id": "game_metroidvania_design", "path": "library/modules/game_metroidvania_design.json", "status": "REVIEW"},
     {"module_id": "duat_world_state", "path": "library/modules/duat_world_state.json", "status": "ACTIVE"},
-    {"module_id": "ai_browser_security", "path": "library/modules/ai_browser_security.json", "status": "REVIEW"}
+    {"module_id": "ai_browser_security", "path": "library/modules/ai_browser_security.json", "status": "REVIEW"},
+    {"module_id": "network_observer_defensive", "path": "library/modules/network_observer_defensive.json", "status": "ACTIVE"}
   ]
 }

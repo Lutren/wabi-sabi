@@ -22,6 +22,8 @@ Estado: `SECURITY_MODEL / ACTIONGATE_FIRST`.
 | lectura privada necesaria | `REVIEW` |
 | escritura local acotada | `REVIEW` salvo runtime permitido |
 | docs public-safe | `APPROVE` si secret scan pasa |
+| stealth, evasion, raw packets, ARP/SYN o CIDR discovery | `BLOCK` |
+| inventario local loopback read-only | `APPROVE` si no expone IP/MAC/topologia privada |
 
 ## Frontera publica/privada
 
@@ -33,3 +35,10 @@ libros completos ni arquitectura sensible.
 
 La biblioteca reduce riesgo al no cargar material innecesario. Menos contexto
 significa menor filtracion, menos ruido y menos drift.
+
+## Observacion De Red
+
+Matrix puede cargar `network_observer_defensive` cuando un agente proponga red,
+puertos, firewall o descubrimiento de dispositivos. Ese modulo no ejecuta
+trafico. Solo clasifica la solicitud, bloquea stealth/raw packets/LAN discovery
+y permite inventario local `127.0.0.1` read-only con WitnessLog.

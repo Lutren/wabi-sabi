@@ -11,7 +11,16 @@ from _common import ROOT, print_json
 
 
 TODAY = "2026-05-05"
-ALLOWED_CACHE_DIRS = {"__pycache__", ".pytest_cache", ".ruff_cache", ".mypy_cache"}
+ALLOWED_CACHE_DIRS = {
+    "__pycache__",
+    ".pytest_cache",
+    ".ruff_cache",
+    ".mypy_cache",
+    ".test_research",
+    ".test_research_storage",
+    ".test_session_storage",
+    ".test_sessions",
+}
 EXCLUDE_PARTS = {
     ".git",
     "node_modules",

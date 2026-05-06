@@ -106,6 +106,9 @@ def test_path_level_policy_blocks_historical_and_legal_checklists() -> None:
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "apps" / "editorial_web" / "marketing" / "PROXIMOS-PASOS.md")
     assert pending_review.is_pending_denied(ROOT / "tools" / "claw-code" / "PARITY.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "reports" / "HORMIGUERO_HUB_COMPLETE_REPORT.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "docs" / "root_notes_review" / "OLD.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "launchers" / "OLD.md")
+    assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "claudio" / "tools" / "root_scripts_review" / "OLD.md")
     assert pending_review.is_pending_denied(ROOT / "-=MEDIOEVO=-" / "-=LIBROS" / "llm-wiki" / "INSTALACION_COMPLETA.md")
     assert pending_review.classify_blocker("Tests pytest Writer", path="-=MEDIOEVO=-/-=LIBROS/claudio/GAPS_MERCADO.md") == "legal_or_human"
     assert pending_review.classify_blocker("Configurar CI/CD", path="-=MEDIOEVO=-/-=LIBROS/claudio/mini_office/PUBLICAR_EN_GITHUB.md") == "external_or_gated"

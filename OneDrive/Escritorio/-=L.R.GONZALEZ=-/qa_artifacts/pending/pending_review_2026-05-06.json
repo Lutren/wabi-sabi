@@ -1,6 +1,6 @@
 {
   "schema": "medioevo.pending_review.v1",
-  "generated_at": "2026-05-06T10:17:11+00:00",
+  "generated_at": "2026-05-06T10:28:32+00:00",
   "date": "2026-05-06",
   "root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "policy": {
@@ -10,30 +10,28 @@
     "curador": "unknown sources and residues still require curador_preflight before use or discard."
   },
   "active_markdown": {
-    "raw_open": 244,
-    "dedup_open": 241,
+    "raw_open": 186,
+    "dedup_open": 183,
     "by_priority": {
       "P1": 10,
       "P2": 6,
-      "P3": 3,
-      "P4": 4,
-      "UNCLASSIFIED": 218
+      "UNCLASSIFIED": 167
     },
     "by_lane": {
-      "commercial": 60,
+      "commercial": 18,
       "general": 20,
       "open_source": 2,
-      "private_rpg": 2,
+      "private_rpg": 1,
       "research_claims": 1,
-      "runtime_claudio": 150,
+      "runtime_claudio": 135,
       "wave_fc": 2,
       "website_marketing": 4
     },
     "by_blocker": {
-      "external_or_gated": 129,
-      "host_or_heavy": 43,
-      "legal_or_human": 61,
-      "private_boundary": 8
+      "external_or_gated": 118,
+      "host_or_heavy": 42,
+      "legal_or_human": 18,
+      "private_boundary": 5
     },
     "top_items": [
       {
@@ -165,179 +163,11 @@
         "occurrences": 1
       },
       {
-        "priority": "P3",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P3.5** Discord Q&A session",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2833",
-        "occurrences": 1
-      },
-      {
-        "priority": "P3",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P3.6** Reseñas de Amazon (pedir a lectores)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2834",
-        "occurrences": 1
-      },
-      {
-        "priority": "P3",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P3.7** Colaboración con booktubers",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2835",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.3** Testimonios reales",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2844",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.5** Guest post en blogs de sci-fi",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.6** Podcasts de literatura",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.7** Colaboraciones cross-promo",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850",
-        "occurrences": 1
-      },
-      {
         "priority": "UNCLASSIFIED",
         "lane": "commercial",
         "blocker": "external_or_gated",
         "item": "Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Rayuela muyading guide (PDF) - cmuyate from CEmuyBRO docs",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:444",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Master timeline (PDF) - cmuyate from CEmuyBRO timeline data",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:445",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "private_boundary",
-        "item": "TCG cards compiled into print-muyady PDF (from website assets)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:446",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "muysonancia rulebook (PDF)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:447",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Deck-building guide (PDF)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:448",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Lomuy Bible compiled into single PDF (from CEmuyBRO)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:449",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Character encyclopedia (PDF)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:450",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Blueprint art (cmuyate or compile from existing assets)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:451",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Audiobook sample chapter for starter-pack",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:452",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "legal_or_human",
-        "item": "Liner notes for soundtrack collection",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:453",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "private_boundary",
-        "item": "**Twitter Consumer Key/Secret:** Pendiente de Tren",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:273",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**Reddit Password/2FA:** Requiere setup manual oauth",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:274",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "external_or_gated",
-        "item": "**Supabase schema:** Requiere acceso a dashboard",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:276",
-        "occurrences": 1
-      },
-      {
-        "priority": "UNCLASSIFIED",
-        "lane": "commercial",
-        "blocker": "host_or_heavy",
-        "item": "**Benchmark real:** Requiere Ollama corriendo y 100 sesiones",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/docs/root_notes_review/INVENTARIO_MAESTRO_2026-04-20.md:277",
         "occurrences": 1
       },
       {
@@ -355,27 +185,193 @@
         "item": "Configurar Gumroad/Patmuyon con tiers",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/DECISION_MARKETING_SaaS_20260410.md:102",
         "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Hook en primeros 3 segundos: ruido digital + pantalla oscura (cumplido en escena 1)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:166",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Problema muyconocible en 0-6s (abrumamiento)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:167",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Solucion clara en 6-24s (ciudad que cmuyce)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:168",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Identificacion emocional en 24-36s (personas muyales)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:169",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Climax + CTA en 48-60s (runa + url)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:170",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Audio contrastante con silencio inicial",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:171",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Texto legible en mobile (vertical)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:172",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Sin em-dashes en overlays",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:173",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Disclaimer legal si aplica (ninguno en v1)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:174",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Departamento Cmuyativo (branding, estetica Medioevo cohemuynte)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:192",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Departamento Marketing (hook, CTA, targets demograficos)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:193",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Departamento Legal (licencias assets, copyright musica, disclosumuy)",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:194",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Tren: veto final",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:195",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "commercial",
+        "blocker": "external_or_gated",
+        "item": "Mantener publicos: metodo, interfaces, schemas, CLIs, checklists, plantillas, demos sinteticos, articulos low-claim, rutas a GitHub/Gumroad y Sponsors.",
+        "first_evidence": "docs/pending/PUBLIC_PROFILE_NETWORK_PENDING_2026-05-05.md:86",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**muygistrar marca \"MEDIOEVO\" en IMPI**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:536",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Obtener RFC en el SAT**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:542",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**muygistrar los 35 libros en INDAUTOR**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:551",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Actualizar Terms of Service del sitio**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:556",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Actualizar Privacy Policy del sitio**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:561",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Llenar formulario W-8BEN en KDP**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:566",
+        "occurrences": 1
+      },
+      {
+        "priority": "UNCLASSIFIED",
+        "lane": "general",
+        "blocker": "legal_or_human",
+        "item": "**Definir y publicar politica de contenido de fans**",
+        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/-=NEGOCIOS=-/Legal/LEGAL_PROTECTION_GUIDE.md:572",
+        "occurrences": 1
       }
     ]
   },
   "claudio_master": {
     "path": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md",
-    "raw_open": 26,
-    "dedup_open": 26,
+    "raw_open": 19,
+    "dedup_open": 19,
     "by_priority": {
       "P1": 10,
       "P2": 6,
-      "P3": 3,
-      "P4": 4,
       "UNCLASSIFIED": 3
     },
     "by_lane": {
       "commercial": 2,
-      "runtime_claudio": 22,
+      "runtime_claudio": 15,
       "wave_fc": 2
     },
     "by_blocker": {
-      "external_or_gated": 14,
+      "external_or_gated": 7,
       "host_or_heavy": 6,
       "legal_or_human": 3,
       "private_boundary": 3
@@ -507,62 +503,6 @@
         "blocker": "host_or_heavy",
         "item": "**P2** Bootear ISO en QEMU antes de cualquier USB/PC2.",
         "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1935",
-        "occurrences": 1
-      },
-      {
-        "priority": "P3",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P3.5** Discord Q&A session",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2833",
-        "occurrences": 1
-      },
-      {
-        "priority": "P3",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P3.6** Reseñas de Amazon (pedir a lectores)",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2834",
-        "occurrences": 1
-      },
-      {
-        "priority": "P3",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P3.7** Colaboración con booktubers",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2835",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.3** Testimonios reales",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2844",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.5** Guest post en blogs de sci-fi",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.6** Podcasts de literatura",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849",
-        "occurrences": 1
-      },
-      {
-        "priority": "P4",
-        "lane": "runtime_claudio",
-        "blocker": "external_or_gated",
-        "item": "**P4.7** Colaboraciones cross-promo",
-        "first_evidence": "-=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850",
         "occurrences": 1
       },
       {

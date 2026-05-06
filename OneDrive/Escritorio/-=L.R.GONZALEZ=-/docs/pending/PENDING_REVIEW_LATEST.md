@@ -4,10 +4,10 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 ## Counts
 
-- Active markdown raw open items: `244`.
-- Active markdown deduplicated open items: `241`.
-- Claudio `PENDIENTES_MASTER.md` raw open items: `26`.
-- Claudio deduplicated open items: `26`.
+- Active markdown raw open items: `186`.
+- Active markdown deduplicated open items: `183`.
+- Claudio `PENDIENTES_MASTER.md` raw open items: `19`.
+- Claudio deduplicated open items: `19`.
 
 ## Active Markdown By Priority
 
@@ -15,20 +15,18 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | --- | --- |
 | P1 | 10 |
 | P2 | 6 |
-| P3 | 3 |
-| P4 | 4 |
-| UNCLASSIFIED | 218 |
+| UNCLASSIFIED | 167 |
 
 ## Active Markdown By Lane
 
 | lane | dedup_count |
 | --- | --- |
-| commercial | 60 |
+| commercial | 18 |
 | general | 20 |
 | open_source | 2 |
-| private_rpg | 2 |
+| private_rpg | 1 |
 | research_claims | 1 |
-| runtime_claudio | 150 |
+| runtime_claudio | 135 |
 | wave_fc | 2 |
 | website_marketing | 4 |
 
@@ -36,10 +34,10 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 129 |
-| host_or_heavy | 43 |
-| legal_or_human | 61 |
-| private_boundary | 8 |
+| external_or_gated | 118 |
+| host_or_heavy | 42 |
+| legal_or_human | 18 |
+| private_boundary | 5 |
 
 ## Claudio Master By Priority
 
@@ -47,15 +45,13 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | --- | --- |
 | P1 | 10 |
 | P2 | 6 |
-| P3 | 3 |
-| P4 | 4 |
 | UNCLASSIFIED | 3 |
 
 ## Claudio Master By Blocker
 
 | blocker | dedup_count |
 | --- | --- |
-| external_or_gated | 14 |
+| external_or_gated | 7 |
 | host_or_heavy | 6 |
 | legal_or_human | 3 |
 | private_boundary | 3 |
@@ -80,15 +76,15 @@ Status: generated snapshot. This file is evidence for triage, not proof that old
 | P2 | runtime_claudio | private_boundary | **P2** Validar sesiones/credenciales sociales reales por plataforma antes de activar publicacion automatica; hoy solo se comprobo dry-run/capacidad tecnica, no post real. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1711 | 1 |
 | P2 | runtime_claudio | host_or_heavy | **P2** Instalar dependencias faltantes en Ubuntu WSL (`live-build/lb`, `qemu-system-x86_64`, `xorriso`) y ejecutar `runtime/claudio_os_build/staging/claudio_os_blueprint/BUILD_IN_WSL.sh` para producir la ISO. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1934 | 1 |
 | P2 | runtime_claudio | host_or_heavy | **P2** Bootear ISO en QEMU antes de cualquier USB/PC2. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:1935 | 1 |
-| P3 | runtime_claudio | external_or_gated | **P3.5** Discord Q&A session | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2833 | 1 |
-| P3 | runtime_claudio | external_or_gated | **P3.6** Reseñas de Amazon (pedir a lectores) | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2834 | 1 |
-| P3 | runtime_claudio | external_or_gated | **P3.7** Colaboración con booktubers | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2835 | 1 |
-| P4 | runtime_claudio | external_or_gated | **P4.3** Testimonios reales | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2844 | 1 |
-| P4 | runtime_claudio | external_or_gated | **P4.5** Guest post en blogs de sci-fi | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2848 | 1 |
-| P4 | runtime_claudio | external_or_gated | **P4.6** Podcasts de literatura | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2849 | 1 |
-| P4 | runtime_claudio | external_or_gated | **P4.7** Colaboraciones cross-promo | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2850 | 1 |
 | UNCLASSIFIED | commercial | external_or_gated | Sincronizar dashboard de Gumroad con el catalogo local ahora que la autenticacion API ya responde. | -=MEDIOEVO=-/-=LIBROS/claudio/PENDIENTES_MASTER.md:2766 | 1 |
-| UNCLASSIFIED | commercial | legal_or_human | Rayuela muyading guide (PDF) - cmuyate from CEmuyBRO docs | -=MEDIOEVO=-/-=LIBROS/claudio/commercial/GUMROAD_PRODUCTS_READY.md:444 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Argus hardwamuy integration | -=MEDIOEVO=-/-=LIBROS/claudio/grants/LACMA_APPLICATION_2026.md:95 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Configurar Gumroad/Patmuyon con tiers | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/DECISION_MARKETING_SaaS_20260410.md:102 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Hook en primeros 3 segundos: ruido digital + pantalla oscura (cumplido en escena 1) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:166 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Problema muyconocible en 0-6s (abrumamiento) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:167 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Solucion clara en 6-24s (ciudad que cmuyce) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:168 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Identificacion emocional en 24-36s (personas muyales) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:169 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Climax + CTA en 48-60s (runa + url) | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:170 | 1 |
+| UNCLASSIFIED | commercial | external_or_gated | Audio contrastante con silencio inicial | -=MEDIOEVO=-/-=LIBROS/claudio/marketing/TRAILER_ARGUS_20260417.md:171 | 1 |
 
 ## Kairos Fastlane
 

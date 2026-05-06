@@ -1,6 +1,6 @@
 # Curador SETO Master Index
 
-Generated UTC: `2026-05-06T09:35:01.706310+00:00`
+Generated UTC: `2026-05-06T10:05:01.753824+00:00`
 
 Fuente canonica operativa para Downloads. SQLite es la base consultable; las fichas Markdown son la capa humana.
 

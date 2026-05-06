@@ -1,6 +1,6 @@
 # Atlas Main - Curador SETO
 
-Generated UTC: `2026-05-06T09:35:01.707312+00:00`
+Generated UTC: `2026-05-06T10:05:01.753824+00:00`
 
 Mapa operativo para que humanos y agentes naveguen el sistema. `Downloads` es INBOX; el canon vive por continentes, ciudades, fichas y sinapsis.
 

@@ -30,6 +30,23 @@ def test_batch_migration_builds_root_document_entries(tmp_path):
     assert entries[0].action == "MOVE"
 
 
+def test_batch_migration_builds_root_python_entries(tmp_path):
+    write(tmp_path / "tool.py", "print('x')")
+    write(tmp_path / "note.md", "# note")
+
+    entries = claudio_root_batch_migration.build_entries(
+        tmp_path,
+        "root_python_script",
+        limit=None,
+        include_tracked_clean=True,
+    )
+
+    assert len(entries) == 1
+    assert entries[0].name == "tool.py"
+    assert "tools" in entries[0].destination
+    assert "root_scripts_review" in entries[0].destination
+
+
 def test_batch_migration_apply_moves_files_and_writes_manifest(tmp_path):
     target = tmp_path / "claudio"
     output = tmp_path / "out"

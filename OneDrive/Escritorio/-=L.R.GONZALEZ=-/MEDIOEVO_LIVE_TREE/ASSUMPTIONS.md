@@ -28,3 +28,11 @@
 - El navegador debe mostrar estado MCP, no conectarse al servidor MCP.
 - `messagebus:mcp:smoke` es la prueba minima de salud para Run 6 antes de crear A2A local.
 - Run 6 puede crear fixtures/simulaciones locales, pero no debe escribir al ledger principal ni abrir red publica.
+
+# Run 6 - supuestos operativos
+
+- `scripts/agents` es la ubicacion correcta para codigo Node-only del bridge.
+- Las Agent Cards locales son suficientes para simular routing sin adoptar A2A remoto.
+- Reusar handlers puros de MCP es mas estable que invocar stdio desde tests.
+- El panel `/telecom` debe reportar estado del bridge, no conectar el navegador al bridge.
+- Run 7 debe crear propuestas firmadas en memoria antes de cualquier storage de proposals.

@@ -30,3 +30,12 @@
 - Tools habilitadas son solo lectura: `get_log_stats`, `verify_hash_chain`, `replay_channel`, `get_agent_inbox`, `get_agent_outbox`, `get_task_queue`, `export_handoff`, `export_witnesslog`.
 - Cualquier tool con verbo write queda bloqueada por `mcpReadOnlyGuards`.
 - Run 6 debe construir Agent Bridge / A2A local adapter sobre MCP read-only, no sobre backend externo.
+
+# Run 6 - Agent Bridge / A2A local
+
+- `Agent Bridge` queda implementado como capa Node-only local bajo `scripts/agents`.
+- Las Agent Cards locales definen capacidades, handoff targets, forbidden actions y aprobaciones requeridas.
+- El protocolo `medioevo-a2a-local` es solo envelope de simulacion y routing; no es red publica.
+- El MCP adapter reutiliza handlers puros read-only de Run 5; no llama tools de escritura.
+- El router prioriza seguridad sobre publicacion cuando hay secreto, token o frontera privada.
+- Run 7 debe construir ActionGate write proposals en memoria antes de cualquier escritura real.

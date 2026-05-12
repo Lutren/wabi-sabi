@@ -2,58 +2,58 @@
 
 ## Estado
 
-R_close: 0.19
-Phi_eff: 0.86
+R_close: 0.18
+Phi_eff: 0.87
 Regimen: FUNCIONAL
 Autonomy level: 3
 
 ## Decisiones tomadas
 
-- Run 5 creo servidor MCP read-only local por stdio sobre JSONL durable.
-- El acceso MCP vive solo en scripts Node-only bajo `scripts/messagebus`.
-- React `/telecom` sigue sin importar SDK MCP, `fs`, `path`, `crypto` ni scripts Node-only.
-- Write tools MCP quedan bloqueadas por `mcpReadOnlyGuards`.
-- Run 6 queda como Agent Bridge / A2A local adapter sobre MCP read-only.
+- Run 6 creo Agent Bridge / A2A local adapter sobre MCP read-only.
+- El bridge vive solo en scripts Node-only bajo `scripts/agents`.
+- A2A es `medioevo-a2a-local`; no hay red publica ni servidor nuevo.
+- MCP se consume por handlers read-only de Run 5.
+- Router bloquea acciones peligrosas y prioriza seguridad sobre publicacion.
+- `/telecom` muestra estado del Agent Bridge sin importar Node-only ni MCP SDK.
 
 ## Cambios realizados
 
-- Se crearon `mcp-server.mjs`, `mcp-smoke.mjs`, `mcpResources.mjs`, `mcpTools.mjs`, `mcpReadOnlyGuards.mjs`, `mcpSchemas.mjs`.
-- Se agrego dependencia `@modelcontextprotocol/sdk` y scripts `messagebus:mcp`, `messagebus:mcp:smoke`.
-- Se agrego `src/messagebus/mcpReadOnly.test.mjs`.
-- `/telecom` recibio seccion minima `MCP Read-Only Layer`.
-- Se crearon reportes Run 5 y tareas Run 6.
+- Se crearon Agent Cards locales para Codex, Publisher, Canon Auditor, Security Gate, UI y MessageBus Reader.
+- Se crearon schema, registry, envelope local, router, simulator, decision trace, bridge health y MCP adapter.
+- Se agrego `agents:bridge:smoke`.
+- Se agrego `src/messagebus/agentBridge.test.mjs`.
+- Se agrego panel minimo `Agent Bridge / Local A2A Layer`.
+- Se crearon reportes Run 6 y tareas Run 7.
 
 ## Evidencia
 
-- `npm test -- src/messagebus`: PASSED, 7 test files, 37 tests.
-- `npm test`: PASSED, 8 test files, 48 tests.
+- `npm test -- src/messagebus`: PASSED, 8 test files, 51 tests.
+- `npm test`: PASSED, 9 test files, 62 tests.
 - `npx tsc -b --pretty false`: PASSED.
 - `npm run build`: PASSED.
-- `messagebus:mcp:smoke`: PASSED, `ok=true`.
-- MCP server factory import: PASSED, `hasConnect=true`.
+- `npm run messagebus:mcp:smoke`: PASSED, `ok=true`.
+- `npm run agents:bridge:smoke`: PASSED, `ok=true`.
 - `python -m compileall -q .`: PASSED en `MEDIOEVO_LIVE_TREE`.
 - `pytest -q`: NOT_APPLICABLE; no hay suite Python en `MEDIOEVO_LIVE_TREE`.
 - `http://127.0.0.1:5174/telecom`: PASSED_LOCAL.
-- `src/ui/TelecomCore.tsx` servido por Vite contiene `MCP Read-Only Layer` y no contiene imports Node-only ni SDK MCP.
+- `src/ui/TelecomCore.tsx`: contiene `Agent Bridge / Local A2A Layer` y no contiene `scripts/agents`, `scripts/messagebus`, SDK MCP ni Node-only imports.
 - `npm audit --omit=dev --json`: PASSED, 0 prod vulnerabilities.
 - `npm audit --json`: REVIEW, 5 moderate dev vulnerabilities in Vite/Vitest/esbuild chain.
 
 ## Pendientes reales
 
-- Crear Agent Bridge / A2A local adapter sobre MCP read-only.
-- Crear agent cards locales.
-- Simular handoff entre agentes sin escritura remota.
-- Migrar `localStorage` browser hacia JSONL durable si se decide consolidar historial.
-- Migrar `ack/resolve/block` legacy a eventos derivados append-only.
-- Verificar `evidence_refs` sin imprimir secretos.
+- Crear ActionGate write proposal layer.
+- Crear proposals firmadas para `append_message`, `create_task`, `update_handoff`, `publish_release`.
+- Simular aprobacion/rechazo del operador.
+- Mantener ejecucion automatica bloqueada hasta aprobacion explicita.
+- Consolidar `localStorage` browser hacia JSONL durable si se decide migrar historial.
 
 ## Riesgos
 
-- Secret scan Run 1 mantiene bloqueados push/deploy/publicacion.
-- ZIP reconstructivo sigue sin revision profunda.
+- Secret scan global mantiene bloqueados push/deploy/publicacion por rutas fuera del carril.
+- ZIP reconstructivo sigue sin validacion profunda.
 - El log JSONL principal contiene solo muestra Run 4 inicial.
-- JSONL durable detecta alteraciones por hash-chain, pero no impide manipulacion fisica del archivo.
-- Seed UI/runtime puede divergir si no se consolida con JSONL.
+- Agent Bridge no impide manipulacion fisica del archivo; verifica no mutacion durante sus operaciones.
 - `npm audit --json` reporta 5 moderadas dev; aplicar upgrade mayor queda para revision separada.
 
 ## Bloqueos
@@ -63,12 +63,13 @@ Autonomy level: 3
 - No rename.
 - No deploy.
 - No publication.
+- No push.
 - No secret printing.
-- No Supabase ni credenciales.
+- No Supabase ni backend externo.
 
 ## Proxima accion verificable
 
-Implementar Agent Bridge / A2A local adapter que consuma MCP read-only, cree agent cards locales y simule handoff entre agentes sin escritura remota.
+Crear Run 7 ActionGate write proposal layer con propuestas firmadas en memoria y tests de aprobacion/rechazo, sin ejecutar escrituras reales.
 
 ## Segunda perdida
 

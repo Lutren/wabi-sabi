@@ -1,31 +1,40 @@
 {
   "schema_version": "observacionismo.session_fingerprint.live_tree.v2",
-  "session_id": "20260512-045835",
-  "project": "MEDIOEVO/OSIT DUAT TELECOM CORE",
-  "fingerprint": "MDV-MESSAGEBUS-RUN5-91C7",
-  "previous_fingerprint": "MDV-MESSAGEBUS-RUN4-8E2B",
-  "R_close": 0.19,
-  "Phi_eff": 0.86,
+  "session_id": "20260512-053600",
+  "project": "MEDIOEVO/OSIT DUAT AGENT BRIDGE",
+  "fingerprint": "MDV-AGENT-BRIDGE-RUN6-4D19",
+  "previous_fingerprint": "MDV-MESSAGEBUS-RUN5-91C7",
+  "R_close": 0.18,
+  "Phi_eff": 0.87,
   "regime_close": "FUNCIONAL",
   "autonomy_level_used": 3,
   "actiongate_summary": {
-    "approved_local_readonly": 1,
+    "approved_local_readmostly": 1,
     "review_required": 1,
-    "blocked": 7
+    "blocked": 8
   },
   "files_created": [
-    "00_START_HERE/LIVE_TREE_STATUS_RUN_5.md",
-    "03_SYSTEMS/MESSAGEBUS_MCP_READONLY_SERVER.md",
-    "09_OPERACION/HANDOFF_RUN_5.md",
-    "09_OPERACION/TASKS_RUN_6.md",
-    "10_QUALITY/MESSAGEBUS_MCP_READONLY_TEST_REPORT.md",
-    "../../Documentos/New project 3/scripts/messagebus/mcp-server.mjs",
-    "../../Documentos/New project 3/scripts/messagebus/mcp-smoke.mjs",
-    "../../Documentos/New project 3/scripts/messagebus/lib/mcpResources.mjs",
-    "../../Documentos/New project 3/scripts/messagebus/lib/mcpTools.mjs",
-    "../../Documentos/New project 3/scripts/messagebus/lib/mcpReadOnlyGuards.mjs",
-    "../../Documentos/New project 3/scripts/messagebus/lib/mcpSchemas.mjs",
-    "../../Documentos/New project 3/src/messagebus/mcpReadOnly.test.mjs"
+    "00_START_HERE/LIVE_TREE_STATUS_RUN_6.md",
+    "03_SYSTEMS/AGENT_BRIDGE_A2A_LOCAL.md",
+    "09_OPERACION/HANDOFF_RUN_6.md",
+    "09_OPERACION/TASKS_RUN_7.md",
+    "10_QUALITY/AGENT_BRIDGE_RUN_6_TEST_REPORT.md",
+    "../../Documentos/New project 3/scripts/agents/agent-bridge-smoke.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/agentCardSchema.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/agentRegistry.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/localA2AEnvelope.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/agentRouter.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/handoffSimulator.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/decisionTrace.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/bridgeHealth.mjs",
+    "../../Documentos/New project 3/scripts/agents/lib/mcpClientAdapter.mjs",
+    "../../Documentos/New project 3/scripts/agents/cards/codex-agent.card.json",
+    "../../Documentos/New project 3/scripts/agents/cards/publisher-agent.card.json",
+    "../../Documentos/New project 3/scripts/agents/cards/canon-auditor-agent.card.json",
+    "../../Documentos/New project 3/scripts/agents/cards/security-gate-agent.card.json",
+    "../../Documentos/New project 3/scripts/agents/cards/ui-agent.card.json",
+    "../../Documentos/New project 3/scripts/agents/cards/messagebus-reader-agent.card.json",
+    "../../Documentos/New project 3/src/messagebus/agentBridge.test.mjs"
   ],
   "files_modified": [
     "SESSION_FINGERPRINT.json",
@@ -35,56 +44,54 @@
     "RISKS.md",
     "ASSUMPTIONS.md",
     "TEST_REPORT.md",
-    "03_SYSTEMS/MEDIOEVO_MESSAGEBUS.md",
     "../../Documentos/New project 3/package.json",
-    "../../Documentos/New project 3/package-lock.json",
     "../../Documentos/New project 3/src/ui/TelecomCore.tsx",
     "../../Documentos/New project 3/src/styles.css"
   ],
   "commands_run": [
     "python tools\\release\\pending_review.py --write --quiet",
-    "npm install @modelcontextprotocol/sdk",
     "npm test -- src/messagebus",
-    "npm run messagebus:mcp:smoke",
+    "npm run agents:bridge:smoke",
     "npm test",
     "npx tsc -b --pretty false",
-    "node -e import('./scripts/messagebus/mcp-server.mjs')...",
     "npm run build",
+    "npm run messagebus:mcp:smoke",
+    "npm audit --omit=dev --json",
+    "npm audit --json",
     "python -m compileall -q .",
     "pytest -q check: NOT_APPLICABLE",
     "Invoke-WebRequest http://127.0.0.1:5174/telecom",
-    "Invoke-WebRequest http://127.0.0.1:5174/src/ui/TelecomCore.tsx",
-    "npm audit --json",
-    "npm audit --omit=dev --json"
+    "Select-String src/ui/TelecomCore.tsx Agent Bridge / forbidden imports"
   ],
   "tests": {
     "status": "passed",
     "evidence": [
-      "npm test -- src/messagebus passed: 7 test files, 37 tests",
-      "npm test passed: 8 test files, 48 tests",
+      "npm test -- src/messagebus passed: 8 test files, 51 tests",
+      "npm test passed: 9 test files, 62 tests",
       "npx tsc -b --pretty false passed",
       "npm run build passed: 1600 modules transformed",
       "npm run messagebus:mcp:smoke passed: ok=true resources=7 tools=8",
-      "MCP server factory import passed: hasConnect=true",
+      "npm run agents:bridge:smoke passed: ok=true agents=6",
       "python -m compileall -q . passed",
       "pytest not applicable: no Python test suite detected in MEDIOEVO_LIVE_TREE",
       "local dev server http://127.0.0.1:5174/telecom returned 200",
-      "TelecomCore source contains MCP Read-Only Layer and no MCP SDK or Node-only imports"
+      "TelecomCore source contains Agent Bridge / Local A2A Layer and no MCP SDK or Node-only imports",
+      "npm audit --omit=dev --json passed: 0 prod vulnerabilities"
     ]
   },
   "decisions": [
-    "Run 5 implements real MCP stdio server using @modelcontextprotocol/sdk",
-    "MCP handlers are read-only and live outside React under scripts/messagebus",
-    "No write tools are registered; write verbs are blocked by mcpReadOnlyGuards",
-    "React /telecom reports MCP status only and does not connect to MCP",
-    "Run 6 should implement Agent Bridge / A2A local adapter over MCP read-only"
+    "Run 6 implements Agent Bridge as local Node-only layer under scripts/agents",
+    "A2A-like envelope is local-only and does not open network or write durable JSONL",
+    "MCP adapter reuses Run 5 pure read-only handlers",
+    "Router prioritizes security over publishing when secrets/private boundary are present",
+    "Run 7 should implement ActionGate write proposals in memory before any write tools"
   ],
   "pending": [
-    "Agent Bridge / A2A local adapter",
-    "Local agent cards",
-    "Simulated inter-agent handoff using read-only MCP",
+    "ActionGate write proposal layer",
+    "Signed proposal schema",
+    "Simulated operator approve/reject",
     "localStorage to JSONL migration plan",
-    "ActionGate design for future write tools"
+    "Dev dependency upgrade review for Vite/Vitest/esbuild"
   ],
-  "next_action": "Implementar Agent Bridge / A2A local adapter sobre MCP read-only sin escritura remota."
+  "next_action": "Crear Run 7 ActionGate write proposal layer con propuestas firmadas y tests de aprobacion/rechazo, sin escrituras reales."
 }

@@ -46,3 +46,15 @@
 - [ ] P1 Agregar smoke `messagebus:a2a:smoke`.
 - [ ] P1 Verificar que `messagebus:mcp:smoke`, `npm test`, `npx tsc -b` y `npm run build` siguen pasando.
 - [ ] P2 Disenar resources derivados `messagebus://artifacts`, `messagebus://bulletin/latest`, `messagebus://security/p0`.
+
+# Run 6 cierre / Run 7 entrada
+
+- [x] P1 Crear Agent Bridge / A2A local adapter sobre MCP read-only.
+- [x] P1 Crear agent cards locales: Codex Agent, Publisher Agent, Canon Auditor Agent, Security Gate Agent, UI Agent, MessageBus Reader Agent.
+- [x] P1 Simular handoff local entre agentes sin escritura remota.
+- [x] P1 Agregar smoke `agents:bridge:smoke`.
+- [x] P1 Verificar `messagebus:mcp:smoke`, `npm test`, `npx tsc -b` y `npm run build`.
+- [ ] P1 Crear ActionGate write proposal layer.
+- [ ] P1 Crear proposals firmadas: `append_message`, `create_task`, `update_handoff`, `publish_release`.
+- [ ] P1 Simular aprobacion/rechazo del operador.
+- [ ] P2 Disenar storage separado de proposals sin tocar `messagebus-main.jsonl`.

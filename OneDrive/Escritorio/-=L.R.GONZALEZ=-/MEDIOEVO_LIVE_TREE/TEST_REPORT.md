@@ -86,3 +86,20 @@ Reporte detallado: `10_QUALITY/MESSAGEBUS_DURABLE_TEST_REPORT.md`.
 - `npm audit --json`: `REVIEW`, 5 moderate dev vulnerabilities in Vite/Vitest/esbuild chain.
 
 Reporte detallado: `10_QUALITY/MESSAGEBUS_MCP_READONLY_TEST_REPORT.md`.
+
+## Run 6 - Agent Bridge / A2A local adapter
+
+- `npm test -- src/messagebus`: `PASSED`, 8 test files, 51 tests.
+- `npm test`: `PASSED`, 9 test files, 62 tests.
+- `npx tsc -b --pretty false`: `PASSED`.
+- `npm run build`: `PASSED`, 1600 modules transformed.
+- `npm run messagebus:mcp:smoke`: `PASSED`, `ok=true`, resources 7, tools 8.
+- `npm run agents:bridge:smoke`: `PASSED`, `ok=true`, agents 6.
+- `python -m compileall -q .`: `PASSED` en `MEDIOEVO_LIVE_TREE`.
+- `pytest -q`: `NOT_APPLICABLE`; no se detecto suite Python.
+- `/telecom`: `PASSED_LOCAL`, HTTP 200.
+- `TelecomCore.tsx`: `PASSED_LOCAL`; contiene `Agent Bridge / Local A2A Layer` y no contiene SDK MCP ni Node-only imports.
+- `npm audit --omit=dev --json`: `PASSED`, 0 prod vulnerabilities.
+- `npm audit --json`: `REVIEW`, 5 moderate dev vulnerabilities in Vite/Vitest/esbuild chain.
+
+Reporte detallado: `10_QUALITY/AGENT_BRIDGE_RUN_6_TEST_REPORT.md`.

@@ -28,3 +28,11 @@
 - El guard bloquea nombres de tools write, pero futuras write tools deben requerir ActionGate y nuevos tests.
 - `npm audit --json` reporta 5 vulnerabilidades moderadas dev en Vite/Vitest/esbuild; `npm audit --omit=dev` queda en 0, por lo que no bloquea MCP local read-only.
 - Run 6 A2A debe mantenerse local/simulado; cualquier red publica, push, deploy o publish sigue bloqueado.
+
+# Run 6 - riesgos Agent Bridge local
+
+- El Agent Bridge valida que sus operaciones no cambien el JSONL, pero no impide manipulacion fisica externa del archivo.
+- Agent Cards son contratos locales; no deben presentarse como A2A publico ni interoperabilidad remota completa.
+- El router es por palabras clave; decisiones criticas deben pasar por ActionGate y evidencia.
+- Las propuestas de Run 7 pueden amplificar riesgo si se convierten en escritura automatica sin aprobacion explicita.
+- `npm audit --json` mantiene 5 vulnerabilidades moderadas dev; upgrade mayor queda en REVIEW y no se ejecuto en Run 6.

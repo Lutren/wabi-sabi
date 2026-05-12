@@ -21,3 +21,12 @@
 - `messagebus-main.jsonl` queda como ledger durable inicial para Run 5.
 - `/telecom` conserva `localStorage` y solo muestra estado/plan durable.
 - MCP read-only queda como siguiente run; no se crea servidor en Run 4.
+
+# Run 5 - MCP read-only
+
+- `MEDIOEVO MessageBus` queda expuesto por servidor MCP real stdio/local usando `@modelcontextprotocol/sdk`.
+- Los handlers MCP son Node-only y viven bajo `scripts/messagebus`; React no importa SDK MCP ni acceso a disco.
+- Resources habilitadas: `messagebus://logs`, `messagebus://channels`, `messagebus://agents`, `messagebus://tasks`, `messagebus://handoffs`, `messagebus://witnesslog`, `messagebus://health`.
+- Tools habilitadas son solo lectura: `get_log_stats`, `verify_hash_chain`, `replay_channel`, `get_agent_inbox`, `get_agent_outbox`, `get_task_queue`, `export_handoff`, `export_witnesslog`.
+- Cualquier tool con verbo write queda bloqueada por `mcpReadOnlyGuards`.
+- Run 6 debe construir Agent Bridge / A2A local adapter sobre MCP read-only, no sobre backend externo.

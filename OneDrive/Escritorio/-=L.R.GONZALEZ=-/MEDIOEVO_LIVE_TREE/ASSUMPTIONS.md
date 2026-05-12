@@ -20,3 +20,11 @@
 - El navegador no escribe a disco; solo puede exportar archivos descargables.
 - Los scripts Node-only pueden leer/escribir JSONL local porque corren fuera del cliente.
 - Run 5 debe construir MCP read-only sobre el JSONL verificado, no sobre estado browser.
+
+# Run 5 - supuestos operativos
+
+- `@modelcontextprotocol/sdk` es aceptable para MCP local stdio porque el prompt Run 5 autorizo instalarlo si era seguro.
+- MCP read-only debe operar solo sobre el ledger JSONL durable y handlers derivados.
+- El navegador debe mostrar estado MCP, no conectarse al servidor MCP.
+- `messagebus:mcp:smoke` es la prueba minima de salud para Run 6 antes de crear A2A local.
+- Run 6 puede crear fixtures/simulaciones locales, pero no debe escribir al ledger principal ni abrir red publica.

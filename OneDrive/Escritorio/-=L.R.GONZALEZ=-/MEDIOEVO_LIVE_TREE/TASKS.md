@@ -27,12 +27,22 @@
 
 # Run 4 cierre / Run 5 entrada
 
-- [ ] P1 Crear MCP read-only server local sobre `messagebus-main.jsonl`.
-- [ ] P1 Exponer resource `messagebus://logs`.
-- [ ] P1 Exponer resource `messagebus://channels`.
-- [ ] P1 Exponer resource `messagebus://agents`.
-- [ ] P1 Exponer resource `messagebus://tasks`.
-- [ ] P1 Exponer resource `messagebus://handoffs`.
-- [ ] P1 Exponer resource `messagebus://witnesslog`.
-- [ ] P1 Tools read-only: `get_log_stats`, `verify_hash_chain`, `replay_channel`, `get_agent_inbox`, `export_handoff`.
+- [x] P1 Crear MCP read-only server local sobre `messagebus-main.jsonl`.
+- [x] P1 Exponer resource `messagebus://logs`.
+- [x] P1 Exponer resource `messagebus://channels`.
+- [x] P1 Exponer resource `messagebus://agents`.
+- [x] P1 Exponer resource `messagebus://tasks`.
+- [x] P1 Exponer resource `messagebus://handoffs`.
+- [x] P1 Exponer resource `messagebus://witnesslog`.
+- [x] P1 Exponer resource `messagebus://health`.
+- [x] P1 Tools read-only: `get_log_stats`, `verify_hash_chain`, `replay_channel`, `get_agent_inbox`, `get_agent_outbox`, `get_task_queue`, `export_handoff`, `export_witnesslog`.
 - [ ] P2 Diseñar migracion de historial browser `localStorage` hacia JSONL durable.
+
+# Run 5 cierre / Run 6 entrada
+
+- [ ] P1 Crear Agent Bridge / A2A local adapter sobre MCP read-only.
+- [ ] P1 Crear agent cards locales: Codex Agent, Publisher Agent, Canon Auditor Agent, Security Gate Agent, UI Agent.
+- [ ] P1 Simular handoff local entre agentes sin escritura remota.
+- [ ] P1 Agregar smoke `messagebus:a2a:smoke`.
+- [ ] P1 Verificar que `messagebus:mcp:smoke`, `npm test`, `npx tsc -b` y `npm run build` siguen pasando.
+- [ ] P2 Disenar resources derivados `messagebus://artifacts`, `messagebus://bulletin/latest`, `messagebus://security/p0`.

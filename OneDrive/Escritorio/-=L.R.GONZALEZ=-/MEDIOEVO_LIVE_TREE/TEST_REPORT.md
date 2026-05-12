@@ -68,3 +68,21 @@ Reportes detallados:
 - `/telecom`: `PASSED_LOCAL`.
 
 Reporte detallado: `10_QUALITY/MESSAGEBUS_DURABLE_TEST_REPORT.md`.
+
+## Run 5 - MessageBus MCP Read-only Server
+
+- `npm install @modelcontextprotocol/sdk`: `PASSED`; SDK 1.29.0 instalado.
+- `npm test -- src/messagebus`: `PASSED`, 7 test files, 37 tests.
+- `npm test`: `PASSED`, 8 test files, 48 tests.
+- `npx tsc -b --pretty false`: `PASSED`.
+- `npm run build`: `PASSED`, 1600 modules transformed.
+- `npm run messagebus:mcp:smoke`: `PASSED`, `ok=true`, resources 7, tools 8.
+- MCP server factory import: `PASSED`, `hasConnect=true`.
+- `python -m compileall -q .`: `PASSED` en `MEDIOEVO_LIVE_TREE`.
+- `pytest -q`: `NOT_APPLICABLE`; no se detecto suite Python.
+- `/telecom`: `PASSED_LOCAL`, HTTP 200.
+- `TelecomCore.tsx`: `PASSED_LOCAL`; contiene `MCP Read-Only Layer` y no contiene SDK MCP ni Node-only imports.
+- `npm audit --omit=dev --json`: `PASSED`, 0 prod vulnerabilities.
+- `npm audit --json`: `REVIEW`, 5 moderate dev vulnerabilities in Vite/Vitest/esbuild chain.
+
+Reporte detallado: `10_QUALITY/MESSAGEBUS_MCP_READONLY_TEST_REPORT.md`.

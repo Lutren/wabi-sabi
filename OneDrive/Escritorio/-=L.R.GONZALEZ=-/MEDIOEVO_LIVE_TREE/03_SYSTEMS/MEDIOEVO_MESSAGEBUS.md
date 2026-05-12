@@ -6,6 +6,8 @@ Actualizacion Run 3: core local validable con schema validator, channel registry
 
 Actualizacion Run 4: existe ledger durable JSONL en disco y scripts Node-only para append, verify, replay, stats y export-md. React/Vite no importa acceso a disco.
 
+Actualizacion Run 5: existe servidor MCP read-only local por stdio sobre el ledger durable JSONL. Las resources y tools MCP viven fuera de React y quedan bloqueadas para escritura por `mcpReadOnlyGuards`.
+
 Implementacion UI: `C:\Users\L-Tyr\OneDrive\Documentos\New project 3\src\messagebus`
 
 ## Flujo
@@ -50,6 +52,45 @@ No usa:
 - API externa.
 - Credenciales.
 - Red.
+
+## MCP read-only Run 5
+
+Servidor:
+
+- `C:\Users\L-Tyr\OneDrive\Documentos\New project 3\scripts\messagebus\mcp-server.mjs`
+
+Smoke:
+
+- `npm run messagebus:mcp:smoke`
+
+Resources:
+
+- `messagebus://logs`
+- `messagebus://channels`
+- `messagebus://agents`
+- `messagebus://tasks`
+- `messagebus://handoffs`
+- `messagebus://witnesslog`
+- `messagebus://health`
+
+Tools read-only:
+
+- `get_log_stats`
+- `verify_hash_chain`
+- `replay_channel`
+- `get_agent_inbox`
+- `get_agent_outbox`
+- `get_task_queue`
+- `export_handoff`
+- `export_witnesslog`
+
+No implementa:
+
+- write tools;
+- servidor HTTP publico;
+- backend externo;
+- Supabase;
+- push/deploy/publicacion.
 
 ## Contrato futuro
 

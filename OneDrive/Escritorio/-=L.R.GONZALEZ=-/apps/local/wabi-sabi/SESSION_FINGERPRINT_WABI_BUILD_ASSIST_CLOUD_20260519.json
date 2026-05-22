@@ -1,0 +1,49 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI-BUILD-ASSIST-CLOUD",
+  "project": "Wabi-Sabi local-first cloud-assisted build layer",
+  "R_close": 0.18,
+  "Phi_eff": 0.82,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 4,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "files_created": [
+    "wabi_sabi/core/build_assist_cloud.py",
+    "tests/test_build_assist_cloud.py",
+    "docs/WABI_BUILD_ASSIST_CLOUD_2026-05-19.md"
+  ],
+  "files_modified": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/provider_orchestrator.py",
+    "README.md"
+  ],
+  "commands_run": [
+    "python -B -m pytest tests\\test_build_assist_cloud.py tests\\test_provider_orchestrator.py tests\\test_redaction_and_cloud_adapters.py tests\\test_cloud_code_proposal.py -q -p no:cacheprovider",
+    ".\\wabi.cmd build-assist-status --json --workspace C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+    ".\\wabi.cmd build-assist-plan \"crear helper seguro\" --dry-run --json --workspace C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+    "python -B -m pytest -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "37 passed in 5.69s",
+      "317 passed in 114.72s",
+      "build-assist-status: cloud_live_ready=false, default_model_alias=nano-30b, real_apply_allowed=false",
+      "build-assist-plan dry-run: cloud_provider_called=false, provider_requested=nano-30b"
+    ]
+  },
+  "decisions": [
+    "Wabi build-assist cloud is temporary construction scaffolding, not final runtime identity.",
+    "NVIDIA default for build-assist is nano-30b; super/ultra remain manual review.",
+    "Cloud output remains proposal-only and must validate locally before PatchPlan/TaskSpec."
+  ],
+  "pending": [
+    "Optional live NVIDIA smoke with WABI_BUILD_ASSIST_CLOUD=1 and WABI_ALLOW_CLOUD_PROVIDERS=1, using a non-private prompt.",
+    "Expose build-assist state in UI if the operator needs a visual cockpit."
+  ],
+  "next_action": "Run one reviewed NVIDIA nano-30b proposal smoke on a synthetic prompt, then inspect cloud_provider_called and usage log without applying source changes."
+}

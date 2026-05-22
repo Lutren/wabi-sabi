@@ -1,0 +1,54 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260518-WABI-CLOUD-PROVIDER-GATED-v0-2",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "state_fingerprint": "WABI-CLOUD-PROVIDER-GATED-v0-2-20260518",
+  "R_close": 0.07,
+  "Phi_eff": 0.91,
+  "regime_close": "OPTIMO",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 8,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "files_created": [
+    "SESSION_FINGERPRINT_WABI_CLOUD_PROVIDER_20260518.json"
+  ],
+  "files_modified": [
+    "wabi_sabi/core/cloud_code_proposal.py",
+    "wabi_sabi/core/task_spec_planner.py",
+    "wabi_sabi/cli/main.py",
+    "tests/test_cloud_code_proposal.py",
+    "README.md",
+    "docs/ARCHITECTURE.md",
+    "docs/USAGE.md",
+    "DECISIONS.md",
+    "TASKS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TEST_REPORT.md",
+    "NEXT_SESSION_BRIEF.md",
+    "SESSION_FINGERPRINT.json"
+  ],
+  "commands_run": [
+    "python -m pytest -q",
+    ".\\wabi.cmd run-safe-tests --json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "226 passed in 140.07s",
+      "run-safe-tests ok=true; 226 passed in 74.97s; witness_verified=true"
+    ]
+  },
+  "decisions": [
+    "provider output must become validated JSON proposal before planning",
+    "cloud provider remains proposal-only",
+    "apply remains separated through task-spec-apply"
+  ],
+  "pending": [
+    "cloud-debug-loop dry-run/mock"
+  ],
+  "next_action": "Implement cloud-debug-loop in dry-run/mock mode with rollback and sanitized error handoff."
+}

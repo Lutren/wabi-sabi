@@ -4,8 +4,8 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "wabi-sabi-local-agents"
-version = "0.2.0"
-description = "Local-first Wabi Sabi CLI with safe agent routing, Codex bridge, and evidence logs."
+version = "0.6.0"
+description = "Local-first Wabi Sabi CLI with instant auto routing, background Codex jobs, policy workpacks, and evidence logs."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = []

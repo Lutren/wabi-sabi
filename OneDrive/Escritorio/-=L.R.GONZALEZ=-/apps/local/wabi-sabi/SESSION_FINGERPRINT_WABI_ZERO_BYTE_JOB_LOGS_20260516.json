@@ -1,0 +1,73 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-ZERO-BYTE-JOB-LOG-MANIFEST",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "runtime_zero_byte_job_logs",
+  "R_close": 0.04,
+  "Phi_eff": 0.95,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 1,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "summary": {
+    "job_json_count": 17,
+    "job_log_count": 34,
+    "zero_byte_log_count": 34,
+    "paired_json_exists_count": 17,
+    "paired_json_valid_count": 17,
+    "deleted_files": 0,
+    "bytes_reclaimable": 0
+  },
+  "manifest": [
+    {"job_id": "20260506-084323-8b830bc7", "json_bytes": 2754, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-084355-1be93cf9", "json_bytes": 2775, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-084532-9247fbef", "json_bytes": 2754, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-084604-06ab4a2a", "json_bytes": 2775, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-084924-a225d008", "json_bytes": 3204, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-085610-f4c49386", "json_bytes": 1298, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-085901-f483af81", "json_bytes": 3976, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-090358-ebaf7369", "json_bytes": 1077, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-090643-b913e766", "json_bytes": 3964, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-090700-8816c774", "json_bytes": 4403, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-091339-dc602c93", "json_bytes": 3778, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-091613-38996216", "json_bytes": 3678, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-092153-43d3619e", "json_bytes": 7030, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-100445-e614fbee", "json_bytes": 6185, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-102047-92448110", "json_bytes": 7099, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260506-102424-10c06120", "json_bytes": 7100, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true},
+    {"job_id": "20260507-143702-a8666ee9", "json_bytes": 9037, "stdout_bytes": 0, "stderr_bytes": 0, "json_valid": true}
+  ],
+  "files_created": [
+    "docs/WABI_SABI_ZERO_BYTE_JOB_LOG_MANIFEST_2026-05-16.md",
+    "SESSION_FINGERPRINT_WABI_ZERO_BYTE_JOB_LOGS_20260516.json"
+  ],
+  "commands_run": [
+    "Enumerated runtime/jobs/*.stdout.log and runtime/jobs/*.stderr.log",
+    "Validated matching runtime/jobs/*.json files exist and parse as JSON",
+    "Did not print job prompt/output/error content",
+    "Did not delete job logs",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --execute --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-zero-byte-manifest-executed-2026-05-16.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-zero-byte-manifest-final-2026-05-16.json"
+  ],
+  "tests": {
+    "status": "not_run_docs_only",
+    "evidence": [
+      "34/34 job logs are zero bytes.",
+      "17/17 paired job JSON files exist.",
+      "17/17 paired job JSON files parse successfully.",
+      "Final regenerable postcheck after manifest: approved=0, blocked=0, bytes=0, errors=0."
+    ]
+  },
+  "decisions": [
+    "Do not delete zero-byte job logs in this pass because they reclaim 0 bytes and remain runtime evidence.",
+    "Classify zero-byte job logs as REVIEW_READY_DELETE_ZERO_BYTE_LOGS.",
+    "Keep job JSON files as evidence."
+  ],
+  "pending": [
+    "Deletion of zero-byte job logs requires explicit runtime cleanup gate."
+  ],
+  "next_action": "No further cleanup is required in Wabi-Sabi unless a private local commit or explicit runtime delete gate is requested."
+}

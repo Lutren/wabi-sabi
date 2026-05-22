@@ -1,0 +1,18 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260518-WABI-CLOUD-CODE-PROPOSAL-v0-1",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "state_fingerprint": "WABI-CLOUD-CODE-PROPOSAL-v0-1-20260518",
+  "R_close": 0.09,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL",
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "py_compile PASS",
+      "tests/test_cloud_code_proposal.py: 6 passed in 2.27s",
+      "cloud proposal + task spec + CLI focal: 26 passed in 41.87s"
+    ]
+  },
+  "next_action": "Implement cloud-proposal-from-provider as dry-run/mock first, live-gated later."
+}

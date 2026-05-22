@@ -1,0 +1,90 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI_UI_CONVERSATION_ENGINE",
+  "project": "MEDIOEVO/CLAUDIO/WABI",
+  "fingerprint": "WABI_UI_CONVERSATION_ENGINE_20260519",
+  "R_close": 0.13,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 6,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "CLOUD_BUDGET_DRY_RUN",
+    "UIGate": "LOCAL_UI_CONVERSATION_READY",
+    "ConversationGate": "API_CONNECTED_TO_CONVERSATION_ENGINE",
+    "GraphicsGate": "PLAN_ONLY_READY / graphics_live=false",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "docs/WABI_UI_CONVERSATION_ENGINE_2026-05-19.md",
+    "SESSION_FINGERPRINT_WABI_UI_CONVERSATION_ENGINE_20260519.json",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_conversation_api.py"
+  ],
+  "files_modified": [
+    "wabi_sabi/core/conversation_engine.py",
+    "docs/WABI_UI_VISUAL_QA_CLOUD_BUDGET_2026-05-19.md",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/index.html"
+  ],
+  "commands_run": [
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py -q -p no:cacheprovider",
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_conversation_api.py -q -p no:cacheprovider",
+    "python -B -m pytest tests\\test_conversation_engine.py tests\\test_conversational_cli.py tests\\test_graphics_bridge.py tests\\test_cloud_budget.py tests\\test_cloud_budget_ui_status.py tests\\test_build_assist_cloud.py -q -p no:cacheprovider",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m py_compile 02_CLAUDIO\\server\\wabi_local_server.py",
+    "python -B -m py_compile wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\graphics_bridge.py wabi_sabi\\core\\cloud_budget.py wabi_sabi\\cli\\main.py",
+    ".\\wabi.cmd --once \"hola wabi\"",
+    ".\\wabi.cmd build-assist-status --json",
+    ".\\wabi.cmd build-assist-plan \"crear helper seguro\" --dry-run --json",
+    "@('/status','/providers','/exit') | .\\wabi.cmd",
+    "Invoke-RestMethod http://127.0.0.1:8787/api/conversation/turn",
+    "msedge --headless=new --screenshot http://127.0.0.1:8787/"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "BRAIN_OS local server focal: 229 passed in 173.21s",
+      "BRAIN_OS conversation API: 6 passed in 10.66s",
+      "Wabi focal conversation/cloud/graphics/build-assist: 43 passed in 69.12s",
+      "Wabi full: 353 passed in 218.37s",
+      "BRAIN_OS full: 745 passed in 196.72s",
+      "py_compile PASS"
+    ]
+  },
+  "manual_smokes": {
+    "ui_url": "http://127.0.0.1:8787/",
+    "old_pid": 30848,
+    "new_pid": 10552,
+    "conversation_turn_chat_general": "PASS",
+    "conversation_turn_graphics_scene_request": "PASS",
+    "conversation_turn_build_assist_request": "PASS",
+    "cloud_provider_called": false,
+    "applied_to_sources": false,
+    "graphics_live": false,
+    "publication_gate": "BLOCK"
+  },
+  "artifacts": [
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_conversation_engine_20260519/wabi_ui_conversation_engine.png"
+  ],
+  "decisions": [
+    "UI uses ConversationEngine through POST /api/conversation/turn.",
+    "UI turns are ephemeral and do not persist full prompts or artifacts.",
+    "Cloud and graphics remain proposal-only/plan-only by default."
+  ],
+  "pending": [
+    "Add UI Review TaskSpec flow without automatic apply."
+  ],
+  "next_action": "Add a UI Review TaskSpec flow that renders ConversationEngine plans and keeps apply behind a future explicit local gate."
+}

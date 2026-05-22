@@ -4,3 +4,13 @@ __pycache__/
 *.egg-info/
 build/
 dist/
+runtime/
+docs/engine/local_only/
+
+# Never commit secrets or local browser/session state.
+.env
+.env.*
+*.env
+secrets/
+wabi_sabi/velo/profile/
+*.secret

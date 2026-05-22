@@ -1,0 +1,126 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-WORKSPACE-REGENERABLE-CLEANUP",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "R_close": 0.06,
+  "Phi_eff": 0.97,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 59,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "files_created": [
+    "apps/local/wabi-sabi/docs/WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md",
+    "apps/local/wabi-sabi/docs/WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_ENGINE_MODULE_20260516.json",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_SAFE_EXECUTION_MODULE_20260516.json",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_OPERATOR_MODULE_20260516.json",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_PROVIDERS_MODULE_20260516.json",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_CURADOR_MODULE_20260516.json",
+    "apps/local/wabi-sabi/docs/WABI_SABI_RUNTIME_EVIDENCE_SUMMARY_2026-05-16.md",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_RUNTIME_EVIDENCE_20260516.json",
+    "apps/local/wabi-sabi/docs/WABI_SABI_ZERO_BYTE_JOB_LOG_MANIFEST_2026-05-16.md",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_ZERO_BYTE_JOB_LOGS_20260516.json",
+    "docs/ops/WORKSPACE_REGENERABLE_CLEANUP_2026-05-16.md",
+    "qa_artifacts/release_validation/seto-cache-cleanup-dry-run-2026-05-16.json",
+    "qa_artifacts/release_validation/seto-cache-cleanup-result-2026-05-16.json",
+    "qa_artifacts/release_validation/seto-cache-cleanup-postcheck-2026-05-16.json",
+    "qa_artifacts/release_validation/seto-cache-cleanup-final-postcheck-2026-05-16.json",
+    "qa_artifacts/release_validation/seto-cache-cleanup-final-posttest-2026-05-16.json",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_CLEANUP_20260516.json"
+  ],
+  "files_modified": [
+    "apps/local/wabi-sabi/.gitignore",
+    "docs/pending/PENDING_REVIEW_2026-05-16.md",
+    "docs/pending/PENDING_REVIEW_LATEST.md",
+    "qa_artifacts/pending/pending_review_2026-05-16.json",
+    "qa_artifacts/pending/pending_review_latest.json",
+    "apps/local/wabi-sabi/TEST_REPORT.md",
+    "apps/local/wabi-sabi/NEXT_SESSION_BRIEF.md"
+  ],
+  "regenerable_paths_removed": [
+    {
+      "path": "approved caches from qa_artifacts/release_validation/seto-cache-cleanup-result-2026-05-16.json",
+      "directory_count": 55,
+      "file_count": 349,
+      "bytes": 4546849
+    },
+    {
+      "path": "tools/release/__pycache__",
+      "directory_count": 1,
+      "file_count": 1,
+      "bytes": 15553
+    },
+    {
+      "path": "apps/local/wabi-sabi/wabi_sabi_local_agents.egg-info",
+      "directory_count": 1,
+      "file_count": 5,
+      "bytes": 2194
+    }
+  ],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet",
+    "python tools\\release\\cleanup_regenerable_cache.py --json-out qa_artifacts\\release_validation\\seto-cache-cleanup-dry-run-2026-05-16.json",
+    "python tools\\release\\cleanup_regenerable_cache.py --execute --json-out qa_artifacts\\release_validation\\seto-cache-cleanup-result-2026-05-16.json",
+    "python tools\\release\\cleanup_regenerable_cache.py --json-out qa_artifacts\\release_validation\\seto-cache-cleanup-postcheck-2026-05-16.json",
+    "Remove-Item -LiteralPath <verified workspace paths> -Recurse -Force for tools\\release\\__pycache__ and apps\\local\\wabi-sabi\\wabi_sabi_local_agents.egg-info",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B tools\\release\\cleanup_regenerable_cache.py --json-out qa_artifacts\\release_validation\\seto-cache-cleanup-final-postcheck-2026-05-16.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest -q -p no:cacheprovider",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B tools\\release\\cleanup_regenerable_cache.py --json-out qa_artifacts\\release_validation\\seto-cache-cleanup-final-posttest-2026-05-16.json",
+    "git ls-files --others --exclude-standard",
+    "git status --ignored --short -- runtime docs\\engine\\local_only",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest -q -p no:cacheprovider",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --execute --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-wabi-module-close-executed-2026-05-16.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-wabi-module-close-final-2026-05-16.json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Wabi-Sabi full suite without bytecode/cacheprovider: 209 passed in 72.40s.",
+      "Final regenerable cleanup post-test: approved=0, blocked=0, bytes=0, errors=0.",
+      "Wabi-Sabi local scan found no __pycache__, .pytest_cache, .mypy_cache, .ruff_cache or *.egg-info.",
+    "After ignoring runtime/, visible untracked files were 96 before map creation and 98 after two map docs were added.",
+    "Engine focused tests: 18 passed in 2.97s."
+      ,
+      "Safe execution focused tests: 21 passed in 19.76s."
+      ,
+      "Operator focused tests: 10 passed in 10.67s."
+      ,
+      "Providers focused tests: 35 passed in 2.17s."
+      ,
+      "Curador focused tests: 28 passed in 8.23s."
+      ,
+      "Full Wabi-Sabi suite after module closures: 209 passed in 102.70s.",
+      "Post-suite regenerable cleanup: deleted=6, deleted_bytes=1013288, errors=0.",
+      "Final regenerable postcheck: approved=0, blocked=0, bytes=0, errors=0.",
+      "Runtime evidence summarized: 194 files, 913448 bytes, no files deleted or moved."
+      ,
+      "Post-runtime-summary regenerable cleanup removed 1 tools/release/__pycache__ directory and final postcheck returned approved=0."
+      ,
+      "Zero-byte job log manifest validated 34 logs and 17 paired job JSON files; deleted_files=0."
+      ,
+      "Final post-zero-byte-manifest regenerable postcheck returned approved=0."
+    ]
+  },
+  "decisions": [
+    "Treat this cleanup as regenerable-cache cleanup only, not as broad deletion of dirty workspace files.",
+    "Keep runtime logs, private paths, secrets, vendors, releases and ambiguous material untouched.",
+    "Any non-regenerable cleanup must start with ficha, migration map and ActionGate evidence.",
+    "Choose apps/local/wabi-sabi as the next cleanup carril and close it by module.",
+    "Engine module is closed.",
+    "Safe execution module is closed.",
+    "Operator module is closed.",
+    "Providers module is closed.",
+    "Curador module is closed.",
+    "Full-suite verification passed and post-suite caches were removed.",
+    "Runtime evidence was summarized and preserved under ignored runtime/.",
+    "Regenerable cleanup is clean after runtime summary."
+  ],
+  "pending": [
+    "Workspace still has many real modified/untracked files from existing lanes; do not revert or delete without carril-specific ownership.",
+    "Zero-byte job log manifest exists; logs remain REVIEW candidates and were not deleted."
+  ],
+  "next_action": "No further safe cleanup remains in Wabi-Sabi; optional next step is private/local commit by module."
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-141234",
+  "fingerprint": "WABI_CONVERSATIONAL_CLI_20260519",
+  "project": "Wabi-Sabi Local Agents",
+  "R_close": 0.12,
+  "Phi_eff": 0.86,
+  "regime_close": "FUNCIONAL_CONVERSATIONAL_CLI",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 8,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "cloud_gate": {
+    "mode": "proposal_only",
+    "cloud_provider_called_this_run": false,
+    "nvidia_live_smoke_status_from_previous_phase": "LIVE_SMOKE_PASS",
+    "default_model_alias": "nano-30b",
+    "double_opt_in_required": [
+      "WABI_BUILD_ASSIST_CLOUD=1",
+      "WABI_ALLOW_CLOUD_PROVIDERS=1"
+    ]
+  },
+  "graphics_gate": {
+    "graphics_live": false,
+    "graphics_plan_ready": true,
+    "publication_allowed": false,
+    "external_calls_allowed": false
+  },
+  "files_created": [
+    "docs/WABI_CONVERSATIONAL_CLI_2026-05-19.md",
+    "wabi_sabi/core/conversation_engine.py",
+    "wabi_sabi/core/graphics_bridge.py",
+    "tests/test_conversational_cli.py",
+    "tests/test_conversation_engine.py",
+    "tests/test_graphics_bridge.py",
+    "SESSION_FINGERPRINT_WABI_CONVERSATIONAL_CLI_20260519.json"
+  ],
+  "files_modified": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/redaction.py",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+    "commands_run": [
+    "python -B -m pytest tests\\test_conversational_cli.py tests\\test_conversation_engine.py tests\\test_graphics_bridge.py -q -p no:cacheprovider",
+    ".\\wabi.cmd --help",
+    ".\\wabi.cmd --once \"hola wabi\" --json",
+    ".\\wabi.cmd build-assist-status --json",
+    "@'\\n/help\\n/status\\ncrea una escena de DUAT city con agentes y handoff\\nprograma un helper seguro para validar json\\n/exit\\n'@ | .\\wabi.cmd",
+    "python -B -m pytest tests\\test_conversational_cli.py tests\\test_conversation_engine.py tests\\test_graphics_bridge.py tests\\test_redaction_and_cloud_adapters.py -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\cli\\main.py wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\graphics_bridge.py wabi_sabi\\core\\redaction.py",
+    "python -m json.tool SESSION_FINGERPRINT_WABI_CONVERSATIONAL_CLI_20260519.json > $null",
+    "python -B -m pytest -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Focal conversational required: 14 passed in 3.69s",
+      "Focal conversational plus redaction: 25 passed in 15.26s",
+      "py_compile: PASS",
+      "Wabi full regression: 336 passed in 495.58s (0:08:15)",
+      "SESSION_FINGERPRINT JSON validation: PASS",
+      "Manual CLI smoke: PASS"
+    ]
+  },
+  "runtime_artifacts": [
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\graphics_bridge\\wabi_graphics_plan_20260519-140223.json",
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\conversation_tasks\\wabi_conversation_task_20260519-140223.json"
+  ],
+  "decisions": [
+    "wabi sin argumentos abre CLI conversacional.",
+    "ConversationEngine es capa comun para CLI/UI adapters.",
+    "Cloud/NVIDIA permanece proposal_only y no se aplica automaticamente.",
+    "GraphicsBridge queda plan-only hasta que exista API live estable."
+  ],
+  "pending": [
+    "Cablear UI local directamente a ConversationEngine.",
+    "Agregar presupuesto local por sesion para build-assist cloud.",
+    "Definir adapter live estable para DUAT renderer antes de activar graphics_live."
+  ],
+  "next_action": "Integrar presupuesto local de llamadas cloud por sesion en status/providers, sin activar live calls nuevas."
+}

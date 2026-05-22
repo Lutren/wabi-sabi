@@ -12,3 +12,19 @@ def test_memory_appends_events(tmp_path):
     assert events
     assert events[-1]["agent"] == "debugger"
     assert events[-1]["ok"] is True
+
+
+def test_memory_reads_conversation_summary(tmp_path):
+    runtime = tmp_path / "runtime"
+    memory = LocalMemory(runtime)
+    memory.append_memory(
+        {
+            "channel": "wabi_auto_conversation",
+            "prompt": "sacame algo para redes",
+            "route": "hybrid_codex_background",
+            "output": "ActionGate Lite para agentes",
+        }
+    )
+
+    assert "ActionGate Lite" in memory.conversation_summary()
+    assert memory.tail_memory()[-1]["route"] == "hybrid_codex_background"

@@ -4,10 +4,12 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 
+from wabi_sabi.core.user_config import default_runtime_root, ensure_user_config
+
 
 PACKAGE_ROOT = Path(__file__).resolve().parents[1]
 APP_ROOT = PACKAGE_ROOT.parent
-DEFAULT_RUNTIME = APP_ROOT / "runtime"
+DEFAULT_RUNTIME = default_runtime_root()
 DEFAULT_REGISTRY = PACKAGE_ROOT / "config" / "agents.json"
 
 
@@ -42,6 +44,7 @@ def build_config(
     registry_path: str | Path | None = None,
     safe_mode: bool = True,
 ) -> RuntimeConfig:
+    ensure_user_config()
     ws = Path(workspace or os.environ.get("WABI_WORKSPACE") or Path.cwd()).resolve()
     runtime = Path(runtime_root or os.environ.get("WABI_RUNTIME") or DEFAULT_RUNTIME).resolve()
     registry = Path(registry_path or os.environ.get("WABI_AGENT_REGISTRY") or DEFAULT_REGISTRY).resolve()

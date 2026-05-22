@@ -12,6 +12,7 @@ from typing import Any, Callable
 
 from wabi_sabi.core.gate import ActionGate
 from wabi_sabi.core.memory import LocalMemory
+from wabi_sabi.core.redaction import redact_mapping, redact_text
 from wabi_sabi.core.tools import stamp, write_artifact
 
 
@@ -33,7 +34,7 @@ class CodexBridgeResult:
     status: dict[str, Any] = field(default_factory=dict)
 
     def to_dict(self) -> dict[str, Any]:
-        return asdict(self)
+        return redact_mapping(asdict(self))
 
 
 def find_codex_command() -> str | None:
@@ -84,7 +85,7 @@ class CodexCliAdapter:
         codex_command: str,
         workspace: Path,
         runtime_root: Path,
-        runner: Callable[..., subprocess.CompletedProcess[str]] = subprocess.run,
+        runner: Callable[..., subprocess.CompletedProcess[Any]] | None = None,
     ) -> None:
         self.codex_command = codex_command
         self.workspace = workspace
@@ -114,14 +115,18 @@ class CodexCliAdapter:
             "-",
         ]
         try:
-            proc = self.runner(
-                command,
-                cwd=str(self.workspace),
-                input=prepared_prompt,
-                text=True,
-                capture_output=True,
-                timeout=timeout,
-            )
+            input_bytes = prepared_prompt.encode("utf-8")
+            if self.runner is None:
+                proc = run_process_with_timeout(command, cwd=self.workspace, input_bytes=input_bytes, timeout=timeout)
+            else:
+                proc = self.runner(
+                    command,
+                    cwd=str(self.workspace),
+                    input=input_bytes,
+                    text=False,
+                    capture_output=True,
+                    timeout=timeout,
+                )
         except subprocess.TimeoutExpired as exc:
             return CodexBridgeResult(
                 ok=False,
@@ -139,7 +144,7 @@ class CodexCliAdapter:
             text = last_message.read_text(encoding="utf-8", errors="replace").strip()
             artifacts.append(str(last_message))
         if not text:
-            text = (proc.stdout or proc.stderr or "").strip()
+            text = (_decode_process_output(proc.stdout) or _decode_process_output(proc.stderr)).strip()
         return CodexBridgeResult(
             ok=proc.returncode == 0,
             provider=self.name,
@@ -154,7 +159,7 @@ class CodexCliAdapter:
                 f"returncode={proc.returncode}",
             ],
             command=command,
-            error="" if proc.returncode == 0 else (proc.stderr or proc.stdout or "").strip()[-2000:],
+            error="" if proc.returncode == 0 else text[-2000:],
         )
 
 
@@ -206,14 +211,14 @@ class OpenAIResponsesAdapter:
                 gate="REVIEW",
                 action="openai_responses_error",
                 output="La llamada a OpenAI Responses API fallo.",
-                error=str(exc),
+                error=redact_text(str(exc), env=self.env),
             )
         output_text = extract_response_text(response)
         artifact = write_artifact(
             self.runtime_root / "outputs",
             "openai_responses_text",
             ".md",
-            output_text + "\n",
+            redact_text(output_text, env=self.env) + "\n",
         )
         return CodexBridgeResult(
             ok=bool(output_text),
@@ -233,7 +238,7 @@ class WabiCodexBridge:
         workspace: str | Path,
         runtime_root: str | Path,
         codex_finder: Callable[[], str | None] = find_codex_command,
-        runner: Callable[..., subprocess.CompletedProcess[str]] = subprocess.run,
+        runner: Callable[..., subprocess.CompletedProcess[Any]] | None = None,
         env: dict[str, str] | None = None,
     ) -> None:
         self.workspace = Path(workspace).resolve()
@@ -323,9 +328,9 @@ class WabiCodexBridge:
             "provider": provider,
             "gate": gate,
             "workspace": str(self.workspace),
-            "prompt": prompt,
-            "codex_prompt": build_codex_prompt(prompt),
-            "status": status,
+            "prompt": redact_text(prompt, env=self.env),
+            "codex_prompt": redact_text(build_codex_prompt(prompt), env=self.env),
+            "status": redact_mapping(status, env=self.env),
         }
         artifact = write_artifact(
             self.runtime_root / "outputs",
@@ -348,7 +353,7 @@ class WabiCodexBridge:
         self.memory.append_event(
             {
                 "channel": "wabi_codex_bridge",
-                "prompt": prompt,
+                "prompt": redact_text(prompt, env=self.env),
                 "provider": result.provider,
                 "gate": result.gate,
                 "ok": result.ok,
@@ -381,6 +386,60 @@ def extract_response_text(response: dict[str, Any]) -> str:
             if isinstance(text, str):
                 chunks.append(text)
     return "\n".join(chunk.strip() for chunk in chunks if chunk.strip()).strip()
+
+
+def _decode_process_output(value: Any) -> str:
+    if value is None:
+        return ""
+    if isinstance(value, bytes):
+        return value.decode("utf-8", errors="replace")
+    return str(value)
+
+
+def run_process_with_timeout(
+    command: list[str],
+    *,
+    cwd: Path,
+    input_bytes: bytes,
+    timeout: int,
+) -> subprocess.CompletedProcess[bytes]:
+    creationflags = getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    proc = subprocess.Popen(
+        command,
+        cwd=str(cwd),
+        stdin=subprocess.PIPE,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        text=False,
+        creationflags=creationflags,
+    )
+    try:
+        stdout, stderr = proc.communicate(input=input_bytes, timeout=timeout)
+    except subprocess.TimeoutExpired as exc:
+        _kill_process_tree(proc.pid)
+        try:
+            stdout, stderr = proc.communicate(timeout=3)
+        except Exception:
+            stdout = exc.output or b""
+            stderr = exc.stderr or b""
+        raise subprocess.TimeoutExpired(command, timeout, output=stdout, stderr=stderr) from exc
+    return subprocess.CompletedProcess(command, proc.returncode, stdout, stderr)
+
+
+def _kill_process_tree(pid: int) -> None:
+    if os.name == "nt":
+        subprocess.run(
+            ["taskkill", "/PID", str(pid), "/T", "/F"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+            check=False,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+        )
+        return
+    try:
+        os.kill(pid, 9)
+    except OSError:
+        return
 
 
 def _post_json(url: str, headers: dict[str, str], body: dict[str, Any], timeout: int) -> dict[str, Any]:

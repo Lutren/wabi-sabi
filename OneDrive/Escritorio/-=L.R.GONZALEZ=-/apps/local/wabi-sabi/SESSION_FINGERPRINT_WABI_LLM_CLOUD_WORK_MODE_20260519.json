@@ -1,0 +1,101 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "WABI_LLM_CLOUD_WORK_MODE_20260519",
+  "project": "WABI-SABI",
+  "fingerprint": "WABI_LLM_CLOUD_WORK_MODE_20260519",
+  "created_at_local": "2026-05-20T01:35:00-06:00",
+  "R_close": 0.13,
+  "Phi_eff": 0.86,
+  "regime_close": "LLM_CLOUD_DEFAULT_PROPOSAL_ONLY_READY",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 9,
+    "review_required": 2,
+    "blocked": 3
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL_PROPOSAL_ONLY",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "ENFORCED_SESSION_DAILY",
+    "LLMProposalGate": "READY_DRY_RUN_UNTIL_DOUBLE_OPT_IN",
+    "LocalApplyGate": "PASS_ALLOWLISTED_LOCAL_APPLY",
+    "RollbackGate": "PASS",
+    "TestGate": "PASS_REGRESSION",
+    "GraphicsGate": "PLAN_ONLY_READY_GRAPHICS_LIVE_FALSE",
+    "BrowserBridgeGate": "BLOCK_LIVE",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "wabi_sabi/core/llm_proposal.py",
+    "tests/test_llm_proposal.py",
+    "docs/WABI_LLM_CLOUD_WORK_MODE_2026-05-19.md",
+    "SESSION_FINGERPRINT_WABI_LLM_CLOUD_WORK_MODE_20260519.json",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_llm_proposal_api.py"
+  ],
+  "files_modified": [
+    "wabi_sabi/core/conversation_engine.py",
+    "tests/test_conversation_engine.py",
+    "docs/WABI_WORK_MODE_2026-05-19.md",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/index.html"
+  ],
+  "commands_run": [
+    {
+      "command": "python -B -m pytest tests\\test_llm_proposal.py tests\\test_conversation_engine.py tests\\test_build_assist_cloud.py tests\\test_local_apply_readiness.py tests\\test_taskspec_review.py tests\\test_conversational_cli.py -q -p no:cacheprovider",
+      "result": "52 passed in 36.22s"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_llm_proposal_api.py 02_CLAUDIO\\tests\\test_wabi_conversation_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py 02_CLAUDIO\\tests\\test_wabi_local_server.py -q -p no:cacheprovider",
+      "result": "248 passed in 78.22s"
+    },
+    {
+      "command": "python -B -m pytest -q -p no:cacheprovider",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "382 passed in 274.24s"
+    },
+    {
+      "command": "python -B -m pytest -q -p no:cacheprovider",
+      "cwd": "BRAIN_OS",
+      "result": "769 passed in 274.79s"
+    },
+    {
+      "command": "python -B -m py_compile <Wabi/BRAIN_OS changed modules>",
+      "result": "PASS"
+    }
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Wabi focal: 52 passed",
+      "BRAIN_OS focal: 248 passed",
+      "Wabi regression: 382 passed",
+      "BRAIN_OS regression: 769 passed",
+      "py_compile: PASS",
+      "secret scan focal: PASS, 0 findings",
+      "boundary scan UI focal: PASS, 0 findings"
+    ]
+  },
+  "runtime_evidence": [
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_visual_qa/WABI_LLM_CLOUD_WORK_MODE_20260519/cloud_budget_llm_default_status_redacted.json",
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_visual_qa/WABI_LLM_CLOUD_WORK_MODE_20260519/conversation_turn_llm_default_redacted.json",
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_visual_qa/WABI_LLM_CLOUD_WORK_MODE_20260519/taskspec_llm_proposal_redacted.json",
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_visual_qa/WABI_LLM_CLOUD_WORK_MODE_20260519/wabi_ui_llm_cloud_work_mode.png"
+  ],
+  "decisions": [
+    "LLM cloud default is enabled by WABI_LLM_PROVIDER_CLOUD_DEFAULT=1.",
+    "Live provider call still requires WABI_BUILD_ASSIST_CLOUD=1 and WABI_ALLOW_CLOUD_PROVIDERS=1.",
+    "Cloud output remains proposal_only and cannot apply sources directly."
+  ],
+  "pending": [
+    "Run one live proposal only after explicit double opt-in and budget acceptance.",
+    "Keep GitHub/medioevo.space blocked until release gates pass.",
+    "Keep assets publication blocked until provenance/license review passes."
+  ],
+  "next_action": "Use UI/CLI with WABI_LLM_PROVIDER_CLOUD_DEFAULT=1 for dry-run proposal mode; when ready, activate double opt-in for one budgeted live proposal and verify cloud_provider_called=true without apply."
+}

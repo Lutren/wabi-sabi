@@ -1,0 +1,81 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI-UI-TASKSPEC-GATE-PREVIEW",
+  "fingerprint": "WABI_UI_TASKSPEC_GATE_PREVIEW_20260519",
+  "project": "MEDIOEVO/CLAUDIO Wabi-Sabi",
+  "R_close": 0.09,
+  "Phi_eff": 0.91,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 8,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL_REVIEW_ONLY",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "CLOUD_BUDGET_DRY_RUN",
+    "UIGate": "LOCAL_UI_GATE_PREVIEW_READY",
+    "ConversationGate": "API_CONNECTED_TO_CONVERSATION_ENGINE",
+    "TaskSpecGate": "REVIEW_ONLY_READY",
+    "GatePreviewGate": "APPLY_NOT_AVAILABLE_REVIEW_ONLY_V0_1",
+    "GraphicsGate": "PLAN_ONLY_READY / graphics_live=false",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "docs/WABI_UI_TASKSPEC_GATE_PREVIEW_2026-05-19.md",
+    "SESSION_FINGERPRINT_WABI_UI_TASKSPEC_GATE_PREVIEW_20260519.json",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_taskspec_gate_preview_api.py"
+  ],
+  "files_modified": [
+    "wabi_sabi/core/taskspec_review.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/index.html",
+    "tests/test_taskspec_review.py",
+    "TEST_REPORT.md",
+    "NEXT_SESSION_BRIEF.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    "python -B -m pytest tests\\test_taskspec_review.py -q -p no:cacheprovider",
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_taskspec_gate_preview_api.py -q -p no:cacheprovider",
+    "python -B -m pytest tests\\test_taskspec_review.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py tests\\test_graphics_bridge.py tests\\test_cloud_budget.py tests\\test_cloud_budget_ui_status.py tests\\test_build_assist_cloud.py -q -p no:cacheprovider",
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py 02_CLAUDIO\\tests\\test_wabi_conversation_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_gate_preview_api.py -q -p no:cacheprovider",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\taskspec_review.py wabi_sabi\\core\\graphics_bridge.py wabi_sabi\\core\\cloud_budget.py wabi_sabi\\cli\\main.py",
+    "python -B -m py_compile 02_CLAUDIO\\server\\wabi_local_server.py",
+    ".\\wabi.cmd --once \"hola wabi\"",
+    ".\\wabi.cmd build-assist-status --json",
+    ".\\wabi.cmd build-assist-plan \"crear helper seguro\" --dry-run --json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Wabi unit: 9 passed in 0.84s",
+      "BRAIN_OS unit: 6 passed in 7.71s",
+      "Wabi focal: 52 passed in 14.33s",
+      "BRAIN_OS focal: 248 passed in 270.38s",
+      "Wabi regression: 362 passed in 156.89s",
+      "BRAIN_OS regression: 758 passed in 153.48s",
+      "py_compile PASS"
+    ]
+  },
+  "runtime_artifacts": [
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_taskspec_gate_preview_20260519/gate_preview_endpoint_smoke.json",
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_taskspec_gate_preview_20260519/wabi_ui_taskspec_gate_preview_interactive.png",
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_taskspec_gate_preview_20260519/wabi_ui_taskspec_gate_preview.png"
+  ],
+  "decisions": [
+    "Gate Preview is explanatory only in v0.1.",
+    "Apply remains blocked.",
+    "No UI command execution, no source write, no live cloud, no graphics live."
+  ],
+  "pending": [
+    "Create Local Apply Readiness v0.1 contract and tests without enabling apply."
+  ],
+  "next_action": "Create a review-only Local Apply Readiness v0.1 contract for ActionGate, GhostGate, RollbackStore, PathAllowlist and TestRunner."
+}

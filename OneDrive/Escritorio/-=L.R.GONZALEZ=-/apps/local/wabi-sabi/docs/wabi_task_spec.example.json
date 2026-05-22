@@ -1,0 +1,21 @@
+{
+  "schema": "wabi.task_spec.v1",
+  "summary": "create a tiny helper and matching smoke test",
+  "changes": [
+    {
+      "operation": "write_text",
+      "target": "examples/wabi_answer.py",
+      "suffix": ".py",
+      "content": "def answer() -> int:\n    return 42\n"
+    },
+    {
+      "operation": "write_text",
+      "target": "examples/test_wabi_answer.py",
+      "suffix": ".py",
+      "content": "from wabi_answer import answer\n\n\ndef test_answer() -> None:\n    assert answer() == 42\n"
+    }
+  ],
+  "test_commands": [
+    "python -m py_compile examples/wabi_answer.py examples/test_wabi_answer.py"
+  ]
+}

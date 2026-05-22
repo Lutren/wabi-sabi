@@ -1,0 +1,92 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-155044",
+  "fingerprint": "WABI_CLOUD_BUDGET_GATE_20260519",
+  "project": "Wabi-Sabi Local Agents",
+  "R_close": 0.1,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL_CLOUD_BUDGET_GATE",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 10,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "cloud_gate": {
+    "mode": "proposal_only",
+    "live_cloud_calls_this_run": 0,
+    "cloud_provider_called_this_run": false,
+    "double_opt_in_required": [
+      "WABI_BUILD_ASSIST_CLOUD=1",
+      "WABI_ALLOW_CLOUD_PROVIDERS=1"
+    ]
+  },
+  "cloud_budget_gate": {
+    "schema": "wabi.cloud_budget_gate.v0_1",
+    "default_max_calls_per_session": 3,
+    "default_max_calls_per_day": 10,
+    "default_mode": "strict",
+    "runtime_state_path": "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\cloud_budget\\cloud_budget_20260519.json",
+    "current_status_without_double_opt_in": "CLOUD_BUDGET_DRY_RUN"
+  },
+  "graphics_gate": {
+    "graphics_live": false,
+    "graphics_plan_ready": true,
+    "publication_allowed": false,
+    "external_calls_allowed": false
+  },
+  "files_created": [
+    "docs/WABI_CLOUD_BUDGET_GATE_2026-05-19.md",
+    "wabi_sabi/core/cloud_budget.py",
+    "tests/test_cloud_budget.py",
+    "SESSION_FINGERPRINT_WABI_CLOUD_BUDGET_GATE_20260519.json"
+  ],
+  "files_modified": [
+    "wabi_sabi/core/build_assist_cloud.py",
+    "wabi_sabi/core/conversation_engine.py",
+    "wabi_sabi/cli/main.py",
+    "tests/test_build_assist_cloud.py",
+    "tests/test_conversation_engine.py",
+    "tests/test_conversational_cli.py",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    "python -B -m pytest tests\\test_cloud_budget.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py tests\\test_build_assist_cloud.py -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\core\\cloud_budget.py wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\build_assist_cloud.py wabi_sabi\\cli\\main.py",
+    "python -B -m pytest -q -p no:cacheprovider",
+    ".\\wabi.cmd --once \"hola wabi\"",
+    ".\\wabi.cmd build-assist-status --json",
+    ".\\wabi.cmd build-assist-plan \"crear helper seguro\" --dry-run --json",
+    "@'\\n/status\\n/providers\\nusa nvidia para planear un helper seguro\\n/exit\\n'@ | .\\wabi.cmd",
+    "python -m json.tool SESSION_FINGERPRINT_WABI_CLOUD_BUDGET_GATE_20260519.json > $null",
+    "Select-String -LiteralPath 'C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\cloud_budget\\cloud_budget_20260519.json' -Pattern 'nvapi|sk-|token|secret|api_key|password' -CaseSensitive:$false | Measure-Object"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Focal CloudBudgetGate/build-assist/conversation: 34 passed in 15.93s",
+      "py_compile: PASS",
+      "Wabi full regression: 347 passed in 192.89s (0:03:12)",
+      "Manual no-live CLI smoke: PASS",
+      "SESSION_FINGERPRINT JSON validation: PASS",
+      "Budget JSON secret scan count: 0"
+    ]
+  },
+  "decisions": [
+    "Control cloud budget by local call counters because usage/cost may be null.",
+    "Block provider call before network when budget is exceeded in strict mode.",
+    "Do not store full prompts in cloud budget state.",
+    "Keep NVIDIA proposal_only and GraphicsBridge plan-only."
+  ],
+  "pending": [
+    "Expose CloudBudgetGate in the local Wabi UI.",
+    "Keep usage/cost informational only until provider returns stable values.",
+    "Review real NVIDIA rate limits separately without live call in this phase."
+  ],
+  "next_action": "Expose CloudBudgetGate in the local Wabi UI without activating live cloud calls."
+}

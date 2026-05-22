@@ -1,34 +1,12 @@
 from __future__ import annotations
 
-import difflib
-import hashlib
 import py_compile
 from dataclasses import dataclass
 from pathlib import Path
+from textwrap import dedent
 
-from wabi_sabi.core.tools import stamp
-
-
-SENSITIVE_PATH_PARTS = {
-    ".git",
-    ".claw",
-    ".claude",
-    ".wrangler",
-    ".env",
-    ".venv",
-    ".venv_api",
-    "node_modules",
-    "runtime",
-    "releases",
-    "release",
-    "dist",
-    "build",
-    "target",
-    "game-private",
-    "metaevo-tcg",
-    "tcg",
-    "game_bridge",
-}
+from wabi_sabi.core.patch_planner import build_file_patch_plan, resolve_workspace_text_target, sha256_text
+from wabi_sabi.core.safe_executor import SafeExecutor
 
 
 @dataclass(frozen=True)
@@ -36,29 +14,17 @@ class PatchResult:
     target: Path
     backup: Path | None
     diff: Path
+    plan: Path | None
+    rollback: Path | None
+    execution: Path | None
     before_hash: str
     after_hash: str
     changed: bool
     verification: str
 
 
-def sha256_text(text: str) -> str:
-    return hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
 def resolve_python_target(workspace: Path, target: str | Path) -> Path:
-    workspace = workspace.resolve()
-    raw = Path(target)
-    candidate = raw.resolve() if raw.is_absolute() else (workspace / raw).resolve()
-    if candidate != workspace and workspace not in candidate.parents:
-        raise ValueError(f"target_outside_workspace:{candidate}")
-    lowered_parts = {part.lower() for part in candidate.parts}
-    blocked = sorted(SENSITIVE_PATH_PARTS.intersection(lowered_parts))
-    if blocked:
-        raise ValueError("target_path_blocked:" + ",".join(blocked))
-    if candidate.suffix.lower() != ".py":
-        raise ValueError("only_python_targets_supported")
-    return candidate
+    return resolve_workspace_text_target(workspace, target, suffix=".py")
 
 
 def apply_python_patch(
@@ -73,44 +39,33 @@ def apply_python_patch(
     before_hash = sha256_text(old_text)
     new_text = build_new_python_text(old_text, code)
     after_hash = sha256_text(new_text)
-    changed = new_text != old_text
 
     compile(new_text, str(target_path), "exec")
 
-    backup_path: Path | None = None
-    if changed:
-        backup_dir = runtime_root / "backups"
-        backup_dir.mkdir(parents=True, exist_ok=True)
-        safe_rel = "_".join(part for part in target_path.relative_to(workspace).parts)
-        if old_text:
-            backup_path = backup_dir / f"{safe_rel}_{stamp()}.bak"
-            backup_path.write_text(old_text, encoding="utf-8")
-        target_path.parent.mkdir(parents=True, exist_ok=True)
-        target_path.write_text(new_text, encoding="utf-8")
-        py_compile.compile(str(target_path), doraise=True)
-
-    diff_dir = runtime_root / "outputs"
-    diff_dir.mkdir(parents=True, exist_ok=True)
-    diff_path = diff_dir / f"programmer_patch_{stamp()}.diff"
-    rel = str(target_path.relative_to(workspace))
-    diff_text = "".join(
-        difflib.unified_diff(
-            old_text.splitlines(keepends=True),
-            new_text.splitlines(keepends=True),
-            fromfile=f"a/{rel}",
-            tofile=f"b/{rel}",
-        )
+    plan = build_file_patch_plan(
+        workspace=workspace,
+        target=target,
+        content=new_text,
+        summary="scoped_python_code_patch",
+        suffix=".py",
     )
-    diff_path.write_text(diff_text or f"# no textual change for {rel}\n", encoding="utf-8")
+    execution = SafeExecutor(workspace=workspace, runtime_root=runtime_root).execute(plan)
+    if not execution.ok:
+        raise ValueError(execution.error or execution.verification)
+    if target_path.exists():
+        py_compile.compile(str(target_path), doraise=True)
 
     return PatchResult(
         target=target_path,
-        backup=backup_path,
-        diff=diff_path,
+        backup=execution.rollback_path,
+        diff=execution.diff_path,
+        plan=execution.plan_path,
+        rollback=execution.rollback_path,
+        execution=execution.execution_path,
         before_hash=before_hash,
         after_hash=after_hash,
-        changed=changed,
-        verification="py_compile_passed",
+        changed=execution.changed,
+        verification=execution.verification,
     )
 
 
@@ -122,3 +77,82 @@ def build_new_python_text(old_text: str, code: str) -> str:
         return normalized_code
     header = "\n\n# --- Wabi Sabi generated patch ---\n"
     return old_text.rstrip() + header + normalized_code
+
+
+def code_for_prompt(prompt: str) -> tuple[str, str, list[str]]:
+    lowered = prompt.lower()
+    if "normalize_title" in lowered:
+        return (
+            normalize_title_function(),
+            "Genere una funcion Python local normalize_title(text) para normalizar titulos.",
+            ["El usuario pidio un helper pequeno y reversible en sandbox."],
+        )
+    if "archivo" in lowered and ("linea" in lowered or "lineas" in lowered or "línea" in lowered):
+        return (
+            file_summary_function(),
+            "Genere una funcion Python local para leer un archivo y resumir sus lineas.",
+            ["El usuario probablemente queria un helper reutilizable para archivos de texto."],
+        )
+    return (
+        generic_module_template(prompt),
+        "Genere un borrador de codigo local.",
+        ["El pedido necesita revision humana o integracion dirigida para tocar codigo existente."],
+    )
+
+
+def file_summary_function() -> str:
+    return dedent(
+        '''
+        from __future__ import annotations
+
+        from pathlib import Path
+
+
+        def summarize_file_lines(path: str | Path, preview_lines: int = 5) -> dict:
+            """Read a text file and return a compact line summary."""
+            file_path = Path(path)
+            text = file_path.read_text(encoding="utf-8", errors="replace")
+            lines = text.splitlines()
+            return {
+                "path": str(file_path),
+                "line_count": len(lines),
+                "empty_lines": sum(1 for line in lines if not line.strip()),
+                "first_lines": lines[:preview_lines],
+                "last_lines": lines[-preview_lines:] if preview_lines else [],
+            }
+        '''
+    ).lstrip()
+
+
+def normalize_title_function() -> str:
+    return dedent(
+        '''
+        from __future__ import annotations
+
+
+        def normalize_title(text: str) -> str:
+            """Collapse extra whitespace and return title case text."""
+            return " ".join(str(text).split()).title()
+        '''
+    ).lstrip()
+
+
+def generic_module_template(prompt: str) -> str:
+    escaped = prompt.replace('"""', '\\"\\"\\"')
+    return dedent(
+        f'''
+        """Generated Wabi Sabi code draft.
+
+        Original request:
+        {escaped}
+        """
+
+
+        def run() -> str:
+            return "TODO: complete this local implementation after selecting a target file."
+
+
+        if __name__ == "__main__":
+            print(run())
+        '''
+    ).lstrip()

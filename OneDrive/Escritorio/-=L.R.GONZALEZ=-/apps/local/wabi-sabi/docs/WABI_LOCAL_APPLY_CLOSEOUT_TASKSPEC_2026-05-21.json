@@ -1,0 +1,20 @@
+{
+  "task_id": "wabi-local-apply-closeout-2026-05-21",
+  "intent_name": "code_request",
+  "summary": "Crear reporte local de Apply Local para cierre de pendiente Wabi",
+  "action_gate": "APPROVE",
+  "proposal_only": false,
+  "needs_file_write": true,
+  "needs_cloud": false,
+  "needs_graphics": false,
+  "changes": [
+    {
+      "target": "docs/WABI_LOCAL_APPLY_CLOSEOUT_2026-05-21.md",
+      "suffix": ".md",
+      "content": "# WABI_LOCAL_APPLY_CLOSEOUT 2026-05-21\n\n## Estado\n\n- Tarea: usar Wabi en una tarea local pequena con Apply Local y reporte.\n- Alcance: docs locales de `apps/local/wabi-sabi`.\n- Cloud: no llamado.\n- Publicacion: bloqueada.\n- Apply: local allowlisted via `wabi apply-local`.\n\n## Gate\n\n- ActionGate: APPROVE_LOCAL.\n- CloudGate: OFF.\n- PublicationGate: BLOCK.\n- SecretGate: HARD_BLOCK.\n- PrivateBoundary: no tocada.\n\n## Evidencia esperada\n\n- `apply-local-preview` debe producir `LOCAL_APPLY_PATCH_READY`.\n- `apply-local` debe producir `LOCAL_APPLY_TESTS_PASS`.\n- Verificacion interna del apply: `python -B -m py_compile wabi_sabi/core/local_apply_readiness.py`.\n- Test focal externo del cierre: `tests/test_local_apply_readiness.py`.\n\n## Resultado\n\nEste archivo fue creado por el flujo Wabi Local Apply para cerrar un pendiente real sin aplicar cambios desde cloud ni publicar artefactos externos.\n"
+    }
+  ],
+  "tests_to_run": [
+    "python -B -m py_compile wabi_sabi/core/local_apply_readiness.py"
+  ]
+}

@@ -7,12 +7,18 @@ from pathlib import Path
 DESTRUCTIVE_WORDS = {
     "borrar",
     "borra",
+    "elimina",
+    "eliminar",
+    "destruye",
+    "destruir",
     "delete",
     "remove",
     "rm -rf",
     "format",
     "formatear",
     "wipe",
+    "purge",
+    "clear all",
     "limpia todo",
     "reset hard",
 }

@@ -1,0 +1,57 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-PROVIDERS-MODULE-CLOSE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "wabi_sabi.providers",
+  "R_close": 0.05,
+  "Phi_eff": 0.98,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 5,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "module_files": [
+    "wabi_sabi/core/provider_orchestrator.py",
+    "wabi_sabi/core/ollama_bridge.py",
+    "wabi_sabi/core/provider_onboarding.py",
+    "wabi_sabi/core/codex_bridge.py",
+    "wabi_sabi/core/cloud_adapters.py",
+    "wabi_sabi/core/redaction.py",
+    "tests/test_provider_orchestrator.py",
+    "tests/test_ollama_bridge.py",
+    "tests/test_provider_onboarding.py",
+    "tests/test_codex_bridge.py",
+    "tests/test_redaction_and_cloud_adapters.py"
+  ],
+  "supporting_files": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/config.py",
+    "docs/WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md",
+    "docs/WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md"
+  ],
+  "commands_run": [
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_CLEANUP_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_OPERATOR_MODULE_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest tests\\test_provider_orchestrator.py tests\\test_ollama_bridge.py tests\\test_provider_onboarding.py tests\\test_codex_bridge.py tests\\test_redaction_and_cloud_adapters.py -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Providers focused tests: 35 passed in 2.17s.",
+      "Cloud adapters and redaction tests included.",
+      "Cleanup and operator fingerprints parse correctly."
+    ]
+  },
+  "decisions": [
+    "Close providers as the fourth Wabi-Sabi module.",
+    "Keep cloud providers opt-in and secret-safe.",
+    "Next closure module is curador."
+  ],
+  "pending": [
+    "Close curador module: curator assistant, fichas and Cerebro review tests.",
+    "Keep deletion and movement behind fichas and ActionGate."
+  ],
+  "next_action": "Run curador focused tests and write module closure evidence."
+}

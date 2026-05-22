@@ -1,0 +1,74 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260521-HYPOTHESIS-PACKET-v0-1",
+  "project": "MEDIOEVO/CLAUDIO",
+  "state_fingerprint": "WABI-HYPOTHESIS-PACKET-v0-1-20260521",
+  "R_close": 0.12,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 5,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "gates": {
+    "CoreImplementationGate": "APPROVE_LOCAL",
+    "StrongClaimGate": "REVIEW",
+    "CloudGate": "NOT_CALLED",
+    "ApplyGate": "NOT_USED",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "apps/local/wabi-sabi/wabi_sabi/core/hypothesis_packet.py",
+    "apps/local/wabi-sabi/tests/test_hypothesis_packet.py",
+    "packages/shared-contracts/schemas/hypothesis_packet.schema.json",
+    "packages/shared-contracts/fixtures/hypothesis_packet_minimal.json"
+  ],
+  "files_modified": [
+    "apps/local/wabi-sabi/wabi_sabi/cli/main.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/conversation_engine.py",
+    "apps/local/wabi-sabi/wabi_sabi/core/llm_work_response.py",
+    "apps/local/wabi-sabi/tests/test_conversation_engine.py",
+    "apps/local/wabi-sabi/tests/test_llm_work_response.py",
+    "apps/local/wabi-sabi/README.md",
+    "apps/local/wabi-sabi/TASKS.md",
+    "apps/local/wabi-sabi/DECISIONS.md",
+    "apps/local/wabi-sabi/RISKS.md",
+    "apps/local/wabi-sabi/ASSUMPTIONS.md",
+    "apps/local/wabi-sabi/TEST_REPORT.md",
+    "apps/local/wabi-sabi/NEXT_SESSION_BRIEF.md",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT.json",
+    "packages/shared-contracts/src/shared_contracts/validators.py",
+    "packages/shared-contracts/tests/test_shared_contracts.py",
+    "packages/shared-contracts/README.md"
+  ],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet (timed out before summary)",
+    "python -m unittest discover packages\\shared-contracts\\tests -v",
+    "python -B -m pytest tests/test_hypothesis_packet.py tests/test_conversation_engine.py tests/test_llm_work_response.py -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\core\\hypothesis_packet.py wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\llm_work_response.py wabi_sabi\\cli\\main.py",
+    "python -B -m pytest -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "shared_contracts_unittest=11 tests OK",
+      "wabi_focal_hypothesis_conversation_safe_response=20 passed in 7.33s",
+      "py_compile=PASS",
+      "wabi_regression=393 passed in 236.33s"
+    ]
+  },
+  "decisions": [
+    "Unit distance lesson absorbed as operational method, not as public/scientific claim.",
+    "HypothesisPacket requires claim, counterclaim, falsifiers, evidence_required, ActionGate and publication boundary.",
+    "Wabi hypothesis mode remains proposal_only and never applies sources or calls cloud.",
+    "Scientific/public/commercial claims remain REVIEW until separate human review and stronger evidence."
+  ],
+  "pending": [
+    "Run a real project claim through wabi hypothesis and attach local falsifier evidence.",
+    "Expose the mode in the active BRAIN_OS UI only under a separate gate because that path is outside the primary workspace touched in this cycle.",
+    "PublicationGate remains BLOCK."
+  ],
+  "next_action": "Use .\\wabi.cmd hypothesis \"claim concreto del motor\" --json, then execute one local falsifier and attach evidence before reuse."
+}

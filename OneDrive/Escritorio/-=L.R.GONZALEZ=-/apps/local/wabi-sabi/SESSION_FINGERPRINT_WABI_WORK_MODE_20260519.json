@@ -1,0 +1,83 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "WABI_WORK_MODE_20260519",
+  "project": "WABI-SABI",
+  "fingerprint": "WABI_WORK_MODE_20260519",
+  "created_at_local": "2026-05-20T00:00:00-06:00",
+  "R_close": 0.11,
+  "Phi_eff": 0.88,
+  "regime_close": "WORK_MODE_READY",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 6,
+    "review_required": 2,
+    "blocked": 3
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL_WORK_MODE",
+    "LocalApplyGate": "PASS_ALLOWLISTED_LOCAL_APPLY",
+    "RollbackGate": "PASS",
+    "TestGate": "PASS_MINIMAL_QA",
+    "AssetGate": "REVIEW_REQUIRED_PROVENANCE_LICENSE",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "DRY_RUN_UNLESS_DOUBLE_OPT_IN",
+    "GitGate": "BLOCK_DIRTY_HOST_REPO_REMOTE_UNCONFIRMED",
+    "DeployGate": "BLOCK_RELEASE_GATE_NOT_READY",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "docs/WABI_WORK_MODE_2026-05-19.md",
+    "docs/WABI_RELEASE_BLOCKERS_2026-05-19.md",
+    "SESSION_FINGERPRINT_WABI_WORK_MODE_20260519.json"
+  ],
+  "files_modified": [
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    {
+      "command": "python tools\\release\\pending_review.py --write --quiet",
+      "cwd": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+      "result": "timeout_after_120s_not_retried"
+    },
+    {
+      "command": "python -B -m pytest tests\\test_local_apply_readiness.py tests\\test_taskspec_review.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py -q -p no:cacheprovider",
+      "cwd": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-\\apps\\local\\wabi-sabi",
+      "result": "33 passed in 35.28s"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py -q -p no:cacheprovider",
+      "cwd": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-",
+      "result": "238 passed in 97.63s"
+    },
+    {
+      "command": "python -B -m py_compile <BRAIN_OS server> <Wabi core modules>",
+      "cwd": "C:\\Users\\L-Tyr",
+      "result": "PASS"
+    }
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Wabi focal: 33 passed in 35.28s",
+      "BRAIN_OS UI focal: 238 passed in 97.63s",
+      "py_compile: PASS"
+    ],
+    "full_regression": "not_run_no_code_change"
+  },
+  "decisions": [
+    "Wabi is WORK_MODE_READY for daily local use.",
+    "External release remains blocked until repo/worktree/asset gates pass.",
+    "Cloud remains proposal_only and double-opt-in gated."
+  ],
+  "pending": [
+    "Use Wabi on a small real local task.",
+    "Resolve asset provenance/license before publication.",
+    "Prepare clean release repo/staging before any GitHub or medioevo.space update."
+  ],
+  "next_action": "Open wabi or http://127.0.0.1:8787/, request a small local coding task, review TaskSpec, run Apply Local Preview, then Apply Local if gates pass."
+}

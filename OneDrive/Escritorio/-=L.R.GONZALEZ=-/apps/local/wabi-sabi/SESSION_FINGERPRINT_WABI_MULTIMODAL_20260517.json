@@ -1,0 +1,74 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260517-WABI-SABI-MULTIMODAL-INTAKE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "R_close": 0.22,
+  "Phi_eff": 0.78,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 9,
+    "review_required": 2,
+    "blocked": 0
+  },
+  "files_created": [
+    "wabi_sabi/core/multimodal_intake.py",
+    "tests/test_multimodal_intake.py",
+    "SESSION_FINGERPRINT_WABI_MULTIMODAL_20260517.json"
+  ],
+  "files_modified": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/tool_registry.py",
+    "tests/test_cli.py",
+    "README.md",
+    "docs/WABI_SABI_MULTIMODAL_BRAIN_STATUS_2026-05-17.md",
+    "TEST_REPORT.md",
+    "NEXT_SESSION_BRIEF.md",
+    "TASKS.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "SESSION_FINGERPRINT.json"
+  ],
+  "commands_run": [
+    "python -m pytest tests/test_multimodal_intake.py tests/test_cli.py -q",
+    "python -m wabi_sabi.cli.main multimodal status --json",
+    "python -m wabi_sabi.cli.main tools --json",
+    "python -m wabi_sabi.cli.main multimodal smoke-camera --json",
+    "python -m wabi_sabi.cli.main multimodal smoke-mic --seconds 2 --json",
+    "python -m wabi_sabi.cli.main multimodal observe --seconds 3 --local-only --json",
+    "python -m wabi_sabi.cli.main multimodal observe --cloud --json",
+    "python -m py_compile wabi_sabi\\core\\multimodal_intake.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\tool_registry.py",
+    "python -m pytest -q"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Focal multimodal/CLI final: 18 passed in 62.86s.",
+      "py_compile passed for multimodal_intake.py, cli/main.py and tool_registry.py.",
+      "Full Wabi-Sabi suite: 215 passed in 105.36s.",
+      "Camera smoke: ok=true, gate=APPROVE, camera_frame_read=true, witness_verified=true.",
+      "Microphone smoke: ok=true, gate=APPROVE, duration_sec=2.000, rms=0.128274, witness_verified=true.",
+      "Observe local-only: ok=true, 3 camera samples plus 1 microphone sample, witness_verified=true.",
+      "Cloud observe request: gate=REVIEW, cloud_provider_called=false."
+    ]
+  },
+  "decisions": [
+    "Multimodal v0 is local-first and metadata-only.",
+    "Raw image/audio bytes are not persisted in payloads or witness events.",
+    "Cloud multimodal remains REVIEW and was not called.",
+    "Operational capture gate is separated from BRAIN_OS world_model_gate/fusion_gate.",
+    "World-model/fusion interpretation remains blocked when Phi_eff_world is below 0.60."
+  ],
+  "pending": [
+    "Re-run observe with better lighting and calibrate BRAIN_OS thresholds only if evidence supports it.",
+    "Design an explicit reviewed cloud multimodal adapter before any provider call or media transfer.",
+    "Keep transcription disabled by default unless WABI_ENABLE_LOCAL_TRANSCRIPTION=1 is intentionally set."
+  ],
+  "artifacts": [
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\multimodal_smoke_camera_20260516-221243.json",
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\multimodal_smoke_mic_20260516-221251.json",
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\multimodal_observe_20260516-221509.json"
+  ],
+  "next_action": "Run wabi multimodal observe --seconds 5 --local-only --json with better lighting and decide whether BRAIN_OS calibration should be adjusted."
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-SAFE-EXECUTION-MODULE-CLOSE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "wabi_sabi.safe_execution",
+  "R_close": 0.05,
+  "Phi_eff": 0.98,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 5,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "module_files": [
+    "wabi_sabi/core/patch_planner.py",
+    "wabi_sabi/core/safe_executor.py",
+    "wabi_sabi/core/rollback_store.py",
+    "wabi_sabi/core/task_spec_planner.py",
+    "wabi_sabi/core/worktree.py",
+    "tests/test_safe_executor.py",
+    "tests/test_task_spec_planner.py",
+    "tests/test_patch_cli.py",
+    "tests/test_worktree.py"
+  ],
+  "supporting_files": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/tool_registry.py",
+    "docs/WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md",
+    "docs/WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md"
+  ],
+  "commands_run": [
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_CLEANUP_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_ENGINE_MODULE_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest tests\\test_safe_executor.py tests\\test_task_spec_planner.py tests\\test_patch_cli.py tests\\test_worktree.py -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Safe execution focused tests: 21 passed in 19.76s.",
+      "JSON fingerprints for cleanup and engine module parse correctly."
+    ]
+  },
+  "decisions": [
+    "Close safe execution as the second Wabi-Sabi module.",
+    "Keep write paths routed through PatchPlan, SafeExecutor, RollbackStore and tests.",
+    "Next cleanup/closure module is operator."
+  ],
+  "pending": [
+    "Close operator module: operator_panel, project_scan, test_plan, safe_test_runner and related tests.",
+    "Keep publication, push, deploy and external channels blocked."
+  ],
+  "next_action": "Run operator focused tests and write module closure evidence."
+}

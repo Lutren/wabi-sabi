@@ -1,0 +1,96 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI-CLOUD-BUDGET-UI-VISUAL-QA",
+  "project": "Wabi-Sabi Local Agents",
+  "fingerprint": "WABI_CLOUD_BUDGET_UI_VISUAL_QA_20260519",
+  "R_close": 0.07,
+  "Phi_eff": 0.92,
+  "regime_close": "FUNCIONAL_UI_VISUAL_QA",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 9,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL_VISUAL_UI_QA",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "UI_VISIBLE_DRY_RUN_CONFIRMED",
+    "UIGate": "PASS_LOCAL_8787",
+    "GraphicsGate": "PLAN_ONLY_READY / graphics_live=false",
+    "BrowserBridgeGate": "NO_LIVE_CALL",
+    "PublicationGate": "BLOCK"
+  },
+  "server": {
+    "url": "http://127.0.0.1:8787/",
+    "pid": 30848,
+    "stale_pid_found": 23276,
+    "stale_pid_process_found": false
+  },
+  "endpoint": {
+    "path": "/api/cloud-budget/status",
+    "source_of_truth": "wabi_sabi.core.cloud_budget.CloudBudgetGate.render_status",
+    "budget_gate": "CLOUD_BUDGET_DRY_RUN",
+    "provider": "nvidia",
+    "model_alias": "nano-30b",
+    "double_opt_in": false,
+    "cloud_live_ready": false,
+    "proposal_only": true,
+    "cloud_provider_called": false,
+    "next_cloud_call_allowed": false,
+    "session_calls_used": 0,
+    "session_calls_limit": 3,
+    "daily_calls_used": 0,
+    "daily_calls_limit": 10,
+    "usage_known": false,
+    "cost_known": false
+  },
+  "files_created": [
+    "SESSION_FINGERPRINT_WABI_CLOUD_BUDGET_UI_VISUAL_QA_20260519.json",
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\ui_visual_qa\\WABI_CLOUD_BUDGET_UI_VISUAL_QA_20260519\\cloud_budget_status_redacted.json",
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\ui_visual_qa\\WABI_CLOUD_BUDGET_UI_VISUAL_QA_20260519\\wabi_cloud_budget_ui_20260519.png",
+    "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\ui_visual_qa\\WABI_CLOUD_BUDGET_UI_VISUAL_QA_20260519\\wabi_cloud_budget_ui_tall_20260519.png"
+  ],
+  "files_modified": [
+    "TEST_REPORT.md",
+    "NEXT_SESSION_BRIEF.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    "Start-Process python -B 02_CLAUDIO/server/wabi_local_server.py --host 127.0.0.1 --port 8787",
+    "Invoke-RestMethod http://127.0.0.1:8787/api/cloud-budget/status",
+    "msedge --headless --disable-background-networking --screenshot ... http://127.0.0.1:8787/",
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py -q -p no:cacheprovider",
+    "python -B -m pytest tests\\test_cloud_budget_ui_status.py tests\\test_cloud_budget.py tests\\test_build_assist_cloud.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py -q -p no:cacheprovider",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m py_compile 02_CLAUDIO\\server\\wabi_local_server.py",
+    "python -B -m py_compile wabi_sabi\\core\\cloud_budget.py wabi_sabi\\cli\\main.py",
+    ".\\wabi.cmd build-assist-status --json",
+    ".\\wabi.cmd --once \"hola wabi\"",
+    ".\\wabi.cmd build-assist-plan \"crear helper seguro\" --dry-run --json",
+    ".\\wabi.cmd with /status, /providers, /exit"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "BRAIN_OS server focal: 229 passed in 116.51s (0:01:56)",
+      "Wabi focal: 39 passed in 23.23s",
+      "Wabi full regression: 352 passed in 214.62s (0:03:34)",
+      "py_compile: PASS",
+      "Manual no-live checks: PASS"
+    ]
+  },
+  "decisions": [
+    "Visual QA confirms Cloud Budget UI visibility without live cloud.",
+    "Cloud Budget UI remains status-only and proposal-only.",
+    "Next work should wire UI chat/work panel to ConversationEngine without enabling cloud by default."
+  ],
+  "pending": [
+    "Wire UI chat/work panel to ConversationEngine with no-live defaults.",
+    "Keep cloud call buttons absent or double-opt-in gated."
+  ],
+  "next_action": "Cablear UI chat/work panel a ConversationEngine, sin activar cloud live por defecto."
+}

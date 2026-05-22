@@ -1,9 +1,7 @@
 from __future__ import annotations
 
-from textwrap import dedent
-
 from wabi_sabi.agents.base_agent import AgentInput, AgentResult, BaseAgent
-from wabi_sabi.core.programming import apply_python_patch
+from wabi_sabi.core.programming import apply_python_patch, code_for_prompt
 from wabi_sabi.core.tools import write_artifact
 
 
@@ -11,14 +9,7 @@ class ProgrammerAgent(BaseAgent):
     def run(self, agent_input: AgentInput) -> AgentResult:
         prompt = agent_input.prompt
         lowered = prompt.lower()
-        if "archivo" in lowered and ("linea" in lowered or "lineas" in lowered or "línea" in lowered):
-            code = self._file_summary_function()
-            output = "Genere una funcion Python local para leer un archivo y resumir sus lineas."
-            inference = ["El usuario probablemente queria un helper reutilizable para archivos de texto."]
-        else:
-            code = self._generic_module_template(agent_input.prompt)
-            output = "Genere un borrador de codigo local."
-            inference = ["El pedido necesita revision humana o integracion dirigida para tocar codigo existente."]
+        code, output, inference = code_for_prompt(prompt)
 
         if agent_input.options.get("apply"):
             target = agent_input.options.get("target")
@@ -54,8 +45,9 @@ class ProgrammerAgent(BaseAgent):
                     error=str(exc),
                 )
             artifacts = [str(patch.diff)]
-            if patch.backup:
-                artifacts.append(str(patch.backup))
+            for artifact in (patch.plan, patch.rollback, patch.execution):
+                if artifact:
+                    artifacts.append(str(artifact))
             return AgentResult(
                 agent_name=self.name,
                 ok=True,
@@ -67,6 +59,9 @@ class ProgrammerAgent(BaseAgent):
                     f"before_sha256={patch.before_hash}",
                     f"after_sha256={patch.after_hash}",
                     f"diff_written={patch.diff}",
+                    f"plan_written={patch.plan}",
+                    f"rollback_snapshot={patch.rollback}",
+                    f"execution_record={patch.execution}",
                     f"changed={patch.changed}",
                     patch.verification,
                 ],
@@ -75,7 +70,7 @@ class ProgrammerAgent(BaseAgent):
                     "Se genero diff y verificacion py_compile.",
                 ],
                 inference=inference,
-                unknown=["No se ejecuto suite de pruebas completa; solo verificacion focal de sintaxis Python."],
+                unknown=["No se ejecuto suite de pruebas completa; solo verificacion focal de sintaxis Python y rollback disponible."],
             )
 
         if "archivo" in lowered and ("linea" in lowered or "lineas" in lowered or "línea" in lowered):
@@ -106,46 +101,3 @@ class ProgrammerAgent(BaseAgent):
             inference=inference,
             unknown=["No se detecto archivo destino especifico."],
         )
-
-    def _file_summary_function(self) -> str:
-        return dedent(
-            '''
-            from __future__ import annotations
-
-            from pathlib import Path
-
-
-            def summarize_file_lines(path: str | Path, preview_lines: int = 5) -> dict:
-                """Read a text file and return a compact line summary."""
-                file_path = Path(path)
-                text = file_path.read_text(encoding="utf-8", errors="replace")
-                lines = text.splitlines()
-                return {
-                    "path": str(file_path),
-                    "line_count": len(lines),
-                    "empty_lines": sum(1 for line in lines if not line.strip()),
-                    "first_lines": lines[:preview_lines],
-                    "last_lines": lines[-preview_lines:] if preview_lines else [],
-                }
-            '''
-        ).lstrip()
-
-    def _generic_module_template(self, prompt: str) -> str:
-        escaped = prompt.replace('"""', '\\"\\"\\"')
-        return dedent(
-            f'''
-            """Generated Wabi Sabi code draft.
-
-            Original request:
-            {escaped}
-            """
-
-
-            def run() -> str:
-                return "TODO: complete this local implementation after selecting a target file."
-
-
-            if __name__ == "__main__":
-                print(run())
-            '''
-        ).lstrip()

@@ -71,8 +71,9 @@ def test_codex_cli_adapter_runs_read_only_and_reads_last_message(tmp_path):
         assert "never" in command
         assert command.index("--ask-for-approval") < command.index("exec")
         assert "--ephemeral" in command
-        assert "Origen: Wabi-Sabi local." in kwargs["input"]
-        return SimpleNamespace(returncode=0, stdout="", stderr="")
+        assert isinstance(kwargs["input"], bytes)
+        assert "Origen: Wabi-Sabi local." in kwargs["input"].decode("utf-8")
+        return SimpleNamespace(returncode=0, stdout=b"", stderr=b"")
 
     adapter = CodexCliAdapter(
         codex_command="codex.cmd",

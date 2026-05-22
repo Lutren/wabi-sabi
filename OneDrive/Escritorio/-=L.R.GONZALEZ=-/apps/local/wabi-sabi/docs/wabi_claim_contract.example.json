@@ -1,0 +1,15 @@
+{
+  "schema": "wabi.claim_contract.v1",
+  "claim": "This local operator panel reports provider, worktree, task-spec and witness status without applying source changes.",
+  "claim_level": "operational",
+  "evidence": [
+    "python -m wabi_sabi.cli.main operator-status --json",
+    "python -m pytest tests/test_operator_panel.py tests/test_worktree.py tests/test_patch_cli.py -q"
+  ],
+  "falsifiers": [
+    "Fails if operator-status writes source files.",
+    "Fails if the panel omits worktree or task-spec readiness.",
+    "Fails if witness verification reports a broken chain."
+  ],
+  "risk_flags": []
+}

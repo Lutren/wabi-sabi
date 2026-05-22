@@ -1,0 +1,50 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-OPERATOR-MODULE-CLOSE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "wabi_sabi.operator",
+  "R_close": 0.05,
+  "Phi_eff": 0.98,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 5,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "module_files": [
+    "wabi_sabi/core/operator_panel.py",
+    "wabi_sabi/core/project_scan.py",
+    "wabi_sabi/core/test_plan.py",
+    "wabi_sabi/core/safe_test_runner.py",
+    "tests/test_operator_panel.py",
+    "tests/test_project_scan.py",
+    "tests/test_test_plan.py",
+    "tests/test_safe_test_runner.py"
+  ],
+  "supporting_files": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/tool_registry.py",
+    "docs/WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md",
+    "docs/WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md"
+  ],
+  "commands_run": [
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest tests\\test_operator_panel.py tests\\test_project_scan.py tests\\test_test_plan.py tests\\test_safe_test_runner.py -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Operator focused tests: 10 passed in 10.67s."
+    ]
+  },
+  "decisions": [
+    "Close operator as the third Wabi-Sabi module.",
+    "Keep operator surfaces local-first and evidence-oriented.",
+    "Next closure module is providers."
+  ],
+  "pending": [
+    "Close providers module: provider_orchestrator, ollama_bridge, codex_bridge, provider_onboarding and tests.",
+    "Keep cloud providers opt-in and publication blocked."
+  ],
+  "next_action": "Run providers focused tests and write module closure evidence."
+}

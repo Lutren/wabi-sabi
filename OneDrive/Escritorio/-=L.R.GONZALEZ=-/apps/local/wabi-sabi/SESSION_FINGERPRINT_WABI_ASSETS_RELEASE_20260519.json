@@ -1,0 +1,96 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI-ASSETS-RELEASE",
+  "project": "MEDIOEVO/CLAUDIO/WABI",
+  "fingerprint": "WABI_ASSETS_RELEASE_20260519",
+  "R_close": 0.16,
+  "Phi_eff": 0.84,
+  "regime_close": "FUNCIONAL_LOCAL_PUBLICATION_REVIEW",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 4,
+    "review_required": 5,
+    "blocked": 3
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL_UNTIL_RELEASE",
+    "AssetGate": "REVIEW_PUBLIC_SAFE_ASSETS_REQUIRED",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "CLOUD_BUDGET_DRY_RUN",
+    "UIGate": "LOCAL_UI_ASSETS_RENDERING",
+    "ConversationGate": "API_CONNECTED_TO_CONVERSATION_ENGINE",
+    "TaskSpecGate": "REVIEW_ONLY_APPLY_BLOCKED",
+    "GatePreviewGate": "APPLY_NOT_AVAILABLE_REVIEW_ONLY_V0_1",
+    "GitGate": "REVIEW_BLOCKED_DIRTY_HOST_REPO_AND_ASSET_PROVENANCE",
+    "DeployGate": "REVIEW_BLOCKED_PUBLICATION_NOT_APPROVED",
+    "PublicationGate": "REVIEW_BLOCKED_UNTIL_PUBLIC_SAFE_PROVENANCE"
+  },
+  "files_created": [
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/assets/wabi_du_wabi_20260519/duat-control-surface.png",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/assets/wabi_du_wabi_20260519/image-reactor-workstation.png",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/assets/wabi_du_wabi_20260519/tool-forge-gate.png",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/assets/wabi_du_wabi_20260519/causal-frame-orb-v2.png",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/assets/wabi_du_wabi_20260519/ASSET_MANIFEST_20260519.json",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/WABI_ASSETS_DU_WABI_AUDIT_2026-05-19.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/docs/WABI_RELEASE_GITHUB_MEDIOEVOSPACE_2026-05-19.md"
+  ],
+  "files_modified": [
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/index.html",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/TEST_REPORT.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/NEXT_SESSION_BRIEF.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/DECISIONS.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/RISKS.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/ASSUMPTIONS.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/TASKS.md"
+  ],
+  "commands_run": [
+    "python tools\\release\\curador_preflight.py --path <Assets Du WABI>",
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py 02_CLAUDIO\\tests\\test_wabi_conversation_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_gate_preview_api.py -q -p no:cacheprovider",
+    "python -B -m pytest tests\\test_taskspec_review.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py tests\\test_graphics_bridge.py tests\\test_cloud_budget.py tests\\test_cloud_budget_ui_status.py tests\\test_build_assist_cloud.py -q -p no:cacheprovider",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\taskspec_review.py wabi_sabi\\core\\graphics_bridge.py wabi_sabi\\core\\cloud_budget.py wabi_sabi\\cli\\main.py",
+    "python -B -m py_compile 02_CLAUDIO\\server\\wabi_local_server.py"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "BRAIN_OS focal: 250 passed in 369.44s",
+      "Wabi focal: 52 passed in 57.49s",
+      "Wabi regression: 362 passed in 461.37s",
+      "BRAIN_OS regression: 760 passed in 392.89s",
+      "py_compile: PASS",
+      "secret/boundary focal scans: PASS"
+    ]
+  },
+  "asset_audit": {
+    "total_files": 125,
+    "images": 122,
+    "archives": 3,
+    "exif_findings": 0,
+    "secret_like_findings": 0,
+    "private_path_leak_findings": 0,
+    "duplicates": 0,
+    "integrated_local_assets": 4,
+    "publication_allowed": false
+  },
+  "release": {
+    "commit": null,
+    "push": false,
+    "deploy": false,
+    "medioevo_space_updated": false,
+    "reason": "Asset provenance and clean release repo gates remain REVIEW/BLOCK."
+  },
+  "decisions": [
+    "Only a four-PNG local reviewed candidate subset was integrated.",
+    "Archives were not extracted or copied.",
+    "External GitHub/medioevo.space publication remains blocked until public-safe provenance review."
+  ],
+  "pending": [
+    "Owner public-safe provenance review for the four selected assets.",
+    "Prepare clean public staging in the correct repo after approval.",
+    "Run final staged secret/boundary/build checks before commit/push/deploy."
+  ],
+  "next_action": "Owner review of the four selected PNG candidates for public-safe provenance before any GitHub or medioevo.space release."
+}

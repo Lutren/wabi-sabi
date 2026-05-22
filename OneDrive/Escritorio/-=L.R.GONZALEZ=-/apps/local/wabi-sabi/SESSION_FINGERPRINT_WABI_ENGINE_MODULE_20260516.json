@@ -1,0 +1,53 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-ENGINE-MODULE-CLOSE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "wabi_sabi.engine",
+  "R_close": 0.05,
+  "Phi_eff": 0.98,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 5,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "module_files": [
+    "wabi_sabi/engine/__init__.py",
+    "wabi_sabi/engine/modular_engine.py",
+    "wabi_sabi/engine/project_runtime.py",
+    "tests/test_engine.py",
+    "tests/test_engine_project_runtime.py",
+    "docs/ENGINE_MODULAR_WABI_SABI.md"
+  ],
+  "supporting_files": [
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/tool_registry.py",
+    ".gitignore",
+    "docs/WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md",
+    "docs/WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md"
+  ],
+  "commands_run": [
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_CLEANUP_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest tests\\test_engine.py tests\\test_engine_project_runtime.py -q -p no:cacheprovider",
+    "git status --ignored --short -- runtime docs\\engine\\local_only .gitignore docs\\WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md docs\\WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Engine focused tests: 18 passed in 2.97s.",
+      "docs/engine/local_only/ remains ignored.",
+      "runtime/ remains ignored."
+    ]
+  },
+  "decisions": [
+    "Close Wabi-Sabi engine as a local clean-room module, not as copied GDevelop or Lovable code.",
+    "Keep generated project specs under docs/engine/local_only and ignored.",
+    "Next cleanup/closure module is safe execution."
+  ],
+  "pending": [
+    "Close safe execution module: patch_planner, safe_executor, rollback_store, task_spec_planner and related CLI/tests.",
+    "Keep publication, push, deploy and external channels blocked."
+  ],
+  "next_action": "Run safe execution focused tests and write module closure evidence."
+}

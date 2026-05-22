@@ -1,0 +1,178 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "WABI_LLM_SAFE_JSON_20260520",
+  "project": "WABI-SABI",
+  "fingerprint": "WABI_LLM_SAFE_JSON_20260520",
+  "created_at_local": "2026-05-20T02:20:00-06:00",
+  "R_close": 0.1,
+  "Phi_eff": 0.88,
+  "regime_close": "LLM_SAFE_JSON_READY",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 6,
+    "review_required": 1,
+    "blocked": 4
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL_PROPOSAL_ONLY",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "ENFORCED_SESSION_DAILY",
+    "LLMProposalGate": "SAFE_JSON_CONTRACT_READY",
+    "LocalApplyGate": "PASS_ALLOWLISTED_LOCAL_APPLY_NOT_AUTO_APPLIED",
+    "RollbackGate": "REQUIRED_FOR_APPLY",
+    "TestGate": "PASS_FOCAL",
+    "GraphicsGate": "PLAN_ONLY_READY_GRAPHICS_LIVE_FALSE",
+    "BrowserBridgeGate": "BLOCK_LIVE",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "wabi_sabi/core/llm_work_response.py",
+    "tests/test_llm_work_response.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_llm_work_response_api.py",
+    "SESSION_FINGERPRINT_WABI_LLM_SAFE_JSON_20260520.json"
+  ],
+  "files_modified": [
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_llm_proposal_api.py",
+    "docs/WABI_LLM_CLOUD_WORK_MODE_2026-05-19.md",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    {
+      "command": "python -B -m pytest tests\\test_llm_work_response.py tests\\test_llm_proposal.py tests\\test_conversation_engine.py tests\\test_build_assist_cloud.py tests\\test_local_apply_readiness.py tests\\test_taskspec_review.py tests\\test_conversational_cli.py -q -p no:cacheprovider",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "55 passed in 47.32s"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_llm_work_response_api.py 02_CLAUDIO\\tests\\test_wabi_llm_proposal_api.py 02_CLAUDIO\\tests\\test_wabi_conversation_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py 02_CLAUDIO\\tests\\test_wabi_local_server.py -q -p no:cacheprovider",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "251 passed in 115.44s"
+    },
+    {
+      "command": "python -B -m py_compile wabi_sabi\\core\\llm_work_response.py wabi_sabi\\core\\llm_proposal.py wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\build_assist_cloud.py wabi_sabi\\core\\cloud_budget.py wabi_sabi\\core\\local_apply_readiness.py wabi_sabi\\cli\\main.py",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "PASS"
+    },
+    {
+      "command": "python -B -m py_compile 02_CLAUDIO\\server\\wabi_local_server.py",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "PASS"
+    },
+    {
+      "command": "safe-json smoke no-live via conversation_turn_payload",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "status=OK, cloud_provider_called=false, applied_to_sources=false, rollback_snapshot_required=true, graphics_live=false, witness_verified=true"
+    },
+    {
+      "command": "secret scan focal over safe JSON changed files",
+      "result": "PASS, finding_count=0"
+    },
+    {
+      "command": "python -B -m pytest -q -p no:cacheprovider",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "385 passed in 394.59s"
+    },
+    {
+      "command": "python -B -m pytest -q -p no:cacheprovider",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "772 passed in 280.24s"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_llm_work_response_api.py 02_CLAUDIO\\tests\\test_wabi_llm_proposal_api.py 02_CLAUDIO\\tests\\test_wabi_conversation_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py 02_CLAUDIO\\tests\\test_wabi_local_server.py -q -p no:cacheprovider",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "251 passed in 141.59s after fallback contract patch"
+    },
+    {
+      "command": "python -B -m pytest tests\\test_llm_work_response.py tests\\test_llm_proposal.py -q -p no:cacheprovider",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "8 passed in 3.93s after responsible-use tags update"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_llm_work_response_api.py 02_CLAUDIO\\tests\\test_wabi_llm_proposal_api.py -q -p no:cacheprovider",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "7 passed in 9.73s after responsible-use tags update"
+    },
+    {
+      "command": "responsible-use smoke no-live via conversation_turn_payload",
+      "result": "status=OK, intent_name=code_request, cloud_provider_called=false, applied_to_sources=false, rollback_snapshot_required=true, tags present, witness_verified=true"
+    },
+    {
+      "command": "responsible-use secret scan focal",
+      "result": "PASS, finding_count=0"
+    },
+    {
+      "command": "python -B -m pytest tests\\test_llm_work_response.py tests\\test_llm_proposal.py tests\\test_conversational_cli.py tests\\test_cli.py -q -p no:cacheprovider",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "30 passed in 53.33s after CLI --once safe JSON wrapper"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_llm_work_response_api.py 02_CLAUDIO\\tests\\test_wabi_llm_proposal_api.py -q -p no:cacheprovider",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "7 passed in 3.18s after LLM_proposal tag update"
+    },
+    {
+      "command": "wabi --once safe-json smoke with WABI_LLM_PROVIDER_CLOUD_DEFAULT=1 and no double opt-in",
+      "result": "status=OK, intent_name=code_request, route=code_plan, cloud_provider_called=false, applied_to_sources=false, rollback_snapshot_required=true, tags include LLM_proposal"
+    },
+    {
+      "command": "python -B -m pytest tests\\test_llm_work_response.py tests\\test_llm_proposal.py tests\\test_conversational_cli.py tests\\test_cli.py -q -p no:cacheprovider",
+      "cwd": "apps/local/wabi-sabi",
+      "result": "30 passed in 29.65s after metadata update"
+    },
+    {
+      "command": "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_llm_work_response_api.py 02_CLAUDIO\\tests\\test_wabi_llm_proposal_api.py -q -p no:cacheprovider",
+      "cwd": "-= BRAIN_OS =-",
+      "result": "7 passed in 5.76s after metadata update"
+    },
+    {
+      "command": "wabi --once metadata smoke with WABI_LLM_PROVIDER_CLOUD_DEFAULT=1 and no double opt-in",
+      "result": "metadata.category=code, metadata.incremental=true, metadata.fallback_mode=local_rules_task_spec, metadata.budget_control=CloudBudgetGate"
+    },
+    {
+      "command": "metadata update secret scan focal",
+      "result": "PASS, finding_count=0"
+    }
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Wabi focal: 55 passed",
+      "BRAIN_OS focal: 251 passed",
+      "py_compile: PASS",
+      "Wabi regression: 385 passed",
+      "BRAIN_OS regression: 772 passed",
+      "secret scan focal: PASS",
+      "Responsible-use Wabi focal: 8 passed",
+      "Responsible-use BRAIN_OS focal: 7 passed",
+      "CLI/core focal after --once wrapper: 30 passed",
+      "BRAIN_OS API focal after tag update: 7 passed",
+      "CLI/core focal after metadata: 30 passed",
+      "BRAIN_OS API focal after metadata: 7 passed"
+    ]
+  },
+  "runtime_evidence": [
+    "~/.medioevo/wabi/runtime/outputs/llm_work_response/",
+    "~/.medioevo/wabi/runtime/witness/wabi_patch_witness.sqlite"
+  ],
+  "decisions": [
+    "Safe JSON top-level status is OK or REVIEW.",
+    "Provider/cloud internal status is preserved as llm_status.",
+    "Responses include proposal, TaskSpec, graphics_plan, patch_candidate, next_safe_action and warnings.",
+    "Responses include tags for proposal-only, double opt-in, rollback and publication boundaries.",
+    "Responses include metadata for priority, risk, category, relevance, incremental planning and fallback mode.",
+    "CLI --once JSON output now includes the safe proposal contract while preserving conversation schema.",
+    "No prompt full text is persisted by llm_work_response.",
+    "Responsible use contract documented in docs/WABI_LLM_RESPONSIBLE_USE_2026-05-20.md."
+  ],
+  "pending": [
+    "Optional manual UI smoke for visual confirmation.",
+    "Live proposal only after explicit double opt-in and budget acceptance.",
+    "Release remains blocked until repo/assets/publication gates pass."
+  ],
+  "next_action": "Use UI or CLI with WABI_LLM_PROVIDER_CLOUD_DEFAULT=1 and verify safe JSON response remains proposal-only before any Apply Local."
+}

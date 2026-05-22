@@ -1,0 +1,82 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI-BUILD-ASSIST-NVIDIA-SMOKE",
+  "project": "Wabi-Sabi local-first cloud-assisted NVIDIA smoke",
+  "R_close": 0.14,
+  "Phi_eff": 0.88,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 5,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "cloud_gate": "LIVE_SMOKE_PASS",
+  "publication_gate": "BLOCK",
+  "files_created": [],
+  "files_modified": [
+    "wabi_sabi/core/build_assist_cloud.py",
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/redaction.py",
+    "tests/test_build_assist_cloud.py",
+    "docs/WABI_BUILD_ASSIST_CLOUD_2026-05-19.md",
+    "README.md",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md"
+  ],
+  "commands_run": [
+    "python -B -m pytest tests\\test_build_assist_cloud.py tests\\test_provider_orchestrator.py tests\\test_redaction_and_cloud_adapters.py tests\\test_cloud_code_proposal.py -q -p no:cacheprovider",
+    ".\\wabi.cmd build-assist-smoke --provider nvidia --model nano-30b --json --workspace C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+    "$env:WABI_BUILD_ASSIST_CLOUD='1'; $env:WABI_ALLOW_CLOUD_PROVIDERS='1'; .\\wabi.cmd build-assist-smoke --provider nvidia --model nano-30b --live --json --workspace C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\core\\build_assist_cloud.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\provider_orchestrator.py wabi_sabi\\core\\redaction.py"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Baseline focal: 37 passed in 40.97s",
+      "Build-assist + redaction focal: 23 passed in 5.89s",
+      "Recommended focal after implementation: 42 passed in 14.67s",
+      "Full Wabi regression: 322 passed in 111.97s",
+      "py_compile: PASS"
+    ]
+  },
+  "live_smoke": {
+    "status": "LIVE_SMOKE_PASS",
+    "provider": "nvidia",
+    "model_alias": "nano-30b",
+    "model": "nvidia/nemotron-3-nano-30b-a3b",
+    "mode": "proposal_only",
+    "cloud_provider_called": true,
+    "applied_to_sources": false,
+    "secrets_printed": false,
+    "redaction": "PASS",
+    "latency_ms": 2308,
+    "usage": {
+      "input_tokens": null,
+      "output_tokens": null
+    },
+    "cost_estimate": null,
+    "artifact_path": "C:\\Users\\L-Tyr\\.medioevo\\wabi\\runtime\\outputs\\build_assist_smoke\\wabi_build_assist_nvidia_smoke_20260519-133139.json"
+  },
+  "redaction_scan": {
+    "status": "PASS",
+    "files_scanned": 2,
+    "secret_value_hits": 0
+  },
+  "decisions": [
+    "NVIDIA nano-30b live route is usable for proposal-only build assistance.",
+    "No source apply is allowed from smoke output.",
+    "Usage and cost remain unknown when provider response does not expose them through the current adapter."
+  ],
+  "pending": [
+    "Use build-assist-plan on synthetic or bounded code tasks only.",
+    "Keep daily/session budget conservative and monitor usage log.",
+    "Do not promote super/ultra without review."
+  ],
+  "next_action": "Use build-assist-plan with nano-30b on one bounded Wabi coding task, then validate the generated cloud proposal locally before any apply."
+}

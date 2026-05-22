@@ -1,0 +1,89 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-SABI-CANONICAL-ROUTE-MODULE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "R_close": 0.04,
+  "Phi_eff": 0.99,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 16,
+    "review_required": 4,
+    "blocked": 0
+  },
+  "files_created": [
+    "MIGRATION_LOG.md",
+    "adapters/README.md",
+    "adapters/adapter_deepsee4.py",
+    "adapters/adapter_nemotron.py",
+    "adapters/adapter_qwen.py",
+    "adapters/stub_deepsee4.py",
+    "adapters/stub_nemotron.py",
+    "adapters/stub_qwen.py",
+    "config/models.wabisabi.yaml",
+    "config/models.wabisabi_extra.yaml",
+    "docs/WABI_SABI_CANONICAL_ROUTE_2026-05-16.md",
+    "docs/WABI_SABI_ABSORPTION_MANIFEST_2026-05-16.md",
+    "DECISIONS.md",
+    "TASKS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md"
+  ],
+  "files_modified": [
+    "README.md",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "SESSION_FINGERPRINT.json",
+    "../../../MIGRATION_LOG.md",
+    "../../../README_WABISABI.md",
+    "../../../scripts/select_model.ps1",
+    "../../../scripts/wabi_sabi_startup.ps1"
+  ],
+  "files_moved": [
+    {
+      "from": "../../../adapters/",
+      "to": "../../../_archive/legacy/wabi-sabi-external-2026-05-16/adapters/"
+    },
+    {
+      "from": "../../../config/",
+      "to": "../../../_archive/legacy/wabi-sabi-external-2026-05-16/config/"
+    }
+  ],
+  "commands_run": [
+    "python -B -m py_compile adapters\\adapter_deepsee4.py adapters\\adapter_nemotron.py adapters\\adapter_qwen.py adapters\\stub_deepsee4.py adapters\\stub_nemotron.py adapters\\stub_qwen.py",
+    "PowerShell scriptblock parse for scripts\\select_model.ps1 and scripts\\wabi_sabi_startup.ps1",
+    "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\select_model.ps1 -ModelId qwen_3_6_plus",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --execute --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-wabi-canonical-route-2026-05-16.json",
+    "python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-wabi-canonical-route-final-2026-05-16.json",
+    "Move-Item adapters, config -> _archive\\legacy\\wabi-sabi-external-2026-05-16",
+    "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\wabi_sabi_startup.ps1",
+    "powershell -NoProfile -ExecutionPolicy Bypass -File scripts\\select_model.ps1 -ModelId nemotron_ultra_253b",
+    "python -B -m py_compile canonical adapters after archive move",
+    "python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --execute --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-wabi-canonical-archive-2026-05-16.json",
+    "python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-wabi-canonical-archive-final-2026-05-16.json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Adapters py_compile passed before and after archive move.",
+      "PowerShell wrappers parsed successfully.",
+      "select_model.ps1 executed without printing secrets.",
+      "Full Wabi-Sabi suite: 209 passed in 81.74s.",
+      "Final regenerable postcheck before archive move: approved=0, blocked=0, bytes=0.",
+      "Post-archive route check: root adapters=False, root config=False, archive=True, canon=True.",
+      "Startup post-archive: pythonw.exe running apps/local/wabi-sabi/adapters/stub_nemotron.py.",
+      "Final post-archive cleanup: deleted=1, bytes=6796, errors=0; postcheck approved=0, blocked=0, bytes=0."
+    ]
+  },
+  "decisions": [
+    "Canonical Wabi-Sabi project route is apps/local/wabi-sabi.",
+    "Root Wabi adapters/config were archived after canonical copies and wrappers were verified.",
+    "Host scripts remain wrappers because Windows startup paths need stable host entrypoints."
+  ],
+  "pending": [
+    "Do not copy secret loaders into the canonical route.",
+    "Any future Wabi path outside canon must be classified before use."
+  ],
+  "next_action": "Operate Wabi-Sabi only from apps/local/wabi-sabi."
+}

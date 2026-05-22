@@ -37,6 +37,35 @@ class LocalMemory:
             handle.write(json.dumps(payload, ensure_ascii=False, sort_keys=True) + "\n")
         return self.session_log
 
+    def tail_memory(self, limit: int = 12) -> list[dict[str, Any]]:
+        if not self.session_log.exists():
+            return []
+        lines = self.session_log.read_text(encoding="utf-8", errors="replace").splitlines()
+        items: list[dict[str, Any]] = []
+        for line in lines[-limit:]:
+            try:
+                items.append(json.loads(line))
+            except json.JSONDecodeError:
+                continue
+        return items
+
+    def conversation_summary(self, limit: int = 6) -> str:
+        items = [
+            item
+            for item in self.tail_memory(limit=limit)
+            if item.get("channel") in {"wabi_auto_router", "wabi_auto_conversation"}
+        ]
+        if not items:
+            return ""
+        parts: list[str] = []
+        for item in items[-limit:]:
+            prompt = _excerpt(str(item.get("prompt") or ""), 90)
+            route = str(item.get("route") or item.get("agent") or "local")
+            output = _excerpt(str(item.get("output") or ""), 140)
+            if prompt:
+                parts.append(f"{route}: {prompt}" + (f" -> {output}" if output else ""))
+        return " | ".join(parts)
+
     def tail_events(self, limit: int = 20) -> list[dict[str, Any]]:
         if not self.event_log.exists():
             return []
@@ -48,3 +77,10 @@ class LocalMemory:
             except json.JSONDecodeError:
                 continue
         return events
+
+
+def _excerpt(text: str, limit: int) -> str:
+    clean = " ".join(str(text or "").split())
+    if len(clean) <= limit:
+        return clean
+    return clean[: max(0, limit - 3)] + "..."

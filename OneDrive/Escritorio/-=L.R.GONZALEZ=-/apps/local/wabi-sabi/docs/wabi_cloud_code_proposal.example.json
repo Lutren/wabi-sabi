@@ -1,0 +1,44 @@
+{
+  "schema": "wabi.cloud_code_proposal.v0_1",
+  "summary": "create a tiny helper and matching smoke test from a cloud proposal",
+  "intent": "Demostrar el contrato cloud-proposes/local-executes sin llamadas live.",
+  "assumptions": [
+    "La propuesta viene de un proveedor cloud o dry-run ya saneado.",
+    "Wabi/Sabi local conserva el gate final y la ejecucion."
+  ],
+  "files_to_read": [
+    "README.md"
+  ],
+  "changes": [
+    {
+      "operation": "write_text",
+      "target": "examples/wabi_cloud_answer.py",
+      "suffix": ".py",
+      "content": "def answer() -> int:\n    return 42\n",
+      "reason": "Crear helper minimo para validar conversion a TaskSpec."
+    },
+    {
+      "operation": "write_text",
+      "target": "examples/test_wabi_cloud_answer.py",
+      "suffix": ".py",
+      "content": "from wabi_cloud_answer import answer\n\n\ndef test_answer() -> None:\n    assert answer() == 42\n",
+      "reason": "Agregar smoke test local para SafeExecutor."
+    }
+  ],
+  "commands_requested": [
+    "python -m py_compile examples/wabi_cloud_answer.py examples/test_wabi_cloud_answer.py"
+  ],
+  "test_commands": [
+    "python -m py_compile examples/wabi_cloud_answer.py examples/test_wabi_cloud_answer.py"
+  ],
+  "risks": [
+    "La propuesta cloud no debe tratarse como autorizacion de ejecucion."
+  ],
+  "rollback_notes": [
+    "SafeExecutor debe crear snapshot antes de escribir."
+  ],
+  "debug_strategy": [
+    "Si py_compile falla, rollback y reenviar stderr saneado al provider en una fase posterior."
+  ],
+  "gate_recommendation": "REVIEW"
+}

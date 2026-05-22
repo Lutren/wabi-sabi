@@ -1,0 +1,96 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-MODULAR-ENGINE-EVENT-SHEET-RUNTIME",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "R_close": 0.1,
+  "Phi_eff": 0.93,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 24,
+    "review_required": 1,
+    "blocked": 1
+  },
+  "files_created": [
+    "wabi_sabi/engine/__init__.py",
+    "wabi_sabi/engine/modular_engine.py",
+    "wabi_sabi/engine/project_runtime.py",
+    "tests/test_engine.py",
+    "tests/test_engine_project_runtime.py",
+    "docs/ENGINE_MODULAR_WABI_SABI.md",
+    "docs/engine/local_only/local_only_no_publicar_crear_wabi_sabi_observatorio_sandbox_app_TASK_SPEC.json",
+    "docs/engine/local_only/wabi_sabi_observatorio_sandbox_ENGINE_PLAN.md",
+    "docs/engine/local_only/wabi_sabi_observatorio_sandbox_PROJECT_SPEC.json",
+    "SESSION_FINGERPRINT_WABI_ENGINE_20260516.json"
+  ],
+  "files_modified": [
+    ".gitignore",
+    "wabi_sabi/cli/main.py",
+    "wabi_sabi/core/tool_registry.py",
+    "wabi_sabi/engine/__init__.py",
+    "wabi_sabi/engine/modular_engine.py",
+    "wabi_sabi/engine/project_runtime.py",
+    "tests/test_engine.py",
+    "tests/test_engine_project_runtime.py",
+    "TEST_REPORT.md",
+    "NEXT_SESSION_BRIEF.md"
+  ],
+  "commands_run": [
+    "python tools\\release\\pending_review.py --write --quiet",
+    "python -m py_compile wabi_sabi\\engine\\__init__.py wabi_sabi\\engine\\modular_engine.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\tool_registry.py",
+    "python -m pytest tests\\test_engine.py -q",
+    "python -m pytest tests\\test_task_spec_planner.py -q",
+    "python -m pytest tests\\test_cli.py -q",
+    "python -m pytest tests\\test_patch_cli.py -q",
+    "python -m pytest tests\\test_engine.py tests\\test_task_spec_planner.py tests\\test_patch_cli.py -q",
+    "python -m wabi_sabi.cli.main engine-status --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main engine-intake GDevelop --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main engine-plan \"crear app local con escena de juego y boton de prueba\" --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main tools --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main engine-plan \"LOCAL_ONLY NO_PUBLICAR crear Wabi-Sabi Observatorio Sandbox...\" --write-docs --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main engine-task-spec runtime\\outputs\\engine_plans\\local_only_no_publicar_crear_wabi_sabi_observatorio_sandbox_app_ENGINE_PLAN.json --target docs/engine/local_only/wabi_sabi_observatorio_sandbox_ENGINE_PLAN.md --write-docs --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main task-spec-plan docs\\engine\\local_only\\local_only_no_publicar_crear_wabi_sabi_observatorio_sandbox_app_TASK_SPEC.json --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main task-spec-apply docs\\engine\\local_only\\local_only_no_publicar_crear_wabi_sabi_observatorio_sandbox_app_TASK_SPEC.json --json --workspace . --runtime runtime",
+    "python -m py_compile wabi_sabi\\engine\\project_runtime.py wabi_sabi\\engine\\modular_engine.py wabi_sabi\\engine\\__init__.py wabi_sabi\\cli\\main.py wabi_sabi\\core\\tool_registry.py tests\\test_engine_project_runtime.py tests\\test_engine.py",
+    "python -m pytest tests\\test_engine_project_runtime.py -q",
+    "python -m wabi_sabi.cli.main engine-sandbox --write-docs --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main engine-project-validate docs\\engine\\local_only\\wabi_sabi_observatorio_sandbox_PROJECT_SPEC.json --json --workspace . --runtime runtime",
+    "python -m wabi_sabi.cli.main engine-simulate docs\\engine\\local_only\\wabi_sabi_observatorio_sandbox_PROJECT_SPEC.json 3 --json --workspace . --runtime runtime",
+    "python -m pytest tests\\test_engine_project_runtime.py tests\\test_engine.py tests\\test_task_spec_planner.py tests\\test_patch_cli.py tests\\test_cli.py -q",
+    "python -m pytest -q",
+    "python -m wabi_sabi.cli.main run-safe-tests --json --workspace . --runtime runtime",
+    "git check-ignore -v docs\\engine\\local_only\\wabi_sabi_observatorio_sandbox_PROJECT_SPEC.json docs\\engine\\local_only\\wabi_sabi_observatorio_sandbox_ENGINE_PLAN.md docs\\engine\\local_only\\local_only_no_publicar_crear_wabi_sabi_observatorio_sandbox_app_TASK_SPEC.json"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "py_compile passed for engine package, CLI, tool registry and engine tests.",
+      "tests/test_engine.py: 7 passed.",
+      "tests/test_engine_project_runtime.py: 11 passed.",
+      "tests/test_task_spec_planner.py: 6 passed.",
+      "tests/test_cli.py: 12 passed.",
+      "tests/test_patch_cli.py: 4 passed.",
+      "Focused engine/task-spec/patch/CLI group final: 40 passed.",
+      "Full Wabi-Sabi suite final: 209 passed in 70.74s.",
+      "run-safe-tests final: 209 passed in 79.53s, artifact runtime/outputs/safe_test_run_20260516-160054.json, witness_event_id=19, witness_verified=true.",
+      "engine-sandbox --write-docs produced docs/engine/local_only/wabi_sabi_observatorio_sandbox_PROJECT_SPEC.json.",
+      "engine-project-validate returned ok=true, node_count=5, edge_count=4, scene_count=1, publish_allowed=false.",
+      "engine-simulate with 3 clicks returned event_count=3, fired_rules=4, scene.observation_count=3, pattern_marker.visible=true, residue_meter.value=0.12, sandbox.action_gate=APPROVE.",
+      "git check-ignore confirms docs/engine/local_only/ is ignored."
+    ]
+  },
+  "decisions": [
+    "Build Wabi-Sabi engine as clean-room extraction layer, not as a fork/vendor of GDevelop, Dyad, OpenHands or Lovable.",
+    "Keep generated local-only engine plans and project specs under docs/engine/local_only and ignore that folder for publication safety.",
+    "Use modules observation_kernel, project_graph, app_core, game_core, programmer_core and extension_registry as the initial engine skeleton.",
+    "Implement project_graph + event_sheet as a deterministic executable spec before adding UI or heavier runtime code.",
+    "Implement a deterministic event_sheet interpreter before adding frontend rendering.",
+    "Validate project specs by graph integrity, event rule completeness, local-only visibility and canonical fingerprint."
+  ],
+  "pending": [
+    "Add a renderer-neutral view model for the Observatorio Sandbox so future UI can consume state without binding to a web framework.",
+    "If executable app/game UI modules are added later, keep them behind tests and private RPG/TCG path blockers.",
+    "Any publication, push, deploy, Gumroad or social action remains BLOCK/REVIEW and was not performed."
+  ],
+  "next_action": "Implement a renderer-neutral view model for the simulated Observatorio Sandbox state, then test CLI JSON output for UI consumption without external channels."
+}

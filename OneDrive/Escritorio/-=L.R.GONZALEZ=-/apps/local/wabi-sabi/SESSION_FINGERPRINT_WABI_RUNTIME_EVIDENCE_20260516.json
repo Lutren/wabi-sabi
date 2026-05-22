@@ -1,0 +1,92 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-RUNTIME-EVIDENCE-SUMMARY",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "runtime_evidence",
+  "R_close": 0.05,
+  "Phi_eff": 0.96,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 1,
+    "review_required": 1,
+    "blocked": 0
+  },
+  "runtime_summary": {
+    "path": "runtime",
+    "file_count": 194,
+    "bytes": 913448,
+    "ignored_by_git": true,
+    "deleted_files": 0,
+    "moved_files": 0
+  },
+  "buckets": [
+    {"name": "debug", "files": 8, "bytes": 17072, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "decision_log", "files": 3, "bytes": 17552, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "executions", "files": 2, "bytes": 5308, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "jobs", "files": 51, "bytes": 72887, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "logs", "files": 1, "bytes": 83359, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "memory", "files": 1, "bytes": 41190, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "outputs", "files": 124, "bytes": 629884, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "rollback", "files": 2, "bytes": 5236, "decision": "KEEP_LOCAL_EVIDENCE"},
+    {"name": "wabi_osit_bridge.sqlite", "files": 1, "bytes": 12288, "decision": "KEEP_LOCAL_DB"},
+    {"name": "witness", "files": 1, "bytes": 28672, "decision": "KEEP_LOCAL_DB"}
+  ],
+  "sqlite_hashes": [
+    {
+      "path": "runtime/wabi_osit_bridge.sqlite",
+      "bytes": 12288,
+      "sha256": "4D69C56A1C8A74D5C34E8E31F2093E6575BE3FB13B268198907461C8B82CFA5D"
+    },
+    {
+      "path": "runtime/decision_log/wabi_decision_witness.sqlite",
+      "bytes": 12288,
+      "sha256": "7F63078FE94731407971E26546FAC4977554CA9E9D3A39B96D50E9759CAAF4B0"
+    },
+    {
+      "path": "runtime/witness/wabi_patch_witness.sqlite",
+      "bytes": 28672,
+      "sha256": "CA5BE3758DBFDA862DCC4598493922A684A7744C6B1510CA1105B732209D74C6"
+    }
+  ],
+  "review_required": [
+    "runtime/jobs/*.stdout.log and runtime/jobs/*.stderr.log are zero-byte logs but remain tied to job JSON evidence.",
+    "runtime/outputs/wabi_environment_snapshot_*.json remains local-only and should not be printed or released."
+  ],
+  "files_created": [
+    "docs/WABI_SABI_RUNTIME_EVIDENCE_SUMMARY_2026-05-16.md",
+    "SESSION_FINGERPRINT_WABI_RUNTIME_EVIDENCE_20260516.json",
+    "docs/WABI_SABI_ZERO_BYTE_JOB_LOG_MANIFEST_2026-05-16.md",
+    "SESSION_FINGERPRINT_WABI_ZERO_BYTE_JOB_LOGS_20260516.json"
+  ],
+  "commands_run": [
+    "Get-ChildItem runtime -Recurse -Force -File grouped by bucket",
+    "Get-ChildItem runtime -Recurse -Force -File grouped by extension",
+    "Get-FileHash -Algorithm SHA256 for runtime SQLite files",
+    "Sensitive-name triage by filename/path only",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --execute --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-runtime-summary-executed-2026-05-16.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B ..\\..\\..\\tools\\release\\cleanup_regenerable_cache.py --json-out ..\\..\\..\\qa_artifacts\\release_validation\\seto-cache-cleanup-after-runtime-summary-final-2026-05-16.json"
+  ],
+  "tests": {
+    "status": "not_run_docs_only",
+    "evidence": [
+      "No code changed in this runtime-evidence pass.",
+      "Previous full Wabi-Sabi suite remained 209 passed in 102.70s.",
+      "Post-runtime-summary regenerable cleanup removed 1 tools/release/__pycache__ directory, 15553 bytes.",
+      "Final regenerable postcheck: approved=0, blocked=0, bytes=0, errors=0.",
+      "Zero-byte job log manifest: 34 logs, 17 paired JSON files, all JSON parse successfully, deleted_files=0.",
+      "Final post-zero-byte-manifest regenerable postcheck: approved=0, blocked=0, bytes=0, errors=0."
+    ]
+  },
+  "decisions": [
+    "Preserve runtime as ignored local evidence.",
+    "Do not delete SQLite, JSONL, patch plans, rollbacks, job JSON or environment snapshots.",
+    "Treat zero-byte job logs as REVIEW candidates, not immediate deletes."
+    ,
+    "No further safe cleanup remains in Wabi-Sabi without an explicit runtime delete or private commit decision."
+  ],
+  "pending": [
+    "Private/local commit by module remains optional; no push or publication."
+  ],
+  "next_action": "No further safe cleanup remains in Wabi-Sabi; optional next step is private/local commit by module."
+}

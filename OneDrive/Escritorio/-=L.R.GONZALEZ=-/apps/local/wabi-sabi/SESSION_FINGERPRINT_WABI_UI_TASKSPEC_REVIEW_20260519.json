@@ -1,0 +1,94 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI_UI_TASKSPEC_REVIEW",
+  "project": "MEDIOEVO/CLAUDIO/WABI",
+  "fingerprint": "WABI_UI_TASKSPEC_REVIEW_20260519",
+  "R_close": 0.12,
+  "Phi_eff": 0.89,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 7,
+    "review_required": 0,
+    "blocked": 1
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "CLOUD_BUDGET_DRY_RUN",
+    "UIGate": "LOCAL_UI_TASKSPEC_REVIEW_READY",
+    "ConversationGate": "API_CONNECTED_TO_CONVERSATION_ENGINE",
+    "TaskSpecGate": "REVIEW_ONLY_APPLY_BLOCKED",
+    "GraphicsGate": "PLAN_ONLY_READY / graphics_live=false",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "wabi_sabi/core/taskspec_review.py",
+    "tests/test_taskspec_review.py",
+    "docs/WABI_UI_TASKSPEC_REVIEW_2026-05-19.md",
+    "SESSION_FINGERPRINT_WABI_UI_TASKSPEC_REVIEW_20260519.json",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/tests/test_wabi_taskspec_review_api.py"
+  ],
+  "files_modified": [
+    "wabi_sabi/core/worktree.py",
+    "NEXT_SESSION_BRIEF.md",
+    "TEST_REPORT.md",
+    "DECISIONS.md",
+    "RISKS.md",
+    "ASSUMPTIONS.md",
+    "TASKS.md",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "C:/Users/L-Tyr/OneDrive/Escritorio/-= BRAIN_OS =-/apps/local/wabi_ui/index.html"
+  ],
+  "commands_run": [
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py 02_CLAUDIO\\tests\\test_wabi_conversation_api.py 02_CLAUDIO\\tests\\test_wabi_taskspec_review_api.py -q -p no:cacheprovider",
+    "python -B -m pytest tests\\test_taskspec_review.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py tests\\test_graphics_bridge.py tests\\test_cloud_budget.py tests\\test_cloud_budget_ui_status.py tests\\test_build_assist_cloud.py -q -p no:cacheprovider",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m py_compile 02_CLAUDIO\\server\\wabi_local_server.py",
+    "python -B -m py_compile wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\taskspec_review.py wabi_sabi\\core\\graphics_bridge.py wabi_sabi\\core\\cloud_budget.py wabi_sabi\\core\\worktree.py wabi_sabi\\cli\\main.py",
+    "Invoke-RestMethod http://127.0.0.1:8787/api/conversation/turn",
+    "Invoke-RestMethod http://127.0.0.1:8787/api/taskspec/apply",
+    "Invoke-RestMethod http://127.0.0.1:8787/api/taskspec/save-draft",
+    "msedge --headless=new --screenshot http://127.0.0.1:8787/"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "BRAIN_OS focal combined: 242 passed in 83.67s",
+      "Wabi focal required: 47 passed in 9.22s",
+      "Wabi full: 357 passed in 355.74s",
+      "BRAIN_OS full: 752 passed in 573.25s",
+      "py_compile PASS",
+      "worktree/provider-status focal: 4 passed in 4.69s"
+    ]
+  },
+  "manual_smokes": {
+    "ui_url": "http://127.0.0.1:8787/",
+    "old_pid": 10552,
+    "new_pid": 9520,
+    "code_request_taskspec": "PASS",
+    "graphics_scene_taskspec": "PASS",
+    "build_assist_taskspec": "PASS",
+    "apply_endpoint": "APPLY_BLOCKED_REVIEW_ONLY_V0_1",
+    "save_draft": "PASS_REDACTED",
+    "draft_path": "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/taskspec_review/wabi_taskspec_review_20260519-195929.json",
+    "cloud_provider_called": false,
+    "applied_to_sources": false,
+    "graphics_live": false,
+    "publication_gate": "BLOCK"
+  },
+  "artifacts": [
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/ui_taskspec_review_20260519/wabi_ui_taskspec_review.png",
+    "C:/Users/L-Tyr/.medioevo/wabi/runtime/outputs/taskspec_review/wabi_taskspec_review_20260519-195929.json"
+  ],
+  "decisions": [
+    "Review TaskSpec is backend-normalized and redacted.",
+    "Apply endpoint remains blocked in v0.1.",
+    "Save Draft writes local redacted JSON only.",
+    "Run Tests from UI remains disabled/plan-only."
+  ],
+  "pending": [
+    "Add TaskSpec Gate Preview without execution."
+  ],
+  "next_action": "Create TaskSpec Gate Preview that explains required ActionGate, rollback, path allowlist and tests for a future local apply path without executing it."
+}

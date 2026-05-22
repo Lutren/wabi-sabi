@@ -1,0 +1,72 @@
+profile: wabi-sabi
+models:
+  - id: nemotron_ultra_253b
+    provider: nvidia
+    display_name: Llama 3.1 Nemotron Ultra 253B
+    priority: 1
+    adapter: nvcr/ngc
+    credentials:
+      nvcr_token_env: NVCR_TOKEN
+      ngc_accesskey_id_env: NGC_ACCESSKEY_ID
+      ngc_accesskey_secret_env: NGC_ACCESSKEY_SECRET
+  - id: nemotron_70b_instruct
+    provider: nvidia
+    display_name: Llama 3.1 Nemotron 70B Instruct
+    priority: 2
+    adapter: nvcr/ngc
+    credentials:
+      nvcr_token_env: NVCR_TOKEN
+      ngc_accesskey_id_env: NGC_ACCESSKEY_ID
+      ngc_accesskey_secret_env: NGC_ACCESSKEY_SECRET
+  - id: nemotron_super_120b
+    provider: nvidia
+    display_name: Nemotron 3 Super 120B
+    priority: 3
+    adapter: nvcr/ngc
+    credentials:
+      nvcr_token_env: NVCR_TOKEN
+      ngc_accesskey_id_env: NGC_ACCESSKEY_ID
+      ngc_accesskey_secret_env: NGC_ACCESSKEY_SECRET
+  - id: nemotron_nano_9b
+    provider: nvidia
+    display_name: Nemotron 3 Nano 9B
+    priority: 4
+    adapter: nvcr/ngc
+    credentials:
+      nvcr_token_env: NVCR_TOKEN
+      ngc_accesskey_id_env: NGC_ACCESSKEY_ID
+      ngc_accesskey_secret_env: NGC_ACCESSKEY_SECRET
+  - id: nemotron_nano_30b
+    provider: nvidia
+    display_name: Nemotron 3 Nano 30B
+    priority: 5
+    adapter: nvcr/ngc
+    credentials:
+      nvcr_token_env: NVCR_TOKEN
+      ngc_accesskey_id_env: NGC_ACCESSKEY_ID
+      ngc_accesskey_secret_env: NGC_ACCESSKEY_SECRET
+  - id: qwen_3_6_plus
+    provider: qwen
+    display_name: Qwen 3.6 Plus
+    priority: 2
+    adapter: qwen/api
+    credentials:
+      api_key_env: QWEN_API_KEY
+  - id: qwen_3_235b
+    provider: qwen
+    display_name: Qwen3-235B
+    priority: 3
+    adapter: qwen/api
+    credentials:
+      api_key_env: QWEN_API_KEY
+  - id: deep_see4
+    provider: deepsee
+    display_name: Deep See 4
+    priority: 1
+    adapter: deepsee/api
+    credentials:
+      api_key_env: DEEPSEE_API_KEY
+
+# Do not store secrets in this file. Keep credentials in environment variables
+# or a local secret manager. Canonical route notes:
+# apps/local/wabi-sabi/docs/WABI_SABI_CANONICAL_ROUTE_2026-05-16.md

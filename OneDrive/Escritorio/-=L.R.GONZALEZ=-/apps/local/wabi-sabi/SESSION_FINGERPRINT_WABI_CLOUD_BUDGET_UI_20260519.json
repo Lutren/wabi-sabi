@@ -1,0 +1,72 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260519-WABI-CLOUD-BUDGET-UI",
+  "project": "Wabi-Sabi Local Agents",
+  "fingerprint": "WABI_CLOUD_BUDGET_UI_20260519",
+  "R_close": 0.09,
+  "Phi_eff": 0.9,
+  "regime_close": "FUNCIONAL_CLOUD_BUDGET_UI",
+  "autonomy_level_used": 3,
+  "actiongate_summary": {
+    "approved": 7,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "gates": {
+    "ActionGate": "APPROVE_LOCAL",
+    "CloudGate": "PROPOSAL_ONLY_DOUBLE_OPT_IN",
+    "CloudBudgetGate": "UI_STATUS_VISIBLE",
+    "UIGate": "APPROVE_LOCAL_STATUS_PANEL",
+    "GraphicsGate": "PLAN_ONLY_READY / graphics_live=false",
+    "BrowserBridgeGate": "NO_LIVE_CALL",
+    "PublicationGate": "BLOCK"
+  },
+  "files_created": [
+    "apps/local/wabi-sabi/tests/test_cloud_budget_ui_status.py",
+    "apps/local/wabi-sabi/docs/WABI_CLOUD_BUDGET_UI_2026-05-19.md",
+    "apps/local/wabi-sabi/SESSION_FINGERPRINT_WABI_CLOUD_BUDGET_UI_20260519.json"
+  ],
+  "files_modified": [
+    "../-= BRAIN_OS =-/02_CLAUDIO/server/wabi_local_server.py",
+    "../-= BRAIN_OS =-/apps/local/wabi_ui/index.html",
+    "apps/local/wabi-sabi/NEXT_SESSION_BRIEF.md",
+    "apps/local/wabi-sabi/TEST_REPORT.md",
+    "apps/local/wabi-sabi/DECISIONS.md",
+    "apps/local/wabi-sabi/RISKS.md",
+    "apps/local/wabi-sabi/ASSUMPTIONS.md",
+    "apps/local/wabi-sabi/TASKS.md"
+  ],
+  "commands_run": [
+    "python -B -m pytest tests\\test_cloud_budget_ui_status.py -q -p no:cacheprovider",
+    "python -B -m pytest tests\\test_cloud_budget.py tests\\test_cloud_budget_ui_status.py tests\\test_conversation_engine.py tests\\test_conversational_cli.py tests\\test_build_assist_cloud.py -q -p no:cacheprovider",
+    "python -B -m py_compile wabi_sabi\\core\\cloud_budget.py wabi_sabi\\core\\conversation_engine.py wabi_sabi\\core\\build_assist_cloud.py wabi_sabi\\cli\\main.py tests\\test_cloud_budget_ui_status.py",
+    "python -B -m py_compile C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-= BRAIN_OS =-\\02_CLAUDIO\\server\\wabi_local_server.py",
+    "python -B -m pytest -q -p no:cacheprovider",
+    "python -B -m pytest 02_CLAUDIO\\tests\\test_wabi_local_server.py -q -p no:cacheprovider",
+    ".\\wabi.cmd build-assist-status --json",
+    ".\\wabi.cmd --once \"hola wabi\"",
+    ".\\wabi.cmd build-assist-plan \"crear helper seguro\" --dry-run --json",
+    ".\\wabi.cmd with /status, /providers, /exit"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Cloud budget UI focal: 5 passed in 11.15s",
+      "Required focal: 39 passed in 12.25s",
+      "py_compile: PASS",
+      "Wabi full regression: 352 passed in 372.11s (0:06:12)",
+      "BRAIN_OS server/UI focal: 229 passed in 138.64s (0:02:18)",
+      "Manual no-live checks: PASS"
+    ]
+  },
+  "decisions": [
+    "Expose CloudBudgetGate in local UI through GET /api/cloud-budget/status.",
+    "Use CloudBudgetGate.render_status as the source of truth.",
+    "Keep UI status-only: no NVIDIA call button and no cloud output apply button."
+  ],
+  "pending": [
+    "Restart or open the local Wabi UI server to visually confirm the new Cloud Budget panel if an older server process is still running.",
+    "If build-assist is later exposed from UI, keep it behind double opt-in and CloudBudgetGate."
+  ],
+  "next_action": "Restart local Wabi UI server and verify the Cloud Budget panel visually without calling cloud."
+}

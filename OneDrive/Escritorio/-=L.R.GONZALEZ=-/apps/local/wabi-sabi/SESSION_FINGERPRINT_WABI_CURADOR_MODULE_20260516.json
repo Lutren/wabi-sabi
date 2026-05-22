@@ -1,0 +1,60 @@
+{
+  "schema_version": "observacionismo.session_fingerprint.v2.1",
+  "session_id": "20260516-WABI-CURADOR-MODULE-CLOSE",
+  "project": "MEDIOEVO/CLAUDIO/apps/local/wabi-sabi",
+  "module": "wabi_sabi.curador",
+  "R_close": 0.05,
+  "Phi_eff": 0.98,
+  "regime_close": "FUNCIONAL",
+  "autonomy_level_used": 4,
+  "actiongate_summary": {
+    "approved": 8,
+    "review_required": 0,
+    "blocked": 0
+  },
+  "module_files": [
+    "wabi_sabi/core/curator_assistant.py",
+    "wabi_sabi/core/curator_fichas.py",
+    "wabi_sabi/core/cerebro_archive_intake.py",
+    "wabi_sabi/core/cerebro_canon_merge_review.py",
+    "wabi_sabi/core/cerebro_duplicate_migration_plan.py",
+    "wabi_sabi/core/cerebro_index.py",
+    "wabi_sabi/core/cerebro_line_audit.py",
+    "wabi_sabi/core/cerebro_variant_compare.py",
+    "tests/test_curator_assistant.py",
+    "tests/test_curator_fichas.py",
+    "tests/test_cerebro_archive_intake.py",
+    "tests/test_cerebro_canon_merge_review.py",
+    "tests/test_cerebro_duplicate_migration_plan.py",
+    "tests/test_cerebro_index.py",
+    "tests/test_cerebro_line_audit.py",
+    "tests/test_cerebro_variant_compare.py"
+  ],
+  "supporting_files": [
+    "wabi_sabi/cli/main.py",
+    "docs/WABI_SABI_WORKTREE_CLEANUP_MAP_2026-05-16.md",
+    "docs/WABI_SABI_CODE_TREE_MODULE_MAP_2026-05-16.md"
+  ],
+  "commands_run": [
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_CLEANUP_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m json.tool SESSION_FINGERPRINT_WABI_PROVIDERS_MODULE_20260516.json",
+    "$env:PYTHONDONTWRITEBYTECODE='1'; python -B -m pytest tests\\test_curator_assistant.py tests\\test_curator_fichas.py tests\\test_cerebro_archive_intake.py tests\\test_cerebro_canon_merge_review.py tests\\test_cerebro_duplicate_migration_plan.py tests\\test_cerebro_index.py tests\\test_cerebro_line_audit.py tests\\test_cerebro_variant_compare.py -q -p no:cacheprovider"
+  ],
+  "tests": {
+    "status": "passed",
+    "evidence": [
+      "Curador focused tests: 28 passed in 8.23s.",
+      "Cleanup and providers fingerprints parse correctly."
+    ]
+  },
+  "decisions": [
+    "Close curador as the fifth Wabi-Sabi module.",
+    "Keep deletion and movement behind fichas, provenance and ActionGate.",
+    "Next closure is final full-suite verification."
+  ],
+  "pending": [
+    "Run full Wabi-Sabi suite once after all module fingerprints are written.",
+    "Keep runtime evidence ignored and publication blocked."
+  ],
+  "next_action": "Run full Wabi-Sabi suite and final cleanup postcheck."
+}

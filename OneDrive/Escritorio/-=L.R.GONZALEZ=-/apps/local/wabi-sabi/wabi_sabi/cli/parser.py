@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+import re
+import unicodedata
 from dataclasses import dataclass, field
 
 
@@ -17,6 +19,7 @@ CODE_WORDS = {
     "programa",
     "programar",
     "funcion",
+    "función",
     "function",
     "clase",
     "script",
@@ -65,17 +68,18 @@ FILE_WORDS = {
 
 def parse_command(text: str) -> ParsedCommand:
     lowered = text.lower()
+    normalized = _normalize(lowered)
     scores = {
-        "code_generation": _score(lowered, CODE_WORDS),
-        "debug_diagnostics": _score(lowered, DEBUG_WORDS),
-        "local_research": _score(lowered, RESEARCH_WORDS),
-        "file_operations": _score(lowered, FILE_WORDS),
+        "code_generation": _score(normalized, CODE_WORDS),
+        "debug_diagnostics": _score(normalized, DEBUG_WORDS),
+        "local_research": _score(normalized, RESEARCH_WORDS),
+        "file_operations": _score(normalized, FILE_WORDS),
     }
-    if "crea una funcion" in lowered or "crea una función" in lowered:
+    if "crea una funcion" in normalized:
         scores["code_generation"] += 3
-    if "ejecuta diagnostico" in lowered or "ejecuta diagnóstico" in lowered:
+    if "ejecuta diagnostico" in normalized:
         scores["debug_diagnostics"] += 3
-    if "crea un readme" in lowered:
+    if "crea un readme" in normalized:
         scores["file_operations"] += 3
     intent, score = max(scores.items(), key=lambda item: item[1])
     if score <= 0:
@@ -86,4 +90,16 @@ def parse_command(text: str) -> ParsedCommand:
 
 
 def _score(text: str, words: set[str]) -> int:
-    return sum(1 for word in words if word in text)
+    return sum(1 for word in words if _contains_term(text, word))
+
+
+def _normalize(text: str) -> str:
+    decomposed = unicodedata.normalize("NFD", text)
+    return "".join(ch for ch in decomposed if unicodedata.category(ch) != "Mn")
+
+
+def _contains_term(text: str, term: str) -> bool:
+    normalized_term = _normalize(term.lower())
+    if " " in normalized_term:
+        return normalized_term in text
+    return re.search(rf"(?<!\w){re.escape(normalized_term)}(?!\w)", text) is not None

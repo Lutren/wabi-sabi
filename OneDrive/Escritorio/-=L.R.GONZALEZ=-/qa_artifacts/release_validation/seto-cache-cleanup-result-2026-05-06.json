@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-06T10:41:21.806366+00:00",
+  "generated_at_utc": "2026-05-17T00:22:00.641491+00:00",
   "status": "EXECUTED",
   "workspace_root": "C:\\Users\\L-Tyr\\OneDrive\\Escritorio\\-=L.R.GONZALEZ=-",
   "allowed_cache_dirs": [
@@ -21,6 +21,10 @@
     "\\tcg\\",
     "_ARCHIVAR",
     "_archive",
+    "core/sadtalker",
+    "core/wav2lip",
+    "core\\sadtalker",
+    "core\\wav2lip",
     "env",
     "game-private",
     "github-modules",
@@ -30,62 +34,24 @@
     "releases",
     "runtime/game_bridge",
     "runtime\\game_bridge",
+    "tools/pentest_repos",
     "tools/vendor",
+    "tools\\pentest_repos",
     "tools\\vendor",
     "venv"
   ],
   "summary": {
-    "total_candidates": 66,
-    "approved_count": 66,
+    "total_candidates": 10,
+    "approved_count": 10,
     "blocked_count": 0,
-    "approved_bytes": 4877765,
-    "approved_files": 569,
-    "deleted_count": 66,
-    "deleted_bytes": 4877765,
-    "deleted_files": 569,
+    "approved_bytes": 582945,
+    "approved_files": 48,
+    "deleted_count": 10,
+    "deleted_bytes": 582945,
+    "deleted_files": 48,
     "errors": 0
   },
   "approved": [
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_research",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_research",
-      "cache_type": ".test_research",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_research_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_research_storage",
-      "cache_type": ".test_research_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_session_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_session_storage",
-      "cache_type": ".test_session_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 2432
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_sessions",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_sessions",
-      "cache_type": ".test_sessions",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 1117
-    },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
       "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
@@ -93,48 +59,8 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 11915
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_research",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_research",
-      "cache_type": ".test_research",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_research_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_research_storage",
-      "cache_type": ".test_research_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_session_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_session_storage",
-      "cache_type": ".test_session_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 185,
-      "bytes": 89984
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_sessions",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_sessions",
-      "cache_type": ".test_sessions",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 74,
-      "bytes": 41329
+      "file_count": 4,
+      "bytes": 1536
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/__pycache__",
@@ -143,38 +69,8 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 6,
-      "bytes": 81315
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/agent/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/agent/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 41866
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/agent/core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/agent/core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 8,
-      "bytes": 168855
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
       "file_count": 1,
-      "bytes": 82102
+      "bytes": 644
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/brain_os/__pycache__",
@@ -193,18 +89,18 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 51,
-      "bytes": 1110936
+      "file_count": 25,
+      "bytes": 394265
     },
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/core/nollm_programmer/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/core/nollm_programmer/__pycache__",
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/core/gate/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/core/gate/__pycache__",
       "cache_type": "__pycache__",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 130768
+      "file_count": 4,
+      "bytes": 7881
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/integrations/__pycache__",
@@ -217,34 +113,14 @@
       "bytes": 23215
     },
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/radiocinema/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/radiocinema/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 25927
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/runtime/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 95348
-    },
-    {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
       "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
       "cache_type": "__pycache__",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 17,
-      "bytes": 678738
+      "file_count": 4,
+      "bytes": 34505
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tools/__pycache__",
@@ -253,448 +129,18 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 12,
-      "bytes": 580358
+      "file_count": 2,
+      "bytes": 54478
     },
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/radiocinema/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/radiocinema/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 1596
-    },
-    {
-      "path": ".pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 11671
-    },
-    {
-      "path": "apps/commercial/mini-office/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 2116
-    },
-    {
-      "path": "apps/commercial/mini-office/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 5868
-    },
-    {
-      "path": "apps/commercial/mini-office/agents/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/agents/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 13837
-    },
-    {
-      "path": "apps/commercial/mini-office/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 26406
-    },
-    {
-      "path": "apps/commercial/mini-office/tools/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/tools/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 12389
-    },
-    {
-      "path": "apps/local/wabi-sabi/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 6560
-    },
-    {
-      "path": "apps/local/wabi-sabi/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 47916
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 303
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/agents/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/agents/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 6,
-      "bytes": 20505
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/cli/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/cli/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 23306
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 7,
-      "bytes": 44409
-    },
-    {
-      "path": "apps/residueos/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/residueos/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 1047
-    },
-    {
-      "path": "apps/residueos/residueos/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/residueos/residueos/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 6,
-      "bytes": 55186
-    },
-    {
-      "path": "apps/residueos/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/residueos/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 12041
-    },
-    {
-      "path": "claudio/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/claudio/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 230
-    },
-    {
-      "path": "claudio/adapters/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/claudio/adapters/__pycache__",
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tools/root_scripts_review/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tools/root_scripts_review/__pycache__",
       "cache_type": "__pycache__",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
       "file_count": 2,
-      "bytes": 26854
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 1020
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/rapid_agent_guardian/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/rapid_agent_guardian/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 23362
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/scripts/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/scripts/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 6175
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 4924
-    },
-    {
-      "path": "packages/obsai-core/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 1359
-    },
-    {
-      "path": "packages/obsai-core/obsai_core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/obsai_core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 9,
-      "bytes": 60315
-    },
-    {
-      "path": "packages/obsai-core/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 11310
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 813
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/duat_genesis/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/duat_genesis/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 18153
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 4137
-    },
-    {
-      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 9,
-      "bytes": 94609
-    },
-    {
-      "path": "PRODUCTOS_MEDIOEVO/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 19532
-    },
-    {
-      "path": "PRODUCTOS_MEDIOEVO/content_forge/content_forge/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/content_forge/content_forge/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 7380
-    },
-    {
-      "path": "PRODUCTOS_MEDIOEVO/content_forge/content_forge/core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/content_forge/content_forge/core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 26926
-    },
-    {
-      "path": "research/geodia-social-observatory/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/geodia-social-observatory/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 2315
-    },
-    {
-      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/geodia-social-observatory/geodia_social_observatory/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 14,
-      "bytes": 92879
-    },
-    {
-      "path": "research/geodia-social-observatory/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/geodia-social-observatory/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 26153
-    },
-    {
-      "path": "research/obs-info-kernel/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/obs-info-kernel/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 2071
-    },
-    {
-      "path": "research/obs-info-kernel/obs_info_kernel/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/obs-info-kernel/obs_info_kernel/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 16,
-      "bytes": 162485
-    },
-    {
-      "path": "research/obs-info-kernel/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/obs-info-kernel/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 62835
-    },
-    {
-      "path": "research/observacionismo-lab/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/observacionismo-lab/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 83587
-    },
-    {
-      "path": "research/observacionismo-lab/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/observacionismo-lab/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 88688
-    },
-    {
-      "path": "tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 96941
-    },
-    {
-      "path": "tools/ai_browser/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/ai_browser/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 66800
-    },
-    {
-      "path": "tools/harness/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/harness/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 6699
-    },
-    {
-      "path": "tools/observacionismo/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/observacionismo/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 66051
+      "bytes": 10379
     },
     {
       "path": "tools/release/__pycache__",
@@ -703,101 +149,21 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 10,
-      "bytes": 321312
+      "file_count": 1,
+      "bytes": 15553
     }
   ],
   "blocked": [],
   "deleted": [
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_research",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_research",
-      "cache_type": ".test_research",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_research_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_research_storage",
-      "cache_type": ".test_research_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_session_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_session_storage",
-      "cache_type": ".test_session_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 2432
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/.test_sessions",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/.test_sessions",
-      "cache_type": ".test_sessions",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 1117
-    },
-    {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
       "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.pytest_cache",
       "cache_type": ".pytest_cache",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 11915
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_research",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_research",
-      "cache_type": ".test_research",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_research_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_research_storage",
-      "cache_type": ".test_research_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 0,
-      "bytes": 0
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_session_storage",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_session_storage",
-      "cache_type": ".test_session_storage",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 185,
-      "bytes": 89984
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/.test_sessions",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/.test_sessions",
-      "cache_type": ".test_sessions",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 74,
-      "bytes": 41329
+      "file_count": 4,
+      "bytes": 1536
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/__pycache__",
@@ -806,38 +172,8 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 6,
-      "bytes": 81315
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/agent/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/agent/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 41866
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/agent/core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/agent/core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 8,
-      "bytes": 168855
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/apps/hormiguero_mission_control/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
       "file_count": 1,
-      "bytes": 82102
+      "bytes": 644
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/brain_os/__pycache__",
@@ -856,18 +192,18 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 51,
-      "bytes": 1110936
+      "file_count": 25,
+      "bytes": 394265
     },
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/core/nollm_programmer/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/core/nollm_programmer/__pycache__",
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/core/gate/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/core/gate/__pycache__",
       "cache_type": "__pycache__",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 130768
+      "file_count": 4,
+      "bytes": 7881
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/integrations/__pycache__",
@@ -880,34 +216,14 @@
       "bytes": 23215
     },
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/radiocinema/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/radiocinema/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 25927
-    },
-    {
-      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/runtime/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/runtime/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 95348
-    },
-    {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
       "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tests/__pycache__",
       "cache_type": "__pycache__",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 17,
-      "bytes": 678738
+      "file_count": 4,
+      "bytes": 34505
     },
     {
       "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tools/__pycache__",
@@ -916,448 +232,18 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 12,
-      "bytes": 580358
+      "file_count": 2,
+      "bytes": 54478
     },
     {
-      "path": "-=MEDIOEVO=-/-=LIBROS/radiocinema/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/radiocinema/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 1596
-    },
-    {
-      "path": ".pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 11671
-    },
-    {
-      "path": "apps/commercial/mini-office/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 2116
-    },
-    {
-      "path": "apps/commercial/mini-office/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 5868
-    },
-    {
-      "path": "apps/commercial/mini-office/agents/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/agents/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 13837
-    },
-    {
-      "path": "apps/commercial/mini-office/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 26406
-    },
-    {
-      "path": "apps/commercial/mini-office/tools/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/commercial/mini-office/tools/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 12389
-    },
-    {
-      "path": "apps/local/wabi-sabi/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 6560
-    },
-    {
-      "path": "apps/local/wabi-sabi/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 47916
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 303
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/agents/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/agents/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 6,
-      "bytes": 20505
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/cli/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/cli/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 23306
-    },
-    {
-      "path": "apps/local/wabi-sabi/wabi_sabi/core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/local/wabi-sabi/wabi_sabi/core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 7,
-      "bytes": 44409
-    },
-    {
-      "path": "apps/residueos/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/residueos/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 1047
-    },
-    {
-      "path": "apps/residueos/residueos/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/residueos/residueos/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 6,
-      "bytes": 55186
-    },
-    {
-      "path": "apps/residueos/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/apps/residueos/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 12041
-    },
-    {
-      "path": "claudio/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/claudio/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 230
-    },
-    {
-      "path": "claudio/adapters/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/claudio/adapters/__pycache__",
+      "path": "-=MEDIOEVO=-/-=LIBROS/claudio/tools/root_scripts_review/__pycache__",
+      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/-=MEDIOEVO=-/-=LIBROS/claudio/tools/root_scripts_review/__pycache__",
       "cache_type": "__pycache__",
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
       "file_count": 2,
-      "bytes": 26854
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 1020
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/rapid_agent_guardian/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/rapid_agent_guardian/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 23362
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/scripts/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/scripts/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 6175
-    },
-    {
-      "path": "hackathons/google-rapid-agent-2026/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/hackathons/google-rapid-agent-2026/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 4924
-    },
-    {
-      "path": "packages/obsai-core/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 1359
-    },
-    {
-      "path": "packages/obsai-core/obsai_core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/obsai_core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 9,
-      "bytes": 60315
-    },
-    {
-      "path": "packages/obsai-core/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/obsai-core/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 11310
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 813
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/duat_genesis/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/duat_genesis/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 18153
-    },
-    {
-      "path": "packages/open-dev/duat-genesis/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/duat-genesis/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 4137
-    },
-    {
-      "path": "packages/open-dev/obsai-core/obsai_core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/packages/open-dev/obsai-core/obsai_core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 9,
-      "bytes": 94609
-    },
-    {
-      "path": "PRODUCTOS_MEDIOEVO/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 19532
-    },
-    {
-      "path": "PRODUCTOS_MEDIOEVO/content_forge/content_forge/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/content_forge/content_forge/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 7380
-    },
-    {
-      "path": "PRODUCTOS_MEDIOEVO/content_forge/content_forge/core/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/PRODUCTOS_MEDIOEVO/content_forge/content_forge/core/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 26926
-    },
-    {
-      "path": "research/geodia-social-observatory/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/geodia-social-observatory/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 2315
-    },
-    {
-      "path": "research/geodia-social-observatory/geodia_social_observatory/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/geodia-social-observatory/geodia_social_observatory/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 14,
-      "bytes": 92879
-    },
-    {
-      "path": "research/geodia-social-observatory/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/geodia-social-observatory/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 26153
-    },
-    {
-      "path": "research/obs-info-kernel/.pytest_cache",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/obs-info-kernel/.pytest_cache",
-      "cache_type": ".pytest_cache",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 2071
-    },
-    {
-      "path": "research/obs-info-kernel/obs_info_kernel/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/obs-info-kernel/obs_info_kernel/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 16,
-      "bytes": 162485
-    },
-    {
-      "path": "research/obs-info-kernel/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/obs-info-kernel/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 4,
-      "bytes": 62835
-    },
-    {
-      "path": "research/observacionismo-lab/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/observacionismo-lab/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 83587
-    },
-    {
-      "path": "research/observacionismo-lab/tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/research/observacionismo-lab/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 5,
-      "bytes": 88688
-    },
-    {
-      "path": "tests/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tests/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 3,
-      "bytes": 96941
-    },
-    {
-      "path": "tools/ai_browser/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/ai_browser/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 66800
-    },
-    {
-      "path": "tools/harness/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/harness/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 1,
-      "bytes": 6699
-    },
-    {
-      "path": "tools/observacionismo/__pycache__",
-      "absolute_path": "C:/Users/L-Tyr/OneDrive/Escritorio/-=L.R.GONZALEZ=-/tools/observacionismo/__pycache__",
-      "cache_type": "__pycache__",
-      "action_gate": "APPROVE",
-      "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
-      "reason": "approved cache dir name under workspace root",
-      "file_count": 2,
-      "bytes": 66051
+      "bytes": 10379
     },
     {
       "path": "tools/release/__pycache__",
@@ -1366,8 +252,8 @@
       "action_gate": "APPROVE",
       "decision": "DELETE_APPROVED_REGENERABLE_CACHE",
       "reason": "approved cache dir name under workspace root",
-      "file_count": 10,
-      "bytes": 321312
+      "file_count": 1,
+      "bytes": 15553
     }
   ],
   "errors": [],

@@ -4,9 +4,11 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-try:  # Canonical regime ladder from obsai-core (single source of truth).
+try:  # Canonical regime ladder + epistemic state from obsai-core (single source of truth).
+    from obsai_core import estimate_epistemic_state as _obsai_estimate_epistemic_state
     from obsai_core import estimate_regime as _obsai_estimate_regime
 except Exception:  # pragma: no cover - dependency-light fallback.
+    _obsai_estimate_epistemic_state = None
     _obsai_estimate_regime = None
 
 
@@ -27,7 +29,9 @@ def _regime_for_r(r_pred: float) -> str:
 
 
 def _epistemic_state_for_r(r_pred: float) -> str:
-    """Canonical R -> epistemic-state bridge (OSIT_CANON_REUSE_CONTRACT §2.4)."""
+    """Canonical R -> epistemic-state (obsai_core.estimate_epistemic_state; local fallback)."""
+    if _obsai_estimate_epistemic_state is not None:
+        return str(_obsai_estimate_epistemic_state(r_pred).value)
     r = max(0.0, min(1.0, float(r_pred)))
     if r < 0.15:
         return "CERTEZA"

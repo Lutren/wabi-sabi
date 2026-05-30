@@ -13,6 +13,13 @@ class Regime(str, Enum):
     JAMMING = "JAMMING"
 
 
+class EpistemicState(str, Enum):
+    CERTEZA = "CERTEZA"
+    INFERENCIA = "INFERENCIA"
+    INCOGNITA = "INCOGNITA"
+    BLOQUEADO = "BLOQUEADO"
+
+
 JAMMING_SIGNALS = {
     "circularity",
     "corrections",
@@ -66,6 +73,23 @@ def estimate_regime(residue: Any) -> Regime:
     if r_value < 0.60:
         return Regime.JAMMING_TEMPRANO
     return Regime.JAMMING
+
+
+def estimate_epistemic_state(residue: Any) -> EpistemicState:
+    """Canonical residue R -> 4-state epistemic axis, aligned to the regime ladder.
+
+    R<0.15 CERTEZA (OPTIMO) | 0.15..0.45 INFERENCIA (FUNCIONAL/PRE_JAMMING) |
+    0.45..0.60 INCOGNITA (JAMMING_TEMPRANO) | R>=0.60 BLOQUEADO (JAMMING).
+    Consistent with osit_firmware (R<=0.15 -> CERTEZA) and the game shim.
+    """
+    r_value = clamp01(residue)
+    if r_value < 0.15:
+        return EpistemicState.CERTEZA
+    if r_value < 0.45:
+        return EpistemicState.INFERENCIA
+    if r_value < 0.60:
+        return EpistemicState.INCOGNITA
+    return EpistemicState.BLOQUEADO
 
 
 def phi_eff_power(residue: Any, jamming_threshold: float = 1.0, phi0: float = 1.0, nu: float = 1.0) -> float:

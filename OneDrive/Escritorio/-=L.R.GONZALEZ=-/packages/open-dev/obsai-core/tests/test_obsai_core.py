@@ -11,7 +11,13 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 
 from obsai_core.fingerprint import stable_fingerprint
 from obsai_core.gate import evaluate_action
-from obsai_core.metrics import Regime, estimate_regime, estimate_residue_from_signals
+from obsai_core.metrics import (
+    EpistemicState,
+    Regime,
+    estimate_epistemic_state,
+    estimate_regime,
+    estimate_residue_from_signals,
+)
 from obsai_core.ontology import ObservationEnvelope, ObservationEnvelopeStore, OntologyGraph, PACReasoner
 from obsai_core.transduction import (
     CapabilityReceptor,
@@ -64,6 +70,16 @@ class MetricsTests(unittest.TestCase):
         residue = estimate_residue_from_signals(["circularity", "corrections", "unresolved_tasks"])
         self.assertEqual(residue, 0.45)
         self.assertEqual(estimate_regime(residue), Regime.JAMMING_TEMPRANO)
+
+    def test_estimate_epistemic_state_bridges_the_regime_ladder(self) -> None:
+        self.assertEqual(estimate_epistemic_state(0.10), EpistemicState.CERTEZA)
+        self.assertEqual(estimate_epistemic_state(0.15), EpistemicState.INFERENCIA)
+        self.assertEqual(estimate_epistemic_state(0.44), EpistemicState.INFERENCIA)
+        self.assertEqual(estimate_epistemic_state(0.45), EpistemicState.INCOGNITA)
+        self.assertEqual(estimate_epistemic_state(0.60), EpistemicState.BLOQUEADO)
+        self.assertEqual(estimate_epistemic_state(2.0), EpistemicState.BLOQUEADO)  # clamped
+        # str-enum stays comparable to plain strings for consumers.
+        self.assertEqual(estimate_epistemic_state(0.10), "CERTEZA")
 
 
 class GateTests(unittest.TestCase):

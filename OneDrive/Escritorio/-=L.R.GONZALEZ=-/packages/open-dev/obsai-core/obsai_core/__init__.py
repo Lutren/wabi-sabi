@@ -4,7 +4,14 @@ from .claim_gate_contract import CANONICAL_CLAIM_GATES, build_claim_gate_contrac
 from .epistemic_engine import OSITEpistemicEngine, classify_text
 from .fingerprint import SessionFingerprint, stable_fingerprint
 from .gate import DEFAULT_GATE_CONFIG, evaluate_action
-from .metrics import Regime, estimate_regime, estimate_residue_from_signals, phi_eff_power
+from .metrics import (
+    EpistemicState,
+    Regime,
+    estimate_epistemic_state,
+    estimate_regime,
+    estimate_residue_from_signals,
+    phi_eff_power,
+)
 from .ontology import (
     ObservationEnvelope,
     ObservationEnvelopeStore,
@@ -30,8 +37,10 @@ from .world import simulate_world
 __all__ = [
     "DEFAULT_GATE_CONFIG",
     "CANONICAL_CLAIM_GATES",
+    "EpistemicState",
     "OSITEpistemicEngine",
     "Regime",
+    "estimate_epistemic_state",
     "ResidueItem",
     "ResidueTracker",
     "SessionFingerprint",

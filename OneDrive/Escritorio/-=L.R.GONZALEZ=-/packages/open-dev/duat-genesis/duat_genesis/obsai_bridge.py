@@ -13,9 +13,11 @@ from __future__ import annotations
 
 from typing import Any, Iterable
 
-try:  # Canonical regime ladder from obsai-core (single source of truth).
+try:  # Canonical regime ladder + epistemic state from obsai-core (single source of truth).
+    from obsai_core import estimate_epistemic_state as _obsai_estimate_epistemic_state
     from obsai_core import estimate_regime as _obsai_estimate_regime
 except Exception:  # pragma: no cover - dependency-light fallback.
+    _obsai_estimate_epistemic_state = None
     _obsai_estimate_regime = None
 
 # Mirrors obsai_core.metrics.estimate_regime (strict '<' boundaries).
@@ -60,8 +62,10 @@ def epistemic_state_for_residue(residue: Any) -> str:
     """Canonical R -> epistemic-state bridge (OSIT_CANON_REUSE_CONTRACT §2.4).
 
     R<0.15 CERTEZA | 0.15..0.45 INFERENCIA | 0.45..0.60 INCOGNITA | >=0.60 BLOQUEADO.
-    Pending canon ratification; replicated with citation until promoted to obsai-core.
+    Sourced from obsai_core.estimate_epistemic_state (canonical); local fallback if absent.
     """
+    if _obsai_estimate_epistemic_state is not None:
+        return str(_obsai_estimate_epistemic_state(residue).value)
     r = _clamp01(residue)
     if r < 0.15:
         return "CERTEZA"

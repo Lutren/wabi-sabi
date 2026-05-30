@@ -55,22 +55,25 @@ cualquier `policy_violation`. En otro caso APPROVE.
 0 señales→`0.10`, 1→`0.20`, 2→`0.32`, 3→`0.45`, 4→`0.58`, ≥5→`0.70`
 (sobre el conjunto `JAMMING_SIGNALS`).
 
-### 2.4 Puente R → estado epistémico (4 estados) — **decisión de canon pendiente**
-obsai-core exporta el eje **régimen** (5 estados) pero **no** una función pública
-`R → {CERTEZA, INFERENCIA, INCOGNITA, BLOQUEADO}`. El firmware y el motor gráfico SÍ usan
-ese eje de 4 estados. Mapeo **propuesto** (anclado en la escalera de régimen §2.1 y
-consistente con `osit_gates.c:115` que ya hace `R≤0.15→CERTEZA, else INFERENCIA`):
+### 2.4 Puente R → estado epistémico (4 estados) — **RATIFICADO y promovido (2026-05-29)**
+obsai-core ahora exporta `estimate_epistemic_state(R) -> EpistemicState` (`metrics.py`),
+canónico junto al eje régimen:
 
-| R | Régimen | Estado epistémico propuesto |
+```python
+from obsai_core import estimate_epistemic_state, EpistemicState
+```
+
+| R | Régimen | Estado epistémico |
 |---|---|---|
 | `R < 0.15` | OPTIMO | `CERTEZA` |
 | `0.15 ≤ R < 0.45` | FUNCIONAL / PRE_JAMMING | `INFERENCIA` |
 | `0.45 ≤ R < 0.60` | JAMMING_TEMPRANO | `INCOGNITA` |
 | `R ≥ 0.60` | JAMMING | `BLOQUEADO` |
 
-> **PENDIENTE (L.R.):** ratificar este puente y, si procede, promoverlo a
-> `obsai_core.estimate_epistemic_state(R)` para que firmware/juego no lo repliquen. Hasta
-> entonces es `DEMO_ONLY` y se replica citando este documento.
+Anclado en la escalera §2.1 y consistente con `osit_gates.c:115` (`R≤0.15→CERTEZA`).
+`EpistemicState` es `str, Enum`, así que compara igual a su string (`== "CERTEZA"`) y es
+JSON-serializable. Los consumidores Python (duat) lo importan; el motor gráfico TS mantiene
+una réplica citada (`ositCanon.ts`) por no poder importar Python. Calibración `DEMO_ONLY`.
 
 ## 3. Estado de alineación por subsistema (2026-05-29)
 

@@ -25,8 +25,9 @@ possible discard candidate.
 - Read-only preflight tooling under `tools/release`.
 - Never copy raw private sources, RPG/TCG, sessions, credentials, paid product
   source or dirty repos into public lanes.
+- No usar git add .; use `git add -- <owned paths>` only from the correct repo, never from `C:\Users\L-Tyr`.
 
-## Required Validation
+## Required Evidence
 
 Run:
 
@@ -54,3 +55,4 @@ Block publication, broad copy, file moves, deletion, ZIP creation or dependency
 adoption until the path has a ficha, secret/path/claim/license review where
 relevant, and cleanup/publish ActionGate if the action is external or
 destructive.
+Require ActionGate plus `host_observacionista` for any external or destructive action; block if host state is `JAMMING` or `BLOCK`.

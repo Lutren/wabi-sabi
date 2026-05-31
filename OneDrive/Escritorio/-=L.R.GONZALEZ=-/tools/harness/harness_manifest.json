@@ -65,6 +65,11 @@
       "id": "modelo-router",
       "path": "tools/harness/skills/modelo-router/SKILL.md",
       "domain": "model_routing"
+    },
+    {
+      "id": "curador-operativo",
+      "path": "tools/harness/skills/curador-operativo/SKILL.md",
+      "domain": "curatorship"
     }
   ],
   "mcp_allowlist": "tools/harness/mcp_allowlist.json",

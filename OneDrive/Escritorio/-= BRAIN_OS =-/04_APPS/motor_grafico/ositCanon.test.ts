@@ -35,9 +35,10 @@ describe("regimeFromR (espejo de obsai estimate_regime, límites estrictos <)", 
   });
 });
 
-describe("epistemicStateFromR (puente canónico R -> 4 estados)", () => {
-  it("mapea cada banda al estado correcto", () => {
+describe("epistemicStateFromR (puente canónico R -> 4 estados, §2.4 RATIFICADO 0.45/0.60)", () => {
+  it("mapea cada banda al estado correcto (límites 0.15/0.45/0.60)", () => {
     expect(epistemicStateFromR(0.10)).toBe("CERTEZA");
+    expect(epistemicStateFromR(0.149)).toBe("CERTEZA");
     expect(epistemicStateFromR(0.15)).toBe("INFERENCIA");
     expect(epistemicStateFromR(0.44)).toBe("INFERENCIA");
     expect(epistemicStateFromR(0.45)).toBe("INCOGNITA");

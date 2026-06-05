@@ -1,0 +1,15 @@
+{
+  "name": "@medioevo/motor-grafico",
+  "version": "0.1.0",
+  "description": "Motor grafico DUAT/VibeForge — shim OSIT canonico (TS) + tests vitest. Host minimo para correr los contratos sin el app React completo.",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run ositCanon.test.ts",
+    "test:watch": "vitest ositCanon.test.ts"
+  },
+  "devDependencies": {
+    "vitest": "^1.6.0",
+    "typescript": "^5.4.5",
+    "@types/node": "^20.14.0"
+  }
+}

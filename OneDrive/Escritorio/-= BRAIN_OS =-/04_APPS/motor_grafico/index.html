@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VIBE FORGE · Motor gráfico DUAT/OSIT</title>
+  <link rel="stylesheet" href="vibeforge_ui.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">⚒ VIBE FORGE</span>
+    <span class="sub">Forja de mundos y escenas · contratos DUAT / OSIT</span>
+    <span class="spacer"></span>
+    <span id="motor-status" class="chip">Motor: conectando…</span>
+  </header>
+
+  <main class="grid">
+    <!-- FORJA -->
+    <aside class="panel forja">
+      <div class="panel-h">FORJA</div>
+      <label class="fld">Semilla
+        <div class="row">
+          <input id="seed" type="text" placeholder="ej. demo_3000_egipto">
+          <button id="btn-rand-seed" class="brass mini" title="aleatoria">⟳</button>
+        </div>
+      </label>
+      <label class="fld">Complejidad <b id="complexity-val">3</b>
+        <input id="complexity" type="range" min="1" max="6" value="3">
+        <span class="hint">nº de biomas del mundo (1–6)</span>
+      </label>
+      <button id="btn-gen-world" class="brass primary block">Generar Mundo</button>
+      <hr>
+      <label class="fld">Sketch / texto
+        <textarea id="sketch" rows="4" placeholder="Ancient altar temple on the coast, ruin gate shrine…"></textarea>
+        <span class="hint">palabras-clave: altar · ruin · city · gate · temple · shrine</span>
+      </label>
+      <button id="btn-materialize" class="brass block">Materializar Escena</button>
+      <div class="panel-h">DECIR / COMANDO</div>
+      <div class="row">
+        <input id="vf-cmd" type="text" placeholder="ej: genera mundo complejidad 5 · materializa altar templo · semilla egipto">
+        <button id="btn-cmd" class="brass mini">▶</button>
+      </div>
+      <span class="hint">controla la forja hablando, igual que con los botones</span>
+      <div class="panel-h" style="margin-top:auto">REGISTRO</div>
+      <div id="vf-log" class="log"></div>
+    </aside>
+
+    <!-- LIENZO -->
+    <section class="stage">
+      <canvas id="vf-canvas"></canvas>
+      <div class="stage-foot">Render por el MOTOR compartido (MV.createEngine) · respaldo local si no está conectado</div>
+    </section>
+
+    <!-- INSPECTOR -->
+    <aside class="panel inspector">
+      <div class="panel-h">MUNDO</div>
+      <div id="world-info" class="info"></div>
+      <div class="panel-h">ESCENA</div>
+      <div id="scene-info" class="info"></div>
+      <div class="panel-h">GATES OSIT</div>
+      <div id="gate-console" class="gates"></div>
+      <p class="contract">Nada se publica, construye ni libera sin gate explícito. Ejecutar el motor = revisión local.</p>
+    </aside>
+  </main>
+
+  <script src="vibeforge_ui.js"></script>
+</body>
+</html>

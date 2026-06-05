@@ -33,13 +33,17 @@ export const OSIT_REGIME_R = {
 } as const;
 
 /**
- * Puente canónico R -> estado epistémico (4 estados). Ver §2.4 del contrato de reuso:
+ * Puente canónico R -> estado epistémico (4 estados).
+ * CANON RATIFICADO POR L.R. (2026-06-02, con evidencia git): bandas 0.45/0.60, alineadas a la
+ * escalera de régimen. Fuente: commit 5589dfd "canon ratificado" (estimate_epistemic_state) +
+ * OSIT_CANON_REUSE_CONTRACT §2.4:
  *   R < 0.15            -> CERTEZA      (OPTIMO)
  *   0.15 <= R < 0.45    -> INFERENCIA   (FUNCIONAL / PRE_JAMMING)
  *   0.45 <= R < 0.60    -> INCOGNITA    (JAMMING_TEMPRANO)
  *   R >= 0.60           -> BLOQUEADO    (JAMMING)
- * Consistente con osit_firmware/uefi/osit_gates.c (R<=0.15 -> CERTEZA). DEMO_ONLY,
- * pendiente de ratificación de canon por L.R.
+ * Consistente con osit_firmware/uefi/osit_gates.c, duat-genesis y obsai_core.estimate_epistemic_state
+ * (re-añadida al core 2026-06-02 tras perderse en la reorg open-dev->obsai-core). render_gate_v2.py
+ * y renderGateV2.ts corregidos de 0.35/0.80 (DOC_MAESTRO §11) a este canon. Ver MIGRATION_LOG v12.
  */
 export const OSIT_STATE_R = {
   CERTEZA_MAX: 0.15,

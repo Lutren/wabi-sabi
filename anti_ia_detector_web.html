@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-IA Detector — MEDIOEVO Tools</title>
+<meta name="description" content="Detecta patrones de escritura artificial en tu prosa. Canon L.R. Gonzalez: em dashes, aperturas circulares, relleno, marcadores vacios.">
+<style>
+/* ─── Variables (BRAIN_OS palette) ─── */
+:root {
+  --bg:       #0a0c0e;
+  --bg2:      #12161a;
+  --bg3:      #1a2030;
+  --border:   #2a3040;
+  --brass:    #e8c074;
+  --brass-dk: #b9863f;
+  --cyan:     #24e8ff;
+  --amber:    #ffd166;
+  --green:    #7fe3b0;
+  --red:      #e8304a;
+  --blue:     #4a9eff;
+  --text:     #c8cdd6;
+  --dim:      #6a7280;
+  --font:     ui-monospace,'Courier New',monospace;
+  --r:        3px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ─── Header ─── */
+header {
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.brand { color: var(--brass); font-size: .87rem; font-weight: 700; letter-spacing: .08em; }
+.sub   { color: var(--dim);   font-size: .72rem; flex: 1; }
+
+/* ─── Quota bar ─── */
+.quota-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 20px;
+  background: var(--bg2);
+  border-bottom: 1px solid var(--border);
+  font-size: .72rem;
+  color: var(--dim);
+  flex-wrap: wrap;
+}
+.quota-count { color: var(--brass); font-weight: 700; }
+.quota-count.empty { color: var(--red); }
+.btn-link {
+  background: none; border: none; cursor: pointer;
+  color: var(--cyan); font-family: var(--font); font-size: .72rem;
+  text-decoration: underline; padding: 0;
+}
+.btn-link:hover { color: var(--brass); }
+
+/* ─── License panel ─── */
+.license-panel {
+  display: none;
+  padding: 10px 20px;
+  background: var(--bg3);
+  border-bottom: 1px solid var(--border);
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.license-panel.open { display: flex; }
+.license-panel label { font-size: .72rem; color: var(--dim); }
+.license-panel input {
+  flex: 1; min-width: 200px;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--r); color: var(--text);
+  font-family: var(--font); font-size: .75rem;
+  padding: 5px 9px;
+}
+.license-panel input:focus { outline: none; border-color: var(--brass-dk); }
+
+/* ─── Main layout ─── */
+.main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 16px 20px;
+}
+@media (max-width: 640px) {
+  .main { grid-template-columns: 1fr; }
+}
+.col { display: flex; flex-direction: column; gap: 10px; }
+
+label {
+  font-size: .72rem;
+  color: var(--dim);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+}
+
+textarea {
+  flex: 1;
+  min-height: 260px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: .8rem;
+  padding: 10px;
+  resize: vertical;
+}
+textarea:focus { outline: none; border-color: var(--brass-dk); }
+textarea[readonly] { border-color: var(--bg3); color: var(--dim); }
+
+/* ─── Buttons ─── */
+.btn {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  color: var(--dim);
+  font-family: var(--font); font-size: .75rem;
+  text-transform: uppercase; letter-spacing: .06em;
+  cursor: pointer;
+  transition: border-color .15s, color .15s, box-shadow .15s;
+  white-space: nowrap;
+}
+.btn:hover { border-color: var(--brass-dk); color: var(--text); }
+.btn:disabled { opacity: .38; cursor: not-allowed; }
+.btn-primary { border-color: var(--brass-dk); color: var(--brass); }
+.btn-primary:hover { border-color: var(--brass); box-shadow: 0 0 8px rgba(232,192,116,.22); }
+.btn-danger  { border-color: rgba(232,48,74,.5); color: var(--red); }
+.btn-danger:hover { border-color: var(--red); }
+.btn-cta {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: rgba(36,232,255,.07);
+  font-size: .72rem;
+}
+.btn-cta:hover { box-shadow: 0 0 8px rgba(36,232,255,.25); color: var(--text); }
+
+/* ─── Actions row ─── */
+.actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+
+.stats-row {
+  display: flex; gap: 16px;
+  font-size: .72rem; color: var(--dim); padding: 4px 0;
+}
+.stats-row b { color: var(--brass); }
+
+/* ─── Flags panel ─── */
+.flags-panel {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 10px;
+  font-size: .75rem;
+  min-height: 90px;
+  max-height: 260px;
+  overflow-y: auto;
+}
+.flags-panel h3 {
+  font-size: .68rem; text-transform: uppercase;
+  letter-spacing: .07em; color: var(--dim); margin-bottom: 8px;
+}
+.flag-item {
+  display: flex; gap: 8px; align-items: flex-start;
+  padding: 4px 0;
+  border-bottom: 1px solid var(--bg3);
+}
+.flag-item:last-child { border-bottom: none; }
+.flag-type { font-size: .68rem; white-space: nowrap; min-width: 90px; }
+.flag-item.em-dash   .flag-type { color: var(--red); }
+.flag-item.relleno   .flag-type { color: var(--amber); }
+.flag-item.apertura  .flag-type { color: var(--blue); }
+.flag-item.triada    .flag-type { color: var(--dim); }
+.flag-text { color: var(--text); }
+.no-flags  { color: var(--green); }
+
+/* ─── File upload ─── */
+.file-row { display: flex; gap: 8px; align-items: center; }
+input[type=file] { display: none; }
+.file-label {
+  cursor: pointer; display: inline-flex; align-items: center; gap: 5px;
+  padding: 6px 14px;
+  background: var(--bg3); border: 1px solid var(--border);
+  border-radius: var(--r); color: var(--dim);
+  font: .75rem/1 var(--font); text-transform: uppercase; letter-spacing: .06em;
+  transition: border-color .15s, color .15s; white-space: nowrap;
+}
+.file-label:hover { border-color: var(--brass-dk); color: var(--text); }
+#file-name { color: var(--dim); font-size: .72rem; }
+
+/* ─── Footer ─── */
+footer {
+  padding: 10px 20px;
+  border-top: 1px solid var(--border);
+  font-size: .68rem; color: var(--dim);
+  display: flex; gap: 16px; flex-wrap: wrap; justify-content: space-between;
+}
+footer a { color: var(--brass-dk); text-decoration: none; }
+footer a:hover { color: var(--brass); }
+
+/* ─── Blocked overlay ─── */
+.quota-overlay {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(10,12,14,.88);
+  z-index: 100;
+  align-items: center; justify-content: center;
+}
+.quota-overlay.show { display: flex; }
+.quota-modal {
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 28px 32px;
+  max-width: 420px; width: 90%;
+  text-align: center;
+}
+.quota-modal h2 { color: var(--brass); font-size: 1rem; margin-bottom: 12px; letter-spacing: .06em; }
+.quota-modal p  { color: var(--dim);   font-size: .8rem; margin-bottom: 18px; line-height: 1.6; }
+.quota-modal .price {
+  font-size: 1.6rem; color: var(--cyan); font-weight: 700; margin-bottom: 4px;
+}
+.quota-modal .price-note { font-size: .72rem; color: var(--dim); margin-bottom: 20px; }
+.modal-actions { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <span class="brand">⚜ ANTI-IA DETECTOR</span>
+  <span class="sub">Detecta prosa artificial — Canon L.R. Gonzalez</span>
+</header>
+
+<!-- Quota bar -->
+<div class="quota-bar">
+  <span>Usos hoy: <span class="quota-count" id="quotaDisplay">3</span> / 3 gratis</span>
+  <span id="premiumBadge" style="display:none; color: var(--green);">✓ Licencia activa — usos ilimitados</span>
+  <button class="btn-link" id="toggleLicense">¿Tienes una licencia?</button>
+  <span style="flex:1"></span>
+  <a href="#comprar" class="btn-link" id="openModal" style="color:var(--amber)">Comprar 50 usos · $3</a>
+</div>
+
+<!-- License key panel -->
+<div class="license-panel" id="licensePanel">
+  <label for="licenseInput">Clave de licencia Gumroad:</label>
+  <input type="text" id="licenseInput" placeholder="XXXX-XXXX-XXXX-XXXX" maxlength="40">
+  <button class="btn" id="activateBtn">Activar</button>
+  <span id="licenseMsg" style="font-size:.72rem; color:var(--dim)"></span>
+</div>
+
+<!-- Main -->
+<div class="main">
+  <div class="col">
+    <label for="textInput">Texto de entrada</label>
+    <textarea id="textInput" placeholder="Pega el texto aqui... (Ctrl+Enter para analizar)"></textarea>
+    <div class="actions">
+      <button class="btn btn-primary" id="processBtn">Analizar texto</button>
+      <div class="file-row">
+        <label class="file-label" for="fileInput">📂 Cargar .txt/.md</label>
+        <input type="file" id="fileInput" accept=".md,.txt,.html,.htm">
+        <span id="file-name">sin archivo</span>
+      </div>
+    </div>
+    <div class="stats-row">
+      <span>Caracteres: <b id="origChars">0</b></span>
+      <span>Palabras: <b id="wordCount">0</b></span>
+      <span>Flags: <b id="flagCount">0</b></span>
+    </div>
+  </div>
+
+  <div class="col">
+    <label>Flags detectados</label>
+    <div class="flags-panel" id="flagsPanel">
+      <h3>Resultado</h3>
+      <div id="flagsList">
+        <span style="color:var(--dim)">Pega texto y presiona Analizar (o Ctrl+Enter).</span>
+      </div>
+    </div>
+    <label for="textOutput">Texto con marcadores</label>
+    <textarea id="textOutput" readonly placeholder="Texto marcado aparece aqui..."></textarea>
+    <div class="actions">
+      <button class="btn" id="copyBtn">Copiar original</button>
+      <button class="btn" id="copyFlagged">Copiar marcado</button>
+      <button class="btn btn-danger" id="clearBtn">Limpiar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer>
+  <span>Canon L.R. Gonzalez (es-MX) — deteccion sin modificacion, la decision es tuya</span>
+  <span>
+    <a href="https://lutren.gumroad.com" target="_blank" rel="noopener">Comprar licencia</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/Lutren/medioevo-tools" target="_blank" rel="noopener">Codigo fuente (MIT)</a>
+    &nbsp;·&nbsp;
+    <a href="https://medioevo.space" target="_blank" rel="noopener">medioevo.space</a>
+  </span>
+</footer>
+
+<!-- Quota modal -->
+<div class="quota-overlay" id="quotaOverlay">
+  <div class="quota-modal">
+    <h2>LIMITE DIARIO ALCANZADO</h2>
+    <p>Usaste tus 3 analisis gratuitos de hoy. El limite se reinicia cada dia a medianoche (hora local).</p>
+    <div class="price">$3</div>
+    <div class="price-note">50 analisis · sin vencimiento · un solo pago</div>
+    <div class="modal-actions">
+      <a href="https://lutren.gumroad.com" target="_blank" rel="noopener" class="btn btn-cta">Comprar en Gumroad →</a>
+      <button class="btn" id="closeModal">Cerrar</button>
+    </div>
+    <p style="margin-top:16px; font-size:.68rem;">
+      ¿Ya tienes una clave? Cierra esto y usa el campo "¿Tienes una licencia?" en la barra superior.
+    </p>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+// ── Canon L.R. Gonzalez — patrones de prosa artificial ──────────────────────
+
+const PATTERNS = [
+  { type: "em-dash",  label: "Em dash (—)",       re: /[—–]/g },
+  { type: "em-dash",  label: "Guion largo ( - )",  re: / - /g },
+  { type: "apertura", label: "Apertura circular",  re: /\b(Claro[!,]?|Entendido[,!]?|Por supuesto[,!]?|Desde luego[,!]?|¡Claro!|¡Por supuesto!|Perfecto[,!]?|Excelente[,!]?|Genial[,!]?|Con gusto[,!]?|Ciertamente[,!]?)/gi },
+  { type: "apertura", label: "Apertura (en)",      re: /\b(Of course[,!]?|Certainly[,!]?|Absolutely[,!]?|Sure[,!]?|Great[,!]?|Exactly[,!]?|Indeed[,!]?)/gi },
+  { type: "relleno",  label: "Relleno: adj inflado",re: /\b(robusto|comprehensivo|comprensivo|holístico|holistico|sinérgico|sinergico|meticuloso|minucioso|exhaustivo|sofisticado|innovador|revolucionario)\b/gi },
+  { type: "relleno",  label: "Relleno: adj (en)",  re: /\b(robust|comprehensive|holistic|synergistic|innovative|revolutionary|sophisticated|meticulous|cutting-edge|groundbreaking)\b/gi },
+  { type: "relleno",  label: "Marcador vacio",     re: /\b(es importante (notar|tener en cuenta|mencionar|destacar)|cabe (destacar|mencionar|notar)|vale la pena (mencionar|notar|destacar)|hay que (destacar|recordar) que)\b/gi },
+  { type: "relleno",  label: "Marcador vacio (en)",re: /\b(it is (important|worth noting|worth mentioning|clear|evident|obvious) (that|to)|needless to say|it goes without saying|as mentioned|as stated)\b/gi },
+  { type: "relleno",  label: "Narrativa conclusion",re: /\b(en conclusión|en resumen|para resumir|para concluir|en definitiva|en síntesis|en suma|en pocas palabras)\b/gi },
+  { type: "relleno",  label: "Conclusion (en)",    re: /\b(in conclusion|in summary|to summarize|to conclude|in short|in essence|in a nutshell|to wrap up)\b/gi },
+  { type: "triada",   label: "Posible triada",     re: /\w+,\s*\w+\s+y\s+\w+[,;.]/g },
+];
+
+function detectFlags(text) {
+  const noCode = text
+    .replace(/```[\s\S]*?```/g, m => ' '.repeat(m.length))
+    .replace(/`[^`]+`/g, m => ' '.repeat(m.length));
+  const flags = [];
+  for (const p of PATTERNS) {
+    const re = new RegExp(p.re.source, 'gi');
+    let m;
+    while ((m = re.exec(noCode)) !== null) {
+      flags.push({ type: p.type, label: p.label, match: m[0], index: m.index });
+    }
+  }
+  return flags.sort((a, b) => a.index - b.index);
+}
+
+function markText(text, flags) {
+  let result = '', last = 0;
+  for (const f of flags) {
+    result += text.slice(last, f.index);
+    result += `[[${f.label}: "${f.match}"]]`;
+    last = f.index + f.match.length;
+  }
+  return result + text.slice(last);
+}
+
+function renderFlags(flags) {
+  const list = document.getElementById('flagsList');
+  document.getElementById('flagCount').textContent = flags.length;
+  if (!flags.length) {
+    list.innerHTML = '<span class="no-flags">Sin flags — texto limpio.</span>';
+    return;
+  }
+  list.innerHTML = flags.map(f =>
+    `<div class="flag-item ${f.type}">
+      <span class="flag-type">${f.label}</span>
+      <span class="flag-text">"${f.match.trim()}"</span>
+    </div>`
+  ).join('');
+}
+
+function updateStats(text) {
+  document.getElementById('origChars').textContent = text.length;
+  document.getElementById('wordCount').textContent =
+    text.trim() ? text.trim().split(/\s+/).length : 0;
+}
+
+// ── Cuota ───────────────────────────────────────────────────────────────────
+
+const FREE_LIMIT = 3;
+const TODAY_KEY  = () => 'aia_day_' + new Date().toISOString().slice(0, 10);
+const LICENSE_KEY = 'aia_license';
+
+function hasLicense() {
+  return !!localStorage.getItem(LICENSE_KEY);
+}
+
+function getUsed() {
+  return parseInt(localStorage.getItem(TODAY_KEY()) || '0', 10);
+}
+
+function incrementUsed() {
+  const k = TODAY_KEY();
+  localStorage.setItem(k, String(getUsed() + 1));
+}
+
+function remaining() {
+  if (hasLicense()) return Infinity;
+  return Math.max(0, FREE_LIMIT - getUsed());
+}
+
+function updateQuotaUI() {
+  const rem = remaining();
+  const el  = document.getElementById('quotaDisplay');
+  const premium = document.getElementById('premiumBadge');
+  if (hasLicense()) {
+    el.parentElement.style.display = 'none';
+    premium.style.display = 'inline';
+    document.getElementById('openModal').style.display = 'none';
+  } else {
+    el.parentElement.style.display = '';
+    premium.style.display = 'none';
+    el.textContent = rem;
+    el.className = 'quota-count' + (rem === 0 ? ' empty' : '');
+  }
+}
+
+// ── Licencia ────────────────────────────────────────────────────────────────
+
+function validateLicenseFormat(key) {
+  // Formato Gumroad: XXXXXXXX-XXXXXXXX-XXXXXXXX-XXXXXXXX (alfanum, 8 grupos)
+  // O formato corto: XXXX-XXXX-XXXX-XXXX
+  return /^[A-Z0-9]{4,8}(-[A-Z0-9]{4,8}){3,7}$/i.test(key.trim());
+}
+
+document.getElementById('toggleLicense').addEventListener('click', () => {
+  document.getElementById('licensePanel').classList.toggle('open');
+});
+
+document.getElementById('activateBtn').addEventListener('click', () => {
+  const key = document.getElementById('licenseInput').value.trim();
+  const msg = document.getElementById('licenseMsg');
+  if (!key) { msg.textContent = 'Ingresa tu clave.'; msg.style.color = 'var(--red)'; return; }
+  if (!validateLicenseFormat(key)) {
+    msg.textContent = 'Formato no valido. Revisa que copiaste la clave completa de Gumroad.';
+    msg.style.color = 'var(--red)';
+    return;
+  }
+  // Almacenar la clave (confianza del cliente)
+  localStorage.setItem(LICENSE_KEY, key);
+  msg.textContent = 'Licencia activada. Usos ilimitados desbloqueados.';
+  msg.style.color = 'var(--green)';
+  updateQuotaUI();
+  document.getElementById('licensePanel').classList.remove('open');
+});
+
+// ── Modal ────────────────────────────────────────────────────────────────────
+
+document.getElementById('openModal').addEventListener('click', e => {
+  e.preventDefault();
+  document.getElementById('quotaOverlay').classList.add('show');
+});
+document.getElementById('closeModal').addEventListener('click', () => {
+  document.getElementById('quotaOverlay').classList.remove('show');
+});
+document.getElementById('quotaOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('quotaOverlay'))
+    document.getElementById('quotaOverlay').classList.remove('show');
+});
+
+// ── Analizar ─────────────────────────────────────────────────────────────────
+
+function doAnalyze() {
+  const text = document.getElementById('textInput').value;
+  if (!text.trim()) return;
+
+  if (!hasLicense() && getUsed() >= FREE_LIMIT) {
+    document.getElementById('quotaOverlay').classList.add('show');
+    return;
+  }
+
+  const flags = detectFlags(text);
+  renderFlags(flags);
+  document.getElementById('textOutput').value = markText(text, flags);
+  updateStats(text);
+
+  if (!hasLicense()) {
+    incrementUsed();
+    updateQuotaUI();
+  }
+}
+
+document.getElementById('processBtn').addEventListener('click', doAnalyze);
+
+document.getElementById('textInput').addEventListener('keydown', e => {
+  if (e.ctrlKey && e.key === 'Enter') doAnalyze();
+});
+
+document.getElementById('fileInput').addEventListener('change', function () {
+  const f = this.files[0];
+  if (!f) return;
+  document.getElementById('file-name').textContent = f.name;
+  const reader = new FileReader();
+  reader.onload = e => {
+    document.getElementById('textInput').value = e.target.result;
+    doAnalyze();
+  };
+  reader.readAsText(f);
+});
+
+// ── Copiar ────────────────────────────────────────────────────────────────────
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+  const t = document.getElementById('textInput').value;
+  if (t) navigator.clipboard.writeText(t).catch(() => {});
+});
+document.getElementById('copyFlagged').addEventListener('click', () => {
+  const t = document.getElementById('textOutput').value;
+  if (t) navigator.clipboard.writeText(t).catch(() => {});
+});
+
+// ── Limpiar ───────────────────────────────────────────────────────────────────
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+  ['textInput','textOutput'].forEach(id => document.getElementById(id).value = '');
+  document.getElementById('flagsList').innerHTML =
+    '<span style="color:var(--dim)">Pega texto y presiona Analizar.</span>';
+  document.getElementById('origChars').textContent = 0;
+  document.getElementById('wordCount').textContent  = 0;
+  document.getElementById('flagCount').textContent  = 0;
+  document.getElementById('file-name').textContent  = 'sin archivo';
+  document.getElementById('fileInput').value = '';
+});
+
+// ── Init ──────────────────────────────────────────────────────────────────────
+updateQuotaUI();
+</script>
+</body>
+</html>

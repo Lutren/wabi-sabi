@@ -1,0 +1,10 @@
+node_modules/
+__pycache__/
+node_modules/
+__pycache__/
+*.pyc
+.pytest_cache/
+dist/
+build/
+tools/vendor/openai-symphony/elixir/deps/
+tools/vendor/openai-symphony/elixir/_build/

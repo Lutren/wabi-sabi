@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-    Solid understanding of modern web development, including HTML, CSS, and JavaScript, with a focus on creating responsive and accessible user interfaces. Proficient in version control using Git and experienced in collaborative development workflows. Strong problem-solving skills and ability to work independently or as part of a team. Committed to writing clean, maintainable code and continuously improving development practices. Familiar with agile methodologies and eager to contribute to innovative projects.
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEDIOEVO Agent Skills</title>
@@ -9,29 +8,144 @@
         :root{--bg:#0a0c0e;--text:#e6e6e6;--dim:#8b8b8b;--accent:#e8a020;--card-bg:#141618;--border:#2a2c2e;}
         *{box-sizing:border-box;margin:0;padding:0}
         body{background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,sans-serif;line-height:1.6;padding:24px}
-        .container{max-width:900px;margin:0 auto}
+        .container{max-width:1100px;margin:0 auto}
+        .header{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:20px;gap:16px;flex-wrap:wrap}
         h1{font-size:1.5rem;margin-bottom:4px}
         .tag{color:var(--accent);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
         p{margin:12px 0;color:var(--dim)}
-        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:20px}
+        .lang-selector{position:relative}
+        .lang-btn{background:var(--card-bg);border:1px solid var(--border);color:var(--text);padding:8px 12px;border-radius:6px;cursor:pointer;font-size:.8rem;display:flex;align-items:center;gap:6px}
+        .lang-btn:hover{border-color:var(--accent)}
+        .lang-dropdown{position:absolute;top:100%;right:0;background:var(--card-bg);border:1px solid var(--border);border-radius:6px;min-width:180px;z-index:100;display:none;margin-top:4px;overflow:hidden}
+        .lang-dropdown.open{display:block}
+        .lang-option{padding:10px 12px;cursor:pointer;font-size:.8rem;color:var(--text);border-bottom:1px solid var(--border);transition:background .15s}
+        .lang-option:last-child{border-bottom:none}
+        .lang-option:hover,.lang-option.active{background:var(--accent);color:#0a0c0e}
+        .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px;margin-top:20px}
         .card{background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:16px;transition:border-color .2s}
         .card:hover{border-color:var(--accent)}
         .card h3{font-size:.9rem;margin-bottom:6px}
         .card p{font-size:.8rem;color:var(--dim)}
         .card a{color:var(--accent);text-decoration:none;font-size:.75rem}
+        .card .badge{display:inline-block;font-size:.65rem;padding:2px 6px;border-radius:4px;background:var(--border);color:var(--dim);margin-bottom:8px;text-transform:uppercase}
+        .card .badge.p0{background:rgba(232,160,32,.2);color:var(--accent)}
+        .card .badge.p1{background:rgba(0,200,150,.2);color:#00c896}
+        .card .badge.p2{background:rgba(100,180,255,.2);color:#64b4ff}
         .footer{margin-top:32px;padding-top:16px;border-top:1px solid var(--border);font-size:.75rem;color:var(--dim)}
         .footer a{color:var(--accent)}
+        [lang="ru"] .tag{content:"MEDIOEVO / BRAIN_OS Экосистема"}
+        [lang="zh"] .tag{content:"MEDIOEVO / BRAIN_OS 生态系统"}
+        [lang="de"] .tag{content:"MEDIOEVO / BRAIN_OS Ökosystem"}
+        [lang="ko"] .tag{content:"MEDIOEVO / BRAIN_OS 생태계"}
+        [lang="ja"] .tag{content:"MEDIOEVO / BRAIN_OS エコシステム"}
+        [lang="fr"] .tag{content:"MEDIOEVO / BRAIN_OS Écosystème"}
+        [lang="hi"] .tag{content:"MEDIOEVO / BRAIN_OS पारिस्थितिकी तंत्र"}
+        [lang="en"] .tag{content:"MEDIOEVO / BRAIN_OS Ecosystem"}
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Agent Skills</h1>
-        <div class="tag">MEDIOEVO / BRAIN_OS Ecosystem</div>
-        <p>Cognitive building blocks for local-first, safety-first AI agents working under the OSIT framework.</p>
-        <div class="grid">
+        <div class="header">
+            <div>
+                <h1 id="title">Agent Skills</h1>
+                <div class="tag" id="tagline">MEDIOEVO / BRAIN_OS Ecosystem</div>
+                <p id="desc">Cognitive building blocks for local-first, safety-first AI agents working under the OSIT framework.</p>
+            </div>
+            <div class="lang-selector">
+                <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+                    <span>🌐</span>
+                    <span id="currentLang">Español</span>
+                    <span>▼</span>
+                </button>
+                <div class="lang-dropdown" id="langDropdown" role="listbox">
+                    <div class="lang-option active" data-lang="es-MX" role="option">Español (MX)</div>
+                    <div class="lang-option" data-lang="en" role="option">English</div>
+                    <div class="lang-option" data-lang="ru" role="option">Русский</div>
+                    <div class="lang-option" data-lang="zh" role="option">中文</div>
+                    <div class="lang-option" data-lang="de" role="option">Deutsch</div>
+                    <div class="lang-option" data-lang="ko" role="option">한국어</div>
+                    <div class="lang-option" data-lang="ja" role="option">日本語</div>
+                    <div class="lang-option" data-lang="fr" role="option">Français</div>
+                    <div class="lang-option" data-lang="hi" role="option">हिन्दी</div>
+                </div>
+            </div>
+        </div>
+        <div class="grid" id="skillsGrid">
+            <div class="card">
+                <span class="badge p0">P0</span>
+                <h3>action-gate</h3>
+                <p>Deterministic safety gate for AI agent actions. APPROVE/REVIEW/BLOCK with keyword categories.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/action-gate">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p0">P0</span>
+                <h3>intent-router</h3>
+                <p>Semantic intent router for local chat, local agent, Codex cloud, hybrid, or dry-run modes.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/intent-router">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p0">P0</span>
+                <h3>claim-observation-bridge</h3>
+                <p>OSIT claim classifier to Wabi ObservationEnvelope adapter with epistemic state output.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/claim-observation-bridge">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p1">P1</span>
+                <h3>browser-safety-gate</h3>
+                <p>Browser automation safety gate. Allows local/read-only; reviews auth/forms; blocks secrets/deploys.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/browser-safety-gate">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p1">P1</span>
+                <h3>safe-execution</h3>
+                <p>TaskSpec planner + SafeExecutor + RollbackStore. Py_compile validation, test running, auto-rollback.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/safe-execution">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p1">P1</span>
+                <h3>scientific-hypothesis</h3>
+                <p>Formal hypothesis packets with falsifiers, evidence requirements, R/Phi estimates, ActionGate.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/scientific-hypothesis">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p1">P1</span>
+                <h3>code-review-automation</h3>
+                <p>Deterministic code review: secrets, SQLi, N+1, missing auth, eval/exec, shell=True, TLS verify.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/code-review-automation">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p2">P2</span>
+                <h3>json-safety-parser</h3>
+                <p>Strict JSON object parser with required keys validation. Tuple or exception API. Zero deps.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/json-safety-parser">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p2">P2</span>
+                <h3>local-memory</h3>
+                <p>Append-only event log + session memory (JSONL). Tail retrieval, conversation summary.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/local-memory">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p2">P2</span>
+                <h3>decision-log</h3>
+                <p>Append-only decision ledger + TaskManager state + WitnessLog. Evidence refs, priority, status.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/decision-log">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p2">P2</span>
+                <h3>operator-panel</h3>
+                <p>Aggregated runtime dashboard: providers, worktree, tools, task-spec, witness, tests, GEODIA.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/operator-panel">View source →</a>
+            </div>
+            <div class="card">
+                <span class="badge p2">P2</span>
+                <h3>llm-response-parsing</h3>
+                <p>Normalizes LLM cloud proposals + conversation results. Proposal-only, publication blocked, rollback required.</p>
+                <a href="https://github.com/Lutren/medioevo-skills/tree/main/llm-response-parsing">View source →</a>
+            </div>
             <div class="card">
                 <h3>wabi-cli-ux</h3>
-                <p>TUI/UX enhancement for the Wabi-Sabi AI Runtime. Split-screen layout, plan panel, and model routing.</p>
+                <p>TUI/UX enhancement for Wabi-Sabi AI Runtime. Split-screen layout, plan panel, model routing.</p>
                 <a href="https://github.com/Lutren/medioevo-skills/tree/main/wabi-cli-ux">View source →</a>
             </div>
             <div class="card">
@@ -49,25 +163,104 @@
                 <p>Calibrated Claude Fable 5 autonomy emulator for constrained local environments.</p>
                 <a href="https://github.com/Lutren/medioevo-skills/tree/main/osit-fable">View source →</a>
             </div>
-            <div class="card">
-                <h3>action-gate</h3>
-                <p>Deterministic safety gate for AI agent actions. APPROVE/REVIEW/BLOCK with keyword categories.</p>
-                <a href="https://github.com/Lutren/medioevo-skills/tree/main/action-gate">View source →</a>
-            </div>
-            <div class="card">
-                <h3>intent-router</h3>
-                <p>Semantic intent router for local chat, local agent, Codex cloud, hybrid, or dry-run modes.</p>
-                <a href="https://github.com/Lutren/medioevo-skills/tree/main/intent-router">View source →</a>
-            </div>
-            <div class="card">
-                <h3>claim-observation-bridge</h3>
-                <p>OSIT claim classifier to Wabi ObservationEnvelope adapter with epistemic state output.</p>
-                <a href="https://github.com/Lutren/medioevo-skills/tree/main/claim-observation-bridge">View source →</a>
-            </div>
         </div>
         <div class="footer">
             Explore the full collection at <a href="https://github.com/Lutren/medioevo-skills">github.com/Lutren/medioevo-skills</a>.
         </div>
     </div>
+    <script>
+        const translations = {
+            "es-MX": {
+                title: "Agent Skills",
+                tagline: "MEDIOEVO / BRAIN_OS Ecosystem",
+                desc: "Bloques cognitivos para agentes de IA locales, seguros y bajo el marco OSIT."
+            },
+            "en": {
+                title: "Agent Skills",
+                tagline: "MEDIOEVO / BRAIN_OS Ecosystem",
+                desc: "Cognitive building blocks for local-first, safety-first AI agents under the OSIT framework."
+            },
+            "ru": {
+                title: "Навыки Агентов",
+                tagline: "MEDIOEVO / BRAIN_OS Экосистема",
+                desc: "Когнитивные блоки для локальных, безопасных ИИ-агентов в рамках OSIT."
+            },
+            "zh": {
+                title: "智能体技能",
+                tagline: "MEDIOEVO / BRAIN_OS 生态系统",
+                desc: "面向本地优先、安全优先的AI智能体认知构建模块，基于OSIT框架。"
+            },
+            "de": {
+                title: "Agenten-Fähigkeiten",
+                tagline: "MEDIOEVO / BRAIN_OS Ökosystem",
+                desc: "Kognitive Bausteine für lokale, sicherheitsorientierte KI-Agenten unter OSIT."
+            },
+            "ko": {
+                title: "에이전트 기술",
+                tagline: "MEDIOEVO / BRAIN_OS 생태계",
+                desc: "로컬 우선, 안전 우선 AI 에이전트를 위한 인지 빌딩 블록, OSIT 프레임워크 기반."
+            },
+            "ja": {
+                title: "エージェントスキル",
+                tagline: "MEDIOEVO / BRAIN_OS エコシステム",
+                desc: "ローカルファースト、安全性重視のAIエージェント向け認知ブロック、OSITフレームワーク準拠。"
+            },
+            "fr": {
+                title: "Compétences d'Agents",
+                tagline: "MEDIOEVO / BRAIN_OS Écosystème",
+                desc: "Blocs cognitifs pour agents IA locaux et sécurisés sous le framework OSIT."
+            },
+            "hi": {
+                title: "एजेंट कौशल",
+                tagline: "MEDIOEVO / BRAIN_OS पारिस्थितिकी तंत्र",
+                desc: "OSIT फ्रेमवर्क के तहत स्थानीय-पहले, सुरक्षा-पहले AI एजेंटों के लिए संज्ञानात्मक बिल्डिंग ब्लॉक।"
+            }
+        };
+
+        const btn = document.getElementById('langBtn');
+        const dropdown = document.getElementById('langDropdown');
+        const currentLang = document.getElementById('currentLang');
+        const options = dropdown.querySelectorAll('.lang-option');
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            dropdown.classList.toggle('open');
+            btn.setAttribute('aria-expanded', dropdown.classList.contains('open'));
+        });
+
+        document.addEventListener('click', () => {
+            dropdown.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+        });
+
+        options.forEach(opt => {
+            opt.addEventListener('click', () => {
+                const lang = opt.dataset.lang;
+                applyLanguage(lang);
+                options.forEach(o => o.classList.remove('active'));
+                opt.classList.add('active');
+                currentLang.textContent = opt.textContent;
+                dropdown.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        function applyLanguage(lang) {
+            const t = translations[lang] || translations['es-MX'];
+            document.getElementById('title').textContent = t.title;
+            document.getElementById('tagline').textContent = t.tagline;
+            document.getElementById('desc').textContent = t.desc;
+            document.documentElement.lang = lang;
+        }
+
+        // Keyboard navigation
+        dropdown.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                dropdown.classList.remove('open');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.focus();
+            }
+        });
+    </script>
 </body>
 </html>

@@ -1,4 +1,0 @@
-{"tarea": "codigo", "modelo_elegido": "qwen2.5-coder:7b", "motivo": "local_preferred", "latencia_ms": 0, "fallback_count": 0, "ts": 1777162744291}
-{"tarea": "razonamiento", "modelo_elegido": "qwen3:8b", "motivo": "local_preferred", "latencia_ms": 0, "fallback_count": 0, "ts": 1777162744307}
-{"tarea": "trivial", "modelo_elegido": "qwen2.5:0.5b", "motivo": "local_preferred", "latencia_ms": 0, "fallback_count": 0, "ts": 1777162744307}
-{"tarea": "razonamiento", "modelo_elegido": "qwen3-coder:480b-cloud", "motivo": "no_local_available", "latencia_ms": 0, "fallback_count": 0, "ts": 1777162894026}

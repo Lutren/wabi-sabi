@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain OS Fact Checker — Verificador Epistémico OSIT</title>
+<meta name="description" content="Verifica claims con metodología OSIT: R estimado, estados epistémicos, fingerprint SHA3-256.">
+<style>
+:root {
+  --bg:       #0a0c0e;
+  --bg2:      #12161a;
+  --bg3:      #1a2030;
+  --border:   #2a3040;
+  --brass:    #e8c074;
+  --brass-dk: #b9863f;
+  --cyan:     #24e8ff;
+  --amber:    #ffd166;
+  --green:    #7fe3b0;
+  --red:      #e8304a;
+  --blue:     #4a9eff;
+  --text:     #c8cdd6;
+  --dim:      #6a7280;
+  --font:     ui-monospace,'Courier New',monospace;
+  --r:        4px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--text);font-family:var(--font);min-height:100vh;display:flex;flex-direction:column}
+header{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.brand{color:var(--brass);font-size:.9rem;font-weight:700;letter-spacing:.08em}
+.sub{color:var(--dim);font-size:.75rem;flex:1}
+.mode-badge{background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);padding:2px 8px;font-size:.65rem;text-transform:uppercase;color:var(--cyan);letter-spacing:.05em}
+main{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px 20px}
+@media(max-width:900px){main{grid-template-columns:1fr}}
+.col{display:flex;flex-direction:column;gap:12px}
+label{font-size:.7rem;color:var(--dim);text-transform:uppercase;letter-spacing:.07em}
+textarea{flex:1;min-height:180px;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);color:var(--text);font-family:var(--font);font-size:.8rem;padding:10px;resize:vertical}
+textarea:focus{outline:none;border-color:var(--brass-dk)}
+textarea[readonly]{border-color:var(--bg3);color:var(--dim)}
+.btn{display:inline-flex;align-items:center;gap:6px;padding:8px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:var(--r);color:var(--dim);font-family:var(--font);font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;transition:border-color .15s,color .15s,box-shadow .15s;white-space:nowrap}
+.btn:hover{border-color:var(--brass-dk);color:var(--text)}
+.btn:disabled{opacity:.38;cursor:not-allowed}
+.btn-primary{border-color:var(--brass-dk);color:var(--brass)}
+.btn-primary:hover{box-shadow:0 0 10px rgba(232,192,116,.25)}
+.btn-secondary{background:var(--bg2)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.r-badge{display:inline-flex;align-items:center;gap:6px;padding:4px 10px;border-radius:var(--r);font-size:.7rem;font-weight:700;letter-spacing:.05em}
+.r-low{background:rgba(127,227,176,.15);color:var(--green);border:1px solid var(--green)}
+.r-med{background:rgba(255,209,102,.15);color:var(--amber);border:1px solid var(--amber)}
+.r-high{background:rgba(232,48,74,.15);color:var(--red);border:1px solid var(--red)}
+.r-stop{background:rgba(232,48,74,.25);color:var(--red);border:1px solid var(--red);animation:pulse 1.5s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.6}}
+.stats-row{display:flex;gap:20px;font-size:.7rem;color:var(--dim);padding:6px 0}
+.stats-row b{color:var(--brass)}
+.state-panel{background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);padding:12px;font-size:.75rem;min-height:200px;max-height:400px;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+.state-panel h3{font-size:.65rem;text-transform:uppercase;letter-spacing:.07em;color:var(--dim);margin-bottom:4px;border-bottom:1px solid var(--border);padding-bottom:6px}
+.state-item{display:flex;flex-direction:column;gap:4px;padding:8px;background:var(--bg3);border-radius:var(--r);border:1px solid var(--border)}
+.state-item.certeza{border-left:3px solid var(--green)}
+.state-item.inferencia{border-left:3px solid var(--amber)}
+.state-item.incognita{border-left:3px solid var(--dim)}
+.state-item.bloqueo{border-left:3px solid var(--red)}
+.state-type{font-size:.6rem;text-transform:uppercase;letter-spacing:.05em;font-weight:700}
+.state-item.certeza .state-type{color:var(--green)}
+.state-item.inferencia .state-type{color:var(--amber)}
+.state-item.incognita .state-type{color:var(--dim)}
+.state-item.bloqueo .state-type{color:var(--red)}
+.state-content{color:var(--text);font-size:.72rem;line-height:1.5}
+.meta-row{display:flex;gap:16px;font-size:.65rem;color:var(--dim);flex-wrap:wrap;padding-top:8px;border-top:1px solid var(--border)}
+.meta-row code{background:var(--bg);padding:2px 6px;border-radius:3px;color:var(--cyan);font-size:.6rem}
+footer{padding:10px 20px;border-top:1px solid var(--border);font-size:.65rem;color:var(--dim);display:flex;gap:16px;flex-wrap:wrap;justify-content:space-between}
+footer a{color:var(--brass-dk);text-decoration:none}
+footer a:hover{color:var(--brass)}
+.spinner{display:inline-block;width:14px;height:14px;border:2px solid var(--border);border-top-color:var(--brass);border-radius:50%;animation:spin .8s linear infinite;margin-right:8px;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hidden{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <span class="brand">⚗️ BRAIN OS FACT CHECKER</span>
+  <span class="sub">Verificador epistémico OSIT — R, estados, fingerprint SHA3-256</span>
+  <span class="mode-badge" id="modeBadge">RESEARCH</span>
+</header>
+<main>
+  <div class="col">
+    <label for="claimInput">Claim a verificar</label>
+    <textarea id="claimInput" placeholder="Ej: La velocidad de la luz es 299,792,458 m/s&#10;Ej: El cambio climático es causado por actividad humana&#10;Ej: Bitcoin reemplazará al dólar en 2030"></textarea>
+    <label for="contextInput">Contexto (opcional)</label>
+    <textarea id="contextInput" placeholder="Contexto adicional: fuentes conocidas, dominio, limitaciones..."></textarea>
+    <div class="actions">
+      <select id="modeSelect" class="btn btn-secondary" style="padding:8px 12px;font-family:inherit">
+        <option value="research" selected>🔬 RESEARCH — Multi-muestra + alternativas</option>
+        <option value="osit">📐 OSIT — Estándar con WitnessLog</option>
+        <option value="wabi">🪙 WABI — Máxima expansión (kintsugi)</option>
+        <option value="gpt">⚡ GPT — Fluidez pura (sin OSIT)</option>
+      </select>
+      <select id="providerSelect" class="btn btn-secondary" style="padding:8px 12px;font-family:inherit">
+        <option value="">Auto (WABI_PROVIDER)</option>
+        <option value="nvidia">NVIDIA</option>
+        <option value="deepseek">DeepSeek</option>
+        <option value="cloudflare">Cloudflare</option>
+        <option value="ollama">Ollama (local)</option>
+        <option value="openai">OpenAI</option>
+</option>
+        <option value="anthropic">Anthropic</option>
+        <option value="gemini">Gemini</option>
+      </select>
+      <button class="btn btn-primary" id="verifyBtn">
+        <span id="btnText">Verificar</span>
+        <span class="spinner hidden" id="spinner"></span>
+      </button>
+    </div>
+    <div class="stats-row">
+      <span>R: <b id="rDisplay">—</b></span>
+      <span>Régimen: <b id="regimeDisplay">—</b></span>
+      <span>Provider: <b id="providerDisplay">—</b></span>
+      <span>Fingerprint: <b id="fpDisplay">—</b></span>
+    </div>
+  </div>
+  <div class="col">
+    <div class="state-panel">
+      <h3>Estados Epistémicos</h3>
+      <div id="statesList">
+        <div style="color:var(--dim);text-align:center;padding:20px">Ingresa un claim y presiona Verificar (o Ctrl+Enter)</div>
+      </div>
+    </div>
+    <div class="meta-row">
+      <span>Provider: <code id="metaProvider">—</code></span>
+      <span>Modelo: <code id="metaModel">—</code></span>
+      <span>Modo: <code id="metaMode">—</code></span>
+      <span>STOP: <code id="metaStop">false</code></span>
+    </div>
+    <details style="margin-top:8px">
+      <summary style="cursor:pointer;color:var(--dim);font-size:.7rem">Ver JSON completo</summary>
+      <pre id="rawJson" style="background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:10px;margin-top:8px;max-height:200px;overflow:auto;font-size:.6rem;color:var(--dim)">{}</pre>
+    </details>
+  </div>
+</main>
+<footer>
+  <span>Brain OS Fact Checker — Canon OSIT v3.7 — <a href="https://medioevo.space" target="_blank">medioevo.space</a></span>
+  <span>R≥0.80 → STOP | Fingerprint SHA3-256 | WitnessLog acumulativo</span>
+</footer>
+<script>
+"use strict";
+
+const API_BASE = ""; // mismo origen
+
+const PATTERNS = {
+  certezza: { label: "CERTEZA", color: "var(--green)" },
+  inferencia: { label: "INFERENCIA", color: "var(--amber)" },
+  incognita: { label: "INCÓGNITA", color: "var(--dim)" },
+  bloqueo: { label: "BLOQUEO", color: "var(--red)" }
+};
+
+const $ = (id) => document.getElementById(id);
+const claimInput = $("claimInput");
+const contextInput = $("contextInput");
+const modeSelect = $("modeSelect");
+const providerSelect = $("providerSelect");
+const verifyBtn = $("verifyBtn");
+const btnText = $("btnText");
+const spinner = $("spinner");
+const modeBadge = $("modeBadge");
+const statesList = $("statesList");
+const rawJson = $("rawJson");
+const rDisplay = $("rDisplay");
+const regimeDisplay = $("regimeDisplay");
+const providerDisplay = $("providerDisplay");
+const fpDisplay = $("fpDisplay");
+const metaProvider = $("metaProvider");
+const metaModel = $("metaModel");
+const metaMode = $("metaMode");
+const metaStop = $("metaStop");
+
+function setLoading(on) {
+  verifyBtn.disabled = on;
+  btnText.textContent = on ? "Verificando..." : "Verificar";
+  spinner.classList.toggle("hidden", !on);
+}
+
+function rClass(r) {
+  if (r === null || r === undefined) return "";
+  if (r >= 0.80) return "r-stop";
+  if (r >= 0.50) return "r-high";
+  if (r >= 0.25) return "r-med";
+  return "r-low";
+}
+
+function renderStates(states) {
+  statesList.innerHTML = "";
+  const order = ["certeza", "inferencia", "incognita", "bloqueo"];
+  let hasAny = false;
+  for (const key of order) {
+    const items = states[key] || [];
+    if (!items.length) continue;
+    hasAny = true;
+    const p = PATTERNS[key];
+    const container = document.createElement("div");
+    container.className = `state-item ${key}`;
+    container.innerHTML = `
+      <span class="state-type">${p.label}</span>
+      <div class="state-content">${items.map(s => `• ${escapeHtml(s)}`).join("<br>")}</div>
+    `;
+    statesList.appendChild(container);
+  }
+  if (!hasAny) {
+    statesList.innerHTML = '<div style="color:var(--dim);text-align:center;padding:20px">Sin estados detectados</div>';
+  }
+}
+
+function escapeHtml(text) {
+  const div = document.createElement("div");
+  div.textContent = text;
+  return div.innerHTML;
+}
+
+function updateDisplay(data) {
+  const r = data.R ?? null;
+  rDisplay.innerHTML = r !== null ? `<span class="r-badge ${rClass(r)}">R = ${r.toFixed(3)}</span>` : "—";
+  regimeDisplay.textContent = data.regime || "—";
+  providerDisplay.textContent = data.provider || "—";
+  fpDisplay.innerHTML = data.fingerprint ? `<code>${data.fingerprint}</code>` : "—";
+  metaProvider.textContent = data.provider || "—";
+  metaModel.textContent = data.model || "—";
+  metaMode.textContent = data.mode || "—";
+  metaStop.textContent = data.STOP ? "true" : "false";
+  renderStates(data.epistemic_states || {});
+  rawJson.textContent = JSON.stringify(data, null, 2);
+}
+
+async function doVerify() {
+  const claim = claimInput.value.trim();
+  if (!claim) return;
+  if (claim.length > 5000) {
+    alert("Claim demasiado largo (máx 5000 caracteres)");
+    return;
+  }
+  setLoading(true);
+  try {
+    const res = await fetch("/api/fact-check", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        claim,
+        context: contextInput.value.trim(),
+        mode: modeSelect.value,
+        provider: providerSelect.value || undefined
+      })
+    });
+    const data = await res.json();
+    if (!data.ok) {
+      alert("Error: " + (data.error || "Desconocido"));
+      return;
+    }
+    updateDisplay(data);
+  } catch (err) {
+    alert("Error de red: " + err.message);
+  } finally {
+    setLoading(false);
+  }
+}
+
+verifyBtn.addEventListener("click", doVerify);
+claimInput.addEventListener("keydown", e => {
+  if (e.ctrlKey && e.key === "Enter") doVerify();
+});
+modeSelect.addEventListener("change", e => {
+  modeBadge.textContent = e.target.value.toUpperCase();
+});
+</script>
+</body>
+</html>

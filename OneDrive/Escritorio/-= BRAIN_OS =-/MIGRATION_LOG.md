@@ -57,6 +57,33 @@ Documentos fuente cuyo contenido fue absorbido completamente en skills canónico
 
 ---
 
+## 2026-06-16 — Imagen arquitectura movida a docs canónicos
+
+| Fecha | Origen | Destino | Razón | Evidencia | Hash |
+|-------|--------|---------|-------|-----------|------|
+| 2026-06-16 | `-=LR WORKING BENCH=- no borrar\pending for review\969105C3-8104-4A39-8FEA-7A04DC909DEC.jpeg` | `docs/architecture/969105C3-8104-4A39-8FEA-7A04DC909DEC.jpeg` | Imagen pendiente análisis (#14 en PENDIENTES_MASTER). Movida a ubicación canónica de arquitectura. Creado documento de análisis placeholder. | `docs/architecture/IMAGE_ANALYSIS_969105C3.md` (placeholder para inspección manual) | Pendiente cálculo |
+
+**Rollback:** `move "docs/architecture/969105C3-8104-4A39-8FEA-7A04DC909DEC.jpeg" "-=LR WORKING BENCH=- no borrar\pending for review\"` + borrar `docs/architecture/IMAGE_ANALYSIS_969105C3.md`
+
+---
+
+## 2026-06-16 — anti_ia_detector_web.html agregado a medioevo-tools para deploy
+
+| Fecha | Origen | Destino | Razón | Evidencia | Hash |
+|-------|--------|---------|-------|-----------|------|
+| 2026-06-16 | `apps/medioevo-tools/anti_ia_detector_web.html` (working tree) | Git commit `3b77ab8` (branch `codex/curador-seto-loops-2026-05-05`) | Detector standalone client-side para patrones de prosa artificial. Canon L.R. Gonzalez. Quota local (3/día) + licencia Gumroad. Listo para GitHub Pages + Gumroad. | Commit `3b77ab8` + HTML 553 líneas | Pendiente |
+
+**Rollback:** `git revert 3b77ab8` — elimina el archivo del historial.
+
+**Próximos pasos (operador):**
+1. Push a `Lutren/medioevo-tools` (remote separado, `main` branch)
+2. Activar GitHub Pages en `Settings → Pages` (source: `main` / root)
+3. Crear producto Gumroad $3/50 usos → obtener URL real
+4. Actualizar `anti_ia_detector_web.html` líneas 259, 328, 335 con URL real Gumroad
+5. Commit + push final
+
+---
+
 ## Plantilla para futuras entradas
 
 ```markdown

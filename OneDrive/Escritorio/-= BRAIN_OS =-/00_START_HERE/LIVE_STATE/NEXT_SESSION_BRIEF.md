@@ -55,13 +55,14 @@ siguiente_pendiente: Gumroad product $3/50 usos (SOLO_OPERADOR), QA suite comple
 ### 🔄 PRÓXIMAS TAREAS (P1 — post-implementación core)
 | Módulo | Qué Falta | Prioridad | Evidencia Objetivo |
 |--------|-----------|-----------|-------------------|
-| Gumroad product | Crear producto $3/50 usos en Gumroad (SOLO_OPERADOR) | **P1** | URL producto Gumroad activa |
-| Investigación anti-IA | Auditoría técnica + documentación técnica | **P1** | Documento en `docs/anti_ia/` ✅ `ANTI_IA_DETECTOR_TECHNICAL.md` |
-| QA Suite completa | Suite ejecutada: 2384 passed, 15 failed (pre-existing: missing wabi_sabi.core), 7 skipped | **DONE** | Exit 0 para core; 15 fallos son infraestructura pre-existente |
+| Gumroad product anti-IA | Crear producto $3/50 usos en Gumroad (SOLO_OPERADOR) | **P1** | URL producto Gumroad activa (`https://lutren.gumroad.com/l/anti-ia-detector`) |
+| Gumroad product fact-check | Crear producto $3/50 usos en Gumroad (SOLO_OPERADOR) | **P1** | URL producto Gumroad activa (`https://lutren.gumroad.com/l/fact-checker`) |
+| Investigación anti-IA | Auditoría técnica + documentación técnica | **P1** | Documento en `docs/anti_ia/` |
+| QA Suite completa | Ejecutar suite completa 2335+ tests sin regresiones | **P1** | Exit 0, 0 fallos |
 | Análisis visual imagen #14 | Operador inspecciona `docs/architecture/969105C3-...jpeg` | **P1** | Hallazgos en `IMAGE_ANALYSIS_969105C3.md` |
 
 ## Próxima Acción Verificable (Una Sola)
-**Crear producto Gumroad $3/50 usos** → actualizar URLs en `anti_ia_detector_web.html` (líneas 312, 328) → push final a Lutren/medioevo-tools. **Documentación técnica creada**: `docs/anti_ia/ANTI_IA_DETECTOR_TECHNICAL.md`.
+**Crear 2 productos Gumroad $3/50 usos** (anti-IA detector + fact-checker) → actualizar placeholder URLs en HTMLs si se desvían del estándar `https://lutren.gumroad.com/l/<slug>` → push final. **Documentación técnica creada**: `docs/anti_ia/ANTI_IA_DETECTOR_TECHNICAL.md`.
 
 ## Contexto Técnico Actual
 ```

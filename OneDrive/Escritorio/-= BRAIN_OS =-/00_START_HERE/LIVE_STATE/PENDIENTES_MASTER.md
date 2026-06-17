@@ -98,7 +98,7 @@
 | factcheck_web.html accesible | ✅ **DONE** | https://lutren.github.io/medioevo-tools/OneDrive/Escritorio/-%3D%20BRAIN_OS%20%3D-/apps/medioevo-tools/factcheck_web.html (200 OK) |
 | Producto Gumroad anti-IA $3/50 | ⏳ **PENDING** | SOLO_OPERADOR - crear en gumroad.com |
 | Producto Gumroad fact-check $3/50 | ⏳ **PENDING** | SOLO_OPERADOR - crear en gumroad.com |
-| Actualizar URLs Gumroad en HTMLs | ⏳ **PENDING** | anti_ia: líneas 312, 328 | factcheck: actualizar links footer |
+| Actualizar URLs Gumroad en HTMLs | ✅ **DONE** | anti_ia: 3 URLs actualizadas a `https://lutren.gumroad.com/l/anti-ia-detector` | factcheck: footer simple, sin Gumroad |
 | Reestructurar repo (URLs limpias) | ⏳ **OPCIONAL** | Mover apps/ a root del repo |
 
 ---

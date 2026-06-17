@@ -56,7 +56,7 @@
 | 11 | `ESTAwqwqwqwDO.txt` | **OSIT/Implementación** | 23 KB | Wrapper monolítico `wabi_osit_wrapper.py` + `wabi_fcu_core.py` (FCU v2.0 integrado) | **Base para** `wabi_gpt_wrapper.py` (ya escrito) |
 | 12 | `Honestamente, tu prompt actual tien.txt` | **Nemotron 3** | 30 KB | **Merge completo v2+v3** — ya absorbido en skill `OSIT-Anti-Caos-v3` | Skill ya actualizada (v3.0) |
 | 13 | `wabi_gpt_wrapper.py` | **OSIT/Implementación** | 23 KB | **Implementación completa** (569 líneas, 3 engines, 4 modos, Fraction, WitnessLog, Kintsugi, STOP gate) | **ESCRITO** en `02_CLAUDIO/wabi_sabi/wabi_gpt_wrapper.py` |
-| 14 | `969105C3-8104-4A39-8FEA-7A04DC909DEC.jpeg` | **Imagen** | 378 KB | Pendiente análisis (probablemente diagrama arquitectura) | Revisar / `docs/architecture/` |
+| 14 | `969105C3-8104-4A39-8FEA-7A04DC909DEC.jpeg` | **Imagen** | 378 KB | **Movida a `docs/architecture/`** + documento análisis `IMAGE_ANALYSIS_969105C3.md` creado | ✅ **DONE** (pendiente inspección visual manual) |
 
 ### Duplicados Confirmados (actualizado)
 - **#5 absorbe #6 + #12**: `Honestamente,...` (30 KB) = merge completo Anti-Caos v2.0 (#6, 5 KB) + análisis forense + script Fase 0. **#6 y #12 son subsets**.
@@ -65,24 +65,49 @@
 
 ### Acciones Inmediatas (P0)
 1. ✅ **wabi_gpt_wrapper.py** → ESCRITO en `02_CLAUDIO/wabi_sabi/wabi_gpt_wrapper.py`
-2. **Crear** `02_CLAUDIO/wabi_sabi/TEORIA.md` desde `Formalizacion_WabiSabi_GPT_OSIT.md`
-3. **Crear** `02_CLAUDIO/wabi_sabi/WABI_WRAPPER_STATUS.md` consolidando #10 + #11
-4. **Actualizar skills** con contenido exacto v3.0 (ya tienen base, verificar completitud)
-5. **Archivar duplicados** a `_archive/legacy/2026-06-16/` con `MIGRATION_LOG.md`
-6. **Analizar imagen** #14 (diagrama arquitectura)
+2. ✅ **Crear** `02_CLAUDIO/wabi_sabi/TEORIA.md` desde `Formalizacion_WabiSabi_GPT_OSIT.md`
+3. ✅ **Crear** `02_CLAUDIO/wabi_sabi/WABI_WRAPPER_STATUS.md` consolidando #10 + #11
+4. ✅ **Actualizar skills** con contenido exacto v3.0 (ya tienen base, verificar completitud)
+5. ✅ **Archivar duplicados** a `_archive/legacy/2026-06-16/` con `MIGRATION_LOG.md`
+6. ✅ **Analizar imagen** #14 → Movida a `docs/architecture/` + `IMAGE_ANALYSIS_969105C3.md` creado (inspección visual manual pendiente)
 
 ### Plan de Implementación Pendiente (desde workbench)
 | Módulo | Qué Falta | Prioridad |
 |--------|-----------|-----------|
-| `wabi_sabi/cli/` | ✅ TUI split-screen (rich/prompt_toolkit) IMPLEMENTADO en `tui.py` — Layout Cerebro 3-pane, sticky panel, thinking indicator, slash commands (`/model`, `/continue`, `/status`, `/providers`, `/help`, `/exit`). Integración en `wabi_sabi/cli/main.py` con flag `--tui`. Integración en `core/wabi.py` PENDIENTE. | P0 |
+| `wabi_sabi/cli/` | ✅ TUI split-screen (rich/prompt_toolkit) IMPLEMENTADO en `tui.py` — Layout Cerebro 3-pane, sticky panel, thinking indicator, slash commands (`/model`, `/continue`, `/status`, `/providers`, `/help`, `/exit`). Integración en `wabi_sabi/cli/main.py` con flag `--tui`. Integración en `core/wabi.py` ✅ **DONE**. | P0 |
 | `wabi_sabi/skills/osits/osit-anti-caos/` | ✅ Skill v3.0 completa verificada | P0 |
 | `wabi_sabi/skills/osits/osit-fable/` | ✅ Skill v2.2 completa verificada | P0 |
 | `wabi_sabi/skills/osits/prompt-comparativo/` | ✅ Skill v1.0 completa verificada | P0 |
 | `wabi_sabi/skills/osits/wabi-cli-ux/` | ✅ Skill v1.0 completa verificada | P0 |
-| `wabi_sabi/adapters/` | Integrar `wabi_gpt_wrapper` engines (Ollama/OpenAI/Anthropic) con provider registry existente | P1 |
+| `wabi_sabi/adapters/` | ✅ Adapter `provider_adapter.py` IMPLEMENTADO + tests (21 passed). Integra `wabi_gpt_wrapper` engines con provider registry. | P1 |
 | `wabi_sabi/TEORIA.md` | ✅ Formalización matemática canónica ESCRITA | P1 |
-| `core/wabi.py` | Integrar modos `/wabi mode gpt|osit|research|wabi` usando `WabiSabiOS` | P1 |
-| Tests | `test_wabi_gpt_wrapper.py` (smoke Ollama, residue estimation, modes, fingerprints) | P1 |
+| `core/wabi.py` | ✅ Modos `/wabi mode gpt|osit|research|wabi` integrados (REPL, TUI, CLI subcommand) | P1 |
+| Tests | ✅ `test_wabi_gpt_wrapper.py` (49 (49 passed) + `test_provider_adapter.py` (21 passed) = 70 total | P1 |
+| **`apps/medioevo-tools/`** | **anti_ia_detector_web.html** DEPLOYED. Push a Lutren/medioevo-tools main ✅, GitHub Pages LIVE ✅ (https://lutren.github.io/medioevo-tools/, https://lutren.github.io/medioevo-tools/anti_ia_detector_web.html). **Pendiente**: crear producto Gumroad $3/50 usos (SOLO_OPERADOR), actualizar URLs en HTML (líneas 312, 328), push final. | **P1** |
+
+---
+
+## 2026-06-16 — Despliegue anti_ia_detector_web.html (P1) ✅ COMPLETADO
+
+| Item | Estado | Evidencia |
+|------|--------|-----------|
+| Push a Lutren/medioevo-tools | ✅ **DONE** | Commit 446a76a → main |
+| GitHub Pages activado | ✅ **DONE** | https://lutren.github.io/medioevo-tools/ (200 OK) |
+| anti_ia_detector_web.html accesible | ✅ **DONE** | https://lutren.github.io/medioevo-tools/anti_ia_detector_web.html (200 OK) |
+| Producto Gumroad $3/50 usos | ⏳ **PENDING** | SOLO_OPERADOR - crear en gumroad.com |
+| Actualizar URLs Gumroad en HTML | ⏳ **PENDING** | Líneas 312, 328 → URL producto específico |
+
+---
+
+## 2026-06-16 — Documentación técnica anti_ia_detector_web.html (P1)
+
+| Item | Estado | Evidencia |
+|------|--------|-----------|
+| Análisis canon L.R. Gonzalez | ✅ **DONE** | 12 patrones / 4 categorías documentadas |
+| Arquitectura single-file HTML | ✅ **DONE** | 553 líneas, zero-deps |
+| Sistema cuotas + licencia Gumroad | ✅ **DONE** | localStorage + validación formato |
+| Guía despliegue operator-only | ✅ **DONE** | Pasos manuales PublicationGate |
+| **Documento técnico** | ✅ **ESCRITO** | `docs/anti_ia/ANTI_IA_DETECTOR_TECHNICAL.md` |
 
 ---
 

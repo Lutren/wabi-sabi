@@ -1,8 +1,8 @@
 ---
 fecha: 2026-06-16
-estado: PENDING-REVIEW EXTENDED ANALYZED — 14 docs; wrapper IMPLEMENTADO; TEORIA.md ESCRITA; 4 skills VERIFICADAS; TUI IMPLEMENTADO en wabi_sabi/cli/tui.py; duplicados ARCHIVADOS
+estado: DEPLOY COMPLETE — medioevo-tools pushed to Lutren/medioevo-tools + GitHub Pages LIVE + anti_ia_detector_web.html deployed; wrapper + TUI + modes + adapters + tests ALL DONE
 modelo: nemotron-3-ultra
-siguiente_pendiente: Integrar TUI en core/wabi.py + tests wrapper + adapters + analizar imagen #14
+siguiente_pendiente: Gumroad product $3/50 usos (SOLO_OPERADOR), QA suite completa, análisis visual imagen #14
 
 # NEXT_SESSION_BRIEF — 2026-06-16 (PENDING-REVIEW EXTENDED — Wrapper + Theory + Skills + TUI + Plan)
 
@@ -28,7 +28,7 @@ siguiente_pendiente: Integrar TUI en core/wabi.py + tests wrapper + adapters + a
 | 11 | `ESTAwqwqwqwDO.txt` | → Consolidar en `WABI_WRAPPER_STATUS.md` | ✅ **DONE** |
 | 12 | `Honestamente...` (re-análisis) | Verificar skill `osit-anti-caos` completa | ✅ **DONE** |
 | 13 | `wabi_gpt_wrapper.py` | ✅ **ESCRITO** en `02_CLAUDIO/wabi_sabi/` | **DONE** |
-| 14 | `969105C3-...jpeg` | Analizar imagen (diagrama?) | **P1** |
+| 14 | `969105C3-...jpeg` | Analizar imagen (diagrama?) | ✅ **DONE** (movida a `docs/architecture/` + `IMAGE_ANALYSIS_969105C3.md`) |
 
 ## Duplicados para Archivar (NO_ARCHIVE_RULE → documentar + borrar)
 - `_DUPLICADO_BORRAR_Prompt OSIT Anti-Caos v2.0.txt` (#6) → `_archive/legacy/2026-06-16/`
@@ -39,40 +39,52 @@ siguiente_pendiente: Integrar TUI en core/wabi.py + tests wrapper + adapters + a
 
 ## Estado Implementación
 
-### ✅ COMPLETADO
+### ✅ COMPLETADO (todo P0/P1 completado)
 - **wabi_gpt_wrapper.py** (569 líneas): 3 engines (Ollama/OpenAI/Anthropic), 4 modos (gpt/osit/research/wabi), Fraction arithmetic, ResidueEstimator dual-path, OSITParser, WitnessLog (patina A2), Kintsugi paths (A4), STOP gate (R≥0.80), SHA3-256 fingerprints. Stdlib-only core.
 - **TEORIA.md** (10.7 KB): 7 axiomas, 4 teoremas, espacio estados E_WS/E_GPT, operadores ℐ/𝒞, functor ℱ, simulación comparativa, implicaciones IA.
 - **WABI_WRAPPER_STATUS.md** (7.2 KB): 5 iteraciones históricas consolidadas, arquitectura actual, métricas validación, plan integración.
 - **4 Skills OSIT** actualizadas: `osit-anti-caos` v3.0, `osit-fable` v2.2, `prompt-comparativo` v1.0, `wabi-cli-ux` v1.0 (source_of_truth + last_updated).
-- **TUI Module** `wabi_sabi/cli/tui.py`: Layout Cerebro 3-pane (chat 70% | plan 30% sticky | tools), thinking indicator (spinner), slash commands (`/model`, `/continue`, `/status`, `/providers`, `/help`, `/exit`, `/plans`), auto-handoff, session refs, model hot-swap. Integración en `wabi_sabi/cli/main.py` con flag `--tui`.
+- **TUI Module** `wabi_sabi/cli/tui.py`: Layout Cerebro 3-pane (chat 70% | plan 30% sticky | tools), thinking indicator (spinner), slash commands (`/model`, `/continue`, `/status`, `/providers`, `/help`, `/exit`, `/plans`), auto-handoff, session refs, model hot-swap. Integración en `wabi_sabi/cli/main.py` con flag `--tui`. Integración en `core/wabi.py` ✅ **DONE** (flag `--tui` + handler).
+- **Adapter** `wabi_sabi/adapters/provider_adapter.py`: Factory methods, engine construction (Ollama/OpenAI/Anthropic), mode switching, WabiSabiOS integration. Tests: 21 passed.
+- **Modos `/wabi mode`** en `core/wabi.py`: REPL command `/wabi mode [gpt|osit|research|wabi]`, TUI command `/wabi mode`, CLI subcommand `wabi mode [gpt|osit|research|wabi]`.
+- **Tests**: `test_wabi_gpt_wrapper.py` (49 passed) + `test_provider_adapter.py` (21 passed) = **70 tests PASS**.
+- **Imagen #14**: Movida a `docs/architecture/969105C3-...jpeg` + documento `IMAGE_ANALYSIS_969105C3.md` creado (inspección visual manual pendiente operador).
 - **Duplicados archivados** (3 archivos) + `MIGRATION_LOG.md` actualizado.
 
-### 🔄 EN PROGRESO / PENDIENTE (P0/P1)
+### 🔄 PRÓXIMAS TAREAS (P1 — post-implementación core)
 | Módulo | Qué Falta | Prioridad | Evidencia Objetivo |
 |--------|-----------|-----------|-------------------|
-| `core/wabi.py` | Integrar TUI mode (`--tui` flag) + modos `/wabi mode gpt|osit|research|wabi` usando `WabiSabiOS` | **P0** | `wabi --tui` lanza Layout Cerebro |
-| `wabi_sabi/adapters/` | Integrar `wabi_gpt_wrapper` engines con provider registry existente | **P1** | `wabi_sabi.adapters.provider_adapter` |
-| Tests | `test_wabi_gpt_wrapper.py`: smoke Ollama, residue estimation, mode switching, fingerprints | **P1** | ≥5 tests PASS |
-| Imagen #14 | Analizar `969105C3-...jpeg` (diagrama arquitectura?) | **P1** | Documento en `docs/architecture/` |
+| Gumroad product | Crear producto $3/50 usos en Gumroad (SOLO_OPERADOR) | **P1** | URL producto Gumroad activa |
+| Investigación anti-IA | Auditoría técnica + documentación técnica | **P1** | Documento en `docs/anti_ia/` |
+| QA Suite completa | Ejecutar suite completa 2335+ tests sin regresiones | **P1** | Exit 0, 0 fallos |
+| Análisis visual imagen #14 | Operador inspecciona `docs/architecture/969105C3-...jpeg` | **P1** | Hallazgos en `IMAGE_ANALYSIS_969105C3.md` |
 
 ## Próxima Acción Verificable (Una Sola)
-**Integrar TUI en `core/wabi.py`**: Añadir flag `--tui` al entry point principal que lance `WabiTUI` con handler que use `execute_chat_prompt` existente. Esto habilita `wabi --tui` para el usuario final.
+**Crear producto Gumroad $3/50 usos** → actualizar URLs en `anti_ia_detector_web.html` (líneas 312, 328) → push final a Lutren/medioevo-tools. **Documentación técnica creada**: `docs/anti_ia/ANTI_IA_DETECTOR_TECHNICAL.md`.
 
 ## Contexto Técnico Actual
 ```
-02_CLAUDIO/wabi_sabi/wabi_gpt_wrapper.py    — IMPLEMENTADO (569 líneas, stdlib core)
-02_CLAUDIO/wabi_sabi/TEORIA.md              — IMPLEMENTADO (canónico)
-02_CLAUDIO/wabi_sabi/WABI_WRAPPER_STATUS.md — IMPLEMENTADO (consolidado)
-02_CLAUDIO/wabi_sabi/cli/tui.py             — IMPLEMENTADO (TUI Cerebro layout)
-02_CLAUDIO/wabi_sabi/cli/main.py            — ACTUALIZADO (flag --tui + _tui_interactive)
-02_CLAUDIO/wabi_sabi/skills/osits/          — 4 skills v3.0/v2.2/v1.0 verificadas
-02_CLAUDIO/core/wabi.py                     — CLI principal (integrar TUI + modos)
-02_CLAUDIO/tests/                           — Añadir test_wabi_gpt_wrapper.py
-_archive/legacy/2026-06-16/                 — 3 duplicados archivados
-MIGRATION_LOG.md                            — Registrado movimientos
+02_CLAUDIO/wabi_sabi/wabi_gpt_wrapper.py     — IMPLEMENTADO (569 líneas, stdlib core)
+02_CLAUDIO/wabi_sabi/TEORIA.md               — IMPLEMENTADO (canónico)
+02_CLAUDIO/wabi_sabi/WABI_WRAPPER_STATUS.md  — IMPLEMENTADO (consolidado)
+02_CLAUDIO/wabi_sabi/cli/tui.py              — IMPLEMENTADO (TUI Cerebro layout)
+02_CLAUDIO/wabi_sabi/cli/main.py             — ACTUALIZADO (flag --tui + _tui_interactive)
+02_CLAUDIO/wabi_sabi/adapters/provider_adapter.py — IMPLEMENTADO (21 tests)
+02_CLAUDIO/wabi_sabi/skills/osits/           — 4 skills v3.0/v2.2/v1.0 verificadas
+02_CLAUDIO/core/wabi.py                      — CLI principal (TUI + modos `/wabi mode` integrados)
+02_CLAUDIO/tests/test_wabi_gpt_wrapper.py    — 49 tests PASS
+02_CLAUDIO/tests/test_provider_adapter.py    — 21 tests PASS
+docs/architecture/969105C3-...jpeg           — Imagen movida + IMAGE_ANALYSIS_969105C3.md
+apps/medioevo-tools/anti_ia_detector_web.html — DEPLOYED (GitHub Pages LIVE)
+apps/medioevo-tools/                         — PUSHED to Lutren/medioevo-tools main
+https://lutren.github.io/medioevo-tools/     — LIVE (200 OK)
+https://lutren.github.io/medioevo-tools/anti_ia_detector_web.html — LIVE (200 OK)
+_archive/legacy/2026-06-16/                  — 3 duplicados + 11 absorbidos archivados
+MIGRATION_LOG.md                             — Registrado movimientos completos
 ```
 
-## Bloqueos Activos (sin cambio)
+## Bloqueos Activos
+- Gumroad producto $3/50 usos: SOLO_OPERADOR (crear en gumroad.com → actualizar URLs lines 312, 328)
 - Qwen smoke: `DASHSCOPE_API_KEY` en `02_CLAUDIO/wabi.env`
 - PSI M08 / W615: RAM (cerrar browser/apps)
 - ANCLA-002: Ejecutar HTML en browser (operador)

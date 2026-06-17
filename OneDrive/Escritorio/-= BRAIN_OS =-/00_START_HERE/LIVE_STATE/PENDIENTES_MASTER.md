@@ -82,20 +82,24 @@
 | `wabi_sabi/adapters/` | ✅ Adapter `provider_adapter.py` IMPLEMENTADO + tests (21 passed). Integra `wabi_gpt_wrapper` engines con provider registry. | P1 |
 | `wabi_sabi/TEORIA.md` | ✅ Formalización matemática canónica ESCRITA | P1 |
 | `core/wabi.py` | ✅ Modos `/wabi mode gpt|osit|research|wabi` integrados (REPL, TUI, CLI subcommand) | P1 |
-| Tests | ✅ `test_wabi_gpt_wrapper.py` (49 (49 passed) + `test_provider_adapter.py` (21 passed) = 70 total | P1 |
-| **`apps/medioevo-tools/`** | **anti_ia_detector_web.html** DEPLOYED. Push a Lutren/medioevo-tools main ✅, GitHub Pages LIVE ✅ (https://lutren.github.io/medioevo-tools/, https://lutren.github.io/medioevo-tools/anti_ia_detector_web.html). **Pendiente**: crear producto Gumroad $3/50 usos (SOLO_OPERADOR), actualizar URLs en HTML (líneas 312, 328), push final. | **P1** |
+| Tests | ✅ `test_wabi_gpt_wrapper.py` (49 passed) + `test_provider_adapter.py` (21 passed) + `test_factcheck_integration.py` (8 passed) = 78 total | P1 |
+| **QA Suite Full** | ✅ **EJECUTADA**: 2384 passed, 15 failed (pre-existing: missing `wabi_sabi.core.conversation_engine`), 7 skipped. Core = 100% pass. | P1 |
+| **`apps/medioevo-tools/`** | **anti_ia_detector_web.html** DEPLOYED ✅ (GitHub Pages LIVE). **factcheck_web.html** DEPLOYED ✅ (GitHub Pages LIVE). **Pendiente**: crear productos Gumroad $3/50 usos (SOLO_OPERADOR x2), actualizar URLs en HTMLs, push final. Repo structure note: files at `OneDrive/Escritorio/-%3D%20BRAIN_OS%20%3D-/apps/medioevo-tools/` — URLs largas. | **P1** |
 
 ---
 
-## 2026-06-16 — Despliegue anti_ia_detector_web.html (P1) ✅ COMPLETADO
+## 2026-06-16 — Despliegue anti_ia_detector_web.html + factcheck_web.html (P1) ✅ COMPLETADO
 
-| Item | Estado | Evidencia |
-|------|--------|-----------|
-| Push a Lutren/medioevo-tools | ✅ **DONE** | Commit 446a76a → main |
+| Item | Estado | Evidencia / URL |
+|------|--------|-----------------|
+| Push a Lutren/medioevo-tools | ✅ **DONE** | Commit cf1c6b0 → main |
 | GitHub Pages activado | ✅ **DONE** | https://lutren.github.io/medioevo-tools/ (200 OK) |
-| anti_ia_detector_web.html accesible | ✅ **DONE** | https://lutren.github.io/medioevo-tools/anti_ia_detector_web.html (200 OK) |
-| Producto Gumroad $3/50 usos | ⏳ **PENDING** | SOLO_OPERADOR - crear en gumroad.com |
-| Actualizar URLs Gumroad en HTML | ⏳ **PENDING** | Líneas 312, 328 → URL producto específico |
+| anti_ia_detector_web.html accesible | ✅ **DONE** | https://lutren.github.io/medioevo-tools/OneDrive/Escritorio/-%3D%20BRAIN_OS%20%3D-/apps/medioevo-tools/anti_ia_detector_web.html (200 OK) |
+| factcheck_web.html accesible | ✅ **DONE** | https://lutren.github.io/medioevo-tools/OneDrive/Escritorio/-%3D%20BRAIN_OS%20%3D-/apps/medioevo-tools/factcheck_web.html (200 OK) |
+| Producto Gumroad anti-IA $3/50 | ⏳ **PENDING** | SOLO_OPERADOR - crear en gumroad.com |
+| Producto Gumroad fact-check $3/50 | ⏳ **PENDING** | SOLO_OPERADOR - crear en gumroad.com |
+| Actualizar URLs Gumroad en HTMLs | ⏳ **PENDING** | anti_ia: líneas 312, 328 | factcheck: actualizar links footer |
+| Reestructurar repo (URLs limpias) | ⏳ **OPCIONAL** | Mover apps/ a root del repo |
 
 ---
 

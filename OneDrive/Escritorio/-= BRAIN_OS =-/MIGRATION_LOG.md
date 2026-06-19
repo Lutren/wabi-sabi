@@ -297,3 +297,33 @@ Verificado: `workbench_guard verify` 32 OK / 0 faltantes; smoke EXIT 0; zonas pr
 | `pending_for_review/Recovery/A-G` | 128 | supersedido por CANON_MASTER | varios... |
 | `20_BLUEPRINTS/` (7 archivos raíz) | 7 | `02_CLAUDIO/docs/` | SHA256 OK |
 
+---
+
+## 2026-06-19 — BORRADO AUTORIZADO: E:\BRAIN_OS_BODEGA\L.R.GONZALEZ\-=MEDIOEVO=-
+
+- **Acción:** BORRAR
+- **Path:** `E:\BRAIN_OS_BODEGA\L.R.GONZALEZ\-=MEDIOEVO=-`
+- **Tamaño:** ~15.25 GB | ~113,000 archivos
+- **Autorización:** "AUTORIZO BORRAR E:\BRAIN_OS_BODEGA\L.R.GONZALEZ\-=MEDIOEVO=-" — Tyr, 2026-06-19
+- **Razón:** Workspace RETIRADO (CANONICAL_WORKSPACE_RULE 2026-06-02). Absorbido íntegramente a BRAIN_OS en migración 2026-06-15. Copia redundante.
+- **Verificación:** MIGRATION_LOG_ABSORCION_E_DRIVE_2026-06-15.md confirma absorción completa.
+- **Ejecutor:** Claude Sonnet 4.6
+- **Resultado:** E: disco libre: 1.61 GB → **35.56 GB** (+33.95 GB totales en sesión incluyendo otras limpiezas)
+
+## 2026-06-19 — BORRADOS ADICIONALES (espacio liberado)
+
+| Item | Tamaño | Razón |
+|------|--------|-------|
+| `releases/publish_staging/medioevo-site/` | 1,142 MB | Sitio v1 respaldado en github.com/Lutren/medioevo-site.git |
+| `releases/publish_staging/medioevo-site-deploy-ready-2026-05-16/` | 149 MB | Build artifact regenerable |
+| `releases/publish_staging/medioevo-duat-public-release/` | 156 MB | Respaldado en github.com/Lutren/medioevo-duat-public-release.git |
+| `assets/WABI_VISUALS.zip` | 430 MB | Redundante (carpeta `assets/WABI_VISUALS/` es el canónico) |
+| `E:\BRAIN_OS_CODE_SNAPSHOT_20260618\` | 1,400 MB | Snapshot desactualizado |
+| `E:\BRAIN_OS_BODEGA\duat-geodia_node_modules_2026-06-10.zip` | 200 MB | node_modules obsoleto |
+| `tools/vendor/openai-symphony` | 77 MB | Paquete npm reinstalable |
+| 76 directorios `__pycache__` | 15 MB | Cache regenerable |
+| 7 archivos `.bak`/`.backup` | 1 MB | Versiones canónicas existen |
+| `_archive/workbench_backups/` | 33 MB | Absorción verificada y completa |
+| `_CUARENTENA_2026-06-18/` | 3 MB | Cuarentena del incidente archivada |
+| **TOTAL SESIÓN** | **~18.8 GB** | |
+

@@ -1,0 +1,81 @@
+{
+  "_schema": "medioevo.wabi.provider_capabilities.v1",
+  "_edit_help": "Edita este archivo para cambiar qué motor usa cada tipo de tarea. No toques el código.",
+  "_format": "capacidad: ['provider:modelo', ...] — el router usa el PRIMERO con clave disponible; baja en la lista; piso = fallback (ollama). El sistema clasifica la tarea solo (classify_capability) y rutea al mejor modelo.",
+  "_claves_disponibles_2026-06-27": "CON CLAVE (verificado wabi providers): deepseek, nvidia, cloudflare, gemini, ollama(local). SIN CLAVE (el router los salta): glm/zhipu, dashscope_qwen, openrouter, groq, kimi, openai, anthropic, xai. NOTA: 'Qwen' lo tienes vía Cloudflare (@cf/qwen) y vía ollama local; no via DashScope (sin clave).",
+  "_optimizacion_por_accion": "CODING -> Qwen2.5-Coder-32B (Cloudflare): coder real, devuelve código limpio (arregla el problema de nemotron verboso). RESEARCH -> Gemini 2.0 (contexto largo). REASONING/PLANNING -> DeepSeek + Nemotron. Para activar modelo más fuerte en coding (ej. claude/gpt-4/qwen-max), agrega su clave y ponlo primero en code/*.",
+  "_ids_verificados": "nvidia/llama-3.3-nemotron-super-49b-v1 READY. cloudflare @cf/qwen/qwen2.5-coder-32b-instruct y @cf/meta/llama-3.3-70b-instruct-fp8-fast con clave. gemini-2.0-flash con clave. ollama: llama3.2:3b + qwen2.5-coder:7b + qwen2.5-coder:3b pulled.",
+
+  "orchestrator": [
+    "deepseek:deepseek-v4-flash",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "gemini:gemini-2.0-flash",
+    "ollama:llama3.2:3b"
+  ],
+
+  "code/backend": [
+    "cloudflare:@cf/qwen/qwen2.5-coder-32b-instruct",
+    "deepseek:deepseek-v4-flash",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "gemini:gemini-2.0-flash",
+    "ollama:qwen2.5-coder:7b"
+  ],
+
+  "code/frontend": [
+    "cloudflare:@cf/qwen/qwen2.5-coder-32b-instruct",
+    "deepseek:deepseek-v4-flash",
+    "gemini:gemini-2.0-flash",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "ollama:qwen2.5-coder:7b"
+  ],
+
+  "reasoning": [
+    "deepseek:deepseek-v4-flash",
+    "nvidia:nvidia/nemotron-3-super-120b-a12b",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "gemini:gemini-2.0-flash",
+    "ollama:llama3.2:3b"
+  ],
+
+  "research": [
+    "gemini:gemini-2.0-flash",
+    "deepseek:deepseek-v4-flash",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "cloudflare:@cf/meta/llama-3.3-70b-instruct-fp8-fast",
+    "ollama:llama3.2:3b"
+  ],
+
+  "debug": [
+    "deepseek:deepseek-v4-flash",
+    "cloudflare:@cf/qwen/qwen2.5-coder-32b-instruct",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "ollama:qwen2.5-coder:7b"
+  ],
+
+  "file": [
+    "deepseek:deepseek-v4-flash",
+    "gemini:gemini-2.0-flash",
+    "nvidia:nvidia/llama-3.3-nemotron-super-49b-v1",
+    "ollama:llama3.2:3b"
+  ],
+
+  "fallback": [
+    "ollama:llama3.2:3b"
+  ],
+
+  "_mcp_services": {
+    "_note": "Servicios MCP locales disponibles — no son proveedores LLM, solo documentación de endpoints",
+    "wabi_mcp_server": {
+      "port": 8791,
+      "mode": "LOCALHOST_ONLY_READ_PREPARE",
+      "start": "python -m mcp.wabi_mcp_server.server --serve --port 8791",
+      "tools": ["get_mission_control", "get_latest_handoff", "create_taskspec_draft", "write_handoff_draft"]
+    },
+    "godot_mcp_server": {
+      "port": 8792,
+      "mode": "LOCALHOST_ONLY",
+      "start": "python -m mcp.godot_mcp_server.server --serve --port 8792",
+      "tools": ["godot_status", "godot_validate_factory", "godot_run_headless", "godot_validate"]
+    }
+  }
+}

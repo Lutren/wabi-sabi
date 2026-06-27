@@ -1,0 +1,577 @@
+/*
+ * brainos-ui.css — Componentes visuales DUAT/BRAIN_OS v1.0 (2026-06-12)
+ * Fuente: assets/WABI_VISUALS/CATALOGO_PLANTILLAS.md
+ * Paleta: steampunk industrial oscuro — brass #e8c074 / cyan #24e8ff / bg #0a0c0e
+ *
+ * Clases: .b-btn .b-panel .b-badge .b-bar .b-val .b-row .b-table .b-knob .b-navtab .b-osit-quad
+ * Uso:   <link rel="stylesheet" href="../_shared/brainos-ui.css">
+ * Compatible con: file:// y servidor local. Sin dependencias externas.
+ */
+
+/* ─── Variables ────────────────────────────────────────────────────────────── */
+
+:root {
+  --b-bg:       #0a0c0e;
+  --b-bg2:      #12161a;
+  --b-bg3:      #1a2030;
+  --b-border:   #2a3040;
+  --b-brass:    #e8c074;
+  --b-brass-dk: #b9863f;
+  --b-cyan:     #24e8ff;
+  --b-cyan-dim: rgba(36,232,255,.10);
+  --b-amber:    #ffd166;
+  --b-green:    #7fe3b0;
+  --b-red:      #e8304a;
+  --b-blue:     #4a9eff;
+  --b-text:     #c8cdd6;
+  --b-text-dim: #6a7280;
+  --b-font:     ui-monospace,'Courier New',monospace;
+  --b-radius:   3px;
+  --b-radius-lg:6px;
+}
+
+/* ─── Reset base ────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ─── Boton (.b-btn) ─────────────────────────────────────────────────────────
+   Uso: <button class="b-btn">Accion</button>
+   Variantes: .b-btn-sm  .b-btn-primary  .b-btn-danger  .b-btn-ghost
+*/
+
+.b-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 6px 14px;
+  background: var(--b-bg3);
+  border: 1px solid var(--b-border);
+  border-radius: var(--b-radius);
+  color: var(--b-text-dim);
+  font: .75rem/1 var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  cursor: pointer;
+  transition: border-color .15s, color .15s, box-shadow .15s, background .15s;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.b-btn:hover {
+  border-color: var(--b-brass-dk);
+  color: var(--b-text);
+}
+
+.b-btn:active {
+  background: var(--b-bg2);
+}
+
+.b-btn.active,
+.b-btn[aria-pressed="true"] {
+  border-color: var(--b-cyan);
+  color: var(--b-cyan);
+  background: var(--b-cyan-dim);
+  box-shadow: 0 0 8px rgba(36,232,255,.18);
+}
+
+.b-btn:disabled,
+.b-btn[disabled] {
+  opacity: .38;
+  cursor: not-allowed;
+}
+
+/* Pequeno */
+.b-btn-sm {
+  padding: 3px 9px;
+  font-size: .68rem;
+}
+
+/* Principal — acento brass */
+.b-btn-primary {
+  border-color: var(--b-brass-dk);
+  color: var(--b-brass);
+}
+.b-btn-primary:hover {
+  border-color: var(--b-brass);
+  box-shadow: 0 0 8px rgba(232,192,116,.22);
+}
+
+/* Peligro */
+.b-btn-danger {
+  border-color: rgba(232,48,74,.5);
+  color: var(--b-red);
+}
+.b-btn-danger:hover {
+  border-color: var(--b-red);
+  box-shadow: 0 0 8px rgba(232,48,74,.25);
+}
+
+/* Fantasma — sin fondo */
+.b-btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--b-text-dim);
+}
+.b-btn-ghost:hover {
+  border-color: var(--b-border);
+  color: var(--b-text);
+}
+
+/* ─── Panel (.b-panel) ───────────────────────────────────────────────────────
+   Uso:
+   <div class="b-panel">
+     <div class="b-panel-title">TITULO</div>
+     contenido
+   </div>
+*/
+
+.b-panel {
+  position: relative;
+  background: var(--b-bg2);
+  border: 1px solid var(--b-border);
+  border-radius: var(--b-radius-lg);
+  overflow: hidden;
+}
+
+/* Brackets decorativos en esquinas (efecto placa industrial) */
+.b-panel::before,
+.b-panel::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-color: var(--b-brass-dk);
+  border-style: solid;
+  opacity: .7;
+}
+.b-panel::before {
+  top: 5px; left: 5px;
+  border-width: 1px 0 0 1px;
+}
+.b-panel::after {
+  bottom: 5px; right: 5px;
+  border-width: 0 1px 1px 0;
+}
+
+.b-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: var(--b-bg3);
+  border-bottom: 1px solid var(--b-border);
+  color: var(--b-brass);
+  font: 600 .7rem/1.2 var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+.b-panel-body {
+  padding: 10px 12px;
+}
+
+/* ─── Badge / chip de estado (.b-badge) ──────────────────────────────────────
+   Uso: <span class="b-badge ok">CERTEZA</span>
+   Variantes: .ok .warn .err .info .dim
+*/
+
+.b-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font: .65rem/1.4 var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  border: 1px solid currentColor;
+  white-space: nowrap;
+}
+
+.b-badge.ok   { color: var(--b-green); background: rgba(127,227,176,.10); }
+.b-badge.warn { color: var(--b-amber); background: rgba(255,209,102,.10); }
+.b-badge.err  { color: var(--b-red);   background: rgba(232,48,74,.10);   }
+.b-badge.info { color: var(--b-blue);  background: rgba(74,158,255,.10);  }
+.b-badge.dim  { color: var(--b-text-dim); background: transparent; border-color: var(--b-border); }
+
+/* Alias epistemicos */
+.b-badge.certeza   { color: var(--b-green); background: rgba(127,227,176,.10); }
+.b-badge.inferencia{ color: var(--b-blue);  background: rgba(74,158,255,.10);  }
+.b-badge.incognita { color: var(--b-amber); background: rgba(255,209,102,.10); }
+.b-badge.bloqueado { color: var(--b-red);   background: rgba(232,48,74,.10);   }
+
+/* ─── Barra de progreso (.b-bar) ─────────────────────────────────────────────
+   Uso:
+   <div class="b-bar" style="--b-pct:72%;--b-bar-color:var(--b-green)">
+     <div class="b-bar-fill"></div>
+   </div>
+*/
+
+.b-bar {
+  position: relative;
+  height: 4px;
+  background: var(--b-bg3);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.b-bar-fill {
+  height: 100%;
+  width: var(--b-pct, 50%);
+  background: var(--b-bar-color, var(--b-cyan));
+  border-radius: 2px;
+  transition: width .3s ease;
+}
+
+/* Variante gruesa */
+.b-bar-lg {
+  height: 8px;
+  border-radius: 4px;
+}
+
+/* ─── Valor de dato (.b-val) ─────────────────────────────────────────────────
+   Uso: <span class="b-val">0.527</span>
+   Muestra numeros / metricas en cian monospace destacado.
+*/
+
+.b-val {
+  color: var(--b-cyan);
+  font: .85rem var(--b-font);
+  letter-spacing: .02em;
+}
+
+.b-val-lg {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.b-val-amber { color: var(--b-amber); }
+.b-val-green { color: var(--b-green); }
+.b-val-red   { color: var(--b-red);   }
+
+/* ─── Fila de dato (.b-row) ──────────────────────────────────────────────────
+   Uso:
+   <div class="b-row">
+     <span class="b-label">R_est</span>
+     <span class="b-val">0.82</span>
+   </div>
+*/
+
+.b-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px solid rgba(42,48,64,.5);
+}
+
+.b-row:last-child { border-bottom: none; }
+
+.b-label {
+  color: var(--b-text-dim);
+  font: .7rem var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .07em;
+  flex-shrink: 0;
+}
+
+/* ─── Tabla (.b-table) ───────────────────────────────────────────────────────
+   Uso: <table class="b-table"><thead>...</thead><tbody>...</tbody></table>
+*/
+
+.b-table {
+  width: 100%;
+  border-collapse: collapse;
+  font: .72rem var(--b-font);
+  color: var(--b-text);
+}
+
+.b-table th {
+  padding: 5px 10px;
+  text-align: left;
+  color: var(--b-brass);
+  font-size: .67rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  border-bottom: 1px solid var(--b-border);
+  white-space: nowrap;
+}
+
+.b-table td {
+  padding: 5px 10px;
+  border-bottom: 1px solid rgba(42,48,64,.4);
+  vertical-align: middle;
+}
+
+.b-table tbody tr:hover td {
+  background: rgba(36,232,255,.04);
+}
+
+.b-table tbody tr:nth-child(even) td {
+  background: rgba(26,32,48,.4);
+}
+
+/* ─── Dial / knob circular (.b-knob) ─────────────────────────────────────────
+   Uso:
+   <div class="b-knob" style="--b-knob-pct:72">
+     <span class="b-knob-val">0.72</span>
+   </div>
+   Dibuja un arco SVG via conic-gradient.
+*/
+
+.b-knob {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: conic-gradient(
+    var(--b-cyan) calc(var(--b-knob-pct, 50) * 1%),
+    var(--b-bg3) 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.b-knob::before {
+  content: '';
+  position: absolute;
+  inset: 6px;
+  background: var(--b-bg2);
+  border-radius: 50%;
+}
+
+.b-knob-val {
+  position: relative;
+  z-index: 1;
+  color: var(--b-cyan);
+  font: 600 .72rem var(--b-font);
+}
+
+/* Variante pequena */
+.b-knob-sm {
+  width: 42px;
+  height: 42px;
+}
+.b-knob-sm .b-knob-val { font-size: .62rem; }
+
+/* ─── Tabs de navegacion (.b-navtab) ─────────────────────────────────────────
+   Uso:
+   <nav class="b-navtabs">
+     <button class="b-navtab active">MAPA</button>
+     <button class="b-navtab">RUTAS</button>
+   </nav>
+*/
+
+.b-navtabs {
+  display: flex;
+  gap: 2px;
+  border-top: 1px solid var(--b-border);
+  background: var(--b-bg2);
+  padding: 0 4px;
+}
+
+.b-navtab {
+  flex: 1;
+  padding: 7px 10px;
+  background: transparent;
+  border: none;
+  border-top: 2px solid transparent;
+  color: var(--b-text-dim);
+  font: .68rem var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  cursor: pointer;
+  transition: color .15s, border-color .15s;
+}
+
+.b-navtab:hover { color: var(--b-text); }
+
+.b-navtab.active {
+  color: var(--b-brass);
+  border-top-color: var(--b-brass);
+}
+
+/* ─── Cuadrante OSIT (.b-osit-quad) ─────────────────────────────────────────
+   Uso:
+   <div class="b-osit-quad">
+     <div class="b-osit-cell certeza"><span>CERTEZA</span><p>descripcion</p></div>
+     <div class="b-osit-cell inferencia">...</div>
+     <div class="b-osit-cell incognita">...</div>
+     <div class="b-osit-cell bloqueado">...</div>
+   </div>
+*/
+
+.b-osit-quad {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--b-border);
+  border: 1px solid var(--b-border);
+  border-radius: var(--b-radius-lg);
+  overflow: hidden;
+}
+
+.b-osit-cell {
+  padding: 10px 12px;
+  background: var(--b-bg2);
+  font: .72rem var(--b-font);
+}
+
+.b-osit-cell span {
+  display: block;
+  font-size: .65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: 4px;
+}
+
+.b-osit-cell p {
+  margin: 0;
+  color: var(--b-text-dim);
+  font-size: .7rem;
+  line-height: 1.4;
+}
+
+.b-osit-cell.certeza    span { color: var(--b-green); }
+.b-osit-cell.inferencia span { color: var(--b-blue);  }
+.b-osit-cell.incognita  span { color: var(--b-amber); }
+.b-osit-cell.bloqueado  span { color: var(--b-red);   }
+
+/* ─── Utilidades ─────────────────────────────────────────────────────────────*/
+
+.b-section-title {
+  color: var(--b-brass);
+  font: 600 .72rem var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin: 0 0 8px;
+}
+
+.b-divider {
+  border: none;
+  border-top: 1px solid var(--b-border);
+  margin: 10px 0;
+}
+
+.b-text-dim  { color: var(--b-text-dim); }
+.b-text-cyan { color: var(--b-cyan);     }
+.b-text-brass{ color: var(--b-brass);    }
+.b-text-green{ color: var(--b-green);    }
+.b-text-amber{ color: var(--b-amber);    }
+.b-text-red  { color: var(--b-red);      }
+
+.b-mono { font-family: var(--b-font); }
+.b-uppercase { text-transform: uppercase; letter-spacing: .08em; }
+
+.b-flex       { display: flex; align-items: center; }
+.b-flex-gap   { gap: 8px; }
+.b-flex-between { justify-content: space-between; }
+
+/* ─── Mode Banner (.b-mode-banner) v2 ───────────────────────────────────────
+   Uso: <div class="b-mode-banner" id="mode-banner"></div>
+   brainos-modes.js lo actualiza automaticamente al cambiar modo.
+*/
+
+.b-mode-banner {
+  display: none;
+  width: 100%;
+  padding: 3px 16px;
+  font: .65rem/1.6 var(--b-font);
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  text-align: center;
+}
+
+[data-mode="tecnico"] .b-mode-banner {
+  display: block;
+  background: rgba(74,158,255,.08);
+  color: var(--b-blue);
+  border-bottom: 1px solid rgba(74,158,255,.2);
+}
+
+body.bm-soc .b-mode-banner {
+  display: block;
+  background: rgba(255,209,102,.10);
+  color: var(--b-amber);
+  border-bottom: 1px solid rgba(255,209,102,.25);
+}
+
+[data-mode="so"] .b-mode-banner {
+  display: block;
+  background: rgba(127,227,176,.10);
+  color: var(--b-green);
+  border-bottom: 1px solid rgba(127,227,176,.25);
+}
+
+/* ─── Sócrates mode (body.bm-soc) ──────────────────────────────────────────
+   Paneles con borde ambar, badges epistemicos resaltados.
+   brainos-modes.js añade clase 'bm-soc' al body.
+*/
+
+body.bm-soc .b-panel {
+  border-color: rgba(255,209,102,.35);
+}
+
+body.bm-soc .b-panel-title {
+  color: var(--b-amber);
+}
+
+body.bm-soc .b-badge {
+  outline: 1px solid currentColor;
+  outline-offset: 1px;
+}
+
+/* ─── Sensory Overload mode (data-mode="so") ────────────────────────────────
+   Sin animaciones, fuente aumentada, fondo mas claro, espaciado generoso.
+   brainos-modes.js pone data-mode="so" en <html> y clase bm-so en body.
+*/
+
+[data-mode="so"] *,
+[data-mode="so"] *::before,
+[data-mode="so"] *::after {
+  animation-duration: 0s !important;
+  transition-duration: 0s !important;
+}
+
+[data-mode="so"] body {
+  background-color: var(--b-bg2);
+  font-size: 1.15em;
+  line-height: 1.7;
+}
+
+[data-mode="so"] .b-btn {
+  padding: 9px 20px;
+  font-size: .82rem;
+  letter-spacing: .08em;
+}
+
+[data-mode="so"] .b-panel-body {
+  padding: 14px 16px;
+}
+
+[data-mode="so"] .b-label,
+[data-mode="so"] .b-badge {
+  font-size: .72rem;
+}
+
+[data-mode="so"] .b-row {
+  padding: 6px 0;
+}
+
+/* ─── Badge glow on hover (estados epistemicos) ──────────────────────────── */
+
+.b-badge.ok:hover,
+.b-badge.certeza:hover    { box-shadow: 0 0 8px rgba(127,227,176,.4); }
+.b-badge.warn:hover,
+.b-badge.incognita:hover  { box-shadow: 0 0 8px rgba(255,209,102,.4); }
+.b-badge.err:hover,
+.b-badge.bloqueado:hover  { box-shadow: 0 0 8px rgba(232,48,74,.4);   }
+.b-badge.info:hover,
+.b-badge.inferencia:hover { box-shadow: 0 0 8px rgba(74,158,255,.4);  }

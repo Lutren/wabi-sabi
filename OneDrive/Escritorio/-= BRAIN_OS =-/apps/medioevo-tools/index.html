@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-mode="normal">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEDIOEVO Text Processor — Anti-IA</title>
+    <link rel="stylesheet" href="_shared/brainos-ui.css">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background: var(--b-bg);
+            color: var(--b-text);
+            font-family: var(--b-font);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 10px 18px;
+            border-bottom: 1px solid var(--b-border);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .brand { color: var(--b-brass); font-size: .85rem; font-weight: 700; letter-spacing: .08em; }
+        .sub { color: var(--b-text-dim); font-size: .72rem; flex: 1; }
+        .main { flex: 1; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; padding: 16px 18px; }
+        .col { display: flex; flex-direction: column; gap: 10px; }
+        label { font-size: .72rem; color: var(--b-text-dim); text-transform: uppercase; letter-spacing: .07em; }
+        textarea {
+            flex: 1;
+            min-height: 240px;
+            background: var(--b-bg2);
+            border: 1px solid var(--b-border);
+            border-radius: var(--b-radius);
+            color: var(--b-text);
+            font-family: var(--b-font);
+            font-size: .8rem;
+            padding: 10px;
+            resize: vertical;
+        }
+        textarea:focus { outline: none; border-color: var(--b-brass-dk); }
+        textarea[readonly] { border-color: var(--b-bg3); color: var(--b-text-dim); }
+        .actions { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+        .stats-row {
+            display: flex;
+            gap: 16px;
+            font-size: .72rem;
+            color: var(--b-text-dim);
+            padding: 4px 0;
+        }
+        .stats-row b { color: var(--b-brass); }
+        .flags-panel {
+            background: var(--b-bg2);
+            border: 1px solid var(--b-border);
+            border-radius: var(--b-radius);
+            padding: 10px;
+            font-size: .75rem;
+            min-height: 80px;
+        }
+        .flags-panel h3 { font-size: .72rem; text-transform: uppercase; letter-spacing: .07em; color: var(--b-text-dim); margin-bottom: 8px; }
+        .flag-item {
+            display: flex;
+            gap: 8px;
+            align-items: flex-start;
+            padding: 4px 0;
+            border-bottom: 1px solid var(--b-bg3);
+        }
+        .flag-item:last-child { border-bottom: none; }
+        .flag-type { color: var(--b-amber); font-size: .68rem; white-space: nowrap; min-width: 80px; }
+        .flag-text { color: var(--b-text); }
+        .flag-item.em-dash .flag-type { color: var(--b-red); }
+        .flag-item.relleno .flag-type { color: var(--b-amber); }
+        .flag-item.apertura .flag-type { color: var(--b-blue); }
+        .no-flags { color: var(--b-green); }
+        .file-row { display: flex; gap: 8px; align-items: center; }
+        input[type=file] { display: none; }
+        .file-label {
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            background: var(--b-bg3);
+            border: 1px solid var(--b-border);
+            border-radius: var(--b-radius);
+            color: var(--b-text-dim);
+            font: .75rem/1 var(--b-font);
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            transition: border-color .15s, color .15s;
+            white-space: nowrap;
+        }
+        .file-label:hover { border-color: var(--b-brass-dk); color: var(--b-text); }
+        #file-name { color: var(--b-text-dim); font-size: .72rem; }
+        .b-mode-banner { font-size: .7rem; text-align: center; padding: 3px; color: var(--b-amber); }
+        [data-mode="so"] body { font-size: 115%; }
+    </style>
+</head>
+<body>
+<div class="b-mode-banner" id="mode-banner"></div>
+<header data-soc="MEDIOEVO Text Processor|Detecta patrones de escritura de IA y los marca para revision humana. Canon L.R. Gonzalez: sin em dashes en prosa, sin relleno, sin aperturas circulares.|El objetivo no es reemplazar automaticamente — es hacer visible lo que sonaria a maquina.">
+    <span class="brand">⚜ MEDIOEVO TEXT PROCESSOR</span>
+    <span class="sub">Deteccion de patrones IA — canon L.R. Gonzalez</span>
+</header>
+
+<div class="main">
+    <div class="col">
+        <label for="textInput" data-soc="Texto de entrada|Pega aqui el texto a revisar. Acepta prosa en espanol e ingles.|El detector trabaja sobre texto plano; bloques de codigo entre ``` se ignoran.">Texto de entrada</label>
+        <textarea id="textInput" placeholder="Pega el texto aqui..."></textarea>
+        <div class="actions">
+            <button class="b-btn b-btn-primary" id="processBtn" data-soc="Analizar|Detecta em dashes, palabras de relleno, aperturas circulares y triadas innecesarias. No modifica el texto — solo marca.|Resultado honesto: si no hay flags, el texto pasa.">Analizar texto</button>
+            <div class="file-row">
+                <label class="file-label" for="fileInput">📂 Cargar archivo</label>
+                <input type="file" id="fileInput" accept=".md,.txt,.html,.htm,.css,.js,.ts">
+                <span id="file-name">sin archivo</span>
+            </div>
+        </div>
+        <div class="stats-row">
+            <span>Caracteres: <b id="origChars">0</b></span>
+            <span>Palabras: <b id="wordCount">0</b></span>
+            <span>Flags: <b id="flagCount">0</b></span>
+        </div>
+    </div>
+
+    <div class="col">
+        <label data-soc="Flags detectados|Lista de patrones de IA encontrados. Cada flag muestra el tipo y el fragmento exacto. No se autocorrige — la decision es tuya.|Em dash en prosa = sena de alarma principal segun el canon.">Flags detectados</label>
+        <div class="flags-panel" id="flagsPanel">
+            <h3>Resultado</h3>
+            <div id="flagsList"><span style="color:var(--b-text-dim)">Escribe o carga texto y presiona Analizar.</span></div>
+        </div>
+        <label for="textOutput">Texto con marcadores</label>
+        <textarea id="textOutput" readonly placeholder="Texto con flags marcados aparece aqui..."></textarea>
+        <div class="actions">
+            <button class="b-btn" id="copyBtn" data-soc="Copiar|Copia el texto original al portapapeles (sin modificaciones).|El procesador no altera tu texto — solo informa.">Copiar original</button>
+            <button class="b-btn b-btn-danger" id="clearBtn">Limpiar</button>
+        </div>
+    </div>
+</div>
+
+<script>
+"use strict";
+
+// Canon L.R. Gonzalez (es-MX + en) — patrones que suenan a maquina
+const PATTERNS = [
+    // Em dash en prosa (principal senal)
+    { type: "em-dash", label: "Em dash (—)", re: /[—–]/g },
+    // Guion largo simulado con espacios
+    { type: "em-dash", label: "Guion largo ( - )", re: / - /g },
+
+    // Aperturas circulares
+    { type: "apertura", label: "Apertura circular", re: /\b(Claro[!,]?|Entendido[,!]?|Por supuesto[,!]?|Desde luego[,!]?|¡Claro!|¡Por supuesto!|Perfecto[,!]?|Excelente[,!]?|Genial[,!]?|Con gusto[,!]?)/gi },
+    { type: "apertura", label: "Apertura circular (en)", re: /\b(Of course[,!]?|Certainly[,!]?|Absolutely[,!]?|Sure[,!]?|Great[,!]?|Exactly[,!]?)/gi },
+
+    // Palabras de relleno del canon
+    { type: "relleno", label: "Relleno: robusto/comprehensivo", re: /\b(robusto|comprehensivo|comprensivo|holístico|holistico|integral|sinérgico|sinergico)\b/gi },
+    { type: "relleno", label: "Relleno: sin duda/meticuloso", re: /\b(sin duda|meticuloso|minucioso|exhaustivo|riguroso|sofisticado|innovador|revolucionario)\b/gi },
+    { type: "relleno", label: "Relleno: importante notar", re: /\b(es importante (notar|tener en cuenta|mencionar|destacar)|cabe (destacar|mencionar|notar)|vale la pena (mencionar|notar|destacar))\b/gi },
+    { type: "relleno", label: "Relleno (en): robust/comprehensive", re: /\b(robust|comprehensive|holistic|synergistic|innovative|revolutionary|sophisticated|meticulous)\b/gi },
+    { type: "relleno", label: "Relleno (en): important to note", re: /\b(it is (important|worth noting|worth mentioning|clear|evident|obvious) (that|to)|needless to say|it goes without saying)\b/gi },
+
+    // Narrativa motivacional / inflada
+    { type: "relleno", label: "Narrativa motivacional", re: /\b(en conclusión|en resumen|para resumir|para concluir|en definitiva|en síntesis|en suma|en pocas palabras)\b/gi },
+    { type: "relleno", label: "Narrativa motivacional (en)", re: /\b(in conclusion|in summary|to summarize|to conclude|in short|in essence|in a nutshell)\b/gi },
+
+    // Triadas (3 ejemplos donde bastan 2)
+    { type: "triada", label: "Posible triada (3 conectados)", re: /\w+,\s*\w+\s+y\s+\w+[,;.]/g },
+];
+
+function detectFlags(text) {
+    // Ignorar bloques de codigo
+    const noCode = text.replace(/```[\s\S]*?```/g, m => ' '.repeat(m.length))
+                       .replace(/`[^`]+`/g, m => ' '.repeat(m.length));
+
+    const flags = [];
+    for (const p of PATTERNS) {
+        let m;
+        const re = new RegExp(p.re.source, p.re.flags.includes('g') ? p.re.flags : p.re.flags + 'g');
+        while ((m = re.exec(noCode)) !== null) {
+            flags.push({ type: p.type, label: p.label, match: m[0], index: m.index });
+        }
+    }
+    return flags.sort((a, b) => a.index - b.index);
+}
+
+function markText(text, flags) {
+    // Construir texto con marcadores [[FLAG: texto]]
+    let result = '';
+    let last = 0;
+    for (const f of flags) {
+        result += text.slice(last, f.index);
+        result += `[[${f.label}: "${f.match}"]]`;
+        last = f.index + f.match.length;
+    }
+    result += text.slice(last);
+    return result;
+}
+
+function render(text) {
+    const flags = detectFlags(text);
+    const flagsList = document.getElementById('flagsList');
+    const flagCount = document.getElementById('flagCount');
+
+    flagCount.textContent = flags.length;
+
+    if (flags.length === 0) {
+        flagsList.innerHTML = '<span class="no-flags">Sin flags — texto limpio.</span>';
+    } else {
+        flagsList.innerHTML = flags.map(f =>
+            `<div class="flag-item ${f.type}">
+                <span class="flag-type">${f.label}</span>
+                <span class="flag-text">"${f.match.trim()}"</span>
+            </div>`
+        ).join('');
+    }
+
+    document.getElementById('textOutput').value = markText(text, flags);
+    document.getElementById('origChars').textContent = text.length;
+    document.getElementById('wordCount').textContent = text.trim() ? text.trim().split(/\s+/).length : 0;
+}
+
+document.getElementById('processBtn').addEventListener('click', () => {
+    const t = document.getElementById('textInput').value;
+    if (!t.trim()) return;
+    render(t);
+});
+
+document.getElementById('fileInput').addEventListener('change', function () {
+    const f = this.files[0];
+    if (!f) return;
+    document.getElementById('file-name').textContent = f.name;
+    const reader = new FileReader();
+    reader.onload = e => {
+        document.getElementById('textInput').value = e.target.result;
+        render(e.target.result);
+    };
+    reader.readAsText(f);
+});
+
+document.getElementById('copyBtn').addEventListener('click', () => {
+    const t = document.getElementById('textInput').value;
+    if (t) navigator.clipboard.writeText(t).catch(() => {});
+});
+
+document.getElementById('clearBtn').addEventListener('click', () => {
+    document.getElementById('textInput').value = '';
+    document.getElementById('textOutput').value = '';
+    document.getElementById('flagsList').innerHTML = '<span style="color:var(--b-text-dim)">Escribe o carga texto y presiona Analizar.</span>';
+    document.getElementById('origChars').textContent = 0;
+    document.getElementById('wordCount').textContent = 0;
+    document.getElementById('flagCount').textContent = 0;
+    document.getElementById('file-name').textContent = 'sin archivo';
+    document.getElementById('fileInput').value = '';
+});
+
+// Atajo: Ctrl+Enter analiza
+document.getElementById('textInput').addEventListener('keydown', e => {
+    if (e.ctrlKey && e.key === 'Enter') document.getElementById('processBtn').click();
+});
+</script>
+<script src="../_shared/brainos-modes.js"></script>
+</body>
+</html>

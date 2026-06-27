@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDIOEVO Tools — Página no encontrada</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #0a0c0e;
+      color: #c8cdd6;
+      font-family: ui-monospace, 'Courier New', monospace;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .container { text-align: center; max-width: 500px; }
+    .brand { color: #e8c074; font-size: 1.5rem; font-weight: 700; letter-spacing: .08em; margin-bottom: .5rem; }
+    .code { color: #6a7280; font-size: .85rem; margin-bottom: 2rem; }
+    h1 { color: #e8304a; margin-bottom: 1rem; font-size: 2rem; }
+    p { color: #6a7280; margin-bottom: 1.5rem; line-height: 1.6; }
+    .links { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    a.btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #1a2030;
+      border: 1px solid #2a3040;
+      color: #24e8ff;
+      text-decoration: none;
+      border-radius: 3px;
+      font-size: .85rem;
+      transition: all .2s;
+    }
+    a.btn:hover { background: #e8c074; color: #0a0c0e; border-color: #e8c074; }
+    a.btn.secondary { color: #7fe3b0; }
+    a.btn.secondary:hover { background: #7fe3b0; color: #0a0c0e; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="brand">MEDIOEVO TOOLS</div>
+    <div class="code">404 — Página no encontrada</div>
+    <h1>Ruta no disponible</h1>
+    <p>La página que buscas no existe o se ha movido. Esto puede ocurrir si accediste a un enlace directo a una herramienta que requiere JavaScript para su enrutamiento.</p>
+    <div class="links">
+      <a href="/" class="btn">← Volver al inicio</a>
+      <a href="/anti_ia_detector_web.html" class="btn secondary">Anti-IA Detector</a>
+      <a href="/factcheck_web.html" class="btn secondary">Fact-Check OSIT</a>
+    </div>
+  </div>
+  <script>
+    // SPA fallback para GitHub Pages - redirigir a index.html con la ruta preservada
+    (function() {
+      var path = window.location.pathname;
+      var search = window.location.search;
+      // Si estamos en 404.html, redirigir a index.html con la ruta original
+      if (path.endsWith('/404.html')) {
+        var basePath = '/medioevo-tools/'; // Ajustar según el subdirectorio real
+        var redirectPath = path.replace('/404.html', '');
+        window.location.href = basePath + 'index.html' + redirectPath + search;
+      }
+    })();
+  </script>
+</body>
+</html>

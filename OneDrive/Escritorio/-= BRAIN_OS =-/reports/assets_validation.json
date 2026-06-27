@@ -1,0 +1,133 @@
+{
+  "total_files": 1530,
+  "total_size_mb": 2183.8303833007812,
+  "by_directory": {
+    ".": {
+      "count": 16,
+      "size_mb": 9.114259719848633
+    },
+    "audio": {
+      "count": 1,
+      "size_mb": 0.0007963180541992188
+    },
+    "icons": {
+      "count": 1,
+      "size_mb": 0.0007963180541992188
+    },
+    "images": {
+      "count": 4,
+      "size_mb": 6.431068420410156
+    },
+    "images\\characters": {
+      "count": 46,
+      "size_mb": 5.580936431884766
+    },
+    "images\\environments": {
+      "count": 70,
+      "size_mb": 43.489030838012695
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11": {
+      "count": 2,
+      "size_mb": 1.097616195678711
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\final": {
+      "count": 2,
+      "size_mb": 4.487262725830078
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames": {
+      "count": 1,
+      "size_mb": 0.008461952209472656
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\failed": {
+      "count": 8,
+      "size_mb": 0.3559226989746094
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\idle": {
+      "count": 6,
+      "size_mb": 0.3049144744873047
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\jumping": {
+      "count": 5,
+      "size_mb": 0.2382488250732422
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\review": {
+      "count": 6,
+      "size_mb": 0.27890968322753906
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\running": {
+      "count": 6,
+      "size_mb": 0.286407470703125
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\running-left": {
+      "count": 8,
+      "size_mb": 0.32485485076904297
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\running-right": {
+      "count": 8,
+      "size_mb": 0.3255643844604492
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\waiting": {
+      "count": 6,
+      "size_mb": 0.2733182907104492
+    },
+    "images\\sprites\\pet-companion-codex-2026-05-11\\frames\\waving": {
+      "count": 4,
+      "size_mb": 0.16584110260009766
+    },
+    "images\\tcg": {
+      "count": 868,
+      "size_mb": 1297.159158706665
+    },
+    "images\\ui": {
+      "count": 40,
+      "size_mb": 15.182642936706543
+    },
+    "images\\visuals": {
+      "count": 366,
+      "size_mb": 686.1288261413574
+    },
+    "images\\visuals\\New folder": {
+      "count": 52,
+      "size_mb": 112.22954750061035
+    },
+    "INBOX_IMAGES": {
+      "count": 2,
+      "size_mb": 0.3643951416015625
+    },
+    "references": {
+      "count": 1,
+      "size_mb": 0.0008058547973632812
+    },
+    "video": {
+      "count": 1,
+      "size_mb": 0.0007963180541992188
+    }
+  },
+  "by_extension": {
+    ".json": 11,
+    ".md": 20,
+    ".png": 940,
+    ".pdf": 11,
+    ".webp": 231,
+    ".jpg": 294,
+    ".mp3": 1,
+    ".svg": 2,
+    ".html": 7,
+    ".txt": 7,
+    ".py": 1,
+    ".pptx": 1,
+    ".jpeg": 1,
+    ".mp4": 1,
+    ".zip": 1,
+    ".css": 1
+  },
+  "missing_expected": [
+    {
+      "dir": "images/characters",
+      "expected_min": 100,
+      "actual": 46,
+      "status": "WARNING"
+    }
+  ],
+  "old_dirs_exist": []
+}

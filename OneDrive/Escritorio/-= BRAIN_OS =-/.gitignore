@@ -127,3 +127,4 @@ data/runtime/outputs/
 # === OSIT/MEDIOEVO Specific ===
 *.beam
 *.beam.*
+02_CLAUDIO/wabi.env
